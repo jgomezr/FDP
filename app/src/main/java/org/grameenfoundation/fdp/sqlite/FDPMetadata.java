@@ -6,6 +6,10 @@ package org.grameenfoundation.fdp.sqlite;
  */
 public final class FDPMetadata {
 
+    /* Country Table Columns */
+    public static final String COUNTRY_ID = "country_id";
+    public static final String COUNTRY_NAME = "country_name";
+
     /* Farmer Table Columns */
     public static final String FARMER_ID = "farmer_id";
     public static final String FARMER_BDAY= "bday";
@@ -13,11 +17,6 @@ public final class FDPMetadata {
     public static final String FARMER_REGION = "region";
     public static final String FARMER_MUNICIPALITY = "municipality";
     public static final String FARMER_COUNTRY_ID = "country_id";
-    public static final String FARMER_REPORTS_ID = "reports_to_id";
-
-    /* Country Table Columns */
-    public static final String COUNTRY_ID = "country_id";
-    public static final String COUNTRY_NAME = "country_name";
 
     /* Farmer Baseline Table Columns */
     public static final String FARMER_PARENT_ID = "farmer_parent_id";
@@ -47,7 +46,6 @@ public final class FDPMetadata {
     public static final String TOTAL_PLOT_AREA = "total_plot_area";
     public static final String PLOT_AREA_UNITS = "plot_area_units";
     public static final String NUMBER_OF_TREES = "number_of_trees";
-    public static final String PERCENT_SHADE = "percent_shade";
 
     /* FDP Practices Table Columns */
     public static final String FDP_ID = "fdp_id";
