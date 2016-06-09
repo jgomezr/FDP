@@ -3,4 +3,144 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/year_1"
+                android:id="@+id/textView41"
+                android:layout_column="5"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_2"
+                android:id="@+id/textView43"
+                android:layout_column="6"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_3"
+                android:id="@+id/textView44"
+                android:layout_column="8"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_4"
+                android:id="@+id/textView45"
+                android:layout_column="9"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_5"
+                android:id="@+id/textView46"
+                android:layout_column="10"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_6"
+                android:id="@+id/textView47"
+                android:layout_column="11"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_7"
+                android:id="@+id/textView48"
+                android:layout_column="13"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_8"
+                android:id="@+id/textView49"
+                android:layout_column="15"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_9"
+                android:id="@+id/textView50"
+                android:layout_column="16"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_10"
+                android:id="@+id/textView51"
+                android:layout_column="17"
+                android:textSize="18sp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/plot_a"
+                android:id="@+id/textView42"
+                android:layout_column="1"
+                android:textSize="18sp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/replanting"
+                android:id="@+id/textView52"
+                android:layout_column="2"
+                android:textSize="18sp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp" />
+
+            <ExpandableListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/delay1"
+                android:layout_column="3"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:choiceMode="singleChoice" />
+        </TableRow>
+
+    </TableLayout>
 </LinearLayout>

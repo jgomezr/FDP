@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'android-N'
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 23
+    buildToolsVersion '19.1.0'
     defaultConfig {
         applicationId "org.grameenfoundation.fdp"
         minSdkVersion 15
