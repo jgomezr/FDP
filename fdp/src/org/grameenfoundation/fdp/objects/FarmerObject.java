@@ -115,6 +115,55 @@ public class FarmerObject extends SalesforceObject {
     public String getGender () {return sanitizeText(rawData.optString(GENDER));
     }
 
+    /**
+     * Returns GPS of the farmer
+     * @return GPS of the farmer
+     */
+    public String getGPS () {return sanitizeText(rawData.optString(GPS));
+    }
+
+    /**
+     * Returns Address of the farmer
+     * @return Address of the farmer
+     */
+    public String getAddress() {return sanitizeText(rawData.optString(ADDRESS));
+    }
+
+    /**
+     * Returns Relation with MARS of the farmer
+     * @return Relation with MARS of the farmer
+     */
+    public String getRelationMARS() {return sanitizeText(rawData.optString(RELATION_MARS));
+    }
+
+    /**
+     * Returns Spouse Name
+     * @return Spouse Name
+     */
+    public String getSpouseName() {return sanitizeText(rawData.optString(SPOUSE_NAME));
+    }
+
+    /**
+     * Returns Spouse Educational Level
+     * @return Spouse Educational Level
+     */
+    public String getSpouseEducationalLVL() {return sanitizeText(rawData.optString(SPOUSE_ED_LV));
+    }
+
+    /**
+     * Returns Spouse bday
+     * @return Spouse bday
+     */
+    public String getSpouseBDay() {return sanitizeText(rawData.optString(SPOUSE_BDAY));
+    }
+
+    /**
+     * Returns Village of the farmer
+     * @return Village of the farmer
+     */
+    public String getVillage() {return sanitizeText(rawData.optString(VILLAGE));
+    }
+
     private String sanitizeText(String text) {
         if (TextUtils.isEmpty(text) || text.equals(Constants.NULL_STRING)) {
             return Constants.EMPTY_STRING;
