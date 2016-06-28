@@ -22,7 +22,7 @@ public class FarmerObject extends SalesforceObject {
     public static final String RELATION_MARS = "yearsRelationshipWithMars__c";
     public static final String SPOUSE_NAME = "spouseName__c";
     public static final String SPOUSE_ED_LV = "spouseEducationalLevel__c";
-    public static final String SPOUSE_BDAY = "spouseName__c";
+    public static final String SPOUSE_BDAY = "spouseBirthday__c";
     public static final String VILLAGE = "village__c";
     public static final String [] FARMER_FIELDS_SYNC_DOWN = {
             NAME,
@@ -56,7 +56,7 @@ public class FarmerObject extends SalesforceObject {
             VILLAGE
     };
 
-    private boolean isLocallModified;
+    private boolean isLocallyModified;
 
     /**
      * Parameterized constructor.
@@ -68,7 +68,7 @@ public class FarmerObject extends SalesforceObject {
         objectType = Constants.FARMER;
         objectId = data.optString(Constants.ID);
         name = data.optString(NAME) + " " + data.optString(FULL_NAME);
-        isLocallModified = data.optBoolean(SyncManager.LOCALLY_UPDATED) ||
+        isLocallyModified = data.optBoolean(SyncManager.LOCALLY_UPDATED) ||
                 data.optBoolean(SyncManager.LOCALLY_CREATED) ||
                 data.optBoolean(SyncManager.LOCALLY_DELETED);
     }
@@ -77,91 +77,113 @@ public class FarmerObject extends SalesforceObject {
      * Returns National Id of the farmer
      * @return National Id of the farmer
      */
-    public String getNationalID () {return sanitizeText(rawData.optString(NAME));
+    public String getNationalID () {
+        return sanitizeText(rawData.optString(NAME));
     }
 
     /**
      * Returns Birthday of the farmer
      * @return Birthday of the farmer
      */
-    public String getBirthday () {return sanitizeText(rawData.optString(BIRTHDAY));
+    public String getBirthday () {
+        return sanitizeText(rawData.optString(BIRTHDAY));
     }
 
     /**
      * Returns Educational Level of the farmer
      * @return Educational Level of the farmer
      */
-    public String getEducationalLV () {return sanitizeText(rawData.optString(EDUCATIONAL_LV));
+    public String getEducationalLV () {
+        return sanitizeText(rawData.optString(EDUCATIONAL_LV));
     }
 
     /**
      * Returns Farmer Code
      * @return Farmer Code
      */
-    public String getFarmerCode () {return sanitizeText(rawData.optString(FARMER_CODE));
+    public String getFarmerCode () {
+        return sanitizeText(rawData.optString(FARMER_CODE));
     }
 
     /**
      * Returns Full Name of the farmer
      * @return Full Name of the farmer
      */
-    public String getFullName () {return sanitizeText(rawData.optString(FULL_NAME));
+    public String getFullName () {
+        return sanitizeText(rawData.optString(FULL_NAME));
     }
 
     /**
      * Returns Gender of the farmer
      * @return Gender of the farmer
      */
-    public String getGender () {return sanitizeText(rawData.optString(GENDER));
+    public String getGender () {
+        return sanitizeText(rawData.optString(GENDER));
     }
 
     /**
      * Returns GPS of the farmer
      * @return GPS of the farmer
      */
-    public String getGPS () {return sanitizeText(rawData.optString(GPS));
+    public String getGPS () {
+        return sanitizeText(rawData.optString(GPS));
     }
 
     /**
      * Returns Address of the farmer
      * @return Address of the farmer
      */
-    public String getAddress() {return sanitizeText(rawData.optString(ADDRESS));
+    public String getAddress() {
+        return sanitizeText(rawData.optString(ADDRESS));
     }
 
     /**
      * Returns Relation with MARS of the farmer
      * @return Relation with MARS of the farmer
      */
-    public String getRelationMARS() {return sanitizeText(rawData.optString(RELATION_MARS));
+    public String getRelationMARS() {
+        return sanitizeText(rawData.optString(RELATION_MARS));
     }
 
     /**
      * Returns Spouse Name
      * @return Spouse Name
      */
-    public String getSpouseName() {return sanitizeText(rawData.optString(SPOUSE_NAME));
+    public String getSpouseName() {
+        return sanitizeText(rawData.optString(SPOUSE_NAME));
     }
 
     /**
      * Returns Spouse Educational Level
      * @return Spouse Educational Level
      */
-    public String getSpouseEducationalLVL() {return sanitizeText(rawData.optString(SPOUSE_ED_LV));
+    public String getSpouseEducationalLVL() {
+        return sanitizeText(rawData.optString(SPOUSE_ED_LV));
     }
 
     /**
      * Returns Spouse bday
      * @return Spouse bday
      */
-    public String getSpouseBDay() {return sanitizeText(rawData.optString(SPOUSE_BDAY));
+    public String getSpouseBDay() {
+        return sanitizeText(rawData.optString(SPOUSE_BDAY));
     }
 
     /**
      * Returns Village of the farmer
      * @return Village of the farmer
      */
-    public String getVillage() {return sanitizeText(rawData.optString(VILLAGE));
+    public String getVillage() {
+        return sanitizeText(rawData.optString(VILLAGE));
+    }
+
+    /**
+     * Returns whether the farmer has been locally modified or not.
+     *
+     * @return True - if the farmer has been locally modified, False - otherwise.
+     */
+    public boolean isLocallyModified() {
+        return isLocallyModified;
     }
 
     private String sanitizeText(String text) {

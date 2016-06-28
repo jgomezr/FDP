@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:id="@+id/root">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/full_name"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/full_name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/national_id"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/national_id_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/birthday"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/birthday_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/educational_level"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/educational_lv_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions|phone" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/farmer_code"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/farmer_code_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions|textEmailAddress" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/gender_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gps"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <EditText android:id="@+id/gps_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:inputType="textNoSuggestions|phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/FarmerDetail.ParentView.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/householdAddress"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" />
+
+        <EditText
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:id="@+id/address_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:inputType="textNoSuggestions|phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/FarmerDetail.ParentView.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yearsRelationshipWithMars"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" />
+
+        <EditText
+            style="@style/FarmerDetail.ParentView.EditText"
+            android:id="@+id/relation_mars_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:inputType="textNoSuggestions|phone" />
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:text="@string/delete"
+        android:gravity="center"
+        android:padding="6dp"
+        android:onClick="onDeleteClicked"
+        android:clickable="true" />
+</LinearLayout>
