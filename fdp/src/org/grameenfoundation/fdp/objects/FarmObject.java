@@ -9,7 +9,7 @@ import com.salesforce.androidsdk.smartsync.util.Constants;
 import org.json.JSONObject;
 
 /**
- * A simple representation of Farm Object
+ * A representation of Farm Object
  * Created by julian_Gf on 6/26/2016.
  */
 public class FarmObject extends SalesforceObject {
@@ -50,8 +50,7 @@ public class FarmObject extends SalesforceObject {
         objectId = data.optString(Constants.ID);
         name = data.optString(FARM_NAME);
         isLocallModified = data.optBoolean(SyncManager.LOCALLY_UPDATED) ||
-                data.optBoolean(SyncManager.LOCALLY_CREATED) ||
-                data.optBoolean(SyncManager.LOCALLY_DELETED);
+                data.optBoolean(SyncManager.LOCALLY_CREATED);
     }
 
     /**

@@ -7,7 +7,7 @@ import com.salesforce.androidsdk.smartsync.util.Constants;
 import org.json.JSONObject;
 
 /**
- * A simple representation of Farmer Object
+ * A representation of Farmer Object
  * Created by julian_Gf on 6/22/2016.
  */
 public class FarmerObject extends SalesforceObject {
@@ -24,7 +24,7 @@ public class FarmerObject extends SalesforceObject {
     public static final String SPOUSE_ED_LV = "spouseEducationalLevel__c";
     public static final String SPOUSE_BDAY = "spouseBirthday__c";
     public static final String VILLAGE = "village__c";
-    public static final String [] FARMER_FIELDS_SYNC_DOWN = {
+    public static final String[] FARMER_FIELDS_SYNC_DOWN = {
             NAME,
             BIRTHDAY,
             EDUCATIONAL_LV,
@@ -77,7 +77,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns National Id of the farmer
      * @return National Id of the farmer
      */
-    public String getNationalID () {
+    public String getNationalID() {
         return sanitizeText(rawData.optString(NAME));
     }
 
@@ -85,7 +85,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns Birthday of the farmer
      * @return Birthday of the farmer
      */
-    public String getBirthday () {
+    public String getBirthday() {
         return sanitizeText(rawData.optString(BIRTHDAY));
     }
 
@@ -93,7 +93,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns Educational Level of the farmer
      * @return Educational Level of the farmer
      */
-    public String getEducationalLV () {
+    public String getEducationalLV() {
         return sanitizeText(rawData.optString(EDUCATIONAL_LV));
     }
 
@@ -101,7 +101,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns Farmer Code
      * @return Farmer Code
      */
-    public String getFarmerCode () {
+    public String getFarmerCode() {
         return sanitizeText(rawData.optString(FARMER_CODE));
     }
 
@@ -109,7 +109,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns Full Name of the farmer
      * @return Full Name of the farmer
      */
-    public String getFullName () {
+    public String getFullName() {
         return sanitizeText(rawData.optString(FULL_NAME));
     }
 
@@ -117,7 +117,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns Gender of the farmer
      * @return Gender of the farmer
      */
-    public String getGender () {
+    public String getGender() {
         return sanitizeText(rawData.optString(GENDER));
     }
 
@@ -125,7 +125,7 @@ public class FarmerObject extends SalesforceObject {
      * Returns GPS of the farmer
      * @return GPS of the farmer
      */
-    public String getGPS () {
+    public String getGPS() {
         return sanitizeText(rawData.optString(GPS));
     }
 
