@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA1"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA1_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA2"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA2_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA3"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA3_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA4"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA4_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA5"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA5_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA6"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA6_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA7"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA7_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA8"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA8_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA9"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA9_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA10"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA10_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA11"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA11_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/RA12"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RA12_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GA15"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GA15_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB48"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB48_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB49"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB49_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB51"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB51_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB52"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB52_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB54"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB54_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB55"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB55_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB56"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB56_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB58"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB58_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB59"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB59_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB60"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB60_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB61"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB61_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB64"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB64_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB65"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB65_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB66"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB66_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB68"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB68_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GB72"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GB72_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GC95"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GC95_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/COB3"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/COB3_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/COB4"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/COB4_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/COB5"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="5"
+                    android:lines="5"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/COB5_field"
+                    android:entries="@array/yesNo" />
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#298A08"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_margin="25dp"
+                android:layout_gravity="center"
+                android:text="@string/saveContinue"
+                android:gravity="center"
+                android:padding="6dp"
+                android:onClick="launchPlot"
+                android:clickable="true" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

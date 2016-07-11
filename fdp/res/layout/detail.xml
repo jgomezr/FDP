@@ -207,11 +207,19 @@
                     android:lines="2"
                     style="@style/FarmerDetail.ParentView.TextView" />
 
+                <Button
+                    style="android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/getLocation"
+                    android:id="@+id/gpsbutton"
+                    android:layout_weight=".25" />
+
                 <EditText android:id="@+id/gps_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
+                    android:layout_weight=".25"
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:inputType="textNoSuggestions" />
             </LinearLayout>
@@ -623,7 +631,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/otherCrops_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -646,7 +656,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/farmLabor_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -669,7 +681,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/spouseIncome_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -692,7 +706,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/familyIncome_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -715,7 +731,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/amountLoan_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -738,7 +756,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/moneyBack_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -899,7 +919,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/payCredit_Layout"
+                android:visibility="gone">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -931,7 +953,7 @@
                 android:text="@string/saveContinue"
                 android:gravity="center"
                 android:padding="6dp"
-                android:onClick="onDeleteClicked"
+                android:onClick="launchFarm"
                 android:clickable="true" />
         </LinearLayout>
     </ScrollView>

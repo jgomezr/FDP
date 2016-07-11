@@ -11,10 +11,11 @@ import android.net.Uri;
  * work with cursors and use a cursor loader. Since we use a custom loader,
  * we simply declare this provider in the manifest, but use the loader
  * for all sync operations.
- * Created by julian_Gf on 6/26/2016.
+ *
+ * @author bhariharan
  */
+public class ContactProvider extends ContentProvider {
 
-public class Provider extends ContentProvider {
     @Override
     public boolean onCreate() {
         return false;
@@ -42,7 +43,8 @@ public class Provider extends ContentProvider {
     }
 
     @Override
-    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    public int update(Uri uri, ContentValues values, String selection,
+                      String[] selectionArgs) {
         return 0;
     }
 }

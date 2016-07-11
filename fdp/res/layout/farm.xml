@@ -63,11 +63,19 @@
                     android:lines="2"
                     style="@style/FarmerDetail.ParentView.TextView" />
 
+                <Button
+                    style="android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/getLocation"
+                    android:id="@+id/farmGPSButton"
+                    android:layout_weight=".25" />
+
                 <EditText android:id="@+id/farmGPS_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
+                    android:layout_weight=".25"
 
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:inputType="textNoSuggestions" />
@@ -185,7 +193,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/otherCropsArea_Layout"
+                android:visibility="gone">
 
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -207,7 +217,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/aditionalCrops_Layout"
+                android:visibility="gone">
 
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -272,7 +284,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/hireLaborDays_Layout"
+                android:visibility="gone">
 
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -325,7 +339,7 @@
                 android:text="@string/saveContinue"
                 android:gravity="center"
                 android:padding="6dp"
-                android:onClick="onDeleteClicked"
+                android:onClick="launchPlot"
                 android:clickable="true" />
         </LinearLayout>
     </ScrollView>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            android:id="@+id/horizontalScrollView" >
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignBounds"
+                    android:columnCount="13"
+                    android:rowCount="11">
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jan"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feb"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mar"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="3"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apr"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="4"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/may"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="5"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jun"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="6"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jul"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="7"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aug"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="8"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sep"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="9"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oct"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="10"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nov"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="11"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dec"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="12"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="3"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="4"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="5"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="6"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="7"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot8"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="8"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot9"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="9"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="0"
+                        android:layout_row="10"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+
+                </GridLayout>
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#298A08"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="25dp"
+                    android:layout_gravity="center"
+                    android:text="@string/back"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:onClick="onBackClicked"
+                    android:clickable="true" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</LinearLayout>
