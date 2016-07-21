@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -41,9 +42,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     public static final String OBJECT_ID_KEY = "object_id";
     public static final String OBJECT_TITLE_KEY = "object_title";
     public static final String OBJECT_NAME_KEY = "object_name";
-    private EditText gpsP1,ageP1,areP1,cteP1,estP1,steP1,gpsP2,ageP2,areP2,cteP2,estP2,steP2, gpsP3,ageP3,areP3,cteP3,estP3,steP3, gpsP4,ageP4,areP4,cteP4,estP4,steP4, gpsP5,ageP5,areP5,cteP5,estP5,steP5, gpsP6,ageP6,areP6,cteP6,estP6,steP6, gpsP7,ageP7,areP7,cteP7,estP7,steP7, gpsP8,ageP8,areP8,cteP8,estP8,steP8,gpsP9,ageP9,areP9,cteP9,estP9,steP9,gpsP10,ageP10,areP10,cteP10,estP10,steP10;
-    private TextView Lp1,Lp2,Lp3,Lp4,Lp5,Lp6,Lp7,Lp8,Lp9,Lp10;
-    private Spinner plantP1,fcondP1,tdensP1,teageP1,tehelP1,debDiP1,pruniP1,pesDiP1,weediP1,harveP1,shadeP1,soilCP1,orgMaP1,fertFP1,fertAP1,limeNP1,drainP1,filliP1,hireNP1,plantP2,fcondP2,tdensP2,teageP2,tehelP2,debDiP2,pruniP2,pesDiP2,weediP2,harveP2,shadeP2,soilCP2,orgMaP2,fertFP2,fertAP2,limeNP2,drainP2,filliP2,hireNP2,plantP3,fcondP3,tdensP3,teageP3,tehelP3,debDiP3,pruniP3,pesDiP3,weediP3,harveP3,shadeP3,soilCP3,orgMaP3,fertFP3,fertAP3,limeNP3,drainP3,filliP3,hireNP3,plantP4,fcondP4,tdensP4,teageP4,tehelP4,debDiP4,pruniP4,pesDiP4,weediP4,harveP4,shadeP4,soilCP4,orgMaP4,fertFP4,fertAP4,limeNP4,drainP4,filliP4,hireNP4,plantP5,fcondP5,tdensP5,teageP5,tehelP5,debDiP5,pruniP5,pesDiP5,weediP5,harveP5,shadeP5,soilCP5,orgMaP5,fertFP5,fertAP5,limeNP5,drainP5,filliP5,hireNP5,plantP6,fcondP6,tdensP6,teageP6,tehelP6,debDiP6,pruniP6,pesDiP6,weediP6,harveP6,shadeP6,soilCP6,orgMaP6,fertFP6,fertAP6,limeNP6,drainP6,filliP6,hireNP6,plantP7,fcondP7,tdensP7,teageP7,tehelP7,debDiP7,pruniP7,pesDiP7,weediP7,harveP7,shadeP7,soilCP7,orgMaP7,fertFP7,fertAP7,limeNP7,drainP7,filliP7,hireNP7,plantP8,fcondP8,tdensP8,teageP8,tehelP8,debDiP8,pruniP8,pesDiP8,weediP8,harveP8,shadeP8,soilCP8,orgMaP8,fertFP8,fertAP8,limeNP8,drainP8,filliP8,hireNP8,plantP9,fcondP9,tdensP9,teageP9,tehelP9,debDiP9,pruniP9,pesDiP9,weediP9,harveP9,shadeP9,soilCP9,orgMaP9,fertFP9,fertAP9,limeNP9,drainP9,filliP9,hireNP9,plantP10,fcondP10,tdensP10,teageP10,tehelP10,debDiP10,pruniP10,pesDiP10,weediP10,harveP10,shadeP10,soilCP10,orgMaP10,fertFP10,fertAP10,limeNP10,drainP10,filliP10,hireNP10;
+    private EditText gpsP1,ageP1,areP1,cteP1,estP1,steP1,gpsP2,ageP2,areP2,cteP2,estP2,steP2, gpsP3,ageP3,areP3,cteP3,estP3,steP3, gpsP4,ageP4,areP4,cteP4,estP4,steP4,gpsP5,ageP5,areP5,cteP5,estP5,steP5;
+    private TextView Lp1,Lp2,Lp3,Lp4,Lp5;
+    private Spinner plantP1,fcondP1,tdensP1,teageP1,tehelP1,debDiP1,pruniP1,pesDiP1,weediP1,harveP1,shadeP1,soilCP1,orgMaP1,fertFP1,fertAP1,limeNP1,drainP1,filliP1,hireNP1,plantP2,fcondP2,tdensP2,teageP2,tehelP2,debDiP2,pruniP2,pesDiP2,weediP2,harveP2,shadeP2,soilCP2,orgMaP2,fertFP2,fertAP2,limeNP2,drainP2,filliP2,hireNP2,plantP3,fcondP3,tdensP3,teageP3,tehelP3,debDiP3,pruniP3,pesDiP3,weediP3,harveP3,shadeP3,soilCP3,orgMaP3,fertFP3,fertAP3,limeNP3,drainP3,filliP3,hireNP3,plantP4,fcondP4,tdensP4,teageP4,tehelP4,debDiP4,pruniP4,pesDiP4,weediP4,harveP4,shadeP4,soilCP4,orgMaP4,fertFP4,fertAP4,limeNP4,drainP4,filliP4,hireNP4,plantP5,fcondP5,tdensP5,teageP5,tehelP5,debDiP5,pruniP5,pesDiP5,weediP5,harveP5,shadeP5,soilCP5,orgMaP5,fertFP5,fertAP5,limeNP5,drainP5,filliP5,hireNP5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -59,11 +61,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         Lp3= (TextView)findViewById(R.id.plot_3_label);
         Lp4= (TextView)findViewById(R.id.plot_4_label);
         Lp5= (TextView)findViewById(R.id.plot_5_label);
-        Lp6= (TextView)findViewById(R.id.plot_6_label);
-        Lp7= (TextView)findViewById(R.id.plot_7_label);
-        Lp8= (TextView)findViewById(R.id.plot_8_label);
-        Lp9= (TextView)findViewById(R.id.plot_9_label);
-        Lp10= (TextView)findViewById(R.id.plot_10_label);
         gpsP1 = (EditText)findViewById(R.id.gpsp1_field);
         ageP1 = (EditText)findViewById(R.id.plotAgep1_field);
         areP1 = (EditText)findViewById(R.id.plotArea1_field);
@@ -189,131 +186,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
          drainP5 = (Spinner)findViewById(R.id.drainageP5_field);
          filliP5 = (Spinner)findViewById(R.id.fillingP5_field);
          hireNP5 = (Spinner)findViewById(R.id.hireP5_field);
-         gpsP6 = (EditText)findViewById(R.id.gpsp6_field);
-         ageP6 = (EditText)findViewById(R.id.plotAgep6_field);
-         areP6 = (EditText)findViewById(R.id.plotArea6_field);
-         cteP6 = (EditText)findViewById(R.id.cocoaTreesP6_field);
-         estP6 = (EditText)findViewById(R.id.estimatedP6_field);
-         steP6 = (EditText) findViewById(R.id.shadeTreesP6_field);
-         plantP6 = (Spinner)findViewById(R.id.plantingP6_field);
-         fcondP6 = (Spinner)findViewById(R.id.farmConditionP6_field);
-         tdensP6 = (Spinner)findViewById(R.id.treeDensityP6_field);
-         teageP6 = (Spinner)findViewById(R.id.treeAgeP6_field);
-         tehelP6 = (Spinner)findViewById(R.id.treeHealthP6_field);
-         debDiP6 = (Spinner)findViewById(R.id.debilitationP6_field);
-         pruniP6 = (Spinner)findViewById(R.id.pruningP6_field);
-         pesDiP6 = (Spinner)findViewById(R.id.pestDiseaseP6_field);
-         weediP6 = (Spinner)findViewById(R.id.weedingP6_field);
-         harveP6 = (Spinner)findViewById(R.id.harvestingP6_field);
-         shadeP6 = (Spinner)findViewById(R.id.shadeManagementP6_field);
-         soilCP6 = (Spinner)findViewById(R.id.soilConditionP6_field);
-         orgMaP6 = (Spinner)findViewById(R.id.organicMatterP6_field);
-         fertFP6 = (Spinner)findViewById(R.id.fartFormP6_field);
-         fertAP6 = (Spinner)findViewById(R.id.fartApplicationP6_field);
-         limeNP6 = (Spinner)findViewById(R.id.limeP6_field);
-         drainP6 = (Spinner)findViewById(R.id.drainageP6_field);
-         filliP6 = (Spinner)findViewById(R.id.fillingP6_field);
-         hireNP6 = (Spinner)findViewById(R.id.hireP6_field);
-         gpsP7 = (EditText)findViewById(R.id.gpsp7_field);
-         ageP7 = (EditText)findViewById(R.id.plotAgep7_field);
-         areP7 = (EditText)findViewById(R.id.plotArea7_field);
-         cteP7 = (EditText)findViewById(R.id.cocoaTreesP7_field);
-         estP7 = (EditText)findViewById(R.id.estimatedP7_field);
-         steP7 = (EditText) findViewById(R.id.shadeTreesP7_field);
-         plantP7 = (Spinner)findViewById(R.id.plantingP7_field);
-         fcondP7 = (Spinner)findViewById(R.id.farmConditionP7_field);
-         tdensP7 = (Spinner)findViewById(R.id.treeDensityP7_field);
-         teageP7 = (Spinner)findViewById(R.id.treeAgeP7_field);
-         tehelP7 = (Spinner)findViewById(R.id.treeHealthP7_field);
-         debDiP7 = (Spinner)findViewById(R.id.debilitationP7_field);
-         pruniP7 = (Spinner)findViewById(R.id.pruningP7_field);
-         pesDiP7 = (Spinner)findViewById(R.id.pestDiseaseP7_field);
-         weediP7 = (Spinner)findViewById(R.id.weedingP7_field);
-         harveP7 = (Spinner)findViewById(R.id.harvestingP7_field);
-         shadeP7 = (Spinner)findViewById(R.id.shadeManagementP7_field);
-         soilCP7 = (Spinner)findViewById(R.id.soilConditionP7_field);
-         orgMaP7 = (Spinner)findViewById(R.id.organicMatterP7_field);
-         fertFP7 = (Spinner)findViewById(R.id.fartFormP7_field);
-         fertAP7 = (Spinner)findViewById(R.id.fartApplicationP7_field);
-         limeNP7 = (Spinner)findViewById(R.id.limeP7_field);
-         drainP7 = (Spinner)findViewById(R.id.drainageP7_field);
-         filliP7 = (Spinner)findViewById(R.id.fillingP7_field);
-         hireNP7 = (Spinner)findViewById(R.id.hireP7_field);
-         gpsP8 = (EditText)findViewById(R.id.gpsp8_field);
-         ageP8 = (EditText)findViewById(R.id.plotAgep8_field);
-         areP8 = (EditText)findViewById(R.id.plotArea8_field);
-         cteP8 = (EditText)findViewById(R.id.cocoaTreesP8_field);
-         estP8 = (EditText)findViewById(R.id.estimatedP8_field);
-         steP8 = (EditText) findViewById(R.id.shadeTreesP8_field);
-         plantP8 = (Spinner)findViewById(R.id.plantingP8_field);
-         fcondP8 = (Spinner)findViewById(R.id.farmConditionP8_field);
-         tdensP8 = (Spinner)findViewById(R.id.treeDensityP8_field);
-         teageP8 = (Spinner)findViewById(R.id.treeAgeP8_field);
-         tehelP8 = (Spinner)findViewById(R.id.treeHealthP8_field);
-         debDiP8 = (Spinner)findViewById(R.id.debilitationP8_field);
-         pruniP8 = (Spinner)findViewById(R.id.pruningP8_field);
-         pesDiP8 = (Spinner)findViewById(R.id.pestDiseaseP8_field);
-         weediP8 = (Spinner)findViewById(R.id.weedingP8_field);
-         harveP8 = (Spinner)findViewById(R.id.harvestingP8_field);
-         shadeP8 = (Spinner)findViewById(R.id.shadeManagementP8_field);
-         soilCP8 = (Spinner)findViewById(R.id.soilConditionP8_field);
-         orgMaP8 = (Spinner)findViewById(R.id.organicMatterP8_field);
-         fertFP8 = (Spinner)findViewById(R.id.fartFormP8_field);
-         fertAP8 = (Spinner)findViewById(R.id.fartApplicationP8_field);
-         limeNP8 = (Spinner)findViewById(R.id.limeP8_field);
-         drainP8 = (Spinner)findViewById(R.id.drainageP8_field);
-         filliP8 = (Spinner)findViewById(R.id.fillingP8_field);
-         hireNP8 = (Spinner)findViewById(R.id.hireP8_field);
-         gpsP9 = (EditText)findViewById(R.id.gpsp9_field);
-         ageP9 = (EditText)findViewById(R.id.plotAgep9_field);
-         areP9= (EditText)findViewById(R.id.plotArea9_field);
-         cteP9 = (EditText)findViewById(R.id.cocoaTreesP9_field);
-         estP9 = (EditText)findViewById(R.id.estimatedP9_field);
-         steP9 = (EditText) findViewById(R.id.shadeTreesP9_field);
-         plantP9 = (Spinner)findViewById(R.id.plantingP9_field);
-         fcondP9 = (Spinner)findViewById(R.id.farmConditionP9_field);
-         tdensP9 = (Spinner)findViewById(R.id.treeDensityP9_field);
-         teageP9 = (Spinner)findViewById(R.id.treeAgeP9_field);
-         tehelP9 = (Spinner)findViewById(R.id.treeHealthP9_field);
-         debDiP9 = (Spinner)findViewById(R.id.debilitationP9_field);
-         pruniP9 = (Spinner)findViewById(R.id.pruningP9_field);
-         pesDiP9 = (Spinner)findViewById(R.id.pestDiseaseP9_field);
-         weediP9 = (Spinner)findViewById(R.id.weedingP9_field);
-         harveP9 = (Spinner)findViewById(R.id.harvestingP9_field);
-         shadeP9 = (Spinner)findViewById(R.id.shadeManagementP9_field);
-         soilCP9 = (Spinner)findViewById(R.id.soilConditionP9_field);
-         orgMaP9 = (Spinner)findViewById(R.id.organicMatterP9_field);
-         fertFP9 = (Spinner)findViewById(R.id.fartFormP9_field);
-         fertAP9 = (Spinner)findViewById(R.id.fartApplicationP9_field);
-         limeNP9 = (Spinner)findViewById(R.id.limeP9_field);
-         drainP9 = (Spinner)findViewById(R.id.drainageP9_field);
-         filliP9 = (Spinner)findViewById(R.id.fillingP9_field);
-         hireNP9 = (Spinner)findViewById(R.id.hireP9_field);
-         gpsP10 = (EditText)findViewById(R.id.gpsp10_field);
-         ageP10 = (EditText)findViewById(R.id.plotAgep10_field);
-         areP10 = (EditText)findViewById(R.id.plotArea10_field);
-         cteP10 = (EditText)findViewById(R.id.cocoaTreesP10_field);
-         estP10 = (EditText)findViewById(R.id.estimatedP10_field);
-         steP10 = (EditText) findViewById(R.id.shadeTreesP10_field);
-         plantP10 = (Spinner)findViewById(R.id.plantingP10_field);
-         fcondP10 = (Spinner)findViewById(R.id.farmConditionP10_field);
-         tdensP10 = (Spinner)findViewById(R.id.treeDensityP10_field);
-         teageP10 = (Spinner)findViewById(R.id.treeAgeP10_field);
-         tehelP10 = (Spinner)findViewById(R.id.treeHealthP10_field);
-         debDiP10 = (Spinner)findViewById(R.id.debilitationP10_field);
-         pruniP10 = (Spinner)findViewById(R.id.pruningP10_field);
-         pesDiP10 = (Spinner)findViewById(R.id.pestDiseaseP10_field);
-         weediP10 = (Spinner)findViewById(R.id.weedingP10_field);
-         harveP10 = (Spinner)findViewById(R.id.harvestingP10_field);
-         shadeP10 = (Spinner)findViewById(R.id.shadeManagementP10_field);
-         soilCP10 = (Spinner)findViewById(R.id.soilConditionP10_field);
-         orgMaP10 = (Spinner)findViewById(R.id.organicMatterP10_field);
-         fertFP10 = (Spinner)findViewById(R.id.fartFormP10_field);
-         fertAP10 = (Spinner)findViewById(R.id.fartApplicationP10_field);
-         limeNP10 = (Spinner)findViewById(R.id.limeP10_field);
-         drainP10 = (Spinner)findViewById(R.id.drainageP10_field);
-         filliP10 = (Spinner)findViewById(R.id.fillingP10_field);
-         hireNP10 = (Spinner)findViewById(R.id.hireP10_field);
     }
 
     @Override
@@ -357,11 +229,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Lp3.setVisibility(View.GONE);
                 Lp4.setVisibility(View.GONE);
                 Lp5.setVisibility(View.GONE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -487,142 +354,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.GONE);
                 filliP5.setVisibility(View.GONE);
                 hireNP5.setVisibility(View.GONE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
             } else if (sObject.getNumberOfPlots().equals("2")) {
                 Lp1.setVisibility(View.VISIBLE);
                 Lp2.setVisibility(View.VISIBLE);
                 Lp3.setVisibility(View.GONE);
                 Lp4.setVisibility(View.GONE);
                 Lp5.setVisibility(View.GONE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -748,131 +485,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.GONE);
                 filliP5.setVisibility(View.GONE);
                 hireNP5.setVisibility(View.GONE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
 
             } else if (sObject.getNumberOfPlots().equals("3")) {
                 Lp1.setVisibility(View.VISIBLE);
@@ -880,11 +492,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Lp3.setVisibility(View.VISIBLE);
                 Lp4.setVisibility(View.GONE);
                 Lp5.setVisibility(View.GONE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -1010,142 +617,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.GONE);
                 filliP5.setVisibility(View.GONE);
                 hireNP5.setVisibility(View.GONE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
             } else if (sObject.getNumberOfPlots().equals("4")) {
                 Lp1.setVisibility(View.VISIBLE);
                 Lp2.setVisibility(View.VISIBLE);
                 Lp3.setVisibility(View.VISIBLE);
                 Lp4.setVisibility(View.VISIBLE);
                 Lp5.setVisibility(View.GONE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -1271,142 +748,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.GONE);
                 filliP5.setVisibility(View.GONE);
                 hireNP5.setVisibility(View.GONE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
             } else if (sObject.getNumberOfPlots().equals("5")) {
                 Lp1.setVisibility(View.VISIBLE);
                 Lp2.setVisibility(View.VISIBLE);
                 Lp3.setVisibility(View.VISIBLE);
                 Lp4.setVisibility(View.VISIBLE);
                 Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -1532,1186 +879,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.VISIBLE);
                 filliP5.setVisibility(View.VISIBLE);
                 hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
-            } else if (sObject.getNumberOfPlots().equals("6")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.VISIBLE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                gpsP5.setVisibility(View.VISIBLE);
-                ageP5.setVisibility(View.VISIBLE);
-                areP5.setVisibility(View.VISIBLE);
-                cteP5.setVisibility(View.VISIBLE);
-                estP5.setVisibility(View.VISIBLE);
-                steP5.setVisibility(View.VISIBLE);
-                plantP5.setVisibility(View.VISIBLE);
-                fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
-                tehelP5.setVisibility(View.VISIBLE);
-                debDiP5.setVisibility(View.VISIBLE);
-                pruniP5.setVisibility(View.VISIBLE);
-                pesDiP5.setVisibility(View.VISIBLE);
-                weediP5.setVisibility(View.VISIBLE);
-                harveP5.setVisibility(View.VISIBLE);
-                shadeP5.setVisibility(View.VISIBLE);
-                soilCP5.setVisibility(View.VISIBLE);
-                orgMaP5.setVisibility(View.VISIBLE);
-                fertFP5.setVisibility(View.VISIBLE);
-                fertAP5.setVisibility(View.VISIBLE);
-                limeNP5.setVisibility(View.VISIBLE);
-                drainP5.setVisibility(View.VISIBLE);
-                filliP5.setVisibility(View.VISIBLE);
-                hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.VISIBLE);
-                ageP6.setVisibility(View.VISIBLE);
-                areP6.setVisibility(View.VISIBLE);
-                cteP6.setVisibility(View.VISIBLE);
-                estP6.setVisibility(View.VISIBLE);
-                steP6.setVisibility(View.VISIBLE);
-                plantP6.setVisibility(View.VISIBLE);
-                fcondP6.setVisibility(View.VISIBLE);
-                tdensP6.setVisibility(View.VISIBLE);
-                teageP6.setVisibility(View.VISIBLE);
-                tehelP6.setVisibility(View.VISIBLE);
-                debDiP6.setVisibility(View.VISIBLE);
-                pruniP6.setVisibility(View.VISIBLE);
-                pesDiP6.setVisibility(View.VISIBLE);
-                weediP6.setVisibility(View.VISIBLE);
-                harveP6.setVisibility(View.VISIBLE);
-                shadeP6.setVisibility(View.VISIBLE);
-                soilCP6.setVisibility(View.VISIBLE);
-                orgMaP6.setVisibility(View.VISIBLE);
-                fertFP6.setVisibility(View.VISIBLE);
-                fertAP6.setVisibility(View.VISIBLE);
-                limeNP6.setVisibility(View.VISIBLE);
-                drainP6.setVisibility(View.VISIBLE);
-                filliP6.setVisibility(View.VISIBLE);
-                hireNP6.setVisibility(View.VISIBLE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
-            } else if (sObject.getNumberOfPlots().equals("7")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.VISIBLE);
-                Lp7.setVisibility(View.VISIBLE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                gpsP5.setVisibility(View.VISIBLE);
-                ageP5.setVisibility(View.VISIBLE);
-                areP5.setVisibility(View.VISIBLE);
-                cteP5.setVisibility(View.VISIBLE);
-                estP5.setVisibility(View.VISIBLE);
-                steP5.setVisibility(View.VISIBLE);
-                plantP5.setVisibility(View.VISIBLE);
-                fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
-                tehelP5.setVisibility(View.VISIBLE);
-                debDiP5.setVisibility(View.VISIBLE);
-                pruniP5.setVisibility(View.VISIBLE);
-                pesDiP5.setVisibility(View.VISIBLE);
-                weediP5.setVisibility(View.VISIBLE);
-                harveP5.setVisibility(View.VISIBLE);
-                shadeP5.setVisibility(View.VISIBLE);
-                soilCP5.setVisibility(View.VISIBLE);
-                orgMaP5.setVisibility(View.VISIBLE);
-                fertFP5.setVisibility(View.VISIBLE);
-                fertAP5.setVisibility(View.VISIBLE);
-                limeNP5.setVisibility(View.VISIBLE);
-                drainP5.setVisibility(View.VISIBLE);
-                filliP5.setVisibility(View.VISIBLE);
-                hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.VISIBLE);
-                ageP6.setVisibility(View.VISIBLE);
-                areP6.setVisibility(View.VISIBLE);
-                cteP6.setVisibility(View.VISIBLE);
-                estP6.setVisibility(View.VISIBLE);
-                steP6.setVisibility(View.VISIBLE);
-                plantP6.setVisibility(View.VISIBLE);
-                fcondP6.setVisibility(View.VISIBLE);
-                tdensP6.setVisibility(View.VISIBLE);
-                teageP6.setVisibility(View.VISIBLE);
-                tehelP6.setVisibility(View.VISIBLE);
-                debDiP6.setVisibility(View.VISIBLE);
-                pruniP6.setVisibility(View.VISIBLE);
-                pesDiP6.setVisibility(View.VISIBLE);
-                weediP6.setVisibility(View.VISIBLE);
-                harveP6.setVisibility(View.VISIBLE);
-                shadeP6.setVisibility(View.VISIBLE);
-                soilCP6.setVisibility(View.VISIBLE);
-                orgMaP6.setVisibility(View.VISIBLE);
-                fertFP6.setVisibility(View.VISIBLE);
-                fertAP6.setVisibility(View.VISIBLE);
-                limeNP6.setVisibility(View.VISIBLE);
-                drainP6.setVisibility(View.VISIBLE);
-                filliP6.setVisibility(View.VISIBLE);
-                hireNP6.setVisibility(View.VISIBLE);
-                gpsP7.setVisibility(View.VISIBLE);
-                ageP7.setVisibility(View.VISIBLE);
-                areP7.setVisibility(View.VISIBLE);
-                cteP7.setVisibility(View.VISIBLE);
-                estP7.setVisibility(View.VISIBLE);
-                steP7.setVisibility(View.VISIBLE);
-                plantP7.setVisibility(View.VISIBLE);
-                fcondP7.setVisibility(View.VISIBLE);
-                tdensP7.setVisibility(View.VISIBLE);
-                teageP7.setVisibility(View.VISIBLE);
-                tehelP7.setVisibility(View.VISIBLE);
-                debDiP7.setVisibility(View.VISIBLE);
-                pruniP7.setVisibility(View.VISIBLE);
-                pesDiP7.setVisibility(View.VISIBLE);
-                weediP7.setVisibility(View.VISIBLE);
-                harveP7.setVisibility(View.VISIBLE);
-                shadeP7.setVisibility(View.VISIBLE);
-                soilCP7.setVisibility(View.VISIBLE);
-                orgMaP7.setVisibility(View.VISIBLE);
-                fertFP7.setVisibility(View.VISIBLE);
-                fertAP7.setVisibility(View.VISIBLE);
-                limeNP7.setVisibility(View.VISIBLE);
-                drainP7.setVisibility(View.VISIBLE);
-                filliP7.setVisibility(View.VISIBLE);
-                hireNP7.setVisibility(View.VISIBLE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
-            } else if (sObject.getNumberOfPlots().equals("8")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.VISIBLE);
-                Lp7.setVisibility(View.VISIBLE);
-                Lp8.setVisibility(View.VISIBLE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                gpsP5.setVisibility(View.VISIBLE);
-                ageP5.setVisibility(View.VISIBLE);
-                areP5.setVisibility(View.VISIBLE);
-                cteP5.setVisibility(View.VISIBLE);
-                estP5.setVisibility(View.VISIBLE);
-                steP5.setVisibility(View.VISIBLE);
-                plantP5.setVisibility(View.VISIBLE);
-                fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
-                tehelP5.setVisibility(View.VISIBLE);
-                debDiP5.setVisibility(View.VISIBLE);
-                pruniP5.setVisibility(View.VISIBLE);
-                pesDiP5.setVisibility(View.VISIBLE);
-                weediP5.setVisibility(View.VISIBLE);
-                harveP5.setVisibility(View.VISIBLE);
-                shadeP5.setVisibility(View.VISIBLE);
-                soilCP5.setVisibility(View.VISIBLE);
-                orgMaP5.setVisibility(View.VISIBLE);
-                fertFP5.setVisibility(View.VISIBLE);
-                fertAP5.setVisibility(View.VISIBLE);
-                limeNP5.setVisibility(View.VISIBLE);
-                drainP5.setVisibility(View.VISIBLE);
-                filliP5.setVisibility(View.VISIBLE);
-                hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.VISIBLE);
-                ageP6.setVisibility(View.VISIBLE);
-                areP6.setVisibility(View.VISIBLE);
-                cteP6.setVisibility(View.VISIBLE);
-                estP6.setVisibility(View.VISIBLE);
-                steP6.setVisibility(View.VISIBLE);
-                plantP6.setVisibility(View.VISIBLE);
-                fcondP6.setVisibility(View.VISIBLE);
-                tdensP6.setVisibility(View.VISIBLE);
-                teageP6.setVisibility(View.VISIBLE);
-                tehelP6.setVisibility(View.VISIBLE);
-                debDiP6.setVisibility(View.VISIBLE);
-                pruniP6.setVisibility(View.VISIBLE);
-                pesDiP6.setVisibility(View.VISIBLE);
-                weediP6.setVisibility(View.VISIBLE);
-                harveP6.setVisibility(View.VISIBLE);
-                shadeP6.setVisibility(View.VISIBLE);
-                soilCP6.setVisibility(View.VISIBLE);
-                orgMaP6.setVisibility(View.VISIBLE);
-                fertFP6.setVisibility(View.VISIBLE);
-                fertAP6.setVisibility(View.VISIBLE);
-                limeNP6.setVisibility(View.VISIBLE);
-                drainP6.setVisibility(View.VISIBLE);
-                filliP6.setVisibility(View.VISIBLE);
-                hireNP6.setVisibility(View.VISIBLE);
-                gpsP7.setVisibility(View.VISIBLE);
-                ageP7.setVisibility(View.VISIBLE);
-                areP7.setVisibility(View.VISIBLE);
-                cteP7.setVisibility(View.VISIBLE);
-                estP7.setVisibility(View.VISIBLE);
-                steP7.setVisibility(View.VISIBLE);
-                plantP7.setVisibility(View.VISIBLE);
-                fcondP7.setVisibility(View.VISIBLE);
-                tdensP7.setVisibility(View.VISIBLE);
-                teageP7.setVisibility(View.VISIBLE);
-                tehelP7.setVisibility(View.VISIBLE);
-                debDiP7.setVisibility(View.VISIBLE);
-                pruniP7.setVisibility(View.VISIBLE);
-                pesDiP7.setVisibility(View.VISIBLE);
-                weediP7.setVisibility(View.VISIBLE);
-                harveP7.setVisibility(View.VISIBLE);
-                shadeP7.setVisibility(View.VISIBLE);
-                soilCP7.setVisibility(View.VISIBLE);
-                orgMaP7.setVisibility(View.VISIBLE);
-                fertFP7.setVisibility(View.VISIBLE);
-                fertAP7.setVisibility(View.VISIBLE);
-                limeNP7.setVisibility(View.VISIBLE);
-                drainP7.setVisibility(View.VISIBLE);
-                filliP7.setVisibility(View.VISIBLE);
-                hireNP7.setVisibility(View.VISIBLE);
-                gpsP8.setVisibility(View.VISIBLE);
-                ageP8.setVisibility(View.VISIBLE);
-                areP8.setVisibility(View.VISIBLE);
-                cteP8.setVisibility(View.VISIBLE);
-                estP8.setVisibility(View.VISIBLE);
-                steP8.setVisibility(View.VISIBLE);
-                plantP8.setVisibility(View.VISIBLE);
-                fcondP8.setVisibility(View.VISIBLE);
-                tdensP8.setVisibility(View.VISIBLE);
-                teageP8.setVisibility(View.VISIBLE);
-                tehelP8.setVisibility(View.VISIBLE);
-                debDiP8.setVisibility(View.VISIBLE);
-                pruniP8.setVisibility(View.VISIBLE);
-                pesDiP8.setVisibility(View.VISIBLE);
-                weediP8.setVisibility(View.VISIBLE);
-                harveP8.setVisibility(View.VISIBLE);
-                shadeP8.setVisibility(View.VISIBLE);
-                soilCP8.setVisibility(View.VISIBLE);
-                orgMaP8.setVisibility(View.VISIBLE);
-                fertFP8.setVisibility(View.VISIBLE);
-                fertAP8.setVisibility(View.VISIBLE);
-                limeNP8.setVisibility(View.VISIBLE);
-                drainP8.setVisibility(View.VISIBLE);
-                filliP8.setVisibility(View.VISIBLE);
-                hireNP8.setVisibility(View.VISIBLE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
-            } else if (sObject.getNumberOfPlots().equals("9")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.VISIBLE);
-                Lp7.setVisibility(View.VISIBLE);
-                Lp8.setVisibility(View.VISIBLE);
-                Lp9.setVisibility(View.VISIBLE);
-                Lp10.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                gpsP5.setVisibility(View.VISIBLE);
-                ageP5.setVisibility(View.VISIBLE);
-                areP5.setVisibility(View.VISIBLE);
-                cteP5.setVisibility(View.VISIBLE);
-                estP5.setVisibility(View.VISIBLE);
-                steP5.setVisibility(View.VISIBLE);
-                plantP5.setVisibility(View.VISIBLE);
-                fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
-                tehelP5.setVisibility(View.VISIBLE);
-                debDiP5.setVisibility(View.VISIBLE);
-                pruniP5.setVisibility(View.VISIBLE);
-                pesDiP5.setVisibility(View.VISIBLE);
-                weediP5.setVisibility(View.VISIBLE);
-                harveP5.setVisibility(View.VISIBLE);
-                shadeP5.setVisibility(View.VISIBLE);
-                soilCP5.setVisibility(View.VISIBLE);
-                orgMaP5.setVisibility(View.VISIBLE);
-                fertFP5.setVisibility(View.VISIBLE);
-                fertAP5.setVisibility(View.VISIBLE);
-                limeNP5.setVisibility(View.VISIBLE);
-                drainP5.setVisibility(View.VISIBLE);
-                filliP5.setVisibility(View.VISIBLE);
-                hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.VISIBLE);
-                ageP6.setVisibility(View.VISIBLE);
-                areP6.setVisibility(View.VISIBLE);
-                cteP6.setVisibility(View.VISIBLE);
-                estP6.setVisibility(View.VISIBLE);
-                steP6.setVisibility(View.VISIBLE);
-                plantP6.setVisibility(View.VISIBLE);
-                fcondP6.setVisibility(View.VISIBLE);
-                tdensP6.setVisibility(View.VISIBLE);
-                teageP6.setVisibility(View.VISIBLE);
-                tehelP6.setVisibility(View.VISIBLE);
-                debDiP6.setVisibility(View.VISIBLE);
-                pruniP6.setVisibility(View.VISIBLE);
-                pesDiP6.setVisibility(View.VISIBLE);
-                weediP6.setVisibility(View.VISIBLE);
-                harveP6.setVisibility(View.VISIBLE);
-                shadeP6.setVisibility(View.VISIBLE);
-                soilCP6.setVisibility(View.VISIBLE);
-                orgMaP6.setVisibility(View.VISIBLE);
-                fertFP6.setVisibility(View.VISIBLE);
-                fertAP6.setVisibility(View.VISIBLE);
-                limeNP6.setVisibility(View.VISIBLE);
-                drainP6.setVisibility(View.VISIBLE);
-                filliP6.setVisibility(View.VISIBLE);
-                hireNP6.setVisibility(View.VISIBLE);
-                gpsP7.setVisibility(View.VISIBLE);
-                ageP7.setVisibility(View.VISIBLE);
-                areP7.setVisibility(View.VISIBLE);
-                cteP7.setVisibility(View.VISIBLE);
-                estP7.setVisibility(View.VISIBLE);
-                steP7.setVisibility(View.VISIBLE);
-                plantP7.setVisibility(View.VISIBLE);
-                fcondP7.setVisibility(View.VISIBLE);
-                tdensP7.setVisibility(View.VISIBLE);
-                teageP7.setVisibility(View.VISIBLE);
-                tehelP7.setVisibility(View.VISIBLE);
-                debDiP7.setVisibility(View.VISIBLE);
-                pruniP7.setVisibility(View.VISIBLE);
-                pesDiP7.setVisibility(View.VISIBLE);
-                weediP7.setVisibility(View.VISIBLE);
-                harveP7.setVisibility(View.VISIBLE);
-                shadeP7.setVisibility(View.VISIBLE);
-                soilCP7.setVisibility(View.VISIBLE);
-                orgMaP7.setVisibility(View.VISIBLE);
-                fertFP7.setVisibility(View.VISIBLE);
-                fertAP7.setVisibility(View.VISIBLE);
-                limeNP7.setVisibility(View.VISIBLE);
-                drainP7.setVisibility(View.VISIBLE);
-                filliP7.setVisibility(View.VISIBLE);
-                hireNP7.setVisibility(View.VISIBLE);
-                gpsP8.setVisibility(View.VISIBLE);
-                ageP8.setVisibility(View.VISIBLE);
-                areP8.setVisibility(View.VISIBLE);
-                cteP8.setVisibility(View.VISIBLE);
-                estP8.setVisibility(View.VISIBLE);
-                steP8.setVisibility(View.VISIBLE);
-                plantP8.setVisibility(View.VISIBLE);
-                fcondP8.setVisibility(View.VISIBLE);
-                tdensP8.setVisibility(View.VISIBLE);
-                teageP8.setVisibility(View.VISIBLE);
-                tehelP8.setVisibility(View.VISIBLE);
-                debDiP8.setVisibility(View.VISIBLE);
-                pruniP8.setVisibility(View.VISIBLE);
-                pesDiP8.setVisibility(View.VISIBLE);
-                weediP8.setVisibility(View.VISIBLE);
-                harveP8.setVisibility(View.VISIBLE);
-                shadeP8.setVisibility(View.VISIBLE);
-                soilCP8.setVisibility(View.VISIBLE);
-                orgMaP8.setVisibility(View.VISIBLE);
-                fertFP8.setVisibility(View.VISIBLE);
-                fertAP8.setVisibility(View.VISIBLE);
-                limeNP8.setVisibility(View.VISIBLE);
-                drainP8.setVisibility(View.VISIBLE);
-                filliP8.setVisibility(View.VISIBLE);
-                hireNP8.setVisibility(View.VISIBLE);
-                gpsP9.setVisibility(View.VISIBLE);
-                ageP9.setVisibility(View.VISIBLE);
-                areP9.setVisibility(View.VISIBLE);
-                cteP9.setVisibility(View.VISIBLE);
-                estP9.setVisibility(View.VISIBLE);
-                steP9.setVisibility(View.VISIBLE);
-                plantP9.setVisibility(View.VISIBLE);
-                fcondP9.setVisibility(View.VISIBLE);
-                tdensP9.setVisibility(View.VISIBLE);
-                teageP9.setVisibility(View.VISIBLE);
-                tehelP9.setVisibility(View.VISIBLE);
-                debDiP9.setVisibility(View.VISIBLE);
-                pruniP9.setVisibility(View.VISIBLE);
-                pesDiP9.setVisibility(View.VISIBLE);
-                weediP9.setVisibility(View.VISIBLE);
-                harveP9.setVisibility(View.VISIBLE);
-                shadeP9.setVisibility(View.VISIBLE);
-                soilCP9.setVisibility(View.VISIBLE);
-                orgMaP9.setVisibility(View.VISIBLE);
-                fertFP9.setVisibility(View.VISIBLE);
-                fertAP9.setVisibility(View.VISIBLE);
-                limeNP9.setVisibility(View.VISIBLE);
-                drainP9.setVisibility(View.VISIBLE);
-                filliP9.setVisibility(View.VISIBLE);
-                hireNP9.setVisibility(View.VISIBLE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
             } else if (sObject.getNumberOfPlots().equals("0")) {
                 Lp1.setVisibility(View.GONE);
                 Lp2.setVisibility(View.GONE);
                 Lp3.setVisibility(View.GONE);
                 Lp4.setVisibility(View.GONE);
                 Lp5.setVisibility(View.GONE);
-                Lp6.setVisibility(View.GONE);
-                Lp7.setVisibility(View.GONE);
-                Lp8.setVisibility(View.GONE);
-                Lp9.setVisibility(View.GONE);
-                Lp10.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.GONE);
                 ageP1.setVisibility(View.GONE);
                 areP1.setVisibility(View.GONE);
@@ -2837,143 +1010,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.GONE);
                 filliP5.setVisibility(View.GONE);
                 hireNP5.setVisibility(View.GONE);
-                gpsP6.setVisibility(View.GONE);
-                ageP6.setVisibility(View.GONE);
-                areP6.setVisibility(View.GONE);
-                cteP6.setVisibility(View.GONE);
-                estP6.setVisibility(View.GONE);
-                steP6.setVisibility(View.GONE);
-                plantP6.setVisibility(View.GONE);
-                fcondP6.setVisibility(View.GONE);
-                tdensP6.setVisibility(View.GONE);
-                teageP6.setVisibility(View.GONE);
-                tehelP6.setVisibility(View.GONE);
-                debDiP6.setVisibility(View.GONE);
-                pruniP6.setVisibility(View.GONE);
-                pesDiP6.setVisibility(View.GONE);
-                weediP6.setVisibility(View.GONE);
-                harveP6.setVisibility(View.GONE);
-                shadeP6.setVisibility(View.GONE);
-                soilCP6.setVisibility(View.GONE);
-                orgMaP6.setVisibility(View.GONE);
-                fertFP6.setVisibility(View.GONE);
-                fertAP6.setVisibility(View.GONE);
-                limeNP6.setVisibility(View.GONE);
-                drainP6.setVisibility(View.GONE);
-                filliP6.setVisibility(View.GONE);
-                hireNP6.setVisibility(View.GONE);
-                gpsP7.setVisibility(View.GONE);
-                ageP7.setVisibility(View.GONE);
-                areP7.setVisibility(View.GONE);
-                cteP7.setVisibility(View.GONE);
-                estP7.setVisibility(View.GONE);
-                steP7.setVisibility(View.GONE);
-                plantP7.setVisibility(View.GONE);
-                fcondP7.setVisibility(View.GONE);
-                tdensP7.setVisibility(View.GONE);
-                teageP7.setVisibility(View.GONE);
-                tehelP7.setVisibility(View.GONE);
-                debDiP7.setVisibility(View.GONE);
-                pruniP7.setVisibility(View.GONE);
-                pesDiP7.setVisibility(View.GONE);
-                weediP7.setVisibility(View.GONE);
-                harveP7.setVisibility(View.GONE);
-                shadeP7.setVisibility(View.GONE);
-                soilCP7.setVisibility(View.GONE);
-                orgMaP7.setVisibility(View.GONE);
-                fertFP7.setVisibility(View.GONE);
-                fertAP7.setVisibility(View.GONE);
-                limeNP7.setVisibility(View.GONE);
-                drainP7.setVisibility(View.GONE);
-                filliP7.setVisibility(View.GONE);
-                hireNP7.setVisibility(View.GONE);
-                gpsP8.setVisibility(View.GONE);
-                ageP8.setVisibility(View.GONE);
-                areP8.setVisibility(View.GONE);
-                cteP8.setVisibility(View.GONE);
-                estP8.setVisibility(View.GONE);
-                steP8.setVisibility(View.GONE);
-                plantP8.setVisibility(View.GONE);
-                fcondP8.setVisibility(View.GONE);
-                tdensP8.setVisibility(View.GONE);
-                teageP8.setVisibility(View.GONE);
-                tehelP8.setVisibility(View.GONE);
-                debDiP8.setVisibility(View.GONE);
-                pruniP8.setVisibility(View.GONE);
-                pesDiP8.setVisibility(View.GONE);
-                weediP8.setVisibility(View.GONE);
-                harveP8.setVisibility(View.GONE);
-                shadeP8.setVisibility(View.GONE);
-                soilCP8.setVisibility(View.GONE);
-                orgMaP8.setVisibility(View.GONE);
-                fertFP8.setVisibility(View.GONE);
-                fertAP8.setVisibility(View.GONE);
-                limeNP8.setVisibility(View.GONE);
-                drainP8.setVisibility(View.GONE);
-                filliP8.setVisibility(View.GONE);
-                hireNP8.setVisibility(View.GONE);
-                gpsP9.setVisibility(View.GONE);
-                ageP9.setVisibility(View.GONE);
-                areP9.setVisibility(View.GONE);
-                cteP9.setVisibility(View.GONE);
-                estP9.setVisibility(View.GONE);
-                steP9.setVisibility(View.GONE);
-                plantP9.setVisibility(View.GONE);
-                fcondP9.setVisibility(View.GONE);
-                tdensP9.setVisibility(View.GONE);
-                teageP9.setVisibility(View.GONE);
-                tehelP9.setVisibility(View.GONE);
-                debDiP9.setVisibility(View.GONE);
-                pruniP9.setVisibility(View.GONE);
-                pesDiP9.setVisibility(View.GONE);
-                weediP9.setVisibility(View.GONE);
-                harveP9.setVisibility(View.GONE);
-                shadeP9.setVisibility(View.GONE);
-                soilCP9.setVisibility(View.GONE);
-                orgMaP9.setVisibility(View.GONE);
-                fertFP9.setVisibility(View.GONE);
-                fertAP9.setVisibility(View.GONE);
-                limeNP9.setVisibility(View.GONE);
-                drainP9.setVisibility(View.GONE);
-                filliP9.setVisibility(View.GONE);
-                hireNP9.setVisibility(View.GONE);
-                gpsP10.setVisibility(View.GONE);
-                ageP10.setVisibility(View.GONE);
-                areP10.setVisibility(View.GONE);
-                cteP10.setVisibility(View.GONE);
-                estP10.setVisibility(View.GONE);
-                steP10.setVisibility(View.GONE);
-                plantP10.setVisibility(View.GONE);
-                fcondP10.setVisibility(View.GONE);
-                tdensP10.setVisibility(View.GONE);
-                teageP10.setVisibility(View.GONE);
-                tehelP10.setVisibility(View.GONE);
-                debDiP10.setVisibility(View.GONE);
-                pruniP10.setVisibility(View.GONE);
-                pesDiP10.setVisibility(View.GONE);
-                weediP10.setVisibility(View.GONE);
-                harveP10.setVisibility(View.GONE);
-                shadeP10.setVisibility(View.GONE);
-                soilCP10.setVisibility(View.GONE);
-                orgMaP10.setVisibility(View.GONE);
-                fertFP10.setVisibility(View.GONE);
-                fertAP10.setVisibility(View.GONE);
-                limeNP10.setVisibility(View.GONE);
-                drainP10.setVisibility(View.GONE);
-                filliP10.setVisibility(View.GONE);
-                hireNP10.setVisibility(View.GONE);
-
             } else {
                 Lp1.setVisibility(View.VISIBLE);
                 Lp2.setVisibility(View.VISIBLE);
                 Lp3.setVisibility(View.VISIBLE);
                 Lp4.setVisibility(View.VISIBLE);
                 Lp5.setVisibility(View.VISIBLE);
-                Lp6.setVisibility(View.VISIBLE);
-                Lp7.setVisibility(View.VISIBLE);
-                Lp8.setVisibility(View.VISIBLE);
-                Lp9.setVisibility(View.VISIBLE);
-                Lp10.setVisibility(View.VISIBLE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -3099,164 +1141,2394 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 drainP5.setVisibility(View.VISIBLE);
                 filliP5.setVisibility(View.VISIBLE);
                 hireNP5.setVisibility(View.VISIBLE);
-                gpsP6.setVisibility(View.VISIBLE);
-                ageP6.setVisibility(View.VISIBLE);
-                areP6.setVisibility(View.VISIBLE);
-                cteP6.setVisibility(View.VISIBLE);
-                estP6.setVisibility(View.VISIBLE);
-                steP6.setVisibility(View.VISIBLE);
-                plantP6.setVisibility(View.VISIBLE);
-                fcondP6.setVisibility(View.VISIBLE);
-                tdensP6.setVisibility(View.VISIBLE);
-                teageP6.setVisibility(View.VISIBLE);
-                tehelP6.setVisibility(View.VISIBLE);
-                debDiP6.setVisibility(View.VISIBLE);
-                pruniP6.setVisibility(View.VISIBLE);
-                pesDiP6.setVisibility(View.VISIBLE);
-                weediP6.setVisibility(View.VISIBLE);
-                harveP6.setVisibility(View.VISIBLE);
-                shadeP6.setVisibility(View.VISIBLE);
-                soilCP6.setVisibility(View.VISIBLE);
-                orgMaP6.setVisibility(View.VISIBLE);
-                fertFP6.setVisibility(View.VISIBLE);
-                fertAP6.setVisibility(View.VISIBLE);
-                limeNP6.setVisibility(View.VISIBLE);
-                drainP6.setVisibility(View.VISIBLE);
-                filliP6.setVisibility(View.VISIBLE);
-                hireNP6.setVisibility(View.VISIBLE);
-                gpsP7.setVisibility(View.VISIBLE);
-                ageP7.setVisibility(View.VISIBLE);
-                areP7.setVisibility(View.VISIBLE);
-                cteP7.setVisibility(View.VISIBLE);
-                estP7.setVisibility(View.VISIBLE);
-                steP7.setVisibility(View.VISIBLE);
-                plantP7.setVisibility(View.VISIBLE);
-                fcondP7.setVisibility(View.VISIBLE);
-                tdensP7.setVisibility(View.VISIBLE);
-                teageP7.setVisibility(View.VISIBLE);
-                tehelP7.setVisibility(View.VISIBLE);
-                debDiP7.setVisibility(View.VISIBLE);
-                pruniP7.setVisibility(View.VISIBLE);
-                pesDiP7.setVisibility(View.VISIBLE);
-                weediP7.setVisibility(View.VISIBLE);
-                harveP7.setVisibility(View.VISIBLE);
-                shadeP7.setVisibility(View.VISIBLE);
-                soilCP7.setVisibility(View.VISIBLE);
-                orgMaP7.setVisibility(View.VISIBLE);
-                fertFP7.setVisibility(View.VISIBLE);
-                fertAP7.setVisibility(View.VISIBLE);
-                limeNP7.setVisibility(View.VISIBLE);
-                drainP7.setVisibility(View.VISIBLE);
-                filliP7.setVisibility(View.VISIBLE);
-                hireNP7.setVisibility(View.VISIBLE);
-                gpsP8.setVisibility(View.VISIBLE);
-                ageP8.setVisibility(View.VISIBLE);
-                areP8.setVisibility(View.VISIBLE);
-                cteP8.setVisibility(View.VISIBLE);
-                estP8.setVisibility(View.VISIBLE);
-                steP8.setVisibility(View.VISIBLE);
-                plantP8.setVisibility(View.VISIBLE);
-                fcondP8.setVisibility(View.VISIBLE);
-                tdensP8.setVisibility(View.VISIBLE);
-                teageP8.setVisibility(View.VISIBLE);
-                tehelP8.setVisibility(View.VISIBLE);
-                debDiP8.setVisibility(View.VISIBLE);
-                pruniP8.setVisibility(View.VISIBLE);
-                pesDiP8.setVisibility(View.VISIBLE);
-                weediP8.setVisibility(View.VISIBLE);
-                harveP8.setVisibility(View.VISIBLE);
-                shadeP8.setVisibility(View.VISIBLE);
-                soilCP8.setVisibility(View.VISIBLE);
-                orgMaP8.setVisibility(View.VISIBLE);
-                fertFP8.setVisibility(View.VISIBLE);
-                fertAP8.setVisibility(View.VISIBLE);
-                limeNP8.setVisibility(View.VISIBLE);
-                drainP8.setVisibility(View.VISIBLE);
-                filliP8.setVisibility(View.VISIBLE);
-                hireNP8.setVisibility(View.VISIBLE);
-                gpsP9.setVisibility(View.VISIBLE);
-                ageP9.setVisibility(View.VISIBLE);
-                areP9.setVisibility(View.VISIBLE);
-                cteP9.setVisibility(View.VISIBLE);
-                estP9.setVisibility(View.VISIBLE);
-                steP9.setVisibility(View.VISIBLE);
-                plantP9.setVisibility(View.VISIBLE);
-                fcondP9.setVisibility(View.VISIBLE);
-                tdensP9.setVisibility(View.VISIBLE);
-                teageP9.setVisibility(View.VISIBLE);
-                tehelP9.setVisibility(View.VISIBLE);
-                debDiP9.setVisibility(View.VISIBLE);
-                pruniP9.setVisibility(View.VISIBLE);
-                pesDiP9.setVisibility(View.VISIBLE);
-                weediP9.setVisibility(View.VISIBLE);
-                harveP9.setVisibility(View.VISIBLE);
-                shadeP9.setVisibility(View.VISIBLE);
-                soilCP9.setVisibility(View.VISIBLE);
-                orgMaP9.setVisibility(View.VISIBLE);
-                fertFP9.setVisibility(View.VISIBLE);
-                fertAP9.setVisibility(View.VISIBLE);
-                limeNP9.setVisibility(View.VISIBLE);
-                drainP9.setVisibility(View.VISIBLE);
-                filliP9.setVisibility(View.VISIBLE);
-                hireNP9.setVisibility(View.VISIBLE);
-                gpsP10.setVisibility(View.VISIBLE);
-                ageP10.setVisibility(View.VISIBLE);
-                areP10.setVisibility(View.VISIBLE);
-                cteP10.setVisibility(View.VISIBLE);
-                estP10.setVisibility(View.VISIBLE);
-                steP10.setVisibility(View.VISIBLE);
-                plantP10.setVisibility(View.VISIBLE);
-                fcondP10.setVisibility(View.VISIBLE);
-                tdensP10.setVisibility(View.VISIBLE);
-                teageP10.setVisibility(View.VISIBLE);
-                tehelP10.setVisibility(View.VISIBLE);
-                debDiP10.setVisibility(View.VISIBLE);
-                pruniP10.setVisibility(View.VISIBLE);
-                pesDiP10.setVisibility(View.VISIBLE);
-                weediP10.setVisibility(View.VISIBLE);
-                harveP10.setVisibility(View.VISIBLE);
-                shadeP10.setVisibility(View.VISIBLE);
-                soilCP10.setVisibility(View.VISIBLE);
-                orgMaP10.setVisibility(View.VISIBLE);
-                fertFP10.setVisibility(View.VISIBLE);
-                fertAP10.setVisibility(View.VISIBLE);
-                limeNP10.setVisibility(View.VISIBLE);
-                drainP10.setVisibility(View.VISIBLE);
-                filliP10.setVisibility(View.VISIBLE);
-                hireNP10.setVisibility(View.VISIBLE);
-
+            }
+            //set field
+            if (sObject.getPlot1Area().isEmpty()){
+                setText((EditText) findViewById(R.id.plotArea1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotArea1_field),
+                        sObject.getPlot1Area());
             }
 
-            setText((EditText) findViewById(R.id.plotArea1_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP1_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP1_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea2_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP2_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP2_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea3_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP3_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP3_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea4_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP4_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP4_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea5_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP5_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP5_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea6_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP6_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP6_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea7_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP7_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP7_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea8_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP8_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP8_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea9_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP9_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP9_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.plotArea10_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.cocoaTreesP10_field),Integer.toString(0));
-            setText((EditText) findViewById(R.id.estimatedP10_field),Integer.toString(0));
+            //set field
+            if (sObject.getPlot1Age().isEmpty()){
+                setText((EditText) findViewById(R.id.plotAgep1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotAgep1_field),
+                        sObject.getPlot1Age());
+            }
+            //set field
+            if (sObject.getPlot1GPS().isEmpty()){
+                setText((EditText) findViewById(R.id.gpsp1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.gpsp1_field),
+                        sObject.getPlot1GPS());
+            }
+
+            //set field
+            if (sObject.getPlot1CocoaTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.cocoaTreesP1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cocoaTreesP1_field),
+                        sObject.getPlot1CocoaTrees());
+            }
+
+            //set field
+            if (sObject.getPlot1ShadeTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.shadeTreesP1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.shadeTreesP1_field),
+                        sObject.getPlot1ShadeTrees());
+            }
+
+            //set field
+            if (sObject.getPlot1Yield().isEmpty()){
+                setText((EditText) findViewById(R.id.estimatedP1_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.estimatedP1_field),
+                        sObject.getPlot1Yield());
+            }
+
+            //set field
+            if (sObject.getPlantingMaterial1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPlantingMaterial1().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlantingMaterial1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFarmCondition1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFarmCondition1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeDensity1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeDensity1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeAge1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeAge1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeHealth1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeHealth1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDebilitatingDisease1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDebilitatingDisease1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPruning1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPruning1().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPruning1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPestDiseaseSanitation1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPestDiseaseSanitation1().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPestDiseaseSanitation1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getWeeding1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getWeeding1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHarvesting1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHarvesting1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getShadeManagement1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getShadeManagement1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getSoilCondition1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getSoilCondition1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getOrganicMatter1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getOrganicMatter1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerFormulation1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerFormulation1().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerFormulation1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerApplication1().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerApplication1().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerApplication1().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getLimeNeed1().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getLimeNeed1().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDrainageNeed1().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDrainageNeed1().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFillingOption1().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFillingOption1().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHireLabor1().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHireLabor1().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            ////////////////////////////////////////////////////////
+
+            //set field
+            if (sObject.getPlot2Area().isEmpty()){
+                setText((EditText) findViewById(R.id.plotArea2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotArea2_field),
+                        sObject.getPlot2Area());
+            }
+
+            //set field
+            if (sObject.getPlot2Age().isEmpty()){
+                setText((EditText) findViewById(R.id.plotAgep2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotAgep2_field),
+                        sObject.getPlot2Age());
+            }
+            //set field
+            if (sObject.getPlot2GPS().isEmpty()){
+                setText((EditText) findViewById(R.id.gpsp2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.gpsp2_field),
+                        sObject.getPlot2GPS());
+            }
+
+            //set field
+            if (sObject.getPlot2CocoaTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.cocoaTreesP2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cocoaTreesP2_field),
+                        sObject.getPlot2CocoaTrees());
+            }
+
+            //set field
+            if (sObject.getPlot2ShadeTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.shadeTreesP2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.shadeTreesP2_field),
+                        sObject.getPlot2ShadeTrees());
+            }
+
+            //set field
+            if (sObject.getPlot2Yield().isEmpty()){
+                setText((EditText) findViewById(R.id.estimatedP2_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.estimatedP2_field),
+                        sObject.getPlot2Yield());
+            }
+
+            //set field
+            if (sObject.getPlantingMaterial2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPlantingMaterial2().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlantingMaterial2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFarmCondition2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFarmCondition2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeDensity2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeDensity2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeAge2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeAge2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeHealth2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeHealth2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDebilitatingDisease2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDebilitatingDisease2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPruning2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPruning2().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPruning2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPestDiseaseSanitation2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPestDiseaseSanitation2().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPestDiseaseSanitation2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getWeeding2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getWeeding2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHarvesting2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHarvesting2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getShadeManagement2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getShadeManagement2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getSoilCondition2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getSoilCondition2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getOrganicMatter2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getOrganicMatter2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerFormulation2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerFormulation2().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerFormulation2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFartilizerApplication2().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFartilizerApplication2().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFartilizerApplication2().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getLimeNeed2().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getLimeNeed2().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDrainageNeed2().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDrainageNeed2().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFillingOption2().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFillingOption2().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHireLabor2().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHireLabor2().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            ////////////////////////////////////////////////////////
+
+            //set field
+            if (sObject.getPlot3Area().isEmpty()){
+                setText((EditText) findViewById(R.id.plotArea3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotArea3_field),
+                        sObject.getPlot3Area());
+            }
+
+            //set field
+            if (sObject.getPlot3Age().isEmpty()){
+                setText((EditText) findViewById(R.id.plotAgep3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotAgep3_field),
+                        sObject.getPlot3Age());
+            }
+            //set field
+            if (sObject.getPlot3GPS().isEmpty()){
+                setText((EditText) findViewById(R.id.gpsp3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.gpsp3_field),
+                        sObject.getPlot3GPS());
+            }
+
+            //set field
+            if (sObject.getPlot3CocoaTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.cocoaTreesP3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cocoaTreesP3_field),
+                        sObject.getPlot3CocoaTrees());
+            }
+
+            //set field
+            if (sObject.getPlot3ShadeTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.shadeTreesP3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.shadeTreesP3_field),
+                        sObject.getPlot3ShadeTrees());
+            }
+
+            //set field
+            if (sObject.getPlot3Yield().isEmpty()){
+                setText((EditText) findViewById(R.id.estimatedP3_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.estimatedP3_field),
+                        sObject.getPlot3Yield());
+            }
+
+            //set field
+            if (sObject.getPlantingMaterial3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPlantingMaterial3().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlantingMaterial3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFarmCondition3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFarmCondition3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeDensity3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeDensity3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeAge3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeAge3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeHealth3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeHealth3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDebilitatingDisease3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDebilitatingDisease3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPruning3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPruning3().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPruning3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPestDiseaseSanitation3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPestDiseaseSanitation3().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPestDiseaseSanitation3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getWeeding3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getWeeding3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHarvesting3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHarvesting3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getShadeManagement3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getShadeManagement3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getSoilCondition3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getSoilCondition3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getOrganicMatter3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getOrganicMatter3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerFormulation3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerFormulation3().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerFormulation3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerApplication3().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerApplication3().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerApplication3().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getLimeNeed3().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getLimeNeed3().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDrainageNeed3().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDrainageNeed3().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFillingOption3().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFillingOption3().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHireLabor3().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHireLabor3().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            ////////////////////////////////////////////////////////
+
+            //set field
+            if (sObject.getPlot4Area().isEmpty()){
+                setText((EditText) findViewById(R.id.plotArea4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotArea4_field),
+                        sObject.getPlot4Area());
+            }
+
+            //set field
+            if (sObject.getPlot4Age().isEmpty()){
+                setText((EditText) findViewById(R.id.plotAgep4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotAgep4_field),
+                        sObject.getPlot4Age());
+            }
+            //set field
+            if (sObject.getPlot4GPS().isEmpty()){
+                setText((EditText) findViewById(R.id.gpsp4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.gpsp4_field),
+                        sObject.getPlot4GPS());
+            }
+
+            //set field
+            if (sObject.getPlot4CocoaTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.cocoaTreesP4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cocoaTreesP4_field),
+                        sObject.getPlot4CocoaTrees());
+            }
+
+            //set field
+            if (sObject.getPlot4ShadeTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.shadeTreesP4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.shadeTreesP4_field),
+                        sObject.getPlot4ShadeTrees());
+            }
+
+            //set field
+            if (sObject.getPlot4Yield().isEmpty()){
+                setText((EditText) findViewById(R.id.estimatedP4_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.estimatedP4_field),
+                        sObject.getPlot4Yield());
+            }
+
+            //set field
+            if (sObject.getPlantingMaterial4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPlantingMaterial4().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlantingMaterial4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFarmCondition4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFarmCondition4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeDensity4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeDensity4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeAge4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeAge4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeHealth4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeHealth4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDebilitatingDisease4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDebilitatingDisease4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPruning4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPruning4().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPruning4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPestDiseaseSanitation4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPestDiseaseSanitation4().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPestDiseaseSanitation4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getWeeding4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getWeeding4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHarvesting4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHarvesting4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getShadeManagement4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getShadeManagement4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getSoilCondition4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getSoilCondition4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getOrganicMatter4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getOrganicMatter4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerFormulation4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerFormulation4().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerFormulation4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerApplication4().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerApplication4().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerApplication4().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.geLimeNeed4().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.geLimeNeed4().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDrainageNeed4().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDrainageNeed4().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFillingOption4().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFillingOption4().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHireLabor4().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHireLabor4().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            ////////////////////////////////////////////////////////
+
+            //set field
+            if (sObject.getPlot5Area().isEmpty()){
+                setText((EditText) findViewById(R.id.plotArea5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotArea5_field),
+                        sObject.getPlot5Area());
+            }
+
+            //set field
+            if (sObject.getPlot5Age().isEmpty()){
+                setText((EditText) findViewById(R.id.plotAgep5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.plotAgep5_field),
+                        sObject.getPlot5Age());
+            }
+            //set field
+            if (sObject.getPlot5GPS().isEmpty()){
+                setText((EditText) findViewById(R.id.gpsp5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.gpsp5_field),
+                        sObject.getPlot5GPS());
+            }
+
+            //set field
+            if (sObject.getPlot5CocoaTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.cocoaTreesP5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cocoaTreesP5_field),
+                        sObject.getPlot5CocoaTrees());
+            }
+
+            //set field
+            if (sObject.getPlot5ShadeTrees().isEmpty()){
+                setText((EditText) findViewById(R.id.shadeTreesP5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.shadeTreesP5_field),
+                        sObject.getPlot5ShadeTrees());
+            }
+
+            //set field
+            if (sObject.getPlot5Yield().isEmpty()){
+                setText((EditText) findViewById(R.id.estimatedP5_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.estimatedP5_field),
+                        sObject.getPlot5Yield());
+            }
+
+            //set field
+            if (sObject.getPlantingMaterial5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPlantingMaterial5().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlantingMaterial5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.plantingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFarmCondition5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFarmCondition5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.farmConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeDensity5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeDensity5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeDensityP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeAge5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeAge5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeAgeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getTreeHealth5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getTreeHealth5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.treeHealthP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDebilitatingDisease5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDebilitatingDisease5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.debilitationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPruning5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPruning5().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPruning5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pruningP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getPestDiseaseSanitation5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getPestDiseaseSanitation5().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPestDiseaseSanitation5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.pestDiseaseP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getWeeding5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getWeeding5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.weedingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHarvesting5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHarvesting5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.harvestingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getShadeManagement5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getShadeManagement5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.shadeManagementP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getSoilCondition5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getSoilCondition5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.soilConditionP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getOrganicMatter5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_b, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getOrganicMatter5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_g, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.organicMatterP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerFormulation5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerFormulation5().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerFormulation5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartFormP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFertilizerApplication5().contentEquals("G")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.g_mb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFertilizerApplication5().contentEquals("M")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.m_gb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getFertilizerApplication5().contentEquals("B")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.b_gm, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fartApplicationP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.gmb, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getLimeNeed5().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getLimeNeed5().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.limeP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getDrainageNeed5().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getDrainageNeed5().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.drainageP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getFillingOption5().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getFillingOption5().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.fillingP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set field
+            if (sObject.getHireLabor5().contentEquals("Yes")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yes, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getHireLabor5().contentEquals("No")) {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.No, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else {
+                Spinner spinner = (Spinner) findViewById(R.id.hireP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.yesNo, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
         }
     }
 
@@ -3392,131 +3664,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String drainageP5 = ((Spinner) findViewById(R.id.drainageP5_field)).getSelectedItem().toString();
         final String fillingP5 = ((Spinner) findViewById(R.id.fillingP5_field)).getSelectedItem().toString();
         final String hireP5 = ((Spinner) findViewById(R.id.hireP5_field)).getSelectedItem().toString();
-        final String gpsp6 = ((EditText) findViewById(R.id.gpsp6_field)).getText().toString();
-        final String plotAgep6 = ((EditText) findViewById(R.id.plotAgep6_field)).getText().toString();
-        final String plotArea6 = ((EditText) findViewById(R.id.plotArea6_field)).getText().toString();
-        final String cocoaTreesP6 = ((EditText) findViewById(R.id.cocoaTreesP6_field)).getText().toString();
-        final String estimatedP6 = ((EditText) findViewById(R.id.estimatedP6_field)).getText().toString();
-        final String shadeTreesP6 = ((EditText) findViewById(R.id.shadeTreesP6_field)).getText().toString();
-        final String plantingP6 = ((Spinner) findViewById(R.id.plantingP6_field)).getSelectedItem().toString();
-        final String farmConditionP6 = ((Spinner) findViewById(R.id.farmConditionP6_field)).getSelectedItem().toString();
-        final String treeDensityP6 = ((Spinner) findViewById(R.id.treeDensityP6_field)).getSelectedItem().toString();
-        final String treeAgeP6 = ((Spinner) findViewById(R.id.treeAgeP6_field)).getSelectedItem().toString();
-        final String treeHealthP6 = ((Spinner) findViewById(R.id.treeHealthP6_field)).getSelectedItem().toString();
-        final String debilitationP6 = ((Spinner) findViewById(R.id.debilitationP6_field)).getSelectedItem().toString();
-        final String pruningP6 = ((Spinner) findViewById(R.id.pruningP6_field)).getSelectedItem().toString();
-        final String pestDiseaseP6 = ((Spinner) findViewById(R.id.pestDiseaseP6_field)).getSelectedItem().toString();
-        final String weedingP6 = ((Spinner) findViewById(R.id.weedingP6_field)).getSelectedItem().toString();
-        final String harvestingP6 = ((Spinner) findViewById(R.id.harvestingP6_field)).getSelectedItem().toString();
-        final String shadeManagementP6 = ((Spinner) findViewById(R.id.shadeManagementP6_field)).getSelectedItem().toString();
-        final String soilConditionP6 = ((Spinner) findViewById(R.id.soilConditionP6_field)).getSelectedItem().toString();
-        final String organicMatterP6 = ((Spinner) findViewById(R.id.organicMatterP6_field)).getSelectedItem().toString();
-        final String fertFormP6 = ((Spinner) findViewById(R.id.fartFormP6_field)).getSelectedItem().toString();
-        final String fertApplicationP6 = ((Spinner) findViewById(R.id.fartApplicationP6_field)).getSelectedItem().toString();
-        final String limeP6 = ((Spinner) findViewById(R.id.limeP6_field)).getSelectedItem().toString();
-        final String drainageP6 = ((Spinner) findViewById(R.id.drainageP6_field)).getSelectedItem().toString();
-        final String fillingP6 = ((Spinner) findViewById(R.id.fillingP6_field)).getSelectedItem().toString();
-        final String hireP6 = ((Spinner) findViewById(R.id.hireP6_field)).getSelectedItem().toString();
-        final String gpsp7 = ((EditText) findViewById(R.id.gpsp7_field)).getText().toString();
-        final String plotAgep7 = ((EditText) findViewById(R.id.plotAgep7_field)).getText().toString();
-        final String plotArea7 = ((EditText) findViewById(R.id.plotArea7_field)).getText().toString();
-        final String cocoaTreesP7 = ((EditText) findViewById(R.id.cocoaTreesP7_field)).getText().toString();
-        final String estimatedP7 = ((EditText) findViewById(R.id.estimatedP7_field)).getText().toString();
-        final String shadeTreesP7 = ((EditText) findViewById(R.id.shadeTreesP7_field)).getText().toString();
-        final String plantingP7 = ((Spinner) findViewById(R.id.plantingP7_field)).getSelectedItem().toString();
-        final String farmConditionP7 = ((Spinner) findViewById(R.id.farmConditionP7_field)).getSelectedItem().toString();
-        final String treeDensityP7 = ((Spinner) findViewById(R.id.treeDensityP7_field)).getSelectedItem().toString();
-        final String treeAgeP7 = ((Spinner) findViewById(R.id.treeAgeP7_field)).getSelectedItem().toString();
-        final String treeHealthP7 = ((Spinner) findViewById(R.id.treeHealthP7_field)).getSelectedItem().toString();
-        final String debilitationP7 = ((Spinner) findViewById(R.id.debilitationP7_field)).getSelectedItem().toString();
-        final String pruningP7 = ((Spinner) findViewById(R.id.pruningP7_field)).getSelectedItem().toString();
-        final String pestDiseaseP7 = ((Spinner) findViewById(R.id.pestDiseaseP7_field)).getSelectedItem().toString();
-        final String weedingP7 = ((Spinner) findViewById(R.id.weedingP7_field)).getSelectedItem().toString();
-        final String harvestingP7 = ((Spinner) findViewById(R.id.harvestingP7_field)).getSelectedItem().toString();
-        final String shadeManagementP7 = ((Spinner) findViewById(R.id.shadeManagementP7_field)).getSelectedItem().toString();
-        final String soilConditionP7 = ((Spinner) findViewById(R.id.soilConditionP7_field)).getSelectedItem().toString();
-        final String organicMatterP7 = ((Spinner) findViewById(R.id.organicMatterP7_field)).getSelectedItem().toString();
-        final String fertFormP7 = ((Spinner) findViewById(R.id.fartFormP7_field)).getSelectedItem().toString();
-        final String fertApplicationP7 = ((Spinner) findViewById(R.id.fartApplicationP7_field)).getSelectedItem().toString();
-        final String limeP7 = ((Spinner) findViewById(R.id.limeP7_field)).getSelectedItem().toString();
-        final String drainageP7 = ((Spinner) findViewById(R.id.drainageP7_field)).getSelectedItem().toString();
-        final String fillingP7 = ((Spinner) findViewById(R.id.fillingP7_field)).getSelectedItem().toString();
-        final String hireP7 = ((Spinner) findViewById(R.id.hireP7_field)).getSelectedItem().toString();
-        final String gpsp8 = ((EditText) findViewById(R.id.gpsp8_field)).getText().toString();
-        final String plotAgep8 = ((EditText) findViewById(R.id.plotAgep8_field)).getText().toString();
-        final String plotArea8 = ((EditText) findViewById(R.id.plotArea8_field)).getText().toString();
-        final String cocoaTreesP8 = ((EditText) findViewById(R.id.cocoaTreesP8_field)).getText().toString();
-        final String estimatedP8 = ((EditText) findViewById(R.id.estimatedP8_field)).getText().toString();
-        final String shadeTreesP8 = ((EditText) findViewById(R.id.shadeTreesP8_field)).getText().toString();
-        final String plantingP8 = ((Spinner) findViewById(R.id.plantingP8_field)).getSelectedItem().toString();
-        final String farmConditionP8 = ((Spinner) findViewById(R.id.farmConditionP8_field)).getSelectedItem().toString();
-        final String treeDensityP8 = ((Spinner) findViewById(R.id.treeDensityP8_field)).getSelectedItem().toString();
-        final String treeAgeP8 = ((Spinner) findViewById(R.id.treeAgeP8_field)).getSelectedItem().toString();
-        final String treeHealthP8 = ((Spinner) findViewById(R.id.treeHealthP8_field)).getSelectedItem().toString();
-        final String debilitationP8 = ((Spinner) findViewById(R.id.debilitationP8_field)).getSelectedItem().toString();
-        final String pruningP8 = ((Spinner) findViewById(R.id.pruningP8_field)).getSelectedItem().toString();
-        final String pestDiseaseP8 = ((Spinner) findViewById(R.id.pestDiseaseP8_field)).getSelectedItem().toString();
-        final String weedingP8 = ((Spinner) findViewById(R.id.weedingP8_field)).getSelectedItem().toString();
-        final String harvestingP8 = ((Spinner) findViewById(R.id.harvestingP8_field)).getSelectedItem().toString();
-        final String shadeManagementP8 = ((Spinner) findViewById(R.id.shadeManagementP8_field)).getSelectedItem().toString();
-        final String soilConditionP8 = ((Spinner) findViewById(R.id.soilConditionP8_field)).getSelectedItem().toString();
-        final String organicMatterP8 = ((Spinner) findViewById(R.id.organicMatterP8_field)).getSelectedItem().toString();
-        final String fertFormP8 = ((Spinner) findViewById(R.id.fartFormP8_field)).getSelectedItem().toString();
-        final String fertApplicationP8 = ((Spinner) findViewById(R.id.fartApplicationP8_field)).getSelectedItem().toString();
-        final String limeP8 = ((Spinner) findViewById(R.id.limeP8_field)).getSelectedItem().toString();
-        final String drainageP8 = ((Spinner) findViewById(R.id.drainageP8_field)).getSelectedItem().toString();
-        final String fillingP8 = ((Spinner) findViewById(R.id.fillingP8_field)).getSelectedItem().toString();
-        final String hireP8 = ((Spinner) findViewById(R.id.hireP8_field)).getSelectedItem().toString();
-        final String gpsp9 = ((EditText) findViewById(R.id.gpsp9_field)).getText().toString();
-        final String plotAgep9 = ((EditText) findViewById(R.id.plotAgep9_field)).getText().toString();
-        final String plotArea9 = ((EditText) findViewById(R.id.plotArea9_field)).getText().toString();
-        final String cocoaTreesP9 = ((EditText) findViewById(R.id.cocoaTreesP9_field)).getText().toString();
-        final String estimatedP9 = ((EditText) findViewById(R.id.estimatedP9_field)).getText().toString();
-        final String shadeTreesP9 = ((EditText) findViewById(R.id.shadeTreesP9_field)).getText().toString();
-        final String plantingP9 = ((Spinner) findViewById(R.id.plantingP9_field)).getSelectedItem().toString();
-        final String farmConditionP9 = ((Spinner) findViewById(R.id.farmConditionP9_field)).getSelectedItem().toString();
-        final String treeDensityP9 = ((Spinner) findViewById(R.id.treeDensityP9_field)).getSelectedItem().toString();
-        final String treeAgeP9 = ((Spinner) findViewById(R.id.treeAgeP9_field)).getSelectedItem().toString();
-        final String treeHealthP9 = ((Spinner) findViewById(R.id.treeHealthP9_field)).getSelectedItem().toString();
-        final String debilitationP9 = ((Spinner) findViewById(R.id.debilitationP9_field)).getSelectedItem().toString();
-        final String pruningP9 = ((Spinner) findViewById(R.id.pruningP9_field)).getSelectedItem().toString();
-        final String pestDiseaseP9 = ((Spinner) findViewById(R.id.pestDiseaseP9_field)).getSelectedItem().toString();
-        final String weedingP9 = ((Spinner) findViewById(R.id.weedingP9_field)).getSelectedItem().toString();
-        final String harvestingP9 = ((Spinner) findViewById(R.id.harvestingP9_field)).getSelectedItem().toString();
-        final String shadeManagementP9 = ((Spinner) findViewById(R.id.shadeManagementP9_field)).getSelectedItem().toString();
-        final String soilConditionP9 = ((Spinner) findViewById(R.id.soilConditionP9_field)).getSelectedItem().toString();
-        final String organicMatterP9 = ((Spinner) findViewById(R.id.organicMatterP9_field)).getSelectedItem().toString();
-        final String fertFormP9 = ((Spinner) findViewById(R.id.fartFormP9_field)).getSelectedItem().toString();
-        final String fertApplicationP9 = ((Spinner) findViewById(R.id.fartApplicationP9_field)).getSelectedItem().toString();
-        final String limeP9 = ((Spinner) findViewById(R.id.limeP9_field)).getSelectedItem().toString();
-        final String drainageP9 = ((Spinner) findViewById(R.id.drainageP9_field)).getSelectedItem().toString();
-        final String fillingP9 = ((Spinner) findViewById(R.id.fillingP9_field)).getSelectedItem().toString();
-        final String hireP9 = ((Spinner) findViewById(R.id.hireP9_field)).getSelectedItem().toString();
-        final String gpsp10 = ((EditText) findViewById(R.id.gpsp10_field)).getText().toString();
-        final String plotAgep10 = ((EditText) findViewById(R.id.plotAgep10_field)).getText().toString();
-        final String plotArea10 = ((EditText) findViewById(R.id.plotArea10_field)).getText().toString();
-        final String cocoaTreesP10 = ((EditText) findViewById(R.id.cocoaTreesP10_field)).getText().toString();
-        final String estimatedP10 = ((EditText) findViewById(R.id.estimatedP10_field)).getText().toString();
-        final String shadeTreesP10 = ((EditText) findViewById(R.id.shadeTreesP10_field)).getText().toString();
-        final String plantingP10 = ((Spinner) findViewById(R.id.plantingP10_field)).getSelectedItem().toString();
-        final String farmConditionP10 = ((Spinner) findViewById(R.id.farmConditionP10_field)).getSelectedItem().toString();
-        final String treeDensityP10 = ((Spinner) findViewById(R.id.treeDensityP10_field)).getSelectedItem().toString();
-        final String treeAgeP10 = ((Spinner) findViewById(R.id.treeAgeP10_field)).getSelectedItem().toString();
-        final String treeHealthP10 = ((Spinner) findViewById(R.id.treeHealthP10_field)).getSelectedItem().toString();
-        final String debilitationP10 = ((Spinner) findViewById(R.id.debilitationP10_field)).getSelectedItem().toString();
-        final String pruningP10 = ((Spinner) findViewById(R.id.pruningP10_field)).getSelectedItem().toString();
-        final String pestDiseaseP10 = ((Spinner) findViewById(R.id.pestDiseaseP10_field)).getSelectedItem().toString();
-        final String weedingP10 = ((Spinner) findViewById(R.id.weedingP10_field)).getSelectedItem().toString();
-        final String harvestingP10 = ((Spinner) findViewById(R.id.harvestingP10_field)).getSelectedItem().toString();
-        final String shadeManagementP10 = ((Spinner) findViewById(R.id.shadeManagementP10_field)).getSelectedItem().toString();
-        final String soilConditionP10 = ((Spinner) findViewById(R.id.soilConditionP10_field)).getSelectedItem().toString();
-        final String organicMatterP10 = ((Spinner) findViewById(R.id.organicMatterP10_field)).getSelectedItem().toString();
-        final String fertFormP10 = ((Spinner) findViewById(R.id.fartFormP10_field)).getSelectedItem().toString();
-        final String fertApplicationP10 = ((Spinner) findViewById(R.id.fartApplicationP10_field)).getSelectedItem().toString();
-        final String limeP10 = ((Spinner) findViewById(R.id.limeP10_field)).getSelectedItem().toString();
-        final String drainageP10 = ((Spinner) findViewById(R.id.drainageP10_field)).getSelectedItem().toString();
-        final String fillingP10 = ((Spinner) findViewById(R.id.fillingP10_field)).getSelectedItem().toString();
-        final String hireP10 = ((Spinner) findViewById(R.id.hireP10_field)).getSelectedItem().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -3658,131 +3805,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.DRAINAGENEED5, drainageP5);
             contact.put(ContactObject.FILLINGOPTION5, fillingP5);
             contact.put(ContactObject.HIRELABOR5, hireP5);
-            contact.put(ContactObject.PLOT6GPS, gpsp6);
-            contact.put(ContactObject.PLOT6AGE, plotAgep6);
-            contact.put(ContactObject.PLOT6AREA, plotArea6);
-            contact.put(ContactObject.PLOT6COCOATREES, cocoaTreesP6);
-            contact.put(ContactObject.PLOT6YIELD, estimatedP6);
-            contact.put(ContactObject.PLOT6SHADETREES, shadeTreesP6);
-            contact.put(ContactObject.PLANTINGMATERIAL6, plantingP6);
-            contact.put(ContactObject.FARMCONDITION6, farmConditionP6);
-            contact.put(ContactObject.TREEDENSITY6, treeDensityP6);
-            contact.put(ContactObject.TREEAGE6, treeAgeP6);
-            contact.put(ContactObject.TREEHEALTH6, treeHealthP6);
-            contact.put(ContactObject.DEBILITATINGDISEASE6, debilitationP6);
-            contact.put(ContactObject.PRUNING6, pruningP6);
-            contact.put(ContactObject.PESTDISEASESANITATION6, pestDiseaseP6);
-            contact.put(ContactObject.WEEDING6, weedingP6);
-            contact.put(ContactObject.HARVESTING6, harvestingP6);
-            contact.put(ContactObject.SHADEMANAGEMENT6, shadeManagementP6);
-            contact.put(ContactObject.SOILCONDITION6, soilConditionP6);
-            contact.put(ContactObject.ORGANICMATTER6, organicMatterP6);
-            contact.put(ContactObject.FERTILIZERFORMULATION6, fertFormP6);
-            contact.put(ContactObject.FERTILIZERAPPLICATION6, fertApplicationP6);
-            contact.put(ContactObject.LIMENEED6, limeP6);
-            contact.put(ContactObject.DRAINAGENEED6, drainageP6);
-            contact.put(ContactObject.FILLINGOPTION6, fillingP6);
-            contact.put(ContactObject.HIRELABOR6, hireP6);
-            contact.put(ContactObject.PLOT7GPS, gpsp7);
-            contact.put(ContactObject.PLOT7AGE, plotAgep7);
-            contact.put(ContactObject.PLOT7AREA, plotArea7);
-            contact.put(ContactObject.PLOT7COCOATREES, cocoaTreesP7);
-            contact.put(ContactObject.PLOT7YIELD, estimatedP7);
-            contact.put(ContactObject.PLOT7SHADETREES, shadeTreesP7);
-            contact.put(ContactObject.PLANTINGMATERIAL7, plantingP7);
-            contact.put(ContactObject.FARMCONDITION7, farmConditionP7);
-            contact.put(ContactObject.TREEDENSITY7, treeDensityP7);
-            contact.put(ContactObject.TREEAGE7, treeAgeP7);
-            contact.put(ContactObject.TREEHEALTH7, treeHealthP7);
-            contact.put(ContactObject.DEBILITATINGDISEASE7, debilitationP7);
-            contact.put(ContactObject.PRUNING7, pruningP7);
-            contact.put(ContactObject.PESTDISEASESANITATION7, pestDiseaseP7);
-            contact.put(ContactObject.WEEDING7, weedingP7);
-            contact.put(ContactObject.HARVESTING7, harvestingP7);
-            contact.put(ContactObject.SHADEMANAGEMENT7, shadeManagementP7);
-            contact.put(ContactObject.SOILCONDITION7, soilConditionP7);
-            contact.put(ContactObject.ORGANICMATTER7, organicMatterP7);
-            contact.put(ContactObject.FERTILIZERFORMULATION7, fertFormP7);
-            contact.put(ContactObject.FERTILIZERAPPLICATION7, fertApplicationP7);
-            contact.put(ContactObject.LIMENEED7, limeP7);
-            contact.put(ContactObject.DRAINAGENEED7, drainageP7);
-            contact.put(ContactObject.FILLINGOPTION7, fillingP7);
-            contact.put(ContactObject.HIRELABOR7, hireP7);
-            contact.put(ContactObject.PLOT8GPS, gpsp8);
-            contact.put(ContactObject.PLOT8AGE, plotAgep8);
-            contact.put(ContactObject.PLOT8AREA, plotArea8);
-            contact.put(ContactObject.PLOT8COCOATREES, cocoaTreesP8);
-            contact.put(ContactObject.PLOT8YIELD, estimatedP8);
-            contact.put(ContactObject.PLOT8SHADETREES, shadeTreesP8);
-            contact.put(ContactObject.PLANTINGMATERIAL8, plantingP8);
-            contact.put(ContactObject.FARMCONDITION8, farmConditionP8);
-            contact.put(ContactObject.TREEDENSITY8, treeDensityP8);
-            contact.put(ContactObject.TREEAGE8, treeAgeP8);
-            contact.put(ContactObject.TREEHEALTH8, treeHealthP8);
-            contact.put(ContactObject.DEBILITATINGDISEASE8, debilitationP8);
-            contact.put(ContactObject.PRUNING8, pruningP8);
-            contact.put(ContactObject.PESTDISEASESANITATION8, pestDiseaseP8);
-            contact.put(ContactObject.WEEDING8, weedingP8);
-            contact.put(ContactObject.HARVESTING8, harvestingP8);
-            contact.put(ContactObject.SHADEMANAGEMENT8, shadeManagementP8);
-            contact.put(ContactObject.SOILCONDITION8, soilConditionP8);
-            contact.put(ContactObject.ORGANICMATTER8, organicMatterP8);
-            contact.put(ContactObject.FERTILIZERFORMULATION8, fertFormP8);
-            contact.put(ContactObject.FERTILIZERAPPLICATION8, fertApplicationP8);
-            contact.put(ContactObject.LIMENEED8, limeP8);
-            contact.put(ContactObject.DRAINAGENEED8, drainageP8);
-            contact.put(ContactObject.FILLINGOPTION8, fillingP8);
-            contact.put(ContactObject.HIRELABOR8, hireP8);
-            contact.put(ContactObject.PLOT9GPS, gpsp9);
-            contact.put(ContactObject.PLOT9AGE, plotAgep9);
-            contact.put(ContactObject.PLOT9AREA, plotArea9);
-            contact.put(ContactObject.PLOT9COCOATREES, cocoaTreesP9);
-            contact.put(ContactObject.PLOT9YIELD, estimatedP9);
-            contact.put(ContactObject.PLOT9SHADETREES, shadeTreesP9);
-            contact.put(ContactObject.PLANTINGMATERIAL9, plantingP9);
-            contact.put(ContactObject.FARMCONDITION9, farmConditionP9);
-            contact.put(ContactObject.TREEDENSITY9, treeDensityP9);
-            contact.put(ContactObject.TREEAGE9, treeAgeP9);
-            contact.put(ContactObject.TREEHEALTH9, treeHealthP9);
-            contact.put(ContactObject.DEBILITATINGDISEASE9, debilitationP9);
-            contact.put(ContactObject.PRUNING9, pruningP9);
-            contact.put(ContactObject.PESTDISEASESANITATION9, pestDiseaseP9);
-            contact.put(ContactObject.WEEDING9, weedingP9);
-            contact.put(ContactObject.HARVESTING9, harvestingP9);
-            contact.put(ContactObject.SHADEMANAGEMENT9, shadeManagementP9);
-            contact.put(ContactObject.SOILCONDITION9, soilConditionP9);
-            contact.put(ContactObject.ORGANICMATTER9, organicMatterP9);
-            contact.put(ContactObject.FERTILIZERFORMULATION9, fertFormP9);
-            contact.put(ContactObject.FERTILIZERAPPLICATION9, fertApplicationP9);
-            contact.put(ContactObject.LIMENEED9, limeP9);
-            contact.put(ContactObject.DRAINAGENEED9, drainageP9);
-            contact.put(ContactObject.FILLINGOPTION9, fillingP9);
-            contact.put(ContactObject.HIRELABOR9, hireP9);
-            contact.put(ContactObject.PLOT10GPS, gpsp10);
-            contact.put(ContactObject.PLOT10AGE, plotAgep10);
-            contact.put(ContactObject.PLOT10AREA, plotArea10);
-            contact.put(ContactObject.PLOT10COCOATREES, cocoaTreesP10);
-            contact.put(ContactObject.PLOT10YIELD, estimatedP10);
-            contact.put(ContactObject.PLOT10SHADETREES, shadeTreesP10);
-            contact.put(ContactObject.PLANTINGMATERIAL10, plantingP10);
-            contact.put(ContactObject.FARMCONDITION10, farmConditionP10);
-            contact.put(ContactObject.TREEDENSITY10, treeDensityP10);
-            contact.put(ContactObject.TREEAGE10, treeAgeP10);
-            contact.put(ContactObject.TREEHEALTH10, treeHealthP10);
-            contact.put(ContactObject.DEBILITATINGDISEASE10, debilitationP10);
-            contact.put(ContactObject.PRUNING10, pruningP10);
-            contact.put(ContactObject.PESTDISEASESANITATION10, pestDiseaseP10);
-            contact.put(ContactObject.WEEDING10, weedingP10);
-            contact.put(ContactObject.HARVESTING10, harvestingP10);
-            contact.put(ContactObject.SHADEMANAGEMENT10, shadeManagementP10);
-            contact.put(ContactObject.SOILCONDITION10, soilConditionP10);
-            contact.put(ContactObject.ORGANICMATTER10, organicMatterP10);
-            contact.put(ContactObject.FERTILIZERFORMULATION10, fertFormP10);
-            contact.put(ContactObject.FERTILIZERAPPLICATION10, fertApplicationP10);
-            contact.put(ContactObject.LIMENEED10, limeP10);
-            contact.put(ContactObject.DRAINAGENEED10, drainageP10);
-            contact.put(ContactObject.FILLINGOPTION10, fillingP10);
-            contact.put(ContactObject.HIRELABOR10, hireP10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

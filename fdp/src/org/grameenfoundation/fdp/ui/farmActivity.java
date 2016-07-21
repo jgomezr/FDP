@@ -176,12 +176,12 @@ public class farmActivity extends SalesforceActivity implements LoaderManager.Lo
 
     public void launchPlot (View view) {
         save();
-        final Intent certIntent = new Intent(this, certificationActivity.class);
-        certIntent.addCategory(Intent.CATEGORY_DEFAULT);
-        certIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
-        certIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
-        certIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
-        startActivity(certIntent);
+        final Intent plotIntent = new Intent(this, plotActivity.class);
+        plotIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        plotIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        plotIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        plotIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        startActivity(plotIntent);
     }
 
     @Override
