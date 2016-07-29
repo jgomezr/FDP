@@ -6,6 +6,9 @@ import android.content.Loader;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -50,11 +53,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plot);
+        getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setIcon(R.drawable.ic_action_back);
         final Intent launchIntent = getIntent();
         if (launchIntent != null) {
-            objectId = launchIntent.getStringExtra(certificationActivity.OBJECT_ID_KEY);
-            objectTitle = launchIntent.getStringExtra(certificationActivity.OBJECT_TITLE_KEY);
-            objNameKey = launchIntent.getStringExtra(certificationActivity.OBJECT_NAME_KEY);
+            objectId = launchIntent.getStringExtra(DetailActivity.OBJECT_ID_KEY);
+            objectTitle = launchIntent.getStringExtra(DetailActivity.OBJECT_TITLE_KEY);
+            objNameKey = launchIntent.getStringExtra(DetailActivity.OBJECT_NAME_KEY);
         }
         Lp1= (TextView)findViewById(R.id.plot_1_label);
         Lp2= (TextView)findViewById(R.id.plot_2_label);
@@ -221,6 +226,32 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         refreshScreen();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
+        final MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_menu, menu);
+        final MenuItem searchItem = menu.findItem(R.id.action_search);
+        searchItem.setVisible(false);
+        final MenuItem logoutItem = menu.findItem(R.id.action_logout);
+        logoutItem.setVisible(false);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                overridePendingTransition(R.anim.slide_in_from_left, R.anim.slide_out_to_right);
+                return true;
+            case R.id.action_refresh:
+                save();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     private void refreshScreen() {
         if (sObject != null) {
             if (sObject.getNumberOfPlots().equals("1")) {

@@ -34,7 +34,7 @@
                         android:layout_column="2"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear1"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                         android:layout_column="3"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear2"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                         android:layout_column="4"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear3"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                         android:layout_column="5"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear4"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                         android:layout_column="6"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear5"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
                         android:layout_column="7"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear6"
                         android:clickable="true"/>
 
                     <TextView android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
                         android:layout_column="8"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
-                        android:onClick="launchYear"
+                        android:onClick="launchYear7"
                         android:clickable="true"/>
 
                     <Spinner

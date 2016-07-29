@@ -45,6 +45,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     public static final String OBJECT_ID_KEY = "object_id";
     public static final String OBJECT_TITLE_KEY = "object_title";
     public static final String OBJECT_NAME_KEY = "object_name";
+    public static final String YEAR_LAUNCH = "year_launch";
     private Spinner st1,st2,st3,st4,st5;
     private TextView gaplp1,grflp1,replp1,exslp1,limlp1,dralp1,fillp1,lablp1,gaplp2,grflp2,replp2,exslp2,limlp2,dralp2,fillp2,lablp2,gaplp3,grflp3,replp3,exslp3,limlp3,dralp3,fillp3,lablp3,gaplp4,grflp4,replp4,exslp4,limlp4,dralp4,fillp4,lablp4,gaplp5,grflp5,replp5,exslp5,limlp5,dralp5,fillp5,lablp5;
 
@@ -128,10 +129,65 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         refreshScreen();
     }
 
-    public void launchYear(View view) {
+    public void launchYear1(View view) {
         save();
-        Intent i = new Intent(this, YearDetailActivity.class );
-        startActivity(i);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "1");
+        startActivity(yearIntent);
+    }
+    public void launchYear2(View view) {
+        save();
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "2");
+        startActivity(yearIntent);
+    }
+    public void launchYear3(View view) {
+        save();
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "3");
+        startActivity(yearIntent);
+    }
+    public void launchYear4(View view) {
+        save();
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "4");
+        startActivity(yearIntent);
+    }
+    public void launchYear5(View view) {
+        save();
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "5");
+        startActivity(yearIntent);
+    }
+    public void launchYear6(View view) {
+        save();
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        yearIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        yearIntent.putExtra(YEAR_LAUNCH, "6");
+        startActivity(yearIntent);
     }
 
     public void onFinishClicked(View view) {
@@ -211,8 +267,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             double plot3Area = Double.valueOf(sObject.getPlot3Area().toString());
             double plot4Area = Double.valueOf(sObject.getPlot4Area().toString());
             double plot5Area = Double.valueOf(sObject.getPlot5Area().toString());
-
-            if (sObject.getFarmCondition1().equals("B") || sObject.getTreeDensity1().equals("B") || sObject.getDebilitatingDisease1().equals("B")) {
+            if (sObject.getFarmCondition1().equals("N/A") || sObject.getTreeDensity1().equals("N/A") || sObject.getDebilitatingDisease1().equals("N/A")|| sObject.getPlantingMaterial1().equals("N/A")){
+                replp1.setVisibility(View.GONE);
+                gaplp1.setVisibility(View.GONE);
+                dralp1.setVisibility(View.GONE);
+                grflp1.setVisibility(View.GONE);
+                lablp1.setVisibility(View.GONE);
+                limlp1.setVisibility(View.GONE);
+                fillp1.setVisibility(View.GONE);
+                exslp1.setVisibility(View.GONE);
+            }else if (sObject.getFarmCondition1().equals("B") || sObject.getTreeDensity1().equals("B") || sObject.getDebilitatingDisease1().equals("B")) {
                 //Replanting
                 replp1.setVisibility(View.VISIBLE);
                 int rep1P1 = (int) (plot1Area * 21372000);
@@ -271,7 +335,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 exslp1.setVisibility(View.GONE);
                 gaplp1.setVisibility(View.GONE);
                 grflp1.setVisibility(View.GONE);
-            } else if ((sObject.getPlot1Age().equals("G") && sObject.getTreeHealth1().equals("G")  && (sObject.getPlantingMaterial1().equals("M")||sObject.getPlantingMaterial1().equals("B")))||(sObject.getPlot1Age().equals("B") && sObject.getTreeHealth1().equals("G")  && (sObject.getPlantingMaterial1().equals("M")||sObject.getPlantingMaterial1().equals("B")))) {
+            } else if (sObject.getTreeHealth1().equals("G")&&(sObject.getPlantingMaterial1().equals("M")||sObject.getPlantingMaterial1().equals("B"))&&(sObject.getTreeAge1().equals("G")||sObject.getTreeAge1().equals("B"))) {
                 //Grafting
                 grflp1.setVisibility(View.VISIBLE);
                 int graf1P1 = (int) (plot1Area * 23467500);
@@ -401,7 +465,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 grflp1.setVisibility(View.GONE);
             }
             //end plot
-            if (sObject.getFarmCondition2().equals("B") || sObject.getTreeDensity2().equals("B") || sObject.getDebilitatingDisease2().equals("B")) {
+            if (sObject.getFarmCondition2().equals("N/A") || sObject.getTreeDensity2().equals("N/A") || sObject.getDebilitatingDisease2().equals("N/A")|| sObject.getPlantingMaterial2().equals("N/A")){
+                replp2.setVisibility(View.GONE);
+                gaplp2.setVisibility(View.GONE);
+                dralp2.setVisibility(View.GONE);
+                grflp2.setVisibility(View.GONE);
+                lablp2.setVisibility(View.GONE);
+                limlp2.setVisibility(View.GONE);
+                fillp2.setVisibility(View.GONE);
+                exslp2.setVisibility(View.GONE);
+            }else if (sObject.getFarmCondition2().equals("B") || sObject.getTreeDensity2().equals("B") || sObject.getDebilitatingDisease2().equals("B")) {
                 //Replanting
                 replp2.setVisibility(View.VISIBLE);
                 int rep1P2 = (int) (plot2Area * 21372000);
@@ -460,7 +533,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 exslp2.setVisibility(View.GONE);
                 gaplp2.setVisibility(View.GONE);
                 grflp2.setVisibility(View.GONE);
-            } else if ((sObject.getPlot2Age().equals("G") && sObject.getTreeHealth2().equals("G")  && (sObject.getPlantingMaterial2().equals("M")||sObject.getPlantingMaterial2().equals("B")))||(sObject.getPlot2Age().equals("B") && sObject.getTreeHealth2().equals("G")  && (sObject.getPlantingMaterial2().equals("M")||sObject.getPlantingMaterial2().equals("B")))) {
+            } else if (sObject.getTreeHealth2().equals("G")&&(sObject.getPlantingMaterial2().equals("M")||sObject.getPlantingMaterial2().equals("B"))&&(sObject.getTreeAge2().equals("G")||sObject.getTreeAge2().equals("B"))) {
                 //Grafting
                 grflp2.setVisibility(View.VISIBLE);
                 int graf1P2 = (int) (plot2Area * 23467500);
@@ -591,7 +664,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 grflp2.setVisibility(View.GONE);
             }
             //end plot
-            if (sObject.getFarmCondition3().equals("B") || sObject.getTreeDensity3().equals("B") || sObject.getDebilitatingDisease3().equals("B")) {
+            if (sObject.getFarmCondition3().equals("N/A") || sObject.getTreeDensity3().equals("N/A") || sObject.getDebilitatingDisease3().equals("N/A")|| sObject.getPlantingMaterial3().equals("N/A")){
+                replp3.setVisibility(View.GONE);
+                gaplp3.setVisibility(View.GONE);
+                dralp3.setVisibility(View.GONE);
+                grflp3.setVisibility(View.GONE);
+                lablp3.setVisibility(View.GONE);
+                limlp3.setVisibility(View.GONE);
+                fillp3.setVisibility(View.GONE);
+                exslp3.setVisibility(View.GONE);
+            }else if (sObject.getFarmCondition3().equals("B") || sObject.getTreeDensity3().equals("B") || sObject.getDebilitatingDisease3().equals("B")) {
                 //Replanting
                 replp3.setVisibility(View.VISIBLE);
                 int rep1P3 = (int) (plot3Area * 21372000);
@@ -649,7 +731,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 exslp3.setVisibility(View.GONE);
                 gaplp3.setVisibility(View.GONE);
                 grflp3.setVisibility(View.GONE);
-            } else if ((sObject.getPlot3Age().equals("G") && sObject.getTreeHealth3().equals("G")&& (sObject.getPlantingMaterial3().equals("M")||sObject.getPlantingMaterial3().equals("B")))||(sObject.getPlot3Age().equals("B") && sObject.getTreeHealth3().equals("G")  && (sObject.getPlantingMaterial3().equals("M")||sObject.getPlantingMaterial3().equals("B")))) {
+            } else if (sObject.getTreeHealth3().equals("G")&&(sObject.getPlantingMaterial3().equals("M")||sObject.getPlantingMaterial3().equals("B"))&&(sObject.getTreeAge3().equals("G")||sObject.getTreeAge3().equals("B"))) {
                 //Grafting
                 grflp3.setVisibility(View.VISIBLE);
                 int graf1P3 = (int) (plot3Area* 23467500);
@@ -779,7 +861,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 grflp3.setVisibility(View.GONE);
             }
             //end plot
-            if (sObject.getFarmCondition4().equals("B") || sObject.getTreeDensity4().equals("B") || sObject.getDebilitatingDisease4().equals("B")) {
+            if (sObject.getFarmCondition4().equals("N/A") || sObject.getTreeDensity4().equals("N/A") || sObject.getDebilitatingDisease4().equals("N/A")|| sObject.getPlantingMaterial4().equals("N/A")){
+                replp4.setVisibility(View.GONE);
+                gaplp4.setVisibility(View.GONE);
+                dralp4.setVisibility(View.GONE);
+                grflp4.setVisibility(View.GONE);
+                lablp4.setVisibility(View.GONE);
+                limlp4.setVisibility(View.GONE);
+                fillp4.setVisibility(View.GONE);
+                exslp4.setVisibility(View.GONE);
+            }else if (sObject.getFarmCondition4().equals("B") || sObject.getTreeDensity4().equals("B") || sObject.getDebilitatingDisease4().equals("B")) {
                 //Replanting
                 replp4.setVisibility(View.VISIBLE);
                 int rep1P4 = (int) (plot4Area* 21372000);
@@ -837,7 +928,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 exslp4.setVisibility(View.GONE);
                 gaplp4.setVisibility(View.GONE);
                 grflp4.setVisibility(View.GONE);
-            } else if ((sObject.getPlot4Age().equals("G") && sObject.getTreeHealth4().equals("G")  && (sObject.getPlantingMaterial4().equals("M")||sObject.getPlantingMaterial4().equals("B")))||(sObject.getPlot4Age().equals("B") && sObject.getTreeHealth4().equals("G")  && (sObject.getPlantingMaterial4().equals("M")||sObject.getPlantingMaterial4().equals("B")))) {
+            } else if (sObject.getTreeHealth4().equals("G")&&(sObject.getPlantingMaterial4().equals("M")||sObject.getPlantingMaterial4().equals("B"))&&(sObject.getTreeAge4().equals("G")||sObject.getTreeAge4().equals("B"))) {
                 //Grafting
                 grflp4.setVisibility(View.VISIBLE);
                 int graf1P4 = (int) (plot4Area * 23467500);
@@ -967,7 +1058,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 grflp4.setVisibility(View.GONE);
             }
             //end of plot
-            if (sObject.getFarmCondition5().equals("B") || sObject.getTreeDensity5().equals("B") || sObject.getDebilitatingDisease5().equals("B")) {
+            if (sObject.getFarmCondition5().equals("N/A") || sObject.getTreeDensity5().equals("N/A") || sObject.getDebilitatingDisease5().equals("N/A")|| sObject.getPlantingMaterial5().equals("N/A")){
+                replp5.setVisibility(View.GONE);
+                gaplp5.setVisibility(View.GONE);
+                dralp5.setVisibility(View.GONE);
+                grflp5.setVisibility(View.GONE);
+                lablp5.setVisibility(View.GONE);
+                limlp5.setVisibility(View.GONE);
+                fillp5.setVisibility(View.GONE);
+                exslp5.setVisibility(View.GONE);
+            }else if (sObject.getFarmCondition5().equals("B") || sObject.getTreeDensity5().equals("B") || sObject.getDebilitatingDisease5().equals("B")) {
                 //Replanting
                 replp5.setVisibility(View.VISIBLE);
                 int rep1P5 = (int) (plot5Area * 21372000);
@@ -1025,7 +1125,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 exslp5.setVisibility(View.GONE);
                 gaplp5.setVisibility(View.GONE);
                 grflp5.setVisibility(View.GONE);
-            } else if ((sObject.getPlot5Age().equals("G") && sObject.getTreeHealth5().equals("G")  && (sObject.getPlantingMaterial5().equals("M")||sObject.getPlantingMaterial5().equals("B")))||(sObject.getPlot5Age().equals("B") && sObject.getTreeHealth5().equals("G")  && (sObject.getPlantingMaterial5().equals("M")||sObject.getPlantingMaterial5().equals("B")))) {
+            } else if (sObject.getTreeHealth5().equals("G")&&(sObject.getPlantingMaterial5().equals("M")||sObject.getPlantingMaterial5().equals("B"))&&(sObject.getTreeAge5().equals("G")||sObject.getTreeAge5().equals("B"))) {
                 //Grafting
                 grflp5.setVisibility(View.VISIBLE);
                 int graf1P5 = (int) (plot5Area * 23467500);

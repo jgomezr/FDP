@@ -15,7 +15,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/farmerProfile"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:textSize="18sp"
+                android:background="@color/sf__inspector_button_background_color" />
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -216,6 +221,30 @@
                     style="@style/FarmerDetail.ParentView.TextView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/haveSpouse"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:maxLines="2"
+                    android:lines="2"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/haveSpouse"
+                    android:entries="@array/yesNo"
+                    android:layout_weight=".50"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/spName">
+
+                <TextView
+                    style="@style/FarmerDetail.ParentView.TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/spouseName"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -234,7 +263,8 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/spBday">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -258,7 +288,8 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/spEdlvl">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -283,11 +314,44 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/socioeconomicProfile"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:background="@color/sf__inspector_button_background_color" />
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/FarmerDetail.ParentView.TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numberChildren"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:maxLines="2"
+                    android:lines="2"/>
+
+                <EditText
+                    style="@style/FarmerDetail.ParentView.EditText"
+                    android:id="@+id/numChildren"
+                    android:layout_width="0dp"
+                    android:text="0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:inputType="textNoSuggestions" />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/under17">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -310,7 +374,9 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/under17School">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -400,7 +466,8 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:id="@+id/spPaidWk">
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
@@ -592,7 +659,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:focusable="false" />
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -889,7 +957,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/productiveProfile"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:background="@color/sf__inspector_button_background_color" />
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
