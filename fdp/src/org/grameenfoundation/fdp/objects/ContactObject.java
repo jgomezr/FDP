@@ -1,13 +1,13 @@
 package org.grameenfoundation.fdp.objects;
 
 
-import org.json.JSONObject;
-
 import android.text.TextUtils;
 
 import com.salesforce.androidsdk.smartsync.manager.SyncManager;
 import com.salesforce.androidsdk.smartsync.model.SalesforceObject;
 import com.salesforce.androidsdk.smartsync.util.Constants;
+
+import org.json.JSONObject;
 
 /**
  * A simple representation of a FDPSubmission object.
@@ -287,7 +287,7 @@ public class ContactObject extends SalesforceObject {
     public static final String PRUNING7 = "pruning7__c";
     public static final String PRUNING8 = "pruning8__c";
     public static final String PRUNING9 = "pruning9__c";
-    public static final String REASONSNOTAGREED = "reasonsNotAgreed__c";
+    public static final String REASONSNOTAGREED = "comments__c";
     public static final String SHADEMANAGEMENT1 = "shadeManagement1__c";
     public static final String SHADEMANAGEMENT10 = "shadeManagement10__c";
     public static final String SHADEMANAGEMENT2 = "shadeManagement2__c";
@@ -395,6 +395,16 @@ public class ContactObject extends SalesforceObject {
     public static final String RA10 = "ra10__c";
     public static final String RA11 = "ra11__c";
     public static final String RA12 = "ra12__c";
+    public static final String HAVESPOUSE = "haveSpouse__c";
+    public static final String NUMBERCHILDRENS = "numberChildrens__c";
+    public static final String SOURCELOAN = "sourceLoan__c";
+    public static final String OFTENPAY = "oftenPay__c";
+    public static final String PAYBACK = "payBack__c";
+    public static final String PH1 ="ph1__c";
+    public static final String PH2 ="ph2__c";
+    public static final String PH3 ="ph3__c";
+    public static final String PH4 ="ph4__c";
+    public static final String PH5 ="ph5__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
             LAST_NAME,
@@ -774,7 +784,17 @@ public class ContactObject extends SalesforceObject {
             RA9,
             RA10,
             RA11,
-            RA12
+            RA12,
+            HAVESPOUSE,
+            NUMBERCHILDRENS,
+            SOURCELOAN,
+            OFTENPAY,
+            PAYBACK,
+            PH1,
+            PH2,
+            PH3,
+            PH4,
+            PH5
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1156,7 +1176,17 @@ public class ContactObject extends SalesforceObject {
             RA9,
             RA10,
             RA11,
-            RA12
+            RA12,
+            HAVESPOUSE,
+            NUMBERCHILDRENS,
+            SOURCELOAN,
+            OFTENPAY,
+            PAYBACK,
+            PH1,
+            PH2,
+            PH3,
+            PH4,
+            PH5
     };
 
     private boolean isLocallyModified;
@@ -1170,7 +1200,7 @@ public class ContactObject extends SalesforceObject {
         super(data);
         objectType = Constants.SUBMISSION;
         objectId = data.optString(Constants.ID);
-        name = data.optString(FIRST_NAME) + " " + data.optString(LAST_NAME);
+        name = data.optString(FIRST_NAME) + " - " + data.optString(EMAIL);
         isLocallyModified = data.optBoolean(SyncManager.LOCALLY_UPDATED) ||
                 data.optBoolean(SyncManager.LOCALLY_CREATED) ||
                 data.optBoolean(SyncManager.LOCALLY_DELETED);
@@ -2379,7 +2409,36 @@ public class ContactObject extends SalesforceObject {
     public String getRA12() {
         return sanitizeText(rawData.optString(RA12));
     }
-
+    public String getHAVESPOUSE() {
+        return sanitizeText(rawData.optString(HAVESPOUSE));
+    }
+    public String getNUMBERCHILDRENS() {
+        return sanitizeText(rawData.optString(NUMBERCHILDRENS));
+    }
+    public String getSOURCELOAN() {
+        return sanitizeText(rawData.optString(SOURCELOAN));
+    }
+    public String getOFTENPAY() {
+        return sanitizeText(rawData.optString(OFTENPAY));
+    }
+    public String getPAYBACK() {
+        return sanitizeText(rawData.optString(PAYBACK));
+    }
+    public String getPH1() {
+        return sanitizeText(rawData.optString(PH1));
+    }
+    public String getPH2() {
+        return sanitizeText(rawData.optString(PH2));
+    }
+    public String getPH3() {
+        return sanitizeText(rawData.optString(PH3));
+    }
+    public String getPH4() {
+        return sanitizeText(rawData.optString(PH4));
+    }
+    public String getPH5() {
+        return sanitizeText(rawData.optString(PH5));
+    }
 
     /**
      * Returns whether the contact has been locally modified or not.
