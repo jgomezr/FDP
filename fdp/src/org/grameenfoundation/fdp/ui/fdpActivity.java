@@ -457,7 +457,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else if (sObject.getFarmCondition1().equals("B") || sObject.getTreeDensity1().equals("B") || sObject.getDebilitatingDisease1().equals("B")) {
                 //Replanting
                 replp1.setVisibility(View.VISIBLE);
-                int rep1P1 = (int) (plot1Area * 21372000);
+                int rep1P1 = (int) (plot1Area * 28412500);
                 int rep2P1 = (int) (plot1Area * 19753000);
                 int rep3P1 = (int) (plot1Area * 20640500);
                 int rep4P1 = (int) (plot1Area * 23622000);
@@ -510,25 +510,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed1().equals("Yes")||sObject.getDrainageNeed1().equals("Yes")) {
                     limlp1.setVisibility(View.VISIBLE);
-                    int drafRep1P1 = (int) (plot1Area * 2250000);
-                    int limRep1P1 = (int) (plot1Area* 925000);
-                    int otherinter = drafRep1P1+limRep1P1;
-
-                    limeP1Y1 = otherinter;
-                    limeP1Y2 = 0;
-                    limeP1Y3 = 0;
-                    limeP1Y4 = 0;
-                    limeP1Y5 = 0;
-                    limeP1Y6 = 0;
-                    limeP1Y7 = 0;
-
-                    setText2((TextView) findViewById(R.id.limeP1Y1_field), String.valueOf(dec.format(limeP1Y1)));
-                    setText2((TextView) findViewById(R.id.limeP1Y2_field), String.valueOf(dec.format(limeP1Y2)));
-                    setText2((TextView) findViewById(R.id.limeP1Y3_field), String.valueOf(dec.format(limeP1Y3)));
-                    setText2((TextView) findViewById(R.id.limeP1Y4_field), String.valueOf(dec.format(limeP1Y4)));
-                    setText2((TextView) findViewById(R.id.limeP1Y5_field), String.valueOf(dec.format(limeP1Y5)));
-                    setText2((TextView) findViewById(R.id.limeP1Y6_field), String.valueOf(dec.format(limeP1Y6)));
-                    setText2((TextView) findViewById(R.id.limeP1Y7_field), String.valueOf(dec.format(limeP1Y7)));
                 }
                 if (sObject.getFillingOption1().equals("Yes")) {
                     fillp1.setVisibility(View.VISIBLE);
@@ -539,7 +520,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else if (sObject.getTreeHealth1().equals("G")&&(sObject.getPlantingMaterial1().equals("M")||sObject.getPlantingMaterial1().equals("B"))&&(sObject.getTreeAge1().equals("G")||sObject.getTreeAge1().equals("B"))) {
                 //Grafting
                 grflp1.setVisibility(View.VISIBLE);
-                int graf1P1 = (int) (plot1Area * 23467500);
+                int graf1P1 = (int) (plot1Area * 24392500);
                 int graf2P1 = (int) (plot1Area * 22358500);
                 int graf3P1 = (int) (plot1Area * 23722000);
                 int graf4P1 = (int) (plot1Area * 23622000);
@@ -641,22 +622,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                  }
                  if (sObject.getLimeNeed1().equals("Yes")) {
                      limlp1.setVisibility(View.VISIBLE);
-                     int lime1P1 = (int) (plot1Area * 1850000);
-                     limeP1Y1 = lime1P1;
-                     limeP1Y2 = lime1P1;
-                     limeP1Y3 = 0;
-                     limeP1Y4 = 0;
-                     limeP1Y5 = 0;
-                     limeP1Y6 = 0;
-                     limeP1Y7 = 0;
-
-                     setText2((TextView) findViewById(R.id.limeP1Y1_field), String.valueOf(dec.format(limeP1Y1)));
-                     setText2((TextView) findViewById(R.id.limeP1Y2_field), String.valueOf(dec.format(limeP1Y2)));
-                     setText2((TextView) findViewById(R.id.limeP1Y3_field), String.valueOf(dec.format(limeP1Y3)));
-                     setText2((TextView) findViewById(R.id.limeP1Y4_field), String.valueOf(dec.format(limeP1Y4)));
-                     setText2((TextView) findViewById(R.id.limeP1Y5_field), String.valueOf(dec.format(limeP1Y5)));
-                     setText2((TextView) findViewById(R.id.limeP1Y6_field), String.valueOf(dec.format(limeP1Y6)));
-                     setText2((TextView) findViewById(R.id.limeP1Y7_field), String.valueOf(dec.format(limeP1Y7)));
                  }
                  if (sObject.getFillingOption1().equals("Yes")) {
                      fillp1.setVisibility(View.VISIBLE);
@@ -716,7 +681,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else if (sObject.getFarmCondition2().equals("B") || sObject.getTreeDensity2().equals("B") || sObject.getDebilitatingDisease2().equals("B")) {
                 //Replanting
                 replp2.setVisibility(View.VISIBLE);
-                int rep1P2 = (int) (plot2Area * 21372000);
+                int rep1P2 = (int) (plot2Area * 28412500);
                 int rep2P2 = (int) (plot2Area * 19753000);
                 int rep3P2 = (int) (plot2Area * 20640500);
                 int rep4P2 = (int) (plot2Area * 23622000);
@@ -768,23 +733,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed2().equals("Yes")||sObject.getDrainageNeed2().equals("Yes")) {
                     limlp2.setVisibility(View.VISIBLE);
-                    int limRep1P2 = (int) (plot2Area * 925000);
-                    int drafRep1P2 = (int) (plot2Area * 2250000);
-                    int totalOtherp2 = limRep1P2+drafRep1P2;
-                    limeP2Y1 = totalOtherp2;
-                    limeP2Y2 = 0;
-                    limeP2Y3 = 0;
-                    limeP2Y4 = 0;
-                    limeP2Y5 = 0;
-                    limeP2Y6 = 0;
-                    limeP2Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP2Y1_field), String.valueOf(dec.format(limeP2Y1)));
-                    setText2((TextView) findViewById(R.id.limeP2Y2_field), String.valueOf(dec.format(limeP2Y2)));
-                    setText2((TextView) findViewById(R.id.limeP2Y3_field), String.valueOf(dec.format(limeP2Y3)));
-                    setText2((TextView) findViewById(R.id.limeP2Y4_field), String.valueOf(dec.format(limeP2Y4)));
-                    setText2((TextView) findViewById(R.id.limeP2Y5_field), String.valueOf(dec.format(limeP2Y5)));
-                    setText2((TextView) findViewById(R.id.limeP2Y6_field), String.valueOf(dec.format(limeP2Y6)));
-                    setText2((TextView) findViewById(R.id.limeP2Y7_field), String.valueOf(dec.format(limeP2Y7)));
                 }
                 if (sObject.getFillingOption2().equals("Yes")) {
                     fillp2.setVisibility(View.VISIBLE);
@@ -796,7 +744,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else if (sObject.getTreeHealth2().equals("G")&&(sObject.getPlantingMaterial2().equals("M")||sObject.getPlantingMaterial2().equals("B"))&&(sObject.getTreeAge2().equals("G")||sObject.getTreeAge2().equals("B"))) {
                 //Grafting
                 grflp2.setVisibility(View.VISIBLE);
-                int graf1P2 = (int) (plot2Area * 23467500);
+                int graf1P2 = (int) (plot2Area * 24392500);
                 int graf2P2 = (int) (plot2Area * 22358500);
                 int graf3P2 = (int) (plot2Area * 23722000);
                 int graf4P2 = (int) (plot2Area * 23622000);
@@ -893,21 +841,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                  }
                  if (sObject.getLimeNeed2().equals("Yes")) {
                      limlp2.setVisibility(View.VISIBLE);
-                     int lime1P2 = (int) (plot2Area * 1850000);
-                     limeP2Y1 = lime1P2;
-                     limeP2Y2 = lime1P2;
-                     limeP2Y3 = 0;
-                     limeP2Y4 = 0;
-                     limeP2Y5 = 0;
-                     limeP2Y6 = 0;
-                     limeP2Y7 = 0;
-                     setText2((TextView) findViewById(R.id.limeP2Y1_field), String.valueOf(dec.format(limeP2Y1)));
-                     setText2((TextView) findViewById(R.id.limeP2Y2_field), String.valueOf(dec.format(limeP2Y2)));
-                     setText2((TextView) findViewById(R.id.limeP2Y3_field), String.valueOf(dec.format(limeP2Y3)));
-                     setText2((TextView) findViewById(R.id.limeP2Y4_field), String.valueOf(dec.format(limeP2Y4)));
-                     setText2((TextView) findViewById(R.id.limeP2Y5_field), String.valueOf(dec.format(limeP2Y5)));
-                     setText2((TextView) findViewById(R.id.limeP2Y6_field), String.valueOf(dec.format(limeP2Y6)));
-                     setText2((TextView) findViewById(R.id.limeP2Y7_field), String.valueOf(dec.format(limeP2Y7)));
                  }
                  if (sObject.getFillingOption2().equals("Yes")) {
                      fillp2.setVisibility(View.VISIBLE);
@@ -967,7 +900,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else if (sObject.getFarmCondition3().equals("B") || sObject.getTreeDensity3().equals("B") || sObject.getDebilitatingDisease3().equals("B")) {
                 //Replanting
                 replp3.setVisibility(View.VISIBLE);
-                int rep1P3 = (int) (plot3Area * 21372000);
+                int rep1P3 = (int) (plot3Area * 28412500);
                 int rep2P3 = (int) (plot3Area * 19753000);
                 int rep3P3 = (int) (plot3Area * 20640500);
                 int rep4P3 = (int) (plot3Area * 23622000);
@@ -1019,23 +952,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed3().equals("Yes")||sObject.getDrainageNeed3().equals("Yes")) {
                     limlp3.setVisibility(View.VISIBLE);
-                    int drafRep1P3 = (int) (plot3Area * 2250000);
-                    int limRep1P3 = (int) (plot3Area * 925000);
-                    int totalOtherP3 = drafRep1P3+limRep1P3;
-                    limeP3Y1 = totalOtherP3;
-                    limeP3Y2 = 0;
-                    limeP3Y3 = 0;
-                    limeP3Y4 = 0;
-                    limeP3Y5 = 0;
-                    limeP3Y6 = 0;
-                    limeP3Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP3Y1_field), String.valueOf(dec.format(limeP3Y1)));
-                    setText2((TextView) findViewById(R.id.limeP3Y2_field), String.valueOf(dec.format(limeP3Y2)));
-                    setText2((TextView) findViewById(R.id.limeP3Y3_field), String.valueOf(dec.format(limeP3Y3)));
-                    setText2((TextView) findViewById(R.id.limeP3Y4_field), String.valueOf(dec.format(limeP3Y4)));
-                    setText2((TextView) findViewById(R.id.limeP3Y5_field), String.valueOf(dec.format(limeP3Y5)));
-                    setText2((TextView) findViewById(R.id.limeP3Y6_field), String.valueOf(dec.format(limeP3Y6)));
-                    setText2((TextView) findViewById(R.id.limeP3Y7_field), String.valueOf(dec.format(limeP3Y7)));
                 }
                 if (sObject.getFillingOption3().equals("Yes")) {
                     fillp3.setVisibility(View.VISIBLE);
@@ -1043,7 +959,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else if (sObject.getTreeHealth3().equals("G")&&(sObject.getPlantingMaterial3().equals("M")||sObject.getPlantingMaterial3().equals("B"))&&(sObject.getTreeAge3().equals("G")||sObject.getTreeAge3().equals("B"))) {
                 //Grafting
                 grflp3.setVisibility(View.VISIBLE);
-                int graf1P3 = (int) (plot3Area* 23467500);
+                int graf1P3 = (int) (plot3Area* 24392500);
                 int graf2P3 = (int) (plot3Area * 22358500);
                 int graf3P3 = (int) (plot3Area * 23722000);
                 int graf4P3 = (int) (plot3Area * 23622000);
@@ -1139,21 +1055,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed3().equals("Yes")) {
                     limlp3.setVisibility(View.VISIBLE);
-                    int lime1P3 = (int) (plot3Area * 1850000);
-                    limeP3Y1 = lime1P3;
-                    limeP3Y2 = lime1P3;
-                    limeP3Y3 = 0;
-                    limeP3Y4 = 0;
-                    limeP3Y5 = 0;
-                    limeP3Y6 = 0;
-                    limeP3Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP3Y1_field), String.valueOf(dec.format(limeP3Y1)));
-                    setText2((TextView) findViewById(R.id.limeP3Y2_field), String.valueOf(dec.format(limeP3Y2)));
-                    setText2((TextView) findViewById(R.id.limeP3Y3_field), String.valueOf(dec.format(limeP3Y3)));
-                    setText2((TextView) findViewById(R.id.limeP3Y4_field), String.valueOf(dec.format(limeP3Y4)));
-                    setText2((TextView) findViewById(R.id.limeP3Y5_field), String.valueOf(dec.format(limeP3Y5)));
-                    setText2((TextView) findViewById(R.id.limeP3Y6_field), String.valueOf(dec.format(limeP3Y6)));
-                    setText2((TextView) findViewById(R.id.limeP3Y7_field), String.valueOf(dec.format(limeP3Y7)));
                 }
                 if (sObject.getFillingOption3().equals("Yes")) {
                     fillp3.setVisibility(View.VISIBLE);
@@ -1214,7 +1115,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else if (sObject.getFarmCondition4().equals("B") || sObject.getTreeDensity4().equals("B") || sObject.getDebilitatingDisease4().equals("B")) {
                 //Replanting
                 replp4.setVisibility(View.VISIBLE);
-                int rep1P4 = (int) (plot4Area* 21372000);
+                int rep1P4 = (int) (plot4Area* 28412500);
                 int rep2P4 = (int) (plot4Area* 19753000);
                 int rep3P4 = (int) (plot4Area * 20640500);
                 int rep4P4 = (int) (plot4Area * 23622000);
@@ -1266,23 +1167,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.geLimeNeed4().equals("Yes")||sObject.getDrainageNeed4().equals("Yes")) {
                     limlp4.setVisibility(View.VISIBLE);
-                    int drafRep1P4 = (int) (plot4Area * 2250000);
-                    int limRep1P4 = (int) (plot4Area* 925000);
-                    int totalOtherP4 = drafRep1P4+limRep1P4;
-                    limeP4Y1 = totalOtherP4;
-                    limeP4Y2 = 0;
-                    limeP4Y3 = 0;
-                    limeP4Y4 = 0;
-                    limeP4Y5 = 0;
-                    limeP4Y6 = 0;
-                    limeP4Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP4Y1_field), String.valueOf(dec.format(limeP4Y1)));
-                    setText2((TextView) findViewById(R.id.limeP4Y2_field), String.valueOf(dec.format(limeP4Y2)));
-                    setText2((TextView) findViewById(R.id.limeP4Y3_field), String.valueOf(dec.format(limeP4Y3)));
-                    setText2((TextView) findViewById(R.id.limeP4Y4_field), String.valueOf(dec.format(limeP4Y4)));
-                    setText2((TextView) findViewById(R.id.limeP4Y5_field), String.valueOf(dec.format(limeP4Y5)));
-                    setText2((TextView) findViewById(R.id.limeP4Y6_field), String.valueOf(dec.format(limeP4Y6)));
-                    setText2((TextView) findViewById(R.id.limeP4Y7_field), String.valueOf(dec.format(limeP4Y7)));
                 }
                 if (sObject.getFillingOption4().equals("Yes")) {
                     fillp4.setVisibility(View.VISIBLE);
@@ -1290,7 +1174,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else if (sObject.getTreeHealth4().equals("G")&&(sObject.getPlantingMaterial4().equals("M")||sObject.getPlantingMaterial4().equals("B"))&&(sObject.getTreeAge4().equals("G")||sObject.getTreeAge4().equals("B"))) {
                 //Grafting
                 grflp4.setVisibility(View.VISIBLE);
-                int graf1P4 = (int) (plot4Area * 23467500);
+                int graf1P4 = (int) (plot4Area * 24392500);
                 int graf2P4 = (int) (plot4Area * 22358500);
                 int graf3P4 = (int) (plot4Area * 23722000);
                 int graf4P4 = (int) (plot4Area * 23622000);
@@ -1389,21 +1273,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.geLimeNeed4().equals("Yes")) {
                     limlp4.setVisibility(View.VISIBLE);
-                    int lime1P4 = (int) (plot4Area* 1850000);
-                    limeP4Y1 = lime1P4;
-                    limeP4Y2 = lime1P4;
-                    limeP4Y3 = 0;
-                    limeP4Y4 = 0;
-                    limeP4Y5 = 0;
-                    limeP4Y6 = 0;
-                    limeP4Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP4Y1_field), String.valueOf(dec.format(limeP4Y1)));
-                    setText2((TextView) findViewById(R.id.limeP4Y2_field), String.valueOf(dec.format(limeP4Y2)));
-                    setText2((TextView) findViewById(R.id.limeP4Y3_field), String.valueOf(dec.format(limeP4Y3)));
-                    setText2((TextView) findViewById(R.id.limeP4Y4_field), String.valueOf(dec.format(limeP4Y4)));
-                    setText2((TextView) findViewById(R.id.limeP4Y5_field), String.valueOf(dec.format(limeP4Y5)));
-                    setText2((TextView) findViewById(R.id.limeP4Y6_field), String.valueOf(dec.format(limeP4Y6)));
-                    setText2((TextView) findViewById(R.id.limeP4Y7_field), String.valueOf(dec.format(limeP4Y7)));
                 }
                 if (sObject.getFillingOption4().equals("Yes")) {
                     fillp4.setVisibility(View.VISIBLE);
@@ -1463,7 +1332,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else if (sObject.getFarmCondition5().equals("B") || sObject.getTreeDensity5().equals("B") || sObject.getDebilitatingDisease5().equals("B")) {
                 //Replanting
                 replp5.setVisibility(View.VISIBLE);
-                int rep1P5 = (int) (plot5Area * 21372000);
+                int rep1P5 = (int) (plot5Area * 28412500);
                 int rep2P5 = (int) (plot5Area * 19753000);
                 int rep3P5 = (int) (plot5Area * 20640500);
                 int rep4P5 = (int) (plot5Area * 23622000);
@@ -1515,23 +1384,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed5().equals("Yes")||sObject.getDrainageNeed5().equals("Yes")) {
                     limlp5.setVisibility(View.VISIBLE);
-                    int limRep1P5 = (int) (plot5Area * 925000);
-                    int drafRep1P5 = (int) (plot5Area * 2250000);
-                    int totalOtherP5 =limRep1P5+drafRep1P5;
-                    limeP5Y1 = totalOtherP5;
-                    limeP5Y2 = 0;
-                    limeP5Y3 = 0;
-                    limeP5Y4 = 0;
-                    limeP5Y5 = 0;
-                    limeP5Y6 = 0;
-                    limeP5Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP5Y1_field), String.valueOf(dec.format(limeP5Y1)));
-                    setText2((TextView) findViewById(R.id.limeP5Y2_field), String.valueOf(dec.format(limeP5Y2)));
-                    setText2((TextView) findViewById(R.id.limeP5Y3_field), String.valueOf(dec.format(limeP5Y3)));
-                    setText2((TextView) findViewById(R.id.limeP5Y4_field), String.valueOf(dec.format(limeP5Y4)));
-                    setText2((TextView) findViewById(R.id.limeP5Y5_field), String.valueOf(dec.format(limeP5Y5)));
-                    setText2((TextView) findViewById(R.id.limeP5Y6_field), String.valueOf(dec.format(limeP5Y6)));
-                    setText2((TextView) findViewById(R.id.limeP5Y7_field), String.valueOf(dec.format(limeP5Y7)));
                 }
                 if (sObject.getFillingOption5().equals("Yes")) {
                     fillp5.setVisibility(View.VISIBLE);
@@ -1539,7 +1391,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else if (sObject.getTreeHealth5().equals("G")&&(sObject.getPlantingMaterial5().equals("M")||sObject.getPlantingMaterial5().equals("B"))&&(sObject.getTreeAge5().equals("G")||sObject.getTreeAge5().equals("B"))) {
                 //Grafting
                 grflp5.setVisibility(View.VISIBLE);
-                int graf1P5 = (int) (plot5Area * 23467500);
+                int graf1P5 = (int) (plot5Area * 24392500);
                 int graf2P5 = (int) (plot5Area * 22358500);
                 int graf3P5 = (int) (plot5Area * 23722000);
                 int graf4P5 = (int) (plot5Area * 23622000);
@@ -1635,21 +1487,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
                 if (sObject.getLimeNeed5().equals("Yes")) {
                     limlp5.setVisibility(View.VISIBLE);
-                    int lime1P5 = (int) (plot5Area * 1850000);
-                    limeP5Y1 = lime1P5;
-                    limeP5Y2 = lime1P5;
-                    limeP5Y3 = 0;
-                    limeP5Y4 = 0;
-                    limeP5Y5 = 0;
-                    limeP5Y6 = 0;
-                    limeP5Y7 = 0;
-                    setText2((TextView) findViewById(R.id.limeP5Y1_field), String.valueOf(dec.format(limeP5Y1)));
-                    setText2((TextView) findViewById(R.id.limeP5Y2_field), String.valueOf(dec.format(limeP5Y2)));
-                    setText2((TextView) findViewById(R.id.limeP5Y3_field), String.valueOf(dec.format(limeP5Y3)));
-                    setText2((TextView) findViewById(R.id.limeP5Y4_field), String.valueOf(dec.format(limeP5Y4)));
-                    setText2((TextView) findViewById(R.id.limeP5Y5_field), String.valueOf(dec.format(limeP5Y5)));
-                    setText2((TextView) findViewById(R.id.limeP5Y6_field), String.valueOf(dec.format(limeP5Y6)));
-                    setText2((TextView) findViewById(R.id.limeP5Y7_field), String.valueOf(dec.format(limeP5Y7)));
                 }
                 if (sObject.getFillingOption5().equals("Yes")) {
                     fillp5.setVisibility(View.VISIBLE);

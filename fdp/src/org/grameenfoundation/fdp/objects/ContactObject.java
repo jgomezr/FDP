@@ -362,39 +362,6 @@ public class ContactObject extends SalesforceObject {
     public static final String WEEDING7 = "weeding7__c";
     public static final String WEEDING8 = "weeding8__c";
     public static final String WEEDING9 = "weeding9__c";
-    public static final String GA15 = "ga15__c";
-    public static final String GB48 = "gb48__c";
-    public static final String GB49 = "gb49__c";
-    public static final String GB51 = "gb51__c";
-    public static final String GB52 = "gb52__c";
-    public static final String GB54 = "gb54__c";
-    public static final String GB55 = "gb55__c";
-    public static final String GB56 = "gb56__c";
-    public static final String GB58 = "gb58__c";
-    public static final String GB59 = "gb59__c";
-    public static final String GB60 = "gb60__c";
-    public static final String GB61 = "gb61__c";
-    public static final String GB64 = "gb64__c";
-    public static final String GB65 = "gb65__c";
-    public static final String GB66 = "gb66__c";
-    public static final String GB68 = "gb68__c";
-    public static final String GB72 = "gb72__c";
-    public static final String GC95 = "gc95__c";
-    public static final String COB3 = "cob3__c";
-    public static final String COB4 = "cob4__c";
-    public static final String COB5 = "cob5__c";
-    public static final String RA1 = "ra1__c";
-    public static final String RA2 = "ra2__c";
-    public static final String RA3 = "ra3__c";
-    public static final String RA4 = "ra4__c";
-    public static final String RA5 = "ra5__c";
-    public static final String RA6 = "ra6__c";
-    public static final String RA7 = "ra7__c";
-    public static final String RA8 = "ra8__c";
-    public static final String RA9 = "ra9__c";
-    public static final String RA10 = "ra10__c";
-    public static final String RA11 = "ra11__c";
-    public static final String RA12 = "ra12__c";
     public static final String HAVESPOUSE = "haveSpouse__c";
     public static final String NUMBERCHILDRENS = "numberChildrens__c";
     public static final String SOURCELOAN = "sourceLoan__c";
@@ -405,6 +372,48 @@ public class ContactObject extends SalesforceObject {
     public static final String PH3 ="ph3__c";
     public static final String PH4 ="ph4__c";
     public static final String PH5 ="ph5__c";
+    public static final String PH6 ="ph6__c";
+    public static final String PH7 ="ph7__c";
+    public static final String PH8 ="ph8__c";
+    public static final String PH9 ="ph9__c";
+    public static final String PH10 ="ph10__c";
+    public static final String FARMERGROUP ="farmerGroup__c";
+    public static final String PHONENUMBER ="phoneNumber__c";
+    public static final String CULTIVATIONAREA ="totalCultivationArea__c";
+    public static final String BANKACCOUNT="haveBankAccount__c";
+    public static final String ACCOUNTTYPE="bankAccountType__c";
+    public static final String MOBILEMONEY="mobileMoneyOption__c";
+    public static final String WANTACCOUNT="wantBankAccount__c";
+    public static final String GENETIC1="genetic1__c";
+    public static final String GENETIC2="genetic2__c";
+    public static final String GENETIC3="genetic3__c";
+    public static final String GENETIC4="genetic4__c";
+    public static final String GENETIC5="genetic5__c";
+    public static final String GENETIC6="genetic6__c";
+    public static final String GENETIC7="genetic7__c";
+    public static final String GENETIC8="genetic8__c";
+    public static final String GENETIC9="genetic9__c";
+    public static final String GENETIC10="genetic10__c";
+    public static final String GAP1="GAP1__c";
+    public static final String GAP2="GAP2__c";
+    public static final String GAP3="GAP3__c";
+    public static final String GAP4="GAP4__c";
+    public static final String GAP5="GAP5__c";
+    public static final String GAP6="GAP6__c";
+    public static final String GAP7="GAP7__c";
+    public static final String GAP8="GAP8__c";
+    public static final String GAP9="GAP9__c";
+    public static final String GAP10="GAP10__c";
+    public static final String SOILMNG1="soilFertMng_1__c";
+    public static final String SOILMNG2="soilFertMng_2__c";
+    public static final String SOILMNG3="soilFertMng_3__c";
+    public static final String SOILMNG4="soilFertMng_4__c";
+    public static final String SOILMNG5="soilFertMng_5__c";
+    public static final String SOILMNG6="soilFertMng_6__c";
+    public static final String SOILMNG7="soilFertMng_7__c";
+    public static final String SOILMNG8="soilFertMng_8__c";
+    public static final String SOILMNG9="soilFertMng_9__c";
+    public static final String SOILMNG10="soilFertMng_10__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
             LAST_NAME,
@@ -752,39 +761,6 @@ public class ContactObject extends SalesforceObject {
             WEEDING7,
             WEEDING8,
             WEEDING9,
-            GA15,
-            GB48,
-            GB49,
-            GB51,
-            GB52,
-            GB54,
-            GB55,
-            GB56,
-            GB58,
-            GB59,
-            GB60,
-            GB61,
-            GB64,
-            GB65,
-            GB66,
-            GB68,
-            GB72,
-            GC95,
-            COB3,
-            COB4,
-            COB5,
-            RA1,
-            RA2,
-            RA3,
-            RA4,
-            RA5,
-            RA6,
-            RA7,
-            RA8,
-            RA9,
-            RA10,
-            RA11,
-            RA12,
             HAVESPOUSE,
             NUMBERCHILDRENS,
             SOURCELOAN,
@@ -794,7 +770,49 @@ public class ContactObject extends SalesforceObject {
             PH2,
             PH3,
             PH4,
-            PH5
+            PH5,
+            PH6,
+            PH7,
+            PH8,
+            PH9,
+            PH10,
+            FARMERGROUP,
+            PHONENUMBER,
+            CULTIVATIONAREA,
+            BANKACCOUNT,
+            ACCOUNTTYPE,
+            MOBILEMONEY,
+            WANTACCOUNT,
+            GENETIC1,
+            GENETIC2,
+            GENETIC3,
+            GENETIC4,
+            GENETIC5,
+            GENETIC6,
+            GENETIC7,
+            GENETIC8,
+            GENETIC9,
+            GENETIC10,
+            GAP1,
+            GAP2,
+            GAP3,
+            GAP4,
+            GAP5,
+            GAP6,
+            GAP7,
+            GAP8,
+            GAP9,
+            GAP10,
+            SOILMNG1,
+            SOILMNG2,
+            SOILMNG3,
+            SOILMNG4,
+            SOILMNG5,
+            SOILMNG6,
+            SOILMNG7,
+            SOILMNG8,
+            SOILMNG9,
+            SOILMNG10
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1144,39 +1162,6 @@ public class ContactObject extends SalesforceObject {
             WEEDING7,
             WEEDING8,
             WEEDING9,
-            GA15,
-            GB48,
-            GB49,
-            GB51,
-            GB52,
-            GB54,
-            GB55,
-            GB56,
-            GB58,
-            GB59,
-            GB60,
-            GB61,
-            GB64,
-            GB65,
-            GB66,
-            GB68,
-            GB72,
-            GC95,
-            COB3,
-            COB4,
-            COB5,
-            RA1,
-            RA2,
-            RA3,
-            RA4,
-            RA5,
-            RA6,
-            RA7,
-            RA8,
-            RA9,
-            RA10,
-            RA11,
-            RA12,
             HAVESPOUSE,
             NUMBERCHILDRENS,
             SOURCELOAN,
@@ -1186,7 +1171,49 @@ public class ContactObject extends SalesforceObject {
             PH2,
             PH3,
             PH4,
-            PH5
+            PH5,
+            PH6,
+            PH7,
+            PH8,
+            PH9,
+            PH10,
+            FARMERGROUP,
+            PHONENUMBER,
+            CULTIVATIONAREA,
+            BANKACCOUNT,
+            ACCOUNTTYPE,
+            MOBILEMONEY,
+            WANTACCOUNT,
+            GENETIC1,
+            GENETIC2,
+            GENETIC3,
+            GENETIC4,
+            GENETIC5,
+            GENETIC6,
+            GENETIC7,
+            GENETIC8,
+            GENETIC9,
+            GENETIC10,
+            GAP1,
+            GAP2,
+            GAP3,
+            GAP4,
+            GAP5,
+            GAP6,
+            GAP7,
+            GAP8,
+            GAP9,
+            GAP10,
+            SOILMNG1,
+            SOILMNG2,
+            SOILMNG3,
+            SOILMNG4,
+            SOILMNG5,
+            SOILMNG6,
+            SOILMNG7,
+            SOILMNG8,
+            SOILMNG9,
+            SOILMNG10
     };
 
     private boolean isLocallyModified;
@@ -1267,6 +1294,9 @@ public class ContactObject extends SalesforceObject {
      */
     public String getPhone() {
         return sanitizeText(rawData.optString(PHONE));
+    }
+    public String getPhoneNumber() {
+        return sanitizeText(rawData.optString(PHONENUMBER));
     }
 
     /**
@@ -2309,106 +2339,6 @@ public class ContactObject extends SalesforceObject {
     public String getWeeding9() {
         return sanitizeText(rawData.optString(WEEDING9));
     }
-
-    public String getGA15() {
-        return sanitizeText(rawData.optString(GA15));
-    }
-    public String getGB48() {
-        return sanitizeText(rawData.optString(GB48));
-    }
-    public String getGB49() {
-        return sanitizeText(rawData.optString(GB49));
-    }
-    public String getGB51() {
-        return sanitizeText(rawData.optString(GB51));
-    }
-    public String getGB52() {
-        return sanitizeText(rawData.optString(GB52));
-    }
-    public String getGB54() {
-        return sanitizeText(rawData.optString(GB54));
-    }
-    public String getGB55() {
-        return sanitizeText(rawData.optString(GB55));
-    }
-    public String getGB56() {
-        return sanitizeText(rawData.optString(GB56));
-    }
-    public String getGB58() {
-        return sanitizeText(rawData.optString(GB58));
-    }
-    public String getGB59() {
-        return sanitizeText(rawData.optString(GB59));
-    }
-    public String getGB60() {
-        return sanitizeText(rawData.optString(GB60));
-    }
-    public String getGB61() {
-        return sanitizeText(rawData.optString(GB61));
-    }
-    public String getGB64() {
-        return sanitizeText(rawData.optString(GB64));
-    }
-    public String getGB65() {
-        return sanitizeText(rawData.optString(GB65));
-    }
-    public String getGB66() {
-        return sanitizeText(rawData.optString(GB66));
-    }
-    public String getG68() {
-        return sanitizeText(rawData.optString(GB68));
-    }
-    public String getGB72() {
-        return sanitizeText(rawData.optString(GB72));
-    }
-    public String getGC95() {
-        return sanitizeText(rawData.optString(GC95));
-    }
-    public String getCOB3() {
-        return sanitizeText(rawData.optString(COB3));
-    }
-    public String getCOB4() {
-        return sanitizeText(rawData.optString(COB4));
-    }
-    public String getCOB5() {
-        return sanitizeText(rawData.optString(COB5));
-    }
-    public String getRA1() {
-        return sanitizeText(rawData.optString(RA1));
-    }
-    public String getRA2() {
-        return sanitizeText(rawData.optString(RA2));
-    }
-    public String getRA3() {
-        return sanitizeText(rawData.optString(RA3));
-    }
-    public String getRA4() {
-        return sanitizeText(rawData.optString(RA4));
-    }
-    public String getRA5() {
-        return sanitizeText(rawData.optString(RA5));
-    }
-    public String getRA6() {
-        return sanitizeText(rawData.optString(RA6));
-    }
-    public String getRA7() {
-        return sanitizeText(rawData.optString(RA7));
-    }
-    public String getRA8() {
-        return sanitizeText(rawData.optString(RA8));
-    }
-    public String getRA9() {
-        return sanitizeText(rawData.optString(RA9));
-    }
-    public String getRA10() {
-        return sanitizeText(rawData.optString(RA10));
-    }
-    public String getRA11() {
-        return sanitizeText(rawData.optString(RA11));
-    }
-    public String getRA12() {
-        return sanitizeText(rawData.optString(RA12));
-    }
     public String getHAVESPOUSE() {
         return sanitizeText(rawData.optString(HAVESPOUSE));
     }
@@ -2439,6 +2369,59 @@ public class ContactObject extends SalesforceObject {
     public String getPH5() {
         return sanitizeText(rawData.optString(PH5));
     }
+    public String getPH6() {
+        return sanitizeText(rawData.optString(PH6));
+    }
+    public String getPH7() {
+        return sanitizeText(rawData.optString(PH7));
+    }
+    public String getPH8() {
+        return sanitizeText(rawData.optString(PH8));
+    }
+    public String getPH9() {
+        return sanitizeText(rawData.optString(PH9));
+    }
+    public String getPH10() {
+        return sanitizeText(rawData.optString(PH10));
+    }
+    public String getFARMERGROUP() {
+        return sanitizeText(rawData.optString(FARMERGROUP));
+    }
+    public String getCultivationArea() {return sanitizeText(rawData.optString(CULTIVATIONAREA));}
+    public String getBANKACCOUNT() {return sanitizeText(rawData.optString(BANKACCOUNT));}
+    public String getACCOUNTTYPE() {return sanitizeText(rawData.optString(ACCOUNTTYPE));}
+    public String getMOBILEMONEY() {return sanitizeText(rawData.optString(MOBILEMONEY));}
+    public String getWANTACCOUNT() {return sanitizeText(rawData.optString(WANTACCOUNT));}
+    public String getGENETIC1() {return sanitizeText(rawData.optString(GENETIC1));}
+    public String getGENETIC2() {return sanitizeText(rawData.optString(GENETIC2));}
+    public String getGENETIC3() {return sanitizeText(rawData.optString(GENETIC3));}
+    public String getGENETIC4() {return sanitizeText(rawData.optString(GENETIC4));}
+    public String getGENETIC5() {return sanitizeText(rawData.optString(GENETIC5));}
+    public String getGENETIC6() {return sanitizeText(rawData.optString(GENETIC6));}
+    public String getGENETIC7() {return sanitizeText(rawData.optString(GENETIC7));}
+    public String getGENETIC8() {return sanitizeText(rawData.optString(GENETIC8));}
+    public String getGENETIC9() {return sanitizeText(rawData.optString(GENETIC9));}
+    public String getGENETIC10() {return sanitizeText(rawData.optString(GENETIC10));}
+    public String getGAP1() {return sanitizeText(rawData.optString(GAP1));}
+    public String getGAP2() {return sanitizeText(rawData.optString(GAP2));}
+    public String getGAP3() {return sanitizeText(rawData.optString(GAP3));}
+    public String getGAP4() {return sanitizeText(rawData.optString(GAP4));}
+    public String getGAP5() {return sanitizeText(rawData.optString(GAP5));}
+    public String getGAP6() {return sanitizeText(rawData.optString(GAP6));}
+    public String getGAP7() {return sanitizeText(rawData.optString(GAP7));}
+    public String getGAP8() {return sanitizeText(rawData.optString(GAP8));}
+    public String getGAP9() {return sanitizeText(rawData.optString(GAP9));}
+    public String getGAP10() {return sanitizeText(rawData.optString(GAP10));}
+    public String getSOILMNG1() {return sanitizeText(rawData.optString(SOILMNG1));}
+    public String getSOILMNG2() {return sanitizeText(rawData.optString(SOILMNG2));}
+    public String getSOILMNG3() {return sanitizeText(rawData.optString(SOILMNG3));}
+    public String getSOILMNG4() {return sanitizeText(rawData.optString(SOILMNG4));}
+    public String getSOILMNG5() {return sanitizeText(rawData.optString(SOILMNG5));}
+    public String getSOILMNG6() {return sanitizeText(rawData.optString(SOILMNG6));}
+    public String getSOILMNG7() {return sanitizeText(rawData.optString(SOILMNG7));}
+    public String getSOILMNG8() {return sanitizeText(rawData.optString(SOILMNG8));}
+    public String getSOILMNG9() {return sanitizeText(rawData.optString(SOILMNG9));}
+    public String getSOILMNG10() {return sanitizeText(rawData.optString(SOILMNG10));}
 
     /**
      * Returns whether the contact has been locally modified or not.

@@ -477,7 +477,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph1.getText()).isEmpty()){
                     setText(limeNP1,"N/A");
-                }else if (Double.parseDouble(ph1.getText().toString()) > 5.7){
+                }else if (Double.parseDouble(ph1.getText().toString()) > 5.8){
                     setText(limeNP1,"No");
                 }else{
                     setText(limeNP1,"Yes");
@@ -498,7 +498,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph2.getText()).isEmpty()){
                     setText(limeNP2,"N/A");
-                }else if (Double.parseDouble(ph2.getText().toString()) > 5.7){
+                }else if (Double.parseDouble(ph2.getText().toString()) > 5.8){
                     setText(limeNP2,"No");
                 }else{
                     setText(limeNP2,"Yes");
@@ -519,7 +519,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph3.getText()).isEmpty()){
                     setText(limeNP3,"N/A");
-                }else if (Double.parseDouble(ph3.getText().toString()) > 5.7){
+                }else if (Double.parseDouble(ph3.getText().toString()) > 5.8){
                     setText(limeNP3,"No");
                 }else{
                     setText(limeNP3,"Yes");
@@ -540,7 +540,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph4.getText()).isEmpty()){
                     setText(limeNP4,"N/A");
-                }else if (Double.parseDouble(ph4.getText().toString()) > 5.7){
+                }else if (Double.parseDouble(ph4.getText().toString()) > 5.8){
                     setText(limeNP4,"No");
                 }else{
                     setText(limeNP4,"Yes");
@@ -561,7 +561,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph5.getText()).isEmpty()){
                     setText(limeNP5,"N/A");
-                }else if (Double.parseDouble(ph5.getText().toString()) > 5.7){
+                }else if (Double.parseDouble(ph5.getText().toString()) > 5.8){
                     setText(limeNP5,"No");
                 }else{
                     setText(limeNP5,"Yes");
@@ -576,10 +576,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         cteP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP1.getSelectedItem().toString().equals("2.5x2.5")||cteP1.getSelectedItem().toString().equals("3x3")||cteP1.getSelectedItem().toString().equals("3.5x3.5")){
+                if (cteP1.getSelectedItem().toString().equals("3x2.5")||cteP1.getSelectedItem().toString().equals("3x3")||cteP1.getSelectedItem().toString().equals("3.5x3.5")||cteP1.getSelectedItem().toString().equals("3x3.5")){
                     setText(tdensP1,"G");
                     setText(filliP1,"No");
-                }else if(cteP1.getSelectedItem().toString().equals("4x4")){
+                }else if(cteP1.getSelectedItem().toString().equals("4x4")||cteP1.getSelectedItem().toString().equals("3.5x4")){
                     setText(tdensP1,"B");
                     setText(filliP1,"Yes");
                 }else{
@@ -597,10 +597,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         cteP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP2.getSelectedItem().toString().equals("2.5x2.5")||cteP2.getSelectedItem().toString().equals("3x3")||cteP2.getSelectedItem().toString().equals("3.5x3.5")){
+                if (cteP2.getSelectedItem().toString().equals("2.5x2.5")||cteP2.getSelectedItem().toString().equals("3x3")||cteP2.getSelectedItem().toString().equals("3.5x3.5")||cteP2.getSelectedItem().toString().equals("3x3.5")){
                     setText(tdensP2,"G");
                     setText(filliP2,"No");
-                }else if(cteP2.getSelectedItem().toString().equals("4x4")){
+                }else if(cteP2.getSelectedItem().toString().equals("4x4")||cteP2.getSelectedItem().toString().equals("3.5x4")){
                     setText(tdensP2,"B");
                     setText(filliP2,"Yes");
                 }else{
@@ -618,10 +618,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         cteP3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP3.getSelectedItem().toString().equals("2.5x2.5")||cteP3.getSelectedItem().toString().equals("3x3")||cteP3.getSelectedItem().toString().equals("3.5x3.5")){
+                if (cteP3.getSelectedItem().toString().equals("2.5x2.5")||cteP3.getSelectedItem().toString().equals("3x3")||cteP3.getSelectedItem().toString().equals("3.5x3.5")||cteP3.getSelectedItem().toString().equals("3x3.5")){
                     setText(tdensP3,"G");
                     setText(filliP3,"No");
-                }else if(cteP3.getSelectedItem().toString().equals("4x4")){
+                }else if(cteP3.getSelectedItem().toString().equals("4x4")||cteP3.getSelectedItem().toString().equals("3.5x4")){
                     setText(tdensP3,"B");
                     setText(filliP3,"Yes");
                 }else{
@@ -639,10 +639,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         cteP4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP4.getSelectedItem().toString().equals("2.5x2.5")||cteP4.getSelectedItem().toString().equals("3x3")||cteP4.getSelectedItem().toString().equals("3.5x3.5")){
+                if (cteP4.getSelectedItem().toString().equals("2.5x2.5")||cteP4.getSelectedItem().toString().equals("3x3")||cteP4.getSelectedItem().toString().equals("3.5x3.5")||cteP4.getSelectedItem().toString().equals("3x3.5")){
                     setText(tdensP4,"G");
                     setText(filliP4,"No");
-                }else if(cteP4.getSelectedItem().toString().equals("4x4")){
+                }else if(cteP4.getSelectedItem().toString().equals("4x4")||cteP4.getSelectedItem().toString().equals("3.5x4")){
                     setText(tdensP4,"B");
                     setText(filliP4,"Yes");
                 }else{
@@ -660,10 +660,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         cteP5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP5.getSelectedItem().toString().equals("2.5x2.5")||cteP5.getSelectedItem().toString().equals("3x3")||cteP5.getSelectedItem().toString().equals("3.5x3.5")){
+                if (cteP5.getSelectedItem().toString().equals("2.5x2.5")||cteP5.getSelectedItem().toString().equals("3x3")||cteP5.getSelectedItem().toString().equals("3.5x3.5")||cteP5.getSelectedItem().toString().equals("3x3.5")){
                     setText(tdensP5,"G");
                     setText(filliP5,"No");
-                }else if(cteP5.getSelectedItem().toString().equals("4x4")){
+                }else if(cteP5.getSelectedItem().toString().equals("4x4")||cteP5.getSelectedItem().toString().equals("3.5x4")){
                     setText(tdensP5,"B");
                     setText(filliP5,"Yes");
                 }else{
@@ -1671,7 +1671,31 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else {
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2.5x3")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance7, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("3x3.5")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance8, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("3×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance9, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("3.5×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP1_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance10, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else{
                 Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP1_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
@@ -2119,6 +2143,30 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP2_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance6, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2.5x3")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance7, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("3x3.5")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance8, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("3×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance9, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("3.5×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP2_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else {
@@ -2572,6 +2620,30 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2.5x3")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance7, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("3x3.5")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance8, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("3×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance9, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("3.5×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP3_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance10, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else {
                 Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP3_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -3023,6 +3095,30 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2.5x3")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance7, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("3x3.5")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance8, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("3×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance9, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("3.5×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP4_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance10, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else {
                 Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP4_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -3471,6 +3567,30 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP5_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance6, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2.5x3")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance7, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("3x3.5")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance8, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("3×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance9, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("3.5×4")) {
+                Spinner spinner = (Spinner) findViewById(R.id.cocoaTreesP5_field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else {
