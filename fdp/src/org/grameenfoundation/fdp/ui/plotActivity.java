@@ -56,7 +56,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     public static final String OBJECT_ID_KEY = "object_id";
     public static final String OBJECT_TITLE_KEY = "object_title";
     public static final String OBJECT_NAME_KEY = "object_name";
-    private EditText filliP1, filliP2, filliP3, filliP4, filliP5, fcondP1, tdensP1, teageP1, fcondP2, tdensP2, teageP2, fcondP3, tdensP3, teageP3, fcondP4, tdensP4, teageP4, fcondP5, tdensP5, teageP5, limeNP1, limeNP2, limeNP3, limeNP4, limeNP5, gpsP1, ageP1, areP1, estP1, steP1, gpsP2, ageP2, areP2, estP2, steP2, gpsP3, ageP3, areP3, estP3, steP3, gpsP4, ageP4, areP4, estP4, steP4, gpsP5, ageP5, areP5, estP5, steP5, ph1, ph2, ph3, ph4, ph5;
+    private EditText filliP1, filliP2, filliP3, filliP4, filliP5, fcondP1,  fcondP2, fcondP3, fcondP4, fcondP5, limeNP1, limeNP2, limeNP3, limeNP4, limeNP5, gpsP1, ageP1, areP1, estP1, steP1, gpsP2, ageP2, areP2, estP2, steP2, gpsP3, ageP3, areP3, estP3, steP3, gpsP4, ageP4, areP4, estP4, steP4, gpsP5, ageP5, areP5, estP5, steP5, ph1, ph2, ph3, ph4, ph5;
     private TextView Lp1, Lp2, Lp3, Lp4, Lp5;
     private Spinner cteP1, cteP2, cteP3, cteP4, cteP5, plantP1, tehelP1, debDiP1, pruniP1, pesDiP1, weediP1, harveP1, shadeP1, soilCP1, orgMaP1, fertFP1, fertAP1, drainP1, hireNP1, plantP2, tehelP2, debDiP2, pruniP2, pesDiP2, weediP2, harveP2, shadeP2, soilCP2, orgMaP2, fertFP2, fertAP2, drainP2, hireNP2, plantP3, tehelP3, debDiP3, pruniP3, pesDiP3, weediP3, harveP3, shadeP3, soilCP3, orgMaP3, fertFP3, fertAP3, drainP3, hireNP3, plantP4, tehelP4, debDiP4, pruniP4, pesDiP4, weediP4, harveP4, shadeP4, soilCP4, orgMaP4, fertFP4, fertAP4, drainP4, hireNP4, plantP5, tehelP5, debDiP5, pruniP5, pesDiP5, weediP5, harveP5, shadeP5, soilCP5, orgMaP5, fertFP5, fertAP5, drainP5, hireNP5;
     private LocationManager locationManager;
@@ -88,8 +88,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         steP1 = (EditText) findViewById(R.id.shadeTreesP1_field);
         plantP1 = (Spinner) findViewById(R.id.plantingP1_field);
         fcondP1 = (EditText) findViewById(R.id.farmConditionP1_field);
-        tdensP1 = (EditText) findViewById(R.id.treeDensityP1_field);
-        teageP1 = (EditText) findViewById(R.id.treeAgeP1_field);
         tehelP1 = (Spinner) findViewById(R.id.treeHealthP1_field);
         debDiP1 = (Spinner) findViewById(R.id.debilitationP1_field);
         pruniP1 = (Spinner) findViewById(R.id.pruningP1_field);
@@ -113,8 +111,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         steP2 = (EditText) findViewById(R.id.shadeTreesP2_field);
         plantP2 = (Spinner) findViewById(R.id.plantingP2_field);
         fcondP2 = (EditText) findViewById(R.id.farmConditionP2_field);
-        tdensP2 = (EditText) findViewById(R.id.treeDensityP2_field);
-        teageP2 = (EditText) findViewById(R.id.treeAgeP2_field);
         tehelP2 = (Spinner) findViewById(R.id.treeHealthP2_field);
         debDiP2 = (Spinner) findViewById(R.id.debilitationP2_field);
         pruniP2 = (Spinner) findViewById(R.id.pruningP2_field);
@@ -138,8 +134,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         steP3 = (EditText) findViewById(R.id.shadeTreesP3_field);
         plantP3 = (Spinner) findViewById(R.id.plantingP3_field);
         fcondP3 = (EditText) findViewById(R.id.farmConditionP3_field);
-        tdensP3 = (EditText) findViewById(R.id.treeDensityP3_field);
-        teageP3 = (EditText) findViewById(R.id.treeAgeP3_field);
         tehelP3 = (Spinner) findViewById(R.id.treeHealthP3_field);
         debDiP3 = (Spinner) findViewById(R.id.debilitationP3_field);
         pruniP3 = (Spinner) findViewById(R.id.pruningP3_field);
@@ -163,8 +157,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         steP4 = (EditText) findViewById(R.id.shadeTreesP4_field);
         plantP4 = (Spinner) findViewById(R.id.plantingP4_field);
         fcondP4 = (EditText) findViewById(R.id.farmConditionP4_field);
-        tdensP4 = (EditText) findViewById(R.id.treeDensityP4_field);
-        teageP4 = (EditText) findViewById(R.id.treeAgeP4_field);
         tehelP4 = (Spinner) findViewById(R.id.treeHealthP4_field);
         debDiP4 = (Spinner) findViewById(R.id.debilitationP4_field);
         pruniP4 = (Spinner) findViewById(R.id.pruningP4_field);
@@ -188,8 +180,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         steP5 = (EditText) findViewById(R.id.shadeTreesP5_field);
         plantP5 = (Spinner) findViewById(R.id.plantingP5_field);
         fcondP5 = (EditText) findViewById(R.id.farmConditionP5_field);
-        tdensP5 = (EditText) findViewById(R.id.treeDensityP5_field);
-        teageP5 = (EditText) findViewById(R.id.treeAgeP5_field);
         tehelP5 = (Spinner) findViewById(R.id.treeHealthP5_field);
         debDiP5 = (Spinner) findViewById(R.id.debilitationP5_field);
         pruniP5 = (Spinner) findViewById(R.id.pruningP5_field);
@@ -577,13 +567,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (cteP1.getSelectedItem().toString().equals("3x2.5")||cteP1.getSelectedItem().toString().equals("3x3")||cteP1.getSelectedItem().toString().equals("3.5x3.5")||cteP1.getSelectedItem().toString().equals("3x3.5")){
-                    setText(tdensP1,"G");
                     setText(filliP1,"No");
                 }else if(cteP1.getSelectedItem().toString().equals("4x4")||cteP1.getSelectedItem().toString().equals("3.5x4")){
-                    setText(tdensP1,"B");
                     setText(filliP1,"Yes");
                 }else{
-                    setText(tdensP1,"B");
                     setText(filliP1,"No");
                 }
             }
@@ -598,13 +585,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (cteP2.getSelectedItem().toString().equals("2.5x2.5")||cteP2.getSelectedItem().toString().equals("3x3")||cteP2.getSelectedItem().toString().equals("3.5x3.5")||cteP2.getSelectedItem().toString().equals("3x3.5")){
-                    setText(tdensP2,"G");
-                    setText(filliP2,"No");
+                   setText(filliP2,"No");
                 }else if(cteP2.getSelectedItem().toString().equals("4x4")||cteP2.getSelectedItem().toString().equals("3.5x4")){
-                    setText(tdensP2,"B");
                     setText(filliP2,"Yes");
                 }else{
-                    setText(tdensP2,"B");
                     setText(filliP2,"No");
                 }
             }
@@ -619,13 +603,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (cteP3.getSelectedItem().toString().equals("2.5x2.5")||cteP3.getSelectedItem().toString().equals("3x3")||cteP3.getSelectedItem().toString().equals("3.5x3.5")||cteP3.getSelectedItem().toString().equals("3x3.5")){
-                    setText(tdensP3,"G");
                     setText(filliP3,"No");
                 }else if(cteP3.getSelectedItem().toString().equals("4x4")||cteP3.getSelectedItem().toString().equals("3.5x4")){
-                    setText(tdensP3,"B");
                     setText(filliP3,"Yes");
                 }else{
-                    setText(tdensP3,"B");
                     setText(filliP3,"No");
                 }
             }
@@ -640,13 +621,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (cteP4.getSelectedItem().toString().equals("2.5x2.5")||cteP4.getSelectedItem().toString().equals("3x3")||cteP4.getSelectedItem().toString().equals("3.5x3.5")||cteP4.getSelectedItem().toString().equals("3x3.5")){
-                    setText(tdensP4,"G");
                     setText(filliP4,"No");
                 }else if(cteP4.getSelectedItem().toString().equals("4x4")||cteP4.getSelectedItem().toString().equals("3.5x4")){
-                    setText(tdensP4,"B");
                     setText(filliP4,"Yes");
                 }else{
-                    setText(tdensP4,"B");
                     setText(filliP4,"No");
                 }
             }
@@ -661,13 +639,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (cteP5.getSelectedItem().toString().equals("2.5x2.5")||cteP5.getSelectedItem().toString().equals("3x3")||cteP5.getSelectedItem().toString().equals("3.5x3.5")||cteP5.getSelectedItem().toString().equals("3x3.5")){
-                    setText(tdensP5,"G");
                     setText(filliP5,"No");
                 }else if(cteP5.getSelectedItem().toString().equals("4x4")||cteP5.getSelectedItem().toString().equals("3.5x4")){
-                    setText(tdensP5,"B");
                     setText(filliP5,"Yes");
                 }else{
-                    setText(tdensP5,"B");
                     setText(filliP5,"No");
                 }
             }
@@ -678,117 +653,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
         });
 
-        ageP1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (String.valueOf(ageP1.getText()).isEmpty()){
-                    setText(teageP1,"N/A");
-                }else if (Double.parseDouble(ageP1.getText().toString()) < 25){
-                    setText(teageP1,"G");
-                }else{
-                    setText(teageP1,"B");
-                }
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        ageP2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (String.valueOf(ageP2.getText()).isEmpty()){
-                    setText(teageP2,"N/A");
-                }else if (Double.parseDouble(ageP2.getText().toString()) < 25){
-                    setText(teageP2,"G");
-                }else{
-                    setText(teageP2,"B");
-                }
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        ageP3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (String.valueOf(ageP3.getText()).isEmpty()){
-                    setText(teageP3,"N/A");
-                }else if (Double.parseDouble(ageP3.getText().toString()) < 25){
-                    setText(teageP3,"G");
-                }else{
-                    setText(teageP3,"B");
-                }
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        ageP4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (String.valueOf(ageP4.getText()).isEmpty()){
-                    setText(teageP4,"N/A");
-                }else if (Double.parseDouble(ageP4.getText().toString()) < 25){
-                    setText(teageP4,"G");
-                }else{
-                    setText(teageP4,"B");
-                }
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        ageP5.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (String.valueOf(ageP5.getText()).isEmpty()){
-                    setText(teageP5,"N/A");
-                }else if (Double.parseDouble(ageP5.getText().toString()) < 25){
-                    setText(teageP5,"G");
-                }else{
-                    setText(teageP5,"B");
-                }
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-
         tehelP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP1.getSelectedItem().toString().equals("B")||teageP1.getText().toString().equals("B")||tdensP1.getText().toString().equals("B")){
+                if (tehelP1.getSelectedItem().toString().equals("B")){
                     setText(fcondP1,"B");
                 }else{
                     setText(fcondP1,"G");
@@ -804,7 +672,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         tehelP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP2.getSelectedItem().toString().equals("B")||teageP2.getText().toString().equals("B")||tdensP2.getText().toString().equals("B")){
+                if (tehelP2.getSelectedItem().toString().equals("B")){
                     setText(fcondP2,"B");
                 }else{
                     setText(fcondP2,"G");
@@ -820,7 +688,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         tehelP3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP3.getSelectedItem().toString().equals("B")||teageP3.getText().toString().equals("B")||tdensP3.getText().toString().equals("B")){
+                if (tehelP3.getSelectedItem().toString().equals("B")){
                     setText(fcondP3,"B");
                 }else{
                     setText(fcondP3,"G");
@@ -836,7 +704,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         tehelP4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP4.getSelectedItem().toString().equals("B")||teageP4.getText().toString().equals("B")||tdensP4.getText().toString().equals("B")){
+                if (tehelP4.getSelectedItem().toString().equals("B")){
                     setText(fcondP4,"B");
                 }else{
                     setText(fcondP4,"G");
@@ -852,7 +720,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         tehelP5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP5.getSelectedItem().toString().equals("B")||teageP5.getText().toString().equals("B")||tdensP5.getText().toString().equals("B")){
+                if (tehelP5.getSelectedItem().toString().equals("B")){
                     setText(fcondP5,"B");
                 }else{
                     setText(fcondP5,"G");
@@ -928,8 +796,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -961,8 +827,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -987,8 +851,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.VISIBLE);
                 plantP2.setVisibility(View.VISIBLE);
                 fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
                 tehelP2.setVisibility(View.VISIBLE);
                 debDiP2.setVisibility(View.VISIBLE);
                 pruniP2.setVisibility(View.VISIBLE);
@@ -1020,8 +882,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -1046,8 +906,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.VISIBLE);
                 plantP2.setVisibility(View.VISIBLE);
                 fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
                 tehelP2.setVisibility(View.VISIBLE);
                 debDiP2.setVisibility(View.VISIBLE);
                 pruniP2.setVisibility(View.VISIBLE);
@@ -1072,8 +930,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP3.setVisibility(View.VISIBLE);
                 plantP3.setVisibility(View.VISIBLE);
                 fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
                 tehelP3.setVisibility(View.VISIBLE);
                 debDiP3.setVisibility(View.VISIBLE);
                 pruniP3.setVisibility(View.VISIBLE);
@@ -1105,8 +961,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -1131,8 +985,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.VISIBLE);
                 plantP2.setVisibility(View.VISIBLE);
                 fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
                 tehelP2.setVisibility(View.VISIBLE);
                 debDiP2.setVisibility(View.VISIBLE);
                 pruniP2.setVisibility(View.VISIBLE);
@@ -1157,8 +1009,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP3.setVisibility(View.VISIBLE);
                 plantP3.setVisibility(View.VISIBLE);
                 fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
                 tehelP3.setVisibility(View.VISIBLE);
                 debDiP3.setVisibility(View.VISIBLE);
                 pruniP3.setVisibility(View.VISIBLE);
@@ -1183,8 +1033,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP4.setVisibility(View.VISIBLE);
                 plantP4.setVisibility(View.VISIBLE);
                 fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
                 tehelP4.setVisibility(View.VISIBLE);
                 debDiP4.setVisibility(View.VISIBLE);
                 pruniP4.setVisibility(View.VISIBLE);
@@ -1216,8 +1064,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -1242,8 +1088,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.VISIBLE);
                 plantP2.setVisibility(View.VISIBLE);
                 fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
                 tehelP2.setVisibility(View.VISIBLE);
                 debDiP2.setVisibility(View.VISIBLE);
                 pruniP2.setVisibility(View.VISIBLE);
@@ -1268,8 +1112,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP3.setVisibility(View.VISIBLE);
                 plantP3.setVisibility(View.VISIBLE);
                 fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
                 tehelP3.setVisibility(View.VISIBLE);
                 debDiP3.setVisibility(View.VISIBLE);
                 pruniP3.setVisibility(View.VISIBLE);
@@ -1294,8 +1136,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP4.setVisibility(View.VISIBLE);
                 plantP4.setVisibility(View.VISIBLE);
                 fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
                 tehelP4.setVisibility(View.VISIBLE);
                 debDiP4.setVisibility(View.VISIBLE);
                 pruniP4.setVisibility(View.VISIBLE);
@@ -1320,8 +1160,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP5.setVisibility(View.VISIBLE);
                 plantP5.setVisibility(View.VISIBLE);
                 fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
                 tehelP5.setVisibility(View.VISIBLE);
                 debDiP5.setVisibility(View.VISIBLE);
                 pruniP5.setVisibility(View.VISIBLE);
@@ -1352,8 +1190,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.GONE);
                 plantP1.setVisibility(View.GONE);
                 fcondP1.setVisibility(View.GONE);
-                tdensP1.setVisibility(View.GONE);
-                teageP1.setVisibility(View.GONE);
                 tehelP1.setVisibility(View.GONE);
                 debDiP1.setVisibility(View.GONE);
                 pruniP1.setVisibility(View.GONE);
@@ -1378,8 +1214,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.GONE);
                 plantP2.setVisibility(View.GONE);
                 fcondP2.setVisibility(View.GONE);
-                tdensP2.setVisibility(View.GONE);
-                teageP2.setVisibility(View.GONE);
                 tehelP2.setVisibility(View.GONE);
                 debDiP2.setVisibility(View.GONE);
                 pruniP2.setVisibility(View.GONE);
@@ -1404,8 +1238,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP3.setVisibility(View.GONE);
                 plantP3.setVisibility(View.GONE);
                 fcondP3.setVisibility(View.GONE);
-                tdensP3.setVisibility(View.GONE);
-                teageP3.setVisibility(View.GONE);
                 tehelP3.setVisibility(View.GONE);
                 debDiP3.setVisibility(View.GONE);
                 pruniP3.setVisibility(View.GONE);
@@ -1430,8 +1262,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP4.setVisibility(View.GONE);
                 plantP4.setVisibility(View.GONE);
                 fcondP4.setVisibility(View.GONE);
-                tdensP4.setVisibility(View.GONE);
-                teageP4.setVisibility(View.GONE);
                 tehelP4.setVisibility(View.GONE);
                 debDiP4.setVisibility(View.GONE);
                 pruniP4.setVisibility(View.GONE);
@@ -1456,8 +1286,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP5.setVisibility(View.GONE);
                 plantP5.setVisibility(View.GONE);
                 fcondP5.setVisibility(View.GONE);
-                tdensP5.setVisibility(View.GONE);
-                teageP5.setVisibility(View.GONE);
                 tehelP5.setVisibility(View.GONE);
                 debDiP5.setVisibility(View.GONE);
                 pruniP5.setVisibility(View.GONE);
@@ -1488,8 +1316,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP1.setVisibility(View.VISIBLE);
                 plantP1.setVisibility(View.VISIBLE);
                 fcondP1.setVisibility(View.VISIBLE);
-                tdensP1.setVisibility(View.VISIBLE);
-                teageP1.setVisibility(View.VISIBLE);
                 tehelP1.setVisibility(View.VISIBLE);
                 debDiP1.setVisibility(View.VISIBLE);
                 pruniP1.setVisibility(View.VISIBLE);
@@ -1514,8 +1340,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP2.setVisibility(View.VISIBLE);
                 plantP2.setVisibility(View.VISIBLE);
                 fcondP2.setVisibility(View.VISIBLE);
-                tdensP2.setVisibility(View.VISIBLE);
-                teageP2.setVisibility(View.VISIBLE);
                 tehelP2.setVisibility(View.VISIBLE);
                 debDiP2.setVisibility(View.VISIBLE);
                 pruniP2.setVisibility(View.VISIBLE);
@@ -1540,8 +1364,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP3.setVisibility(View.VISIBLE);
                 plantP3.setVisibility(View.VISIBLE);
                 fcondP3.setVisibility(View.VISIBLE);
-                tdensP3.setVisibility(View.VISIBLE);
-                teageP3.setVisibility(View.VISIBLE);
                 tehelP3.setVisibility(View.VISIBLE);
                 debDiP3.setVisibility(View.VISIBLE);
                 pruniP3.setVisibility(View.VISIBLE);
@@ -1566,8 +1388,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP4.setVisibility(View.VISIBLE);
                 plantP4.setVisibility(View.VISIBLE);
                 fcondP4.setVisibility(View.VISIBLE);
-                tdensP4.setVisibility(View.VISIBLE);
-                teageP4.setVisibility(View.VISIBLE);
                 tehelP4.setVisibility(View.VISIBLE);
                 debDiP4.setVisibility(View.VISIBLE);
                 pruniP4.setVisibility(View.VISIBLE);
@@ -1592,8 +1412,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 steP5.setVisibility(View.VISIBLE);
                 plantP5.setVisibility(View.VISIBLE);
                 fcondP5.setVisibility(View.VISIBLE);
-                tdensP5.setVisibility(View.VISIBLE);
-                teageP5.setVisibility(View.VISIBLE);
                 tehelP5.setVisibility(View.VISIBLE);
                 debDiP5.setVisibility(View.VISIBLE);
                 pruniP5.setVisibility(View.VISIBLE);
@@ -1754,21 +1572,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         sObject.getFarmCondition1());
             }
 
-            //set field
-            if (sObject.getTreeDensity1().isEmpty()){
-                setText((EditText) findViewById(R.id.treeDensityP1_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeDensityP1_field),
-                        sObject.getTreeDensity1());
-            }
 
-            //set field
-            if (sObject.getTreeAge1().isEmpty()){
-                setText((EditText) findViewById(R.id.treeAgeP1_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeAgeP1_field),
-                        sObject.getTreeAge1());
-            }
 
             //set field
             if (sObject.getTreeHealth1().contentEquals("G")) {
@@ -2226,22 +2030,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else {
                 setText((EditText) findViewById(R.id.farmConditionP2_field),
                         sObject.getFarmCondition2());
-            }
-
-            //set field
-            if (sObject.getTreeDensity2().isEmpty()){
-                setText((EditText) findViewById(R.id.treeDensityP2_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeDensityP2_field),
-                        sObject.getTreeDensity2());
-            }
-
-            //set field
-            if (sObject.getTreeAge2().isEmpty()){
-                setText((EditText) findViewById(R.id.treeAgeP2_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeAgeP2_field),
-                        sObject.getTreeAge2());
             }
 
             //set field
@@ -2704,22 +2492,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field
-            if (sObject.getTreeDensity3().isEmpty()){
-                setText((EditText) findViewById(R.id.treeDensityP3_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeDensityP3_field),
-                        sObject.getTreeDensity3());
-            }
-
-            //set field
-            if (sObject.getTreeAge3().isEmpty()){
-                setText((EditText) findViewById(R.id.treeAgeP3_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeAgeP3_field),
-                        sObject.getTreeAge3());
-            }
-
-            //set field
             if (sObject.getTreeHealth3().contentEquals("G")) {
                 Spinner spinner = (Spinner) findViewById(R.id.treeHealthP3_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -3176,22 +2948,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else {
                 setText((EditText) findViewById(R.id.farmConditionP4_field),
                         sObject.getFarmCondition4());
-            }
-
-            //set field
-            if (sObject.getTreeDensity4().isEmpty()){
-                setText((EditText) findViewById(R.id.treeDensityP4_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeDensityP4_field),
-                        sObject.getTreeDensity4());
-            }
-
-            //set field
-            if (sObject.getTreeAge4().isEmpty()){
-                setText((EditText) findViewById(R.id.treeAgeP4_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeAgeP4_field),
-                        sObject.getTreeAge4());
             }
 
             //set field
@@ -3653,22 +3409,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field
-            if (sObject.getTreeDensity5().isEmpty()){
-                setText((EditText) findViewById(R.id.treeDensityP5_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeDensityP5_field),
-                        sObject.getTreeDensity5());
-            }
-
-            //set field
-            if (sObject.getTreeAge5().isEmpty()){
-                setText((EditText) findViewById(R.id.treeAgeP5_field),"N/A");
-            }else {
-                setText((EditText) findViewById(R.id.treeAgeP5_field),
-                        sObject.getTreeAge5());
-            }
-
-            //set field
             if (sObject.getTreeHealth5().contentEquals("G")) {
                 Spinner spinner = (Spinner) findViewById(R.id.treeHealthP5_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -4038,8 +3778,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shadeTreesP1 = ((EditText) findViewById(R.id.shadeTreesP1_field)).getText().toString();
         final String plantingP1 = ((Spinner) findViewById(R.id.plantingP1_field)).getSelectedItem().toString();
         final String farmConditionP1 = ((EditText) findViewById(R.id.farmConditionP1_field)).getText().toString();
-        final String treeDensityP1 = ((EditText) findViewById(R.id.treeDensityP1_field)).getText().toString();
-        final String treeAgeP1 = ((EditText) findViewById(R.id.treeAgeP1_field)).getText().toString();
         final String treeHealthP1 = ((Spinner) findViewById(R.id.treeHealthP1_field)).getSelectedItem().toString();
         final String debilitationP1 = ((Spinner) findViewById(R.id.debilitationP1_field)).getSelectedItem().toString();
         final String pruningP1 = ((Spinner) findViewById(R.id.pruningP1_field)).getSelectedItem().toString();
@@ -4063,8 +3801,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shadeTreesP2 = ((EditText) findViewById(R.id.shadeTreesP2_field)).getText().toString();
         final String plantingP2 = ((Spinner) findViewById(R.id.plantingP2_field)).getSelectedItem().toString();
         final String farmConditionP2 = ((EditText) findViewById(R.id.farmConditionP2_field)).getText().toString();
-        final String treeDensityP2 = ((EditText) findViewById(R.id.treeDensityP2_field)).getText().toString();
-        final String treeAgeP2 = ((EditText) findViewById(R.id.treeAgeP2_field)).getText().toString();
         final String treeHealthP2 = ((Spinner) findViewById(R.id.treeHealthP2_field)).getSelectedItem().toString();
         final String debilitationP2 = ((Spinner) findViewById(R.id.debilitationP2_field)).getSelectedItem().toString();
         final String pruningP2 = ((Spinner) findViewById(R.id.pruningP2_field)).getSelectedItem().toString();
@@ -4088,8 +3824,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shadeTreesP3 = ((EditText) findViewById(R.id.shadeTreesP3_field)).getText().toString();
         final String plantingP3 = ((Spinner) findViewById(R.id.plantingP3_field)).getSelectedItem().toString();
         final String farmConditionP3 = ((EditText) findViewById(R.id.farmConditionP3_field)).getText().toString();
-        final String treeDensityP3 = ((EditText) findViewById(R.id.treeDensityP3_field)).getText().toString();
-        final String treeAgeP3 = ((EditText) findViewById(R.id.treeAgeP3_field)).getText().toString();
         final String treeHealthP3 = ((Spinner) findViewById(R.id.treeHealthP3_field)).getSelectedItem().toString();
         final String debilitationP3 = ((Spinner) findViewById(R.id.debilitationP3_field)).getSelectedItem().toString();
         final String pruningP3 = ((Spinner) findViewById(R.id.pruningP3_field)).getSelectedItem().toString();
@@ -4113,8 +3847,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shadeTreesP4 = ((EditText) findViewById(R.id.shadeTreesP4_field)).getText().toString();
         final String plantingP4 = ((Spinner) findViewById(R.id.plantingP4_field)).getSelectedItem().toString();
         final String farmConditionP4 = ((EditText) findViewById(R.id.farmConditionP4_field)).getText().toString();
-        final String treeDensityP4 = ((EditText) findViewById(R.id.treeDensityP4_field)).getText().toString();
-        final String treeAgeP4 = ((EditText) findViewById(R.id.treeAgeP4_field)).getText().toString();
         final String treeHealthP4 = ((Spinner) findViewById(R.id.treeHealthP4_field)).getSelectedItem().toString();
         final String debilitationP4 = ((Spinner) findViewById(R.id.debilitationP4_field)).getSelectedItem().toString();
         final String pruningP4 = ((Spinner) findViewById(R.id.pruningP4_field)).getSelectedItem().toString();
@@ -4138,8 +3870,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shadeTreesP5 = ((EditText) findViewById(R.id.shadeTreesP5_field)).getText().toString();
         final String plantingP5 = ((Spinner) findViewById(R.id.plantingP5_field)).getSelectedItem().toString();
         final String farmConditionP5 = ((EditText) findViewById(R.id.farmConditionP5_field)).getText().toString();
-        final String treeDensityP5 = ((EditText) findViewById(R.id.treeDensityP5_field)).getText().toString();
-        final String treeAgeP5 = ((EditText) findViewById(R.id.treeAgeP5_field)).getText().toString();
         final String treeHealthP5 = ((Spinner) findViewById(R.id.treeHealthP5_field)).getSelectedItem().toString();
         final String debilitationP5 = ((Spinner) findViewById(R.id.debilitationP5_field)).getSelectedItem().toString();
         final String pruningP5 = ((Spinner) findViewById(R.id.pruningP5_field)).getSelectedItem().toString();
@@ -4184,8 +3914,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT1SHADETREES, shadeTreesP1);
             contact.put(ContactObject.PLANTINGMATERIAL1, plantingP1);
             contact.put(ContactObject.FARMCONDITION1, farmConditionP1);
-            contact.put(ContactObject.TREEDENSITY1, treeDensityP1);
-            contact.put(ContactObject.TREEAGE1, treeAgeP1);
             contact.put(ContactObject.TREEHEALTH1, treeHealthP1);
             contact.put(ContactObject.DEBILITATINGDISEASE1, debilitationP1);
             contact.put(ContactObject.PRUNING1, pruningP1);
@@ -4209,8 +3937,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT2SHADETREES, shadeTreesP2);
             contact.put(ContactObject.PLANTINGMATERIAL2, plantingP2);
             contact.put(ContactObject.FARMCONDITION2, farmConditionP2);
-            contact.put(ContactObject.TREEDENSITY2, treeDensityP2);
-            contact.put(ContactObject.TREEAGE2, treeAgeP2);
             contact.put(ContactObject.TREEHEALTH2, treeHealthP2);
             contact.put(ContactObject.DEBILITATINGDISEASE2, debilitationP2);
             contact.put(ContactObject.PRUNING2, pruningP2);
@@ -4234,8 +3960,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT3SHADETREES, shadeTreesP3);
             contact.put(ContactObject.PLANTINGMATERIAL3, plantingP3);
             contact.put(ContactObject.FARMCONDITION3, farmConditionP3);
-            contact.put(ContactObject.TREEDENSITY3, treeDensityP3);
-            contact.put(ContactObject.TREEAGE3, treeAgeP3);
             contact.put(ContactObject.TREEHEALTH3, treeHealthP3);
             contact.put(ContactObject.DEBILITATINGDISEASE3, debilitationP3);
             contact.put(ContactObject.PRUNING3, pruningP3);
@@ -4259,8 +3983,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT4SHADETREES, shadeTreesP4);
             contact.put(ContactObject.PLANTINGMATERIAL4, plantingP4);
             contact.put(ContactObject.FARMCONDITION4, farmConditionP4);
-            contact.put(ContactObject.TREEDENSITY4, treeDensityP4);
-            contact.put(ContactObject.TREEAGE4, treeAgeP4);
             contact.put(ContactObject.TREEHEALTH4, treeHealthP4);
             contact.put(ContactObject.DEBILITATINGDISEASE4, debilitationP4);
             contact.put(ContactObject.PRUNING4, pruningP4);
@@ -4284,8 +4006,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT5SHADETREES, shadeTreesP5);
             contact.put(ContactObject.PLANTINGMATERIAL5, plantingP5);
             contact.put(ContactObject.FARMCONDITION5, farmConditionP5);
-            contact.put(ContactObject.TREEDENSITY5, treeDensityP5);
-            contact.put(ContactObject.TREEAGE5, treeAgeP5);
             contact.put(ContactObject.TREEHEALTH5, treeHealthP5);
             contact.put(ContactObject.DEBILITATINGDISEASE5, debilitationP5);
             contact.put(ContactObject.PRUNING5, pruningP5);
