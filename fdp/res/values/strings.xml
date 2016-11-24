@@ -122,6 +122,7 @@
 	<string name="farmCondition">Farm Condition:</string>
 	<string name="gapLb">GAPS:</string>
 	<string name="soilFertMngLb">Soil Fertility Management:</string>
+	<string name="calcAO">Calculate</string>
 
 	<string name="agree">Agreed on recommendations:</string>
 	<string name="reasonNotAgree">Comments:</string>

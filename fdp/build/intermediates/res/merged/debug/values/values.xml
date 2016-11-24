@@ -569,6 +569,7 @@
     <string name="back">Back</string>
     <string name="bankAccount">Have bank account?</string>
     <string name="birthday">Farmer Birthday Year:</string>
+    <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
     <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty!</string>
     <string name="childrenInSchool">Children between 5 and 17 years old enrolled in school:</string>

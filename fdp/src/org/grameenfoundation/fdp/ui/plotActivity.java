@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -21,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -56,11 +58,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     public static final String OBJECT_ID_KEY = "object_id";
     public static final String OBJECT_TITLE_KEY = "object_title";
     public static final String OBJECT_NAME_KEY = "object_name";
-    private EditText filliP1, filliP2, filliP3, filliP4, filliP5, fcondP1,  fcondP2, fcondP3, fcondP4, fcondP5, limeNP1, limeNP2, limeNP3, limeNP4, limeNP5, gpsP1, ageP1, areP1, estP1, steP1, gpsP2, ageP2, areP2, estP2, steP2, gpsP3, ageP3, areP3, estP3, steP3, gpsP4, ageP4, areP4, estP4, steP4, gpsP5, ageP5, areP5, estP5, steP5, ph1, ph2, ph3, ph4, ph5;
+    private EditText geneticP1,geneticP2,geneticP3,geneticP4,geneticP5,gapP1,gapP2,gapP3,gapP4,gapP5,soilFertMng1,soilFertMng2,soilFertMng3,soilFertMng4,soilFertMng5,filliP1, filliP2, filliP3, filliP4, filliP5, fcondP1,  fcondP2, fcondP3, fcondP4, fcondP5, limeNP1, limeNP2, limeNP3, limeNP4, limeNP5, gpsP1, ageP1, areP1, estP1, steP1, gpsP2, ageP2, areP2, estP2, steP2, gpsP3, ageP3, areP3, estP3, steP3, gpsP4, ageP4, areP4, estP4, steP4, gpsP5, ageP5, areP5, estP5, steP5, ph1, ph2, ph3, ph4, ph5;
     private TextView Lp1, Lp2, Lp3, Lp4, Lp5;
     private Spinner cteP1, cteP2, cteP3, cteP4, cteP5, plantP1, tehelP1, debDiP1, pruniP1, pesDiP1, weediP1, harveP1, shadeP1, soilCP1, orgMaP1, fertFP1, fertAP1, drainP1, hireNP1, plantP2, tehelP2, debDiP2, pruniP2, pesDiP2, weediP2, harveP2, shadeP2, soilCP2, orgMaP2, fertFP2, fertAP2, drainP2, hireNP2, plantP3, tehelP3, debDiP3, pruniP3, pesDiP3, weediP3, harveP3, shadeP3, soilCP3, orgMaP3, fertFP3, fertAP3, drainP3, hireNP3, plantP4, tehelP4, debDiP4, pruniP4, pesDiP4, weediP4, harveP4, shadeP4, soilCP4, orgMaP4, fertFP4, fertAP4, drainP4, hireNP4, plantP5, tehelP5, debDiP5, pruniP5, pesDiP5, weediP5, harveP5, shadeP5, soilCP5, orgMaP5, fertFP5, fertAP5, drainP5, hireNP5;
     private LocationManager locationManager;
     private LocationListener locationListener;
+    private Button calc1,calc2,calc3,calc4,calc5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,6 +203,26 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         ph3 = (EditText) findViewById(R.id.ph3_field);
         ph4 = (EditText) findViewById(R.id.ph4_field);
         ph5 = (EditText) findViewById(R.id.ph5_field);
+        geneticP1= (EditText) findViewById(R.id.geneticP1_field);
+        geneticP2= (EditText) findViewById(R.id.geneticP2_field);
+        geneticP3= (EditText) findViewById(R.id.geneticP3_field);
+        geneticP4= (EditText) findViewById(R.id.geneticP4_field);
+        geneticP5= (EditText) findViewById(R.id.geneticP5_field);
+        gapP1= (EditText) findViewById(R.id.gapP1_field);
+        gapP2= (EditText) findViewById(R.id.gapP2_field);
+        gapP3= (EditText) findViewById(R.id.gapP3_field);
+        gapP4= (EditText) findViewById(R.id.gapP4_field);
+        gapP5= (EditText) findViewById(R.id.gapP5_field);
+        soilFertMng1= (EditText) findViewById(R.id.soilFertMng1_field);
+        soilFertMng2= (EditText) findViewById(R.id.soilFertMng2_field);
+        soilFertMng3= (EditText) findViewById(R.id.soilFertMng3_field);
+        soilFertMng4= (EditText) findViewById(R.id.soilFertMng4_field);
+        soilFertMng5= (EditText) findViewById(R.id.soilFertMng5_field);
+        calc1= (Button) findViewById(R.id.calculateP1);
+        calc2= (Button) findViewById(R.id.calculateP2);
+        calc3= (Button) findViewById(R.id.calculateP3);
+        calc4= (Button) findViewById(R.id.calculateP4);
+        calc5= (Button) findViewById(R.id.calculateP5);
 
         gpsP1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -353,8 +376,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
             }
         });
-
-
 
         gpsP2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -563,6 +584,247 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
         });
 
+        areP1.addTextChangedListener(new TextWatcher() {
+
+
+             @Override
+             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+             @Override
+             public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+             @Override
+             public void afterTextChanged(Editable s) {
+                 double p1;
+                 if(areP1.getText().toString().isEmpty()){
+                     p1=0;
+                 }else{
+                     p1=Double.parseDouble(areP1.getText().toString());
+                 }
+
+                 if ((p1+Double.parseDouble(areP2.getText().toString())+Double.parseDouble(areP3.getText().toString())+Double.parseDouble(areP4.getText().toString())+Double.parseDouble(areP5.getText().toString()))>Double.parseDouble(sObject.getTotalCocoaArea())){
+                     areP1.setBackgroundColor(Color.parseColor("#cc0000"));
+                     Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                 }else{
+                     areP1.setBackgroundColor(Color.TRANSPARENT);
+                 }
+             }
+        });
+
+        areP2.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p2;
+                if(areP2.getText().toString().isEmpty()){
+                    p2=0;
+                }else{
+                    p2=Double.parseDouble(areP2.getText().toString());
+                }
+                if ((Double.parseDouble(areP1.getText().toString())+p2+Double.parseDouble(areP3.getText().toString())+Double.parseDouble(areP4.getText().toString())+Double.parseDouble(areP5.getText().toString()))>Double.parseDouble(sObject.getTotalCocoaArea())){
+                    areP2.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                }else{
+                    areP2.setBackgroundColor(Color.TRANSPARENT);
+                }
+            }
+        });
+
+        areP3.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p3;
+                if(areP3.getText().toString().isEmpty()){
+                    p3=0;
+                }else{
+                    p3=Double.parseDouble(areP3.getText().toString());
+                }
+                if ((Double.parseDouble(areP1.getText().toString())+Double.parseDouble(areP2.getText().toString())+p3+Double.parseDouble(areP4.getText().toString())+Double.parseDouble(areP5.getText().toString()))>Double.parseDouble(sObject.getTotalCocoaArea())){
+                    areP3.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                }else{
+                    areP3.setBackgroundColor(Color.TRANSPARENT);
+                }
+            }
+        });
+
+        areP4.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p4;
+                if(areP4.getText().toString().isEmpty()){
+                    p4=0;
+                }else{
+                    p4=Double.parseDouble(areP4.getText().toString());
+                }
+                if ((Double.parseDouble(areP1.getText().toString())+Double.parseDouble(areP2.getText().toString())+Double.parseDouble(areP3.getText().toString())+p4+Double.parseDouble(areP5.getText().toString()))>Double.parseDouble(sObject.getTotalCocoaArea())){
+                    areP4.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                }else{
+                    areP4.setBackgroundColor(Color.TRANSPARENT);
+                }
+            }
+        });
+
+        areP5.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p5;
+                if(areP5.getText().toString().isEmpty()){
+                    p5=0;
+                }else{
+                    p5=Double.parseDouble(areP5.getText().toString());
+                }
+                if ((Double.parseDouble(areP1.getText().toString())+Double.parseDouble(areP2.getText().toString())+Double.parseDouble(areP3.getText().toString())+Double.parseDouble(areP4.getText().toString())+p5)>Double.parseDouble(sObject.getTotalCocoaArea())){
+                    areP5.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                }else{
+                    areP5.setBackgroundColor(Color.TRANSPARENT);
+                }
+            }
+        });
+
+        estP1.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p1;
+                if(estP1.getText().toString().isEmpty()){
+                    p1=0;
+                }else{
+                    p1=Double.parseDouble(estP1.getText().toString());
+                }
+                if ((p1+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                    Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        estP2.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p2;
+                if(estP2.getText().toString().isEmpty()){
+                    p2=0;
+                }else{
+                    p2=Double.parseDouble(estP2.getText().toString());
+                }
+                if ((p2+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                    Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        estP3.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p3;
+                if(estP3.getText().toString().isEmpty()){
+                    p3=0;
+                }else{
+                    p3=Double.parseDouble(estP3.getText().toString());
+                }
+                if ((p3+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                    Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        estP4.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p4;
+                if(estP4.getText().toString().isEmpty()){
+                    p4=0;
+                }else{
+                    p4=Double.parseDouble(estP4.getText().toString());
+                }
+                if ((p4+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                    Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        estP5.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                double p5;
+                if(estP5.getText().toString().isEmpty()){
+                    p5=0;
+                }else{
+                    p5=Double.parseDouble(estP5.getText().toString());
+                }
+                if ((p5+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                    Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
         cteP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -653,86 +915,135 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
         });
 
-        tehelP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP1.getSelectedItem().toString().equals("B")){
-                    setText(fcondP1,"B");
-                }else{
-                    setText(fcondP1,"G");
+    }
+
+    public void calculate(View view) {
+        switch(view.getId()) {
+            case R.id.calculateP1:
+                if (plantP1.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP1, "B");
+                } else {
+                    setText(geneticP1, "G");
                 }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        tehelP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP2.getSelectedItem().toString().equals("B")){
-                    setText(fcondP2,"B");
+                if ((cteP1.getSelectedItem().toString().equals("2x2")||cteP1.getSelectedItem().toString().equals("2.5x2.5")||cteP1.getSelectedItem().toString().equals("3×4")||cteP1.getSelectedItem().toString().equals("3.5×4")||cteP1.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP1.getText().toString()) > 25)||(tehelP1.getSelectedItem().toString().equals("B"))||(debDiP1.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP1, "B");
+                    setText(filliP1,"No");
                 }else{
-                    setText(fcondP2,"G");
+                    setText(fcondP1, "G");
                 }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        tehelP3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP3.getSelectedItem().toString().equals("B")){
-                    setText(fcondP3,"B");
+                if (pruniP1.getSelectedItem().toString().equals("B")||pesDiP1.getSelectedItem().toString().equals("B")||weediP1.getSelectedItem().toString().equals("B")||harveP1.getSelectedItem().toString().equals("B")||shadeP1.getSelectedItem().toString().equals("B")){
+                    setText(gapP1,"B");
                 }else{
-                    setText(fcondP3,"G");
+                    setText(gapP1, "G");
                 }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        tehelP4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP4.getSelectedItem().toString().equals("B")){
-                    setText(fcondP4,"B");
+                if (soilCP1.getSelectedItem().toString().equals("B")||orgMaP1.getSelectedItem().toString().equals("B")||fertFP1.getSelectedItem().toString().equals("B")||fertAP1.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng1,"B");
                 }else{
-                    setText(fcondP4,"G");
+                    setText(soilFertMng1,"G");
                 }
-            }
+                partialSave();
+                break;
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        tehelP5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (tehelP5.getSelectedItem().toString().equals("B")){
-                    setText(fcondP5,"B");
+            case R.id.calculateP2:
+                if (plantP2.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP2, "B");
+                } else {
+                    setText(geneticP2, "G");
+                }
+                if ((cteP2.getSelectedItem().toString().equals("2x2")||cteP2.getSelectedItem().toString().equals("2.5x2.5")||cteP2.getSelectedItem().toString().equals("3×4")||cteP2.getSelectedItem().toString().equals("3.5×4")||cteP2.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP2.getText().toString()) > 25)||(tehelP2.getSelectedItem().toString().equals("B"))||(debDiP2.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP2, "B");
+                    setText(filliP2,"No");
                 }else{
-                    setText(fcondP5,"G");
+                    setText(fcondP2, "G");
                 }
-            }
+                if (pruniP2.getSelectedItem().toString().equals("B")||pesDiP2.getSelectedItem().toString().equals("B")||weediP2.getSelectedItem().toString().equals("B")||harveP2.getSelectedItem().toString().equals("B")||shadeP2.getSelectedItem().toString().equals("B")){
+                    setText(gapP2,"B");
+                }else{
+                    setText(gapP2, "G");
+                }
+                if (soilCP2.getSelectedItem().toString().equals("B")||orgMaP2.getSelectedItem().toString().equals("B")||fertFP2.getSelectedItem().toString().equals("B")||fertAP2.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng2,"B");
+                }else{
+                    setText(soilFertMng2,"G");
+                }
+                partialSave();
+                break;
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            case R.id.calculateP3:
+                if (plantP3.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP3, "B");
+                } else {
+                    setText(geneticP3, "G");
+                }
+                if ((cteP3.getSelectedItem().toString().equals("2x2")||cteP3.getSelectedItem().toString().equals("2.5x2.5")||cteP3.getSelectedItem().toString().equals("3×4")||cteP3.getSelectedItem().toString().equals("3.5×4")||cteP3.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP3.getText().toString()) > 25)||(tehelP3.getSelectedItem().toString().equals("B"))||(debDiP3.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP3, "B");
+                    setText(filliP3,"No");
+                }else{
+                    setText(fcondP3, "G");
+                }
+                if (pruniP3.getSelectedItem().toString().equals("B")||pesDiP3.getSelectedItem().toString().equals("B")||weediP3.getSelectedItem().toString().equals("B")||harveP3.getSelectedItem().toString().equals("B")||shadeP3.getSelectedItem().toString().equals("B")){
+                    setText(gapP3,"B");
+                }else{
+                    setText(gapP3, "G");
+                }
+                if (soilCP3.getSelectedItem().toString().equals("B")||orgMaP3.getSelectedItem().toString().equals("B")||fertFP3.getSelectedItem().toString().equals("B")||fertAP3.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng3,"B");
+                }else{
+                    setText(soilFertMng3,"G");
+                }
+                partialSave();
+                break;
 
-            }
-        });
+            case R.id.calculateP4:
+                if (plantP4.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP4, "B");
+                } else {
+                    setText(geneticP4, "G");
+                }
+                if ((cteP4.getSelectedItem().toString().equals("2x2")||cteP4.getSelectedItem().toString().equals("2.5x2.5")||cteP4.getSelectedItem().toString().equals("3×4")||cteP4.getSelectedItem().toString().equals("3.5×4")||cteP4.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP4.getText().toString()) > 25)||(tehelP4.getSelectedItem().toString().equals("B"))||(debDiP4.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP4, "B");
+                    setText(filliP4,"No");
+                }else{
+                    setText(fcondP4, "G");
+                }
+                if (pruniP4.getSelectedItem().toString().equals("B")||pesDiP4.getSelectedItem().toString().equals("B")||weediP4.getSelectedItem().toString().equals("B")||harveP4.getSelectedItem().toString().equals("B")||shadeP4.getSelectedItem().toString().equals("B")){
+                    setText(gapP4,"B");
+                }else{
+                    setText(gapP4, "G");
+                }
+                if (soilCP4.getSelectedItem().toString().equals("B")||orgMaP4.getSelectedItem().toString().equals("B")||fertFP4.getSelectedItem().toString().equals("B")||fertAP4.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng4,"B");
+                }else{
+                    setText(soilFertMng4,"G");
+                }
+                partialSave();
+                break;
 
+            case R.id.calculateP5:
+                if (plantP5.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP5, "B");
+                } else {
+                    setText(geneticP5, "G");
+                }
+                if ((cteP5.getSelectedItem().toString().equals("2x2")||cteP5.getSelectedItem().toString().equals("2.5x2.5")||cteP5.getSelectedItem().toString().equals("3×4")||cteP5.getSelectedItem().toString().equals("3.5×4")||cteP5.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP5.getText().toString()) > 25)||(tehelP5.getSelectedItem().toString().equals("B"))||(debDiP5.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP5, "B");
+                    setText(filliP5,"No");
+                }else{
+                    setText(fcondP5, "G");
+                }
+                if (pruniP5.getSelectedItem().toString().equals("B")||pesDiP5.getSelectedItem().toString().equals("B")||weediP5.getSelectedItem().toString().equals("B")||harveP5.getSelectedItem().toString().equals("B")||shadeP5.getSelectedItem().toString().equals("B")){
+                    setText(gapP5,"B");
+                }else{
+                    setText(gapP5, "G");
+                }
+                if (soilCP5.getSelectedItem().toString().equals("B")||orgMaP5.getSelectedItem().toString().equals("B")||fertFP5.getSelectedItem().toString().equals("B")||fertAP5.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng5,"B");
+                }else{
+                    setText(soilFertMng5,"G");
+                }
+                partialSave();
+                break;
+        }
     }
 
     @Override
@@ -782,12 +1093,8 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
     private void refreshScreen() {
         if (sObject != null) {
-            if (sObject.getNumberOfPlots().equals("1")) {
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.GONE);
-                Lp3.setVisibility(View.GONE);
-                Lp4.setVisibility(View.GONE);
-                Lp5.setVisibility(View.GONE);
                 gpsP1.setVisibility(View.VISIBLE);
                 ageP1.setVisibility(View.VISIBLE);
                 areP1.setVisibility(View.VISIBLE);
@@ -812,37 +1119,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 filliP1.setVisibility(View.VISIBLE);
                 hireNP1.setVisibility(View.VISIBLE);
                 ph1.setVisibility(View.VISIBLE);
-
-            } else if (sObject.getNumberOfPlots().equals("2")) {
-                Lp1.setVisibility(View.VISIBLE);
+                geneticP1.setVisibility(View.VISIBLE);
+                gapP1.setVisibility(View.VISIBLE);
+                soilFertMng1.setVisibility(View.VISIBLE);
+                calc1.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.GONE);
-                Lp4.setVisibility(View.GONE);
-                Lp5.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                ph1.setVisibility(View.VISIBLE);
                 gpsP2.setVisibility(View.VISIBLE);
                 ageP2.setVisibility(View.VISIBLE);
                 areP2.setVisibility(View.VISIBLE);
@@ -867,61 +1150,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 filliP2.setVisibility(View.VISIBLE);
                 hireNP2.setVisibility(View.VISIBLE);
                 ph2.setVisibility(View.VISIBLE);
-
-            } else if (sObject.getNumberOfPlots().equals("3")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
+                geneticP2.setVisibility(View.VISIBLE);
+                gapP2.setVisibility(View.VISIBLE);
+                soilFertMng2.setVisibility(View.VISIBLE);
+                calc2.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.GONE);
-                Lp5.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                ph1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                ph2.setVisibility(View.VISIBLE);
                 gpsP3.setVisibility(View.VISIBLE);
                 ageP3.setVisibility(View.VISIBLE);
                 areP3.setVisibility(View.VISIBLE);
@@ -946,85 +1181,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 filliP3.setVisibility(View.VISIBLE);
                 hireNP3.setVisibility(View.VISIBLE);
                 ph3.setVisibility(View.VISIBLE);
-
-            } else if (sObject.getNumberOfPlots().equals("4")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
+                geneticP3.setVisibility(View.VISIBLE);
+                gapP3.setVisibility(View.VISIBLE);
+                soilFertMng3.setVisibility(View.VISIBLE);
+                calc3.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                ph1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                ph2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                ph3.setVisibility(View.VISIBLE);
                 gpsP4.setVisibility(View.VISIBLE);
                 ageP4.setVisibility(View.VISIBLE);
                 areP4.setVisibility(View.VISIBLE);
@@ -1049,109 +1212,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 filliP4.setVisibility(View.VISIBLE);
                 hireNP4.setVisibility(View.VISIBLE);
                 ph4.setVisibility(View.VISIBLE);
-
-            } else if (sObject.getNumberOfPlots().equals("5")) {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
+                geneticP4.setVisibility(View.VISIBLE);
+                gapP4.setVisibility(View.VISIBLE);
+                soilFertMng4.setVisibility(View.VISIBLE);
+                calc4.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 Lp5.setVisibility(View.VISIBLE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                ph1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                ph2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                ph3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                ph4.setVisibility(View.VISIBLE);
                 gpsP5.setVisibility(View.VISIBLE);
                 ageP5.setVisibility(View.VISIBLE);
                 areP5.setVisibility(View.VISIBLE);
@@ -1176,258 +1243,10 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 filliP5.setVisibility(View.VISIBLE);
                 hireNP5.setVisibility(View.VISIBLE);
                 ph5.setVisibility(View.VISIBLE);
-            } else if (sObject.getNumberOfPlots().equals("0")) {
-                Lp1.setVisibility(View.GONE);
-                Lp2.setVisibility(View.GONE);
-                Lp3.setVisibility(View.GONE);
-                Lp4.setVisibility(View.GONE);
-                Lp5.setVisibility(View.GONE);
-                gpsP1.setVisibility(View.GONE);
-                ageP1.setVisibility(View.GONE);
-                areP1.setVisibility(View.GONE);
-                cteP1.setVisibility(View.GONE);
-                estP1.setVisibility(View.GONE);
-                steP1.setVisibility(View.GONE);
-                plantP1.setVisibility(View.GONE);
-                fcondP1.setVisibility(View.GONE);
-                tehelP1.setVisibility(View.GONE);
-                debDiP1.setVisibility(View.GONE);
-                pruniP1.setVisibility(View.GONE);
-                pesDiP1.setVisibility(View.GONE);
-                weediP1.setVisibility(View.GONE);
-                harveP1.setVisibility(View.GONE);
-                shadeP1.setVisibility(View.GONE);
-                soilCP1.setVisibility(View.GONE);
-                orgMaP1.setVisibility(View.GONE);
-                fertFP1.setVisibility(View.GONE);
-                fertAP1.setVisibility(View.GONE);
-                limeNP1.setVisibility(View.GONE);
-                drainP1.setVisibility(View.GONE);
-                filliP1.setVisibility(View.GONE);
-                hireNP1.setVisibility(View.GONE);
-                ph1.setVisibility(View.GONE);
-                gpsP2.setVisibility(View.GONE);
-                ageP2.setVisibility(View.GONE);
-                areP2.setVisibility(View.GONE);
-                cteP2.setVisibility(View.GONE);
-                estP2.setVisibility(View.GONE);
-                steP2.setVisibility(View.GONE);
-                plantP2.setVisibility(View.GONE);
-                fcondP2.setVisibility(View.GONE);
-                tehelP2.setVisibility(View.GONE);
-                debDiP2.setVisibility(View.GONE);
-                pruniP2.setVisibility(View.GONE);
-                pesDiP2.setVisibility(View.GONE);
-                weediP2.setVisibility(View.GONE);
-                harveP2.setVisibility(View.GONE);
-                shadeP2.setVisibility(View.GONE);
-                soilCP2.setVisibility(View.GONE);
-                orgMaP2.setVisibility(View.GONE);
-                fertFP2.setVisibility(View.GONE);
-                fertAP2.setVisibility(View.GONE);
-                limeNP2.setVisibility(View.GONE);
-                drainP2.setVisibility(View.GONE);
-                filliP2.setVisibility(View.GONE);
-                hireNP2.setVisibility(View.GONE);
-                ph2.setVisibility(View.GONE);
-                gpsP3.setVisibility(View.GONE);
-                ageP3.setVisibility(View.GONE);
-                areP3.setVisibility(View.GONE);
-                cteP3.setVisibility(View.GONE);
-                estP3.setVisibility(View.GONE);
-                steP3.setVisibility(View.GONE);
-                plantP3.setVisibility(View.GONE);
-                fcondP3.setVisibility(View.GONE);
-                tehelP3.setVisibility(View.GONE);
-                debDiP3.setVisibility(View.GONE);
-                pruniP3.setVisibility(View.GONE);
-                pesDiP3.setVisibility(View.GONE);
-                weediP3.setVisibility(View.GONE);
-                harveP3.setVisibility(View.GONE);
-                shadeP3.setVisibility(View.GONE);
-                soilCP3.setVisibility(View.GONE);
-                orgMaP3.setVisibility(View.GONE);
-                fertFP3.setVisibility(View.GONE);
-                fertAP3.setVisibility(View.GONE);
-                limeNP3.setVisibility(View.GONE);
-                drainP3.setVisibility(View.GONE);
-                filliP3.setVisibility(View.GONE);
-                hireNP3.setVisibility(View.GONE);
-                ph3.setVisibility(View.GONE);
-                gpsP4.setVisibility(View.GONE);
-                ageP4.setVisibility(View.GONE);
-                areP4.setVisibility(View.GONE);
-                cteP4.setVisibility(View.GONE);
-                estP4.setVisibility(View.GONE);
-                steP4.setVisibility(View.GONE);
-                plantP4.setVisibility(View.GONE);
-                fcondP4.setVisibility(View.GONE);
-                tehelP4.setVisibility(View.GONE);
-                debDiP4.setVisibility(View.GONE);
-                pruniP4.setVisibility(View.GONE);
-                pesDiP4.setVisibility(View.GONE);
-                weediP4.setVisibility(View.GONE);
-                harveP4.setVisibility(View.GONE);
-                shadeP4.setVisibility(View.GONE);
-                soilCP4.setVisibility(View.GONE);
-                orgMaP4.setVisibility(View.GONE);
-                fertFP4.setVisibility(View.GONE);
-                fertAP4.setVisibility(View.GONE);
-                limeNP4.setVisibility(View.GONE);
-                drainP4.setVisibility(View.GONE);
-                filliP4.setVisibility(View.GONE);
-                hireNP4.setVisibility(View.GONE);
-                ph4.setVisibility(View.GONE);
-                gpsP5.setVisibility(View.GONE);
-                ageP5.setVisibility(View.GONE);
-                areP5.setVisibility(View.GONE);
-                cteP5.setVisibility(View.GONE);
-                estP5.setVisibility(View.GONE);
-                steP5.setVisibility(View.GONE);
-                plantP5.setVisibility(View.GONE);
-                fcondP5.setVisibility(View.GONE);
-                tehelP5.setVisibility(View.GONE);
-                debDiP5.setVisibility(View.GONE);
-                pruniP5.setVisibility(View.GONE);
-                pesDiP5.setVisibility(View.GONE);
-                weediP5.setVisibility(View.GONE);
-                harveP5.setVisibility(View.GONE);
-                shadeP5.setVisibility(View.GONE);
-                soilCP5.setVisibility(View.GONE);
-                orgMaP5.setVisibility(View.GONE);
-                fertFP5.setVisibility(View.GONE);
-                fertAP5.setVisibility(View.GONE);
-                limeNP5.setVisibility(View.GONE);
-                drainP5.setVisibility(View.GONE);
-                filliP5.setVisibility(View.GONE);
-                hireNP5.setVisibility(View.GONE);
-                ph5.setVisibility(View.GONE);
-            } else {
-                Lp1.setVisibility(View.VISIBLE);
-                Lp2.setVisibility(View.VISIBLE);
-                Lp3.setVisibility(View.VISIBLE);
-                Lp4.setVisibility(View.VISIBLE);
-                Lp5.setVisibility(View.VISIBLE);
-                gpsP1.setVisibility(View.VISIBLE);
-                ageP1.setVisibility(View.VISIBLE);
-                areP1.setVisibility(View.VISIBLE);
-                cteP1.setVisibility(View.VISIBLE);
-                estP1.setVisibility(View.VISIBLE);
-                steP1.setVisibility(View.VISIBLE);
-                plantP1.setVisibility(View.VISIBLE);
-                fcondP1.setVisibility(View.VISIBLE);
-                tehelP1.setVisibility(View.VISIBLE);
-                debDiP1.setVisibility(View.VISIBLE);
-                pruniP1.setVisibility(View.VISIBLE);
-                pesDiP1.setVisibility(View.VISIBLE);
-                weediP1.setVisibility(View.VISIBLE);
-                harveP1.setVisibility(View.VISIBLE);
-                shadeP1.setVisibility(View.VISIBLE);
-                soilCP1.setVisibility(View.VISIBLE);
-                orgMaP1.setVisibility(View.VISIBLE);
-                fertFP1.setVisibility(View.VISIBLE);
-                fertAP1.setVisibility(View.VISIBLE);
-                limeNP1.setVisibility(View.VISIBLE);
-                drainP1.setVisibility(View.VISIBLE);
-                filliP1.setVisibility(View.VISIBLE);
-                hireNP1.setVisibility(View.VISIBLE);
-                ph1.setVisibility(View.VISIBLE);
-                gpsP2.setVisibility(View.VISIBLE);
-                ageP2.setVisibility(View.VISIBLE);
-                areP2.setVisibility(View.VISIBLE);
-                cteP2.setVisibility(View.VISIBLE);
-                estP2.setVisibility(View.VISIBLE);
-                steP2.setVisibility(View.VISIBLE);
-                plantP2.setVisibility(View.VISIBLE);
-                fcondP2.setVisibility(View.VISIBLE);
-                tehelP2.setVisibility(View.VISIBLE);
-                debDiP2.setVisibility(View.VISIBLE);
-                pruniP2.setVisibility(View.VISIBLE);
-                pesDiP2.setVisibility(View.VISIBLE);
-                weediP2.setVisibility(View.VISIBLE);
-                harveP2.setVisibility(View.VISIBLE);
-                shadeP2.setVisibility(View.VISIBLE);
-                soilCP2.setVisibility(View.VISIBLE);
-                orgMaP2.setVisibility(View.VISIBLE);
-                fertFP2.setVisibility(View.VISIBLE);
-                fertAP2.setVisibility(View.VISIBLE);
-                limeNP2.setVisibility(View.VISIBLE);
-                drainP2.setVisibility(View.VISIBLE);
-                filliP2.setVisibility(View.VISIBLE);
-                hireNP2.setVisibility(View.VISIBLE);
-                ph2.setVisibility(View.VISIBLE);
-                gpsP3.setVisibility(View.VISIBLE);
-                ageP3.setVisibility(View.VISIBLE);
-                areP3.setVisibility(View.VISIBLE);
-                cteP3.setVisibility(View.VISIBLE);
-                estP3.setVisibility(View.VISIBLE);
-                steP3.setVisibility(View.VISIBLE);
-                plantP3.setVisibility(View.VISIBLE);
-                fcondP3.setVisibility(View.VISIBLE);
-                tehelP3.setVisibility(View.VISIBLE);
-                debDiP3.setVisibility(View.VISIBLE);
-                pruniP3.setVisibility(View.VISIBLE);
-                pesDiP3.setVisibility(View.VISIBLE);
-                weediP3.setVisibility(View.VISIBLE);
-                harveP3.setVisibility(View.VISIBLE);
-                shadeP3.setVisibility(View.VISIBLE);
-                soilCP3.setVisibility(View.VISIBLE);
-                orgMaP3.setVisibility(View.VISIBLE);
-                fertFP3.setVisibility(View.VISIBLE);
-                fertAP3.setVisibility(View.VISIBLE);
-                limeNP3.setVisibility(View.VISIBLE);
-                drainP3.setVisibility(View.VISIBLE);
-                filliP3.setVisibility(View.VISIBLE);
-                hireNP3.setVisibility(View.VISIBLE);
-                ph3.setVisibility(View.VISIBLE);
-                gpsP4.setVisibility(View.VISIBLE);
-                ageP4.setVisibility(View.VISIBLE);
-                areP4.setVisibility(View.VISIBLE);
-                cteP4.setVisibility(View.VISIBLE);
-                estP4.setVisibility(View.VISIBLE);
-                steP4.setVisibility(View.VISIBLE);
-                plantP4.setVisibility(View.VISIBLE);
-                fcondP4.setVisibility(View.VISIBLE);
-                tehelP4.setVisibility(View.VISIBLE);
-                debDiP4.setVisibility(View.VISIBLE);
-                pruniP4.setVisibility(View.VISIBLE);
-                pesDiP4.setVisibility(View.VISIBLE);
-                weediP4.setVisibility(View.VISIBLE);
-                harveP4.setVisibility(View.VISIBLE);
-                shadeP4.setVisibility(View.VISIBLE);
-                soilCP4.setVisibility(View.VISIBLE);
-                orgMaP4.setVisibility(View.VISIBLE);
-                fertFP4.setVisibility(View.VISIBLE);
-                fertAP4.setVisibility(View.VISIBLE);
-                limeNP4.setVisibility(View.VISIBLE);
-                drainP4.setVisibility(View.VISIBLE);
-                filliP4.setVisibility(View.VISIBLE);
-                hireNP4.setVisibility(View.VISIBLE);
-                ph4.setVisibility(View.VISIBLE);
-                gpsP5.setVisibility(View.VISIBLE);
-                ageP5.setVisibility(View.VISIBLE);
-                areP5.setVisibility(View.VISIBLE);
-                cteP5.setVisibility(View.VISIBLE);
-                estP5.setVisibility(View.VISIBLE);
-                steP5.setVisibility(View.VISIBLE);
-                plantP5.setVisibility(View.VISIBLE);
-                fcondP5.setVisibility(View.VISIBLE);
-                tehelP5.setVisibility(View.VISIBLE);
-                debDiP5.setVisibility(View.VISIBLE);
-                pruniP5.setVisibility(View.VISIBLE);
-                pesDiP5.setVisibility(View.VISIBLE);
-                weediP5.setVisibility(View.VISIBLE);
-                harveP5.setVisibility(View.VISIBLE);
-                shadeP5.setVisibility(View.VISIBLE);
-                soilCP5.setVisibility(View.VISIBLE);
-                orgMaP5.setVisibility(View.VISIBLE);
-                fertFP5.setVisibility(View.VISIBLE);
-                fertAP5.setVisibility(View.VISIBLE);
-                limeNP5.setVisibility(View.VISIBLE);
-                drainP5.setVisibility(View.VISIBLE);
-                filliP5.setVisibility(View.VISIBLE);
-                hireNP5.setVisibility(View.VISIBLE);
-                ph5.setVisibility(View.VISIBLE);
+                geneticP5.setVisibility(View.VISIBLE);
+                gapP5.setVisibility(View.VISIBLE);
+                soilFertMng5.setVisibility(View.VISIBLE);
+                calc5.setVisibility(View.VISIBLE);
             }
             //set field
             if (sObject.getPlot1Area().isEmpty()){
@@ -1571,8 +1390,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 setText((EditText) findViewById(R.id.farmConditionP1_field),
                         sObject.getFarmCondition1());
             }
-
-
 
             //set field
             if (sObject.getTreeHealth1().contentEquals("G")) {
@@ -3760,6 +3577,114 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 setText((EditText) findViewById(R.id.ph5_field),
                         sObject.getPH5());
             }
+
+            //set field genetics
+            if (sObject.getGENETIC1().isEmpty()){
+                setText((EditText) findViewById(R.id.geneticP1_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.geneticP1_field),
+                        sObject.getGENETIC1());
+            }
+
+            if (sObject.getGENETIC2().isEmpty()){
+                setText((EditText) findViewById(R.id.geneticP2_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.geneticP2_field),
+                        sObject.getGENETIC2());
+            }
+
+            if (sObject.getGENETIC3().isEmpty()){
+                setText((EditText) findViewById(R.id.geneticP3_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.geneticP3_field),
+                        sObject.getGENETIC3());
+            }
+
+            if (sObject.getGENETIC4().isEmpty()){
+                setText((EditText) findViewById(R.id.geneticP4_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.geneticP4_field),
+                        sObject.getGENETIC4());
+            }
+
+            if (sObject.getGENETIC5().isEmpty()){
+                setText((EditText) findViewById(R.id.geneticP5_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.geneticP5_field),
+                        sObject.getGENETIC5());
+            }
+
+            //set field gaps
+            if (sObject.getGAP1().isEmpty()){
+                setText((EditText) findViewById(R.id.gapP1_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.gapP1_field),
+                        sObject.getGAP1());
+            }
+
+            if (sObject.getGAP2().isEmpty()){
+                setText((EditText) findViewById(R.id.gapP2_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.gapP2_field),
+                        sObject.getGAP2());
+            }
+
+            if (sObject.getGAP3().isEmpty()){
+                setText((EditText) findViewById(R.id.gapP3_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.gapP3_field),
+                        sObject.getGAP3());
+            }
+
+            if (sObject.getGAP4().isEmpty()){
+                setText((EditText) findViewById(R.id.gapP4_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.gapP4_field),
+                        sObject.getGAP4());
+            }
+
+            if (sObject.getGAP5().isEmpty()){
+                setText((EditText) findViewById(R.id.gapP5_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.gapP5_field),
+                        sObject.getGAP5());
+            }
+
+            //set field soil fertility mng
+            if (sObject.getSOILMNG1().isEmpty()){
+                setText((EditText) findViewById(R.id.soilFertMng1_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.soilFertMng1_field),
+                        sObject.getSOILMNG1());
+            }
+
+            if (sObject.getSOILMNG2().isEmpty()){
+                setText((EditText) findViewById(R.id.soilFertMng2_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.soilFertMng2_field),
+                        sObject.getSOILMNG2());
+            }
+
+            if (sObject.getSOILMNG3().isEmpty()){
+                setText((EditText) findViewById(R.id.soilFertMng3_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.soilFertMng3_field),
+                        sObject.getSOILMNG3());
+            }
+
+            if (sObject.getSOILMNG4().isEmpty()){
+                setText((EditText) findViewById(R.id.soilFertMng4_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.soilFertMng4_field),
+                        sObject.getSOILMNG4());
+            }
+
+            if (sObject.getSOILMNG5().isEmpty()){
+                setText((EditText) findViewById(R.id.soilFertMng5_field),"N/A");
+            }else {
+                setText((EditText) findViewById(R.id.soilFertMng5_field),
+                        sObject.getSOILMNG5());
+            }
         }
     }
 
@@ -3890,6 +3815,21 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String ph3 = ((EditText) findViewById(R.id.ph3_field)).getText().toString();
         final String ph4 = ((EditText) findViewById(R.id.ph4_field)).getText().toString();
         final String ph5 = ((EditText) findViewById(R.id.ph5_field)).getText().toString();
+        final String genetic1 = ((EditText) findViewById(R.id.geneticP1_field)).getText().toString();
+        final String genetic2 = ((EditText) findViewById(R.id.geneticP2_field)).getText().toString();
+        final String genetic3 = ((EditText) findViewById(R.id.geneticP3_field)).getText().toString();
+        final String genetic4 = ((EditText) findViewById(R.id.geneticP4_field)).getText().toString();
+        final String genetic5 = ((EditText) findViewById(R.id.geneticP5_field)).getText().toString();
+        final String gap1 = ((EditText) findViewById(R.id.gapP1_field)).getText().toString();
+        final String gap2 = ((EditText) findViewById(R.id.gapP2_field)).getText().toString();
+        final String gap3 = ((EditText) findViewById(R.id.gapP3_field)).getText().toString();
+        final String gap4 = ((EditText) findViewById(R.id.gapP4_field)).getText().toString();
+        final String gap5 = ((EditText) findViewById(R.id.gapP5_field)).getText().toString();
+        final String soilft1 = ((EditText) findViewById(R.id.soilFertMng1_field)).getText().toString();
+        final String soilft2 = ((EditText) findViewById(R.id.soilFertMng2_field)).getText().toString();
+        final String soilft3 = ((EditText) findViewById(R.id.soilFertMng3_field)).getText().toString();
+        final String soilft4 = ((EditText) findViewById(R.id.soilFertMng4_field)).getText().toString();
+        final String soilft5 = ((EditText) findViewById(R.id.soilFertMng5_field)).getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -4026,6 +3966,21 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PH3, ph3);
             contact.put(ContactObject.PH4, ph4);
             contact.put(ContactObject.PH5, ph5);
+            contact.put(ContactObject.GENETIC1,genetic1);
+            contact.put(ContactObject.GENETIC2,genetic2);
+            contact.put(ContactObject.GENETIC3,genetic3);
+            contact.put(ContactObject.GENETIC4,genetic4);
+            contact.put(ContactObject.GENETIC5,genetic5);
+            contact.put(ContactObject.GAP1,gap1);
+            contact.put(ContactObject.GAP2,gap2);
+            contact.put(ContactObject.GAP3,gap3);
+            contact.put(ContactObject.GAP4,gap4);
+            contact.put(ContactObject.GAP5,gap5);
+            contact.put(ContactObject.SOILMNG1,soilft1);
+            contact.put(ContactObject.SOILMNG2,soilft2);
+            contact.put(ContactObject.SOILMNG3,soilft3);
+            contact.put(ContactObject.SOILMNG4,soilft4);
+            contact.put(ContactObject.SOILMNG5,soilft5);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -4037,6 +3992,308 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
             Toast.makeText(this, "Save successful!", Toast.LENGTH_LONG).show();
             finish();
+        } catch (JSONException e) {
+            Log.e(TAG, "JSONException occurred while parsing", e);
+        }
+    }
+
+    private void partialSave() {
+        final String gpsp1 = ((EditText) findViewById(R.id.gpsp1_field)).getText().toString();
+        final String plotAgep1 = ((EditText) findViewById(R.id.plotAgep1_field)).getText().toString();
+        final String plotArea1 = ((EditText) findViewById(R.id.plotArea1_field)).getText().toString();
+        final String cocoaTreesP1 = ((Spinner) findViewById(R.id.cocoaTreesP1_field)).getSelectedItem().toString();
+        final String estimatedP1 = ((EditText) findViewById(R.id.estimatedP1_field)).getText().toString();
+        final String shadeTreesP1 = ((EditText) findViewById(R.id.shadeTreesP1_field)).getText().toString();
+        final String plantingP1 = ((Spinner) findViewById(R.id.plantingP1_field)).getSelectedItem().toString();
+        final String farmConditionP1 = ((EditText) findViewById(R.id.farmConditionP1_field)).getText().toString();
+        final String treeHealthP1 = ((Spinner) findViewById(R.id.treeHealthP1_field)).getSelectedItem().toString();
+        final String debilitationP1 = ((Spinner) findViewById(R.id.debilitationP1_field)).getSelectedItem().toString();
+        final String pruningP1 = ((Spinner) findViewById(R.id.pruningP1_field)).getSelectedItem().toString();
+        final String pestDiseaseP1 = ((Spinner) findViewById(R.id.pestDiseaseP1_field)).getSelectedItem().toString();
+        final String weedingP1 = ((Spinner) findViewById(R.id.weedingP1_field)).getSelectedItem().toString();
+        final String harvestingP1 = ((Spinner) findViewById(R.id.harvestingP1_field)).getSelectedItem().toString();
+        final String shadeManagementP1 = ((Spinner) findViewById(R.id.shadeManagementP1_field)).getSelectedItem().toString();
+        final String soilConditionP1 = ((Spinner) findViewById(R.id.soilConditionP1_field)).getSelectedItem().toString();
+        final String organicMatterP1 = ((Spinner) findViewById(R.id.organicMatterP1_field)).getSelectedItem().toString();
+        final String fertFormP1 = ((Spinner) findViewById(R.id.fartFormP1_field)).getSelectedItem().toString();
+        final String fertApplicationP1 = ((Spinner) findViewById(R.id.fartApplicationP1_field)).getSelectedItem().toString();
+        final String limeP1 = ((EditText) findViewById(R.id.limeP1_field)).getText().toString();
+        final String drainageP1 = ((Spinner) findViewById(R.id.drainageP1_field)).getSelectedItem().toString();
+        final String fillingP1 = ((EditText) findViewById(R.id.fillingP1_field)).getText().toString();
+        final String hireP1 = ((Spinner) findViewById(R.id.hireP1_field)).getSelectedItem().toString();
+        final String gpsp2 = ((EditText) findViewById(R.id.gpsp2_field)).getText().toString();
+        final String plotAgep2 = ((EditText) findViewById(R.id.plotAgep2_field)).getText().toString();
+        final String plotArea2 = ((EditText) findViewById(R.id.plotArea2_field)).getText().toString();
+        final String cocoaTreesP2 = ((Spinner) findViewById(R.id.cocoaTreesP2_field)).getSelectedItem().toString();
+        final String estimatedP2 = ((EditText) findViewById(R.id.estimatedP2_field)).getText().toString();
+        final String shadeTreesP2 = ((EditText) findViewById(R.id.shadeTreesP2_field)).getText().toString();
+        final String plantingP2 = ((Spinner) findViewById(R.id.plantingP2_field)).getSelectedItem().toString();
+        final String farmConditionP2 = ((EditText) findViewById(R.id.farmConditionP2_field)).getText().toString();
+        final String treeHealthP2 = ((Spinner) findViewById(R.id.treeHealthP2_field)).getSelectedItem().toString();
+        final String debilitationP2 = ((Spinner) findViewById(R.id.debilitationP2_field)).getSelectedItem().toString();
+        final String pruningP2 = ((Spinner) findViewById(R.id.pruningP2_field)).getSelectedItem().toString();
+        final String pestDiseaseP2 = ((Spinner) findViewById(R.id.pestDiseaseP2_field)).getSelectedItem().toString();
+        final String weedingP2 = ((Spinner) findViewById(R.id.weedingP2_field)).getSelectedItem().toString();
+        final String harvestingP2 = ((Spinner) findViewById(R.id.harvestingP2_field)).getSelectedItem().toString();
+        final String shadeManagementP2 = ((Spinner) findViewById(R.id.shadeManagementP2_field)).getSelectedItem().toString();
+        final String soilConditionP2 = ((Spinner) findViewById(R.id.soilConditionP2_field)).getSelectedItem().toString();
+        final String organicMatterP2 = ((Spinner) findViewById(R.id.organicMatterP2_field)).getSelectedItem().toString();
+        final String fertFormP2 = ((Spinner) findViewById(R.id.fartFormP2_field)).getSelectedItem().toString();
+        final String fertApplicationP2 = ((Spinner) findViewById(R.id.fartApplicationP2_field)).getSelectedItem().toString();
+        final String limeP2 = ((EditText) findViewById(R.id.limeP2_field)).getText().toString();
+        final String drainageP2 = ((Spinner) findViewById(R.id.drainageP2_field)).getSelectedItem().toString();
+        final String fillingP2 = ((EditText) findViewById(R.id.fillingP2_field)).getText().toString();
+        final String hireP2 = ((Spinner) findViewById(R.id.hireP2_field)).getSelectedItem().toString();
+        final String gpsp3 = ((EditText) findViewById(R.id.gpsp3_field)).getText().toString();
+        final String plotAgep3 = ((EditText) findViewById(R.id.plotAgep3_field)).getText().toString();
+        final String plotArea3 = ((EditText) findViewById(R.id.plotArea3_field)).getText().toString();
+        final String cocoaTreesP3 = ((Spinner) findViewById(R.id.cocoaTreesP3_field)).getSelectedItem().toString();
+        final String estimatedP3 = ((EditText) findViewById(R.id.estimatedP3_field)).getText().toString();
+        final String shadeTreesP3 = ((EditText) findViewById(R.id.shadeTreesP3_field)).getText().toString();
+        final String plantingP3 = ((Spinner) findViewById(R.id.plantingP3_field)).getSelectedItem().toString();
+        final String farmConditionP3 = ((EditText) findViewById(R.id.farmConditionP3_field)).getText().toString();
+        final String treeHealthP3 = ((Spinner) findViewById(R.id.treeHealthP3_field)).getSelectedItem().toString();
+        final String debilitationP3 = ((Spinner) findViewById(R.id.debilitationP3_field)).getSelectedItem().toString();
+        final String pruningP3 = ((Spinner) findViewById(R.id.pruningP3_field)).getSelectedItem().toString();
+        final String pestDiseaseP3 = ((Spinner) findViewById(R.id.pestDiseaseP3_field)).getSelectedItem().toString();
+        final String weedingP3 = ((Spinner) findViewById(R.id.weedingP3_field)).getSelectedItem().toString();
+        final String harvestingP3 = ((Spinner) findViewById(R.id.harvestingP3_field)).getSelectedItem().toString();
+        final String shadeManagementP3 = ((Spinner) findViewById(R.id.shadeManagementP3_field)).getSelectedItem().toString();
+        final String soilConditionP3 = ((Spinner) findViewById(R.id.soilConditionP3_field)).getSelectedItem().toString();
+        final String organicMatterP3 = ((Spinner) findViewById(R.id.organicMatterP3_field)).getSelectedItem().toString();
+        final String fertFormP3 = ((Spinner) findViewById(R.id.fartFormP3_field)).getSelectedItem().toString();
+        final String fertApplicationP3 = ((Spinner) findViewById(R.id.fartApplicationP3_field)).getSelectedItem().toString();
+        final String limeP3 = ((EditText) findViewById(R.id.limeP3_field)).getText().toString();
+        final String drainageP3 = ((Spinner) findViewById(R.id.drainageP3_field)).getSelectedItem().toString();
+        final String fillingP3 = ((EditText) findViewById(R.id.fillingP3_field)).getText().toString();
+        final String hireP3 = ((Spinner) findViewById(R.id.hireP3_field)).getSelectedItem().toString();
+        final String gpsp4 = ((EditText) findViewById(R.id.gpsp4_field)).getText().toString();
+        final String plotAgep4 = ((EditText) findViewById(R.id.plotAgep4_field)).getText().toString();
+        final String plotArea4 = ((EditText) findViewById(R.id.plotArea4_field)).getText().toString();
+        final String cocoaTreesP4 = ((Spinner) findViewById(R.id.cocoaTreesP4_field)).getSelectedItem().toString();
+        final String estimatedP4 = ((EditText) findViewById(R.id.estimatedP4_field)).getText().toString();
+        final String shadeTreesP4 = ((EditText) findViewById(R.id.shadeTreesP4_field)).getText().toString();
+        final String plantingP4 = ((Spinner) findViewById(R.id.plantingP4_field)).getSelectedItem().toString();
+        final String farmConditionP4 = ((EditText) findViewById(R.id.farmConditionP4_field)).getText().toString();
+        final String treeHealthP4 = ((Spinner) findViewById(R.id.treeHealthP4_field)).getSelectedItem().toString();
+        final String debilitationP4 = ((Spinner) findViewById(R.id.debilitationP4_field)).getSelectedItem().toString();
+        final String pruningP4 = ((Spinner) findViewById(R.id.pruningP4_field)).getSelectedItem().toString();
+        final String pestDiseaseP4 = ((Spinner) findViewById(R.id.pestDiseaseP4_field)).getSelectedItem().toString();
+        final String weedingP4 = ((Spinner) findViewById(R.id.weedingP4_field)).getSelectedItem().toString();
+        final String harvestingP4 = ((Spinner) findViewById(R.id.harvestingP4_field)).getSelectedItem().toString();
+        final String shadeManagementP4 = ((Spinner) findViewById(R.id.shadeManagementP4_field)).getSelectedItem().toString();
+        final String soilConditionP4 = ((Spinner) findViewById(R.id.soilConditionP4_field)).getSelectedItem().toString();
+        final String organicMatterP4 = ((Spinner) findViewById(R.id.organicMatterP4_field)).getSelectedItem().toString();
+        final String fertFormP4 = ((Spinner) findViewById(R.id.fartFormP4_field)).getSelectedItem().toString();
+        final String fertApplicationP4 = ((Spinner) findViewById(R.id.fartApplicationP4_field)).getSelectedItem().toString();
+        final String limeP4 = ((EditText) findViewById(R.id.limeP4_field)).getText().toString();
+        final String drainageP4 = ((Spinner) findViewById(R.id.drainageP4_field)).getSelectedItem().toString();
+        final String fillingP4 = ((EditText) findViewById(R.id.fillingP4_field)).getText().toString();
+        final String hireP4 = ((Spinner) findViewById(R.id.hireP4_field)).getSelectedItem().toString();
+        final String gpsp5 = ((EditText) findViewById(R.id.gpsp5_field)).getText().toString();
+        final String plotAgep5 = ((EditText) findViewById(R.id.plotAgep5_field)).getText().toString();
+        final String plotArea5 = ((EditText) findViewById(R.id.plotArea5_field)).getText().toString();
+        final String cocoaTreesP5 = ((Spinner) findViewById(R.id.cocoaTreesP5_field)).getSelectedItem().toString();
+        final String estimatedP5 = ((EditText) findViewById(R.id.estimatedP5_field)).getText().toString();
+        final String shadeTreesP5 = ((EditText) findViewById(R.id.shadeTreesP5_field)).getText().toString();
+        final String plantingP5 = ((Spinner) findViewById(R.id.plantingP5_field)).getSelectedItem().toString();
+        final String farmConditionP5 = ((EditText) findViewById(R.id.farmConditionP5_field)).getText().toString();
+        final String treeHealthP5 = ((Spinner) findViewById(R.id.treeHealthP5_field)).getSelectedItem().toString();
+        final String debilitationP5 = ((Spinner) findViewById(R.id.debilitationP5_field)).getSelectedItem().toString();
+        final String pruningP5 = ((Spinner) findViewById(R.id.pruningP5_field)).getSelectedItem().toString();
+        final String pestDiseaseP5 = ((Spinner) findViewById(R.id.pestDiseaseP5_field)).getSelectedItem().toString();
+        final String weedingP5 = ((Spinner) findViewById(R.id.weedingP5_field)).getSelectedItem().toString();
+        final String harvestingP5 = ((Spinner) findViewById(R.id.harvestingP5_field)).getSelectedItem().toString();
+        final String shadeManagementP5 = ((Spinner) findViewById(R.id.shadeManagementP5_field)).getSelectedItem().toString();
+        final String soilConditionP5 = ((Spinner) findViewById(R.id.soilConditionP5_field)).getSelectedItem().toString();
+        final String organicMatterP5 = ((Spinner) findViewById(R.id.organicMatterP5_field)).getSelectedItem().toString();
+        final String fertFormP5 = ((Spinner) findViewById(R.id.fartFormP5_field)).getSelectedItem().toString();
+        final String fertApplicationP5 = ((Spinner) findViewById(R.id.fartApplicationP5_field)).getSelectedItem().toString();
+        final String limeP5 = ((EditText) findViewById(R.id.limeP5_field)).getText().toString();
+        final String drainageP5 = ((Spinner) findViewById(R.id.drainageP5_field)).getSelectedItem().toString();
+        final String fillingP5 = ((EditText) findViewById(R.id.fillingP5_field)).getText().toString();
+        final String hireP5 = ((Spinner) findViewById(R.id.hireP5_field)).getSelectedItem().toString();
+        final String ph1 = ((EditText) findViewById(R.id.ph1_field)).getText().toString();
+        final String ph2 = ((EditText) findViewById(R.id.ph2_field)).getText().toString();
+        final String ph3 = ((EditText) findViewById(R.id.ph3_field)).getText().toString();
+        final String ph4 = ((EditText) findViewById(R.id.ph4_field)).getText().toString();
+        final String ph5 = ((EditText) findViewById(R.id.ph5_field)).getText().toString();
+        final String genetic1 = ((EditText) findViewById(R.id.geneticP1_field)).getText().toString();
+        final String genetic2 = ((EditText) findViewById(R.id.geneticP2_field)).getText().toString();
+        final String genetic3 = ((EditText) findViewById(R.id.geneticP3_field)).getText().toString();
+        final String genetic4 = ((EditText) findViewById(R.id.geneticP4_field)).getText().toString();
+        final String genetic5 = ((EditText) findViewById(R.id.geneticP5_field)).getText().toString();
+        final String gap1 = ((EditText) findViewById(R.id.gapP1_field)).getText().toString();
+        final String gap2 = ((EditText) findViewById(R.id.gapP2_field)).getText().toString();
+        final String gap3 = ((EditText) findViewById(R.id.gapP3_field)).getText().toString();
+        final String gap4 = ((EditText) findViewById(R.id.gapP4_field)).getText().toString();
+        final String gap5 = ((EditText) findViewById(R.id.gapP5_field)).getText().toString();
+        final String soilft1 = ((EditText) findViewById(R.id.soilFertMng1_field)).getText().toString();
+        final String soilft2 = ((EditText) findViewById(R.id.soilFertMng2_field)).getText().toString();
+        final String soilft3 = ((EditText) findViewById(R.id.soilFertMng3_field)).getText().toString();
+        final String soilft4 = ((EditText) findViewById(R.id.soilFertMng4_field)).getText().toString();
+        final String soilft5 = ((EditText) findViewById(R.id.soilFertMng5_field)).getText().toString();
+        final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
+        JSONObject contact;
+        try {
+            boolean isCreate = TextUtils.isEmpty(objectId);
+            if (!isCreate) {
+                contact = smartStore.retrieve(ContactListLoader.CONTACT_SOUP,
+                        smartStore.lookupSoupEntryId(ContactListLoader.CONTACT_SOUP,
+                                Constants.ID, objectId)).getJSONObject(0);
+            } else {
+                contact = new JSONObject();
+                contact.put(Constants.ID, "local_" + System.currentTimeMillis()
+                        + Constants.EMPTY_STRING);
+                final JSONObject attributes = new JSONObject();
+                attributes.put(Constants.TYPE.toLowerCase(), Constants.SUBMISSION);
+                contact.put(Constants.ATTRIBUTES, attributes);
+            }
+            contact.put(ContactObject.PLOT1GPS, gpsp1);
+            contact.put(ContactObject.PLOT1AGE, plotAgep1);
+            contact.put(ContactObject.PLOT1AREA, plotArea1);
+            contact.put(ContactObject.PLOT1COCOATREES, cocoaTreesP1);
+            contact.put(ContactObject.PLOT1YIELD, estimatedP1);
+            contact.put(ContactObject.PLOT1SHADETREES, shadeTreesP1);
+            contact.put(ContactObject.PLANTINGMATERIAL1, plantingP1);
+            contact.put(ContactObject.FARMCONDITION1, farmConditionP1);
+            contact.put(ContactObject.TREEHEALTH1, treeHealthP1);
+            contact.put(ContactObject.DEBILITATINGDISEASE1, debilitationP1);
+            contact.put(ContactObject.PRUNING1, pruningP1);
+            contact.put(ContactObject.PESTDISEASESANITATION1, pestDiseaseP1);
+            contact.put(ContactObject.WEEDING1, weedingP1);
+            contact.put(ContactObject.HARVESTING1, harvestingP1);
+            contact.put(ContactObject.SHADEMANAGEMENT1, shadeManagementP1);
+            contact.put(ContactObject.SOILCONDITION1, soilConditionP1);
+            contact.put(ContactObject.ORGANICMATTER1, organicMatterP1);
+            contact.put(ContactObject.FERTILIZERFORMULATION1, fertFormP1);
+            contact.put(ContactObject.FERTILIZERAPPLICATION1, fertApplicationP1);
+            contact.put(ContactObject.LIMENEED1, limeP1);
+            contact.put(ContactObject.DRAINAGENEED1, drainageP1);
+            contact.put(ContactObject.FILLINGOPTION1, fillingP1);
+            contact.put(ContactObject.HIRELABOR1, hireP1);
+            contact.put(ContactObject.PLOT2GPS, gpsp2);
+            contact.put(ContactObject.PLOT2AGE, plotAgep2);
+            contact.put(ContactObject.PLOT2AREA, plotArea2);
+            contact.put(ContactObject.PLOT2COCOATREES, cocoaTreesP2);
+            contact.put(ContactObject.PLOT2YIELD, estimatedP2);
+            contact.put(ContactObject.PLOT2SHADETREES, shadeTreesP2);
+            contact.put(ContactObject.PLANTINGMATERIAL2, plantingP2);
+            contact.put(ContactObject.FARMCONDITION2, farmConditionP2);
+            contact.put(ContactObject.TREEHEALTH2, treeHealthP2);
+            contact.put(ContactObject.DEBILITATINGDISEASE2, debilitationP2);
+            contact.put(ContactObject.PRUNING2, pruningP2);
+            contact.put(ContactObject.PESTDISEASESANITATION2, pestDiseaseP2);
+            contact.put(ContactObject.WEEDING2, weedingP2);
+            contact.put(ContactObject.HARVESTING2, harvestingP2);
+            contact.put(ContactObject.SHADEMANAGEMENT2, shadeManagementP2);
+            contact.put(ContactObject.SOILCONDITION2, soilConditionP2);
+            contact.put(ContactObject.ORGANICMATTER2, organicMatterP2);
+            contact.put(ContactObject.FERTILIZERFORMULATION2, fertFormP2);
+            contact.put(ContactObject.FERTILIZERAPPLICATION2, fertApplicationP2);
+            contact.put(ContactObject.LIMENEED2, limeP2);
+            contact.put(ContactObject.DRAINAGENEED2, drainageP2);
+            contact.put(ContactObject.FILLINGOPTION2, fillingP2);
+            contact.put(ContactObject.HIRELABOR2, hireP2);
+            contact.put(ContactObject.PLOT3GPS, gpsp3);
+            contact.put(ContactObject.PLOT3AGE, plotAgep3);
+            contact.put(ContactObject.PLOT3AREA, plotArea3);
+            contact.put(ContactObject.PLOT3COCOATREES, cocoaTreesP3);
+            contact.put(ContactObject.PLOT3YIELD, estimatedP3);
+            contact.put(ContactObject.PLOT3SHADETREES, shadeTreesP3);
+            contact.put(ContactObject.PLANTINGMATERIAL3, plantingP3);
+            contact.put(ContactObject.FARMCONDITION3, farmConditionP3);
+            contact.put(ContactObject.TREEHEALTH3, treeHealthP3);
+            contact.put(ContactObject.DEBILITATINGDISEASE3, debilitationP3);
+            contact.put(ContactObject.PRUNING3, pruningP3);
+            contact.put(ContactObject.PESTDISEASESANITATION3, pestDiseaseP3);
+            contact.put(ContactObject.WEEDING3, weedingP3);
+            contact.put(ContactObject.HARVESTING3, harvestingP3);
+            contact.put(ContactObject.SHADEMANAGEMENT3, shadeManagementP3);
+            contact.put(ContactObject.SOILCONDITION3, soilConditionP3);
+            contact.put(ContactObject.ORGANICMATTER3, organicMatterP3);
+            contact.put(ContactObject.FERTILIZERFORMULATION3, fertFormP3);
+            contact.put(ContactObject.FERTILIZERAPPLICATION3, fertApplicationP3);
+            contact.put(ContactObject.LIMENEED3, limeP3);
+            contact.put(ContactObject.DRAINAGENEED3, drainageP3);
+            contact.put(ContactObject.FILLINGOPTION3, fillingP3);
+            contact.put(ContactObject.HIRELABOR3, hireP3);
+            contact.put(ContactObject.PLOT4GPS, gpsp4);
+            contact.put(ContactObject.PLOT4AGE, plotAgep4);
+            contact.put(ContactObject.PLOT4AREA, plotArea4);
+            contact.put(ContactObject.PLOT4COCOATREES, cocoaTreesP4);
+            contact.put(ContactObject.PLOT4YIELD, estimatedP4);
+            contact.put(ContactObject.PLOT4SHADETREES, shadeTreesP4);
+            contact.put(ContactObject.PLANTINGMATERIAL4, plantingP4);
+            contact.put(ContactObject.FARMCONDITION4, farmConditionP4);
+            contact.put(ContactObject.TREEHEALTH4, treeHealthP4);
+            contact.put(ContactObject.DEBILITATINGDISEASE4, debilitationP4);
+            contact.put(ContactObject.PRUNING4, pruningP4);
+            contact.put(ContactObject.PESTDISEASESANITATION4, pestDiseaseP4);
+            contact.put(ContactObject.WEEDING4, weedingP4);
+            contact.put(ContactObject.HARVESTING4, harvestingP4);
+            contact.put(ContactObject.SHADEMANAGEMENT4, shadeManagementP4);
+            contact.put(ContactObject.SOILCONDITION4, soilConditionP4);
+            contact.put(ContactObject.ORGANICMATTER4, organicMatterP4);
+            contact.put(ContactObject.FERTILIZERFORMULATION4, fertFormP4);
+            contact.put(ContactObject.FERTILIZERAPPLICATION4, fertApplicationP4);
+            contact.put(ContactObject.LIMENEED4, limeP4);
+            contact.put(ContactObject.DRAINAGENEED4, drainageP4);
+            contact.put(ContactObject.FILLINGOPTION4, fillingP4);
+            contact.put(ContactObject.HIRELABOR4, hireP4);
+            contact.put(ContactObject.PLOT5GPS, gpsp5);
+            contact.put(ContactObject.PLOT5AGE, plotAgep5);
+            contact.put(ContactObject.PLOT5AREA, plotArea5);
+            contact.put(ContactObject.PLOT5COCOATREES, cocoaTreesP5);
+            contact.put(ContactObject.PLOT5YIELD, estimatedP5);
+            contact.put(ContactObject.PLOT5SHADETREES, shadeTreesP5);
+            contact.put(ContactObject.PLANTINGMATERIAL5, plantingP5);
+            contact.put(ContactObject.FARMCONDITION5, farmConditionP5);
+            contact.put(ContactObject.TREEHEALTH5, treeHealthP5);
+            contact.put(ContactObject.DEBILITATINGDISEASE5, debilitationP5);
+            contact.put(ContactObject.PRUNING5, pruningP5);
+            contact.put(ContactObject.PESTDISEASESANITATION5, pestDiseaseP5);
+            contact.put(ContactObject.WEEDING5, weedingP5);
+            contact.put(ContactObject.HARVESTING5, harvestingP5);
+            contact.put(ContactObject.SHADEMANAGEMENT5, shadeManagementP5);
+            contact.put(ContactObject.SOILCONDITION5, soilConditionP5);
+            contact.put(ContactObject.ORGANICMATTER5, organicMatterP5);
+            contact.put(ContactObject.FERTILIZERFORMULATION5, fertFormP5);
+            contact.put(ContactObject.FERTILIZERAPPLICATION5, fertApplicationP5);
+            contact.put(ContactObject.LIMENEED5, limeP5);
+            contact.put(ContactObject.DRAINAGENEED5, drainageP5);
+            contact.put(ContactObject.FILLINGOPTION5, fillingP5);
+            contact.put(ContactObject.HIRELABOR5, hireP5);
+            contact.put(ContactObject.PH1, ph1);
+            contact.put(ContactObject.PH2, ph2);
+            contact.put(ContactObject.PH3, ph3);
+            contact.put(ContactObject.PH4, ph4);
+            contact.put(ContactObject.PH5, ph5);
+            contact.put(ContactObject.GENETIC1,genetic1);
+            contact.put(ContactObject.GENETIC2,genetic2);
+            contact.put(ContactObject.GENETIC3,genetic3);
+            contact.put(ContactObject.GENETIC4,genetic4);
+            contact.put(ContactObject.GENETIC5,genetic5);
+            contact.put(ContactObject.GAP1,gap1);
+            contact.put(ContactObject.GAP2,gap2);
+            contact.put(ContactObject.GAP3,gap3);
+            contact.put(ContactObject.GAP4,gap4);
+            contact.put(ContactObject.GAP5,gap5);
+            contact.put(ContactObject.SOILMNG1,soilft1);
+            contact.put(ContactObject.SOILMNG2,soilft2);
+            contact.put(ContactObject.SOILMNG3,soilft3);
+            contact.put(ContactObject.SOILMNG4,soilft4);
+            contact.put(ContactObject.SOILMNG5,soilft5);
+            contact.put(SyncManager.LOCAL, true);
+            contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
+            contact.put(SyncManager.LOCALLY_CREATED, isCreate);
+            contact.put(SyncManager.LOCALLY_DELETED, false);
+            if (isCreate) {
+                smartStore.create(ContactListLoader.CONTACT_SOUP, contact);
+            } else {
+                smartStore.upsert(ContactListLoader.CONTACT_SOUP, contact);
+            }
+            Toast.makeText(this, "Partially Saved!", Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
             Log.e(TAG, "JSONException occurred while parsing", e);
         }

@@ -151,7 +151,7 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="graft">Graft</string><string name="childrenInSchool">Children between 5 and 17 years old enrolled in school:</string><string name="incomeOtherCrops">Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string><string name="year10">Year 10</string><string-array name="b_g">
+    </string-array><string name="graft">Graft</string><string name="childrenInSchool">Children between 5 and 17 years old enrolled in school:</string><string name="calcAO">Calculate</string><string name="incomeOtherCrops">Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string><string name="year10">Year 10</string><string-array name="b_g">
 		<item>B</item>
 		<item>G</item>
 	</string-array><string-array name="creditOften">
