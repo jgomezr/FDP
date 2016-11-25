@@ -124,11 +124,6 @@
 	<string name="soilFertMngLb">Soil Fertility Management:</string>
 	<string name="calcAO">Calculate</string>
 
-	<string name="agree">Agreed on recommendations:</string>
-	<string name="reasonNotAgree">Comments:</string>
-	<string name="treeDensity">Tree density:</string>
-    <string name="plotAge">Tree Age:</string>
-
 	<string name="plot1">Plot 1</string>
 	<string name="plot2">Plot 2</string>
 	<string name="plot3">Plot 3</string>
@@ -147,19 +142,25 @@
 	<string name="year5">Year 5</string>
 	<string name="year6">Year 6</string>
 	<string name="year7">Year 7</string>
-	<string name="year8">Year 8</string>
-	<string name="year9">Year 9</string>
-	<string name="year10">Year 10</string>
+
+	<string name="plotIncome">Plot Income:</string>
+	<string name="costInvest">Cost of Maintenance / Investment</string>
+	<string name="manDaysNeed">Labor needed in man days:</string>
+	<string name="costLabor">Cost of labor:</string>
+	<string name="plotPL">Plot P&amp;L:</string>
+
 	<string name="netPlotIncome">Net income from Cocoa:</string>
-	<string name="netFarming">Net income other farming Activities:</string>
+    <string name="netOtherCrops">Net income from Other Crops:</string>
+	<string name="netFarming">Total farming income:</string>
+    <string name="netOther">Net income from all other sources:</string>
+    <string name="totalIncome">Total income:</string>
+    <string name="totalExpenses">Total family expenses:</string>
 	<string name="netFamily">Net family income:</string>
-	<string name="netOther">Net income other sources:</string>
-	<string name="totalIncome">Total income:</string>
-	<string name="totalExpenses">Total family cost and expenses:</string>
-	<string name="foundsAvailable">Funds available to invest in FDP:</string>
 	<string name="foundsNeeded">Investment in FDP:</string>
 	<string name="profitOrLost">Profit or Loss</string>
-	<string name="gaps">Maintenance (GAPS)</string>
+    <string name="agree">Agreed on recommendations:</string>
+    <string name="reasonNotAgree">Comments:</string>
+    <string name="gaps">Maintenance (GAPS)</string>
 	<string name="graft">Graft</string>
 	<string name="replant">Replant</string>
 	<string name="extraSoil">Extra Soil Management</string>
