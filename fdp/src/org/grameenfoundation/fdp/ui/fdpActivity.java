@@ -957,20 +957,20 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     exslp1.setVisibility(View.VISIBLE);
                     gaplp1.setVisibility(View.VISIBLE);
                     if (sObject.getHireLabor1().equals("Yes")) {
-                        laborD11 = (int) (laborD11 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY1Total))));
-                        laborD12 = (int) (laborD12 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY2Total))));
-                        laborD13 = (int) (laborD13 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY3Total))));
-                        laborD14 = (int) (laborD14 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY4Total))));
-                        laborD15 = (int) (laborD15 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY5Total))));
-                        laborD16 = (int) (laborD16 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY6Total))));
-                        laborD17 = (int) (laborD17 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY7Total))));
-                        labor11 = (int) (labor11 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total))));
-                        labor12 = (int) (labor12 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total))));
-                        labor13 = (int) (labor13 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total))));
-                        labor14 = (int) (labor14 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total))));
-                        labor15 = (int) (labor15 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total))));
-                        labor16 = (int) (labor16 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total))));
-                        labor17 = (int) (labor17 + (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total))));
+                        laborD11 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY1Total)));
+                        laborD12 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY2Total)));
+                        laborD13 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY3Total)));
+                        laborD14 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY4Total)));
+                        laborD15 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY5Total)));
+                        laborD16 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY6Total)));
+                        laborD17 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilY7Total)));
+                        labor11 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total)));
+                        labor12 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total)));
+                        labor13 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total)));
+                        labor14 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total)));
+                        labor15 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
+                        labor16 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
+                        labor17 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
                     }
                     cost11 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
                     cost12 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
@@ -1166,6 +1166,228 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 p2.setVisibility(View.VISIBLE);
 
+                if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())>25)){
+                    //Replant
+                    replp2.setVisibility(View.VISIBLE);
+                    gaplp2.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG2().equals("B")){
+                        exslp2.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD22 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD23 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD24 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD25 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD26 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD27 = (int) ((plot2Area * (getResources().getInteger(R.integer.replantY7Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor21 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor22 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor23 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor24 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor25 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor26 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor27 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost21 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost22 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost23 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost24 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost25 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost26 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost27 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY1Total)));
+                            laborD22 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY2Total)));
+                            laborD23 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY3Total)));
+                            laborD24 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY4Total)));
+                            laborD25 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY5Total)));
+                            laborD26 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY6Total)));
+                            laborD27 = (int) (plot2Area * (getResources().getInteger(R.integer.replantY7Total)));
+                            labor21 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total)));
+                            labor22 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total)));
+                            labor23 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total)));
+                            labor24 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total)));
+                            labor25 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
+                            labor26 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
+                            labor27 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                        }
+                        cost21 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
+                        cost22 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
+                        cost23 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
+                        cost24 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)));
+                        cost25 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)));
+                        cost26 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)));
+                        cost27 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
+                    }
+
+                    income21 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                    income22 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
+                    income23 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
+                    income24 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
+                    income25 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
+                    income26 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
+                    income27 =(int) ((plot2Area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
+
+                } else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())<25))){
+                    //Graft
+                    grflp2.setVisibility(View.VISIBLE);
+                    gaplp2.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG2().equals("B")){
+                        exslp2.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD22 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD23 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD24 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD25 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD26 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD27 = (int) ((plot2Area * (getResources().getInteger(R.integer.graftY7Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor21 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor22 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor23 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor24 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor25 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor26 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor27 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost21 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost22 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost23 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost24 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY4Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost25 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost26 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost27 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY7Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else {
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY1Total)));
+                            laborD22 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY2Total)));
+                            laborD23 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY3Total)));
+                            laborD24 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY4Total)));
+                            laborD25 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY5Total)));
+                            laborD26 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY6Total)));
+                            laborD27 = (int) (plot2Area * (getResources().getInteger(R.integer.graftY7Total)));
+                            labor21 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY1Total)));
+                            labor22 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY2Total)));
+                            labor23 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY3Total)));
+                            labor24 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY4Total)));
+                            labor25 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
+                            labor26 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
+                            labor27 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                        }
+                        cost21 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
+                        cost22 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
+                        cost23 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
+                        cost24 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY4Total)));
+                        cost25 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Total)));
+                        cost26 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Total)));
+                        cost27 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
+                    }
+                    income21 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY1))*avgCost));
+                    income22 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY2))*avgCost));
+                    income23 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY3))*avgCost));
+                    income24 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY4))*avgCost));
+                    income25 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY5))*avgCost));
+                    income26 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY6))*avgCost));
+                    income27 =(int) ((plot2Area * (getResources().getInteger(R.integer.graftingY7))*avgCost));
+
+                }else if (sObject.getSOILMNG2().equals("B")){
+                    //Extra Soil Management
+                    exslp2.setVisibility(View.VISIBLE);
+                    gaplp2.setVisibility(View.VISIBLE);
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        laborD21 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY1Total)));
+                        laborD22 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY2Total)));
+                        laborD23 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY3Total)));
+                        laborD24 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY4Total)));
+                        laborD25 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY5Total)));
+                        laborD26 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY6Total)));
+                        laborD27 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilY7Total)));
+                        labor21 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total)));
+                        labor22 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total)));
+                        labor23 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total)));
+                        labor24 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total)));
+                        labor25 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
+                        labor26 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
+                        labor27 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
+                    }
+                    cost21 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
+                    cost22 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
+                    cost23 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY3Total)));
+                    cost24 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY4Total)));
+                    cost25 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Total)));
+                    cost26 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Total)));
+                    cost27 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY7Total)));
+                    income21 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY1))*avgCost));
+                    income22 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY2))*avgCost));
+                    income23 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY3))*avgCost));
+                    income24 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY4))*avgCost));
+                    income25 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));
+                    income26 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY6))*avgCost));
+                    income27 =(int) ((plot2Area * (getResources().getInteger(R.integer.extraSoilY7))*avgCost));
+                }else{
+                    //GAP
+                    gaplp2.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG2().equals("B")){
+                        exslp2.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD22 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD23 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD24 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD25 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD26 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD27 = (int) ((plot2Area * (getResources().getInteger(R.integer.gapY7Total))) + (plot2Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor21 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor22 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY2Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor23 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY3Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor24 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY4Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor25 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor26 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor27 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot2Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost21 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost22 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY2Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost23 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY3Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost24 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY4Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost25 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost26 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost27 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY7Total)))+(plot2Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            laborD21 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY1Total)));
+                            laborD22 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY2Total)));
+                            laborD23 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY3Total)));
+                            laborD24 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY4Total)));
+                            laborD25 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY5Total)));
+                            laborD26 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY6Total)));
+                            laborD27 = (int) (plot2Area * (getResources().getInteger(R.integer.gapY7Total)));
+                            labor21 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY1Total)));
+                            labor22 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY2Total)));
+                            labor23 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY3Total)));
+                            labor24 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY4Total)));
+                            labor25 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
+                            labor26 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
+                            labor27 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+                        }
+                        cost21 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
+                        cost22 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY2Total)));
+                        cost23 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY3Total)));
+                        cost24 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY4Total)));
+                        cost25 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Total)));
+                        cost26 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Total)));
+                        cost27 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY7Total)));
+
+                    }
+                    income21 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY1))*avgCost));
+                    income22 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY2))*avgCost));
+                    income23 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY3))*avgCost));
+                    income24 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY4))*avgCost));
+                    income25 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY5))*avgCost));
+                    income26 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY6))*avgCost));
+                    income27 =(int) ((plot2Area * (getResources().getInteger(R.integer.gapsY7))*avgCost));
+                }
+
                 if (sObject.getHireLabor2().equals("Yes")) {
                     lablp2.setVisibility(View.VISIBLE);
                     lnp2.setVisibility(View.VISIBLE);
@@ -1195,11 +1417,315 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getDrainageNeed2().equals("Yes")) {
                     dralp2.setVisibility(View.VISIBLE);
                 }
+
+                pl21= income21-(cost21+labor21);
+                pl22= income22-(cost22+labor22);
+                pl23= income23-(cost23+labor23);
+                pl24= income24-(cost24+labor24);
+                pl25= income25-(cost25+labor25);
+                pl26= income26-(cost26+labor26);
+                pl27= income27-(cost27+labor27);
+                if(pl21 > 0){
+                    plp2y1.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y1.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl22 > 0){
+                    plp2y2.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y2.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl23 > 0){
+                    plp2y3.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y3.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl24 > 0){
+                    plp2y4.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y4.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl25 > 0){
+                    plp2y5.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y5.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl26 > 0){
+                    plp2y6.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y6.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl27 > 0){
+                    plp2y7.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp2y7.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                setText2((TextView) findViewById(R.id.incomeY1P2), String.valueOf(dec.format(income21)));
+                setText2((TextView) findViewById(R.id.incomeY2P2), String.valueOf(dec.format(income22)));
+                setText2((TextView) findViewById(R.id.incomeY3P2), String.valueOf(dec.format(income23)));
+                setText2((TextView) findViewById(R.id.incomeY4P2), String.valueOf(dec.format(income24)));
+                setText2((TextView) findViewById(R.id.incomeY5P2), String.valueOf(dec.format(income25)));
+                setText2((TextView) findViewById(R.id.incomeY6P2), String.valueOf(dec.format(income26)));
+                setText2((TextView) findViewById(R.id.incomeY7P2), String.valueOf(dec.format(income27)));
+                setText2((TextView) findViewById(R.id.costY1P2), String.valueOf(dec.format(cost21)));
+                setText2((TextView) findViewById(R.id.costY2P2), String.valueOf(dec.format(cost22)));
+                setText2((TextView) findViewById(R.id.costY3P2), String.valueOf(dec.format(cost23)));
+                setText2((TextView) findViewById(R.id.costY4P2), String.valueOf(dec.format(cost24)));
+                setText2((TextView) findViewById(R.id.costY5P2), String.valueOf(dec.format(cost25)));
+                setText2((TextView) findViewById(R.id.costY6P2), String.valueOf(dec.format(cost26)));
+                setText2((TextView) findViewById(R.id.costY7P2), String.valueOf(dec.format(cost27)));
+                setText2((TextView) findViewById(R.id.manDaysY1P2), String.valueOf(laborD21));
+                setText2((TextView) findViewById(R.id.manDaysY2P2), String.valueOf(laborD22));
+                setText2((TextView) findViewById(R.id.manDaysY3P2), String.valueOf(laborD23));
+                setText2((TextView) findViewById(R.id.manDaysY4P2), String.valueOf(laborD24));
+                setText2((TextView) findViewById(R.id.manDaysY5P2), String.valueOf(laborD25));
+                setText2((TextView) findViewById(R.id.manDaysY6P2), String.valueOf(laborD26));
+                setText2((TextView) findViewById(R.id.manDaysY7P2), String.valueOf(laborD27));
+                setText2((TextView) findViewById(R.id.laborY1P2), String.valueOf(dec.format(labor21)));
+                setText2((TextView) findViewById(R.id.laborY2P2), String.valueOf(dec.format(labor22)));
+                setText2((TextView) findViewById(R.id.laborY3P2), String.valueOf(dec.format(labor23)));
+                setText2((TextView) findViewById(R.id.laborY4P2), String.valueOf(dec.format(labor24)));
+                setText2((TextView) findViewById(R.id.laborY5P2), String.valueOf(dec.format(labor25)));
+                setText2((TextView) findViewById(R.id.laborY6P2), String.valueOf(dec.format(labor26)));
+                setText2((TextView) findViewById(R.id.laborY7P2), String.valueOf(dec.format(labor27)));
+                setText2((TextView) findViewById(R.id.plY1P2), String.valueOf(dec.format(pl21)));
+                setText2((TextView) findViewById(R.id.plY2P2), String.valueOf(dec.format(pl22)));
+                setText2((TextView) findViewById(R.id.plY3P2), String.valueOf(dec.format(pl23)));
+                setText2((TextView) findViewById(R.id.plY4P2), String.valueOf(dec.format(pl24)));
+                setText2((TextView) findViewById(R.id.plY5P2), String.valueOf(dec.format(pl25)));
+                setText2((TextView) findViewById(R.id.plY6P2), String.valueOf(dec.format(pl26)));
+                setText2((TextView) findViewById(R.id.plY7P2), String.valueOf(dec.format(pl27)));
             }
 
             //plot3
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 p3.setVisibility(View.VISIBLE);
+
+                if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())>25)){
+                    //Replant
+                    replp3.setVisibility(View.VISIBLE);
+                    gaplp3.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG3().equals("B")){
+                        exslp3.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD32 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD33 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD34 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD35 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD36 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD37 = (int) ((plot3Area * (getResources().getInteger(R.integer.replantY7Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor31 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor32 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor33 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor34 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor35 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor36 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor37 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost31 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost32 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost33 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost34 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost35 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost36 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost37 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY1Total)));
+                            laborD32 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY2Total)));
+                            laborD33 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY3Total)));
+                            laborD34 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY4Total)));
+                            laborD35 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY5Total)));
+                            laborD36 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY6Total)));
+                            laborD37 = (int) (plot3Area * (getResources().getInteger(R.integer.replantY7Total)));
+                            labor31 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total)));
+                            labor32 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total)));
+                            labor33 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total)));
+                            labor34 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total)));
+                            labor35 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
+                            labor36 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
+                            labor37 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                        }
+                        cost31 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
+                        cost32 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
+                        cost33 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
+                        cost34 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)));
+                        cost35 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)));
+                        cost36 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)));
+                        cost37 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
+                    }
+
+                    income31 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                    income32 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
+                    income33 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
+                    income34 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
+                    income35 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
+                    income36 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
+                    income37 =(int) ((plot3Area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
+
+                } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())<25))){
+                    //Graft
+                    grflp3.setVisibility(View.VISIBLE);
+                    gaplp3.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG3().equals("B")){
+                        exslp3.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD32 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD33 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD34 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD35 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD36 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD37 = (int) ((plot3Area * (getResources().getInteger(R.integer.graftY7Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor31 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor32 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor33 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor34 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor35 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor36 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor37 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost31 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost32 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost33 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost34 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY4Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost35 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost36 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost37 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY7Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else {
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY1Total)));
+                            laborD32 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY2Total)));
+                            laborD33 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY3Total)));
+                            laborD34 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY4Total)));
+                            laborD35 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY5Total)));
+                            laborD36 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY6Total)));
+                            laborD37 = (int) (plot3Area * (getResources().getInteger(R.integer.graftY7Total)));
+                            labor31 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY1Total)));
+                            labor32 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY2Total)));
+                            labor33 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY3Total)));
+                            labor34 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY4Total)));
+                            labor35 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
+                            labor36 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
+                            labor37 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                        }
+                        cost31 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
+                        cost32 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
+                        cost33 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
+                        cost34 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY4Total)));
+                        cost35 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Total)));
+                        cost36 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Total)));
+                        cost37 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
+                    }
+                    income31 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY1))*avgCost));
+                    income32 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY2))*avgCost));
+                    income33 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY3))*avgCost));
+                    income34 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY4))*avgCost));
+                    income35 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY5))*avgCost));
+                    income36 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY6))*avgCost));
+                    income37 =(int) ((plot3Area * (getResources().getInteger(R.integer.graftingY7))*avgCost));
+
+                }else if (sObject.getSOILMNG3().equals("B")){
+                    //Extra Soil Management
+                    exslp3.setVisibility(View.VISIBLE);
+                    gaplp3.setVisibility(View.VISIBLE);
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        laborD31 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY1Total)));
+                        laborD32 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY2Total)));
+                        laborD33 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY3Total)));
+                        laborD34 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY4Total)));
+                        laborD35 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY5Total)));
+                        laborD36 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY6Total)));
+                        laborD37 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilY7Total)));
+                        labor31 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total)));
+                        labor32 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total)));
+                        labor33 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total)));
+                        labor34 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total)));
+                        labor35 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
+                        labor36 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
+                        labor37 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
+                    }
+                    cost31 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
+                    cost32 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
+                    cost33 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY3Total)));
+                    cost34 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY4Total)));
+                    cost35 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Total)));
+                    cost36 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Total)));
+                    cost37 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY7Total)));
+                    income31 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY1))*avgCost));
+                    income32 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY2))*avgCost));
+                    income33 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY3))*avgCost));
+                    income34 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY4))*avgCost));
+                    income35 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));
+                    income36 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY6))*avgCost));
+                    income37 =(int) ((plot3Area * (getResources().getInteger(R.integer.extraSoilY7))*avgCost));
+                }else{
+                    //GAP
+                    gaplp3.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG3().equals("B")){
+                        exslp3.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD32 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD33 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD34 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD35 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD36 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD37 = (int) ((plot3Area * (getResources().getInteger(R.integer.gapY7Total))) + (plot3Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor31 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor32 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY2Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor33 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY3Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor34 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY4Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor35 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor36 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor37 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot3Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost31 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost32 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY2Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost33 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY3Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost34 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY4Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost35 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost36 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost37 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY7Total)))+(plot3Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            laborD31 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY1Total)));
+                            laborD32 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY2Total)));
+                            laborD33 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY3Total)));
+                            laborD34 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY4Total)));
+                            laborD35 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY5Total)));
+                            laborD36 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY6Total)));
+                            laborD37 = (int) (plot3Area * (getResources().getInteger(R.integer.gapY7Total)));
+                            labor31 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY1Total)));
+                            labor32 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY2Total)));
+                            labor33 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY3Total)));
+                            labor34 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY4Total)));
+                            labor35 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
+                            labor36 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
+                            labor37 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+                        }
+                        cost31 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
+                        cost32 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY2Total)));
+                        cost33 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY3Total)));
+                        cost34 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY4Total)));
+                        cost35 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Total)));
+                        cost36 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Total)));
+                        cost37 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY7Total)));
+
+                    }
+                    income31 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY1))*avgCost));
+                    income32 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY2))*avgCost));
+                    income33 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY3))*avgCost));
+                    income34 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY4))*avgCost));
+                    income35 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY5))*avgCost));
+                    income36 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY6))*avgCost));
+                    income37 =(int) ((plot3Area * (getResources().getInteger(R.integer.gapsY7))*avgCost));
+                }
 
                 if (sObject.getHireLabor3().equals("Yes")) {
                     lablp3.setVisibility(View.VISIBLE);
@@ -1230,11 +1756,315 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getDrainageNeed3().equals("Yes")) {
                     dralp3.setVisibility(View.VISIBLE);
                 }
+
+                pl31= income31-(cost31+labor31);
+                pl32= income32-(cost32+labor32);
+                pl33= income33-(cost33+labor33);
+                pl34= income34-(cost34+labor34);
+                pl35= income35-(cost35+labor35);
+                pl36= income36-(cost36+labor36);
+                pl37= income37-(cost37+labor37);
+                if(pl31 > 0){
+                    plp3y1.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y1.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl32 > 0){
+                    plp3y2.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y2.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl33 > 0){
+                    plp3y3.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y3.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl34 > 0){
+                    plp3y4.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y4.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl35 > 0){
+                    plp3y5.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y5.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl36 > 0){
+                    plp3y6.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y6.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl37 > 0){
+                    plp3y7.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp3y7.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                setText2((TextView) findViewById(R.id.incomeY1P3), String.valueOf(dec.format(income31)));
+                setText2((TextView) findViewById(R.id.incomeY2P3), String.valueOf(dec.format(income32)));
+                setText2((TextView) findViewById(R.id.incomeY3P3), String.valueOf(dec.format(income33)));
+                setText2((TextView) findViewById(R.id.incomeY4P3), String.valueOf(dec.format(income34)));
+                setText2((TextView) findViewById(R.id.incomeY5P3), String.valueOf(dec.format(income35)));
+                setText2((TextView) findViewById(R.id.incomeY6P3), String.valueOf(dec.format(income36)));
+                setText2((TextView) findViewById(R.id.incomeY7P3), String.valueOf(dec.format(income37)));
+                setText2((TextView) findViewById(R.id.costY1P3), String.valueOf(dec.format(cost31)));
+                setText2((TextView) findViewById(R.id.costY2P3), String.valueOf(dec.format(cost32)));
+                setText2((TextView) findViewById(R.id.costY3P3), String.valueOf(dec.format(cost33)));
+                setText2((TextView) findViewById(R.id.costY4P3), String.valueOf(dec.format(cost34)));
+                setText2((TextView) findViewById(R.id.costY5P3), String.valueOf(dec.format(cost35)));
+                setText2((TextView) findViewById(R.id.costY6P3), String.valueOf(dec.format(cost36)));
+                setText2((TextView) findViewById(R.id.costY7P3), String.valueOf(dec.format(cost37)));
+                setText2((TextView) findViewById(R.id.manDaysY1P3), String.valueOf(laborD31));
+                setText2((TextView) findViewById(R.id.manDaysY2P3), String.valueOf(laborD32));
+                setText2((TextView) findViewById(R.id.manDaysY3P3), String.valueOf(laborD33));
+                setText2((TextView) findViewById(R.id.manDaysY4P3), String.valueOf(laborD34));
+                setText2((TextView) findViewById(R.id.manDaysY5P3), String.valueOf(laborD35));
+                setText2((TextView) findViewById(R.id.manDaysY6P3), String.valueOf(laborD36));
+                setText2((TextView) findViewById(R.id.manDaysY7P3), String.valueOf(laborD37));
+                setText2((TextView) findViewById(R.id.laborY1P3), String.valueOf(dec.format(labor31)));
+                setText2((TextView) findViewById(R.id.laborY2P3), String.valueOf(dec.format(labor32)));
+                setText2((TextView) findViewById(R.id.laborY3P3), String.valueOf(dec.format(labor33)));
+                setText2((TextView) findViewById(R.id.laborY4P3), String.valueOf(dec.format(labor34)));
+                setText2((TextView) findViewById(R.id.laborY5P3), String.valueOf(dec.format(labor35)));
+                setText2((TextView) findViewById(R.id.laborY6P3), String.valueOf(dec.format(labor36)));
+                setText2((TextView) findViewById(R.id.laborY7P3), String.valueOf(dec.format(labor37)));
+                setText2((TextView) findViewById(R.id.plY1P3), String.valueOf(dec.format(pl31)));
+                setText2((TextView) findViewById(R.id.plY2P3), String.valueOf(dec.format(pl32)));
+                setText2((TextView) findViewById(R.id.plY3P3), String.valueOf(dec.format(pl33)));
+                setText2((TextView) findViewById(R.id.plY4P3), String.valueOf(dec.format(pl34)));
+                setText2((TextView) findViewById(R.id.plY5P3), String.valueOf(dec.format(pl35)));
+                setText2((TextView) findViewById(R.id.plY6P3), String.valueOf(dec.format(pl36)));
+                setText2((TextView) findViewById(R.id.plY7P3), String.valueOf(dec.format(pl37)));
             }
 
             //plot4
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 p4.setVisibility(View.VISIBLE);
+
+                if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())>25)){
+                    //Replant
+                    replp4.setVisibility(View.VISIBLE);
+                    gaplp4.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG4().equals("B")){
+                        exslp4.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD42 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD43 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD44 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD45 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD46 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD47 = (int) ((plot4Area * (getResources().getInteger(R.integer.replantY7Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor41 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor42 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor43 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor44 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor45 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor46 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor47 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost41 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost42 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost43 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost44 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost45 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost46 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost47 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY1Total)));
+                            laborD42 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY2Total)));
+                            laborD43 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY3Total)));
+                            laborD44 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY4Total)));
+                            laborD45 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY5Total)));
+                            laborD46 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY6Total)));
+                            laborD47 = (int) (plot4Area * (getResources().getInteger(R.integer.replantY7Total)));
+                            labor41 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total)));
+                            labor42 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total)));
+                            labor43 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total)));
+                            labor44 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total)));
+                            labor45 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
+                            labor46 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
+                            labor47 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                        }
+                        cost41 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
+                        cost42 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
+                        cost43 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
+                        cost44 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)));
+                        cost45 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)));
+                        cost46 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)));
+                        cost47 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
+                    }
+
+                    income41 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                    income42 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
+                    income43 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
+                    income44 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
+                    income45 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
+                    income46 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
+                    income47 =(int) ((plot4Area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
+
+                } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())<25))){
+                    //Graft
+                    grflp4.setVisibility(View.VISIBLE);
+                    gaplp4.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG4().equals("B")){
+                        exslp4.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD42 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD43 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD44 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD45 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD46 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD47 = (int) ((plot4Area * (getResources().getInteger(R.integer.graftY7Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor41 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor42 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor43 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor44 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor45 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor46 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor47 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost41 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost42 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost43 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost44 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY4Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost45 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost46 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost47 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY7Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else {
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY1Total)));
+                            laborD42 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY2Total)));
+                            laborD43 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY3Total)));
+                            laborD44 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY4Total)));
+                            laborD45 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY5Total)));
+                            laborD46 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY6Total)));
+                            laborD47 = (int) (plot4Area * (getResources().getInteger(R.integer.graftY7Total)));
+                            labor41 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY1Total)));
+                            labor42 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY2Total)));
+                            labor43 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY3Total)));
+                            labor44 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY4Total)));
+                            labor45 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
+                            labor46 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
+                            labor47 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                        }
+                        cost41 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
+                        cost42 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
+                        cost43 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
+                        cost44 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY4Total)));
+                        cost45 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Total)));
+                        cost46 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Total)));
+                        cost47 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
+                    }
+                    income41 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY1))*avgCost));
+                    income42 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY2))*avgCost));
+                    income43 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY3))*avgCost));
+                    income44 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY4))*avgCost));
+                    income45 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY5))*avgCost));
+                    income46 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY6))*avgCost));
+                    income47 =(int) ((plot4Area * (getResources().getInteger(R.integer.graftingY7))*avgCost));
+
+                }else if (sObject.getSOILMNG4().equals("B")){
+                    //Extra Soil Management
+                    exslp4.setVisibility(View.VISIBLE);
+                    gaplp4.setVisibility(View.VISIBLE);
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        laborD41 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY1Total)));
+                        laborD42 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY2Total)));
+                        laborD43 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY3Total)));
+                        laborD44 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY4Total)));
+                        laborD45 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY5Total)));
+                        laborD46 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY6Total)));
+                        laborD47 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilY7Total)));
+                        labor41 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total)));
+                        labor42 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total)));
+                        labor43 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total)));
+                        labor44 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total)));
+                        labor45 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
+                        labor46 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
+                        labor47 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
+                    }
+                    cost41 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
+                    cost42 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
+                    cost43 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY3Total)));
+                    cost44 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY4Total)));
+                    cost45 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Total)));
+                    cost46 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Total)));
+                    cost47 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY7Total)));
+                    income41 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY1))*avgCost));
+                    income42 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY2))*avgCost));
+                    income43 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY3))*avgCost));
+                    income44 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY4))*avgCost));
+                    income45 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));
+                    income46 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY6))*avgCost));
+                    income47 =(int) ((plot4Area * (getResources().getInteger(R.integer.extraSoilY7))*avgCost));
+                }else{
+                    //GAP
+                    gaplp4.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG4().equals("B")){
+                        exslp4.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD42 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD43 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD44 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD45 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD46 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD47 = (int) ((plot4Area * (getResources().getInteger(R.integer.gapY7Total))) + (plot4Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor41 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor42 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY2Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor43 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY3Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor44 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY4Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor45 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor46 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor47 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot4Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost41 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost42 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY2Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost43 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY3Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost44 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY4Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost45 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost46 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost47 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY7Total)))+(plot4Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            laborD41 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY1Total)));
+                            laborD42 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY2Total)));
+                            laborD43 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY3Total)));
+                            laborD44 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY4Total)));
+                            laborD45 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY5Total)));
+                            laborD46 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY6Total)));
+                            laborD47 = (int) (plot4Area * (getResources().getInteger(R.integer.gapY7Total)));
+                            labor41 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY1Total)));
+                            labor42 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY2Total)));
+                            labor43 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY3Total)));
+                            labor44 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY4Total)));
+                            labor45 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
+                            labor46 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
+                            labor47 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+                        }
+                        cost41 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
+                        cost42 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY2Total)));
+                        cost43 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY3Total)));
+                        cost44 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY4Total)));
+                        cost45 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Total)));
+                        cost46 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Total)));
+                        cost47 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY7Total)));
+
+                    }
+                    income41 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY1))*avgCost));
+                    income42 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY2))*avgCost));
+                    income43 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY3))*avgCost));
+                    income44 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY4))*avgCost));
+                    income45 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY5))*avgCost));
+                    income46 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY6))*avgCost));
+                    income47 =(int) ((plot4Area * (getResources().getInteger(R.integer.gapsY7))*avgCost));
+                }
 
                 if (sObject.getHireLabor4().equals("Yes")) {
                     lablp4.setVisibility(View.VISIBLE);
@@ -1265,11 +2095,315 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getDrainageNeed4().equals("Yes")) {
                     dralp4.setVisibility(View.VISIBLE);
                 }
+
+                pl41= income41-(cost41+labor41);
+                pl42= income42-(cost42+labor42);
+                pl43= income43-(cost43+labor43);
+                pl44= income44-(cost44+labor44);
+                pl45= income45-(cost45+labor45);
+                pl46= income46-(cost46+labor46);
+                pl47= income47-(cost47+labor47);
+                if(pl41 > 0){
+                    plp4y1.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y1.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl42 > 0){
+                    plp4y2.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y2.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl43 > 0){
+                    plp4y3.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y3.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl44 > 0){
+                    plp4y4.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y4.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl45 > 0){
+                    plp4y5.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y5.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl46 > 0){
+                    plp4y6.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y6.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl47 > 0){
+                    plp4y7.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp4y7.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                setText2((TextView) findViewById(R.id.incomeY1P4), String.valueOf(dec.format(income41)));
+                setText2((TextView) findViewById(R.id.incomeY2P4), String.valueOf(dec.format(income42)));
+                setText2((TextView) findViewById(R.id.incomeY3P4), String.valueOf(dec.format(income43)));
+                setText2((TextView) findViewById(R.id.incomeY4P4), String.valueOf(dec.format(income44)));
+                setText2((TextView) findViewById(R.id.incomeY5P4), String.valueOf(dec.format(income45)));
+                setText2((TextView) findViewById(R.id.incomeY6P4), String.valueOf(dec.format(income46)));
+                setText2((TextView) findViewById(R.id.incomeY7P4), String.valueOf(dec.format(income47)));
+                setText2((TextView) findViewById(R.id.costY1P4), String.valueOf(dec.format(cost41)));
+                setText2((TextView) findViewById(R.id.costY2P4), String.valueOf(dec.format(cost42)));
+                setText2((TextView) findViewById(R.id.costY3P4), String.valueOf(dec.format(cost43)));
+                setText2((TextView) findViewById(R.id.costY4P4), String.valueOf(dec.format(cost44)));
+                setText2((TextView) findViewById(R.id.costY5P4), String.valueOf(dec.format(cost45)));
+                setText2((TextView) findViewById(R.id.costY6P4), String.valueOf(dec.format(cost46)));
+                setText2((TextView) findViewById(R.id.costY7P4), String.valueOf(dec.format(cost47)));
+                setText2((TextView) findViewById(R.id.manDaysY1P4), String.valueOf(laborD41));
+                setText2((TextView) findViewById(R.id.manDaysY2P4), String.valueOf(laborD42));
+                setText2((TextView) findViewById(R.id.manDaysY3P4), String.valueOf(laborD43));
+                setText2((TextView) findViewById(R.id.manDaysY4P4), String.valueOf(laborD44));
+                setText2((TextView) findViewById(R.id.manDaysY5P4), String.valueOf(laborD45));
+                setText2((TextView) findViewById(R.id.manDaysY6P4), String.valueOf(laborD46));
+                setText2((TextView) findViewById(R.id.manDaysY7P4), String.valueOf(laborD47));
+                setText2((TextView) findViewById(R.id.laborY1P4), String.valueOf(dec.format(labor41)));
+                setText2((TextView) findViewById(R.id.laborY2P4), String.valueOf(dec.format(labor42)));
+                setText2((TextView) findViewById(R.id.laborY3P4), String.valueOf(dec.format(labor43)));
+                setText2((TextView) findViewById(R.id.laborY4P4), String.valueOf(dec.format(labor44)));
+                setText2((TextView) findViewById(R.id.laborY5P4), String.valueOf(dec.format(labor45)));
+                setText2((TextView) findViewById(R.id.laborY6P4), String.valueOf(dec.format(labor46)));
+                setText2((TextView) findViewById(R.id.laborY7P4), String.valueOf(dec.format(labor47)));
+                setText2((TextView) findViewById(R.id.plY1P4), String.valueOf(dec.format(pl41)));
+                setText2((TextView) findViewById(R.id.plY2P4), String.valueOf(dec.format(pl42)));
+                setText2((TextView) findViewById(R.id.plY3P4), String.valueOf(dec.format(pl43)));
+                setText2((TextView) findViewById(R.id.plY4P4), String.valueOf(dec.format(pl44)));
+                setText2((TextView) findViewById(R.id.plY5P4), String.valueOf(dec.format(pl45)));
+                setText2((TextView) findViewById(R.id.plY6P4), String.valueOf(dec.format(pl46)));
+                setText2((TextView) findViewById(R.id.plY7P4), String.valueOf(dec.format(pl47)));
             }
 
             //plot5
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 p5.setVisibility(View.VISIBLE);
+
+                if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())>25)){
+                    //Replant
+                    replp5.setVisibility(View.VISIBLE);
+                    gaplp5.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG5().equals("B")){
+                        exslp5.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD52 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD53 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD54 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD55 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD56 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD57 = (int) ((plot5Area * (getResources().getInteger(R.integer.replantY7Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor51 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor52 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor53 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor54 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor55 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor56 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor57 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost51 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost52 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost53 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost54 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost55 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost56 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost57 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY1Total)));
+                            laborD52 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY2Total)));
+                            laborD53 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY3Total)));
+                            laborD54 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY4Total)));
+                            laborD55 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY5Total)));
+                            laborD56 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY6Total)));
+                            laborD57 = (int) (plot5Area * (getResources().getInteger(R.integer.replantY7Total)));
+                            labor51 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY1Total)));
+                            labor52 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY2Total)));
+                            labor53 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY3Total)));
+                            labor54 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY4Total)));
+                            labor55 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
+                            labor56 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
+                            labor57 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                        }
+                        cost51 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
+                        cost52 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
+                        cost53 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
+                        cost54 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY4Total)));
+                        cost55 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Total)));
+                        cost56 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Total)));
+                        cost57 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
+                    }
+
+                    income51 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                    income52 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
+                    income53 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
+                    income54 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
+                    income55 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
+                    income56 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
+                    income57 =(int) ((plot5Area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
+
+                } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())<25))){
+                    //Graft
+                    grflp5.setVisibility(View.VISIBLE);
+                    gaplp5.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG5().equals("B")){
+                        exslp5.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD52 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD53 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD54 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD55 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD56 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD57 = (int) ((plot5Area * (getResources().getInteger(R.integer.graftY7Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor51 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor52 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor53 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor54 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor55 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor56 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor57 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost51 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost52 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost53 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost54 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY4Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost55 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost56 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost57 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY7Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else {
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY1Total)));
+                            laborD52 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY2Total)));
+                            laborD53 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY3Total)));
+                            laborD54 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY4Total)));
+                            laborD55 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY5Total)));
+                            laborD56 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY6Total)));
+                            laborD57 = (int) (plot5Area * (getResources().getInteger(R.integer.graftY7Total)));
+                            labor51 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY1Total)));
+                            labor52 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY2Total)));
+                            labor53 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY3Total)));
+                            labor54 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY4Total)));
+                            labor55 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
+                            labor56 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
+                            labor57 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                        }
+                        cost51 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
+                        cost52 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
+                        cost53 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
+                        cost54 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY4Total)));
+                        cost55 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Total)));
+                        cost56 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Total)));
+                        cost57 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
+                    }
+                    income51 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY1))*avgCost));
+                    income52 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY2))*avgCost));
+                    income53 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY3))*avgCost));
+                    income54 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY4))*avgCost));
+                    income55 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY5))*avgCost));
+                    income56 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY6))*avgCost));
+                    income57 =(int) ((plot5Area * (getResources().getInteger(R.integer.graftingY7))*avgCost));
+
+                }else if (sObject.getSOILMNG5().equals("B")){
+                    //Extra Soil Management
+                    exslp5.setVisibility(View.VISIBLE);
+                    gaplp5.setVisibility(View.VISIBLE);
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        laborD51 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY1Total)));
+                        laborD52 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY2Total)));
+                        laborD53 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY3Total)));
+                        laborD54 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY4Total)));
+                        laborD55 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY5Total)));
+                        laborD56 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY6Total)));
+                        laborD57 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilY7Total)));
+                        labor51 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Total)));
+                        labor52 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Total)));
+                        labor53 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Total)));
+                        labor54 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Total)));
+                        labor55 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
+                        labor56 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
+                        labor57 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
+                    }
+                    cost51 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
+                    cost52 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
+                    cost53 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY3Total)));
+                    cost54 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY4Total)));
+                    cost55 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Total)));
+                    cost56 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Total)));
+                    cost57 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY7Total)));
+                    income51 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY1))*avgCost));
+                    income52 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY2))*avgCost));
+                    income53 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY3))*avgCost));
+                    income54 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY4))*avgCost));
+                    income55 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));
+                    income56 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY6))*avgCost));
+                    income57 =(int) ((plot5Area * (getResources().getInteger(R.integer.extraSoilY7))*avgCost));
+                }else{
+                    //GAP
+                    gaplp5.setVisibility(View.VISIBLE);
+                    if (sObject.getSOILMNG5().equals("B")){
+                        exslp5.setVisibility(View.VISIBLE);
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                            laborD52 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                            laborD53 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                            laborD54 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                            laborD55 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                            laborD56 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                            laborD57 = (int) ((plot5Area * (getResources().getInteger(R.integer.gapY7Total))) + (plot5Area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                            labor51 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                            labor52 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY2Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                            labor53 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY3Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                            labor54 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY4Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                            labor55 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                            labor56 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                            labor57 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (plot5Area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        }
+                        cost51 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY1Total))));
+                        cost52 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY2Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY2Total))));
+                        cost53 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY3Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY3Total))));
+                        cost54 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY4Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY4Total))));
+                        cost55 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY5Total))));
+                        cost56 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY6Total))));
+                        cost57 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY7Total)))+(plot5Area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    }else{
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            laborD51 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY1Total)));
+                            laborD52 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY2Total)));
+                            laborD53 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY3Total)));
+                            laborD54 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY4Total)));
+                            laborD55 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY5Total)));
+                            laborD56 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY6Total)));
+                            laborD57 = (int) (plot5Area * (getResources().getInteger(R.integer.gapY7Total)));
+                            labor51 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY1Total)));
+                            labor52 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY2Total)));
+                            labor53 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY3Total)));
+                            labor54 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY4Total)));
+                            labor55 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
+                            labor56 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
+                            labor57 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+                        }
+                        cost51 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
+                        cost52 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY2Total)));
+                        cost53 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY3Total)));
+                        cost54 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY4Total)));
+                        cost55 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Total)));
+                        cost56 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Total)));
+                        cost57 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY7Total)));
+
+                    }
+                    income51 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY1))*avgCost));
+                    income52 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY2))*avgCost));
+                    income53 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY3))*avgCost));
+                    income54 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY4))*avgCost));
+                    income55 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY5))*avgCost));
+                    income56 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY6))*avgCost));
+                    income57 =(int) ((plot5Area * (getResources().getInteger(R.integer.gapsY7))*avgCost));
+                }
 
                 if (sObject.getHireLabor5().equals("Yes")) {
                     lablp5.setVisibility(View.VISIBLE);
@@ -1299,6 +2433,87 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getDrainageNeed5().equals("Yes")) {
                     dralp5.setVisibility(View.VISIBLE);
                 }
+                pl51= income51-(cost51+labor51);
+                pl52= income52-(cost52+labor52);
+                pl53= income53-(cost53+labor53);
+                pl54= income54-(cost54+labor54);
+                pl55= income55-(cost55+labor55);
+                pl56= income56-(cost56+labor56);
+                pl57= income57-(cost57+labor57);
+                if(pl51 > 0){
+                    plp5y1.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y1.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl52 > 0){
+                    plp5y2.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y2.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl53 > 0){
+                    plp5y3.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y3.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                if(pl54 > 0){
+                    plp5y4.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y4.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl55 > 0){
+                    plp5y5.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y5.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl56 > 0){
+                    plp5y6.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y6.setTextColor(Color.parseColor("#cc0000"));
+                }
+                if(pl57 > 0){
+                    plp5y7.setTextColor(Color.parseColor("#29a329"));
+                }else{
+                    plp5y7.setTextColor(Color.parseColor("#cc0000"));
+                }
+
+                setText2((TextView) findViewById(R.id.incomeY1P5), String.valueOf(dec.format(income51)));
+                setText2((TextView) findViewById(R.id.incomeY2P5), String.valueOf(dec.format(income52)));
+                setText2((TextView) findViewById(R.id.incomeY3P5), String.valueOf(dec.format(income53)));
+                setText2((TextView) findViewById(R.id.incomeY4P5), String.valueOf(dec.format(income54)));
+                setText2((TextView) findViewById(R.id.incomeY5P5), String.valueOf(dec.format(income55)));
+                setText2((TextView) findViewById(R.id.incomeY6P5), String.valueOf(dec.format(income56)));
+                setText2((TextView) findViewById(R.id.incomeY7P5), String.valueOf(dec.format(income57)));
+                setText2((TextView) findViewById(R.id.costY1P5), String.valueOf(dec.format(cost51)));
+                setText2((TextView) findViewById(R.id.costY2P5), String.valueOf(dec.format(cost52)));
+                setText2((TextView) findViewById(R.id.costY3P5), String.valueOf(dec.format(cost53)));
+                setText2((TextView) findViewById(R.id.costY4P5), String.valueOf(dec.format(cost54)));
+                setText2((TextView) findViewById(R.id.costY5P5), String.valueOf(dec.format(cost55)));
+                setText2((TextView) findViewById(R.id.costY6P5), String.valueOf(dec.format(cost56)));
+                setText2((TextView) findViewById(R.id.costY7P5), String.valueOf(dec.format(cost57)));
+                setText2((TextView) findViewById(R.id.manDaysY1P5), String.valueOf(laborD51));
+                setText2((TextView) findViewById(R.id.manDaysY2P5), String.valueOf(laborD52));
+                setText2((TextView) findViewById(R.id.manDaysY3P5), String.valueOf(laborD53));
+                setText2((TextView) findViewById(R.id.manDaysY4P5), String.valueOf(laborD54));
+                setText2((TextView) findViewById(R.id.manDaysY5P5), String.valueOf(laborD55));
+                setText2((TextView) findViewById(R.id.manDaysY6P5), String.valueOf(laborD56));
+                setText2((TextView) findViewById(R.id.manDaysY7P5), String.valueOf(laborD57));
+                setText2((TextView) findViewById(R.id.laborY1P5), String.valueOf(dec.format(labor51)));
+                setText2((TextView) findViewById(R.id.laborY2P5), String.valueOf(dec.format(labor52)));
+                setText2((TextView) findViewById(R.id.laborY3P5), String.valueOf(dec.format(labor53)));
+                setText2((TextView) findViewById(R.id.laborY4P5), String.valueOf(dec.format(labor54)));
+                setText2((TextView) findViewById(R.id.laborY5P5), String.valueOf(dec.format(labor55)));
+                setText2((TextView) findViewById(R.id.laborY6P5), String.valueOf(dec.format(labor56)));
+                setText2((TextView) findViewById(R.id.laborY7P5), String.valueOf(dec.format(labor57)));
+                setText2((TextView) findViewById(R.id.plY1P5), String.valueOf(dec.format(pl51)));
+                setText2((TextView) findViewById(R.id.plY2P5), String.valueOf(dec.format(pl52)));
+                setText2((TextView) findViewById(R.id.plY3P5), String.valueOf(dec.format(pl53)));
+                setText2((TextView) findViewById(R.id.plY4P5), String.valueOf(dec.format(pl54)));
+                setText2((TextView) findViewById(R.id.plY5P5), String.valueOf(dec.format(pl55)));
+                setText2((TextView) findViewById(R.id.plY6P5), String.valueOf(dec.format(pl56)));
+                setText2((TextView) findViewById(R.id.plY7P5), String.valueOf(dec.format(pl57)));
             }
 
             //net income cocoa
@@ -1517,7 +2732,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
     private void setText2(TextView textField, String text) {
         if (textField != null) {
-            textField.setVisibility(View.VISIBLE);
             textField.setText(text);
         }
     }

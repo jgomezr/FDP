@@ -320,7 +320,7 @@
 		<item>B</item>
 		<item>G</item>
 		<item>M</item>
-	</string-array><string name="familyMembers">Number of Family members living together including the farmer:</string><string name="plot1">Plot 1</string><string name="plot2">Plot 2</string><string name="costInvest">Cost of Maintenance / Investment</string><string name="plot3">Plot 3</string><string name="plot4">Plot 4</string><string name="renovationArea">Total Renovation Size (Ha):</string><string name="plot5">Plot 5</string><string name="birthday">Farmer Birthday Year:</string><string name="plot6">Plot 6</string><string name="drainage">Drainage</string><string name="daysHire">How many labor days hire:</string><string name="filling">Filling in</string><string-array name="treeDistance">
+	</string-array><string name="familyMembers">Number of Family members living together including the farmer:</string><string name="plot1">Plot 1</string><string name="plot2">Plot 2</string><string name="costInvest">Cost of Maintenance / Investment:</string><string name="plot3">Plot 3</string><string name="plot4">Plot 4</string><string name="renovationArea">Total Renovation Size (Ha):</string><string name="plot5">Plot 5</string><string name="birthday">Farmer Birthday Year:</string><string name="plot6">Plot 6</string><string name="drainage">Drainage</string><string name="daysHire">How many labor days hire:</string><string name="filling">Filling in</string><string-array name="treeDistance">
         <item>N/A</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
