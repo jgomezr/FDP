@@ -728,12 +728,24 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             @Override
             public void afterTextChanged(Editable s) {
                 double p1;
-                if(estP1.getText().toString().isEmpty()){
+                double p2;
+                double p3;
+                double p4;
+                double p5;
+                if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()){
                     p1=0;
+                    p2=0;
+                    p3=0;
+                    p4=0;
+                    p5=0;
                 }else{
                     p1=Double.parseDouble(estP1.getText().toString());
+                    p2=Double.parseDouble(estP2.getText().toString());
+                    p3=Double.parseDouble(estP3.getText().toString());
+                    p4=Double.parseDouble(estP4.getText().toString());
+                    p5=Double.parseDouble(estP5.getText().toString());
                 }
-                if ((p1+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                if ((p1+p2+p3+p4+p5)>Double.parseDouble(sObject.getProductioncocoaly())){
                     Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
                 }
             }
@@ -749,13 +761,25 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             @Override
             public void afterTextChanged(Editable s) {
+                double p1;
                 double p2;
-                if(estP2.getText().toString().isEmpty()){
+                double p3;
+                double p4;
+                double p5;
+                if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()){
+                    p1=0;
                     p2=0;
+                    p3=0;
+                    p4=0;
+                    p5=0;
                 }else{
+                    p1=Double.parseDouble(estP1.getText().toString());
                     p2=Double.parseDouble(estP2.getText().toString());
+                    p3=Double.parseDouble(estP3.getText().toString());
+                    p4=Double.parseDouble(estP4.getText().toString());
+                    p5=Double.parseDouble(estP5.getText().toString());
                 }
-                if ((p2+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                if ((p1+p2+p3+p4+p5)>Double.parseDouble(sObject.getProductioncocoaly())){
                     Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
                 }
             }
@@ -771,13 +795,25 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             @Override
             public void afterTextChanged(Editable s) {
+                double p1;
+                double p2;
                 double p3;
-                if(estP3.getText().toString().isEmpty()){
+                double p4;
+                double p5;
+                if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()){
+                    p1=0;
+                    p2=0;
                     p3=0;
+                    p4=0;
+                    p5=0;
                 }else{
+                    p1=Double.parseDouble(estP1.getText().toString());
+                    p2=Double.parseDouble(estP2.getText().toString());
                     p3=Double.parseDouble(estP3.getText().toString());
+                    p4=Double.parseDouble(estP4.getText().toString());
+                    p5=Double.parseDouble(estP5.getText().toString());
                 }
-                if ((p3+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP4.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                if ((p1+p2+p3+p4+p5)>Double.parseDouble(sObject.getProductioncocoaly())){
                     Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
                 }
             }
@@ -792,13 +828,25 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             @Override
             public void afterTextChanged(Editable s) {
+                double p1;
+                double p2;
+                double p3;
                 double p4;
-                if(estP4.getText().toString().isEmpty()){
+                double p5;
+                if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()){
+                    p1=0;
+                    p2=0;
+                    p3=0;
                     p4=0;
+                    p5=0;
                 }else{
+                    p1=Double.parseDouble(estP1.getText().toString());
+                    p2=Double.parseDouble(estP2.getText().toString());
+                    p3=Double.parseDouble(estP3.getText().toString());
                     p4=Double.parseDouble(estP4.getText().toString());
+                    p5=Double.parseDouble(estP5.getText().toString());
                 }
-                if ((p4+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP5.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                if ((p1+p2+p3+p4+p5)>Double.parseDouble(sObject.getProductioncocoaly())){
                     Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
                 }
             }
@@ -813,13 +861,25 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             @Override
             public void afterTextChanged(Editable s) {
+                double p1;
+                double p2;
+                double p3;
+                double p4;
                 double p5;
-                if(estP5.getText().toString().isEmpty()){
+                if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()){
+                    p1=0;
+                    p2=0;
+                    p3=0;
+                    p4=0;
                     p5=0;
                 }else{
+                    p1=Double.parseDouble(estP1.getText().toString());
+                    p2=Double.parseDouble(estP2.getText().toString());
+                    p3=Double.parseDouble(estP3.getText().toString());
+                    p4=Double.parseDouble(estP4.getText().toString());
                     p5=Double.parseDouble(estP5.getText().toString());
                 }
-                if ((p5+Double.parseDouble(estP1.getText().toString())+Double.parseDouble(estP2.getText().toString())+Double.parseDouble(estP3.getText().toString())+Double.parseDouble(estP4.getText().toString()))>Double.parseDouble(sObject.getProductioncocoaly())){
+                if ((p1+p2+p3+p4+p5)>Double.parseDouble(sObject.getProductioncocoaly())){
                     Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
                 }
             }

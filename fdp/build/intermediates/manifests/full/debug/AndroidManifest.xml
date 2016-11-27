@@ -85,7 +85,6 @@
         <activity
             android:name="org.grameenfoundation.fdp.ui.fdpActivity"
             android:parentActivityName="org.grameenfoundation.fdp.ui.plotActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/SalesforceSDK.ActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.FDP" />

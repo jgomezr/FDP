@@ -102,7 +102,7 @@
     <string name="ph">Soil PH:</string>
     <string name="plantingMaterial">Planting Material:</string>
     <string name="cocoaTrees">Distance between cocoa trees:</string>
-    <string name="treeAge">Tree age:</string>
+    <string name="plotAge">Tree Age:</string>
     <string name="treeHealth">Tree health:</string>
     <string name="debilitationDisease">Debilitating Disease:</string>
     <string name="pruning">Pruning:</string>
@@ -116,13 +116,14 @@
     <string name="fertilizerApplication">Fertilizer Application:</string>
     <string name="limeNeed">Lime need:</string>
     <string name="drainageNeed">Drainage need:</string>
-    <string name="fillingOption">Filling in/out option:</string>
+    <string name="fillingOption">Filling in option:</string>
     <string name="plotHireLabor">Hire labor:</string>
 	<string name="geneticLb">Genetics:</string>
 	<string name="farmCondition">Farm Condition:</string>
 	<string name="gapLb">GAPS:</string>
 	<string name="soilFertMngLb">Soil Fertility Management:</string>
 	<string name="calcAO">Calculate</string>
+
 
 	<string name="plot1">Plot 1</string>
 	<string name="plot2">Plot 2</string>
@@ -394,6 +395,70 @@
 		<item>Year 6</item>
 		<item>Year 7</item>
 	</string-array>
+
+    <string-array name="year1">
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+        <item>Year 5</item>
+        <item>Year 6</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year2">
+        <item>Year 2</item>
+        <item>Year 1</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+        <item>Year 5</item>
+        <item>Year 6</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year3">
+        <item>Year 3</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 4</item>
+        <item>Year 5</item>
+        <item>Year 6</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year4">
+        <item>Year 4</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 5</item>
+        <item>Year 6</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year5">
+        <item>Year 5</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+        <item>Year 6</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year6">
+        <item>Year 6</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+        <item>Year 5</item>
+        <item>Year 7</item>
+    </string-array>
+    <string-array name="year7">
+        <item>Year 7</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+        <item>Year 5</item>
+        <item>Year 6</item>
+    </string-array>
 	<string-array name="sourceLoan">
         <item>Family</item>
         <item>Friends</item>
