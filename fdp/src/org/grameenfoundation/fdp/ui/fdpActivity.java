@@ -305,7 +305,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     }
     public void launchYear3(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity1.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -313,9 +313,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         yearIntent.putExtra(YEAR_LAUNCH, "3");
         startActivity(yearIntent);
     }
+
     public void launchYear4(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity2.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity1.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -345,7 +346,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     }
     public void launchYear7(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity2.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity3.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -2524,7 +2525,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             int totalIncomeY5 = income15+income25+income35+income45+income55;
             int totalIncomeY6 = income16+income26+income36+income46+income56;
             int totalIncomeY7 = income17+income27+income37+income47+income57;
-            int totalIncome = totalIncomeY1+totalIncomeY2+totalIncomeY3+totalIncomeY4+totalIncomeY5+totalIncomeY6+totalIncomeY7;
             setText2((TextView) findViewById(R.id.netPlotIncomeY1_field), String.valueOf(dec.format(totalIncomeY1)));
             setText2((TextView) findViewById(R.id.netPlotIncomeY2_field), String.valueOf(dec.format(totalIncomeY2)));
             setText2((TextView) findViewById(R.id.netPlotIncomeY3_field), String.valueOf(dec.format(totalIncomeY3)));
@@ -2532,34 +2532,40 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText2((TextView) findViewById(R.id.netPlotIncomeY5_field), String.valueOf(dec.format(totalIncomeY5)));
             setText2((TextView) findViewById(R.id.netPlotIncomeY6_field), String.valueOf(dec.format(totalIncomeY6)));
             setText2((TextView) findViewById(R.id.netPlotIncomeY7_field), String.valueOf(dec.format(totalIncomeY7)));
-            //net income farming
-            int farmWork = Integer.parseInt(sObject.getIncomefarmlabor().toString());
-            setText2((TextView) findViewById(R.id.netFarmingY1_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY2_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY3_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY4_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY5_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY6_field), String.valueOf(dec.format(farmWork)));
-            setText2((TextView) findViewById(R.id.netFarmingY7_field), String.valueOf(dec.format(farmWork)));
 
-            // net family income
-            int spouseWork = Integer.parseInt(sObject.getSpouseincome().toString());
-            int familyWork = Integer.parseInt(sObject.getFamilymembersincome().toString());
-            int totalFincome;
-            totalFincome = spouseWork + familyWork;
-            setText2((TextView) findViewById(R.id.netFamilyY1_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY2_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY3_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY4_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY5_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY6_field), String.valueOf(dec.format(totalFincome)));
-            setText2((TextView) findViewById(R.id.netFamilyY7_field), String.valueOf(dec.format(totalFincome)));
-
-            //net other income
+            //net income other crops
             int otherCrops = Integer.parseInt(sObject.getIncomeothercrops().toString());
+            setText2((TextView) findViewById(R.id.otherCropY1_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY2_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY3_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY4_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY5_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY6_field), String.valueOf(dec.format(otherCrops)));
+            setText2((TextView) findViewById(R.id.otherCropY7_field), String.valueOf(dec.format(otherCrops)));
+
+            //net income farming
+            int farmingy1 = totalIncomeY1+otherCrops;
+            int farmingy2 = totalIncomeY2+otherCrops;
+            int farmingy3 = totalIncomeY3+otherCrops;
+            int farmingy4 = totalIncomeY4+otherCrops;
+            int farmingy5 = totalIncomeY5+otherCrops;
+            int farmingy6 = totalIncomeY6+otherCrops;
+            int farmingy7 = totalIncomeY7+otherCrops;
+            setText2((TextView) findViewById(R.id.netFarmingY1_field), String.valueOf(dec.format(farmingy1)));
+            setText2((TextView) findViewById(R.id.netFarmingY2_field), String.valueOf(dec.format(farmingy2)));
+            setText2((TextView) findViewById(R.id.netFarmingY3_field), String.valueOf(dec.format(farmingy3)));
+            setText2((TextView) findViewById(R.id.netFarmingY4_field), String.valueOf(dec.format(farmingy4)));
+            setText2((TextView) findViewById(R.id.netFarmingY5_field), String.valueOf(dec.format(farmingy5)));
+            setText2((TextView) findViewById(R.id.netFarmingY6_field), String.valueOf(dec.format(farmingy6)));
+            setText2((TextView) findViewById(R.id.netFarmingY7_field), String.valueOf(dec.format(farmingy7)));
+
+            //net other income sources
             int moneyBack = Integer.parseInt(sObject.getLoanmoneygetback().toString());
             int hhSavings = Integer.parseInt(sObject.getHouseholdsavings().toString());
-            int totalOtherIncome = otherCrops + moneyBack + hhSavings;
+            int farmWork = Integer.parseInt(sObject.getIncomefarmlabor().toString());
+            int spouseWork = Integer.parseInt(sObject.getSpouseincome().toString());
+            int familyWork = Integer.parseInt(sObject.getFamilymembersincome().toString());
+            int totalOtherIncome = moneyBack + hhSavings+farmWork+spouseWork+familyWork;
             setText2((TextView) findViewById(R.id.netOtherY1_field), String.valueOf(dec.format(totalOtherIncome)));
             setText2((TextView) findViewById(R.id.netOtherY2_field), String.valueOf(dec.format(totalOtherIncome)));
             setText2((TextView) findViewById(R.id.netOtherY3_field), String.valueOf(dec.format(totalOtherIncome)));
@@ -2569,15 +2575,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText2((TextView) findViewById(R.id.netOtherY7_field), String.valueOf(dec.format(totalOtherIncome)));
 
             //total income
-
-            int totalIncomeAllY1 = totalIncomeY1 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY2 = totalIncomeY2 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY3 = totalIncomeY3 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY4 = totalIncomeY4 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY5 = totalIncomeY5 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY6 = totalIncomeY6 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAllY7 = totalIncomeY7 + Integer.valueOf(farmWork) + totalFincome + totalOtherIncome;
-            int totalIncomeAll = totalIncomeAllY1+totalIncomeAllY2+totalIncomeAllY3+totalIncomeAllY4+totalIncomeAllY5+totalIncomeAllY6+totalIncomeAllY7;
+            int totalIncomeAllY1 = farmingy1 + totalOtherIncome;
+            int totalIncomeAllY2 = farmingy2 + totalOtherIncome;
+            int totalIncomeAllY3 = farmingy3 + totalOtherIncome;
+            int totalIncomeAllY4 = farmingy4 + totalOtherIncome;
+            int totalIncomeAllY5 = farmingy5 + totalOtherIncome;
+            int totalIncomeAllY6 = farmingy6 + totalOtherIncome;
+            int totalIncomeAllY7 = farmingy7 + totalOtherIncome;
             setText2((TextView) findViewById(R.id.totalIncomeY1_field), String.valueOf(dec.format(totalIncomeAllY1)));
             setText2((TextView) findViewById(R.id.totalIncomeY2_field), String.valueOf(dec.format(totalIncomeAllY2)));
             setText2((TextView) findViewById(R.id.totalIncomeY3_field), String.valueOf(dec.format(totalIncomeAllY3)));
@@ -2586,13 +2590,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText2((TextView) findViewById(R.id.totalIncomeY6_field), String.valueOf(dec.format(totalIncomeAllY6)));
             setText2((TextView) findViewById(R.id.totalIncomeY7_field), String.valueOf(dec.format(totalIncomeAllY7)));
 
-            //total famili costs
-            int expLY = Integer.parseInt(sObject.getExpensescocoaly().toString());
+            //total family costs
             int anLivExpen = Integer.parseInt(sObject.getAnnuallivingexpenses().toString());
             int anOtherExp = Integer.parseInt(sObject.getAnnualotherexpenses().toString());
             int expEducExp = Integer.parseInt(sObject.getExpectededucationexpenses().toString());
             int credPay = Integer.parseInt(sObject.getHowmuchpayforcredit().toString());
-            int totalExpenses = expLY+anLivExpen+anOtherExp+expEducExp+credPay;
+            int totalExpenses = anLivExpen+anOtherExp+expEducExp+credPay;
             setText2((TextView) findViewById(R.id.totalExpensesY1_field), String.valueOf(dec.format(totalExpenses)));
             setText2((TextView) findViewById(R.id.totalExpensesY2_field), String.valueOf(dec.format(totalExpenses)));
             setText2((TextView) findViewById(R.id.totalExpensesY3_field), String.valueOf(dec.format(totalExpenses)));
@@ -2600,7 +2603,8 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText2((TextView) findViewById(R.id.totalExpensesY5_field), String.valueOf(dec.format(totalExpenses)));
             setText2((TextView) findViewById(R.id.totalExpensesY6_field), String.valueOf(dec.format(totalExpenses)));
             setText2((TextView) findViewById(R.id.totalExpensesY7_field), String.valueOf(dec.format(totalExpenses)));
-            //found available
+
+            // net family income
             int availableY1 = totalIncomeAllY1-totalExpenses;
             int availableY2 = totalIncomeAllY2-totalExpenses;
             int availableY3 = totalIncomeAllY3-totalExpenses;
@@ -2650,28 +2654,23 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else{
                 found7.setTextColor(Color.parseColor("#cc0000"));
             }
+
             //found needed
-
             int totalY1 = cost11+labor11+cost21+labor21+cost31+labor31+cost41+labor41+cost51+labor51;
-            setText2((TextView) findViewById(R.id.foundsNeededY1_field), String.valueOf(dec.format(totalY1)));
-
             int totalY2 = cost12+labor12+cost22+labor22+cost32+labor32+cost42+labor42+cost52+labor52;
-            setText2((TextView) findViewById(R.id.foundsNeededY2_field), String.valueOf(dec.format(totalY2)));
-
             int totalY3 = cost13+labor13+cost23+labor23+cost33+labor33+cost43+labor43+cost53+labor53;
-            setText2((TextView) findViewById(R.id.foundsNeededY3_field), String.valueOf(dec.format(totalY3)));
-
             int totalY4 = cost14+labor14+cost24+labor24+cost34+labor34+cost44+labor44+cost54+labor54;
-            setText2((TextView) findViewById(R.id.foundsNeededY4_field), String.valueOf(dec.format(totalY4)));
-
             int totalY5 = cost15+labor15+cost25+labor25+cost35+labor35+cost45+labor45+cost55+labor55;
-            setText2((TextView) findViewById(R.id.foundsNeededY5_field), String.valueOf(dec.format(totalY5)));
-
             int totalY6 = cost16+labor16+cost26+labor26+cost36+labor36+cost46+labor46+cost56+labor56;
-            setText2((TextView) findViewById(R.id.foundsNeededY6_field), String.valueOf(dec.format(totalY6)));
-
             int totalY7 = cost17+labor17+cost27+labor27+cost37+labor37+cost47+labor47+cost57+labor57;
+            setText2((TextView) findViewById(R.id.foundsNeededY1_field), String.valueOf(dec.format(totalY1)));
+            setText2((TextView) findViewById(R.id.foundsNeededY2_field), String.valueOf(dec.format(totalY2)));
+            setText2((TextView) findViewById(R.id.foundsNeededY3_field), String.valueOf(dec.format(totalY3)));
+            setText2((TextView) findViewById(R.id.foundsNeededY4_field), String.valueOf(dec.format(totalY4)));
+            setText2((TextView) findViewById(R.id.foundsNeededY5_field), String.valueOf(dec.format(totalY5)));
+            setText2((TextView) findViewById(R.id.foundsNeededY6_field), String.valueOf(dec.format(totalY6)));
             setText2((TextView) findViewById(R.id.foundsNeededY7_field), String.valueOf(dec.format(totalY7)));
+
             //profit or lost
             int pl1 = availableY1-totalY1;
             int pl2 = availableY2-totalY2;
@@ -2722,11 +2721,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else{
                 pyl7.setTextColor(Color.parseColor("#cc0000"));
             }
-        }
-    }
-
-    private void setText(EditText textField, String text) {   if (textField != null) {
-            textField.setText(text);
         }
     }
 

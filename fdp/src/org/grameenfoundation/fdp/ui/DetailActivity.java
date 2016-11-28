@@ -531,6 +531,27 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	}
 
 	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+		// Save variables on screen orientation change. Save the user's current game state
+		savedInstanceState.putString(OBJECT_ID_KEY, objectId);
+		savedInstanceState.putString(OBJECT_TITLE_KEY, objectTitle);
+		savedInstanceState.putString(OBJECT_NAME_KEY, objNameKey);
+
+		// Always call the superclass so it can save the view hierarchy state
+		super.onSaveInstanceState(savedInstanceState);
+	}
+
+	public void onRestoreInstanceState(Bundle savedInstanceState) {
+		// Always call the superclass so it can restore the view hierarchy
+		super.onRestoreInstanceState(savedInstanceState);
+
+		// Restore variables on screen orientation change. Restore state members from saved instance
+		objectId = savedInstanceState.getString(OBJECT_ID_KEY);
+		objectTitle = savedInstanceState.getString(OBJECT_TITLE_KEY);
+		objNameKey = savedInstanceState.getString(OBJECT_NAME_KEY);
+	}
+
+	@Override
 	public void onResume(RestClient client) {
 		curAccount = SmartSyncSDKManager.getInstance().getUserAccountManager().getCurrentUser();
 		getLoaderManager().initLoader(CONTACT_DETAIL_LOADER_ID, null, this).forceLoad();

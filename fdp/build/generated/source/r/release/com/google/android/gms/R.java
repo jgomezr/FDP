@@ -36,13 +36,13 @@ public final class R {
 		public static final int none = 0x7f0d0002;
 	}
 	public static final class integer {
-		public static final int google_play_services_version = 0x7f0a0000;
+		public static final int google_play_services_version = 0x7f0a04ad;
 	}
 	public static final class raw {
 	}
 	public static final class string {
-		public static final int auth_google_play_services_client_facebook_display_name = 0x7f06002e;
-		public static final int auth_google_play_services_client_google_display_name = 0x7f06002f;
+		public static final int auth_google_play_services_client_facebook_display_name = 0x7f06002f;
+		public static final int auth_google_play_services_client_google_display_name = 0x7f060030;
 		public static final int common_android_wear_notification_needs_update_text = 0x7f060000;
 		public static final int common_android_wear_update_text = 0x7f060001;
 		public static final int common_android_wear_update_title = 0x7f060002;

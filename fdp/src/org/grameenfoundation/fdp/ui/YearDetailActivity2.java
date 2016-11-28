@@ -168,7 +168,7 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
         if (sObject != null) {
 
             //visibility of plots
-            if (sObject.getNumberOfPlots().equals("1")){
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 p1.setVisibility(View.VISIBLE);
                 p1jan.setVisibility(View.VISIBLE);
                 p1feb.setVisibility(View.VISIBLE);
@@ -183,21 +183,9 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 p1nov.setVisibility(View.VISIBLE);
                 p1dec.setVisibility(View.VISIBLE);
 
-            }else if (sObject.getNumberOfPlots().equals("2")){
-                p1.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 p2.setVisibility(View.VISIBLE);
-                p1jan.setVisibility(View.VISIBLE);
-                p1feb.setVisibility(View.VISIBLE);
-                p1mar.setVisibility(View.VISIBLE);
-                p1apr.setVisibility(View.VISIBLE);
-                p1may.setVisibility(View.VISIBLE);
-                p1jun.setVisibility(View.VISIBLE);
-                p1jul.setVisibility(View.VISIBLE);
-                p1aug.setVisibility(View.VISIBLE);
-                p1sep.setVisibility(View.VISIBLE);
-                p1oct.setVisibility(View.VISIBLE);
-                p1nov.setVisibility(View.VISIBLE);
-                p1dec.setVisibility(View.VISIBLE);
                 p2jan.setVisibility(View.VISIBLE);
                 p2feb.setVisibility(View.VISIBLE);
                 p2mar.setVisibility(View.VISIBLE);
@@ -211,34 +199,9 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 p2nov.setVisibility(View.VISIBLE);
                 p2dec.setVisibility(View.VISIBLE);
 
-            }else if (sObject.getNumberOfPlots().equals("3")){
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 p3.setVisibility(View.VISIBLE);
-                p1jan.setVisibility(View.VISIBLE);
-                p1feb.setVisibility(View.VISIBLE);
-                p1mar.setVisibility(View.VISIBLE);
-                p1apr.setVisibility(View.VISIBLE);
-                p1may.setVisibility(View.VISIBLE);
-                p1jun.setVisibility(View.VISIBLE);
-                p1jul.setVisibility(View.VISIBLE);
-                p1aug.setVisibility(View.VISIBLE);
-                p1sep.setVisibility(View.VISIBLE);
-                p1oct.setVisibility(View.VISIBLE);
-                p1nov.setVisibility(View.VISIBLE);
-                p1dec.setVisibility(View.VISIBLE);
-                p2jan.setVisibility(View.VISIBLE);
-                p2feb.setVisibility(View.VISIBLE);
-                p2mar.setVisibility(View.VISIBLE);
-                p2apr.setVisibility(View.VISIBLE);
-                p2may.setVisibility(View.VISIBLE);
-                p2jun.setVisibility(View.VISIBLE);
-                p2jul.setVisibility(View.VISIBLE);
-                p2aug.setVisibility(View.VISIBLE);
-                p2sep.setVisibility(View.VISIBLE);
-                p2oct.setVisibility(View.VISIBLE);
-                p2nov.setVisibility(View.VISIBLE);
-                p2dec.setVisibility(View.VISIBLE);
                 p3jan.setVisibility(View.VISIBLE);
                 p3feb.setVisibility(View.VISIBLE);
                 p3mar.setVisibility(View.VISIBLE);
@@ -252,47 +215,9 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 p3nov.setVisibility(View.VISIBLE);
                 p3dec.setVisibility(View.VISIBLE);
 
-            }else if (sObject.getNumberOfPlots().equals("4")){
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.VISIBLE);
-                p3.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 p4.setVisibility(View.VISIBLE);
-                p1jan.setVisibility(View.VISIBLE);
-                p1feb.setVisibility(View.VISIBLE);
-                p1mar.setVisibility(View.VISIBLE);
-                p1apr.setVisibility(View.VISIBLE);
-                p1may.setVisibility(View.VISIBLE);
-                p1jun.setVisibility(View.VISIBLE);
-                p1jul.setVisibility(View.VISIBLE);
-                p1aug.setVisibility(View.VISIBLE);
-                p1sep.setVisibility(View.VISIBLE);
-                p1oct.setVisibility(View.VISIBLE);
-                p1nov.setVisibility(View.VISIBLE);
-                p1dec.setVisibility(View.VISIBLE);
-                p2jan.setVisibility(View.VISIBLE);
-                p2feb.setVisibility(View.VISIBLE);
-                p2mar.setVisibility(View.VISIBLE);
-                p2apr.setVisibility(View.VISIBLE);
-                p2may.setVisibility(View.VISIBLE);
-                p2jun.setVisibility(View.VISIBLE);
-                p2jul.setVisibility(View.VISIBLE);
-                p2aug.setVisibility(View.VISIBLE);
-                p2sep.setVisibility(View.VISIBLE);
-                p2oct.setVisibility(View.VISIBLE);
-                p2nov.setVisibility(View.VISIBLE);
-                p2dec.setVisibility(View.VISIBLE);
-                p3jan.setVisibility(View.VISIBLE);
-                p3feb.setVisibility(View.VISIBLE);
-                p3mar.setVisibility(View.VISIBLE);
-                p3apr.setVisibility(View.VISIBLE);
-                p3may.setVisibility(View.VISIBLE);
-                p3jun.setVisibility(View.VISIBLE);
-                p3jul.setVisibility(View.VISIBLE);
-                p3aug.setVisibility(View.VISIBLE);
-                p3sep.setVisibility(View.VISIBLE);
-                p3oct.setVisibility(View.VISIBLE);
-                p3nov.setVisibility(View.VISIBLE);
-                p3dec.setVisibility(View.VISIBLE);
                 p4jan.setVisibility(View.VISIBLE);
                 p4feb.setVisibility(View.VISIBLE);
                 p4mar.setVisibility(View.VISIBLE);
@@ -306,60 +231,9 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 p4nov.setVisibility(View.VISIBLE);
                 p4dec.setVisibility(View.VISIBLE);
 
-            }else{
-                p1.setVisibility(View.VISIBLE);
-                p2.setVisibility(View.VISIBLE);
-                p3.setVisibility(View.VISIBLE);
-                p4.setVisibility(View.VISIBLE);
+            }
+            if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 p5.setVisibility(View.VISIBLE);
-                p1jan.setVisibility(View.VISIBLE);
-                p1feb.setVisibility(View.VISIBLE);
-                p1mar.setVisibility(View.VISIBLE);
-                p1apr.setVisibility(View.VISIBLE);
-                p1may.setVisibility(View.VISIBLE);
-                p1jun.setVisibility(View.VISIBLE);
-                p1jul.setVisibility(View.VISIBLE);
-                p1aug.setVisibility(View.VISIBLE);
-                p1sep.setVisibility(View.VISIBLE);
-                p1oct.setVisibility(View.VISIBLE);
-                p1nov.setVisibility(View.VISIBLE);
-                p1dec.setVisibility(View.VISIBLE);
-                p2jan.setVisibility(View.VISIBLE);
-                p2feb.setVisibility(View.VISIBLE);
-                p2mar.setVisibility(View.VISIBLE);
-                p2apr.setVisibility(View.VISIBLE);
-                p2may.setVisibility(View.VISIBLE);
-                p2jun.setVisibility(View.VISIBLE);
-                p2jul.setVisibility(View.VISIBLE);
-                p2aug.setVisibility(View.VISIBLE);
-                p2sep.setVisibility(View.VISIBLE);
-                p2oct.setVisibility(View.VISIBLE);
-                p2nov.setVisibility(View.VISIBLE);
-                p2dec.setVisibility(View.VISIBLE);
-                p3jan.setVisibility(View.VISIBLE);
-                p3feb.setVisibility(View.VISIBLE);
-                p3mar.setVisibility(View.VISIBLE);
-                p3apr.setVisibility(View.VISIBLE);
-                p3may.setVisibility(View.VISIBLE);
-                p3jun.setVisibility(View.VISIBLE);
-                p3jul.setVisibility(View.VISIBLE);
-                p3aug.setVisibility(View.VISIBLE);
-                p3sep.setVisibility(View.VISIBLE);
-                p3oct.setVisibility(View.VISIBLE);
-                p3nov.setVisibility(View.VISIBLE);
-                p3dec.setVisibility(View.VISIBLE);
-                p4jan.setVisibility(View.VISIBLE);
-                p4feb.setVisibility(View.VISIBLE);
-                p4mar.setVisibility(View.VISIBLE);
-                p4apr.setVisibility(View.VISIBLE);
-                p4may.setVisibility(View.VISIBLE);
-                p4jun.setVisibility(View.VISIBLE);
-                p4jul.setVisibility(View.VISIBLE);
-                p4aug.setVisibility(View.VISIBLE);
-                p4sep.setVisibility(View.VISIBLE);
-                p4oct.setVisibility(View.VISIBLE);
-                p4nov.setVisibility(View.VISIBLE);
-                p4dec.setVisibility(View.VISIBLE);
                 p5jan.setVisibility(View.VISIBLE);
                 p5feb.setVisibility(View.VISIBLE);
                 p5mar.setVisibility(View.VISIBLE);
@@ -444,420 +318,837 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
             DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             //conditions to show info per plot
 
-            if (yearLaunch.equals("4")){
-                setText((TextView) findViewById(R.id.yearDetail),"YEAR 4");
-                //all plots
-                setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                //plot 1
-                if (sObject.getFarmCondition1().equals("B") || sObject.getTreeDensity1().equals("B") || sObject.getDebilitatingDisease1().equals("B")) {
-                    //Replanting
-                    janP1 =(int) (plot1Area * 630000);
-                    febP1 =(int) (plot1Area * 1071000);
-                    marP1 =(int) (plot1Area * 6949500);
-                    aprP1 =(int) (plot1Area * 1917000);
-                    mayP1 =(int) (plot1Area * 3171000);
-                    junP1 =(int) (plot1Area * 6790000);
-                    julP1 =(int) (plot1Area * 855000);
-                    augP1 =(int) (plot1Area * 1146000);
-                    sepP1 =(int) (plot1Area * 1767000);
-                    octP1 =(int) (plot1Area * 1767000);
-                    novP1 =(int) (plot1Area * 2171000);
-                    decP1 =(int) (plot1Area * 6637500);
-                    setText((TextView) findViewById(R.id.p1jcs),String.valueOf(dec.format(janP1)));
-                    setText((TextView) findViewById(R.id.p1fcs), String.valueOf(dec.format(febP1)));
-                    setText((TextView) findViewById(R.id.p1mrcs), String.valueOf(dec.format(marP1)));
-                    setText((TextView) findViewById(R.id.p1acs), String.valueOf(dec.format(aprP1)));
-                    setText((TextView) findViewById(R.id.p1mycs), String.valueOf(dec.format(mayP1)));
-                    setText((TextView) findViewById(R.id.p1jncs), String.valueOf(dec.format(junP1)));
-                    setText((TextView) findViewById(R.id.p1jlcs), String.valueOf(dec.format(julP1)));
-                    setText((TextView) findViewById(R.id.p1agcs), String.valueOf(dec.format(augP1)));
-                    setText((TextView) findViewById(R.id.p1spcs), String.valueOf(dec.format(sepP1)));
-                    setText((TextView) findViewById(R.id.p1occs), String.valueOf(dec.format(octP1)));
-                    setText((TextView) findViewById(R.id.p1nvcs), String.valueOf(dec.format(novP1)));
-                    setText((TextView) findViewById(R.id.p1dccs), String.valueOf(dec.format(decP1)));
-                }else{
-                    janP1 =(int) (plot1Area * 705000);
-                    febP1 =(int) (plot1Area * 1146000);
-                    marP1 =(int) (plot1Area * 7024500);
-                    aprP1 =(int) (plot1Area * 2067000);
-                    mayP1 =(int) (plot1Area * 3321000);
-                    junP1 =(int) (plot1Area * 6940000);
-                    julP1 =(int) (plot1Area * 1005000);
-                    augP1 =(int) (plot1Area * 1146000);
-                    sepP1 =(int) (plot1Area * 1767000);
-                    octP1 =(int) (plot1Area * 1767000);
-                    novP1 =(int) (plot1Area * 2171000);
-                    decP1 =(int) (plot1Area * 6637500);
-                    setText((TextView) findViewById(R.id.p1jcs),String.valueOf(dec.format(janP1)));
-                    setText((TextView) findViewById(R.id.p1fcs), String.valueOf(dec.format(febP1)));
-                    setText((TextView) findViewById(R.id.p1mrcs), String.valueOf(dec.format(marP1)));
-                    setText((TextView) findViewById(R.id.p1acs), String.valueOf(dec.format(aprP1)));
-                    setText((TextView) findViewById(R.id.p1mycs), String.valueOf(dec.format(mayP1)));
-                    setText((TextView) findViewById(R.id.p1jncs), String.valueOf(dec.format(junP1)));
-                    setText((TextView) findViewById(R.id.p1jlcs), String.valueOf(dec.format(julP1)));
-                    setText((TextView) findViewById(R.id.p1agcs), String.valueOf(dec.format(augP1)));
-                    setText((TextView) findViewById(R.id.p1spcs), String.valueOf(dec.format(sepP1)));
-                    setText((TextView) findViewById(R.id.p1occs), String.valueOf(dec.format(octP1)));
-                    setText((TextView) findViewById(R.id.p1nvcs), String.valueOf(dec.format(novP1)));
-                    setText((TextView) findViewById(R.id.p1dccs), String.valueOf(dec.format(decP1)));
-                }
-                //plot 2
-                if (sObject.getFarmCondition2().equals("B") || sObject.getTreeDensity2().equals("B") || sObject.getDebilitatingDisease2().equals("B")) {
-                    //Replanting
-                    janP2 =(int) (plot2Area * 630000);
-                    febP2 =(int) (plot2Area * 1071000);
-                    marP2 =(int) (plot2Area * 6949500);
-                    aprP2 =(int) (plot2Area * 1917000);
-                    mayP2 =(int) (plot2Area * 3171000);
-                    junP2 =(int) (plot2Area * 6790000);
-                    julP2 =(int) (plot2Area * 855000);
-                    augP2 =(int) (plot2Area * 1146000);
-                    sepP2 =(int) (plot2Area * 1767000);
-                    octP2 =(int) (plot2Area * 1767000);
-                    novP2 =(int) (plot2Area * 2171000);
-                    decP2 =(int) (plot2Area * 6637500);
-                    setText((TextView) findViewById(R.id.p2jcs),String.valueOf(dec.format(janP2)));
-                    setText((TextView) findViewById(R.id.p2fcs), String.valueOf(dec.format(febP2)));
-                    setText((TextView) findViewById(R.id.p2mrcs), String.valueOf(dec.format(marP2)));
-                    setText((TextView) findViewById(R.id.p2acs), String.valueOf(dec.format(aprP2)));
-                    setText((TextView) findViewById(R.id.p2mycs), String.valueOf(dec.format(mayP2)));
-                    setText((TextView) findViewById(R.id.p2jncs), String.valueOf(dec.format(junP2)));
-                    setText((TextView) findViewById(R.id.p2jlcs), String.valueOf(dec.format(julP2)));
-                    setText((TextView) findViewById(R.id.p2agcs), String.valueOf(dec.format(augP2)));
-                    setText((TextView) findViewById(R.id.p2spcs), String.valueOf(dec.format(sepP2)));
-                    setText((TextView) findViewById(R.id.p2occs), String.valueOf(dec.format(octP2)));
-                    setText((TextView) findViewById(R.id.p2nvcs), String.valueOf(dec.format(novP2)));
-                    setText((TextView) findViewById(R.id.p2dccs), String.valueOf(dec.format(decP2)));
-                }else{
-                    janP2 =(int) (plot2Area * 705000);
-                    febP2 =(int) (plot2Area * 1146000);
-                    marP2 =(int) (plot2Area * 7024500);
-                    aprP2 =(int) (plot2Area * 2067000);
-                    mayP2 =(int) (plot2Area * 3321000);
-                    junP2 =(int) (plot2Area * 6940000);
-                    julP2 =(int) (plot2Area * 1005000);
-                    augP2 =(int) (plot2Area * 1146000);
-                    sepP2 =(int) (plot2Area * 1767000);
-                    octP2 =(int) (plot2Area * 1767000);
-                    novP2 =(int) (plot2Area * 2171000);
-                    decP2 =(int) (plot2Area * 6637500);
-                    setText((TextView) findViewById(R.id.p2jcs),String.valueOf(dec.format(janP2)));
-                    setText((TextView) findViewById(R.id.p2fcs), String.valueOf(dec.format(febP2)));
-                    setText((TextView) findViewById(R.id.p2mrcs), String.valueOf(dec.format(marP2)));
-                    setText((TextView) findViewById(R.id.p2acs), String.valueOf(dec.format(aprP2)));
-                    setText((TextView) findViewById(R.id.p2mycs), String.valueOf(dec.format(mayP2)));
-                    setText((TextView) findViewById(R.id.p2jncs), String.valueOf(dec.format(junP2)));
-                    setText((TextView) findViewById(R.id.p2jlcs), String.valueOf(dec.format(julP2)));
-                    setText((TextView) findViewById(R.id.p2agcs), String.valueOf(dec.format(augP2)));
-                    setText((TextView) findViewById(R.id.p2spcs), String.valueOf(dec.format(sepP2)));
-                    setText((TextView) findViewById(R.id.p2occs), String.valueOf(dec.format(octP2)));
-                    setText((TextView) findViewById(R.id.p2nvcs), String.valueOf(dec.format(novP2)));
-                    setText((TextView) findViewById(R.id.p2dccs), String.valueOf(dec.format(decP2)));
-                }
-                //plot 3
-                if (sObject.getFarmCondition3().equals("B") || sObject.getTreeDensity3().equals("B") || sObject.getDebilitatingDisease3().equals("B")) {
-                    //Replanting
-                    janP3 =(int) (plot3Area * 630000);
-                    febP3 =(int) (plot3Area * 1071000);
-                    marP3 =(int) (plot3Area * 6949500);
-                    aprP3 =(int) (plot3Area * 1917000);
-                    mayP3 =(int) (plot3Area * 3171000);
-                    junP3 =(int) (plot3Area * 6790000);
-                    julP3 =(int) (plot3Area * 855000);
-                    augP3 =(int) (plot3Area * 1146000);
-                    sepP3 =(int) (plot3Area * 1767000);
-                    octP3 =(int) (plot3Area * 1767000);
-                    novP3 =(int) (plot3Area * 2171000);
-                    decP3 =(int) (plot3Area * 6637500);
-                    setText((TextView) findViewById(R.id.p3jcs),String.valueOf(dec.format(janP3)));
-                    setText((TextView) findViewById(R.id.p3fcs), String.valueOf(dec.format(febP3)));
-                    setText((TextView) findViewById(R.id.p3mrcs), String.valueOf(dec.format(marP3)));
-                    setText((TextView) findViewById(R.id.p3acs), String.valueOf(dec.format(aprP3)));
-                    setText((TextView) findViewById(R.id.p3mycs), String.valueOf(dec.format(mayP3)));
-                    setText((TextView) findViewById(R.id.p3jncs), String.valueOf(dec.format(junP3)));
-                    setText((TextView) findViewById(R.id.p3jlcs), String.valueOf(dec.format(julP3)));
-                    setText((TextView) findViewById(R.id.p3agcs), String.valueOf(dec.format(augP3)));
-                    setText((TextView) findViewById(R.id.p3spcs), String.valueOf(dec.format(sepP3)));
-                    setText((TextView) findViewById(R.id.p3occs), String.valueOf(dec.format(octP3)));
-                    setText((TextView) findViewById(R.id.p3nvcs), String.valueOf(dec.format(novP3)));
-                    setText((TextView) findViewById(R.id.p3dccs), String.valueOf(dec.format(decP3)));
-                }else{
-                    janP3 =(int) (plot3Area * 705000);
-                    febP3 =(int) (plot3Area * 1146000);
-                    marP3 =(int) (plot3Area * 7024500);
-                    aprP3 =(int) (plot3Area * 2067000);
-                    mayP3 =(int) (plot3Area * 3321000);
-                    junP3 =(int) (plot3Area * 6940000);
-                    julP3 =(int) (plot3Area * 1005000);
-                    augP3 =(int) (plot3Area * 1146000);
-                    sepP3 =(int) (plot3Area * 1767000);
-                    octP3 =(int) (plot3Area * 1767000);
-                    novP3 =(int) (plot3Area * 2171000);
-                    decP3 =(int) (plot3Area * 6637500);
-                    setText((TextView) findViewById(R.id.p3jcs),String.valueOf(dec.format(janP3)));
-                    setText((TextView) findViewById(R.id.p3fcs), String.valueOf(dec.format(febP3)));
-                    setText((TextView) findViewById(R.id.p3mrcs), String.valueOf(dec.format(marP3)));
-                    setText((TextView) findViewById(R.id.p3acs), String.valueOf(dec.format(aprP3)));
-                    setText((TextView) findViewById(R.id.p3mycs), String.valueOf(dec.format(mayP3)));
-                    setText((TextView) findViewById(R.id.p3jncs), String.valueOf(dec.format(junP3)));
-                    setText((TextView) findViewById(R.id.p3jlcs), String.valueOf(dec.format(julP3)));
-                    setText((TextView) findViewById(R.id.p3agcs), String.valueOf(dec.format(augP3)));
-                    setText((TextView) findViewById(R.id.p3spcs), String.valueOf(dec.format(sepP3)));
-                    setText((TextView) findViewById(R.id.p3occs), String.valueOf(dec.format(octP3)));
-                    setText((TextView) findViewById(R.id.p3nvcs), String.valueOf(dec.format(novP3)));
-                    setText((TextView) findViewById(R.id.p3dccs), String.valueOf(dec.format(decP3)));
-                }
-                //plot 4
-                if (sObject.getFarmCondition1().equals("B") || sObject.getTreeDensity4().equals("B") || sObject.getDebilitatingDisease4().equals("B")) {
-                    //Replanting
-                    janP4 =(int) (plot4Area * 630000);
-                    febP4 =(int) (plot4Area * 1071000);
-                    marP4 =(int) (plot4Area * 6949500);
-                    aprP4 =(int) (plot4Area * 1917000);
-                    mayP4 =(int) (plot4Area * 3171000);
-                    junP4 =(int) (plot4Area * 6790000);
-                    julP4 =(int) (plot4Area * 855000);
-                    augP4 =(int) (plot4Area * 1146000);
-                    sepP4 =(int) (plot4Area * 1767000);
-                    octP4 =(int) (plot4Area * 1767000);
-                    novP4 =(int) (plot4Area * 2171000);
-                    decP4 =(int) (plot4Area * 6637500);
-                    setText((TextView) findViewById(R.id.p4jcs),String.valueOf(dec.format(janP4)));
-                    setText((TextView) findViewById(R.id.p4fcs), String.valueOf(dec.format(febP4)));
-                    setText((TextView) findViewById(R.id.p4mrcs), String.valueOf(dec.format(marP4)));
-                    setText((TextView) findViewById(R.id.p4acs), String.valueOf(dec.format(aprP4)));
-                    setText((TextView) findViewById(R.id.p4mycs), String.valueOf(dec.format(mayP4)));
-                    setText((TextView) findViewById(R.id.p4jncs), String.valueOf(dec.format(junP4)));
-                    setText((TextView) findViewById(R.id.p4jlcs), String.valueOf(dec.format(julP4)));
-                    setText((TextView) findViewById(R.id.p4agcs), String.valueOf(dec.format(augP4)));
-                    setText((TextView) findViewById(R.id.p4spcs), String.valueOf(dec.format(sepP4)));
-                    setText((TextView) findViewById(R.id.p4occs), String.valueOf(dec.format(octP4)));
-                    setText((TextView) findViewById(R.id.p4nvcs), String.valueOf(dec.format(novP4)));
-                    setText((TextView) findViewById(R.id.p4dccs), String.valueOf(dec.format(decP4)));
-                }else{
-                    janP4 =(int) (plot4Area * 705000);
-                    febP4 =(int) (plot4Area * 1146000);
-                    marP4 =(int) (plot4Area * 7024500);
-                    aprP4 =(int) (plot4Area * 2067000);
-                    mayP4 =(int) (plot4Area * 3321000);
-                    junP4 =(int) (plot4Area * 6940000);
-                    julP4 =(int) (plot4Area * 1005000);
-                    augP4 =(int) (plot4Area * 1146000);
-                    sepP4 =(int) (plot4Area * 1767000);
-                    octP4 =(int) (plot4Area * 1767000);
-                    novP4 =(int) (plot4Area * 2171000);
-                    decP4 =(int) (plot4Area * 6637500);
-                    setText((TextView) findViewById(R.id.p4jcs),String.valueOf(dec.format(janP4)));
-                    setText((TextView) findViewById(R.id.p4fcs), String.valueOf(dec.format(febP4)));
-                    setText((TextView) findViewById(R.id.p4mrcs), String.valueOf(dec.format(marP4)));
-                    setText((TextView) findViewById(R.id.p4acs), String.valueOf(dec.format(aprP4)));
-                    setText((TextView) findViewById(R.id.p4mycs), String.valueOf(dec.format(mayP4)));
-                    setText((TextView) findViewById(R.id.p4jncs), String.valueOf(dec.format(junP4)));
-                    setText((TextView) findViewById(R.id.p4jlcs), String.valueOf(dec.format(julP4)));
-                    setText((TextView) findViewById(R.id.p4agcs), String.valueOf(dec.format(augP4)));
-                    setText((TextView) findViewById(R.id.p4spcs), String.valueOf(dec.format(sepP4)));
-                    setText((TextView) findViewById(R.id.p4occs), String.valueOf(dec.format(octP4)));
-                    setText((TextView) findViewById(R.id.p4nvcs), String.valueOf(dec.format(novP4)));
-                    setText((TextView) findViewById(R.id.p4dccs), String.valueOf(dec.format(decP4)));
-                }
-                //plot 5
-                if (sObject.getFarmCondition5().equals("B") || sObject.getTreeDensity5().equals("B") || sObject.getDebilitatingDisease5().equals("B")) {
-                    //Replanting
-                    janP5 =(int) (plot5Area * 630000);
-                    febP5 =(int) (plot5Area * 1071000);
-                    marP5 =(int) (plot5Area * 6949500);
-                    aprP5 =(int) (plot5Area * 1917000);
-                    mayP5 =(int) (plot5Area * 3171000);
-                    junP5 =(int) (plot5Area * 6790000);
-                    julP5 =(int) (plot5Area * 855000);
-                    augP5 =(int) (plot5Area * 1146000);
-                    sepP5 =(int) (plot5Area * 1767000);
-                    octP5 =(int) (plot5Area * 1767000);
-                    novP5 =(int) (plot5Area * 2171000);
-                    decP5 =(int) (plot5Area * 6637500);
-                    setText((TextView) findViewById(R.id.p5jcs),String.valueOf(dec.format(janP5)));
-                    setText((TextView) findViewById(R.id.p5fcs), String.valueOf(dec.format(febP5)));
-                    setText((TextView) findViewById(R.id.p5mrcs), String.valueOf(dec.format(marP5)));
-                    setText((TextView) findViewById(R.id.p5acs), String.valueOf(dec.format(aprP5)));
-                    setText((TextView) findViewById(R.id.p5mycs), String.valueOf(dec.format(mayP5)));
-                    setText((TextView) findViewById(R.id.p5jncs), String.valueOf(dec.format(junP5)));
-                    setText((TextView) findViewById(R.id.p5jlcs), String.valueOf(dec.format(julP5)));
-                    setText((TextView) findViewById(R.id.p5agcs), String.valueOf(dec.format(augP5)));
-                    setText((TextView) findViewById(R.id.p5spcs), String.valueOf(dec.format(sepP5)));
-                    setText((TextView) findViewById(R.id.p5occs), String.valueOf(dec.format(octP5)));
-                    setText((TextView) findViewById(R.id.p5nvcs), String.valueOf(dec.format(novP5)));
-                    setText((TextView) findViewById(R.id.p5dccs), String.valueOf(dec.format(decP5)));
-                }else{
-                    janP5 =(int) (plot5Area * 705000);
-                    febP5 =(int) (plot5Area * 1146000);
-                    marP5 =(int) (plot5Area * 7024500);
-                    aprP5 =(int) (plot5Area * 2067000);
-                    mayP5 =(int) (plot5Area * 3321000);
-                    junP5 =(int) (plot5Area * 6940000);
-                    julP5 =(int) (plot5Area * 1005000);
-                    augP5 =(int) (plot5Area * 1146000);
-                    sepP5 =(int) (plot5Area * 1767000);
-                    octP5 =(int) (plot5Area * 1767000);
-                    novP5 =(int) (plot5Area * 2171000);
-                    decP5 =(int) (plot5Area * 6637500);
-                    setText((TextView) findViewById(R.id.p5jcs),String.valueOf(dec.format(janP5)));
-                    setText((TextView) findViewById(R.id.p5fcs), String.valueOf(dec.format(febP5)));
-                    setText((TextView) findViewById(R.id.p5mrcs), String.valueOf(dec.format(marP5)));
-                    setText((TextView) findViewById(R.id.p5acs), String.valueOf(dec.format(aprP5)));
-                    setText((TextView) findViewById(R.id.p5mycs), String.valueOf(dec.format(mayP5)));
-                    setText((TextView) findViewById(R.id.p5jncs), String.valueOf(dec.format(junP5)));
-                    setText((TextView) findViewById(R.id.p5jlcs), String.valueOf(dec.format(julP5)));
-                    setText((TextView) findViewById(R.id.p5agcs), String.valueOf(dec.format(augP5)));
-                    setText((TextView) findViewById(R.id.p5spcs), String.valueOf(dec.format(sepP5)));
-                    setText((TextView) findViewById(R.id.p5occs), String.valueOf(dec.format(octP5)));
-                    setText((TextView) findViewById(R.id.p5nvcs), String.valueOf(dec.format(novP5)));
-                    setText((TextView) findViewById(R.id.p5dccs), String.valueOf(dec.format(decP5)));
-                }
-            }
             if (yearLaunch.equals("5")){
                 setText((TextView) findViewById(R.id.yearDetail),"YEAR 5");
-                //plot 1
-                setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                if (sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p1jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p1aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p1splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p1oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p1dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)));
+                    }
+                }else if((sObject.getFarmCondition1().equals("G")&&sObject.getGENETIC1().equals("B"))||(sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p1jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5May)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY5Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)));
+                    }
+                } else if (sObject.getSOILMNG1().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5May)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY5Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
 
-                setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 2
+                if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p2jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p2aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p2splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p2oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p2dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)));
+                    }
+                }else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p2jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5May)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY5Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)));
+                    }
+                } else if (sObject.getSOILMNG2().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5May)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY5Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 3
+                if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p3jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p3aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p3splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p3oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p3dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)));
+                    }
+                }else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p3jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5May)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY5Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)));
+                    }
+                } else if (sObject.getSOILMNG3().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5May)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY5Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 4
+                if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p4jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p4aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p4splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p4oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p4dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)));
+                    }
+                }else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p4jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5May)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY5Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)));
+                    }
+                } else if (sObject.getSOILMNG4().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5May)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY5Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)));
+                    }
+                }
 
-                janP1 =(int) (plot1Area * 705000);
-                febP1 =(int) (plot1Area * 1146000);
-                marP1 =(int) (plot1Area * 7024500);
-                aprP1 =(int) (plot1Area * 2067000);
-                mayP1 =(int) (plot1Area * 3321000);
-                junP1 =(int) (plot1Area * 6940000);
-                julP1 =(int) (plot1Area * 1005000);
-                augP1 =(int) (plot1Area * 1146000);
-                sepP1 =(int) (plot1Area * 1767000);
-                octP1 =(int) (plot1Area * 1767000);
-                novP1 =(int) (plot1Area * 2171000);
-                decP1 =(int) (plot1Area * 6637500);
+                //plot 5
+                if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p5jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p5aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p5splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p5oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p5dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)));
+                    }
+                }else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p5jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5May)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY5Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY5Dec)));
+                    }
+                } else if (sObject.getSOILMNG5().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY5Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5May)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY5Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY5Dec)));
+                    }
+                }
                 setText((TextView) findViewById(R.id.p1jcs),String.valueOf(dec.format(janP1)));
                 setText((TextView) findViewById(R.id.p1fcs), String.valueOf(dec.format(febP1)));
                 setText((TextView) findViewById(R.id.p1mrcs), String.valueOf(dec.format(marP1)));
@@ -871,18 +1162,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p1nvcs), String.valueOf(dec.format(novP1)));
                 setText((TextView) findViewById(R.id.p1dccs), String.valueOf(dec.format(decP1)));
 
-                janP2 =(int) (plot2Area * 705000);
-                febP2 =(int) (plot2Area * 1146000);
-                marP2 =(int) (plot2Area * 7024500);
-                aprP2 =(int) (plot2Area * 2067000);
-                mayP2 =(int) (plot2Area * 3321000);
-                junP2 =(int) (plot2Area * 6940000);
-                julP2 =(int) (plot2Area * 1005000);
-                augP2 =(int) (plot2Area * 1146000);
-                sepP2 =(int) (plot2Area * 1767000);
-                octP2 =(int) (plot2Area * 1767000);
-                novP2 =(int) (plot2Area * 2171000);
-                decP2 =(int) (plot2Area * 6637500);
                 setText((TextView) findViewById(R.id.p2jcs),String.valueOf(dec.format(janP2)));
                 setText((TextView) findViewById(R.id.p2fcs), String.valueOf(dec.format(febP2)));
                 setText((TextView) findViewById(R.id.p2mrcs), String.valueOf(dec.format(marP2)));
@@ -896,18 +1175,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p2nvcs), String.valueOf(dec.format(novP2)));
                 setText((TextView) findViewById(R.id.p2dccs), String.valueOf(dec.format(decP2)));
 
-                janP3 =(int) (plot3Area * 705000);
-                febP3 =(int) (plot3Area * 1146000);
-                marP3 =(int) (plot3Area * 7024500);
-                aprP3 =(int) (plot3Area * 2067000);
-                mayP3 =(int) (plot3Area * 3321000);
-                junP3 =(int) (plot3Area * 6940000);
-                julP3 =(int) (plot3Area * 1005000);
-                augP3 =(int) (plot3Area * 1146000);
-                sepP3 =(int) (plot3Area * 1767000);
-                octP3 =(int) (plot3Area * 1767000);
-                novP3 =(int) (plot3Area * 2171000);
-                decP3 =(int) (plot3Area * 6637500);
                 setText((TextView) findViewById(R.id.p3jcs),String.valueOf(dec.format(janP3)));
                 setText((TextView) findViewById(R.id.p3fcs), String.valueOf(dec.format(febP3)));
                 setText((TextView) findViewById(R.id.p3mrcs), String.valueOf(dec.format(marP3)));
@@ -921,18 +1188,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p3nvcs), String.valueOf(dec.format(novP3)));
                 setText((TextView) findViewById(R.id.p3dccs), String.valueOf(dec.format(decP3)));
 
-                janP4 =(int) (plot4Area * 705000);
-                febP4 =(int) (plot4Area * 1146000);
-                marP4 =(int) (plot4Area * 7024500);
-                aprP4 =(int) (plot4Area * 2067000);
-                mayP4 =(int) (plot4Area * 3321000);
-                junP4 =(int) (plot4Area * 6940000);
-                julP4 =(int) (plot4Area * 1005000);
-                augP4 =(int) (plot4Area * 1146000);
-                sepP4 =(int) (plot4Area * 1767000);
-                octP4 =(int) (plot4Area * 1767000);
-                novP4 =(int) (plot4Area * 2171000);
-                decP4 =(int) (plot4Area * 6637500);
                 setText((TextView) findViewById(R.id.p4jcs),String.valueOf(dec.format(janP4)));
                 setText((TextView) findViewById(R.id.p4fcs), String.valueOf(dec.format(febP4)));
                 setText((TextView) findViewById(R.id.p4mrcs), String.valueOf(dec.format(marP4)));
@@ -946,18 +1201,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p4nvcs), String.valueOf(dec.format(novP4)));
                 setText((TextView) findViewById(R.id.p4dccs), String.valueOf(dec.format(decP4)));
 
-                janP5 =(int) (plot5Area * 705000);
-                febP5 =(int) (plot5Area * 1146000);
-                marP5 =(int) (plot5Area * 7024500);
-                aprP5 =(int) (plot5Area * 2067000);
-                mayP5 =(int) (plot5Area * 3321000);
-                junP5 =(int) (plot5Area * 6940000);
-                julP5 =(int) (plot5Area * 1005000);
-                augP5 =(int) (plot5Area * 1146000);
-                sepP5 =(int) (plot5Area * 1767000);
-                octP5 =(int) (plot5Area * 1767000);
-                novP5 =(int) (plot5Area * 2171000);
-                decP5 =(int) (plot5Area * 6637500);
                 setText((TextView) findViewById(R.id.p5jcs),String.valueOf(dec.format(janP5)));
                 setText((TextView) findViewById(R.id.p5fcs), String.valueOf(dec.format(febP5)));
                 setText((TextView) findViewById(R.id.p5mrcs), String.valueOf(dec.format(marP5)));
@@ -971,86 +1214,838 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p5nvcs), String.valueOf(dec.format(novP5)));
                 setText((TextView) findViewById(R.id.p5dccs), String.valueOf(dec.format(decP5)));
             }
+
             if (yearLaunch.equals("6")){
                 setText((TextView) findViewById(R.id.yearDetail),"YEAR 6");
-                //plot 1
-                setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                if (sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p1jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p1aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p1splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p1oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p1dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(plot1Area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)));
+                    }
+                }else if((sObject.getFarmCondition1().equals("G")&&sObject.getGENETIC1().equals("B"))||(sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p1jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6May)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)))+(plot1Area * (getResources().getInteger(R.integer.GraftingLaborY6Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)));
+                    }
+                } else if (sObject.getSOILMNG1().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)))+(plot1Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor1().equals("Yes")) {
+                        janP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Jan))));
+                        febP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Feb))));
+                        marP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Mar))));
+                        aprP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Apr))));
+                        mayP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6May)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6May))));
+                        junP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Jun))));
+                        julP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Jul))));
+                        augP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Aug))));
+                        sepP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Sep))));
+                        octP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Oct))));
+                        novP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Nov))));
+                        decP1 = (int) ((plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)))+(plot1Area * (getResources().getInteger(R.integer.GAPSLaborY6Dec))));
+                    }else {
+                        janP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)));
+                        febP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)));
+                        marP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)));
+                        aprP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)));
+                        mayP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6May)));
+                        junP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)));
+                        julP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)));
+                        augP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)));
+                        sepP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)));
+                        octP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)));
+                        novP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)));
+                        decP1 = (int) (plot1Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
 
-                setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 2
+                if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p2jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p2aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p2splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p2oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p2dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(plot2Area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)));
+                    }
+                }else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p2jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6May)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)))+(plot2Area * (getResources().getInteger(R.integer.GraftingLaborY6Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)));
+                    }
+                } else if (sObject.getSOILMNG2().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)))+(plot2Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        janP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Jan))));
+                        febP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Feb))));
+                        marP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Mar))));
+                        aprP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Apr))));
+                        mayP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6May)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6May))));
+                        junP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Jun))));
+                        julP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Jul))));
+                        augP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Aug))));
+                        sepP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Sep))));
+                        octP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Oct))));
+                        novP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Nov))));
+                        decP2 = (int) ((plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)))+(plot2Area * (getResources().getInteger(R.integer.GAPSLaborY6Dec))));
+                    }else {
+                        janP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)));
+                        febP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)));
+                        marP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)));
+                        aprP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)));
+                        mayP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6May)));
+                        junP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)));
+                        julP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)));
+                        augP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)));
+                        sepP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)));
+                        octP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)));
+                        novP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)));
+                        decP2 = (int) (plot2Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 3
+                if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p3jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p3aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p3splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p3oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p3dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(plot3Area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)));
+                    }
+                }else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p3jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6May)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)))+(plot3Area * (getResources().getInteger(R.integer.GraftingLaborY6Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)));
+                    }
+                } else if (sObject.getSOILMNG3().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)))+(plot3Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        janP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Jan))));
+                        febP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Feb))));
+                        marP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Mar))));
+                        aprP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Apr))));
+                        mayP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6May)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6May))));
+                        junP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Jun))));
+                        julP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Jul))));
+                        augP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Aug))));
+                        sepP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Sep))));
+                        octP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Oct))));
+                        novP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Nov))));
+                        decP3 = (int) ((plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)))+(plot3Area * (getResources().getInteger(R.integer.GAPSLaborY6Dec))));
+                    }else {
+                        janP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)));
+                        febP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)));
+                        marP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)));
+                        aprP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)));
+                        mayP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6May)));
+                        junP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)));
+                        julP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)));
+                        augP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)));
+                        sepP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)));
+                        octP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)));
+                        novP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)));
+                        decP3 = (int) (plot3Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)));
+                    }
+                }
 
-                setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                //plot 4
+                if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p4jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p4aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p4splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p4oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p4dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(plot4Area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)));
+                    }
+                }else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p4jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6May)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)))+(plot4Area * (getResources().getInteger(R.integer.GraftingLaborY6Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)));
+                    }
+                } else if (sObject.getSOILMNG4().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)))+(plot4Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        janP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Jan))));
+                        febP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Feb))));
+                        marP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Mar))));
+                        aprP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Apr))));
+                        mayP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6May)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6May))));
+                        junP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Jun))));
+                        julP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Jul))));
+                        augP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Aug))));
+                        sepP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Sep))));
+                        octP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Oct))));
+                        novP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Nov))));
+                        decP4 = (int) ((plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)))+(plot4Area * (getResources().getInteger(R.integer.GAPSLaborY6Dec))));
+                    }else {
+                        janP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)));
+                        febP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)));
+                        marP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)));
+                        aprP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)));
+                        mayP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6May)));
+                        junP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)));
+                        julP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)));
+                        augP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)));
+                        sepP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)));
+                        octP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)));
+                        novP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)));
+                        decP4 = (int) (plot4Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)));
+                    }
+                }
 
-                janP1 =(int) (plot1Area * 705000);
-                febP1 =(int) (plot1Area * 1146000);
-                marP1 =(int) (plot1Area * 7024500);
-                aprP1 =(int) (plot1Area * 2067000);
-                mayP1 =(int) (plot1Area * 3321000);
-                junP1 =(int) (plot1Area * 6940000);
-                julP1 =(int) (plot1Area * 1005000);
-                augP1 =(int) (plot1Area * 1146000);
-                sepP1 =(int) (plot1Area * 1767000);
-                octP1 =(int) (plot1Area * 1767000);
-                novP1 =(int) (plot1Area * 2171000);
-                decP1 =(int) (plot1Area * 6637500);
+                //plot 5
+                if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())>25)){
+                    //Replanting
+                    setText((TextView) findViewById(R.id.p5jlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Harvest, ferment, dry, sell + Clearing");
+                    setText((TextView) findViewById(R.id.p5aglb), "Lining-cocoa and shade");
+                    setText((TextView) findViewById(R.id.p5splb), "Drainage");//conditional
+                    setText((TextView) findViewById(R.id.p5oclb), "Cocoa Planting + Shade Planting");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
+                    setText((TextView) findViewById(R.id.p5dclb), "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(plot5Area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)));
+                    }
+                }else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age().toString())<25))){
+                    //Grafting
+                    setText((TextView) findViewById(R.id.p5jlb), "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6May)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)))+(plot5Area * (getResources().getInteger(R.integer.GraftingLaborY6Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GraftingInputY6Dec)));
+                    }
+                } else if (sObject.getSOILMNG5().equals("B")){
+                    //Extra Soil Management
+                    setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)))+(plot5Area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.ExtraSoilInputY6Dec)));
+                    }
+                } else {
+                    //GAPS
+                    setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
+                    setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        janP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Jan))));
+                        febP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Feb))));
+                        marP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Mar))));
+                        aprP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Apr))));
+                        mayP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6May)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6May))));
+                        junP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Jun))));
+                        julP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Jul))));
+                        augP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Aug))));
+                        sepP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Sep))));
+                        octP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Oct))));
+                        novP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Nov))));
+                        decP5 = (int) ((plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)))+(plot5Area * (getResources().getInteger(R.integer.GAPSLaborY6Dec))));
+                    }else {
+                        janP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jan)));
+                        febP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Feb)));
+                        marP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Mar)));
+                        aprP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Apr)));
+                        mayP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6May)));
+                        junP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jun)));
+                        julP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Jul)));
+                        augP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Aug)));
+                        sepP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Sep)));
+                        octP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Oct)));
+                        novP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Nov)));
+                        decP5 = (int) (plot5Area * (getResources().getInteger(R.integer.GAPSInputY6Dec)));
+                    }
+                }
                 setText((TextView) findViewById(R.id.p1jcs),String.valueOf(dec.format(janP1)));
                 setText((TextView) findViewById(R.id.p1fcs), String.valueOf(dec.format(febP1)));
                 setText((TextView) findViewById(R.id.p1mrcs), String.valueOf(dec.format(marP1)));
@@ -1064,18 +2059,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p1nvcs), String.valueOf(dec.format(novP1)));
                 setText((TextView) findViewById(R.id.p1dccs), String.valueOf(dec.format(decP1)));
 
-                janP2 =(int) (plot2Area * 705000);
-                febP2 =(int) (plot2Area * 1146000);
-                marP2 =(int) (plot2Area * 7024500);
-                aprP2 =(int) (plot2Area * 2067000);
-                mayP2 =(int) (plot2Area * 3321000);
-                junP2 =(int) (plot2Area * 6940000);
-                julP2 =(int) (plot2Area * 1005000);
-                augP2 =(int) (plot2Area * 1146000);
-                sepP2 =(int) (plot2Area * 1767000);
-                octP2 =(int) (plot2Area * 1767000);
-                novP2 =(int) (plot2Area * 2171000);
-                decP2 =(int) (plot2Area * 6637500);
                 setText((TextView) findViewById(R.id.p2jcs),String.valueOf(dec.format(janP2)));
                 setText((TextView) findViewById(R.id.p2fcs), String.valueOf(dec.format(febP2)));
                 setText((TextView) findViewById(R.id.p2mrcs), String.valueOf(dec.format(marP2)));
@@ -1089,18 +2072,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p2nvcs), String.valueOf(dec.format(novP2)));
                 setText((TextView) findViewById(R.id.p2dccs), String.valueOf(dec.format(decP2)));
 
-                janP3 =(int) (plot3Area * 705000);
-                febP3 =(int) (plot3Area * 1146000);
-                marP3 =(int) (plot3Area * 7024500);
-                aprP3 =(int) (plot3Area * 2067000);
-                mayP3 =(int) (plot3Area * 3321000);
-                junP3 =(int) (plot3Area * 6940000);
-                julP3 =(int) (plot3Area * 1005000);
-                augP3 =(int) (plot3Area * 1146000);
-                sepP3 =(int) (plot3Area * 1767000);
-                octP3 =(int) (plot3Area * 1767000);
-                novP3 =(int) (plot3Area * 2171000);
-                decP3 =(int) (plot3Area * 6637500);
                 setText((TextView) findViewById(R.id.p3jcs),String.valueOf(dec.format(janP3)));
                 setText((TextView) findViewById(R.id.p3fcs), String.valueOf(dec.format(febP3)));
                 setText((TextView) findViewById(R.id.p3mrcs), String.valueOf(dec.format(marP3)));
@@ -1114,18 +2085,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p3nvcs), String.valueOf(dec.format(novP3)));
                 setText((TextView) findViewById(R.id.p3dccs), String.valueOf(dec.format(decP3)));
 
-                janP4 =(int) (plot4Area * 705000);
-                febP4 =(int) (plot4Area * 1146000);
-                marP4 =(int) (plot4Area * 7024500);
-                aprP4 =(int) (plot4Area * 2067000);
-                mayP4 =(int) (plot4Area * 3321000);
-                junP4 =(int) (plot4Area * 6940000);
-                julP4 =(int) (plot4Area * 1005000);
-                augP4 =(int) (plot4Area * 1146000);
-                sepP4 =(int) (plot4Area * 1767000);
-                octP4 =(int) (plot4Area * 1767000);
-                novP4 =(int) (plot4Area * 2171000);
-                decP4 =(int) (plot4Area * 6637500);
                 setText((TextView) findViewById(R.id.p4jcs),String.valueOf(dec.format(janP4)));
                 setText((TextView) findViewById(R.id.p4fcs), String.valueOf(dec.format(febP4)));
                 setText((TextView) findViewById(R.id.p4mrcs), String.valueOf(dec.format(marP4)));
@@ -1139,211 +2098,6 @@ public class YearDetailActivity2 extends SalesforceActivity implements LoaderMan
                 setText((TextView) findViewById(R.id.p4nvcs), String.valueOf(dec.format(novP4)));
                 setText((TextView) findViewById(R.id.p4dccs), String.valueOf(dec.format(decP4)));
 
-                janP5 =(int) (plot5Area * 705000);
-                febP5 =(int) (plot5Area * 1146000);
-                marP5 =(int) (plot5Area * 7024500);
-                aprP5 =(int) (plot5Area * 2067000);
-                mayP5 =(int) (plot5Area * 3321000);
-                junP5 =(int) (plot5Area * 6940000);
-                julP5 =(int) (plot5Area * 1005000);
-                augP5 =(int) (plot5Area * 1146000);
-                sepP5 =(int) (plot5Area * 1767000);
-                octP5 =(int) (plot5Area * 1767000);
-                novP5 =(int) (plot5Area * 2171000);
-                decP5 =(int) (plot5Area * 6637500);
-                setText((TextView) findViewById(R.id.p5jcs),String.valueOf(dec.format(janP5)));
-                setText((TextView) findViewById(R.id.p5fcs), String.valueOf(dec.format(febP5)));
-                setText((TextView) findViewById(R.id.p5mrcs), String.valueOf(dec.format(marP5)));
-                setText((TextView) findViewById(R.id.p5acs), String.valueOf(dec.format(aprP5)));
-                setText((TextView) findViewById(R.id.p5mycs), String.valueOf(dec.format(mayP5)));
-                setText((TextView) findViewById(R.id.p5jncs), String.valueOf(dec.format(junP5)));
-                setText((TextView) findViewById(R.id.p5jlcs), String.valueOf(dec.format(julP5)));
-                setText((TextView) findViewById(R.id.p5agcs), String.valueOf(dec.format(augP5)));
-                setText((TextView) findViewById(R.id.p5spcs), String.valueOf(dec.format(sepP5)));
-                setText((TextView) findViewById(R.id.p5occs), String.valueOf(dec.format(octP5)));
-                setText((TextView) findViewById(R.id.p5nvcs), String.valueOf(dec.format(novP5)));
-                setText((TextView) findViewById(R.id.p5dccs), String.valueOf(dec.format(decP5)));
-
-            }
-            if (yearLaunch.equals("7")){
-                setText((TextView) findViewById(R.id.yearDetail),"YEAR 7");
-                setText((TextView) findViewById(R.id.p1jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p1dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p2jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p2dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p3jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p3dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p4jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p4dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                setText((TextView) findViewById(R.id.p5jlb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5flb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mrlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5alb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5mylb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jnlb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5jllb), "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5aglb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5splb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5oclb), "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5nvlb), "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                setText((TextView) findViewById(R.id.p5dclb), "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-
-                janP1 =(int) (plot1Area * 705000);
-                febP1 =(int) (plot1Area * 1146000);
-                marP1 =(int) (plot1Area * 7024500);
-                aprP1 =(int) (plot1Area * 2067000);
-                mayP1 =(int) (plot1Area * 3321000);
-                junP1 =(int) (plot1Area * 6940000);
-                julP1 =(int) (plot1Area * 1005000);
-                augP1 =(int) (plot1Area * 1146000);
-                sepP1 =(int) (plot1Area * 1767000);
-                octP1 =(int) (plot1Area * 1767000);
-                novP1 =(int) (plot1Area * 2171000);
-                decP1 =(int) (plot1Area * 6637500);
-                setText((TextView) findViewById(R.id.p1jcs),String.valueOf(dec.format(janP1)));
-                setText((TextView) findViewById(R.id.p1fcs), String.valueOf(dec.format(febP1)));
-                setText((TextView) findViewById(R.id.p1mrcs), String.valueOf(dec.format(marP1)));
-                setText((TextView) findViewById(R.id.p1acs), String.valueOf(dec.format(aprP1)));
-                setText((TextView) findViewById(R.id.p1mycs), String.valueOf(dec.format(mayP1)));
-                setText((TextView) findViewById(R.id.p1jncs), String.valueOf(dec.format(junP1)));
-                setText((TextView) findViewById(R.id.p1jlcs), String.valueOf(dec.format(julP1)));
-                setText((TextView) findViewById(R.id.p1agcs), String.valueOf(dec.format(augP1)));
-                setText((TextView) findViewById(R.id.p1spcs), String.valueOf(dec.format(sepP1)));
-                setText((TextView) findViewById(R.id.p1occs), String.valueOf(dec.format(octP1)));
-                setText((TextView) findViewById(R.id.p1nvcs), String.valueOf(dec.format(novP1)));
-                setText((TextView) findViewById(R.id.p1dccs), String.valueOf(dec.format(decP1)));
-
-                janP2 =(int) (plot2Area * 705000);
-                febP2 =(int) (plot2Area * 1146000);
-                marP2 =(int) (plot2Area * 7024500);
-                aprP2 =(int) (plot2Area * 2067000);
-                mayP2 =(int) (plot2Area * 3321000);
-                junP2 =(int) (plot2Area * 6940000);
-                julP2 =(int) (plot2Area * 1005000);
-                augP2 =(int) (plot2Area * 1146000);
-                sepP2 =(int) (plot2Area * 1767000);
-                octP2 =(int) (plot2Area * 1767000);
-                novP2 =(int) (plot2Area * 2171000);
-                decP2 =(int) (plot2Area * 6637500);
-                setText((TextView) findViewById(R.id.p2jcs),String.valueOf(dec.format(janP2)));
-                setText((TextView) findViewById(R.id.p2fcs), String.valueOf(dec.format(febP2)));
-                setText((TextView) findViewById(R.id.p2mrcs), String.valueOf(dec.format(marP2)));
-                setText((TextView) findViewById(R.id.p2acs), String.valueOf(dec.format(aprP2)));
-                setText((TextView) findViewById(R.id.p2mycs), String.valueOf(dec.format(mayP2)));
-                setText((TextView) findViewById(R.id.p2jncs), String.valueOf(dec.format(junP2)));
-                setText((TextView) findViewById(R.id.p2jlcs), String.valueOf(dec.format(julP2)));
-                setText((TextView) findViewById(R.id.p2agcs), String.valueOf(dec.format(augP2)));
-                setText((TextView) findViewById(R.id.p2spcs), String.valueOf(dec.format(sepP2)));
-                setText((TextView) findViewById(R.id.p2occs), String.valueOf(dec.format(octP2)));
-                setText((TextView) findViewById(R.id.p2nvcs), String.valueOf(dec.format(novP2)));
-                setText((TextView) findViewById(R.id.p2dccs), String.valueOf(dec.format(decP2)));
-
-                janP3 =(int) (plot3Area * 705000);
-                febP3 =(int) (plot3Area * 1146000);
-                marP3 =(int) (plot3Area * 7024500);
-                aprP3 =(int) (plot3Area * 2067000);
-                mayP3 =(int) (plot3Area * 3321000);
-                junP3 =(int) (plot3Area * 6940000);
-                julP3 =(int) (plot3Area * 1005000);
-                augP3 =(int) (plot3Area * 1146000);
-                sepP3 =(int) (plot3Area * 1767000);
-                octP3 =(int) (plot3Area * 1767000);
-                novP3 =(int) (plot3Area * 2171000);
-                decP3 =(int) (plot3Area * 6637500);
-                setText((TextView) findViewById(R.id.p3jcs),String.valueOf(dec.format(janP3)));
-                setText((TextView) findViewById(R.id.p3fcs), String.valueOf(dec.format(febP3)));
-                setText((TextView) findViewById(R.id.p3mrcs), String.valueOf(dec.format(marP3)));
-                setText((TextView) findViewById(R.id.p3acs), String.valueOf(dec.format(aprP3)));
-                setText((TextView) findViewById(R.id.p3mycs), String.valueOf(dec.format(mayP3)));
-                setText((TextView) findViewById(R.id.p3jncs), String.valueOf(dec.format(junP3)));
-                setText((TextView) findViewById(R.id.p3jlcs), String.valueOf(dec.format(julP3)));
-                setText((TextView) findViewById(R.id.p3agcs), String.valueOf(dec.format(augP3)));
-                setText((TextView) findViewById(R.id.p3spcs), String.valueOf(dec.format(sepP3)));
-                setText((TextView) findViewById(R.id.p3occs), String.valueOf(dec.format(octP3)));
-                setText((TextView) findViewById(R.id.p3nvcs), String.valueOf(dec.format(novP3)));
-                setText((TextView) findViewById(R.id.p3dccs), String.valueOf(dec.format(decP3)));
-
-                janP4 =(int) (plot4Area * 705000);
-                febP4 =(int) (plot4Area * 1146000);
-                marP4 =(int) (plot4Area * 7024500);
-                aprP4 =(int) (plot4Area * 2067000);
-                mayP4 =(int) (plot4Area * 3321000);
-                junP4 =(int) (plot4Area * 6940000);
-                julP4 =(int) (plot4Area * 1005000);
-                augP4 =(int) (plot4Area * 1146000);
-                sepP4 =(int) (plot4Area * 1767000);
-                octP4 =(int) (plot4Area * 1767000);
-                novP4 =(int) (plot4Area * 2171000);
-                decP4 =(int) (plot4Area * 6637500);
-                setText((TextView) findViewById(R.id.p4jcs),String.valueOf(dec.format(janP4)));
-                setText((TextView) findViewById(R.id.p4fcs), String.valueOf(dec.format(febP4)));
-                setText((TextView) findViewById(R.id.p4mrcs), String.valueOf(dec.format(marP4)));
-                setText((TextView) findViewById(R.id.p4acs), String.valueOf(dec.format(aprP4)));
-                setText((TextView) findViewById(R.id.p4mycs), String.valueOf(dec.format(mayP4)));
-                setText((TextView) findViewById(R.id.p4jncs), String.valueOf(dec.format(junP4)));
-                setText((TextView) findViewById(R.id.p4jlcs), String.valueOf(dec.format(julP4)));
-                setText((TextView) findViewById(R.id.p4agcs), String.valueOf(dec.format(augP4)));
-                setText((TextView) findViewById(R.id.p4spcs), String.valueOf(dec.format(sepP4)));
-                setText((TextView) findViewById(R.id.p4occs), String.valueOf(dec.format(octP4)));
-                setText((TextView) findViewById(R.id.p4nvcs), String.valueOf(dec.format(novP4)));
-                setText((TextView) findViewById(R.id.p4dccs), String.valueOf(dec.format(decP4)));
-
-                janP5 =(int) (plot5Area * 705000);
-                febP5 =(int) (plot5Area * 1146000);
-                marP5 =(int) (plot5Area * 7024500);
-                aprP5 =(int) (plot5Area * 2067000);
-                mayP5 =(int) (plot5Area * 3321000);
-                junP5 =(int) (plot5Area * 6940000);
-                julP5 =(int) (plot5Area * 1005000);
-                augP5 =(int) (plot5Area * 1146000);
-                sepP5 =(int) (plot5Area * 1767000);
-                octP5 =(int) (plot5Area * 1767000);
-                novP5 =(int) (plot5Area * 2171000);
-                decP5 =(int) (plot5Area * 6637500);
                 setText((TextView) findViewById(R.id.p5jcs),String.valueOf(dec.format(janP5)));
                 setText((TextView) findViewById(R.id.p5fcs), String.valueOf(dec.format(febP5)));
                 setText((TextView) findViewById(R.id.p5mrcs), String.valueOf(dec.format(marP5)));

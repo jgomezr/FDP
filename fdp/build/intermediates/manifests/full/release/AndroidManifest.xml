@@ -3,7 +3,7 @@
     package="org.grameenfoundation.fdp"
     android:installLocation="internalOnly"
     android:versionCode="1"
-    android:versionName="1.3" >
+    android:versionName="1.4" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -71,8 +71,8 @@
         <!-- Plot screen -->
         <activity
             android:name="org.grameenfoundation.fdp.ui.plotActivity"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName="org.grameenfoundation.fdp.ui.DetailActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/SalesforceSDK.ActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.PLOT" />
@@ -85,7 +85,6 @@
         <activity
             android:name="org.grameenfoundation.fdp.ui.fdpActivity"
             android:parentActivityName="org.grameenfoundation.fdp.ui.plotActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/SalesforceSDK.ActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.FDP" />
@@ -107,7 +106,29 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="org.grameenfoundation.fdp.ui.YearDetailActivity1"
+            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/SalesforceSDK.ActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="org.grameenfoundation.fdp.ui.YearDetailActivity2"
+            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/SalesforceSDK.ActionBarTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.grameenfoundation.fdp.ui.YearDetailActivity3"
             android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
             android:screenOrientation="landscape"
             android:theme="@style/SalesforceSDK.ActionBarTheme" >
