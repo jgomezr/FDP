@@ -596,7 +596,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="1"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -605,7 +605,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="2"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -614,7 +614,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="3"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -623,7 +623,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="4"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -632,7 +632,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="5"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -641,7 +641,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="6"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -650,7 +650,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="7"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -659,7 +659,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="8"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -668,7 +668,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="9"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -677,7 +677,7 @@
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:inputType="number"
+                        android:inputType="numberDecimal"
                         android:layout_column="10"
                         android:layout_row="5"
                         android:visibility="gone"/>
@@ -2503,7 +2503,9 @@
                         android:id="@+id/geneticP1_field"
                         android:layout_column="1"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2511,7 +2513,9 @@
                         android:id="@+id/geneticP2_field"
                         android:layout_column="2"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2519,7 +2523,9 @@
                         android:id="@+id/geneticP3_field"
                         android:layout_column="3"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2527,7 +2533,9 @@
                         android:id="@+id/geneticP4_field"
                         android:layout_column="4"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2535,7 +2543,9 @@
                         android:id="@+id/geneticP5_field"
                         android:layout_column="5"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2543,7 +2553,9 @@
                         android:id="@+id/geneticP6_field"
                         android:layout_column="6"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2551,7 +2563,9 @@
                         android:id="@+id/geneticP7_field"
                         android:layout_column="7"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2559,7 +2573,9 @@
                         android:id="@+id/geneticP8_field"
                         android:layout_column="8"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2567,7 +2583,9 @@
                         android:id="@+id/geneticP9_field"
                         android:layout_column="9"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2575,7 +2593,9 @@
                         android:id="@+id/geneticP10_field"
                         android:layout_column="10"
                         android:layout_row="0"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <TextView android:layout_width="300dp"
                         android:layout_height="wrap_content"
@@ -2591,7 +2611,9 @@
                         android:id="@+id/farmConditionP1_field"
                         android:layout_column="1"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2599,7 +2621,9 @@
                         android:id="@+id/farmConditionP2_field"
                         android:layout_column="2"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2607,7 +2631,9 @@
                         android:id="@+id/farmConditionP3_field"
                         android:layout_column="3"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2615,7 +2641,9 @@
                         android:id="@+id/farmConditionP4_field"
                         android:layout_column="4"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2623,7 +2651,9 @@
                         android:id="@+id/farmConditionP5_field"
                         android:layout_column="5"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2631,7 +2661,9 @@
                         android:id="@+id/farmConditionP6_field"
                         android:layout_column="6"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2639,7 +2671,9 @@
                         android:id="@+id/farmConditionP7_field"
                         android:layout_column="7"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2647,7 +2681,9 @@
                         android:id="@+id/farmConditionP8_field"
                         android:layout_column="8"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2655,7 +2691,9 @@
                         android:id="@+id/farmConditionP9_field"
                         android:layout_column="9"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2663,7 +2701,9 @@
                         android:id="@+id/farmConditionP10_field"
                         android:layout_column="10"
                         android:layout_row="1"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <TextView android:layout_width="300dp"
                         android:layout_height="wrap_content"
@@ -2679,7 +2719,9 @@
                         android:id="@+id/gapP1_field"
                         android:layout_column="1"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2687,7 +2729,9 @@
                         android:id="@+id/gapP2_field"
                         android:layout_column="2"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2695,7 +2739,9 @@
                         android:id="@+id/gapP3_field"
                         android:layout_column="3"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2703,7 +2749,9 @@
                         android:id="@+id/gapP4_field"
                         android:layout_column="4"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2711,7 +2759,9 @@
                         android:id="@+id/gapP5_field"
                         android:layout_column="5"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2719,7 +2769,9 @@
                         android:id="@+id/gapP6_field"
                         android:layout_column="6"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2727,7 +2779,9 @@
                         android:id="@+id/gapP7_field"
                         android:layout_column="7"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2735,7 +2789,9 @@
                         android:id="@+id/gapP8_field"
                         android:layout_column="8"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2743,7 +2799,9 @@
                         android:id="@+id/gapP9_field"
                         android:layout_column="9"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2751,7 +2809,9 @@
                         android:id="@+id/gapP10_field"
                         android:layout_column="10"
                         android:layout_row="2"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <TextView android:layout_width="300dp"
                         android:layout_height="wrap_content"
@@ -2767,7 +2827,9 @@
                         android:id="@+id/soilFertMng1_field"
                         android:layout_column="1"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2775,7 +2837,9 @@
                         android:id="@+id/soilFertMng2_field"
                         android:layout_column="2"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2783,7 +2847,9 @@
                         android:id="@+id/soilFertMng3_field"
                         android:layout_column="3"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2791,7 +2857,9 @@
                         android:id="@+id/soilFertMng4_field"
                         android:layout_column="4"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2799,7 +2867,9 @@
                         android:id="@+id/soilFertMng5_field"
                         android:layout_column="5"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2807,7 +2877,9 @@
                         android:id="@+id/soilFertMng6_field"
                         android:layout_column="6"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2815,7 +2887,9 @@
                         android:id="@+id/soilFertMng7_field"
                         android:layout_column="7"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2823,7 +2897,9 @@
                         android:id="@+id/soilFertMng8_field"
                         android:layout_column="8"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2831,7 +2907,9 @@
                         android:id="@+id/soilFertMng9_field"
                         android:layout_column="9"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <EditText
                         android:layout_width="155dp"
@@ -2839,7 +2917,9 @@
                         android:id="@+id/soilFertMng10_field"
                         android:layout_column="10"
                         android:layout_row="3"
-                        android:visibility="gone" />
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="false"/>
 
                     <Button android:layout_width="150dp"
                         android:layout_height="wrap_content"

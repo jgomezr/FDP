@@ -8,12 +8,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\layout\\sf__server_picker_list.xml"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\layout\\sf__custom_server_url.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\layout\\sf__custom_server_url.xml"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\layout\\sf__login.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\layout\\sf__login.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\layout\\sf__custom_server_url.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\layout\\sf__custom_server_url.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\layout\\sf__manage_space.xml",

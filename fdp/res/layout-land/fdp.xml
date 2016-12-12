@@ -153,13 +153,6 @@
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:id="@+id/gapLabelP1_field"
-                            android:text="@string/gaps"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:id="@+id/graftLabelP1_field"
                             android:text="@string/graft"
                             android:layout_gravity="center_vertical" />
@@ -176,6 +169,13 @@
                             android:visibility="gone"
                             android:id="@+id/extraSoilLabelP1_field"
                             android:text="@string/extraSoil"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/gapLabelP1_field"
+                            android:text="@string/gaps"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
 
@@ -644,13 +644,6 @@
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:id="@+id/gapLabelP2_field"
-                            android:text="@string/gaps"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:id="@+id/graftLabelP2_field"
                             android:text="@string/graft"
                             android:layout_gravity="center_vertical" />
@@ -667,6 +660,13 @@
                             android:visibility="gone"
                             android:id="@+id/extraSoilLabelP2_field"
                             android:text="@string/extraSoil"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/gapLabelP2_field"
+                            android:text="@string/gaps"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
 
@@ -1136,13 +1136,6 @@
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:id="@+id/gapLabelP3_field"
-                            android:text="@string/gaps"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:id="@+id/graftLabelP3_field"
                             android:text="@string/graft"
                             android:layout_gravity="center_vertical" />
@@ -1159,6 +1152,13 @@
                             android:visibility="gone"
                             android:id="@+id/extraSoilLabelP3_field"
                             android:text="@string/extraSoil"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/gapLabelP3_field"
+                            android:text="@string/gaps"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
 
@@ -1626,13 +1626,6 @@
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:id="@+id/gapLabelP4_field"
-                            android:text="@string/gaps"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:id="@+id/graftLabelP4_field"
                             android:text="@string/graft"
                             android:layout_gravity="center_vertical" />
@@ -1649,6 +1642,13 @@
                             android:visibility="gone"
                             android:id="@+id/extraSoilLabelP4_field"
                             android:text="@string/extraSoil"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/gapLabelP4_field"
+                            android:text="@string/gaps"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
 
@@ -2118,13 +2118,6 @@
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:visibility="gone"
-                            android:id="@+id/gapLabelP5_field"
-                            android:text="@string/gaps"
-                            android:layout_gravity="center_vertical" />
-
-                        <TextView android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone"
                             android:id="@+id/graftLabelP5_field"
                             android:text="@string/graft"
                             android:layout_gravity="center_vertical" />
@@ -2141,6 +2134,13 @@
                             android:visibility="gone"
                             android:id="@+id/extraSoilLabelP5_field"
                             android:text="@string/extraSoil"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:id="@+id/gapLabelP5_field"
+                            android:text="@string/gaps"
                             android:layout_gravity="center_vertical" />
                     </LinearLayout>
 

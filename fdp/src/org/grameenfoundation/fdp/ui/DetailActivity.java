@@ -1246,6 +1246,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                         sObject.getCultivationArea());
             }
 
+            //set Hire days
+            if (sObject.getHowManyLaborDaysHire().isEmpty()){
+                setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.daysHire_field),
+                        sObject.getHowManyLaborDaysHire());
+            }
+
 			//set bank account
 			if (sObject.getBANKACCOUNT().contentEquals("Yes")) {
 				Spinner spinner = (Spinner) findViewById(R.id.bankAccount_field);
@@ -1356,6 +1364,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	}
 
 	public void launchFarm(View view) {
+        final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
+        final String title = ((EditText) findViewById(R.id.farmer_code_field)).getText().toString();
+        final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
+        if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(title)||TextUtils.equals(numberPlots,"0")) {
+            Toast.makeText(this, this.getString(R.string.cannotBeEmpty), Toast.LENGTH_LONG).show();
+            return;
+        }else{
 		save();
 		final Intent plotIntent = new Intent(this, plotActivity.class);
 		plotIntent.addCategory(Intent.CATEGORY_DEFAULT);
@@ -1363,15 +1378,12 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		plotIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
 		plotIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
 		startActivity(plotIntent);
+        }
 	}
 
 	private void save() {
 		final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
 		final String title = ((EditText) findViewById(R.id.farmer_code_field)).getText().toString();
-		if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(title)) {
-			Toast.makeText(this, this.getString(R.string.cannotBeEmpty), Toast.LENGTH_LONG).show();
-			return;
-		}
 		final String birthday = ((EditText) findViewById(R.id.birthday_field)).getText().toString();
 		final String gender = ((Spinner) findViewById(R.id.gender_Field)).getSelectedItem().toString();
 		final String educationalLvl = ((Spinner) findViewById(R.id.educational_lv_field)).getSelectedItem().toString();
@@ -1429,10 +1441,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String acctType = ((Spinner) findViewById(R.id.accountType_field)).getSelectedItem().toString();
 		final String mbMoney =((Spinner) findViewById(R.id.mobileMoney_field)).getSelectedItem().toString();
 		final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
-		if (TextUtils.equals(numberPlots,"0")) {
-			Toast.makeText(this,this.getString(R.string.greater0), Toast.LENGTH_LONG).show();
-			return;
-		}
 		final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
 		JSONObject contact;
 		try {

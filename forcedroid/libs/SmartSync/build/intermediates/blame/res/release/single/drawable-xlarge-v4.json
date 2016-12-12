@@ -32,12 +32,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable-xlarge-v4\\sf__header_left_border.xml"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__oauth_background.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable-xlarge-v4\\sf__oauth_background.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__header_right_border.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable-xlarge-v4\\sf__header_right_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__oauth_background.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable-xlarge-v4\\sf__oauth_background.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__oauth_container_dropshadow.9.png",

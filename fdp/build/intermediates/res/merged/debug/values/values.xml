@@ -318,7 +318,6 @@
         <item>N/A</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -330,7 +329,6 @@
     <string-array name="treeDistance1">
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -353,7 +351,6 @@
     </string-array>
     <string-array name="treeDistance2">
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>2x2</item>
         <item>3x2.5</item>
         <item>3x3</item>
@@ -367,7 +364,6 @@
         <item>3x2.5</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -379,7 +375,6 @@
         <item>3x3</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -391,7 +386,6 @@
         <item>3.5x3.5</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -403,25 +397,12 @@
         <item>4x4</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
         <item>3×4</item>
         <item>3.5×4</item>
-    </string-array>
-    <string-array name="treeDistance7">
-        <item>2.5x3</item>
-        <item>2x2</item>
-        <item>2.5x2.5</item>
-        <item>3x2.5</item>
-        <item>3x3</item>
-        <item>3x3.5</item>
-        <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
-        <item>4x4</item>
     </string-array>
     <string-array name="treeDistance8">
         <item>3x3.5</item>
@@ -2012,11 +1993,12 @@
     <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
     <string name="androidPushNotificationClientId"/>
     <string name="ao">ADOPTION OBSERVATIONS</string>
-    <string name="aoResults">ADOPTION OBSERVATIONS RESULTS</string>
+    <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
     <string name="api_version">v36.0</string>
     <string name="app_name"><b>FDP</b></string>
     <string name="app_package">org.grameenfoundation.fdp</string>
     <string name="apr">April</string>
+    <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
     <string name="aug">August</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -2027,7 +2009,7 @@
     <string name="birthday">3. Farmer Birthday Year:</string>
     <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
-    <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty!</string>
+    <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
     <string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
     <string name="cocoaArea">36. Total land under cocoa Size (Ha):</string>

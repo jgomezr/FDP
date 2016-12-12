@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-137:12
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-141:12
 	package
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:4:2-37
 	android:versionName
@@ -62,7 +62,7 @@ MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desk
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:19:22-64
 application
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:21:2-124:16
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:21:2-128:16
 MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartSync\unspecified\AndroidManifest.xml:11:5-20
 MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:11:5-15:19
 MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:23:5-103:19
@@ -97,128 +97,134 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:32:5-65
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:32:15-62
 activity#org.grameenfoundation.fdp.ui.DetailActivity
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:37:3-44:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:37:3-46:14
 	android:parentActivityName
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:38:13-80
 	android:windowSoftInputMode
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:39:56-97
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:41:4-45
+	android:configChanges
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:39:4-50
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:39:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:40:4-55
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:37:13-71
 intent-filter#android.intent.action.DETAIL+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:40:4-43:20
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:42:4-45:20
 action#android.intent.action.DETAIL
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:41:5-59
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:43:5-59
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:41:13-56
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:43:13-56
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:42:5-64
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:44:5-64
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:42:15-61
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:44:15-61
 activity#org.grameenfoundation.fdp.ui.plotActivity
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:47:3-55:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:49:3-58:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:48:13-85
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:50:13-85
+	android:windowSoftInputMode
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:53:4-45
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:49:4-50
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:51:4-50
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:50:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:52:4-55
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:47:13-69
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:49:13-69
 intent-filter#android.intent.action.PLOT+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:51:13-54:29
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:54:13-57:29
 action#android.intent.action.PLOT
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:52:17-69
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:55:17-69
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:52:25-66
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:55:25-66
 activity#org.grameenfoundation.fdp.ui.fdpActivity
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:58:3-65:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:61:3-69:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:59:13-83
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:62:13-83
+	android:configChanges
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:63:4-50
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:60:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:64:4-55
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:58:13-68
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:61:13-68
 intent-filter#android.intent.action.FDP+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:61:4-64:20
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:65:4-68:20
 action#android.intent.action.FDP
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:62:5-56
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:66:5-56
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:62:13-53
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:66:13-53
 activity#org.grameenfoundation.fdp.ui.YearDetailActivity
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:68:3-76:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:72:3-80:14
 	android:screenOrientation
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:69:4-41
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:73:4-41
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:70:13-82
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:74:13-82
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:71:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:75:4-55
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:68:13-75
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:72:13-75
 activity#org.grameenfoundation.fdp.ui.YearDetailActivity1
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:77:3-85:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:81:3-89:14
 	android:screenOrientation
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:78:4-41
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:82:4-41
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:79:4-73
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:83:4-73
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:80:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:84:4-55
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:77:13-76
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:81:13-76
 activity#org.grameenfoundation.fdp.ui.YearDetailActivity2
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:87:3-95:14
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:91:3-99:14
 	android:screenOrientation
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:88:4-41
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:92:4-41
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:89:4-73
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:93:4-73
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:90:4-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:94:4-55
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:87:13-76
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:91:13-76
 activity#org.grameenfoundation.fdp.ui.YearDetailActivity3
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:97:9-105:20
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:101:9-109:20
 	android:screenOrientation
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:98:13-50
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:102:13-50
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:99:13-82
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:103:13-82
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:100:13-64
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:104:13-64
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:97:19-82
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:101:19-82
 service#org.grameenfoundation.fdp.sync.ContactSyncService
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:108:3-116:13
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:112:3-120:13
 	android:process
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:110:4-27
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:114:4-27
 	android:exported
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:109:4-27
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:113:4-27
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:108:12-76
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:112:12-76
 intent-filter#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:111:4-113:20
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:115:4-117:20
 action#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:112:5-57
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:116:5-57
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:112:13-55
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:116:13-55
 meta-data#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:114:4-115:51
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:118:4-119:51
 	android:resource
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:115:5-48
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:119:5-48
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:114:15-57
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:118:15-57
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:121:3-123:60
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:125:3-127:60
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:123:4-57
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:127:4-57
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:122:4-49
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:126:4-49
 permission#org.grameenfoundation.fdp.C2D_MESSAGE
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:133:5-134:41
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:137:5-138:41
 	android:protectionLevel
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:134:3-38
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:138:3-38
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:133:17-69
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:137:17-69
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
 ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:14:9-104
 	android:name

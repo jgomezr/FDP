@@ -30,7 +30,7 @@
 	<string name="productiveProfile">PRODUCTIVE PROFILE</string>
 	<string name="plotInformation">PLOT INFORMATION</string>
 	<string name="ao">ADOPTION OBSERVATIONS</string>
-    <string name="aoResults">ADOPTION OBSERVATIONS RESULTS</string>
+    <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
 	<string name="additionalIntervention">ADDITIONAL INTERVENTION</string>
 
 	<string name="full_name">1. Farmer Name:</string>
@@ -183,7 +183,8 @@
 	<string name="nov">November</string>
 	<string name="dec">December</string>
 	<string name="greater0"></string>
-	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty!</string>
+	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
+    <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
 	<string name="saved">Save successful!</string>
 	<string name="autosave">Autosaved</string>
 	<string name="p1">Clearing</string>
@@ -498,7 +499,6 @@
         <item>N/A</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -510,7 +510,6 @@
     <string-array name="treeDistance1">
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -521,7 +520,6 @@
     </string-array>
     <string-array name="treeDistance2">
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>2x2</item>
         <item>3x2.5</item>
         <item>3x3</item>
@@ -535,7 +533,6 @@
         <item>3x2.5</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -547,7 +544,6 @@
         <item>3x3</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -559,7 +555,6 @@
         <item>3.5x3.5</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -571,25 +566,12 @@
         <item>4x4</item>
         <item>2x2</item>
         <item>2.5x2.5</item>
-        <item>2.5x3</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
         <item>3×4</item>
         <item>3.5×4</item>
-    </string-array>
-    <string-array name="treeDistance7">
-        <item>2.5x3</item>
-        <item>2x2</item>
-        <item>2.5x2.5</item>
-        <item>3x2.5</item>
-        <item>3x3</item>
-        <item>3x3.5</item>
-        <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
-        <item>4x4</item>
     </string-array>
     <string-array name="treeDistance8">
         <item>3x3.5</item>
