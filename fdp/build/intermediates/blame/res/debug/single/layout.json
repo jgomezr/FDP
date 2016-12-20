@@ -20,6 +20,10 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\layout\\sf__inspector.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\plot_fragment.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout\\plot_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\sf__custom_server_url.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\layout\\sf__custom_server_url.xml"
     },

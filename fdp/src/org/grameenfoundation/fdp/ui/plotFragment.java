@@ -1,0 +1,136 @@
+package org.grameenfoundation.fdp.ui;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+import org.grameenfoundation.fdp.R;
+
+
+/**
+ * Created by julian_Gf on 12/17/2016.
+ */
+
+public class plotFragment extends Fragment  {
+
+    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP;
+    public Button calc;
+    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.plot_fragment, container, false);
+        ph = (EditText) view.findViewById(R.id.ph_field);
+        lime = (EditText) view.findViewById(R.id.limeP_field);
+        fillingP = (EditText) view.findViewById(R.id.fillingP_field);
+        geneticP = (EditText) view.findViewById(R.id.geneticP_field);
+        gapP = (EditText) view.findViewById(R.id.gapP_field);
+        soilFertMng = (EditText) view.findViewById(R.id.soilFertMng_field);
+        fcondP = (EditText) view.findViewById(R.id.farmConditionP_field);
+        ageP = (EditText) view.findViewById(R.id.plotAgep_field);
+        cteP = (Spinner) view.findViewById(R.id.cocoaTreesP_field);
+        plantP = (Spinner) view.findViewById(R.id.plantingP_field);
+        tehelP = (Spinner) view.findViewById(R.id.treeHealthP_field);
+        debDiP = (Spinner) view.findViewById(R.id.debilitationP_field);
+        pruniP = (Spinner) view.findViewById(R.id.pruningP_field);
+        pesDiP = (Spinner) view.findViewById(R.id.pestDiseaseP_field);
+        weediP = (Spinner) view.findViewById(R.id.weedingP_field);
+        harveP = (Spinner) view.findViewById(R.id.harvestingP_field);
+        shadeP = (Spinner) view.findViewById(R.id.shadeManagementP_field);
+        soilCP = (Spinner) view.findViewById(R.id.soilConditionP_field);
+        orgMaP = (Spinner) view.findViewById(R.id.organicMatterP_field);
+        fertFP = (Spinner) view.findViewById(R.id.fertFormP_field);
+        fertAP = (Spinner) view.findViewById(R.id.fertApplicationP_field);
+        calc = (Button) view.findViewById(R.id.calculateP);
+
+        ph.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (String.valueOf(ph.getText()).isEmpty()){
+                    setText(lime,"N/A");
+                }else if (Double.parseDouble(ph.getText().toString()) > 5.8){
+                    setText(lime,"No");
+                }else{
+                    setText(lime,"Yes");
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        cteP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("3.5x3.5")||cteP.getSelectedItem().toString().equals("3x3.5")){
+                    setText(fillingP,"No");
+                }else if(cteP.getSelectedItem().toString().equals("4x4")||cteP.getSelectedItem().toString().equals("3.5x4")){
+                    setText(fillingP,"Yes");
+                }else{
+                    setText(fillingP,"No");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (plantP.getSelectedItem().toString().equals("B")) {
+                    setText(geneticP, "B");
+                } else {
+                    setText(geneticP, "G");
+                }
+                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3×4")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP.getText().toString()) > 25)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
+                    setText(fcondP, "B");
+                    setText(fillingP,"No");
+                }else{
+                    setText(fcondP, "G");
+                }
+                if (pruniP.getSelectedItem().toString().equals("B")||pesDiP.getSelectedItem().toString().equals("B")||weediP.getSelectedItem().toString().equals("B")||harveP.getSelectedItem().toString().equals("B")||shadeP.getSelectedItem().toString().equals("B")){
+                    setText(gapP,"B");
+                }else{
+                    setText(gapP, "G");
+                }
+                if (soilCP.getSelectedItem().toString().equals("B")||orgMaP.getSelectedItem().toString().equals("B")||fertFP.getSelectedItem().toString().equals("B")||fertAP.getSelectedItem().toString().equals("B")){
+                    setText(soilFertMng,"B");
+                }else{
+                    setText(soilFertMng,"G");
+                }
+
+                ((plotActivity)getActivity()).partialSave();
+            }
+        });
+
+        return view;
+    }
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    private void setText(EditText textField, String text) {
+        if (textField != null) {
+            textField.setText(text);
+        }
+    }
+}

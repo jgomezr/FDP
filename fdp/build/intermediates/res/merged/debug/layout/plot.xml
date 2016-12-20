@@ -4,3100 +4,331 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
-        tools:ignore="UselessParent">
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="ExtraText">
             android:id="@+id/horizontalScrollView" >
-
             <LinearLayout android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/plotInformation"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:typeface="normal"
-                    android:textSize="18sp"
-                    android:background="@color/ptn1" />
-
-                <GridLayout
-                    android:layout_width="match_parent"
+                <LinearLayout android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:alignmentMode="alignBounds"
-                    android:columnCount="11"
-                    android:rowCount="6"
-                    android:focusableInTouchMode="true">
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/plotInformation"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        android:textSize="18sp"
+                        android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_0_label"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_1_label"
-                        android:text="@string/plot1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_2_label"
-                        android:text="@string/plot2"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="2"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_3_label"
-                        android:text="@string/plot3"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="3"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_4_label"
-                        android:text="@string/plot4"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="4"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_5_label"
-                        android:text="@string/plot5"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="5"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_6_label"
-                        android:text="@string/plot6"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="6"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_7_label"
-                        android:text="@string/plot7"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="7"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_8_label"
-                        android:text="@string/plot8"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="8"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_9_label"
-                        android:text="@string/plot9"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="9"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plot_10_label"
-                        android:text="@string/plot10"
-                        android:layout_gravity="center_vertical"
-                        android:layout_column="10"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView"
-                        android:visibility="gone"/>
-
-                    <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/plotGPS"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="1"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText android:id="@+id/gpsp1_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp2_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="2"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp3_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="3"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp4_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="4"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp5_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="5"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp6_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="6"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp7_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="7"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp8_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="8"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp9_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="9"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText android:id="@+id/gpsp10_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="textNoSuggestions"
-                        android:layout_column="10"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/plotArea"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="2"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText android:id="@+id/plotArea1_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="1"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea2_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="2"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea3_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="3"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea4_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="4"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea5_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="5"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea6_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="6"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea7_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="7"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea8_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="8"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea9_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="9"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotArea10_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="10"
-                        android:layout_row="2"
-                        android:text="0"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/estimatedProduction"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="3"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText android:id="@+id/estimatedP1_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="1"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP2_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="2"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP3_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="3"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP4_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="4"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP5_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="5"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP6_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="6"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP7_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="7"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP8_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="8"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP9_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="9"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/estimatedP10_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:text="0"
-                        android:layout_column="10"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/shadeTrees"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="4"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText android:id="@+id/shadeTreesP1_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="1"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP2_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="2"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP3_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="3"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP4_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="4"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP5_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="5"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP6_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="6"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP7_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="7"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP8_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="8"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP9_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="9"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/shadeTreesP10_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="0"
-                        android:inputType="number"
-                        android:layout_column="10"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/ph"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="5"
-                        style="@style/FarmerDetail.ParentView.TextView" />
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
-                    <EditText android:id="@+id/ph1_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
+                    <TextView android:layout_width="match_parent"
+                        android:layout_height="30dp"
                         android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="1"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph2_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="2"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph3_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="3"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph4_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="4"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph5_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="5"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph6_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="6"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph7_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="7"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph8_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="8"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph9_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="9"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/ph10_field"
-                        android:layout_width="145dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="10"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                </GridLayout>
-
-                <TextView android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/ao"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:typeface="normal"
-                    android:textSize="18sp"
-                    android:background="@color/ptn1" />
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:alignmentMode="alignBounds"
-                    android:columnCount="11"
-                    android:rowCount="14"
-                    android:focusableInTouchMode="true">
+                        android:text="@string/ao"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        android:textSize="18sp"
+                        android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/plantingMaterial"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP1_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP2_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="2"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP3_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="3"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP4_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="4"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP5_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="5"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP6_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="6"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP7_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="7"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP8_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="8"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP9_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="9"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/plantingP10_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="10"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/cocoaTrees"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="1"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP1_field"
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP2_field"
-                        android:layout_column="2"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP3_field"
-                        android:layout_column="3"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP4_field"
-                        android:layout_column="4"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP5_field"
-                        android:layout_column="5"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP6_field"
-                        android:layout_column="6"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP7_field"
-                        android:layout_column="7"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP8_field"
-                        android:layout_column="8"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP9_field"
-                        android:layout_column="9"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/cocoaTreesP10_field"
-                        android:layout_column="10"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:entries="@array/treeDistance" />
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/plotAge"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="2"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText android:id="@+id/plotAgep1_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="1"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep2_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="2"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep3_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="3"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep4_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="4"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep5_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="5"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep6_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="6"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep7_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="7"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep8_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="8"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep9_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="9"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText android:id="@+id/plotAgep10_field"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:inputType="numberDecimal"
-                        android:layout_column="10"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/treeHealth"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="3"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        tools:ignore="TooManyViews" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/treeHealthP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/debilitationDisease"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="4"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/debilitationP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="4"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/pruning"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="5"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP1_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="1"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP2_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="2"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP3_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="3"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP4_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="4"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP5_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="5"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP6_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="6"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP7_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="7"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP8_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="8"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP9_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="9"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pruningP10_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="10"
-                        android:layout_row="5"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/pestDiseaseSanitation"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="6"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP1_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="1"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP2_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="2"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP3_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="3"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP4_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="4"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP5_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="5"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP6_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="6"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP7_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="7"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP8_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="8"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP9_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="9"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/pestDiseaseP10_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="10"
-                        android:layout_row="6"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/weeding"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="7"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/weedingP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="7"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/harvesting"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="8"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/harvestingP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="8"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/shadeManagement"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="9"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shadeManagementP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="9"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/soilCondition"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="10"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilConditionP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="10"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/organicMatter"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="11"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP1_field"
-                        android:entries="@array/gb"
-                        android:layout_column="1"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP2_field"
-                        android:entries="@array/gb"
-                        android:layout_column="2"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP3_field"
-                        android:entries="@array/gb"
-                        android:layout_column="3"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP4_field"
-                        android:entries="@array/gb"
-                        android:layout_column="4"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP5_field"
-                        android:entries="@array/gb"
-                        android:layout_column="5"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP6_field"
-                        android:entries="@array/gb"
-                        android:layout_column="6"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP7_field"
-                        android:entries="@array/gb"
-                        android:layout_column="7"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP8_field"
-                        android:entries="@array/gb"
-                        android:layout_column="8"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP9_field"
-                        android:entries="@array/gb"
-                        android:layout_column="9"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/organicMatterP10_field"
-                        android:entries="@array/gb"
-                        android:layout_column="10"
-                        android:layout_row="11"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/fertilizerFormulation"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="12"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP1_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="1"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP2_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="2"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP3_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="3"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP4_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="4"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP5_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="5"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP6_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="6"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP7_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="7"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP8_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="8"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP9_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="9"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartFormP10_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="10"
-                        android:layout_row="12"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/fertilizerApplication"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="13"
-                        style="@style/FarmerDetail.ParentView.TextView" />
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP1_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="1"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
 
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP2_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="2"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP3_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="3"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP4_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="4"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP5_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="5"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP6_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="6"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP7_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="7"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP8_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="8"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP9_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="9"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fartApplicationP10_field"
-                        android:entries="@array/gmb"
-                        android:layout_column="10"
-                        android:layout_row="13"
-                        android:visibility="gone"/>
-
-                </GridLayout>
-
-                <TextView android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/additionalIntervention"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:typeface="normal"
-                    android:textSize="18sp"
-                    android:background="@color/ptn1" />
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:alignmentMode="alignBounds"
-                    android:columnCount="11"
-                    android:rowCount="4"
-                    android:focusableInTouchMode="true">
+                    <TextView android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/additionalIntervention"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        android:textSize="18sp"
+                        android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/limeNeed"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP1_field"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP2_field"
-                        android:layout_column="2"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP3_field"
-                        android:layout_column="3"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP4_field"
-                        android:layout_column="4"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP5_field"
-                        android:layout_column="5"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP6_field"
-                        android:layout_column="6"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP7_field"
-                        android:layout_column="7"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP8_field"
-                        android:layout_column="8"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP9_field"
-                        android:layout_column="9"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/limeP10_field"
-                        android:layout_column="10"
-                        android:layout_row="0"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/drainageNeed"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="1"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP1_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP2_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="2"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP3_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="3"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP4_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="4"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP5_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="5"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP6_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="6"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP7_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="7"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP8_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="8"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP9_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="9"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/drainageP10_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="10"
-                        android:layout_row="1"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/fillingOption"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="2"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP1_field"
-                        android:layout_column="1"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP2_field"
-                        android:layout_column="2"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP3_field"
-                        android:layout_column="3"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP4_field"
-                        android:layout_column="4"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP5_field"
-                        android:layout_column="5"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP6_field"
-                        android:layout_column="6"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP7_field"
-                        android:layout_column="7"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP8_field"
-                        android:layout_column="8"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP9_field"
-                        android:layout_column="9"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fillingP10_field"
-                        android:layout_column="10"
-                        android:layout_row="2"
-                        android:visibility="gone"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/plotHireLabor"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="3"
-                        style="@style/FarmerDetail.ParentView.TextView" />
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP1_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="1"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP2_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="2"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP3_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="3"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP4_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="4"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP5_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="5"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP6_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="6"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP7_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="7"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP8_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="8"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP9_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="9"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                    <Spinner
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/hireP10_field"
-                        android:entries="@array/yesNo"
-                        android:layout_column="10"
-                        android:layout_row="3"
-                        android:visibility="gone"/>
-
-                </GridLayout>
-
-                <TextView android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/aoResults"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:typeface="normal"
-                    android:textSize="18sp"
-                    android:background="@color/ptn1" />
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:alignmentMode="alignBounds"
-                    android:columnCount="11"
-                    android:rowCount="5"
-                    android:focusableInTouchMode="true">
+                    <TextView android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/aoResults"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        android:textSize="18sp"
+                        android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/geneticLb"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="0"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP1_field"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP2_field"
-                        android:layout_column="2"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP3_field"
-                        android:layout_column="3"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP4_field"
-                        android:layout_column="4"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP5_field"
-                        android:layout_column="5"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP6_field"
-                        android:layout_column="6"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP7_field"
-                        android:layout_column="7"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP8_field"
-                        android:layout_column="8"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP9_field"
-                        android:layout_column="9"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/geneticP10_field"
-                        android:layout_column="10"
-                        android:layout_row="0"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/farmCondition"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="1"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP1_field"
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP2_field"
-                        android:layout_column="2"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP3_field"
-                        android:layout_column="3"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP4_field"
-                        android:layout_column="4"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP5_field"
-                        android:layout_column="5"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP6_field"
-                        android:layout_column="6"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP7_field"
-                        android:layout_column="7"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP8_field"
-                        android:layout_column="8"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP9_field"
-                        android:layout_column="9"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/farmConditionP10_field"
-                        android:layout_column="10"
-                        android:layout_row="1"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/gapLb"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="2"
-                        style="@style/FarmerDetail.ParentView.TextView" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP1_field"
-                        android:layout_column="1"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP2_field"
-                        android:layout_column="2"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP3_field"
-                        android:layout_column="3"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP4_field"
-                        android:layout_column="4"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP5_field"
-                        android:layout_column="5"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP6_field"
-                        android:layout_column="6"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP7_field"
-                        android:layout_column="7"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP8_field"
-                        android:layout_column="8"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP9_field"
-                        android:layout_column="9"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/gapP10_field"
-                        android:layout_column="10"
-                        android:layout_row="2"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:text="@string/soilFertMngLb"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="0"
-                        android:layout_row="3"
-                        style="@style/FarmerDetail.ParentView.TextView" />
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
 
-                    <EditText
-                        android:layout_width="155dp"
+                    <Button android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng1_field"
-                        android:layout_column="1"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng2_field"
-                        android:layout_column="2"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng3_field"
-                        android:layout_column="3"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng4_field"
-                        android:layout_column="4"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng5_field"
-                        android:layout_column="5"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng6_field"
-                        android:layout_column="6"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng7_field"
-                        android:layout_column="7"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng8_field"
-                        android:layout_column="8"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng9_field"
-                        android:layout_column="9"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/soilFertMng10_field"
-                        android:layout_column="10"
-                        android:layout_row="3"
-                        android:visibility="gone"
-                        android:clickable="true"
-                        android:focusable="false"/>
-
-                    <Button android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP1"
                         android:background="@color/button"
                         android:textStyle="bold"
+                        android:textSize="20sp"
                         android:textColor="@color/white"
+                        android:layout_margin="25dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="1"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:padding="5dp"
-                        android:visibility="gone" />
+                        android:padding="6dp"
+                        android:text="@string/saveContinue"
+                        android:onClick="launchFdp"
+                        android:clickable="true" />
 
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP2"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="2"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
+                </LinearLayout>
 
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP3"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="3"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP4"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="4"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP5"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="5"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP6"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="6"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP7"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="7"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP8"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="8"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP9"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="9"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                    <Button android:layout_width="150dp"
-                        android:padding="5dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/calculateP10"
-                        android:background="@color/button"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="@string/calcAO"
-                        android:layout_column="10"
-                        android:layout_row="4"
-                        android:onClick="calculate"
-                        android:clickable="true"
-                        android:visibility="gone" />
-
-                </GridLayout>
-
-                <Button android:layout_width="match_parent"
+                <fragment
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/button"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_margin="25dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="6dp"
-                    android:text="@string/saveContinue"
-                    android:onClick="launchFdp"
-                    android:clickable="true" />
+                    android:id="@+id/fgPlot1"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot2"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot3"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot4"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot5"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot6"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot7"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot8"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot9"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
+
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgPlot10"
+                    android:name="org.grameenfoundation.fdp.ui.plotFragment"/>
 
             </LinearLayout>
+
         </HorizontalScrollView>
     </ScrollView>
 

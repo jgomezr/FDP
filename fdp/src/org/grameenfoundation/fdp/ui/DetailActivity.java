@@ -44,6 +44,9 @@ import org.grameenfoundation.fdp.objects.ContactObject;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.ref.WeakReference;
+import java.text.NumberFormat;
+
 /**
  * Object detail activity.
  *
@@ -54,7 +57,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	private static final int CONTACT_DETAIL_LOADER_ID = 2;
 	private static final String TAG = "SmartSyncExplorer: DetailActivity";
 	private Button button;
-	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,cocoasize;
+	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,cocoasize,familyIncome,incomeOtherCrops,totalCrd,payCredit,loanAmmount,moneyBack,hhSaving,otherExpenses,planedInvest,eduExpenses,expensesCCLY,grossCC;
     private TextView tHelp1, t1,tHelp2,t2,tHelp3,t3,tHelp4,t4,tHelp5,t5,tHelp6,t6;
 	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,hire,bank;
 	private LinearLayout actType,mbMoney,wntAct,hireDays,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
@@ -165,7 +168,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             }
         });
 
-            avgCocoaPrice = (EditText) findViewById(R.id.averageCocoaPrice_Field);
+
+		avgCocoaPrice = (EditText) findViewById(R.id.averageCocoaPrice_Field);
 		prdCocoaLy = (EditText) findViewById(R.id.productionCocoaLY_Field);
 		numbChildrens = (EditText) findViewById(R.id.numChildren);
 
@@ -174,8 +178,9 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus){
                         savePoint();
-						int result1 = Integer.parseInt(avgCocoaPrice.getText().toString()) * Integer.parseInt(prdCocoaLy.getText().toString());
-						setText((EditText) findViewById(R.id.grossCocoaLY_Field),Integer.toString(result1));
+						double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[$,]", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
+						setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
+
 				}
 
 			}
@@ -235,8 +240,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus){
                     savePoint();
-					int result1 = Integer.parseInt(avgCocoaPrice.getText().toString()) * Integer.parseInt(prdCocoaLy.getText().toString());
-					setText((EditText) findViewById(R.id.grossCocoaLY_Field),Integer.toString(result1));
+					double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[$,]", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
+					setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
 				}
 			}
 		});
@@ -498,6 +503,66 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 t6.setVisibility(View.VISIBLE);
             }
         });
+		familyIncome =(EditText) findViewById(R.id.totalFamilyMembersIncome_Field);
+		incomeOtherCrops=(EditText) findViewById(R.id.incomeOtherCrops_Field);
+		totalCrd=(EditText) findViewById(R.id.totalCredit_Field);
+		payCredit=(EditText) findViewById(R.id.payForCredit_Field);
+		loanAmmount=(EditText) findViewById(R.id.amountOfLoan_Field);
+		moneyBack=(EditText) findViewById(R.id.moneyBack_Field);
+		hhSaving=(EditText) findViewById(R.id.householdSavings_Field);
+		otherExpenses=(EditText) findViewById(R.id.otherExpenses_Field);
+		planedInvest=(EditText) findViewById(R.id.plannedInvestments_Field);
+		eduExpenses=(EditText) findViewById(R.id.educationExpenses_Field);
+		expensesCCLY=(EditText) findViewById(R.id.expensesCocoaLY_Field);
+		grossCC=(EditText) findViewById(R.id.grossCocoaLY_Field);
+
+		incomelabor.addTextChangedListener(new MoneyTextWatcher(incomelabor));
+		spouseincome.addTextChangedListener(new MoneyTextWatcher(spouseincome));
+		livinexp.addTextChangedListener(new MoneyTextWatcher(livinexp));
+		familyIncome.addTextChangedListener(new MoneyTextWatcher(familyIncome));
+		incomeOtherCrops.addTextChangedListener(new MoneyTextWatcher(incomeOtherCrops));
+		totalCrd.addTextChangedListener(new MoneyTextWatcher(totalCrd));
+		payCredit.addTextChangedListener(new MoneyTextWatcher(payCredit));
+		loanAmmount.addTextChangedListener(new MoneyTextWatcher(loanAmmount));
+		moneyBack.addTextChangedListener(new MoneyTextWatcher(moneyBack));
+		hhSaving.addTextChangedListener(new MoneyTextWatcher(hhSaving));
+		otherExpenses.addTextChangedListener(new MoneyTextWatcher(otherExpenses));
+		planedInvest.addTextChangedListener(new MoneyTextWatcher(planedInvest));
+		eduExpenses.addTextChangedListener(new MoneyTextWatcher(eduExpenses));
+		expensesCCLY.addTextChangedListener(new MoneyTextWatcher(expensesCCLY));
+		grossCC.addTextChangedListener(new MoneyTextWatcher(grossCC));
+		avgCocoaPrice.addTextChangedListener(new MoneyTextWatcher(avgCocoaPrice));
+
+	}
+
+	public class MoneyTextWatcher implements TextWatcher {
+		private final WeakReference<EditText> editTextWeakReference;
+
+		public MoneyTextWatcher(EditText editText) {
+			editTextWeakReference = new WeakReference<EditText>(editText);
+		}
+
+		@Override
+		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+		}
+
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before, int count) {
+		}
+
+		@Override
+		public void afterTextChanged(Editable editable) {
+			EditText editText = editTextWeakReference.get();
+			if (editText == null) return;
+			String s = editable.toString();
+			editText.removeTextChangedListener(this);
+			String cleanString = s.toString().replaceAll("[$,.]", "");
+			double parsed = Double.parseDouble(cleanString);
+			String formatted = NumberFormat.getCurrencyInstance().format(parsed/100);
+			editText.setText(formatted);
+			editText.setSelection(formatted.length());
+			editText.addTextChangedListener(this);
+		}
 	}
 
 	@Override
@@ -1363,6 +1428,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		}
 	}
 
+
 	public void launchFarm(View view) {
         final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
         final String title = ((EditText) findViewById(R.id.farmer_code_field)).getText().toString();
@@ -1371,13 +1437,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             Toast.makeText(this, this.getString(R.string.cannotBeEmpty), Toast.LENGTH_LONG).show();
             return;
         }else{
-		save();
-		final Intent plotIntent = new Intent(this, plotActivity.class);
-		plotIntent.addCategory(Intent.CATEGORY_DEFAULT);
-		plotIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
-		plotIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
-		plotIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
-		startActivity(plotIntent);
+			save();
+			final Intent plotIntent = new Intent(this, plotActivity.class);
+			plotIntent.addCategory(Intent.CATEGORY_DEFAULT);
+			plotIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+			plotIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+			plotIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+			startActivity(plotIntent);
+
         }
 	}
 
@@ -1404,20 +1471,20 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
 		final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
 		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString();
-		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString();
-		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString();
-		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString();
-		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString();
-		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString();
-		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString();
-		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString();
-		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString();
-		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString();
-		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString();
-		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString();
-		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString();
-		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString();
-		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString();
+		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[$,]", "");
+		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[$,]", "");
+		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[$,]", "");
+		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[$,]", "");
+		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[$,]", "");
+		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[$,]", "");
+		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[$,]", "");
+		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[$,]", "");
+		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[$,]", "");
+		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[$,]", "");
+		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[$,]", "");
+		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[$,]", "");
+		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[$,]", "");
+		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[$,]", "");
 		final String farmAge = ((EditText) findViewById(R.id.farmAge_field)).getText().toString();
 		final String farmCert = ((Spinner) findViewById(R.id.farmCertifications_field)).getSelectedItem().toString();
 		final String farmArea = ((EditText) findViewById(R.id.farmArea_field)).getText().toString();
@@ -1430,7 +1497,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
 		final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
-        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString();
+        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[$,]", "");
         final String oftenPayCredit = ((Spinner)findViewById(R.id.payOftenForCredit_Field)).getSelectedItem().toString();
         final String sourceOfCredit = ((Spinner)findViewById(R.id.sourceCredit_Field)).getSelectedItem().toString();
         final String fmGroup = ((EditText) findViewById(R.id.farmerGp)).getText().toString();
