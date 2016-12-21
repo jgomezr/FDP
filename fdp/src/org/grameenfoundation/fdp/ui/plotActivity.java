@@ -893,6 +893,15 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         areP9.addTextChangedListener(new areaWatcher(areP9));
         areP10.addTextChangedListener(new areaWatcher(areP10));
         estP1.addTextChangedListener(new prodWatcher(estP1));
+        estP2.addTextChangedListener(new prodWatcher(estP2));
+        estP3.addTextChangedListener(new prodWatcher(estP3));
+        estP4.addTextChangedListener(new prodWatcher(estP4));
+        estP5.addTextChangedListener(new prodWatcher(estP5));
+        estP6.addTextChangedListener(new prodWatcher(estP6));
+        estP7.addTextChangedListener(new prodWatcher(estP7));
+        estP8.addTextChangedListener(new prodWatcher(estP8));
+        estP9.addTextChangedListener(new prodWatcher(estP9));
+        estP10.addTextChangedListener(new prodWatcher(estP10));
 
     }
 
@@ -1080,8 +1089,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     private void refreshScreen() {
         if (sObject != null) {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.setCustomAnimations(android.R.animator.fade_in,
-                    android.R.animator.fade_out);
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 setText(Lp1,"PLOT 1");
                 ft.show(fragment1);
@@ -6442,7 +6449,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             } else {
                 smartStore.upsert(ContactListLoader.CONTACT_SOUP, contact);
             }
-            Toast.makeText(this, "Save successful!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Save successful!", Toast.LENGTH_SHORT).show();
             finish();
         } catch (JSONException e) {
             Log.e(TAG, "JSONException occurred while parsing", e);

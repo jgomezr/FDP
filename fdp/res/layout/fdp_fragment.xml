@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/plot"
+            android:text=""
+            android:layout_gravity="center_vertical"
+            style="@style/FarmerDetail.ParentView.TextView"/>
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/graftLabelP_field"
+                android:text="@string/graft"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/replantLabelP_field"
+                android:text="@string/replant"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"/>
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/extraSoilLabelP_field"
+                android:text="@string/extraSoil"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/gapLabelP_field"
+                android:gravity="center_horizontal"
+                android:text="@string/gaps"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/laborLabelP_field"
+                android:text="@string/labor"
+                android:layout_gravity="center_vertical" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/limeLabelP_field"
+                android:text="@string/lime"
+                android:layout_gravity="center_vertical" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/drainageLabelP_field"
+                android:text="@string/drainage"
+                android:layout_gravity="center_vertical" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/fillingLabelP_field"
+                android:text="@string/filling"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <TextView android:text="@string/startYear"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            style="@style/FarmerDetail.ParentView.TextView" />
+
+        <Spinner android:id="@+id/startP_field"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/years" />
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:text="@string/plotIncome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView android:text="@string/costInvest"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView android:text="@string/manDaysNeed"
+            android:visibility="gone"
+            android:lines="2"
+            android:maxLines="2"
+            android:id="@+id/lnp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView android:text="@string/costLabor"
+            android:visibility="gone"
+            android:id="@+id/lcp"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <TextView android:text="@string/plotPL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY1P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY1P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY1P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY1P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY1P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY2P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY2P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY2P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY2P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY2P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY3P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY3P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY3P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY3P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY3P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY4P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY4P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY4P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY4P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY4P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY5P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY5P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY5P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY5P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY5P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY6P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY6P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY6P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY6P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY6P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/incomeY7P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY7P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY7P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY7P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY7P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+</LinearLayout>

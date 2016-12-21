@@ -1592,7 +1592,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			} else {
 				smartStore.upsert(ContactListLoader.CONTACT_SOUP, contact);
 			}
-			Toast.makeText(this, this.getString(R.string.saved), Toast.LENGTH_LONG).show();
+			Toast.makeText(this, this.getString(R.string.saved), Toast.LENGTH_SHORT).show();
 			finish();
 		} catch (JSONException e) {
 			Log.e(TAG, "JSONException occurred while parsing", e);
