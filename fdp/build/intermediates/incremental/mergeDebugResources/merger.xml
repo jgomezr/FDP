@@ -310,7 +310,7 @@
 		<item>N/A</item>
 		<item>G</item>
 		<item>B</item>
-	</string-array><string name="p1">Clearing</string><string name="familyPaidWork">18. Family Members contributed with money to the household:</string><string name="plot7">Plot 7</string><string name="plot8">Plot 8</string><string name="plot9">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
+	</string-array><string name="changeR">Change for Grafting</string><string name="p1">Clearing</string><string name="familyPaidWork">18. Family Members contributed with money to the household:</string><string name="plot7">Plot 7</string><string name="plot8">Plot 8</string><string name="plot9">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
 		<item>G</item>
 		<item>B</item>
 	</string-array><string name="phone">9. Phone Number:</string><string-array name="gender_male">
@@ -550,7 +550,7 @@
         <item>UTZ/RA</item>
         <item>UTZ/FT</item>
         <item>RA/FT</item>
-    </string-array><string name="replant">Replant</string><string name="delete">Delete</string><string name="p23">Shade reducing/rejuvenate old shade</string><string name="p22">Shape pruning</string><string name="p21">Sanitation</string><string name="p20">Production/shape/Reducing mother trees branches</string><string name="autosave">Autosaved</string><string name="aug">August</string><string name="pestDiseaseSanitation">51. Pest and Disease and Sanitation:</string><string name="p24">Harvest, ferment, dry, sell</string><string name="weeding">52. Weeding:</string><string name="plot10">Plot 10</string><string name="plotGPS">40. Plot GPS:</string><string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string><string name="jul">July</string><string name="action_refresh">Synchronize</string><string name="no_results_found">No results found</string><string name="farmerProfile">FARMER PROFILE</string><string name="otherExpenses">24. Annual other expenses:</string><string name="jun">June</string><string name="p19">Maintenance</string><string name="geneticLb">Genetics:</string><string name="p18">Shape pruning</string><string-array name="creditOftenNoSet">
+    </string-array><string name="replant">Replant</string><string name="delete">Delete</string><string name="p23">Shade reducing/rejuvenate old shade</string><string name="p22">Shape pruning</string><string name="p21">Sanitation</string><string name="p20">Production/shape/Reducing mother trees branches</string><string name="autosave">Autosaved</string><string name="aug">August</string><string name="pestDiseaseSanitation">51. Pest and Disease and Sanitation:</string><string name="p24">Harvest, ferment, dry, sell</string><string name="weeding">52. Weeding:</string><string name="plot10">Plot 10</string><string name="plotGPS">40. Plot GPS:</string><string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string><string name="jul">July</string><string name="action_refresh">Synchronize</string><string name="no_results_found">No results found</string><string name="farmerProfile">FARMER PROFILE</string><string name="otherExpenses">24. Annual other expenses:</string><string name="jun">June</string><string name="p19">Maintenance</string><string name="geneticLb">Genetics of plant material:</string><string name="p18">Shape pruning</string><string-array name="creditOftenNoSet">
 		<item>No set frequency</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>

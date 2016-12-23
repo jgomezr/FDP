@@ -51,6 +51,14 @@
                 android:text="@string/gaps"
                 android:layout_gravity="center_vertical" />
         </LinearLayout>
+        <Button android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/change"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/changeR"
+            android:clickable="true"
+            android:visibility="gone"/>
 
         <LinearLayout android:orientation="vertical"
             android:layout_width="155dp"
@@ -524,5 +532,11 @@
             android:gravity="center_vertical|right"/>
 
     </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/comments"/>
 
 </LinearLayout>

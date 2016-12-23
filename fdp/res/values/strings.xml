@@ -118,7 +118,7 @@
     <string name="drainageNeed">60. Drainage need:</string>
     <string name="fillingOption">61. Filling in option:</string>
     <string name="plotHireLabor">62. Hire labor:</string>
-	<string name="geneticLb">Genetics:</string>
+	<string name="geneticLb">Genetics of plant material:</string>
 	<string name="farmCondition">Farm Condition:</string>
 	<string name="gapLb">GAPS:</string>
 	<string name="soilFertMngLb">Soil Fertility Management:</string>
@@ -149,6 +149,7 @@
 	<string name="manDaysNeed">Labor needed in man days:</string>
 	<string name="costLabor">Cost of labor:</string>
 	<string name="plotPL">Plot P&amp;L:</string>
+	<string name="changeR">Change for Grafting</string>
 
 	<string name="netPlotIncome">Net income from Cocoa:</string>
     <string name="netOtherCrops">Net income from Other Crops:</string>

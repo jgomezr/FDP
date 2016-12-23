@@ -50,8 +50,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     public static final String OBJECT_TITLE_KEY = "object_title";
     public static final String OBJECT_NAME_KEY = "object_name";
     public static final String YEAR_LAUNCH = "year_launch";
+    private EditText comt1,comt2,comt3,comt4,comt5,comt6,comt7,comt8,comt9,comt10,comments;
     private Spinner st1,st2,st3,st4,st5,st6,st7,st8,st9,st10;
-    private TextView found1,found2,found3,found4,found5,found6,found7,pyl1,pyl2,pyl3,pyl4,pyl5,pyl6,pyl7,plot1,plot2,plot3,plot4,plot5,plot6,plot7,plot8,plot9,plot10;
+    private TextView found1,found2,found3,found4,found5,found6,found7,pyl1,pyl2,pyl3,pyl4,pyl5,pyl6,pyl7,plot1,plot2,plot3,plot4,plot5,plot6,plot7,plot8,plot9,plot10,income11,income21,income31,income41,income51,income61,income71,income81,income91,income101,income12,income22,income32,income42,income52,income62,income72,income82,income92,income102,income13,income23,income33,income43,income53,income63,income73,income83,income93,income103,income14,income24,income34,income44,income54,income64,income74,income84,income94,income104,income15,income25,income35,income45,income55,income65,income75,income85,income95,income105,income16,income26,income36,income46,income56,income66,income76,income86,income96,income106,income17,income27,income37,income47,income57,income67,income77,income87,income97,income107,cost11,labor11,cost21,labor21,cost31,labor31,cost41,labor41,cost51,labor51,cost61,labor61,cost71,labor71,cost81,labor81,cost91,labor91,cost101,labor101,cost12,labor12,cost22,labor22,cost32,labor32,cost42,labor42,cost52,labor52,cost62,labor62,cost72,labor72,cost82,labor82,cost92,labor92,cost102,labor102,cost13,labor13,cost23,labor23,cost33,labor33,cost43,labor43,cost53,labor53,cost63,labor63,cost73,labor73,cost83,labor83,cost93,labor93,cost103,labor103,cost14,labor14,cost24,labor24,cost34,labor34,cost44,labor44,cost54,labor54,cost64,labor64,cost74,labor74,cost84,labor84,cost94,labor94,cost104,labor104,cost15,labor15,cost25,labor25,cost35,labor35,cost45,labor45,cost55,labor55,cost65,labor65,cost75,labor75,cost85,labor85,cost95,labor95,cost105,labor105,cost16,labor16,cost26,labor26,cost36,labor36,cost46,labor46,cost56,labor56,cost66,labor66,cost76,labor76,cost86,labor86,cost96,labor96,cost106,labor106,cost17,labor17,cost27,labor27,cost37,labor37,cost47,labor47,cost57,labor57,cost67,labor67,cost77,labor77,cost87,labor87,cost97,labor97,cost107,labor107;
     public fdpFragment fragment1,fragment2,fragment3,fragment4,fragment5,fragment6,fragment7,fragment8,fragment9,fragment10;
 
     @Override
@@ -67,7 +68,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             objectTitle = launchIntent.getStringExtra(plotActivity.OBJECT_TITLE_KEY);
             objNameKey = launchIntent.getStringExtra(plotActivity.OBJECT_NAME_KEY);
         }
-
+        comments = (EditText) findViewById(R.id.reasonNotAgree_field);
         fragment1 = (fdpFragment) getFragmentManager().findFragmentById(R.id.fgPlot1);
         fragment2 = (fdpFragment) getFragmentManager().findFragmentById(R.id.fgPlot2);
         fragment3 = (fdpFragment) getFragmentManager().findFragmentById(R.id.fgPlot3);
@@ -98,6 +99,226 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         st8 = (Spinner)fragment8.getView().findViewById(R.id.startP_field);
         st9 = (Spinner)fragment9.getView().findViewById(R.id.startP_field);
         st10 = (Spinner)fragment10.getView().findViewById(R.id.startP_field);
+        income11 =(TextView) fragment1.getView().findViewById(R.id.incomeY1P);
+        income12 =(TextView) fragment1.getView().findViewById(R.id.incomeY2P);
+        income13 =(TextView) fragment1.getView().findViewById(R.id.incomeY3P);
+        income14 =(TextView) fragment1.getView().findViewById(R.id.incomeY4P);
+        income15 =(TextView) fragment1.getView().findViewById(R.id.incomeY5P);
+        income16 =(TextView) fragment1.getView().findViewById(R.id.incomeY6P);
+        income17 =(TextView) fragment1.getView().findViewById(R.id.incomeY7P);
+        cost11 =(TextView) fragment1.getView().findViewById(R.id.costY1P);
+        cost12 =(TextView) fragment1.getView().findViewById(R.id.costY2P);
+        cost13 =(TextView) fragment1.getView().findViewById(R.id.costY3P);
+        cost14 =(TextView) fragment1.getView().findViewById(R.id.costY4P);
+        cost15 =(TextView) fragment1.getView().findViewById(R.id.costY5P);
+        cost16 =(TextView) fragment1.getView().findViewById(R.id.costY6P);
+        cost17 =(TextView) fragment1.getView().findViewById(R.id.costY7P);
+        labor11 =(TextView) fragment1.getView().findViewById(R.id.laborY1P);
+        labor12 =(TextView) fragment1.getView().findViewById(R.id.laborY2P);
+        labor13 =(TextView) fragment1.getView().findViewById(R.id.laborY3P);
+        labor14 =(TextView) fragment1.getView().findViewById(R.id.laborY4P);
+        labor15 =(TextView) fragment1.getView().findViewById(R.id.laborY5P);
+        labor16 =(TextView) fragment1.getView().findViewById(R.id.laborY6P);
+        labor17 =(TextView) fragment1.getView().findViewById(R.id.laborY7P);
+        income21 =(TextView) fragment2.getView().findViewById(R.id.incomeY1P);
+        income22 =(TextView) fragment2.getView().findViewById(R.id.incomeY2P);
+        income23 =(TextView) fragment2.getView().findViewById(R.id.incomeY3P);
+        income24 =(TextView) fragment2.getView().findViewById(R.id.incomeY4P);
+        income25 =(TextView) fragment2.getView().findViewById(R.id.incomeY5P);
+        income26 =(TextView) fragment2.getView().findViewById(R.id.incomeY6P);
+        income27 =(TextView) fragment2.getView().findViewById(R.id.incomeY7P);
+        cost21 =(TextView) fragment2.getView().findViewById(R.id.costY1P);
+        cost22 =(TextView) fragment2.getView().findViewById(R.id.costY2P);
+        cost23 =(TextView) fragment2.getView().findViewById(R.id.costY3P);
+        cost24 =(TextView) fragment2.getView().findViewById(R.id.costY4P);
+        cost25 =(TextView) fragment2.getView().findViewById(R.id.costY5P);
+        cost26 =(TextView) fragment2.getView().findViewById(R.id.costY6P);
+        cost27 =(TextView) fragment2.getView().findViewById(R.id.costY7P);
+        labor21 =(TextView) fragment2.getView().findViewById(R.id.laborY1P);
+        labor22 =(TextView) fragment2.getView().findViewById(R.id.laborY2P);
+        labor23 =(TextView) fragment2.getView().findViewById(R.id.laborY3P);
+        labor24 =(TextView) fragment2.getView().findViewById(R.id.laborY4P);
+        labor25 =(TextView) fragment2.getView().findViewById(R.id.laborY5P);
+        labor26 =(TextView) fragment2.getView().findViewById(R.id.laborY6P);
+        labor27 =(TextView) fragment2.getView().findViewById(R.id.laborY7P);
+        income31 =(TextView) fragment3.getView().findViewById(R.id.incomeY1P);
+        income32 =(TextView) fragment3.getView().findViewById(R.id.incomeY2P);
+        income33 =(TextView) fragment3.getView().findViewById(R.id.incomeY3P);
+        income34 =(TextView) fragment3.getView().findViewById(R.id.incomeY4P);
+        income35 =(TextView) fragment3.getView().findViewById(R.id.incomeY5P);
+        income36 =(TextView) fragment3.getView().findViewById(R.id.incomeY6P);
+        income37 =(TextView) fragment3.getView().findViewById(R.id.incomeY7P);
+        cost31 =(TextView) fragment3.getView().findViewById(R.id.costY1P);
+        cost32 =(TextView) fragment3.getView().findViewById(R.id.costY2P);
+        cost33 =(TextView) fragment3.getView().findViewById(R.id.costY3P);
+        cost34 =(TextView) fragment3.getView().findViewById(R.id.costY4P);
+        cost35 =(TextView) fragment3.getView().findViewById(R.id.costY5P);
+        cost36 =(TextView) fragment3.getView().findViewById(R.id.costY6P);
+        cost37 =(TextView) fragment3.getView().findViewById(R.id.costY7P);
+        labor31 =(TextView) fragment3.getView().findViewById(R.id.laborY1P);
+        labor32 =(TextView) fragment3.getView().findViewById(R.id.laborY2P);
+        labor33 =(TextView) fragment3.getView().findViewById(R.id.laborY3P);
+        labor34 =(TextView) fragment3.getView().findViewById(R.id.laborY4P);
+        labor35 =(TextView) fragment3.getView().findViewById(R.id.laborY5P);
+        labor36 =(TextView) fragment3.getView().findViewById(R.id.laborY6P);
+        labor37 =(TextView) fragment3.getView().findViewById(R.id.laborY7P);
+        income41 =(TextView) fragment4.getView().findViewById(R.id.incomeY1P);
+        income42 =(TextView) fragment4.getView().findViewById(R.id.incomeY2P);
+        income43 =(TextView) fragment4.getView().findViewById(R.id.incomeY3P);
+        income44 =(TextView) fragment4.getView().findViewById(R.id.incomeY4P);
+        income45 =(TextView) fragment4.getView().findViewById(R.id.incomeY5P);
+        income46 =(TextView) fragment4.getView().findViewById(R.id.incomeY6P);
+        income47 =(TextView) fragment4.getView().findViewById(R.id.incomeY7P);
+        cost41 =(TextView) fragment4.getView().findViewById(R.id.costY1P);
+        cost42 =(TextView) fragment4.getView().findViewById(R.id.costY2P);
+        cost43 =(TextView) fragment4.getView().findViewById(R.id.costY3P);
+        cost44 =(TextView) fragment4.getView().findViewById(R.id.costY4P);
+        cost45 =(TextView) fragment4.getView().findViewById(R.id.costY5P);
+        cost46 =(TextView) fragment4.getView().findViewById(R.id.costY6P);
+        cost47 =(TextView) fragment4.getView().findViewById(R.id.costY7P);
+        labor41 =(TextView) fragment4.getView().findViewById(R.id.laborY1P);
+        labor42 =(TextView) fragment4.getView().findViewById(R.id.laborY2P);
+        labor43 =(TextView) fragment4.getView().findViewById(R.id.laborY3P);
+        labor44 =(TextView) fragment4.getView().findViewById(R.id.laborY4P);
+        labor45 =(TextView) fragment4.getView().findViewById(R.id.laborY5P);
+        labor46 =(TextView) fragment4.getView().findViewById(R.id.laborY6P);
+        labor47 =(TextView) fragment4.getView().findViewById(R.id.laborY7P);
+        income51 =(TextView) fragment5.getView().findViewById(R.id.incomeY1P);
+        income52 =(TextView) fragment5.getView().findViewById(R.id.incomeY2P);
+        income53 =(TextView) fragment5.getView().findViewById(R.id.incomeY3P);
+        income54 =(TextView) fragment5.getView().findViewById(R.id.incomeY4P);
+        income55 =(TextView) fragment5.getView().findViewById(R.id.incomeY5P);
+        income56 =(TextView) fragment5.getView().findViewById(R.id.incomeY6P);
+        income57 =(TextView) fragment5.getView().findViewById(R.id.incomeY7P);
+        cost51 =(TextView) fragment5.getView().findViewById(R.id.costY1P);
+        cost52 =(TextView) fragment5.getView().findViewById(R.id.costY2P);
+        cost53 =(TextView) fragment5.getView().findViewById(R.id.costY3P);
+        cost54 =(TextView) fragment5.getView().findViewById(R.id.costY4P);
+        cost55 =(TextView) fragment5.getView().findViewById(R.id.costY5P);
+        cost56 =(TextView) fragment5.getView().findViewById(R.id.costY6P);
+        cost57 =(TextView) fragment5.getView().findViewById(R.id.costY7P);
+        labor51 =(TextView) fragment5.getView().findViewById(R.id.laborY1P);
+        labor52 =(TextView) fragment5.getView().findViewById(R.id.laborY2P);
+        labor53 =(TextView) fragment5.getView().findViewById(R.id.laborY3P);
+        labor54 =(TextView) fragment5.getView().findViewById(R.id.laborY4P);
+        labor55 =(TextView) fragment5.getView().findViewById(R.id.laborY5P);
+        labor56 =(TextView) fragment5.getView().findViewById(R.id.laborY6P);
+        labor57 =(TextView) fragment5.getView().findViewById(R.id.laborY7P);
+        income61 =(TextView) fragment6.getView().findViewById(R.id.incomeY1P);
+        income62 =(TextView) fragment6.getView().findViewById(R.id.incomeY2P);
+        income63 =(TextView) fragment6.getView().findViewById(R.id.incomeY3P);
+        income64 =(TextView) fragment6.getView().findViewById(R.id.incomeY4P);
+        income65 =(TextView) fragment6.getView().findViewById(R.id.incomeY5P);
+        income66 =(TextView) fragment6.getView().findViewById(R.id.incomeY6P);
+        income67 =(TextView) fragment6.getView().findViewById(R.id.incomeY7P);
+        cost61 =(TextView) fragment6.getView().findViewById(R.id.costY1P);
+        cost62 =(TextView) fragment6.getView().findViewById(R.id.costY2P);
+        cost63 =(TextView) fragment6.getView().findViewById(R.id.costY3P);
+        cost64 =(TextView) fragment6.getView().findViewById(R.id.costY4P);
+        cost65 =(TextView) fragment6.getView().findViewById(R.id.costY5P);
+        cost66 =(TextView) fragment6.getView().findViewById(R.id.costY6P);
+        cost67 =(TextView) fragment6.getView().findViewById(R.id.costY7P);
+        labor61 =(TextView) fragment6.getView().findViewById(R.id.laborY1P);
+        labor62 =(TextView) fragment6.getView().findViewById(R.id.laborY2P);
+        labor63 =(TextView) fragment6.getView().findViewById(R.id.laborY3P);
+        labor64 =(TextView) fragment6.getView().findViewById(R.id.laborY4P);
+        labor65 =(TextView) fragment6.getView().findViewById(R.id.laborY5P);
+        labor66 =(TextView) fragment6.getView().findViewById(R.id.laborY6P);
+        labor67 =(TextView) fragment6.getView().findViewById(R.id.laborY7P);
+        income71 =(TextView) fragment7.getView().findViewById(R.id.incomeY1P);
+        income72 =(TextView) fragment7.getView().findViewById(R.id.incomeY2P);
+        income73 =(TextView) fragment7.getView().findViewById(R.id.incomeY3P);
+        income74 =(TextView) fragment7.getView().findViewById(R.id.incomeY4P);
+        income75 =(TextView) fragment7.getView().findViewById(R.id.incomeY5P);
+        income76 =(TextView) fragment7.getView().findViewById(R.id.incomeY6P);
+        income77 =(TextView) fragment7.getView().findViewById(R.id.incomeY7P);
+        cost71 =(TextView) fragment7.getView().findViewById(R.id.costY1P);
+        cost72 =(TextView) fragment7.getView().findViewById(R.id.costY2P);
+        cost73 =(TextView) fragment7.getView().findViewById(R.id.costY3P);
+        cost74 =(TextView) fragment7.getView().findViewById(R.id.costY4P);
+        cost75 =(TextView) fragment7.getView().findViewById(R.id.costY5P);
+        cost76 =(TextView) fragment7.getView().findViewById(R.id.costY6P);
+        cost77 =(TextView) fragment7.getView().findViewById(R.id.costY7P);
+        labor71 =(TextView) fragment7.getView().findViewById(R.id.laborY1P);
+        labor72 =(TextView) fragment7.getView().findViewById(R.id.laborY2P);
+        labor73 =(TextView) fragment7.getView().findViewById(R.id.laborY3P);
+        labor74 =(TextView) fragment7.getView().findViewById(R.id.laborY4P);
+        labor75 =(TextView) fragment7.getView().findViewById(R.id.laborY5P);
+        labor76 =(TextView) fragment7.getView().findViewById(R.id.laborY6P);
+        labor77 =(TextView) fragment7.getView().findViewById(R.id.laborY7P);
+        income81 =(TextView) fragment8.getView().findViewById(R.id.incomeY1P);
+        income82 =(TextView) fragment8.getView().findViewById(R.id.incomeY2P);
+        income83 =(TextView) fragment8.getView().findViewById(R.id.incomeY3P);
+        income84 =(TextView) fragment8.getView().findViewById(R.id.incomeY4P);
+        income85 =(TextView) fragment8.getView().findViewById(R.id.incomeY5P);
+        income86 =(TextView) fragment8.getView().findViewById(R.id.incomeY6P);
+        income87 =(TextView) fragment8.getView().findViewById(R.id.incomeY7P);
+        cost81 =(TextView) fragment8.getView().findViewById(R.id.costY1P);
+        cost82 =(TextView) fragment8.getView().findViewById(R.id.costY2P);
+        cost83 =(TextView) fragment8.getView().findViewById(R.id.costY3P);
+        cost84 =(TextView) fragment8.getView().findViewById(R.id.costY4P);
+        cost85 =(TextView) fragment8.getView().findViewById(R.id.costY5P);
+        cost86 =(TextView) fragment8.getView().findViewById(R.id.costY6P);
+        cost87 =(TextView) fragment8.getView().findViewById(R.id.costY7P);
+        labor81 =(TextView) fragment8.getView().findViewById(R.id.laborY1P);
+        labor82 =(TextView) fragment8.getView().findViewById(R.id.laborY2P);
+        labor83 =(TextView) fragment8.getView().findViewById(R.id.laborY3P);
+        labor84 =(TextView) fragment8.getView().findViewById(R.id.laborY4P);
+        labor85 =(TextView) fragment8.getView().findViewById(R.id.laborY5P);
+        labor86 =(TextView) fragment8.getView().findViewById(R.id.laborY6P);
+        labor87 =(TextView) fragment8.getView().findViewById(R.id.laborY7P);
+        income91 =(TextView) fragment9.getView().findViewById(R.id.incomeY1P);
+        income92 =(TextView) fragment9.getView().findViewById(R.id.incomeY2P);
+        income93 =(TextView) fragment9.getView().findViewById(R.id.incomeY3P);
+        income94 =(TextView) fragment9.getView().findViewById(R.id.incomeY4P);
+        income95 =(TextView) fragment9.getView().findViewById(R.id.incomeY5P);
+        income96 =(TextView) fragment9.getView().findViewById(R.id.incomeY6P);
+        income97 =(TextView) fragment9.getView().findViewById(R.id.incomeY7P);
+        cost91 =(TextView) fragment9.getView().findViewById(R.id.costY1P);
+        cost92 =(TextView) fragment9.getView().findViewById(R.id.costY2P);
+        cost93 =(TextView) fragment9.getView().findViewById(R.id.costY3P);
+        cost94 =(TextView) fragment9.getView().findViewById(R.id.costY4P);
+        cost95 =(TextView) fragment9.getView().findViewById(R.id.costY5P);
+        cost96 =(TextView) fragment9.getView().findViewById(R.id.costY6P);
+        cost97 =(TextView) fragment9.getView().findViewById(R.id.costY7P);
+        labor91 =(TextView) fragment9.getView().findViewById(R.id.laborY1P);
+        labor92 =(TextView) fragment9.getView().findViewById(R.id.laborY2P);
+        labor93 =(TextView) fragment9.getView().findViewById(R.id.laborY3P);
+        labor94 =(TextView) fragment9.getView().findViewById(R.id.laborY4P);
+        labor95 =(TextView) fragment9.getView().findViewById(R.id.laborY5P);
+        labor96 =(TextView) fragment9.getView().findViewById(R.id.laborY6P);
+        labor97 =(TextView) fragment9.getView().findViewById(R.id.laborY7P);
+        income101 =(TextView) fragment10.getView().findViewById(R.id.incomeY1P);
+        income102 =(TextView) fragment10.getView().findViewById(R.id.incomeY2P);
+        income103 =(TextView) fragment10.getView().findViewById(R.id.incomeY3P);
+        income104 =(TextView) fragment10.getView().findViewById(R.id.incomeY4P);
+        income105 =(TextView) fragment10.getView().findViewById(R.id.incomeY5P);
+        income106 =(TextView) fragment10.getView().findViewById(R.id.incomeY6P);
+        income107 =(TextView) fragment10.getView().findViewById(R.id.incomeY7P);
+        cost101 =(TextView) fragment10.getView().findViewById(R.id.costY1P);
+        cost102 =(TextView) fragment10.getView().findViewById(R.id.costY2P);
+        cost103 =(TextView) fragment10.getView().findViewById(R.id.costY3P);
+        cost104 =(TextView) fragment10.getView().findViewById(R.id.costY4P);
+        cost105 =(TextView) fragment10.getView().findViewById(R.id.costY5P);
+        cost106 =(TextView) fragment10.getView().findViewById(R.id.costY6P);
+        cost107 =(TextView) fragment10.getView().findViewById(R.id.costY7P);
+        labor101 =(TextView) fragment10.getView().findViewById(R.id.laborY1P);
+        labor102 =(TextView) fragment10.getView().findViewById(R.id.laborY2P);
+        labor103 =(TextView) fragment10.getView().findViewById(R.id.laborY3P);
+        labor104 =(TextView) fragment10.getView().findViewById(R.id.laborY4P);
+        labor105 =(TextView) fragment10.getView().findViewById(R.id.laborY5P);
+        labor106 =(TextView) fragment10.getView().findViewById(R.id.laborY6P);
+        labor107 =(TextView) fragment10.getView().findViewById(R.id.laborY7P);
+        comt1 = (EditText) fragment1.getView().findViewById(R.id.comments);
+        comt2 = (EditText) fragment2.getView().findViewById(R.id.comments);
+        comt3 = (EditText) fragment3.getView().findViewById(R.id.comments);
+        comt4 = (EditText) fragment4.getView().findViewById(R.id.comments);
+        comt5 = (EditText) fragment5.getView().findViewById(R.id.comments);
+        comt6 = (EditText) fragment6.getView().findViewById(R.id.comments);
+        comt7 = (EditText) fragment7.getView().findViewById(R.id.comments);
+        comt8 = (EditText) fragment8.getView().findViewById(R.id.comments);
+        comt9 = (EditText) fragment9.getView().findViewById(R.id.comments);
+        comt10 = (EditText) fragment10.getView().findViewById(R.id.comments);
 
         found1 = (TextView)findViewById(R.id.netFamilyY1_field);
         found2 = (TextView)findViewById(R.id.netFamilyY2_field);
@@ -256,6 +477,8 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 // Apply the adapter to the spinner
                 spinner.setAdapter(adapter);
             }
+
+            setText(comments,sObject.getReasonNotAgreed());
 
             //Set start year 1
             if (sObject.getStartYearP1().contentEquals("Year 1")) {
@@ -716,7 +939,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
-            //Set start year 100
+            //Set start year 10
             if (sObject.getStartYearP10().contentEquals("Year 1")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -777,204 +1000,49 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             double plot8Area = Double.valueOf(sObject.getPlot8Area());
             double plot9Area = Double.valueOf(sObject.getPlot9Area());
             double plot10Area = Double.valueOf(sObject.getPlot10Area());
+            String startY1 = sObject.getStartYearP1();
+            String startY2 = sObject.getStartYearP2();
+            String startY3 = sObject.getStartYearP3();
+            String startY4 = sObject.getStartYearP4();
+            String startY5 = sObject.getStartYearP5();
+            String startY6 = sObject.getStartYearP6();
+            String startY7 = sObject.getStartYearP7();
+            String startY8 = sObject.getStartYearP8();
+            String startY9 = sObject.getStartYearP9();
+            String startY10 = sObject.getStartYearP10();
             double avgCost = Double.parseDouble(sObject.getAveragecocoaprice());
             DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
-
-            int income11 =0;
-            int income12 =0;
-            int income13 =0;
-            int income14 =0;
-            int income15 =0;
-            int income16 =0;
-            int income17 =0;
-            int cost11=0;
-            int cost12=0;
-            int cost13=0;
-            int cost14=0;
-            int cost15=0;
-            int cost16=0;
-            int cost17=0;
-            int laborD11=0;
-            int laborD12=0;
-            int laborD13=0;
-            int laborD14=0;
-            int laborD15=0;
-            int laborD16=0;
-            int laborD17=0;
-            int labor11=0;
-            int labor12=0;
-            int labor13=0;
-            int labor14=0;
-            int labor15=0;
-            int labor16=0;
-            int labor17=0;
-            int pl11=0;
-            int pl12=0;
-            int pl13=0;
-            int pl14=0;
-            int pl15=0;
-            int pl16=0;
-            int pl17=0;
-            int income21 =0;
-            int income22 =0;
-            int income23 =0;
-            int income24 =0;
-            int income25 =0;
-            int income26 =0;
-            int income27 =0;
-            int cost21=0;
-            int cost22=0;
-            int cost23=0;
-            int cost24=0;
-            int cost25=0;
-            int cost26=0;
-            int cost27=0;
-            int laborD21=0;
-            int laborD22=0;
-            int laborD23=0;
-            int laborD24=0;
-            int laborD25=0;
-            int laborD26=0;
-            int laborD27=0;
-            int labor21=0;
-            int labor22=0;
-            int labor23=0;
-            int labor24=0;
-            int labor25=0;
-            int labor26=0;
-            int labor27=0;
-            int pl21=0;
-            int pl22=0;
-            int pl23=0;
-            int pl24=0;
-            int pl25=0;
-            int pl26=0;
-            int pl27=0;
-            int income31 =0;
-            int income32 =0;
-            int income33 =0;
-            int income34 =0;
-            int income35 =0;
-            int income36 =0;
-            int income37 =0;
-            int cost31=0;
-            int cost32=0;
-            int cost33=0;
-            int cost34=0;
-            int cost35=0;
-            int cost36=0;
-            int cost37=0;
-            int laborD31=0;
-            int laborD32=0;
-            int laborD33=0;
-            int laborD34=0;
-            int laborD35=0;
-            int laborD36=0;
-            int laborD37=0;
-            int labor31=0;
-            int labor32=0;
-            int labor33=0;
-            int labor34=0;
-            int labor35=0;
-            int labor36=0;
-            int labor37=0;
-            int pl31=0;
-            int pl32=0;
-            int pl33=0;
-            int pl34=0;
-            int pl35=0;
-            int pl36=0;
-            int pl37=0;
-            int income41 =0;
-            int income42 =0;
-            int income43 =0;
-            int income44 =0;
-            int income45 =0;
-            int income46 =0;
-            int income47 =0;
-            int cost41=0;
-            int cost42=0;
-            int cost43=0;
-            int cost44=0;
-            int cost45=0;
-            int cost46=0;
-            int cost47=0;
-            int laborD41=0;
-            int laborD42=0;
-            int laborD43=0;
-            int laborD44=0;
-            int laborD45=0;
-            int laborD46=0;
-            int laborD47=0;
-            int labor41=0;
-            int labor42=0;
-            int labor43=0;
-            int labor44=0;
-            int labor45=0;
-            int labor46=0;
-            int labor47=0;
-            int pl41=0;
-            int pl42=0;
-            int pl43=0;
-            int pl44=0;
-            int pl45=0;
-            int pl46=0;
-            int pl47=0;
-            int income51 =0;
-            int income52 =0;
-            int income53 =0;
-            int income54 =0;
-            int income55 =0;
-            int income56 =0;
-            int income57 =0;
-            int cost51=0;
-            int cost52=0;
-            int cost53=0;
-            int cost54=0;
-            int cost55=0;
-            int cost56=0;
-            int cost57=0;
-            int laborD51=0;
-            int laborD52=0;
-            int laborD53=0;
-            int laborD54=0;
-            int laborD55=0;
-            int laborD56=0;
-            int laborD57=0;
-            int labor51=0;
-            int labor52=0;
-            int labor53=0;
-            int labor54=0;
-            int labor55=0;
-            int labor56=0;
-            int labor57=0;
-            int pl51=0;
-            int pl52=0;
-            int pl53=0;
-            int pl54=0;
-            int pl55=0;
-            int pl56=0;
-            int pl57=0;
+            Integer age1 = Integer.valueOf(sObject.getPlot1Age());
+            Integer age2 = Integer.valueOf(sObject.getPlot2Age());
+            Integer age3 = Integer.valueOf(sObject.getPlot3Age());
+            Integer age4 = Integer.valueOf(sObject.getPlot4Age());
+            Integer age5 = Integer.valueOf(sObject.getPlot5Age());
+            Integer age6 = Integer.valueOf(sObject.getPlot6Age());
+            Integer age7 = Integer.valueOf(sObject.getPlot7Age());
+            Integer age8 = Integer.valueOf(sObject.getPlot8Age());
+            Integer age9 = Integer.valueOf(sObject.getPlot9Age());
+            Integer age10 = Integer.valueOf(sObject.getPlot10Age());
 
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             //plot1
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 setText(plot1,"PLOT 1");
                 fragment1.getView().setBackgroundColor(Color.parseColor("#e5e5e5"));
+                fragment1.setStartYear(startY1);
                 //main intervention
                 if (sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age())>25)){
                     //Replant
                     if (sObject.getSOILMNG1().equals("B")){
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("replant","extra","labor",plot1Area,avgCost);
+                            fragment1.mainint("replant","extra","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("replant","extra","",plot1Area,avgCost);
+                            fragment1.mainint("replant","extra","",plot1Area,avgCost,age1);
                         }
                     }else{
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("replant","","labor",plot1Area,avgCost);
+                            fragment1.mainint("replant","","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("replant","","",plot1Area,avgCost);
+                            fragment1.mainint("replant","","",plot1Area,avgCost,age1);
                         }
                     }
 
@@ -982,39 +1050,39 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     //Graft
                     if (sObject.getSOILMNG1().equals("B")){
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("graft","extra","labor",plot1Area,avgCost);
+                            fragment1.mainint("graft","extra","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("graft","extra","",plot1Area,avgCost);
+                            fragment1.mainint("graft","extra","",plot1Area,avgCost,age1);
                         }
                     }else{
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("graft","","labor",plot1Area,avgCost);
+                            fragment1.mainint("graft","","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("graft","","",plot1Area,avgCost);
+                            fragment1.mainint("graft","","",plot1Area,avgCost,age1);
                         }
                     }
 
                 }else if (sObject.getSOILMNG1().equals("B")){
                     //Extra Soil Management
                     if (sObject.getHireLabor1().equals("Yes")) {
-                        fragment1.mainint("extra","","labor",plot1Area,avgCost);
+                        fragment1.mainint("extra","","labor",plot1Area,avgCost,age1);
                     }else{
-                        fragment1.mainint("graft","","",plot1Area,avgCost);
+                        fragment1.mainint("graft","","",plot1Area,avgCost,age1);
                     }
 
                 }else{
                     //GAP
                     if (sObject.getSOILMNG1().equals("B")){
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("gap","extra","labor",plot1Area,avgCost);
+                            fragment1.mainint("gap","extra","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("gap","extra","",plot1Area,avgCost);
+                            fragment1.mainint("gap","extra","",plot1Area,avgCost,age1);
                         }
                     }else{
                         if (sObject.getHireLabor1().equals("Yes")) {
-                            fragment1.mainint("gap","","labor",plot1Area,avgCost);
+                            fragment1.mainint("gap","","labor",plot1Area,avgCost,age1);
                         }else{
-                            fragment1.mainint("gap","","",plot1Area,avgCost);
+                            fragment1.mainint("gap","","",plot1Area,avgCost,age1);
                         }
                     }
                 }
@@ -1042,6 +1110,82 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 setText(plot2,"PLOT 2");
+                fragment2.setStartYear(startY2);
+                //main intervention
+                if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("replant","extra","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("replant","extra","",plot2Area,avgCost,age2);
+                        }
+                    }else{
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("replant","","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("replant","","",plot2Area,avgCost,age2);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("graft","extra","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("graft","extra","",plot2Area,avgCost,age2);
+                        }
+                    }else{
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("graft","","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("graft","","",plot2Area,avgCost,age2);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG2().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor2().equals("Yes")) {
+                        fragment2.mainint("extra","","labor",plot2Area,avgCost,age2);
+                    }else{
+                        fragment2.mainint("graft","","",plot2Area,avgCost,age2);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("gap","extra","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("gap","extra","",plot2Area,avgCost,age2);
+                        }
+                    }else{
+                        if (sObject.getHireLabor2().equals("Yes")) {
+                            fragment2.mainint("gap","","labor",plot2Area,avgCost,age2);
+                        }else{
+                            fragment2.mainint("gap","","",plot2Area,avgCost,age2);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor2().equals("Yes")) {
+                    fragment2.other("labor");
+                }
+
+                if (sObject.getLimeNeed2().equals("Yes")) {
+                    fragment2.other("lime");
+                }
+
+                if (sObject.getFillingOption2().equals("Yes")) {
+                    fragment2.other("filling");
+                }
+
+                if (sObject.getDrainageNeed2().equals("Yes")) {
+                    fragment2.other("drainage");
+                }
+                
                 ft.show(fragment2);
             }else{ft.hide(fragment2);}
 
@@ -1049,12 +1193,163 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 setText(plot3,"PLOT 3");
                 fragment3.getView().setBackgroundColor(Color.parseColor("#e5e5e5"));
+                fragment3.setStartYear(startY3);
+                //main intervention
+                if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("replant","extra","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("replant","extra","",plot3Area,avgCost,age3);
+                        }
+                    }else{
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("replant","","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("replant","","",plot3Area,avgCost,age3);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("graft","extra","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("graft","extra","",plot3Area,avgCost,age3);
+                        }
+                    }else{
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("graft","","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("graft","","",plot3Area,avgCost,age3);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG3().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor3().equals("Yes")) {
+                        fragment3.mainint("extra","","labor",plot3Area,avgCost,age3);
+                    }else{
+                        fragment3.mainint("graft","","",plot3Area,avgCost,age3);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("gap","extra","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("gap","extra","",plot3Area,avgCost,age3);
+                        }
+                    }else{
+                        if (sObject.getHireLabor3().equals("Yes")) {
+                            fragment3.mainint("gap","","labor",plot3Area,avgCost,age3);
+                        }else{
+                            fragment3.mainint("gap","","",plot3Area,avgCost,age3);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor3().equals("Yes")) {
+                    fragment3.other("labor");
+                }
+
+                if (sObject.getLimeNeed3().equals("Yes")) {
+                    fragment3.other("lime");
+                }
+
+                if (sObject.getFillingOption3().equals("Yes")) {
+                    fragment3.other("filling");
+                }
+
+                if (sObject.getDrainageNeed3().equals("Yes")) {
+                    fragment3.other("drainage");
+                }
+                
                 ft.show(fragment3);
             }else{ft.hide(fragment3);}
 
             //plot4
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 setText(plot4,"PLOT 4");
+                fragment4.setStartYear(startY4);
+                //main intervention
+                if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("replant","extra","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("replant","extra","",plot4Area,avgCost,age4);
+                        }
+                    }else{
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("replant","","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("replant","","",plot4Area,avgCost,age4);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("graft","extra","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("graft","extra","",plot4Area,avgCost,age4);
+                        }
+                    }else{
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("graft","","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("graft","","",plot4Area,avgCost,age4);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG4().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor4().equals("Yes")) {
+                        fragment4.mainint("extra","","labor",plot4Area,avgCost,age4);
+                    }else{
+                        fragment4.mainint("graft","","",plot4Area,avgCost,age4);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("gap","extra","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("gap","extra","",plot4Area,avgCost,age4);
+                        }
+                    }else{
+                        if (sObject.getHireLabor4().equals("Yes")) {
+                            fragment4.mainint("gap","","labor",plot4Area,avgCost,age4);
+                        }else{
+                            fragment4.mainint("gap","","",plot4Area,avgCost,age4);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor4().equals("Yes")) {
+                    fragment4.other("labor");
+                }
+
+                if (sObject.geLimeNeed4().equals("Yes")) {
+                    fragment4.other("lime");
+                }
+
+                if (sObject.getFillingOption4().equals("Yes")) {
+                    fragment4.other("filling");
+                }
+
+                if (sObject.getDrainageNeed4().equals("Yes")) {
+                    fragment4.other("drainage");
+                }
                 ft.show(fragment4);
             }else{ft.hide(fragment4);}
 
@@ -1062,12 +1357,162 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 setText(plot5,"PLOT 5");
                 fragment5.getView().setBackgroundColor(Color.parseColor("#e5e5e5"));
+                fragment5.setStartYear(startY5);
+                //main intervention
+                if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("replant","extra","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("replant","extra","",plot5Area,avgCost,age5);
+                        }
+                    }else{
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("replant","","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("replant","","",plot5Area,avgCost,age5);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("graft","extra","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("graft","extra","",plot5Area,avgCost,age5);
+                        }
+                    }else{
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("graft","","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("graft","","",plot5Area,avgCost,age5);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG5().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor5().equals("Yes")) {
+                        fragment5.mainint("extra","","labor",plot5Area,avgCost,age5);
+                    }else{
+                        fragment5.mainint("graft","","",plot5Area,avgCost,age5);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("gap","extra","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("gap","extra","",plot5Area,avgCost,age5);
+                        }
+                    }else{
+                        if (sObject.getHireLabor5().equals("Yes")) {
+                            fragment5.mainint("gap","","labor",plot5Area,avgCost,age5);
+                        }else{
+                            fragment5.mainint("gap","","",plot5Area,avgCost,age5);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor5().equals("Yes")) {
+                    fragment5.other("labor");
+                }
+
+                if (sObject.getLimeNeed5().equals("Yes")) {
+                    fragment5.other("lime");
+                }
+
+                if (sObject.getFillingOption5().equals("Yes")) {
+                    fragment5.other("filling");
+                }
+
+                if (sObject.getDrainageNeed5().equals("Yes")) {
+                    fragment5.other("drainage");
+                }
                 ft.show(fragment5);
             }else{ft.hide(fragment5);}
 
             //plot6
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 5) {
                 setText(plot6,"PLOT 6");
+                fragment6.setStartYear(startY6);
+                //main intervention
+                if (sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("replant","extra","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("replant","extra","",plot6Area,avgCost,age6);
+                        }
+                    }else{
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("replant","","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("replant","","",plot6Area,avgCost,age6);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition6().equals("G")&&sObject.getGENETIC6().equals("B"))||(sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("graft","extra","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("graft","extra","",plot6Area,avgCost,age6);
+                        }
+                    }else{
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("graft","","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("graft","","",plot6Area,avgCost,age6);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG6().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor6().equals("Yes")) {
+                        fragment6.mainint("extra","","labor",plot6Area,avgCost,age6);
+                    }else{
+                        fragment6.mainint("graft","","",plot6Area,avgCost,age6);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("gap","extra","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("gap","extra","",plot6Area,avgCost,age6);
+                        }
+                    }else{
+                        if (sObject.getHireLabor6().equals("Yes")) {
+                            fragment6.mainint("gap","","labor",plot6Area,avgCost,age6);
+                        }else{
+                            fragment6.mainint("gap","","",plot6Area,avgCost,age6);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor6().equals("Yes")) {
+                    fragment6.other("labor");
+                }
+
+                if (sObject.getLimeNeed6().equals("Yes")) {
+                    fragment6.other("lime");
+                }
+
+                if (sObject.getFillingOption6().equals("Yes")) {
+                    fragment6.other("filling");
+                }
+
+                if (sObject.getDrainageNeed6().equals("Yes")) {
+                    fragment6.other("drainage");
+                }
                 ft.show(fragment6);
             }else{ft.hide(fragment6);}
 
@@ -1075,12 +1520,162 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 6) {
                 setText(plot7,"PLOT 7");
                 fragment7.getView().setBackgroundColor(Color.parseColor("#e5e5e5"));
+                fragment7.setStartYear(startY7);
+                //main intervention
+                if (sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("replant","extra","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("replant","extra","",plot7Area,avgCost,age7);
+                        }
+                    }else{
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("replant","","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("replant","","",plot7Area,avgCost,age7);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition7().equals("G")&&sObject.getGENETIC7().equals("B"))||(sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("graft","extra","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("graft","extra","",plot7Area,avgCost,age7);
+                        }
+                    }else{
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("graft","","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("graft","","",plot7Area,avgCost,age7);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG7().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor7().equals("Yes")) {
+                        fragment7.mainint("extra","","labor",plot7Area,avgCost,age7);
+                    }else{
+                        fragment7.mainint("graft","","",plot7Area,avgCost,age7);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("gap","extra","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("gap","extra","",plot7Area,avgCost,age7);
+                        }
+                    }else{
+                        if (sObject.getHireLabor7().equals("Yes")) {
+                            fragment7.mainint("gap","","labor",plot7Area,avgCost,age7);
+                        }else{
+                            fragment7.mainint("gap","","",plot7Area,avgCost,age7);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor7().equals("Yes")) {
+                    fragment7.other("labor");
+                }
+
+                if (sObject.getLimeNeed7().equals("Yes")) {
+                    fragment7.other("lime");
+                }
+
+                if (sObject.getFillingOption7().equals("Yes")) {
+                    fragment7.other("filling");
+                }
+
+                if (sObject.getDrainageNeed7().equals("Yes")) {
+                    fragment7.other("drainage");
+                }
                 ft.show(fragment7);
             }else{ft.hide(fragment7);}
 
             //plot8
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 7) {
                 setText(plot8,"PLOT 8");
+                fragment8.setStartYear(startY8);
+                //main intervention
+                if (sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("replant","extra","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("replant","extra","",plot8Area,avgCost,age8);
+                        }
+                    }else{
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("replant","","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("replant","","",plot8Area,avgCost,age8);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition8().equals("G")&&sObject.getGENETIC8().equals("B"))||(sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("graft","extra","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("graft","extra","",plot8Area,avgCost,age8);
+                        }
+                    }else{
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("graft","","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("graft","","",plot8Area,avgCost,age8);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG8().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor8().equals("Yes")) {
+                        fragment8.mainint("extra","","labor",plot8Area,avgCost,age8);
+                    }else{
+                        fragment8.mainint("graft","","",plot8Area,avgCost,age8);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("gap","extra","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("gap","extra","",plot8Area,avgCost,age8);
+                        }
+                    }else{
+                        if (sObject.getHireLabor8().equals("Yes")) {
+                            fragment8.mainint("gap","","labor",plot8Area,avgCost,age8);
+                        }else{
+                            fragment8.mainint("gap","","",plot8Area,avgCost,age8);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor8().equals("Yes")) {
+                    fragment8.other("labor");
+                }
+
+                if (sObject.getLimeNeed8().equals("Yes")) {
+                    fragment8.other("lime");
+                }
+
+                if (sObject.getFillingOption8().equals("Yes")) {
+                    fragment8.other("filling");
+                }
+
+                if (sObject.getDrainageNeed8().equals("Yes")) {
+                    fragment8.other("drainage");
+                }
                 ft.show(fragment8);
             }else{ft.hide(fragment8);}
 
@@ -1088,24 +1683,184 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 8) {
                 setText(plot9,"PLOT 9");
                 fragment9.getView().setBackgroundColor(Color.parseColor("#e5e5e5"));
+                fragment9.setStartYear(startY9);
+                //main intervention
+                if (sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("replant","extra","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("replant","extra","",plot9Area,avgCost,age9);
+                        }
+                    }else{
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("replant","","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("replant","","",plot9Area,avgCost,age9);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition9().equals("G")&&sObject.getGENETIC9().equals("B"))||(sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("graft","extra","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("graft","extra","",plot9Area,avgCost,age9);
+                        }
+                    }else{
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("graft","","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("graft","","",plot9Area,avgCost,age9);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG9().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor9().equals("Yes")) {
+                        fragment9.mainint("extra","","labor",plot9Area,avgCost,age9);
+                    }else{
+                        fragment9.mainint("graft","","",plot9Area,avgCost,age9);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("gap","extra","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("gap","extra","",plot9Area,avgCost,age9);
+                        }
+                    }else{
+                        if (sObject.getHireLabor9().equals("Yes")) {
+                            fragment9.mainint("gap","","labor",plot9Area,avgCost,age9);
+                        }else{
+                            fragment9.mainint("gap","","",plot9Area,avgCost,age9);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor9().equals("Yes")) {
+                    fragment9.other("labor");
+                }
+
+                if (sObject.getLimeNeed9().equals("Yes")) {
+                    fragment9.other("lime");
+                }
+
+                if (sObject.getFillingOption9().equals("Yes")) {
+                    fragment9.other("filling");
+                }
+
+                if (sObject.getDrainageNeed9().equals("Yes")) {
+                    fragment9.other("drainage");
+                }
                 ft.show(fragment9);
             }else{ft.hide(fragment9);}
 
             //plot10
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 9) {
                 setText(plot10,"PLOT 10");
+                fragment10.setStartYear(startY10);
+                //main intervention
+                if (sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())>25)){
+                    //Replant
+                    if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("replant","extra","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("replant","extra","",plot10Area,avgCost,age10);
+                        }
+                    }else{
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("replant","","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("replant","","",plot10Area,avgCost,age10);
+                        }
+                    }
+
+                } else if((sObject.getFarmCondition10().equals("G")&&sObject.getGENETIC10().equals("B"))||(sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())<25))){
+                    //Graft
+                    if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("graft","extra","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("graft","extra","",plot10Area,avgCost,age10);
+                        }
+                    }else{
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("graft","","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("graft","","",plot10Area,avgCost,age10);
+                        }
+                    }
+
+                }else if (sObject.getSOILMNG10().equals("B")){
+                    //Extra Soil Management
+                    if (sObject.getHireLabor10().equals("Yes")) {
+                        fragment10.mainint("extra","","labor",plot10Area,avgCost,age10);
+                    }else{
+                        fragment10.mainint("graft","","",plot10Area,avgCost,age10);
+                    }
+
+                }else{
+                    //GAP
+                    if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("gap","extra","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("gap","extra","",plot10Area,avgCost,age10);
+                        }
+                    }else{
+                        if (sObject.getHireLabor10().equals("Yes")) {
+                            fragment10.mainint("gap","","labor",plot10Area,avgCost,age10);
+                        }else{
+                            fragment10.mainint("gap","","",plot10Area,avgCost,age10);
+                        }
+                    }
+                }
+
+                //other interventions
+                if (sObject.getHireLabor10().equals("Yes")) {
+                    fragment10.other("labor");
+                }
+
+                if (sObject.getLimeNeed10().equals("Yes")) {
+                    fragment10.other("lime");
+                }
+
+                if (sObject.getFillingOption10().equals("Yes")) {
+                    fragment10.other("filling");
+                }
+
+                if (sObject.getDrainageNeed10().equals("Yes")) {
+                    fragment10.other("drainage");
+                }
                 ft.show(fragment10);
             }else{ft.hide(fragment10);}
             ft.commitAllowingStateLoss();
 
+            calculations();
+        }
+    }
+    public void comt(String plot){
+        comments.setText("+Change Replant for Grafting "+plot+"+");
+    }
+
+    public void calculations() {
+        if (sObject != null) {
+            DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             //net income cocoa
-            int totalIncomeY1 = income11+income21+income31+income41+income51;
-            int totalIncomeY2 = income12+income22+income32+income42+income52;
-            int totalIncomeY3 = income13+income23+income33+income43+income53;
-            int totalIncomeY4 = income14+income24+income34+income44+income54;
-            int totalIncomeY5 = income15+income25+income35+income45+income55;
-            int totalIncomeY6 = income16+income26+income36+income46+income56;
-            int totalIncomeY7 = income17+income27+income37+income47+income57;
+            int totalIncomeY1 = Integer.parseInt(income11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income61.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income101.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY2 = Integer.parseInt(income12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income62.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income102.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY3 = Integer.parseInt(income13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income63.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income103.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY4 = Integer.parseInt(income14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income64.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income104.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY5 = Integer.parseInt(income15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income65.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income105.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY6 = Integer.parseInt(income16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income66.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income106.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY7 = Integer.parseInt(income17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income67.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income107.getText().toString().replaceAll("[IDR,\\s]", ""));
             setText((TextView) findViewById(R.id.netPlotIncomeY1_field), String.valueOf(dec.format(totalIncomeY1)));
             setText((TextView) findViewById(R.id.netPlotIncomeY2_field), String.valueOf(dec.format(totalIncomeY2)));
             setText((TextView) findViewById(R.id.netPlotIncomeY3_field), String.valueOf(dec.format(totalIncomeY3)));
@@ -1115,7 +1870,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netPlotIncomeY7_field), String.valueOf(dec.format(totalIncomeY7)));
 
             //net income other crops
-            double otherCrops = Double.parseDouble(sObject.getIncomeothercrops().toString());
+            double otherCrops = Double.parseDouble(sObject.getIncomeothercrops());
             setText((TextView) findViewById(R.id.otherCropY1_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY2_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY3_field), String.valueOf(dec.format(otherCrops)));
@@ -1141,11 +1896,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netFarmingY7_field), String.valueOf(dec.format(farmingy7)));
 
             //net other income sources
-            double moneyBack = Double.parseDouble(sObject.getLoanmoneygetback().toString());
-            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings().toString());
-            double farmWork = Double.parseDouble(sObject.getIncomefarmlabor().toString());
-            double spouseWork = Double.parseDouble(sObject.getSpouseincome().toString());
-            double familyWork = Double.parseDouble(sObject.getFamilymembersincome().toString());
+            double moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
+            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
+            double farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
+            double spouseWork = Double.parseDouble(sObject.getSpouseincome());
+            double familyWork = Double.parseDouble(sObject.getFamilymembersincome());
             int totalOtherIncome = (int) (moneyBack + hhSavings+farmWork+spouseWork+familyWork);
             setText((TextView) findViewById(R.id.netOtherY1_field), String.valueOf(dec.format(totalOtherIncome)));
             setText((TextView) findViewById(R.id.netOtherY2_field), String.valueOf(dec.format(totalOtherIncome)));
@@ -1172,10 +1927,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.totalIncomeY7_field), String.valueOf(dec.format(totalIncomeAllY7)));
 
             //total family costs
-            double anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses().toString());
-            double anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses().toString());
-            double expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses().toString());
-            double credPay = Double.parseDouble(sObject.getHowmuchpayforcredit().toString());
+            double anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
+            double anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
+            double expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
+            double credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
             int totalExpenses = (int) (anLivExpen+anOtherExp+expEducExp+credPay);
             setText((TextView) findViewById(R.id.totalExpensesY1_field), String.valueOf(dec.format(totalExpenses)));
             setText((TextView) findViewById(R.id.totalExpensesY2_field), String.valueOf(dec.format(totalExpenses)));
@@ -1237,13 +1992,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //found needed
-            int totalY1 = cost11+labor11+cost21+labor21+cost31+labor31+cost41+labor41+cost51+labor51;
-            int totalY2 = cost12+labor12+cost22+labor22+cost32+labor32+cost42+labor42+cost52+labor52;
-            int totalY3 = cost13+labor13+cost23+labor23+cost33+labor33+cost43+labor43+cost53+labor53;
-            int totalY4 = cost14+labor14+cost24+labor24+cost34+labor34+cost44+labor44+cost54+labor54;
-            int totalY5 = cost15+labor15+cost25+labor25+cost35+labor35+cost45+labor45+cost55+labor55;
-            int totalY6 = cost16+labor16+cost26+labor26+cost36+labor36+cost46+labor46+cost56+labor56;
-            int totalY7 = cost17+labor17+cost27+labor27+cost37+labor37+cost47+labor47+cost57+labor57;
+            int totalY1 = Integer.parseInt(cost11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost101.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor101.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY2 = Integer.parseInt(cost12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost102.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor102.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY3 = Integer.parseInt(cost13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost103.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor103.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY4 = Integer.parseInt(cost14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost104.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor104.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY5 = Integer.parseInt(cost15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost105.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor105.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY6 = Integer.parseInt(cost16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost106.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor106.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY7 = Integer.parseInt(cost17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost107.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor107.getText().toString().replaceAll("[IDR,\\s]", ""));
             setText((TextView) findViewById(R.id.foundsNeededY1_field), String.valueOf(dec.format(totalY1)));
             setText((TextView) findViewById(R.id.foundsNeededY2_field), String.valueOf(dec.format(totalY2)));
             setText((TextView) findViewById(R.id.foundsNeededY3_field), String.valueOf(dec.format(totalY3)));
@@ -1312,8 +2067,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     }
 
     private void save() {
+        final String start1 = (st1.getSelectedItem().toString());
+        final String start2 = (st2.getSelectedItem().toString());
+        final String start3 = (st3.getSelectedItem().toString());
+        final String start4 = (st4.getSelectedItem().toString());
+        final String start5 = (st5.getSelectedItem().toString());
+        final String start6 = (st6.getSelectedItem().toString());
+        final String start7 = (st7.getSelectedItem().toString());
+        final String start8 = (st8.getSelectedItem().toString());
+        final String start9 = (st9.getSelectedItem().toString());
+        final String start10 = (st10.getSelectedItem().toString());
         final String agree = ((Spinner) findViewById(R.id.farmerAgree_field)).getSelectedItem().toString();
-        final String coments = ((EditText) findViewById(R.id.reasonNotAgree_field)).getText().toString();
+        final String coments = ((EditText) findViewById(R.id.reasonNotAgree_field)).getText().toString()+comt1+comt2+comt3+comt4+comt4+comt5+comt6+comt7+comt8+comt9+comt10;
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -1330,6 +2095,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 attributes.put(Constants.TYPE.toLowerCase(), Constants.SUBMISSION);
                 contact.put(Constants.ATTRIBUTES, attributes);
             }
+            contact.put(ContactObject.STARTYEARP1,start1);
+            contact.put(ContactObject.STARTYEARP2,start2);
+            contact.put(ContactObject.STARTYEARP3,start3);
+            contact.put(ContactObject.STARTYEARP4,start4);
+            contact.put(ContactObject.STARTYEARP5,start5);
+            contact.put(ContactObject.STARTYEARP6,start6);
+            contact.put(ContactObject.STARTYEARP7,start7);
+            contact.put(ContactObject.STARTYEARP8,start8);
+            contact.put(ContactObject.STARTYEARP9,start9);
+            contact.put(ContactObject.STARTYEARP10,start10);
             contact.put(ContactObject.AGREERECOMENDATIONS,agree);
             contact.put(ContactObject.REASONSNOTAGREED,coments);
             contact.put(SyncManager.LOCAL, true);
@@ -1341,7 +2116,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else {
                 smartStore.upsert(ContactListLoader.CONTACT_SOUP, contact);
             }
-            Toast.makeText(this, "Save successful!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Save successful!", Toast.LENGTH_SHORT).show();
             finish();
         } catch (JSONException e) {
             Log.e(TAG, "JSONException occurred while parsing", e);

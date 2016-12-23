@@ -2010,6 +2010,7 @@
     <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
     <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
+    <string name="changeR">Change for Grafting</string>
     <string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
     <string name="cocoaArea">36. Total land under cocoa Size (Ha):</string>
@@ -2084,7 +2085,7 @@
     <string name="gapLb">GAPS:</string>
     <string name="gaps">Maintenance (GAPS)</string>
     <string name="gender">4. Gender:</string>
-    <string name="geneticLb">Genetics:</string>
+    <string name="geneticLb">Genetics of plant material:</string>
     <string name="getLocation">Get Location</string>
     <string name="giveLoan">21. Have you given someone a loan over 5M IDR?</string>
     <string name="gps">7. House GPS:</string>
