@@ -52,8 +52,6 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Object detail activity.
@@ -575,11 +573,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		}
 	}
 
-	private File createImageFile() throws IOException {
+	private File createImageFile(String name) throws IOException {
 		// Create an image file name
 
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		String imageFileName = objectId+"_"+ timeStamp;
+		String imageFileName = objectId+"_"+ name;
 		File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 		File image = File.createTempFile(
 				imageFileName,  /* prefix */
@@ -599,7 +596,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             // Create the File where the photo should go
             File photoFile = null;
             try {
-                photoFile = createImageFile();
+                switch (view.getId()) {
+                    case R.id.familyPhoto:
+                        photoFile = createImageFile("family");
+                        break;
+                    case R.id.mapPhoto:
+                        photoFile = createImageFile("farm");
+                        break;
+                }
             } catch (IOException ex) {
                 // Error occurred while creating the File
             }

@@ -482,6 +482,21 @@
                     android:inputType="text" />
             </LinearLayout>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/button"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_margin="25dp"
+                android:layout_gravity="center"
+                android:text="@string/familyPhoto"
+                android:gravity="center"
+                android:padding="6dp"
+                android:onClick="dispatchTakePictureIntent"
+                android:clickable="true" />
+
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -492,7 +507,6 @@
                 android:textStyle="bold"
                 android:typeface="normal"
                 android:background="@color/ptn1" />
-
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1355,6 +1369,21 @@
                 android:textStyle="bold"
                 android:typeface="normal"
                 android:background="@color/ptn1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/button"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_margin="25dp"
+                android:layout_gravity="center"
+                android:text="@string/mapPhoto"
+                android:gravity="center"
+                android:padding="6dp"
+                android:onClick="dispatchTakePictureIntent"
+                android:clickable="true" />
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"

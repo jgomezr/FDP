@@ -53,8 +53,6 @@ import org.grameenfoundation.fdp.ui.LogoutDialogFragment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -297,74 +295,6 @@ public class MainActivity extends SalesforceListActivity implements
 		nameFilter.filter(filterTerm);
 	}
 
-    private String encodeFileInBase64(File file) {
-        String fileTxt="";
-        StringBuilder sb = new StringBuilder();
-        // StringBuilder sbStr = new StringBuilder((int) (file.length() / 3 *
-        // 8));
-
-        FileInputStream fin = null;
-        try {
-            fin = new FileInputStream(file);
-
-            int bSize = 3000; // 3 * 512;
-            Log.v("fileLength", String.valueOf(file.length()));
-
-            byte[] buf = new byte[bSize];
-
-            int len = 0;
-
-            while ((len = fin.read(buf)) != -1) {
-                Log.v("len", String.valueOf(len));// sbStr.append(new
-                // String(buf, 0, len));
-
-                byte[] encoded = Base64.encode(buf, Base64.DEFAULT);
-
-                sb.append(new String(encoded, 0, len));
-            }
-
-            Log.v("txtFileWithBuffer", sb.toString());
-
-            fin.close();
-        } catch (IOException e) {
-            if (null != fin) {
-                try {
-                    fin.close();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-
-            String base64EncodedFile = sb.toString();
-
-            FileInputStream fileInputStream = null;
-
-            byte[] bFile = new byte[(int) base64EncodedFile.length()];
-
-            try {
-                fileInputStream = new FileInputStream(base64EncodedFile);
-                fileInputStream.read(bFile);
-                fileInputStream.close();
-                fileTxt = Base64.encodeToString(bFile, Base64.DEFAULT);
-                Log.v("txtFileWithoutBuffer", fileTxt);
-
-                return fileTxt;
-
-                // encodeImgList.add(encodedImage);
-
-            } catch (Exception ex) {
-
-                ex.printStackTrace();
-
-                return "";
-            }
-
-            // return base64EncodedFile;
-
-        }
-        return fileTxt;
-    }
-
 	private void syncDownContacts() {
 		contactLoader.syncDown();
 		Toast.makeText(MainActivity.this, "Sync down complete!",
@@ -388,7 +318,6 @@ public class MainActivity extends SalesforceListActivity implements
     private void postImageAsAttachment() {
         Map<String, Object> fields = new HashMap<String, Object>();
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File storage =new File("Android/data/org.grameenfoundation.fdp/files/Pictures");
         File[] files = new File(String.valueOf(storageDir)).listFiles();
         if(files != null){
 
