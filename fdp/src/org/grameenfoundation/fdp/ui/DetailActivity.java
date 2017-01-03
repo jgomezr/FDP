@@ -8,9 +8,13 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -44,8 +48,12 @@ import org.grameenfoundation.fdp.objects.ContactObject;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Object detail activity.
@@ -71,6 +79,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	public static final String OBJECT_ID_KEY = "object_id";
 	public static final String OBJECT_TITLE_KEY = "object_title";
 	public static final String OBJECT_NAME_KEY = "object_name";
+	String mCurrentPhotoPath;
+    static final int REQUEST_TAKE_PHOTO = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -564,6 +574,45 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			editText.addTextChangedListener(this);
 		}
 	}
+
+	private File createImageFile() throws IOException {
+		// Create an image file name
+
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String imageFileName = objectId+"_"+ timeStamp;
+		File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+		File image = File.createTempFile(
+				imageFileName,  /* prefix */
+				".jpg",         /* suffix */
+				storageDir      /* directory */
+		);
+
+		// Save a file: path for use with ACTION_VIEW intents
+		mCurrentPhotoPath = image.getAbsolutePath();
+		return image;
+	}
+
+    public void dispatchTakePictureIntent(View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // Ensure that there's a camera activity to handle the intent
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            // Create the File where the photo should go
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+            }
+            // Continue only if the File was successfully created
+            if (photoFile != null) {
+                Uri photoURI = FileProvider.getUriForFile(this,
+                        "com.example.android.fileprovider",
+                        photoFile);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+            }
+        }
+    }
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {

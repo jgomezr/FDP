@@ -2064,6 +2064,7 @@
     <string name="extraSoil">Extra Soil Management</string>
     <string name="familyMembers">13. Number of Family members living together including the farmer:</string>
     <string name="familyPaidWork">18. Family Members contributed with money to the household:</string>
+    <string name="familyPhoto">Take a Family Photo</string>
     <string name="farmAge">32. Year of farm establishment:</string>
     <string name="farmArea">34. Total land ownership or availability Size (Ha):</string>
     <string name="farmCertifications">33. Farm Certifications:</string>
@@ -2112,6 +2113,7 @@
     <string name="logout_title">Log out?</string>
     <string name="main_activity_title">Farmer List</string>
     <string name="manDaysNeed">Labor needed in man days:</string>
+    <string name="mapPhoto">Take a Map Photo</string>
     <string name="mar">March</string>
     <string name="may">May</string>
     <string name="mobileMoney">C18. Farmer account have Mobile money option?</string>

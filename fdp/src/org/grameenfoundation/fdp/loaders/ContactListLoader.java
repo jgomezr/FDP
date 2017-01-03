@@ -1,13 +1,6 @@
 package org.grameenfoundation.fdp.loaders;/**
  * Created by julian_Gf on 7/8/2016.
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.content.Intent;
@@ -33,7 +26,14 @@ import com.salesforce.androidsdk.smartsync.util.SyncState;
 import com.salesforce.androidsdk.smartsync.util.SyncState.MergeMode;
 import com.salesforce.androidsdk.smartsync.util.SyncState.Status;
 import com.salesforce.androidsdk.smartsync.util.SyncUpTarget;
+
 import org.grameenfoundation.fdp.objects.ContactObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A simple AsyncTaskLoader to load a list of Salesforce contacts.

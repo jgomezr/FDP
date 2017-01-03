@@ -53,6 +53,7 @@
 	<string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
 	<string name="familyMembers">13. Number of Family members living together including the farmer:</string>
 	<string name="farmerGroup">14. Farmer group</string>
+	<string name="familyPhoto">Take a Family Photo</string>
 	<string name="fmWorkFarm">15. Family members work on farm:</string>
 	<string name="dependEconomically">16. Number of family members depend on family income:</string>
 	<string name="receivesFarmPayment">17. Farmer receives payment for other work:</string>
@@ -84,7 +85,8 @@
     <string name="averageCocoaPrice">29. Average Farm gate cocoa price per Kg:</string>
 	<string name="expensesCocoaLY">30. Total Expenses on cocoa last year (Year means past two seasons, mid and main crop):</string>
 	<string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
-    <string name="farmAge">32. Year of farm establishment:</string>
+	<string name="mapPhoto">Take a photo of the farm map</string>
+	<string name="farmAge">32. Year of farm establishment:</string>
     <string name="farmCertifications">33. Farm Certifications:</string>
     <string name="farmArea">34. Total land ownership or availability Size (Ha):</string>
     <string name="cultivationArea">35. Total land under cultivation Size (Ha):</string>
