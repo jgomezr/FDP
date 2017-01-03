@@ -8,11 +8,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -32,20 +37,31 @@ import android.widget.Toast;
 import com.salesforce.androidsdk.accounts.UserAccount;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 import com.salesforce.androidsdk.rest.RestClient;
+import com.salesforce.androidsdk.rest.RestRequest;
+import com.salesforce.androidsdk.rest.RestResponse;
 import com.salesforce.androidsdk.smartstore.store.SmartStore;
 import com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity;
 import com.salesforce.androidsdk.smartsync.app.SmartSyncSDKManager;
 import com.salesforce.androidsdk.smartsync.util.Constants;
 import com.salesforce.androidsdk.ui.SalesforceListActivity;
+import com.salesforce.androidsdk.util.EventsObservable;
 
 import org.grameenfoundation.fdp.loaders.ContactListLoader;
 import org.grameenfoundation.fdp.objects.ContactObject;
 import org.grameenfoundation.fdp.ui.DetailActivity;
 import org.grameenfoundation.fdp.ui.LogoutDialogFragment;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Main activity
@@ -93,8 +109,11 @@ public class MainActivity extends SalesforceListActivity implements
 	private ContactListLoader contactLoader;
 	private LoadCompleteReceiver loadCompleteReceiver;
 	private AtomicBoolean isRegistered;
+    private String apiVersion;
+    private RestClient client;
 
-	@Override
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -105,11 +124,13 @@ public class MainActivity extends SalesforceListActivity implements
 		logoutConfirmationDialog = new LogoutDialogFragment();
 		loadCompleteReceiver = new LoadCompleteReceiver();
 		isRegistered = new AtomicBoolean(false);
+        apiVersion = getString(R.string.api_version);
 	}
 
 	@Override
 	public void onResume(RestClient client) {
-		curAccount = SmartSyncSDKManager.getInstance().getUserAccountManager().getCurrentUser();
+        this.client = client;
+        curAccount = SmartSyncSDKManager.getInstance().getUserAccountManager().getCurrentUser();
 		Account account = null;
 		if (curAccount != null) {
 			account = SmartSyncSDKManager.getInstance().getUserAccountManager().buildAccount(curAccount);
@@ -276,6 +297,74 @@ public class MainActivity extends SalesforceListActivity implements
 		nameFilter.filter(filterTerm);
 	}
 
+    private String encodeFileInBase64(File file) {
+        String fileTxt="";
+        StringBuilder sb = new StringBuilder();
+        // StringBuilder sbStr = new StringBuilder((int) (file.length() / 3 *
+        // 8));
+
+        FileInputStream fin = null;
+        try {
+            fin = new FileInputStream(file);
+
+            int bSize = 3000; // 3 * 512;
+            Log.v("fileLength", String.valueOf(file.length()));
+
+            byte[] buf = new byte[bSize];
+
+            int len = 0;
+
+            while ((len = fin.read(buf)) != -1) {
+                Log.v("len", String.valueOf(len));// sbStr.append(new
+                // String(buf, 0, len));
+
+                byte[] encoded = Base64.encode(buf, Base64.DEFAULT);
+
+                sb.append(new String(encoded, 0, len));
+            }
+
+            Log.v("txtFileWithBuffer", sb.toString());
+
+            fin.close();
+        } catch (IOException e) {
+            if (null != fin) {
+                try {
+                    fin.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+
+            String base64EncodedFile = sb.toString();
+
+            FileInputStream fileInputStream = null;
+
+            byte[] bFile = new byte[(int) base64EncodedFile.length()];
+
+            try {
+                fileInputStream = new FileInputStream(base64EncodedFile);
+                fileInputStream.read(bFile);
+                fileInputStream.close();
+                fileTxt = Base64.encodeToString(bFile, Base64.DEFAULT);
+                Log.v("txtFileWithoutBuffer", fileTxt);
+
+                return fileTxt;
+
+                // encodeImgList.add(encodedImage);
+
+            } catch (Exception ex) {
+
+                ex.printStackTrace();
+
+                return "";
+            }
+
+            // return base64EncodedFile;
+
+        }
+        return fileTxt;
+    }
+
 	private void syncDownContacts() {
 		contactLoader.syncDown();
 		Toast.makeText(MainActivity.this, "Sync down complete!",
@@ -285,7 +374,60 @@ public class MainActivity extends SalesforceListActivity implements
 	private void syncUpContacts() {
 		contactLoader.syncUp();
 		Toast.makeText(this, "Sync up complete!", Toast.LENGTH_LONG).show();
+
+        postImageAsAttachment();
 	}
+
+    public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat, int quality)
+    {
+        ByteArrayOutputStream byteArrayOS = new ByteArrayOutputStream();
+        image.compress(compressFormat, quality, byteArrayOS);
+        return Base64.encodeToString(byteArrayOS.toByteArray(), Base64.DEFAULT);
+    }
+
+    private void postImageAsAttachment() {
+        Map<String, Object> fields = new HashMap<String, Object>();
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File storage =new File("Android/data/org.grameenfoundation.fdp/files/Pictures");
+        File[] files = new File(String.valueOf(storageDir)).listFiles();
+        if(files != null){
+
+            for (int i = 0; i < files.length; i++) {
+                String name = files[i].getName();
+                File f = new File(String.valueOf(files[i]));
+                Bitmap bitmap = BitmapFactory.decodeFile(String.valueOf(f.getAbsolutePath()));
+                String myBase64Image = encodeToBase64(bitmap, Bitmap.CompressFormat.JPEG, 100);
+                fields.put("Name", name);
+                fields.put("ParentId", name.substring(0, 18));
+                fields.put("Body",myBase64Image);
+
+                RestRequest request = null;
+                try {
+                    request = RestRequest.getRequestForCreate(apiVersion, "Attachment", fields);
+                    System.out.println("Request File:" + request.getPath());
+                } catch (Exception ex) {
+                    Log.d(TAG, "sendRequest: ", ex);
+                    Toast.makeText(MainActivity.this, "The file upload failed: " + ex.toString(), Toast.LENGTH_LONG).show();
+                }
+
+                client.sendAsync(request, new RestClient.AsyncRequestCallback() {
+
+                    @Override
+                    public void onSuccess(RestRequest request, RestResponse response) {
+                        System.out.println("Response:" + response);
+
+                    }
+
+                    @Override
+                    public void onError(Exception exception) {
+                        exception.printStackTrace();
+                        EventsObservable.get().notifyEvent(EventsObservable.EventType.RenditionComplete);
+                    }
+                });
+                files[i].delete();
+            }
+        }
+    }
 
 	/**
 	 * Custom array adapter to supply data to the list view.

@@ -2078,7 +2078,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         final String start9 = (st9.getSelectedItem().toString());
         final String start10 = (st10.getSelectedItem().toString());
         final String agree = ((Spinner) findViewById(R.id.farmerAgree_field)).getSelectedItem().toString();
-        final String coments = ((EditText) findViewById(R.id.reasonNotAgree_field)).getText().toString()+comt1+comt2+comt3+comt4+comt4+comt5+comt6+comt7+comt8+comt9+comt10;
+        final String coments = ((EditText) findViewById(R.id.reasonNotAgree_field)).getText().toString()+comt1.getText().toString()+comt2.getText().toString()+comt3.getText().toString()+comt4.getText().toString()+comt4.getText().toString()+comt5.getText().toString()+comt6.getText().toString()+comt7.getText().toString()+comt8.getText().toString()+comt9.getText().toString()+comt10.getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
