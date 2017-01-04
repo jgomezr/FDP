@@ -114,41 +114,8 @@
         <!-- Year detail screen -->
         <activity
             android:name="org.grameenfoundation.fdp.ui.YearDetailActivity"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/SalesforceSDK.ActionBarTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.DETAIL" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="org.grameenfoundation.fdp.ui.YearDetailActivity1"
-            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/SalesforceSDK.ActionBarTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.DETAIL" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="org.grameenfoundation.fdp.ui.YearDetailActivity2"
-            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/SalesforceSDK.ActionBarTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.DETAIL" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="org.grameenfoundation.fdp.ui.YearDetailActivity3"
-            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/SalesforceSDK.ActionBarTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.DETAIL" />

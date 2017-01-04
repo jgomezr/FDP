@@ -103,10 +103,10 @@ public final class R {
 		public static final int sf__inspector_run_button = 0x7f0d011b;
 		public static final int sf__inspector_soups_button = 0x7f0d011d;
 		public static final int sf__layout_root = 0x7f0d010c;
-		public static final int sf__menu_clear_cookies = 0x7f0d01ed;
-		public static final int sf__menu_clear_custom_url = 0x7f0d01eb;
-		public static final int sf__menu_pick_server = 0x7f0d01ec;
-		public static final int sf__menu_reload = 0x7f0d01ee;
+		public static final int sf__menu_clear_cookies = 0x7f0d014d;
+		public static final int sf__menu_clear_custom_url = 0x7f0d014b;
+		public static final int sf__menu_pick_server = 0x7f0d014c;
+		public static final int sf__menu_reload = 0x7f0d014e;
 		public static final int sf__oauth_webview = 0x7f0d0122;
 		public static final int sf__passcode_error = 0x7f0d0127;
 		public static final int sf__passcode_forgot = 0x7f0d0126;

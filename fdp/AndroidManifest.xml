@@ -84,7 +84,7 @@
 
 		<!-- Year detail screen -->
 		<activity android:name="org.grameenfoundation.fdp.ui.YearDetailActivity"
-			android:screenOrientation="landscape"
+			android:configChanges="orientation|screenSize"
             android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
 			android:theme="@style/SalesforceSDK.ActionBarTheme">
             <intent-filter>
@@ -92,35 +92,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 		</activity>
-		<activity android:name="org.grameenfoundation.fdp.ui.YearDetailActivity1"
-			android:screenOrientation="landscape"
-			android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-			android:theme="@style/SalesforceSDK.ActionBarTheme">
-			<intent-filter>
-				<action android:name="android.intent.action.DETAIL" />
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-		</activity>
-
-		<activity android:name="org.grameenfoundation.fdp.ui.YearDetailActivity2"
-			android:screenOrientation="landscape"
-			android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-			android:theme="@style/SalesforceSDK.ActionBarTheme">
-			<intent-filter>
-				<action android:name="android.intent.action.DETAIL" />
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-		</activity>
-
-        <activity android:name="org.grameenfoundation.fdp.ui.YearDetailActivity3"
-            android:screenOrientation="landscape"
-            android:parentActivityName="org.grameenfoundation.fdp.ui.fdpActivity"
-            android:theme="@style/SalesforceSDK.ActionBarTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.DETAIL" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
 		<!-- Farmer sync service -->
 		<service android:name="org.grameenfoundation.fdp.sync.ContactSyncService"

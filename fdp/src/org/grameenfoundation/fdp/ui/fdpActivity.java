@@ -393,7 +393,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     }
     public void launchYear3(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity1.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -404,7 +404,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
     public void launchYear4(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity1.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -415,7 +415,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
     public void launchYear5(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity2.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -425,7 +425,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
     }
     public void launchYear6(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity2.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
@@ -436,7 +436,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
     public void launchYear7(View view) {
         save();
-        final Intent yearIntent = new Intent(this, YearDetailActivity3.class);
+        final Intent yearIntent = new Intent(this, YearDetailActivity.class);
         yearIntent.addCategory(Intent.CATEGORY_DEFAULT);
         yearIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
         yearIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
