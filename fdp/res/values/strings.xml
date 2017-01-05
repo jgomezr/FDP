@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="account_type">org.grameenfoundation.fdp.login</string>
+	<string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
 	<string name="app_name"><b>FDP</b></string>
-	<string name="app_package">org.grameenfoundation.fdp</string>
+	<string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
 	<string name="logout_button">Logout</string>
 	<string name="switch_user_button">Switch User</string>
-	<string name="inspect_db_button">Inspect DB</string>
+	<string name="inspect_db_button" translatable="false">Inspect DB</string>
 	<string name="internalInspection">Internal Inspection</string>
 	<string name="action_search">Search</string>
 	<string name="action_refresh">Synchronize</string>
@@ -127,16 +127,16 @@
 	<string name="calcAO">Calculate</string>
 
 
-	<string name="plot1">Plot 1</string>
-	<string name="plot2">Plot 2</string>
-	<string name="plot3">Plot 3</string>
-	<string name="plot4">Plot 4</string>
-	<string name="plot5">Plot 5</string>
-	<string name="plot6">Plot 6</string>
-	<string name="plot7">Plot 7</string>
-	<string name="plot8">Plot 8</string>
-	<string name="plot9">Plot 9</string>
-	<string name="plot10">Plot 10</string>
+	<string name="plot1" translatable="false">Plot 1</string>
+	<string name="plot2" translatable="false">Plot 2</string>
+	<string name="plot3" translatable="false">Plot 3</string>
+	<string name="plot4" translatable="false">Plot 4</string>
+	<string name="plot5" translatable="false">Plot 5</string>
+	<string name="plot6" translatable="false">Plot 6</string>
+	<string name="plot7" translatable="false">Plot 7</string>
+	<string name="plot8" translatable="false">Plot 8</string>
+	<string name="plot9" translatable="false">Plot 9</string>
+	<string name="plot10" translatable="false">Plot 10</string>
 	<string name="startYear">Start Year</string>
 	<string name="year1">Year 1</string>
 	<string name="year2">Year 2</string>
@@ -172,7 +172,7 @@
 	<string name="drainage">Drainage</string>
 	<string name="filling">Filling in</string>
 	<string name="labor">Labor</string>
-	<string name="empty"> </string>
+	<string name="empty" translatable="false"> </string>
 	<string name="jan">January</string>
 	<string name="feb">February</string>
 	<string name="mar">March</string>
@@ -185,7 +185,7 @@
 	<string name="oct">October</string>
 	<string name="nov">November</string>
 	<string name="dec">December</string>
-	<string name="greater0"></string>
+	<string name="greater0" translatable="false"></string>
 	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
 	<string name="saved">Save successful!</string>
@@ -220,25 +220,28 @@
     <string name="tool4">Conversion ratio for Wet to Dry is 100:35 or 35%</string>
     <string name="tool5">This is educational expense post secondary schooling and/or beyond normal schooling expense</string>
     <string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string>
-    <string-array name="creditOften">
+    <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
+	<string name="plotAreaHiger">Your plots area can not be hig than Cocoa Area on farm</string>
+    <string name="areaEmpty">Your plots area can not be empty</string>
+	<string-array name="creditOften">
         <item>Monthly</item>
         <item>Quarterly</item>
         <item>Bi annually</item>
-        <item>annually</item>
+        <item>Annually</item>
         <item>No set frequency</item>
     </string-array>
 	<string-array name="creditOftenQuarter">
 		<item>Quarterly</item>
 		<item>Monthly</item>
 		<item>Bi annually</item>
-		<item>annually</item>
+		<item>Annually</item>
 		<item>No set frequency</item>
 	</string-array>
 	<string-array name="creditOftenbiannual">
 		<item>Bi annually</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
-		<item>annually</item>
+		<item>Annually</item>
 		<item>No set frequency</item>
 	</string-array>
 	<string-array name="creditOftenNoSet">
@@ -246,10 +249,10 @@
 		<item>Monthly</item>
 		<item>Quarterly</item>
 		<item>Bi annually</item>
-		<item>annually</item>
+		<item>Annually</item>
 	</string-array>
 	<string-array name="creditOftenAnnual">
-		<item>annually</item>
+		<item>Annually</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
 		<item>Bi annually</item>

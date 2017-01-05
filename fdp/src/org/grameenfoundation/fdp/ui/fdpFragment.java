@@ -773,6 +773,7 @@ public class fdpFragment extends Fragment {
         gapcost5 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY5Total)));
         gapcost6 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY6Total)));
         gapcost7 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY7Total)));
+
         if (labor == "labor"){
             gaplaborD1 = (int) (area * (getResources().getInteger(R.integer.gapY1Total)));
             gaplaborD2 = (int) (area * (getResources().getInteger(R.integer.gapY2Total)));
@@ -789,13 +790,8 @@ public class fdpFragment extends Fragment {
             gaplabor6 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
             gaplabor7 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
         }
-        gappl1 = income1-(gapcost1+gaplabor1);
-        gappl2 = income2-(gapcost2+gaplabor2);
-        gappl3 = income3-(gapcost3+gaplabor3);
-        gappl4 = income4-(gapcost4+gaplabor4);
-        gappl5 = income5-(gapcost5+gaplabor5);
-        gappl6 = income6-(gapcost6+gaplabor6);
-        gappl7 = income7-(gapcost7+gaplabor7);
+
+
 
         DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
 
@@ -1024,6 +1020,14 @@ public class fdpFragment extends Fragment {
         pl5= income5-(cost5+labor5);
         pl6= income6-(cost6+labor6);
         pl7= income7-(cost7+labor7);
+
+        gappl1 = income1-(gapcost1+gaplabor1);
+        gappl2 = income2-(gapcost2+gaplabor2);
+        gappl3 = income3-(gapcost3+gaplabor3);
+        gappl4 = income4-(gapcost4+gaplabor4);
+        gappl5 = income5-(gapcost5+gaplabor5);
+        gappl6 = income6-(gapcost6+gaplabor6);
+        gappl7 = income7-(gapcost7+gaplabor7);
 
         if (startYear.equals("N/A")||startYear.equals("Year 1") ){
             if(pl1 > 0){

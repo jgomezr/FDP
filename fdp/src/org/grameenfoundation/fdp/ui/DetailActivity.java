@@ -51,7 +51,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 
 /**
  * Object detail activity.
@@ -154,12 +154,12 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (bank.getSelectedItem().toString().equals("Yes")){
+                if (bank.getSelectedItem().toString().equals("Yes")||bank.getSelectedItem().toString().equals("Ya")){
                     actType.setVisibility(View.VISIBLE);
                     mbMoney.setVisibility(View.VISIBLE);
                     wntAct.setVisibility(View.GONE);
 
-                }else if (bank.getSelectedItem().toString().equals("No")){
+                }else if (bank.getSelectedItem().toString().equals("No")||bank.getSelectedItem().toString().equals("Tidak")){
                     actType.setVisibility(View.GONE);
                     mbMoney.setVisibility(View.GONE);
                     wntAct.setVisibility(View.VISIBLE);
@@ -186,7 +186,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus){
                         savePoint();
-						double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[$,]", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
+						double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9]+", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
 						setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
 
 				}
@@ -248,7 +248,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus){
                     savePoint();
-					double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[$,]", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
+					double result1 = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9]+", "")) * Integer.parseInt(prdCocoaLy.getText().toString());
 					setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
 				}
 			}
@@ -292,7 +292,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //savePoint();
-                if (haveSpouse.getSelectedItem().toString().equals("Yes")){
+                if (haveSpouse.getSelectedItem().toString().equals("Yes")||haveSpouse.getSelectedItem().toString().equals("Ya")){
                     spouseName.setVisibility(View.VISIBLE);
                     spouseBirthday.setVisibility(View.VISIBLE);
                     spouseEdLvl.setVisibility(View.VISIBLE);
@@ -317,7 +317,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (hire.getSelectedItem().toString().equals("Yes")){
+                if (hire.getSelectedItem().toString().equals("Yes")||hire.getSelectedItem().toString().equals("Ya")){
                     hireDays.setVisibility(View.VISIBLE);
                 }else{
                     hireDays.setVisibility(View.GONE);
@@ -338,7 +338,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //savePoint();
-				if (farmP.getSelectedItem().toString().equals("Yes")){
+				if (farmP.getSelectedItem().toString().equals("Yes")||farmP.getSelectedItem().toString().equals("Ya")){
 					farmLY.setVisibility(View.VISIBLE);
 				}else{
 					farmLY.setVisibility(View.GONE);
@@ -356,7 +356,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		spouseP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				if (spouseP.getSelectedItem().toString().equals("Yes")){
+				if (spouseP.getSelectedItem().toString().equals("Yes")||spouseP.getSelectedItem().toString().equals("Ya")){
 					spouseLY.setVisibility(View.VISIBLE);
 				}else{
 					spouseLY.setVisibility(View.GONE);
@@ -374,7 +374,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		familyP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				if (familyP.getSelectedItem().toString().equals("Yes")){
+				if (familyP.getSelectedItem().toString().equals("Yes")||familyP.getSelectedItem().toString().equals("Ya")){
 					familyLY.setVisibility(View.VISIBLE);
 				}else{
 					familyLY.setVisibility(View.GONE);
@@ -393,7 +393,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		aditionalC.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				if (aditionalC.getSelectedItem().toString().equals("Yes")){
+				if (aditionalC.getSelectedItem().toString().equals("Yes")||aditionalC.getSelectedItem().toString().equals("Ya")){
 					aditionalLY.setVisibility(View.VISIBLE);
                     addCrop.setVisibility(View.VISIBLE);
 				}else{
@@ -416,7 +416,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		credit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-				if (credit.getSelectedItem().toString().equals("Yes")){
+				if (credit.getSelectedItem().toString().equals("Yes")||credit.getSelectedItem().toString().equals("Ya")){
 					creditLY.setVisibility(View.VISIBLE);
                     totalCredit.setVisibility(View.VISIBLE);
                     OftenPay.setVisibility(View.VISIBLE);
@@ -443,7 +443,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //savePoint();
-				if (loan.getSelectedItem().toString().equals("Yes")){
+				if (loan.getSelectedItem().toString().equals("Yes")||loan.getSelectedItem().toString().equals("Ya")){
 					loanLY.setVisibility(View.VISIBLE);
 					amountLY.setVisibility(View.VISIBLE);
 				}else{
@@ -511,6 +511,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 t6.setVisibility(View.VISIBLE);
             }
         });
+
+
 		familyIncome =(EditText) findViewById(R.id.totalFamilyMembersIncome_Field);
 		incomeOtherCrops=(EditText) findViewById(R.id.incomeOtherCrops_Field);
 		totalCrd=(EditText) findViewById(R.id.totalCredit_Field);
@@ -564,9 +566,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			if (editText == null) return;
 			String s = editable.toString();
 			editText.removeTextChangedListener(this);
-			String cleanString = s.toString().replaceAll("[$,.]", "");
+            DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
+			String cleanString = s.replaceAll("[^0-9]+", "");
 			double parsed = Double.parseDouble(cleanString);
-			String formatted = NumberFormat.getCurrencyInstance().format(parsed/100);
+			String formatted = dec.format(parsed);
 			editText.setText(formatted);
 			editText.setSelection(formatted.length());
 			editText.addTextChangedListener(this);
@@ -738,13 +741,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			setText((EditText) findViewById(R.id.birthday_field),
 					sObject.getBirthday());
 			//Set gender field
-			if (sObject.getGender().contentEquals("Male")) {
+			if (sObject.getGender().contentEquals("Male")||sObject.getGender().contentEquals("Pria")) {
 				Spinner spinner = (Spinner) findViewById(R.id.gender_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.gender_male, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getGender().contentEquals("Female")) {
+			} else if (sObject.getGender().contentEquals("Female")||sObject.getGender().contentEquals("Wanita")) {
 				Spinner spinner = (Spinner) findViewById(R.id.gender_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.gender_female, android.R.layout.simple_spinner_item);
@@ -884,13 +887,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 					sObject.getDependeconomically());
 
 			//Set receive pay for farm labor field
-			if (sObject.getReceivespaymentfarmlabor().contentEquals("Yes")) {
+			if (sObject.getReceivespaymentfarmlabor().contentEquals("Yes")||sObject.getReceivespaymentfarmlabor().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.receivesFarmPayment_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getReceivespaymentfarmlabor().contentEquals("No")) {
+			} else if (sObject.getReceivespaymentfarmlabor().contentEquals("No")||sObject.getReceivespaymentfarmlabor().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.receivesFarmPayment_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -905,13 +908,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//Set Spouse receive pay field
-			if (sObject.getSpousehavepaidwork().contentEquals("Yes")) {
+			if (sObject.getSpousehavepaidwork().contentEquals("Yes")||sObject.getSpousehavepaidwork().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.spousePaidWork_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getSpousehavepaidwork().contentEquals("No")) {
+			} else if (sObject.getSpousehavepaidwork().contentEquals("No")||sObject.getSpousehavepaidwork().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.spousePaidWork_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -926,13 +929,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//Set family member pay field
-			if (sObject.getFamilymemberspaidwork().contentEquals("Yes")) {
+			if (sObject.getFamilymemberspaidwork().contentEquals("Yes")||sObject.getFamilymemberspaidwork().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.familyPaidWork_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getFamilymemberspaidwork().contentEquals("No")) {
+			} else if (sObject.getFamilymemberspaidwork().contentEquals("No")||sObject.getFamilymemberspaidwork().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.familyPaidWork_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -947,13 +950,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//Set other crops field
-			if (sObject.getHaveaditionalcrops().contentEquals("Yes")) {
+			if (sObject.getHaveaditionalcrops().contentEquals("Yes")||sObject.getHaveaditionalcrops().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.haveOtherCrops_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getHaveaditionalcrops().contentEquals("No")) {
+			} else if (sObject.getHaveaditionalcrops().contentEquals("No")||sObject.getHaveaditionalcrops().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.haveOtherCrops_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -968,13 +971,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//Set have credits field
-			if (sObject.getHavecredit().contentEquals("Yes")) {
+			if (sObject.getHavecredit().contentEquals("Yes")||sObject.getHavecredit().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.haveCredit_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getHavecredit().contentEquals("No")) {
+			} else if (sObject.getHavecredit().contentEquals("No")||sObject.getHavecredit().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.haveCredit_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -989,13 +992,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//Set give loans field
-			if (sObject.getGivensomeonealoan().contentEquals("Yes")) {
+			if (sObject.getGivensomeonealoan().contentEquals("Yes")||sObject.getGivensomeonealoan().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.giveLoan_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getGivensomeonealoan().contentEquals("No")) {
+			} else if (sObject.getGivensomeonealoan().contentEquals("No")||sObject.getGivensomeonealoan().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.giveLoan_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -1213,13 +1216,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			setText((EditText) findViewById(R.id.fmWorkFarm_field),sObject.getFamilyMembersWorkFarm());
 
 			//set hire labor field
-			if (sObject.getHireLabor().contentEquals("Yes")) {
+			if (sObject.getHireLabor().contentEquals("Yes")||sObject.getHireLabor().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getHireLabor().contentEquals("No")) {
+			} else if (sObject.getHireLabor().contentEquals("No")||sObject.getHireLabor().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -1258,13 +1261,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
             //set have Spouse
-            if (sObject.getHAVESPOUSE().contentEquals("Yes")) {
+            if (sObject.getHAVESPOUSE().contentEquals("Yes")||sObject.getHAVESPOUSE().contentEquals("Ya")) {
                 Spinner spinner = (Spinner) findViewById(R.id.haveSpouse);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHAVESPOUSE().contentEquals("No")) {
+            } else if (sObject.getHAVESPOUSE().contentEquals("No")||sObject.getHAVESPOUSE().contentEquals("Tidak")) {
                 Spinner spinner = (Spinner) findViewById(R.id.haveSpouse);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -1279,25 +1282,25 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             }
 
 			//set how often
-			if (sObject.getOFTENPAY().contentEquals("Quarterly")) {
+			if (sObject.getOFTENPAY().contentEquals("Quarterly")||sObject.getOFTENPAY().contentEquals("Per tigabulan")) {
 				Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.creditOftenQuarter, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getOFTENPAY().contentEquals("Bi annually")) {
+			} else if (sObject.getOFTENPAY().contentEquals("Bi annually")||sObject.getOFTENPAY().contentEquals("Setiap dua tahun")) {
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenbiannual, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getOFTENPAY().contentEquals("annually")) {
+            } else if (sObject.getOFTENPAY().contentEquals("Annually")||sObject.getOFTENPAY().contentEquals("Tahunan")) {
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenAnnual, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getOFTENPAY().contentEquals("No set frequency")) {
+            } else if (sObject.getOFTENPAY().contentEquals("No set frequency")||sObject.getOFTENPAY().contentEquals("Frekuensi tidak terset")) {
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenNoSet, android.R.layout.simple_spinner_item);
@@ -1312,19 +1315,19 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
             //set sources
-            if (sObject.getSOURCELOAN().contentEquals("Friends")) {
+            if (sObject.getSOURCELOAN().contentEquals("Friends")||sObject.getSOURCELOAN().contentEquals("Teman")) {
                 Spinner spinner = (Spinner) findViewById(R.id.sourceCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.sourceLoanFriend, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getSOURCELOAN().contentEquals("Community Savings")) {
+            } else if (sObject.getSOURCELOAN().contentEquals("Community Savings")||sObject.getSOURCELOAN().contentEquals("Simpanan di Komunitas")) {
                 Spinner spinner = (Spinner) findViewById(R.id.sourceCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.sourceLoanCommunity, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getSOURCELOAN().contentEquals("Microcredit Organization")) {
+            } else if (sObject.getSOURCELOAN().contentEquals("Microcredit Organization")||sObject.getSOURCELOAN().contentEquals("Organisasi Mikrokredit")) {
                 Spinner spinner = (Spinner) findViewById(R.id.sourceCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.sourceLoanMicro, android.R.layout.simple_spinner_item);
@@ -1373,13 +1376,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             }
 
 			//set bank account
-			if (sObject.getBANKACCOUNT().contentEquals("Yes")) {
+			if (sObject.getBANKACCOUNT().contentEquals("Yes")||sObject.getBANKACCOUNT().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.bankAccount_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getBANKACCOUNT().contentEquals("No")) {
+			} else if (sObject.getBANKACCOUNT().contentEquals("No")||sObject.getBANKACCOUNT().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.bankAccount_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -1394,13 +1397,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//set mobile money
-			if (sObject.getMOBILEMONEY().contentEquals("Yes")) {
+			if (sObject.getMOBILEMONEY().contentEquals("Yes")||sObject.getMOBILEMONEY().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.mobileMoney_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getMOBILEMONEY().contentEquals("No")) {
+			} else if (sObject.getMOBILEMONEY().contentEquals("No")||sObject.getMOBILEMONEY().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.mobileMoney_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -1414,13 +1417,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 				spinner.setAdapter(adapter);
 			}
 			//set want account
-			if (sObject.getWANTACCOUNT().contentEquals("Yes")) {
+			if (sObject.getWANTACCOUNT().contentEquals("Yes")||sObject.getWANTACCOUNT().contentEquals("Ya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.wantAccount_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.yes, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getWANTACCOUNT().contentEquals("No")) {
+			} else if (sObject.getWANTACCOUNT().contentEquals("No")||sObject.getWANTACCOUNT().contentEquals("Tidak")) {
 				Spinner spinner = (Spinner) findViewById(R.id.wantAccount_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.No, android.R.layout.simple_spinner_item);
@@ -1435,7 +1438,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}
 
 			//set account type
-			if (sObject.getACCOUNTTYPE().contentEquals("Standard bank account")) {
+			if (sObject.getACCOUNTTYPE().contentEquals("Standard bank account")||sObject.getACCOUNTTYPE().contentEquals("Rekening standard bank")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank1, android.R.layout.simple_spinner_item);
@@ -1453,13 +1456,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						R.array.bank3, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			}else if (sObject.getWANTACCOUNT().contentEquals("Village loan")) {
+			}else if (sObject.getWANTACCOUNT().contentEquals("Village loan")||sObject.getWANTACCOUNT().contentEquals("Pinjaman desa")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank4, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			}else if (sObject.getWANTACCOUNT().contentEquals("Other")) {
+			}else if (sObject.getWANTACCOUNT().contentEquals("Other")||sObject.getWANTACCOUNT().contentEquals("Lainnya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank5, android.R.layout.simple_spinner_item);
@@ -1524,20 +1527,20 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
 		final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
 		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString();
-		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[$,]", "");
-		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[$,]", "");
-		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[$,]", "");
-		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[$,]", "");
-		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[$,]", "");
-		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[$,]", "");
-		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[$,]", "");
-		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[$,]", "");
-		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[$,]", "");
-		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[$,]", "");
-		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[$,]", "");
-		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[$,]", "");
-		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[$,]", "");
-		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[$,]", "");
+		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String farmAge = ((EditText) findViewById(R.id.farmAge_field)).getText().toString();
 		final String farmCert = ((Spinner) findViewById(R.id.farmCertifications_field)).getSelectedItem().toString();
 		final String farmArea = ((EditText) findViewById(R.id.farmArea_field)).getText().toString();
@@ -1550,7 +1553,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
 		final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
-        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[$,]", "");
+        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String oftenPayCredit = ((Spinner)findViewById(R.id.payOftenForCredit_Field)).getSelectedItem().toString();
         final String sourceOfCredit = ((Spinner)findViewById(R.id.sourceCredit_Field)).getSelectedItem().toString();
         final String fmGroup = ((EditText) findViewById(R.id.farmerGp)).getText().toString();

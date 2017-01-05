@@ -958,7 +958,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getTotalCocoaArea())) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), "Your plots area can't be hig than Cocoa Area on farm", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.plotAreaHiger), Toast.LENGTH_SHORT).show();
             }else{
                 editText.setBackgroundColor(Color.TRANSPARENT);
             }
@@ -1018,7 +1018,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getProductioncocoaly())) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), "Your estimated production is greater than that of the previous year", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.productionHiger), Toast.LENGTH_SHORT).show();
             }else{
                 editText.setBackgroundColor(Color.TRANSPARENT);
             }
@@ -1044,8 +1044,9 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         double p10=Double.parseDouble(areP10.getText().toString());
         double total=Double.parseDouble(sObject.getTotalCocoaArea());
         if((p1+p2+p3+p4+p5+p6+p7+p8+p9+p10)>total){
-            Toast.makeText(this, this.getString(R.string.areaHigher), Toast.LENGTH_LONG).show();
-            return;
+            Toast.makeText(this, this.getString(R.string.areaHigher), Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(areP1.getText())||TextUtils.isEmpty(areP2.getText())||TextUtils.isEmpty(areP3.getText())||TextUtils.isEmpty(areP4.getText())||TextUtils.isEmpty(areP5.getText())||TextUtils.isEmpty(areP6.getText())||TextUtils.isEmpty(areP7.getText())||TextUtils.isEmpty(areP8.getText())||TextUtils.isEmpty(areP9.getText())||TextUtils.isEmpty(areP10.getText())){
+            Toast.makeText(this, this.getString(R.string.areaEmpty), Toast.LENGTH_SHORT).show();
         }else{
             save();
             final Intent fdpIntent = new Intent(this, fdpActivity.class);
@@ -1528,13 +1529,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 1
-            if (sObject.getDrainageNeed1().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed1().contentEquals("Yes")||sObject.getDrainageNeed1().contentEquals("Ya")) {
                 Spinner spinner = drainP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed1().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed1().contentEquals("No")||sObject.getDrainageNeed1().contentEquals("Tidak")) {
                 Spinner spinner = drainP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -1556,13 +1557,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 1
-            if (sObject.getHireLabor1().contentEquals("Yes")) {
+            if (sObject.getHireLabor1().contentEquals("Yes")||sObject.getHireLabor1().contentEquals("Ya")) {
                 Spinner spinner = hireNP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor1().contentEquals("No")) {
+            } else if (sObject.getHireLabor1().contentEquals("No")||sObject.getHireLabor1().contentEquals("Tidak")) {
                 Spinner spinner = hireNP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2002,13 +2003,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 2
-            if (sObject.getDrainageNeed2().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed2().contentEquals("Yes")||sObject.getDrainageNeed2().contentEquals("Ya")) {
                 Spinner spinner = drainP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed2().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed2().contentEquals("No")||sObject.getDrainageNeed2().contentEquals("Tidak")) {
                 Spinner spinner = drainP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2030,13 +2031,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 2
-            if (sObject.getHireLabor2().contentEquals("Yes")) {
+            if (sObject.getHireLabor2().contentEquals("Yes")||sObject.getHireLabor2().contentEquals("Ya")) {
                 Spinner spinner = hireNP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor2().contentEquals("No")) {
+            } else if (sObject.getHireLabor2().contentEquals("No")||sObject.getHireLabor2().contentEquals("Tidak")) {
                 Spinner spinner = hireNP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2476,13 +2477,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 3
-            if (sObject.getDrainageNeed3().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed3().contentEquals("Yes")||sObject.getDrainageNeed3().contentEquals("Ya")) {
                 Spinner spinner = drainP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed3().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed3().contentEquals("No")||sObject.getDrainageNeed3().contentEquals("Tidak")) {
                 Spinner spinner = drainP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2504,13 +2505,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 3
-            if (sObject.getHireLabor3().contentEquals("Yes")) {
+            if (sObject.getHireLabor3().contentEquals("Yes")||sObject.getHireLabor3().contentEquals("Ya")) {
                 Spinner spinner = hireNP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor3().contentEquals("No")) {
+            } else if (sObject.getHireLabor3().contentEquals("No")||sObject.getHireLabor3().contentEquals("Tidak")) {
                 Spinner spinner = hireNP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2950,13 +2951,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 4
-            if (sObject.getDrainageNeed4().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed4().contentEquals("Yes")||sObject.getDrainageNeed4().contentEquals("Ya")) {
                 Spinner spinner = drainP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed4().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed4().contentEquals("No")||sObject.getDrainageNeed4().contentEquals("Tidak")) {
                 Spinner spinner = drainP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2978,13 +2979,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 4
-            if (sObject.getHireLabor4().contentEquals("Yes")) {
+            if (sObject.getHireLabor4().contentEquals("Yes")||sObject.getHireLabor4().contentEquals("Ya")) {
                 Spinner spinner = hireNP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor4().contentEquals("No")) {
+            } else if (sObject.getHireLabor4().contentEquals("No")||sObject.getHireLabor4().contentEquals("Tidak")) {
                 Spinner spinner = hireNP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3425,13 +3426,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 5
-            if (sObject.getDrainageNeed5().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed5().contentEquals("Yes")||sObject.getDrainageNeed5().contentEquals("Ya")) {
                 Spinner spinner = drainP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed5().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed5().contentEquals("No")||sObject.getDrainageNeed5().contentEquals("Tidak")) {
                 Spinner spinner = drainP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3453,13 +3454,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 5
-            if (sObject.getHireLabor5().contentEquals("Yes")) {
+            if (sObject.getHireLabor5().contentEquals("Yes")||sObject.getHireLabor5().contentEquals("Ya")) {
                 Spinner spinner = hireNP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor5().contentEquals("No")) {
+            } else if (sObject.getHireLabor5().contentEquals("No")||sObject.getHireLabor5().contentEquals("Tidak")) {
                 Spinner spinner = hireNP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3899,13 +3900,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 6
-            if (sObject.getDrainageNeed6().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed6().contentEquals("Yes")||sObject.getDrainageNeed6().contentEquals("Ya")) {
                 Spinner spinner = drainP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed6().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed6().contentEquals("No")||sObject.getDrainageNeed6().contentEquals("Tidak")) {
                 Spinner spinner = drainP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3927,13 +3928,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 6
-            if (sObject.getHireLabor6().contentEquals("Yes")) {
+            if (sObject.getHireLabor6().contentEquals("Yes")||sObject.getHireLabor6().contentEquals("Ya")) {
                 Spinner spinner = hireNP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor6().contentEquals("No")) {
+            } else if (sObject.getHireLabor6().contentEquals("No")||sObject.getHireLabor6().contentEquals("Tidak")) {
                 Spinner spinner = hireNP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4373,13 +4374,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 7
-            if (sObject.getDrainageNeed7().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed7().contentEquals("Yes")||sObject.getDrainageNeed7().contentEquals("Ya")) {
                 Spinner spinner = drainP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed7().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed7().contentEquals("No")||sObject.getDrainageNeed7().contentEquals("Tidak")) {
                 Spinner spinner = drainP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4401,13 +4402,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 7
-            if (sObject.getHireLabor7().contentEquals("Yes")) {
+            if (sObject.getHireLabor7().contentEquals("Yes")||sObject.getHireLabor7().contentEquals("Ya")) {
                 Spinner spinner = hireNP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor7().contentEquals("No")) {
+            } else if (sObject.getHireLabor7().contentEquals("No")||sObject.getHireLabor7().contentEquals("Tidak")) {
                 Spinner spinner = hireNP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4847,13 +4848,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 8
-            if (sObject.getDrainageNeed8().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed8().contentEquals("Yes")||sObject.getDrainageNeed8().contentEquals("Ya")) {
                 Spinner spinner = drainP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed8().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed8().contentEquals("No")||sObject.getDrainageNeed8().contentEquals("Tidak")) {
                 Spinner spinner = drainP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4875,13 +4876,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 8
-            if (sObject.getHireLabor8().contentEquals("Yes")) {
+            if (sObject.getHireLabor8().contentEquals("Yes")||sObject.getHireLabor8().contentEquals("Ya")) {
                 Spinner spinner = hireNP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor8().contentEquals("No")) {
+            } else if (sObject.getHireLabor8().contentEquals("No")||sObject.getHireLabor8().contentEquals("Tidak")) {
                 Spinner spinner = hireNP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5321,13 +5322,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 9
-            if (sObject.getDrainageNeed9().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed9().contentEquals("Yes")||sObject.getDrainageNeed9().contentEquals("Ya")) {
                 Spinner spinner = drainP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed9().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed9().contentEquals("No")||sObject.getDrainageNeed9().contentEquals("Tidak")) {
                 Spinner spinner = drainP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5349,13 +5350,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 9
-            if (sObject.getHireLabor9().contentEquals("Yes")) {
+            if (sObject.getHireLabor9().contentEquals("Yes")||sObject.getHireLabor9().contentEquals("Ya")) {
                 Spinner spinner = hireNP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor9().contentEquals("No")) {
+            } else if (sObject.getHireLabor9().contentEquals("No")||sObject.getHireLabor9().contentEquals("Tidak")) {
                 Spinner spinner = hireNP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5795,13 +5796,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 10
-            if (sObject.getDrainageNeed10().contentEquals("Yes")) {
+            if (sObject.getDrainageNeed10().contentEquals("Yes")||sObject.getDrainageNeed10().contentEquals("Ya")) {
                 Spinner spinner = drainP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed10().contentEquals("No")) {
+            } else if (sObject.getDrainageNeed10().contentEquals("No")||sObject.getDrainageNeed10().contentEquals("Tidak")) {
                 Spinner spinner = drainP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5823,13 +5824,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 10
-            if (sObject.getHireLabor10().contentEquals("Yes")) {
+            if (sObject.getHireLabor10().contentEquals("Yes")||sObject.getHireLabor10().contentEquals("Ya")) {
                 Spinner spinner = hireNP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor10().contentEquals("No")) {
+            } else if (sObject.getHireLabor10().contentEquals("No")||sObject.getHireLabor10().contentEquals("Tidak")) {
                 Spinner spinner = hireNP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);

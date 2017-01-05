@@ -318,7 +318,7 @@ public class MainActivity extends SalesforceListActivity implements
     private void postImageAsAttachment() {
         Map<String, Object> fields = new HashMap<String, Object>();
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File[] files = new File(String.valueOf(storageDir)).listFiles();
+        final File[] files = new File(String.valueOf(storageDir)).listFiles();
         if(files != null){
 
             for (int i = 0; i < files.length; i++) {
@@ -339,12 +339,13 @@ public class MainActivity extends SalesforceListActivity implements
                     Toast.makeText(MainActivity.this, "The file upload failed: " + ex.toString(), Toast.LENGTH_LONG).show();
                 }
 
-                client.sendAsync(request, new RestClient.AsyncRequestCallback() {
+				final int finalI = i;
+				client.sendAsync(request, new RestClient.AsyncRequestCallback() {
 
                     @Override
                     public void onSuccess(RestRequest request, RestResponse response) {
                         System.out.println("Response:" + response);
-
+						files[finalI].delete();
                     }
 
                     @Override
@@ -353,7 +354,7 @@ public class MainActivity extends SalesforceListActivity implements
                         EventsObservable.get().notifyEvent(EventsObservable.EventType.RenditionComplete);
                     }
                 });
-                files[i].delete();
+
             }
         }
     }
