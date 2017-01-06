@@ -148,7 +148,7 @@ public class fdpFragment extends Fragment {
             DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(start.getSelectedItem().toString().equals("Year 2")){
+                if(start.getSelectedItem().toString().equals("Year 2")||start.getSelectedItem().toString().equals("Tahun 2")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -224,7 +224,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl5)));
                     setText(plpy7, String.valueOf(dec.format(pl6)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 3")){
+                }else if (start.getSelectedItem().toString().equals("Year 3")||start.getSelectedItem().toString().equals("Tahun 3")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -297,7 +297,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl4)));
                     setText(plpy7, String.valueOf(dec.format(pl5)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 4")){
+                }else if (start.getSelectedItem().toString().equals("Year 4")||start.getSelectedItem().toString().equals("Tahun 4")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -371,7 +371,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl3)));
                     setText(plpy7, String.valueOf(dec.format(pl4)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 5")){
+                }else if (start.getSelectedItem().toString().equals("Year 5")||start.getSelectedItem().toString().equals("Tahun 5")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -445,7 +445,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl2)));
                     setText(plpy7, String.valueOf(dec.format(pl3)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 6")){
+                }else if (start.getSelectedItem().toString().equals("Year 6")||start.getSelectedItem().toString().equals("Tahun 6")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -519,7 +519,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl1)));
                     setText(plpy7, String.valueOf(dec.format(pl2)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 7")){
+                }else if (start.getSelectedItem().toString().equals("Year 7")||start.getSelectedItem().toString().equals("Tahun 7")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -1029,7 +1029,7 @@ public class fdpFragment extends Fragment {
         gappl6 = income6-(gapcost6+gaplabor6);
         gappl7 = income7-(gapcost7+gaplabor7);
 
-        if (startYear.equals("N/A")||startYear.equals("Year 1") ){
+        if (startYear.equals("N/A")||startYear.equals("Year 1")||startYear.equals("Tahun 1")){
             if(pl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1103,7 +1103,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl5)));
             setText(plpy6, String.valueOf(dec.format(pl6)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
-        }else if (startYear.equals("Year 2")){
+        }else if (startYear.equals("Year 2")||startYear.equals("Tahun 2")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1178,7 +1178,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl4)));
             setText(plpy6, String.valueOf(dec.format(pl5)));
             setText(plpy7, String.valueOf(dec.format(pl6)));
-        }else if (startYear.equals("Year 3")){
+        }else if (startYear.equals("Year 3")||startYear.equals("Tahun 3")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1250,7 +1250,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl3)));
             setText(plpy6, String.valueOf(dec.format(pl4)));
             setText(plpy7, String.valueOf(dec.format(pl5)));
-        }else if (startYear.equals("Year 4")){
+        }else if (startYear.equals("Year 4")||startYear.equals("Tahun 4")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1323,7 +1323,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl2)));
             setText(plpy6, String.valueOf(dec.format(pl3)));
             setText(plpy7, String.valueOf(dec.format(pl4)));
-        }else if (startYear.equals("Year 5")){
+        }else if (startYear.equals("Year 5")||startYear.equals("Tahun 5")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1396,7 +1396,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl1)));
             setText(plpy6, String.valueOf(dec.format(pl2)));
             setText(plpy7, String.valueOf(dec.format(pl3)));
-        }else if (startYear.equals("Year 6")){
+        }else if (startYear.equals("Year 6")||startYear.equals("Tahun 6")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1469,7 +1469,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(gappl5)));
             setText(plpy6, String.valueOf(dec.format(pl1)));
             setText(plpy7, String.valueOf(dec.format(pl2)));
-        }else if (startYear.equals("Year 7")){
+        }else if (startYear.equals("Year 7")||startYear.equals("Tahun 7")){
             if(gappl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{

@@ -17,6 +17,7 @@ import java.text.DecimalFormat;
 
 public class yearDelayFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -44,6 +45,30 @@ public class yearDelayFragment extends Fragment {
         ocvl = (TextView) view.findViewById(R.id.poccs);
         nvvl = (TextView) view.findViewById(R.id.pnvcs);
         dcvl = (TextView) view.findViewById(R.id.pdccs);
+        p1 = getString(R.string.p1);
+        p2 = getString(R.string.p2);
+        p3 = getString(R.string.p3);
+        p4 = getString(R.string.p4);
+        p5 = getString(R.string.p5);
+        p6 = getString(R.string.p6);
+        p7 = getString(R.string.p7);
+        p8 = getString(R.string.p8);
+        p9 = getString(R.string.p9);
+        p10 = getString(R.string.p10);
+        p11 = getString(R.string.p11);
+        p12 = getString(R.string.p12);
+        p13 = getString(R.string.p13);
+        p14 = getString(R.string.p14);
+        p15 = getString(R.string.p15);
+        p16 = getString(R.string.p16);
+        p17 = getString(R.string.p17);
+        p18 = getString(R.string.p18);
+        p19 = getString(R.string.p19);
+        p20 = getString(R.string.p20);
+        p21 = getString(R.string.p21);
+        p22 = getString(R.string.p22);
+        p23 = getString(R.string.p23);
+        p24 = getString(R.string.p24);
 
         return view;
     }
@@ -54,7 +79,7 @@ public class yearDelayFragment extends Fragment {
     }
 
     public void calc(String main, final String relat, final String labor, final Double area, String yearStart, String yearLaunch){
-        int startYear = Integer.valueOf(yearStart.substring(5));
+        int startYear = Integer.parseInt(yearStart.replaceAll("[^0-9]+", ""));
         int launchYear = Integer.valueOf(yearLaunch);
         int jan = 0;
         int feb = 0;
@@ -71,18 +96,18 @@ public class yearDelayFragment extends Fragment {
         DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
 
         if (launchYear < startYear){
-            setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-            setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-            setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-            setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-            setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-            setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-            setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+            setText(jlb, p16+p19+p24);
+            setText(fblb, p16+p19+p21+p24);
+            setText(mrlb, p14+p16+p19+p21+p24);
+            setText(ablb, p16+p19+p21+p24);
+            setText(mylb, p12+p15+p16+p20+p18+p24);
+            setText(jnlb, p12+p16+p20+p18+p24);
+            setText(jllb, p16+p19+p24);
+            setText(aglb, p16+p19+p21+p24);
+            setText(splb, p16+p19+p21+p24);
+            setText(oclb, p16+p19+p21+p24);
+            setText(nvlb, p12+p15+p16+p20+p18+p24);
+            setText(dclb, p14+p16+p19+p21+p24);
             if (labor == "labor") {
                 jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jan))));
                 feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Feb))));
@@ -113,18 +138,18 @@ public class yearDelayFragment extends Fragment {
         }else{
             if (yearLaunch.equals("1")){
                 if (main == "replant"){
-                    setText(jlb, "Harvest, ferment, dry, sell");
-                    setText(fblb, "Harvest, ferment, dry, sell");
-                    setText(mrlb, "Harvest, ferment, dry, sell");
-                    setText(ablb, "Harvest, ferment, dry, sell");
-                    setText(mylb, "Harvest, ferment, dry, sell");
-                    setText(jnlb, "Harvest, ferment, dry, sell + Clearing");
+                    setText(jlb, p24);
+                    setText(fblb, p24);
+                    setText(mrlb, p24);
+                    setText(ablb, p24);
+                    setText(mylb, p24);
+                    setText(jnlb, p24+p1);
                     setText(jllb, "");
-                    setText(aglb, "Lining-cocoa and shade");
-                    setText(splb, "Drainage");
-                    setText(oclb, "Cocoa Planting + Shade Planting");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer");
-                    setText(dclb, "Cocoa Planting + Coconut leaf - temporary shade + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar");
+                    setText(aglb, p3);
+                    setText(splb, p2);
+                    setText(oclb, p4+p7);
+                    setText(nvlb, p12+p15);
+                    setText(dclb, p4+p6+p14+p16);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY1Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY1Jan)))+(area * (getResources().getInteger(R.integer.difInputY1Jan))));
@@ -184,18 +209,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="graft"){
-                    setText(jlb, "Pruning/Sanitation + Fertilizer + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "Grafting work/ take off the plastic + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Grafting work/ take off the plastic + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Shape pruning + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Pollarding/Sanitation, cutting old tree after grafting + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
+                    setText(jlb, p8+" + "+p9+" + "+p14+" + "+p19+" + "+p24);
+                    setText(fblb, p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(mrlb, p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(ablb, p16+" + "+p19+" + "+p21+" + "+ p24);
+                    setText(mylb, p12+" + "+p15+" + "+p22+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+p16+" + "+p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+p19+" + "+p24);
+                    setText(aglb, p16+" + "+p22+" + "+p21+" + "+p24);
+                    setText(splb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(oclb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(nvlb, p12+" + "+p15+" + "+p22+" + "+p24);
+                    setText(dclb, p11+" + "+p14+" + "+p16+" + "+p19+" + "+p24);
 
                     if (relat == "extra"){
 
@@ -258,18 +283,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="extra"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY1Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY1Jan))));
@@ -300,18 +325,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else{
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jan)))+(area * (getResources().getInteger(R.integer.difInputY1Jan))));
@@ -375,18 +400,18 @@ public class yearDelayFragment extends Fragment {
 
             }else if (yearLaunch.equals("2")){
                 if (main == "replant"){
-                    setText(jlb, "P&D Control Foliar + Maintenance");
-                    setText(fblb, "Circle weeding + P&D Control Foliar + Maintenance");
-                    setText(mrlb, "Cocoa re- or inter-planting + Shade Planting + Herbiciding OR mechanical manual weeding + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Shape pruning");
-                    setText(ablb, "P&D Control Foliar + Maintenance");
-                    setText(mylb, "Application of lime, organic fertilizer + P&D Control Foliar + Maintenance");
-                    setText(jnlb, "Circle weeding + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Shape pruning");
-                    setText(jllb, "Herbiciding OR mechanical manual weeding + P&D Control Foliar + Maintenance");
-                    setText(aglb, "P&D Control Foliar + Maintenance");
-                    setText(splb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Shape pruning");
-                    setText(oclb, "Circle weeding + P&D Control Foliar + Maintenance");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Maintenance");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance");
+                    setText(jlb, p16+" + "+ p19);
+                    setText(fblb, p13+" + "+ p16+" + "+ p19);
+                    setText(mrlb, p5+" + "+p7+" + "+ p12+" + "+ p14+" + "+ p16+" + "+ p22);
+                    setText(ablb, p16+" + "+ p19);
+                    setText(mylb, p15+" + "+ p19);
+                    setText(jnlb, p13+" + "+ p14+" + "+ p16+" + "+ p22);
+                    setText(jllb, p12+" + "+ p16+" + "+ p19);
+                    setText(aglb, p16+" + "+ p19);
+                    setText(splb, p14+" + "+ p16+" + "+ p22);
+                    setText(oclb, p13+" + "+ p16+" + "+ p19);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p19);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY2Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY2Jan)))+(area * (getResources().getInteger(R.integer.difInputY2Jan))));
@@ -446,18 +471,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="graft"){
-                    setText(jlb,"P&D Control Foliar + Maintenance");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Shape pruning + Sanitation");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p22+" + "+ p21);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p20+" + "+ p24);
 
                     if (relat == "extra"){
 
@@ -520,18 +545,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="extra"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY2Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY2Jan))));
@@ -562,18 +587,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else{
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY2Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY2Jan)))+(area * (getResources().getInteger(R.integer.difInputY2Jan))));
@@ -638,18 +663,18 @@ public class yearDelayFragment extends Fragment {
             }else if (yearLaunch.equals("3")){
 
                 if (main == "replant"){
-                    setText(jlb, "P&D Control Foliar + Maintenance");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation");
-                    setText(mrlb, "Herbiciding OR mechanical manual weeding + Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation");
-                    setText(ablb, "P&D Control Foliar + Shape pruning + Sanitation");
-                    setText(mylb, "Application of lime, organic fertilizer + P&D Control Foliar + Production/shape + Shape pruning");
-                    setText(jnlb, "Herbiciding OR mechanical manual weeding + Fertilizing NPK, Cocoa Fertilizer + P&D Control Foliar + Maintenance + Production/shape + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "Herbiciding OR mechanical manual weeding + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Application of lime, organic fertilizer + P&D Control Foliar + Production/shape + Harvest, ferment, dry, sell");
-                    setText(dclb, "Herbiciding OR mechanical manual weeding + Fertilizing NPK, Cocoa Fertilizer + P&D Control Foliar + Production/shape + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21);
+                    setText(mrlb, p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
+                    setText(ablb, p16+" + "+ p22+" + "+ p21);
+                    setText(mylb, p15+" + "+ p20+" + "+ p22);
+                    setText(jnlb, p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p15+" + "+ p20+" + "+ p24);
+                    setText(dclb, p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan))));
@@ -709,18 +734,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="graft"){
-                    setText(jlb,"P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + roduction/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+p20 +" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p20+" + "+ p24);
 
                     if (relat == "extra"){
 
@@ -783,18 +808,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="extra"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY3Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Jan))));
@@ -825,18 +850,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else{
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY3Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan))));
@@ -898,284 +923,21 @@ public class yearDelayFragment extends Fragment {
 
                 }
 
-            }else if (yearLaunch.equals("4")){
-
-                if (main == "replant"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    if (relat == "extra"){
-                        if (labor == "labor"){
-                            jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }else{
-                            jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }
-                    }else {
-                        if (labor == "labor") {
-                            jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec))));
-                        } else {
-                            jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))));
-                        }
-                    }
-
-                }else if (main =="graft"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-
-                    if (relat == "extra"){
-
-                        if (labor == "labor"){
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Feb)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Mar)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Apr)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4May)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jun)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jul)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Aug)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Sep)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Oct)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Nov)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Dec)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }else{
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }
-
-                    }else{
-                        if (labor == "labor"){
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Feb)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Mar)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Apr)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4May)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jun)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jul)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Aug)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Sep)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Oct)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Nov)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Dec)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Dec))));
-                        }else{
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Dec))));
-                        }
-                    }
-
-                }else if (main =="extra"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-
-                    if (labor == "labor"){
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Jan))));
-                        feb = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Feb)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Feb))));
-                        mar = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Mar)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Mar))));
-                        apr = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Apr)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4May)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jun)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jul)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Jul))));
-                        aug = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Aug)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Sep)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Oct)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Nov)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Dec)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY4Dec))));
-                    }else{
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jan))));
-                        feb = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Feb))));
-                        mar = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Mar))));
-                        apr = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Jul))));
-                        aug = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY4Dec))));
-                    }
-
-                }else{
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    if (relat == "extra"){
-                        if (labor == "labor"){
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Feb)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Mar)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Apr)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Aug)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Sep)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Oct)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }else{
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
-                        }
-                    }else{
-                        if (labor == "labor"){
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Feb)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Mar)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Apr)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Aug)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Sep)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Oct)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY4Dec))));
-                        }else{
-                            jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jan))));
-                            feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Feb))));
-                            mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Mar))));
-                            apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Apr))));
-                            may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4May))));
-                            jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jun))));
-                            jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Jul))));
-                            aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Aug))));
-                            sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Sep))));
-                            oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Oct))));
-                            nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Nov))));
-                            dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY4Dec))));
-                        }
-
-                    }
-
-                }
-
             }else{
 
                 if (main == "replant"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan)))+(area * (getResources().getInteger(R.integer.difInputY5Jan))));
@@ -1235,18 +997,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="graft"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                     if (relat == "extra"){
 
@@ -1309,18 +1071,18 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else if (main =="extra"){
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+ p19+" + "+ p24);
+                    setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(jllb, p16+" + "+ p19+" + "+ p24);
+                    setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                    setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                    setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY5Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Jan))));
@@ -1351,18 +1113,19 @@ public class yearDelayFragment extends Fragment {
                     }
 
                 }else{
-                    setText(jlb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(fblb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mrlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(ablb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(mylb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jnlb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(jllb, "P&D Control Foliar + Maintenance + Harvest, ferment, dry, sell");
-                    setText(aglb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(splb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(oclb, "P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
-                    setText(nvlb, "Herbiciding OR mechanical manual weeding + Application of lime, organic fertilizer + P&D Control Foliar + Production/shape/Reducing mother trees branches + Shape pruning + Harvest, ferment, dry, sell");
-                    setText(dclb, "Fertilizing NPK, Cocoa Fertilizer, foliar at planting + P&D Control Foliar + Maintenance + Sanitation + Harvest, ferment, dry, sell");
+                    setText(jlb, p16+" + "+p19+" + "+p24);
+                    setText(fblb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(mrlb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(ablb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(mylb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
+                    setText(jnlb, p12+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
+                    setText(jllb, p16+" + "+p19+" + "+p24);
+                    setText(aglb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(splb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(oclb, p16+" + "+p19+" + "+p21+" + "+p24);
+                    setText(nvlb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
+                    setText(dclb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+
+                            p24);
                     if (relat == "extra"){
                         if (labor == "labor"){
                             jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY5Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY5Jan)))+(area * (getResources().getInteger(R.integer.difInputY5Jan))));

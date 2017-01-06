@@ -288,7 +288,7 @@
 		<item>Friends</item>
 		<item>Community Savings</item>
 		<item>Bank</item>
-	</string-array><string name="areaEmpty">Your plots area can not be empty</string><string-array name="years">
+	</string-array><string name="areaEmpty">Your plots area cannot be empty</string><string-array name="years">
 		<item>Year 1</item>
 		<item>Year 2</item>
 		<item>Year 3</item>
@@ -296,7 +296,7 @@
 		<item>Year 5</item>
 		<item>Year 6</item>
 		<item>Year 7</item>
-	</string-array><string name="soilFertMngLb">Soil Fertility Management:</string><string name="fmWorkFarm">15. Family members work on farm:</string><string name="feb">February</string><string name="spouseEducationalLevel">C3. Spouse Educational Level:</string><string name="manDaysNeed">Labor needed in man days:</string><string-array name="education">
+	</string-array><string name="soilFertMngLb">Soil Fertility Management:</string><string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string><string name="fmWorkFarm">15. Family members work on farm:</string><string name="feb">February</string><string name="spouseEducationalLevel">C3. Spouse Educational Level:</string><string name="manDaysNeed">Labor needed in man days:</string><string-array name="education">
 		<item>N/A</item>
 		<item>Sekolah Dasar - SD</item>
 		<item>Sekolah Menengah Pertama - SMP</item>
@@ -309,7 +309,7 @@
 		<item>N/A</item>
 		<item>G</item>
 		<item>B</item>
-	</string-array><string name="changeR">Change for Grafting</string><string name="p1">Clearing</string><string name="familyPaidWork">18. Family Members contributed with money to the household:</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area can not be hig than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
+	</string-array><string name="changeR">Change for Grafting</string><string name="p1">Clearing</string><string name="familyPaidWork">18. Family Members contributed with money to the household:</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
 		<item>G</item>
 		<item>B</item>
 	</string-array><string name="phone">9. Phone Number:</string><string-array name="gender_male">
@@ -585,7 +585,7 @@
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
-    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">C15. Berapa total pinjaman (piutang) yang anda berikan</string><string name="plannedInvestments">25. Perencanaan investment</string><string name="geneticLb">Genetika bahan tanaman</string><string name="otherExpenses">24. Pengeluaran tahunan yang lain</string><string name="mobileMoney">C18. Rekening petani memiliki pilihan unutk Mobile banking</string><string name="changeR">Perubahan untuk sambungan</string><string name="plotIncome">Pendapatan dari Plot</string><string name="profitOrLost">Untung dan Rugi</string><string name="plotGPS">40. GPS Plot</string><string-array name="year3">
+    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">C15. Berapa total pinjaman (piutang) yang anda berikan</string><string name="plannedInvestments">25. Perencanaan investment</string><string name="geneticLb">Genetika bahan tanaman</string><string name="otherExpenses">24. Pengeluaran tahunan yang lain</string><string name="mobileMoney">C18. Rekening petani memiliki pilihan unutk Mobile banking</string><string name="changeR">Perubahan untuk sambungan</string><string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string><string name="plotIncome">Pendapatan dari Plot</string><string name="profitOrLost">Untung dan Rugi</string><string name="plotGPS">40. GPS Plot</string><string-array name="year3">
         <item>Tahun 3</item>
         <item>Tahun 1</item>
         <item>Tahun 2</item>

@@ -455,13 +455,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         if (sObject != null) {
 
             //Set Agree with recomendations field
-            if (sObject.getAgreeRecomendations().contentEquals("Yes")) {
+            if (sObject.getAgreeRecomendations().contentEquals("Yes")||sObject.getAgreeRecomendations().contentEquals("Ya")) {
                 Spinner spinner = (Spinner) findViewById(R.id.farmerAgree_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getAgreeRecomendations().contentEquals("No")) {
+            } else if (sObject.getAgreeRecomendations().contentEquals("No")||sObject.getAgreeRecomendations().contentEquals("Tidak")) {
                 Spinner spinner = (Spinner) findViewById(R.id.farmerAgree_field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -481,43 +481,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText(comments,sObject.getReasonNotAgreed());
 
             //Set start year 1
-            if (sObject.getStartYearP1().contentEquals("Year 1")) {
+            if (sObject.getStartYearP1().contentEquals("Year 1")||sObject.getStartYearP1().contentEquals("Tahun 1")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 2")||sObject.getStartYearP1().contentEquals("Tahun 2")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 3")||sObject.getStartYearP1().contentEquals("Tahun 3")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 4")||sObject.getStartYearP1().contentEquals("Tahun 4")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 5")||sObject.getStartYearP1().contentEquals("Tahun 5")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 6")||sObject.getStartYearP1().contentEquals("Tahun 6")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP1().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP1().contentEquals("Year 7")||sObject.getStartYearP1().contentEquals("Tahun 7")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -532,43 +532,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 2
-            if (sObject.getStartYearP2().contentEquals("Year 1")) {
+            if (sObject.getStartYearP2().contentEquals("Year 1")||sObject.getStartYearP2().contentEquals("Tahun 1")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 2")||sObject.getStartYearP2().contentEquals("Tahun 2")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 3")||sObject.getStartYearP2().contentEquals("Tahun 3")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 4")||sObject.getStartYearP2().contentEquals("Tahun 4")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 5")||sObject.getStartYearP2().contentEquals("Tahun 5")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 6")||sObject.getStartYearP2().contentEquals("Tahun 6")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP2().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP2().contentEquals("Year 7")||sObject.getStartYearP2().contentEquals("Tahun 7")) {
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -583,43 +583,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 3
-            if (sObject.getStartYearP3().contentEquals("Year 1")) {
+            if (sObject.getStartYearP3().contentEquals("Year 1")||sObject.getStartYearP3().contentEquals("Tahun 1")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 2")||sObject.getStartYearP3().contentEquals("Tahun 2")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 3")||sObject.getStartYearP3().contentEquals("Tahun 3")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 4")||sObject.getStartYearP3().contentEquals("Tahun 4")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 5")||sObject.getStartYearP3().contentEquals("Tahun 5")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 6")||sObject.getStartYearP3().contentEquals("Tahun 6")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP3().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP3().contentEquals("Year 7")||sObject.getStartYearP3().contentEquals("Tahun 7")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -634,43 +634,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 4
-            if (sObject.getStartYearP4().contentEquals("Year 1")) {
+            if (sObject.getStartYearP4().contentEquals("Year 1")||sObject.getStartYearP4().contentEquals("Tahun 1")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 2")||sObject.getStartYearP4().contentEquals("Tahun 2")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 3")||sObject.getStartYearP4().contentEquals("Tahun 3")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 4")||sObject.getStartYearP4().contentEquals("Tahun 4")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 5")||sObject.getStartYearP4().contentEquals("Tahun 5")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 6")||sObject.getStartYearP4().contentEquals("Tahun 6")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP4().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP4().contentEquals("Year 7")||sObject.getStartYearP4().contentEquals("Tahun 7")) {
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -685,43 +685,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 5
-            if (sObject.getStartYearP5().contentEquals("Year 1")) {
+            if (sObject.getStartYearP5().contentEquals("Year 1")||sObject.getStartYearP5().contentEquals("Tahun 1")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 2")||sObject.getStartYearP5().contentEquals("Tahun 2")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 3")||sObject.getStartYearP5().contentEquals("Tahun 3")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 4")||sObject.getStartYearP5().contentEquals("Tahun 4")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 5")||sObject.getStartYearP5().contentEquals("Tahun 5")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 6")||sObject.getStartYearP5().contentEquals("Tahun 6")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP5().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP5().contentEquals("Year 7")||sObject.getStartYearP5().contentEquals("Tahun 7")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -736,43 +736,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 6
-            if (sObject.getStartYearP6().contentEquals("Year 1")) {
+            if (sObject.getStartYearP6().contentEquals("Year 1")||sObject.getStartYearP6().contentEquals("Tahun 1")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 2")||sObject.getStartYearP6().contentEquals("Tahun 2")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 3")||sObject.getStartYearP6().contentEquals("Tahun 3")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 4")||sObject.getStartYearP6().contentEquals("Tahun 4")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 5")||sObject.getStartYearP6().contentEquals("Tahun 5")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 6")||sObject.getStartYearP6().contentEquals("Tahun 6")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP6().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP6().contentEquals("Year 7")||sObject.getStartYearP6().contentEquals("Tahun 7")) {
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -787,43 +787,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 7
-            if (sObject.getStartYearP7().contentEquals("Year 1")) {
+            if (sObject.getStartYearP7().contentEquals("Year 1")||sObject.getStartYearP7().contentEquals("Tahun 1")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 2")||sObject.getStartYearP7().contentEquals("Tahun 2")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 3")||sObject.getStartYearP7().contentEquals("Tahun 3")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 4")||sObject.getStartYearP7().contentEquals("Tahun 4")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 5")||sObject.getStartYearP7().contentEquals("Tahun 5")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 6")||sObject.getStartYearP7().contentEquals("Tahun 6")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP7().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP7().contentEquals("Year 7")||sObject.getStartYearP7().contentEquals("Tahun 7")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -838,43 +838,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 8
-            if (sObject.getStartYearP8().contentEquals("Year 1")) {
+            if (sObject.getStartYearP8().contentEquals("Year 1")||sObject.getStartYearP8().contentEquals("Tahun 1")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 2")||sObject.getStartYearP8().contentEquals("Tahun 2")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 3")||sObject.getStartYearP8().contentEquals("Tahun 3")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 4")||sObject.getStartYearP8().contentEquals("Tahun 4")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 5")||sObject.getStartYearP8().contentEquals("Tahun 5")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 6")||sObject.getStartYearP8().contentEquals("Tahun 6")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP8().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP8().contentEquals("Year 7")||sObject.getStartYearP8().contentEquals("Tahun 7")) {
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -889,43 +889,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 9
-            if (sObject.getStartYearP9().contentEquals("Year 1")) {
+            if (sObject.getStartYearP9().contentEquals("Year 1")||sObject.getStartYearP9().contentEquals("Tahun 1")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 2")||sObject.getStartYearP9().contentEquals("Tahun 2")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 3")||sObject.getStartYearP9().contentEquals("Tahun 3")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 4")||sObject.getStartYearP9().contentEquals("Tahun 4")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 5")||sObject.getStartYearP9().contentEquals("Tahun 5")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 6")||sObject.getStartYearP9().contentEquals("Tahun 6")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP9().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP9().contentEquals("Year 7")||sObject.getStartYearP9().contentEquals("Tahun 7")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -940,43 +940,43 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //Set start year 10
-            if (sObject.getStartYearP10().contentEquals("Year 1")) {
+            if (sObject.getStartYearP10().contentEquals("Year 1")||sObject.getStartYearP10().contentEquals("Tahun 1")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year1, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 2")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 2")||sObject.getStartYearP10().contentEquals("Tahun 2")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year2, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 3")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 3")||sObject.getStartYearP10().contentEquals("Tahun 3")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year3, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 4")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 4")||sObject.getStartYearP10().contentEquals("Tahun 4")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 5")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 5")||sObject.getStartYearP10().contentEquals("Tahun 5")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 6")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 6")||sObject.getStartYearP10().contentEquals("Tahun 6")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year6, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getStartYearP10().contentEquals("Year 7")) {
+            } else if (sObject.getStartYearP10().contentEquals("Year 7")||sObject.getStartYearP10().contentEquals("Tahun 7")) {
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.year7, android.R.layout.simple_spinner_item);
@@ -1011,7 +1011,6 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             String startY9 = sObject.getStartYearP9();
             String startY10 = sObject.getStartYearP10();
             double avgCost = Double.parseDouble(sObject.getAveragecocoaprice());
-            DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             Integer age1 = Integer.valueOf(sObject.getPlot1Age());
             Integer age2 = Integer.valueOf(sObject.getPlot2Age());
             Integer age3 = Integer.valueOf(sObject.getPlot3Age());
@@ -1854,13 +1853,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         if (sObject != null) {
             DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             //net income cocoa
-            int totalIncomeY1 = Integer.parseInt(income11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income61.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income101.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY2 = Integer.parseInt(income12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income62.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income102.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY3 = Integer.parseInt(income13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income63.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income103.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY4 = Integer.parseInt(income14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income64.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income104.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY5 = Integer.parseInt(income15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income65.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income105.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY6 = Integer.parseInt(income16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income66.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income106.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalIncomeY7 = Integer.parseInt(income17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income67.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(income107.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalIncomeY1 = Integer.parseInt(income11.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income21.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income31.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income41.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income51.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income61.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income71.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income81.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income91.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income101.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY2 = Integer.parseInt(income12.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income22.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income32.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income42.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income52.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income62.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income72.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income82.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income92.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income102.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY3 = Integer.parseInt(income13.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income23.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income33.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income43.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income53.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income63.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income73.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income83.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income93.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income103.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY4 = Integer.parseInt(income14.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income24.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income34.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income44.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income54.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income64.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income74.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income84.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income94.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income104.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY5 = Integer.parseInt(income15.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income25.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income35.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income45.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income55.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income65.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income75.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income85.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income95.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income105.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY6 = Integer.parseInt(income16.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income26.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income36.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income46.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income56.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income66.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income76.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income86.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income96.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income106.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalIncomeY7 = Integer.parseInt(income17.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income27.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income37.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income47.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income57.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income67.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income77.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income87.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income97.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(income107.getText().toString().replaceAll("[^0-9]+", ""));
             setText((TextView) findViewById(R.id.netPlotIncomeY1_field), String.valueOf(dec.format(totalIncomeY1)));
             setText((TextView) findViewById(R.id.netPlotIncomeY2_field), String.valueOf(dec.format(totalIncomeY2)));
             setText((TextView) findViewById(R.id.netPlotIncomeY3_field), String.valueOf(dec.format(totalIncomeY3)));
@@ -1992,13 +1991,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //found needed
-            int totalY1 = Integer.parseInt(cost11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor11.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor21.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor31.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor41.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor51.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor71.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor81.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor91.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost101.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor101.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY2 = Integer.parseInt(cost12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor12.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor22.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor32.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor42.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor52.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor72.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor82.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor92.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost102.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor102.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY3 = Integer.parseInt(cost13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor13.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor23.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor33.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor43.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor53.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor73.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor83.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor93.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost103.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor103.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY4 = Integer.parseInt(cost14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor14.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor24.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor34.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor44.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor54.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor74.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor84.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor94.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost104.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor104.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY5 = Integer.parseInt(cost15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor15.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor25.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor35.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor45.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor55.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor75.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor85.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor95.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost105.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor105.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY6 = Integer.parseInt(cost16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor16.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor26.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor36.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor46.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor56.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor76.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor86.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor96.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost106.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor106.getText().toString().replaceAll("[IDR,\\s]", ""));
-            int totalY7 = Integer.parseInt(cost17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor17.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor27.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor37.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor47.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor57.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor77.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor87.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor97.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(cost107.getText().toString().replaceAll("[IDR,\\s]", ""))+Integer.parseInt(labor107.getText().toString().replaceAll("[IDR,\\s]", ""));
+            int totalY1 = Integer.parseInt(cost11.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor11.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost21.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor21.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost31.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor31.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost41.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor41.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost51.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor51.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost71.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor71.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost81.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor81.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost91.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor91.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost101.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor101.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY2 = Integer.parseInt(cost12.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor12.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost22.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor22.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost32.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor32.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost42.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor42.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost52.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor52.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost72.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor72.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost82.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor82.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost92.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor92.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost102.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor102.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY3 = Integer.parseInt(cost13.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor13.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost23.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor23.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost33.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor33.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost43.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor43.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost53.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor53.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost73.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor73.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost83.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor83.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost93.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor93.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost103.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor103.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY4 = Integer.parseInt(cost14.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor14.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost24.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor24.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost34.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor34.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost44.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor44.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost54.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor54.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost74.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor74.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost84.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor84.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost94.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor94.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost104.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor104.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY5 = Integer.parseInt(cost15.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor15.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost25.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor25.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost35.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor35.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost45.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor45.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost55.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor55.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost75.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor75.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost85.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor85.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost95.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor95.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost105.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor105.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY6 = Integer.parseInt(cost16.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor16.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost26.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor26.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost36.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor36.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost46.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor46.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost56.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor56.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost76.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor76.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost86.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor86.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost96.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor96.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost106.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor106.getText().toString().replaceAll("[^0-9]+", ""));
+            int totalY7 = Integer.parseInt(cost17.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor17.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost27.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor27.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost37.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor37.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost47.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor47.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost57.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor57.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost77.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor77.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost87.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor87.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost97.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor97.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(cost107.getText().toString().replaceAll("[^0-9]+", ""))+Integer.parseInt(labor107.getText().toString().replaceAll("[^0-9]+", ""));
             setText((TextView) findViewById(R.id.foundsNeededY1_field), String.valueOf(dec.format(totalY1)));
             setText((TextView) findViewById(R.id.foundsNeededY2_field), String.valueOf(dec.format(totalY2)));
             setText((TextView) findViewById(R.id.foundsNeededY3_field), String.valueOf(dec.format(totalY3)));
@@ -2116,7 +2115,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             } else {
                 smartStore.upsert(ContactListLoader.CONTACT_SOUP, contact);
             }
-            Toast.makeText(this, "Save successful!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, this.getString(R.string.saved), Toast.LENGTH_SHORT).show();
             finish();
         } catch (JSONException e) {
             Log.e(TAG, "JSONException occurred while parsing", e);

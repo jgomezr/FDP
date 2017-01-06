@@ -5,6 +5,7 @@ import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -63,7 +64,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	private static final int CONTACT_DETAIL_LOADER_ID = 2;
 	private static final String TAG = "SmartSyncExplorer: DetailActivity";
 	private Button button;
-	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,cocoasize,familyIncome,incomeOtherCrops,totalCrd,payCredit,loanAmmount,moneyBack,hhSaving,otherExpenses,planedInvest,eduExpenses,expensesCCLY,grossCC;
+	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,cocoasize,familyIncome,incomeOtherCrops,totalCrd,payCredit,loanAmmount,moneyBack,hhSaving,otherExpenses,planedInvest,eduExpenses,expensesCCLY,grossCC,tOS,tL,tC,tR;
     private TextView tHelp1, t1,tHelp2,t2,tHelp3,t3,tHelp4,t4,tHelp5,t5,tHelp6,t6;
 	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,hire,bank;
 	private LinearLayout actType,mbMoney,wntAct,hireDays,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
@@ -94,6 +95,15 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			getActionBar().setTitle(launchIntent.getStringExtra(MainActivity.OBJECT_NAME_KEY));
 			getActionBar().setSubtitle(objectTitle);
 		}
+
+
+        tOS = (EditText) findViewById(R.id.farmArea_field);
+        tL = (EditText) findViewById(R.id.cultivationArea_field);
+        tC = (EditText) findViewById(R.id.cocoaArea_field);
+        tR = (EditText) findViewById(R.id.renovationArea_field);
+        tL.addTextChangedListener(new DetailActivity.areaWatcher(tL));
+        tC.addTextChangedListener(new DetailActivity.areaWatcher(tC));
+        tR.addTextChangedListener(new DetailActivity.areaWatcher(tR));
 
 		button = (Button) findViewById(R.id.gpsbutton);
 		textView = (EditText) findViewById(R.id.gps_field);
@@ -544,6 +554,49 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		avgCocoaPrice.addTextChangedListener(new MoneyTextWatcher(avgCocoaPrice));
 
 	}
+
+    public class areaWatcher implements TextWatcher {
+        private final WeakReference<EditText> editTextWeakReference;
+
+        public areaWatcher(EditText editText) {
+            editTextWeakReference = new WeakReference<EditText>(editText);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            EditText editText = editTextWeakReference.get();
+            double toa;
+            double tl;
+            double tc;
+            double tr;
+
+            if(tOS.getText().toString().isEmpty()||tL.getText().toString().isEmpty()||tC.getText().toString().isEmpty()||tR.getText().toString().isEmpty()){
+                toa=0;
+                tl=0;
+                tc=0;
+                tr=0;
+            }else{
+                toa=Double.parseDouble(tOS.getText().toString());
+                tl= Double.parseDouble(tL.getText().toString());
+                tc= Double.parseDouble(tC.getText().toString());
+                tr= Double.parseDouble(tR.getText().toString());
+            }
+            if ((tl+tc+tr)>toa) {
+                editText.setBackgroundColor(Color.parseColor("#cc0000"));
+                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
+            }else{
+                editText.setBackgroundColor(Color.TRANSPARENT);
+            }
+        }
+    }
 
 	public class MoneyTextWatcher implements TextWatcher {
 		private final WeakReference<EditText> editTextWeakReference;

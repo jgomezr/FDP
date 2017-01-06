@@ -224,6 +224,7 @@
     <string name="app_name"><b>FDP</b></string>
     <string name="apr">April</string>
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
+    <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
     <string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string>
     <string name="aug">Agusutus</string>
     <string name="autosave">Simpan Otomatis</string>

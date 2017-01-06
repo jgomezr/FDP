@@ -1997,7 +1997,8 @@
     <string name="app_name"><b>FDP</b></string>
     <string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
     <string name="apr">April</string>
-    <string name="areaEmpty">Your plots area can not be empty</string>
+    <string name="areaEmpty">Your plots area cannot be empty</string>
+    <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
     <string name="aug">August</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
@@ -2176,7 +2177,7 @@
     <string name="plotActivityTitle">Plot information</string>
     <string name="plotAge">47. Tree Age:</string>
     <string name="plotArea">41. Plot Size (Ha):</string>
-    <string name="plotAreaHiger">Your plots area can not be hig than Cocoa Area on farm</string>
+    <string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="plotGPS">40. Plot GPS:</string>
     <string name="plotHireLabor">62. Hire labor:</string>
     <string name="plotIncome">Plot Income:</string>

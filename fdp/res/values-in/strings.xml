@@ -414,4 +414,5 @@
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
     <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
+    <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
 </resources>
