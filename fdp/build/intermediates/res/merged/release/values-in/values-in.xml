@@ -1,5 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="No">
+        <item>Tidak</item>
+        <item>Ya</item>
+    </string-array>
+    <string-array name="bank">
+        <item>NA</item>
+        <item>Rekening standard bank</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Pinjaman desa</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="bank1">
+        <item>Rekening standard bank</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Pinjaman desa</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="bank2">
+        <item>Mobile banking</item>
+        <item>Rekening standard bank</item>
+        <item>Micro finance</item>
+        <item>Pinjaman desa</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="bank3">
+        <item>Micro finance</item>
+        <item>Rekening standard bank</item>
+        <item>Mobile banking</item>
+        <item>Pinjaman desa</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="bank4">
+        <item>Pinjaman desa</item>
+        <item>Rekening standard bank</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="bank5">
+        <item>Lainnya</item>
+        <item>Rekening standard bank</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Pinjaman desa</item>
+    </string-array>
+    <string-array name="creditOften">
+        <item>Bulanan</item>
+        <item>Per tigabulan</item>
+        <item>Setiap dua tahun</item>
+        <item>Tahunan</item>
+        <item>Frekuensi tidak terset</item>
+    </string-array>
+    <string-array name="creditOftenAnnual">
+        <item>Tahunan</item>
+        <item>Bulanan</item>
+        <item>Per tigabulan</item>
+        <item>Setiap dua tahun</item>
+        <item>Frekuensi tidak terset</item>
+    </string-array>
+    <string-array name="creditOftenNoSet">
+        <item>Frekuensi tidak terset</item>
+        <item>Bulanan</item>
+        <item>Per tigabulan</item>
+        <item>Setiap dua tahun</item>
+        <item>Tahunan</item>
+    </string-array>
+    <string-array name="creditOftenQuarter">
+        <item>Per tigabulan</item>
+        <item>Bulanan</item>
+        <item>Setiap dua tahun</item>
+        <item>Tahunan</item>
+        <item>Frekuensi tidak terset</item>
+    </string-array>
+    <string-array name="creditOftenbiannual">
+        <item>Setiap dua tahun</item>
+        <item>Bulanan</item>
+        <item>Per tigabulan</item>
+        <item>Tahunan</item>
+        <item>Frekuensi tidak terset</item>
+    </string-array>
+    <string-array name="gender">
+        <item>N/A</item>
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+    <string-array name="gender_female">
+        <item>Wanita</item>
+        <item>Pria</item>
+    </string-array>
+    <string-array name="gender_male">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+    <string-array name="sourceLoan">
+        <item>Keluarga</item>
+        <item>Teman</item>
+        <item>Simpanan di Komunitas</item>
+        <item>Organisasi Mikrokredit</item>
+        <item>Bank</item>
+    </string-array>
+    <string-array name="sourceLoanBank">
+        <item>Bank</item>
+        <item>Keluarga</item>
+        <item>Teman</item>
+        <item>Simpanan di Komunitas</item>
+        <item>Organisasi Mikrokredit</item>
+    </string-array>
+    <string-array name="sourceLoanCommunity">
+        <item>Simpanan di Komunitas</item>
+        <item>Keluarga</item>
+        <item>Teman</item>
+        <item>Organisasi Mikrokredit</item>
+        <item>Bank</item>
+    </string-array>
+    <string-array name="sourceLoanFriend">
+        <item>Teman</item>
+        <item>Keluarga</item>
+        <item>Simpanan di Komunitas</item>
+        <item>Organisasi Mikrokredit</item>
+        <item>Bank</item>
+    </string-array>
+    <string-array name="sourceLoanMicro">
+        <item>Organisasi Mikrokredit</item>
+        <item>Keluarga</item>
+        <item>Teman</item>
+        <item>Simpanan di Komunitas</item>
+        <item>Bank</item>
+    </string-array>
+    <string-array name="year1">
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year2">
+        <item>Tahun 2</item>
+        <item>Tahun 1</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year3">
+        <item>Tahun 3</item>
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year4">
+        <item>Tahun 4</item>
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year5">
+        <item>Tahun 5</item>
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year6">
+        <item>Tahun 6</item>
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="year7">
+        <item>Tahun 7</item>
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+    </string-array>
+    <string-array name="years">
+        <item>Tahun 1</item>
+        <item>Tahun 2</item>
+        <item>Tahun 3</item>
+        <item>Tahun 4</item>
+        <item>Tahun 5</item>
+        <item>Tahun 6</item>
+        <item>Tahun 7</item>
+    </string-array>
+    <string-array name="yes">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+    <string-array name="yesNo">
+        <item>N/A</item>
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+    <string name="accountType">C17. Jenis Rekening</string>
+    <string name="action_add">Tambahkan Petani</string>
+    <string name="action_refresh">Sinkronkan</string>
+    <string name="action_search">Cari</string>
+    <string name="additionalCrops">C20. Tanaman Lain</string>
+    <string name="additionalIntervention">TAMBAHAN INTERVENSI</string>
+    <string name="agree">Setuju dengan rekomendasi</string>
+    <string name="amountOfLoan">C15. Berapa total pinjaman (piutang) yang anda berikan</string>
+    <string name="ao">ADOPSI OBSERVASI</string>
+    <string name="aoResults">HASIL ADOPSI OBSERVASI</string>
+    <string name="app_name"><b>FDP</b></string>
+    <string name="apr">April</string>
+    <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
+    <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
+    <string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string>
+    <string name="aug">Agusutus</string>
+    <string name="autosave">Simpan Otomatis</string>
+    <string name="averageCocoaPrice">29. Rata-rata harga cacao per Kg</string>
+    <string name="back">Kembali</string>
+    <string name="bankAccount">27. Pakaha punya rekening bank?</string>
+    <string name="birthday">3. Tahun Kelahiran Petani</string>
+    <string name="calcAO">Menghitung</string>
+    <string name="cancel">Tidak</string>
+    <string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string>
+    <string name="changeR">Perubahan untuk sambungan</string>
+    <string name="childrenInSchool">C5. Anak antara 5 dan 17 tahun yang masih sekolah</string>
+    <string name="childrenUnder">C4. Anak antara 5 dan 17 tahun</string>
+    <string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string>
+    <string name="cocoaTrees">46. Jarak antara pohon cocoa</string>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> perlu pembaruan aplikasi Android Wear."</string>
     <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> tidak akan berjalan jika aplikasi Android Wear tidak diperbarui."</string>
     <string msgid="1366439133145190222" name="common_android_wear_update_title">"Perbarui Android Wear"</string>
@@ -30,4 +270,177 @@
     <string msgid="2201289642219771610" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> tidak akan berjalan tanpa layanan Google Play, yang saat ini sedang diperbarui."</string>
     <string msgid="815008177440683245" name="common_google_play_services_updating_title">"Layanan Google Play sedang diperbarui"</string>
     <string msgid="411506735369601515" name="common_open_on_phone">"Buka di ponsel"</string>
+    <string name="costInvest">Pengeluaran pemeliharaan/investasi</string>
+    <string name="costLabor">Biaya pekerja</string>
+    <string name="cultivationArea">35. Total lahan yang masih dalam peremajaan (Ha)</string>
+    <string name="daysHire">C21. Berapa hari pekerja digunakan</string>
+    <string name="debilitationDisease">49. Penyakit yang tidak bisa di kendalikan</string>
+    <string name="dec">Desember</string>
+    <string name="delete">Hapus</string>
+    <string name="delete_title">Sudah yakin?</string>
+    <string name="dependEconomically">16. Jumlah anggota keluarga yang tergantung dari pendapatan keluarga</string>
+    <string name="drainage">Drainase</string>
+    <string name="drainageNeed">60. Membutuhkan Drainase</string>
+    <string name="educationExpenses">26. Pengeluaran pendidikan yang di harapkan</string>
+    <string name="educational_level">5. Tingkat pendidikan</string>
+    <string name="estimatedProduction">42. Estimasi Produksi</string>
+    <string name="expensesCocoaLY">30. Total pengeluaran tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
+    <string name="extraSoil">Tambahan manajemen tanah</string>
+    <string name="familyMembers">13. Jumlah anggota keluarga yang tinggal bersama termasuk petani</string>
+    <string name="familyPaidWork">18. Anggota keluarga berkontribusi dengan uang untuk pendapatan rumah tangga</string>
+    <string name="familyPhoto">Ambil Foto Keluarga</string>
+    <string name="farmAge">32. Tahun tanam</string>
+    <string name="farmArea">34. Total kepemilihakan lahan atau lahan yang di miliki (ha)</string>
+    <string name="farmCertifications">33. Sertifikasi kebun</string>
+    <string name="farmCondition">Kondisi kebun</string>
+    <string name="farmerGroup">14. Kelompk tani</string>
+    <string name="farmerProfile">PROFILE PETANI</string>
+    <string name="farmer_code">2. Kode Petani</string>
+    <string name="farmingProfile">PROFILE EKONOMI KEBUN</string>
+    <string name="fdpActivityTitle">Perencanaan pengembangan Kebun</string>
+    <string name="feb">Fabruary</string>
+    <string name="fertilizerApplication">58. Aplikasi Pupuk</string>
+    <string name="fertilizerFormulation">57. Formulasi Pupuk</string>
+    <string name="filling">Penyisipan</string>
+    <string name="fillingOption">61. Opsi untuk Penyisipan</string>
+    <string name="finish">Selesai</string>
+    <string name="fmWorkFarm">15. Anngota keluarga yang bekerja di kebun</string>
+    <string name="foundsNeeded">Investasi di FDP</string>
+    <string name="full_name">1. Nama Petani</string>
+    <string name="gapLb">GAPS</string>
+    <string name="gaps">Perawatan (GAPS)</string>
+    <string name="gender">4. Jenis Kelamin</string>
+    <string name="geneticLb">Genetika bahan tanaman</string>
+    <string name="getLocation">Dapatkan Lokasi</string>
+    <string name="giveLoan">21. Apakah anda memberikan pinjaman kepada seseorang lebih dari 5 juta</string>
+    <string name="gps">7. GPS Rumah</string>
+    <string name="graft">Sambungan</string>
+    <string name="grossCocoaLY">31. Pendapatan kotor dari cocoa di tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
+    <string name="harvesting">53. Pemanenan</string>
+    <string name="haveCredit">20. Apakah anda memiliki pinjaman lebih dari 5 juta yang harus di bayar?</string>
+    <string name="haveOtherCrops">19. Memiliki tanaman lain</string>
+    <string name="haveSpouse">11. Punya Pasangan</string>
+    <string name="hireLabor">38. Memiliki Pekerja</string>
+    <string name="householdSavings">22. Tabungan rumah tangga</string>
+    <string name="incomeOtherCrops">C10. pendapat bersih dari semua tanaman di tahun lalu (tahun  lalu di maksud dua musim panen, mid dan main</string>
+    <string name="internalInspection">Internal Inspeksi</string>
+    <string name="jan">Januari</string>
+    <string name="jul">July</string>
+    <string name="jun">Juni</string>
+    <string name="labor">Pekerja</string>
+    <string name="lime">Kapur</string>
+    <string name="limeNeed">59. Membutuhkan Kapur</string>
+    <string name="livingExpenses">23. Pengeluaran tahunan</string>
+    <string name="logout_button">Keluar</string>
+    <string name="logout_title">Keluar?</string>
+    <string name="main_activity_title">List Petani</string>
+    <string name="manDaysNeed">Kebutuhan pekerja dalam HOK</string>
+    <string name="mapPhoto">Mengambil foto dari peta pertanian</string>
+    <string name="mar">Maret</string>
+    <string name="may">Mei</string>
+    <string name="mobileMoney">C18. Rekening petani memiliki pilihan unutk Mobile banking</string>
+    <string name="moneyBack">C16. berapa banyak yang mereka bayar</string>
+    <string name="netFamily">Pendapatan bersih keluarga</string>
+    <string name="netFarming">Total pemasukan dalam berkebun</string>
+    <string name="netOther">Pendapatan bersih dari semua sumber</string>
+    <string name="netOtherCrops">Pendapatan bersih dari tanaman lain</string>
+    <string name="netPlotIncome">Pendapatan bersih dari cocoa</string>
+    <string name="no_results_found">Tidak ada di hasil pencarian</string>
+    <string name="nov">November</string>
+    <string name="numberChildren">12. Jumlah anak</string>
+    <string name="numberPlots">39. Banyaknya plot</string>
+    <string name="oct">Oktober</string>
+    <string name="organicMatter">56. Bahan organik</string>
+    <string name="otherExpenses">24. Pengeluaran tahunan yang lain</string>
+    <string name="p1">Pembersihan</string>
+    <string name="p10">Pekerjaan penyambungan/mengeluarkan plastik</string>
+    <string name="p11">Polladring/sanitasi, memotong batang induk setelah menyambung</string>
+    <string name="p12">Menyemprot pestisida atau melakukan secara manual</string>
+    <string name="p13">Menghilamgkan rumput di sekitar pohon</string>
+    <string name="p14">Pemupukan NPK, pupk cocoa, foliar saat penanaman</string>
+    <string name="p15">Aplikasi kapur, pupuk organik</string>
+    <string name="p16">Pengenadalian hama dan penyakit + Foliar</string>
+    <string name="p17">Pemangkasan/sanitasi</string>
+    <string name="p18">Pemangkasan bentuk</string>
+    <string name="p19">Perawatan</string>
+    <string name="p2">Drainase</string>
+    <string name="p20">Produksi/bentuk/menguruangi cabang pohon induk</string>
+    <string name="p21">Sanitasi</string>
+    <string name="p22">Pemangkasan bentuk</string>
+    <string name="p23">Pengurangan pelindung/peremajaan tanaman tua</string>
+    <string name="p24">Panen,fermntasi,kering, jual</string>
+    <string name="p3">Pengajiran cocoa dan pelindung</string>
+    <string name="p4">Penanaman cocoa</string>
+    <string name="p5">penananaman kembali atau penyisipan</string>
+    <string name="p6">Daun kelapa - pelindung sementara</string>
+    <string name="p7">Penanaman pelindung</string>
+    <string name="p8">Pemangkasan/sanitasi</string>
+    <string name="p9">Pemupukan</string>
+    <string name="payForCredit">C14. Berapa banyak yang ada bayar?</string>
+    <string name="payOftenForCredit">C13. Seberapa sering anda membayar pinjaman anda ?</string>
+    <string name="pestDiseaseSanitation">51. Hama penyakit dan sanitasi</string>
+    <string name="ph">44. pH tanah</string>
+    <string name="phone">9. Nomer Hp</string>
+    <string name="plannedInvestments">25. Perencanaan investment</string>
+    <string name="plantingMaterial">45. Bahan tanam</string>
+    <string name="plotActivityTitle">Informasi Plot</string>
+    <string name="plotAge">47. Umur tanaman</string>
+    <string name="plotArea">41. Ukuran Plot (Ha)</string>
+    <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
+    <string name="plotGPS">40. GPS Plot</string>
+    <string name="plotHireLabor">62. Menggunakan pekerja</string>
+    <string name="plotIncome">Pendapatan dari Plot</string>
+    <string name="plotInformation">INFORMASI PLOT</string>
+    <string name="plotPL">Plot Untung dan Rugi</string>
+    <string name="postalAddress">8. Kode Pos</string>
+    <string name="productionCocoaLY">28. Total produksi cocoa (kg) di tahun ini atau di tahun berjalan</string>
+    <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
+    <string name="productiveProfile">PROFILE PRODUKTIF</string>
+    <string name="profitOrLost">Untung dan Rugi</string>
+    <string name="pruning">50. Pemangkasan</string>
+    <string name="reasonNotAgree">Komentar</string>
+    <string name="receivesFarmPayment">17. Petani menerima pembayaran untuk pekerjaan lain</string>
+    <string name="renovationArea">37. Total Renofasi (Ha)</string>
+    <string name="replant">Penanamman kembali</string>
+    <string name="saveContinue">Simpan dan Lanjutkan</string>
+    <string name="saved">Simpan Berhasil</string>
+    <string name="sep">September</string>
+    <string name="shadeManagement">54. Pengaturan Pelindung</string>
+    <string name="shadeTrees">43. Jumlah tanaman penaung</string>
+    <string name="socioeconomicProfile">PROFIL SOSIOEKONOMI</string>
+    <string name="soilCondition">55. Kondisi Tanah</string>
+    <string name="soilFertMngLb">Manajemen kesuburan tanah</string>
+    <string name="sourceCredit">C12. dari mana anda menambil pinjaman tersebut</string>
+    <string name="spouseBirthday">C2. Tahun kelahiran pasangan</string>
+    <string name="spouseEducationalLevel">C3. Tingkat pendidikan pasangan</string>
+    <string name="spouseName">C1. Nama Pasangan</string>
+    <string name="spousePaidWork">C7. Pasangan meiliki pekerjaan lain selain pekerjaan di kebun sendiri</string>
+    <string name="startYear">Tahun Mulai</string>
+    <string name="switch_user_button">Ganti Pengguna</string>
+    <string name="tool1">Ini termasuk biaya pekerja di kebun lain,pembibitan, bisnis lain atau servis yang menghasilkan uang untuk petani</string>
+    <string name="tool2">Ini termasuk biaya pekerja di kebun lain,penjualan dari bisnis lain atau servis untuk orang lain yang menghasilkan uang</string>
+    <string name="tool3">Ini termasuk semua uang yang tersedia di keluarga tidak termasuk dari petani dan pasangan. Pendapatan bisa dari manasaja</string>
+    <string name="tool4">Ration konvrsi untuk basah ke kering adalah 100:35 atau 35%</string>
+    <string name="tool5">Ini pengeluaran pendidikan setelah sekolah dan atau diatas pengeluaran sekolah yang normal</string>
+    <string name="tool6">Pengeluaran kebun termasuk semua pengelauaran di produksi, fermentasi,penyimpanan dan penjulan cocoa, tolong</string>
+    <string name="totalCredit">C11. Berapa total pinjaman yang masih ada?</string>
+    <string name="totalExpenses">Total pengeluaran keluarga</string>
+    <string name="totalFamilyMembersIncome">C9. Kontribusi penghasilan bersih dari anggota keluarga untuk rumah tangga</string>
+    <string name="totalIncome">Total pendapatan</string>
+    <string name="totalIncomeLabor">C6. Pendapatan bersih dari semua pekerjaan lain yang petani lakukan di tahun lalu</string>
+    <string name="totalSpouseIncome">C8. Pendapatan bersih pasangan dari pekerjaan yang lain selain di kebun sendiri</string>
+    <string name="treeHealth">48. Kesehatan tanaman</string>
+    <string name="village">6. Desa</string>
+    <string name="wantAccount">C19. Menginginkan rekening bank?</string>
+    <string name="weeding">52. Menghilangkan rumput</string>
+    <string name="year1">Tahun 1</string>
+    <string name="year2">Tahun 2</string>
+    <string name="year3">Tahun 3</string>
+    <string name="year4">Tahun 4</string>
+    <string name="year5">Tahun 5</string>
+    <string name="year6">Tahun 6</string>
+    <string name="year7">Tahun 7</string>
+    <string name="yearDetailActivityTitle">Detail Tahun</string>
+    <string name="yearsRelationshipWithMars">10. Tahun bersama dengan MARS</string>
+    <string name="yes">Ya</string>
 </resources>

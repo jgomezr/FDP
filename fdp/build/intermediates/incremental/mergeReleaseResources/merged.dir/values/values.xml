@@ -133,11 +133,11 @@
         <item>Monthly</item>
         <item>Quarterly</item>
         <item>Bi annually</item>
-        <item>annually</item>
+        <item>Annually</item>
         <item>No set frequency</item>
     </string-array>
     <string-array name="creditOftenAnnual">
-		<item>annually</item>
+		<item>Annually</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
 		<item>Bi annually</item>
@@ -148,20 +148,20 @@
 		<item>Monthly</item>
 		<item>Quarterly</item>
 		<item>Bi annually</item>
-		<item>annually</item>
+		<item>Annually</item>
 	</string-array>
     <string-array name="creditOftenQuarter">
 		<item>Quarterly</item>
 		<item>Monthly</item>
 		<item>Bi annually</item>
-		<item>annually</item>
+		<item>Annually</item>
 		<item>No set frequency</item>
 	</string-array>
     <string-array name="creditOftenbiannual">
 		<item>Bi annually</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
-		<item>annually</item>
+		<item>Annually</item>
 		<item>No set frequency</item>
 	</string-array>
     <string-array name="education">
@@ -1982,7 +1982,7 @@
     <integer name="tooltip_default_arrow_alignment">3</integer>
     <integer name="tooltip_default_arrow_location">1</integer>
     <string name="accountType">C17. Account Type</string>
-    <string name="account_type">org.grameenfoundation.fdp.login</string>
+    <string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
     <string name="action_add">Add Farmer</string>
     <string name="action_refresh">Synchronize</string>
     <string name="action_search">Search</string>
@@ -1990,13 +1990,15 @@
     <string name="additionalIntervention">ADDITIONAL INTERVENTION</string>
     <string name="agree">Agreed on recommendations:</string>
     <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
-    <string name="androidPushNotificationClientId"/>
+    <string name="androidPushNotificationClientId" translatable="false"/>
     <string name="ao">ADOPTION OBSERVATIONS</string>
     <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
     <string name="api_version">v36.0</string>
     <string name="app_name"><b>FDP</b></string>
-    <string name="app_package">org.grameenfoundation.fdp</string>
+    <string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
     <string name="apr">April</string>
+    <string name="areaEmpty">Your plots area cannot be empty</string>
+    <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
     <string name="aug">August</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
@@ -2057,7 +2059,7 @@
     <string name="drainageNeed">60. Drainage need:</string>
     <string name="educationExpenses">26. Expected education expenses:</string>
     <string name="educational_level">5. Educational Level:</string>
-    <string name="empty"> </string>
+    <string name="empty" translatable="false"> </string>
     <string name="estimatedProduction">42. Estimated production:</string>
     <string name="expensesCocoaLY">30. Total Expenses on cocoa last year (Year means past two seasons, mid and main crop):</string>
     <string name="extraSoil">Extra Soil Management</string>
@@ -2090,7 +2092,7 @@
     <string name="giveLoan">21. Have you given someone a loan over 5M IDR?</string>
     <string name="gps">7. House GPS:</string>
     <string name="graft">Graft</string>
-    <string name="greater0"/>
+    <string name="greater0" translatable="false"/>
     <string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="harvesting">53. Harvesting:</string>
     <string name="haveCredit">20. Have you taken a loan over 5M IDR that you have to pay back?</string>
@@ -2099,7 +2101,7 @@
     <string name="hireLabor">38. Hire labor:</string>
     <string name="householdSavings">22. Household Savings:</string>
     <string name="incomeOtherCrops">C10. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
-    <string name="inspect_db_button">Inspect DB</string>
+    <string name="inspect_db_button" translatable="false">Inspect DB</string>
     <string name="internalInspection">Internal Inspection</string>
     <string name="jan">January</string>
     <string name="jul">July</string>
@@ -2126,7 +2128,7 @@
     <string name="nov">November</string>
     <string name="numberChildren">12. Total number of children:</string>
     <string name="numberPlots">39. Number of plots:</string>
-    <string name="oauthRedirectURI">fdpapp://auth/success</string>
+    <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
     <string name="oauth_display_type">touch</string>
     <string name="oct">October</string>
     <string name="organicMatter">56. Organic Matter:</string>
@@ -2162,19 +2164,20 @@
     <string name="phone">9. Phone Number:</string>
     <string name="plannedInvestments">25. Planned investments:</string>
     <string name="plantingMaterial">45. Planting Material:</string>
-    <string name="plot1">Plot 1</string>
-    <string name="plot10">Plot 10</string>
-    <string name="plot2">Plot 2</string>
-    <string name="plot3">Plot 3</string>
-    <string name="plot4">Plot 4</string>
-    <string name="plot5">Plot 5</string>
-    <string name="plot6">Plot 6</string>
-    <string name="plot7">Plot 7</string>
-    <string name="plot8">Plot 8</string>
-    <string name="plot9">Plot 9</string>
+    <string name="plot1" translatable="false">Plot 1</string>
+    <string name="plot10" translatable="false">Plot 10</string>
+    <string name="plot2" translatable="false">Plot 2</string>
+    <string name="plot3" translatable="false">Plot 3</string>
+    <string name="plot4" translatable="false">Plot 4</string>
+    <string name="plot5" translatable="false">Plot 5</string>
+    <string name="plot6" translatable="false">Plot 6</string>
+    <string name="plot7" translatable="false">Plot 7</string>
+    <string name="plot8" translatable="false">Plot 8</string>
+    <string name="plot9" translatable="false">Plot 9</string>
     <string name="plotActivityTitle">Plot information</string>
     <string name="plotAge">47. Tree Age:</string>
     <string name="plotArea">41. Plot Size (Ha):</string>
+    <string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="plotGPS">40. Plot GPS:</string>
     <string name="plotHireLabor">62. Hire labor:</string>
     <string name="plotIncome">Plot Income:</string>
@@ -2182,12 +2185,13 @@
     <string name="plotPL">Plot P&amp;L:</string>
     <string name="postalAddress">8. Postal Address:</string>
     <string name="productionCocoaLY">28. Total Kg Production of cocoa in crop year or calendar year:</string>
+    <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
     <string name="productiveProfile">PRODUCTIVE PROFILE</string>
     <string name="profitOrLost">Profit or Loss</string>
     <string name="pruning">50. Pruning:</string>
     <string name="reasonNotAgree">Comments:</string>
     <string name="receivesFarmPayment">17. Farmer receives payment for other work:</string>
-    <string name="remoteAccessConsumerKey">3MVG9ZL0ppGP5UrCq5vTCnQc8VY51CHIKeWfb4RVZT1G4.da.4Pj.cqIcmqJqCyrRg7gyVoxBVIwpci32xFWq</string>
+    <string name="remoteAccessConsumerKey" translatable="false">3MVG9ZL0ppGP5UrCq5vTCnQc8VY51CHIKeWfb4RVZT1G4.da.4Pj.cqIcmqJqCyrRg7gyVoxBVIwpci32xFWq</string>
     <string name="renovationArea">37. Total Renovation Size (Ha):</string>
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>

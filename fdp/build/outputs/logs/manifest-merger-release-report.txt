@@ -105,11 +105,11 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:30:9-38:20
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:31:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:35:13-37:64
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:35:4-37:42
 	android:resource
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:37:17-51
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:37:5-39
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:36:17-67
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:36:5-55
 activity#org.grameenfoundation.fdp.MainActivity
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:41:3-48:14
 	android:label

@@ -233,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:inputType="number" />
+                    android:inputType="phone" />
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -375,12 +375,10 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/numChildren"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     android:inputType="textNoSuggestions" />
-
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -402,7 +400,6 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/childrenUnder"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -428,7 +425,6 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/childrenInSchool"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -452,7 +448,6 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/familyMembers"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -509,7 +504,6 @@
                 android:typeface="normal"
                 android:background="@color/ptn1" />
 
-
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -525,7 +519,6 @@
 
                 <EditText android:id="@+id/fmWorkFarm_field"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -549,7 +542,6 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/dependEconomically"
                     android:layout_width="0dp"
-                    android:text="0"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -1150,8 +1142,7 @@
                 android:visibility="gone"
                 android:id="@+id/bnkType"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/FarmerDetail.ParentView.TextView">
+                android:orientation="horizontal">
 
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -1173,8 +1164,7 @@
                 android:visibility="gone"
                 android:id="@+id/mbMoney"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/FarmerDetail.ParentView.TextView">
+                android:orientation="horizontal">
 
                 <TextView android:layout_width="0dp"
                     android:layout_height="wrap_content"
