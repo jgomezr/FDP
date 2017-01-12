@@ -8,7 +8,7 @@ package com.salesforce.androidsdk.smartsync;
 
 public final class R {
 	public static final class array {
-		public static final int oauthScopes = 0x7f070035;
+		public static final int oauthScopes = 0x7f07003f;
 	}
 	public static final class color {
 		public static final int record_account = 0x7f080013;

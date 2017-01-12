@@ -224,7 +224,10 @@
 	<string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="areaEmpty">Your plots area cannot be empty</string>
     <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
-	<string-array name="creditOften">
+	<string name="photoSuccess">Photo taken with success</string>
+    <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
+	<string name="familyLess">The number of family members can not be less than the number of children</string>
+    <string-array name="creditOften">
         <item>Monthly</item>
         <item>Quarterly</item>
         <item>Bi annually</item>

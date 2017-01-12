@@ -3,8 +3,8 @@
 <resources>
     <string name="remoteAccessConsumerKey" translatable="false">3MVG9ZL0ppGP5UrCq5vTCnQc8VY51CHIKeWfb4RVZT1G4.da.4Pj.cqIcmqJqCyrRg7gyVoxBVIwpci32xFWq</string>
     <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
-    <string-array name="oauthScopes">
+    <string-array name="oauthScopes" translatable="false">
         <item>api</item>
     </string-array>
-    <string name="androidPushNotificationClientId" translatable="false"></string>
+    <string name="androidPushNotificationClientId" translatable="false" />
 </resources>

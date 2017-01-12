@@ -276,7 +276,7 @@
 		<item>G</item>
 		<item>B</item>
 	</string-array>
-    <string-array name="oauthScopes">
+    <string-array name="oauthScopes" translatable="false">
         <item>api</item>
     </string-array>
     <string-array name="sourceLoan">

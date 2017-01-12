@@ -710,4 +710,7 @@
     <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
     <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
+    <string name="photoSuccess">Foto diambil dengan sukses</string>
+    <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
+    <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
 </resources>

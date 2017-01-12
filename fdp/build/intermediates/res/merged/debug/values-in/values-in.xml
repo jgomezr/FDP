@@ -4,6 +4,15 @@
         <item>Tidak</item>
         <item>Ya</item>
     </string-array>
+    <string-array name="b_g">
+        <item>B</item>
+        <item>G</item>
+    </string-array>
+    <string-array name="b_gm">
+        <item>B</item>
+        <item>G</item>
+        <item>M</item>
+    </string-array>
     <string-array name="bank">
         <item>NA</item>
         <item>Rekening standard bank</item>
@@ -47,6 +56,79 @@
         <item>Micro finance</item>
         <item>Pinjaman desa</item>
     </string-array>
+    <string-array name="cert">
+        <item>N/A</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert1">
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert2">
+        <item>RA</item>
+        <item>UTZ</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert3">
+        <item>FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert4">
+        <item>UTZ/RA</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert5">
+        <item>UTZ/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert6">
+        <item>RA/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert7">
+        <item>RA/UTZ/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+    </string-array>
     <string-array name="creditOften">
         <item>Bulanan</item>
         <item>Per tigabulan</item>
@@ -82,6 +164,94 @@
         <item>Tahunan</item>
         <item>Frekuensi tidak terset</item>
     </string-array>
+    <string-array name="education">
+        <item>N/A</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_MAK">
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_MTS">
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_S1">
+        <item>Sarjana - S1</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+
+    </string-array>
+    <string-array name="education_SD">
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_SMA">
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_SMK">
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="education_SMP">
+        <item>Sekolah Menengah Pertama - SMP</item>
+        <item>Sekolah Dasar - SD</item>
+        <item>Sekolah Menengah Atas - SMA</item>
+        <item>Sekolah Menengah Kejuaruan - SMK</item>
+        <item>Madrasah Tsanawiyah - MTS</item>
+        <item>Madrasah Aliyah Kejuruan - MAK</item>
+        <item>Sarjana - S1</item>
+    </string-array>
+    <string-array name="g_b">
+        <item>G</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="g_mb">
+        <item>G</item>
+        <item>M</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="gb">
+        <item>N/A</item>
+        <item>G</item>
+        <item>B</item>
+    </string-array>
     <string-array name="gender">
         <item>N/A</item>
         <item>Pria</item>
@@ -94,6 +264,17 @@
     <string-array name="gender_male">
         <item>Pria</item>
         <item>Wanita</item>
+    </string-array>
+    <string-array name="gmb">
+        <item>N/A</item>
+        <item>G</item>
+        <item>M</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="m_gb">
+        <item>M</item>
+        <item>G</item>
+        <item>B</item>
     </string-array>
     <string-array name="sourceLoan">
         <item>Keluarga</item>
@@ -129,6 +310,120 @@
         <item>Teman</item>
         <item>Simpanan di Komunitas</item>
         <item>Bank</item>
+    </string-array>
+    <string-array name="treeDistance">
+        <item>N/A</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance1">
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance10">
+        <item>3.5×4</item>
+        <item>3×4</item>
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance2">
+        <item>2.5x2.5</item>
+        <item>2x2</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance3">
+        <item>3x2.5</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance4">
+        <item>3x3</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance5">
+        <item>3.5x3.5</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance6">
+        <item>4x4</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+    </string-array>
+    <string-array name="treeDistance8">
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance9">
+        <item>3×4</item>
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2</item>
+        <item>2.5x2.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
     </string-array>
     <string-array name="year1">
         <item>Tahun 1</item>
@@ -238,6 +533,7 @@
     <string name="changeR">Perubahan untuk sambungan</string>
     <string name="childrenInSchool">C5. Anak antara 5 dan 17 tahun yang masih sekolah</string>
     <string name="childrenUnder">C4. Anak antara 5 dan 17 tahun</string>
+    <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
     <string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string>
     <string name="cocoaTrees">46. Jarak antara pohon cocoa</string>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> perlu pembaruan aplikasi Android Wear."</string>
@@ -286,6 +582,7 @@
     <string name="estimatedProduction">42. Estimasi Produksi</string>
     <string name="expensesCocoaLY">30. Total pengeluaran tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
     <string name="extraSoil">Tambahan manajemen tanah</string>
+    <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
     <string name="familyMembers">13. Jumlah anggota keluarga yang tinggal bersama termasuk petani</string>
     <string name="familyPaidWork">18. Anggota keluarga berkontribusi dengan uang untuk pendapatan rumah tangga</string>
     <string name="familyPhoto">Ambil Foto Keluarga</string>
@@ -381,6 +678,7 @@
     <string name="pestDiseaseSanitation">51. Hama penyakit dan sanitasi</string>
     <string name="ph">44. pH tanah</string>
     <string name="phone">9. Nomer Hp</string>
+    <string name="photoSuccess">Foto diambil dengan sukses</string>
     <string name="plannedInvestments">25. Perencanaan investment</string>
     <string name="plantingMaterial">45. Bahan tanam</string>
     <string name="plotActivityTitle">Informasi Plot</string>
