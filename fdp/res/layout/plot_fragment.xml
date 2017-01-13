@@ -21,7 +21,8 @@
         android:layout_gravity="center_vertical"
         android:inputType="textNoSuggestions"
         android:clickable="true"
-        android:focusable="false"/>
+        android:focusable="false"
+        android:hint="click to get GPS"/>
 
     <EditText android:id="@+id/plotArea_field"
         android:layout_width="145dp"
@@ -41,7 +42,6 @@
         android:layout_width="145dp"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
-        android:text="0"
         android:inputType="number"/>
 
     <EditText android:id="@+id/ph_field"

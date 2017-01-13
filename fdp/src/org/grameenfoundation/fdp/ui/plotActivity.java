@@ -1017,7 +1017,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 pA10= Double.parseDouble(estP10.getText().toString());
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getProductioncocoaly())) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
                 Toast.makeText(getApplicationContext(), getString(R.string.productionHiger), Toast.LENGTH_SHORT).show();
             }else{
                 editText.setBackgroundColor(Color.TRANSPARENT);
@@ -1150,7 +1149,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 1
             if (sObject.getPlot1GPS().isEmpty()){
-                gps1.setText(Integer.toString(0));
             }else {
                 gps1.setText(sObject.getPlot1GPS());
             }
@@ -1624,7 +1622,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 2
             if (sObject.getPlot2GPS().isEmpty()){
-                gps2.setText(Integer.toString(0));
+
             }else {
                 gps2.setText(sObject.getPlot2GPS());
             }
@@ -2098,7 +2096,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 3
             if (sObject.getPlot3GPS().isEmpty()){
-                gps3.setText(Integer.toString(0));
+
             }else {
                 gps3.setText(sObject.getPlot3GPS());
             }
@@ -2572,7 +2570,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 4
             if (sObject.getPlot4GPS().isEmpty()){
-                gps4.setText(Integer.toString(0));
+
             }else {
                 gps4.setText(sObject.getPlot4GPS());
             }
@@ -3047,7 +3045,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 5
             if (sObject.getPlot5GPS().isEmpty()){
-                gps5.setText(Integer.toString(0));
+
             }else {
                 gps5.setText(sObject.getPlot5GPS());
             }
@@ -3521,7 +3519,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 6
             if (sObject.getPlot6GPS().isEmpty()){
-                gps6.setText(Integer.toString(0));
+
             }else {
                 gps6.setText(sObject.getPlot6GPS());
             }
@@ -3995,7 +3993,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 7
             if (sObject.getPlot7GPS().isEmpty()){
-                gps7.setText(Integer.toString(0));
+
             }else {
                 gps7.setText(sObject.getPlot7GPS());
             }
@@ -4469,7 +4467,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 8
             if (sObject.getPlot8GPS().isEmpty()){
-                gps8.setText(Integer.toString(0));
+
             }else {
                 gps8.setText(sObject.getPlot8GPS());
             }
@@ -4943,7 +4941,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 9
             if (sObject.getPlot9GPS().isEmpty()){
-                gps9.setText(Integer.toString(0));
+
             }else {
                 gps9.setText(sObject.getPlot9GPS());
             }
@@ -5417,7 +5415,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
 
             //set field plot gps 100
             if (sObject.getPlot10GPS().isEmpty()){
-                gps10.setText(Integer.toString(0));
+
             }else {
                 gps10.setText(sObject.getPlot10GPS());
             }
