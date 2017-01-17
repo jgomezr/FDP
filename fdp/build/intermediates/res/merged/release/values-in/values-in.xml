@@ -533,6 +533,7 @@
     <string name="changeR">Perubahan untuk sambungan</string>
     <string name="childrenInSchool">C5. Anak antara 5 dan 17 tahun yang masih sekolah</string>
     <string name="childrenUnder">C4. Anak antara 5 dan 17 tahun</string>
+    <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
     <string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string>
     <string name="cocoaTrees">46. Jarak antara pohon cocoa</string>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> perlu pembaruan aplikasi Android Wear."</string>
@@ -581,6 +582,7 @@
     <string name="estimatedProduction">42. Estimasi Produksi</string>
     <string name="expensesCocoaLY">30. Total pengeluaran tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
     <string name="extraSoil">Tambahan manajemen tanah</string>
+    <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
     <string name="familyMembers">13. Jumlah anggota keluarga yang tinggal bersama termasuk petani</string>
     <string name="familyPaidWork">18. Anggota keluarga berkontribusi dengan uang untuk pendapatan rumah tangga</string>
     <string name="familyPhoto">Ambil Foto Keluarga</string>
@@ -676,6 +678,7 @@
     <string name="pestDiseaseSanitation">51. Hama penyakit dan sanitasi</string>
     <string name="ph">44. pH tanah</string>
     <string name="phone">9. Nomer Hp</string>
+    <string name="photoSuccess">Foto diambil dengan sukses</string>
     <string name="plannedInvestments">25. Perencanaan investment</string>
     <string name="plantingMaterial">45. Bahan tanam</string>
     <string name="plotActivityTitle">Informasi Plot</string>

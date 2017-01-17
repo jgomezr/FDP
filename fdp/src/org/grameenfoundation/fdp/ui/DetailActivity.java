@@ -811,7 +811,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						return;
 					}
 				}
-				locationManager.requestLocationUpdates("gps", 50, 0, locationListener);
+				locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
 			}
 		});
 	}
@@ -1269,7 +1269,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set Living expenses field
 			if (sObject.getAnnuallivingexpenses().isEmpty()){
-				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(0));
+				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(30000000));
 			}else {
 				setText((EditText) findViewById(R.id.livingExpenses_Field),
 						sObject.getAnnuallivingexpenses());

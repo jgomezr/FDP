@@ -2014,6 +2014,7 @@
     <string name="changeR">Change for Grafting</string>
     <string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
+    <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
     <string name="cocoaArea">36. Total land under cocoa Size (Ha):</string>
     <string name="cocoaTrees">46. Distance between cocoa trees:</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
@@ -2063,6 +2064,7 @@
     <string name="estimatedProduction">42. Estimated production:</string>
     <string name="expensesCocoaLY">30. Total Expenses on cocoa last year (Year means past two seasons, mid and main crop):</string>
     <string name="extraSoil">Extra Soil Management</string>
+    <string name="familyLess">The number of family members can not be less than the number of children</string>
     <string name="familyMembers">13. Number of Family members living together including the farmer:</string>
     <string name="familyPaidWork">18. Family Members contributed with money to the household:</string>
     <string name="familyPhoto">Take a Family Photo</string>
@@ -2162,6 +2164,7 @@
     <string name="pestDiseaseSanitation">51. Pest and Disease and Sanitation:</string>
     <string name="ph">44. Soil PH:</string>
     <string name="phone">9. Phone Number:</string>
+    <string name="photoSuccess">Photo taken with success</string>
     <string name="plannedInvestments">25. Planned investments:</string>
     <string name="plantingMaterial">45. Planting Material:</string>
     <string name="plot1" translatable="false">Plot 1</string>
