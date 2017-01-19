@@ -106,11 +106,78 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         tR.addTextChangedListener(new DetailActivity.areaWatcher(tR));
         childreSchool = (EditText) findViewById(R.id.childrenInSchool);
         childrenUnder = (EditText) findViewById(R.id.childrenUnder);
-        childreSchool.addTextChangedListener(new DetailActivity.childrenWatcher(childreSchool));
-        childrenUnder.addTextChangedListener(new DetailActivity.childrenWatcher(childrenUnder));
+        childrenUnder.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                double qc;
+                double qcu;
+                double qcs;
+
+                if(numbChildrens.getText().toString().isEmpty()||childrenUnder.getText().toString().isEmpty()){
+                    qc=0;
+                    qcu=0;
+
+                }else{
+                    qc = Double.parseDouble(numbChildrens.getText().toString());
+                    qcu= Double.parseDouble(childrenUnder.getText().toString());
+
+                }
+                if (qcu > qc) {
+                    childrenUnder.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
+                }else{
+                    childrenUnder.setBackgroundColor(Color.TRANSPARENT);
+                }
+
+            }
+        });
+        childreSchool.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                double qc;
+                double qcu;
+                double qcs;
+
+                if(childreSchool.getText().toString().isEmpty()||childrenUnder.getText().toString().isEmpty()){
+                    qc=0;
+                    qcu=0;
+
+                }else{
+                    qc = Double.parseDouble(childreSchool.getText().toString());
+                    qcu= Double.parseDouble(childrenUnder.getText().toString());
+                }
+                if (qc>qcu) {
+                    childreSchool.setBackgroundColor(Color.parseColor("#cc0000"));
+                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
+                }else{
+                    childreSchool.setBackgroundColor(Color.TRANSPARENT);
+                }
+
+            }
+        });
         familyMemb = (EditText) findViewById(R.id.familyMembers);
-
-
 		button = (Button) findViewById(R.id.gpsbutton);
 		textView = (EditText) findViewById(R.id.gps_field);
 		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -615,47 +682,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         }
     }
 
-    public class childrenWatcher implements TextWatcher {
-        private final WeakReference<EditText> editTextWeakReference;
-
-        public childrenWatcher(EditText editText) {
-            editTextWeakReference = new WeakReference<EditText>(editText);
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
-
-        @Override
-        public void afterTextChanged(Editable editable) {
-            EditText editText = editTextWeakReference.get();
-            double qc;
-            double qcu;
-            double qcs;
-
-            if(numbChildrens.getText().toString().isEmpty()||childrenUnder.getText().toString().isEmpty()||childreSchool.getText().toString().isEmpty()){
-                qc=0;
-                qcu=0;
-                qcs=0;
-
-            }else{
-                qc=Double.parseDouble(numbChildrens.getText().toString());
-                qcu= Double.parseDouble(childrenUnder.getText().toString());
-                qcs= Double.parseDouble(childreSchool.getText().toString());
-
-            }
-            if (qcu>qc||qcs>qcu) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
-            }
-        }
-    }
 
     public class familyWatcher implements TextWatcher {
         private final WeakReference<EditText> editTextWeakReference;
@@ -750,6 +776,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	}
 
     public void dispatchTakePictureIntent(View view) {
+		savePoint();
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {

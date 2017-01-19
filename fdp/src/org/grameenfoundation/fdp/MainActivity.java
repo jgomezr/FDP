@@ -357,6 +357,7 @@ public class MainActivity extends SalesforceListActivity implements
 
             }
         }
+		Toast.makeText(this, "Sync up Images complete!", Toast.LENGTH_LONG).show();
     }
 
 	/**
