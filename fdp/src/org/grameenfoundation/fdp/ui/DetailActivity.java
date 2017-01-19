@@ -259,7 +259,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             }
         });
 
-
 		avgCocoaPrice = (EditText) findViewById(R.id.averageCocoaPrice_Field);
 		prdCocoaLy = (EditText) findViewById(R.id.productionCocoaLY_Field);
 		numbChildrens = (EditText) findViewById(R.id.numChildren);
@@ -838,7 +837,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						return;
 					}
 				}
-				locationManager.requestLocationUpdates("gps", 5000, 0, locationListener);
+				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5, 0, locationListener);
 			}
 		});
 	}

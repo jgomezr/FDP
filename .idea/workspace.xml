@@ -61,25 +61,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_forcedroid_libs_SmartSync_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_forcedroid_libs_SmartSync_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_forcedroid_libs_SmartSync_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_forcedroid_libs_SmartSync_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp-release.apk" afterPath="$PROJECT_DIR$/fdp-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$1.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$10.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$11.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$12.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$12.class" />
@@ -90,43 +82,55 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$17.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$17.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$18.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$18.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$19.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$2.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$20.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$20.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$21.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$21.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$22.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$22.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$23.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$23.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$24.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$24.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$25.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$3.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$4.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$5.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$6.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$7.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$8.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$9.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$1.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$10.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$11.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$12.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$13.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$14.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$15.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$16.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$17.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$18.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$19.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$2.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$20.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$21.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$22.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$23.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$3.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$4.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$5.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$6.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$7.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$8.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$9.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/zip-cache/t+A72nEZosTlRPn1IuFe4vTK5Bc=" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/zip-cache/t+A72nEZosTlRPn1IuFe4vTK5Bc=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/zip-cache/pcpFI+cMqG9nUAVCX7nDj9gfARs=" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/zip-cache/pcpFI+cMqG9nUAVCX7nDj9gfARs=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/fdp.forcedroid.libs-SmartSync-unspecified_8a8c01baae7525577d75f3e9e55c85a6b91ff5af.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/fdp.forcedroid.libs-SmartSync-unspecified_8a8c01baae7525577d75f3e9e55c85a6b91ff5af.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/release/release_1131af31e997eeffbbeb8ff960e0e0050605d530.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/release/release_1131af31e997eeffbbeb8ff960e0e0050605d530.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-release.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-release.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" afterPath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-release.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-release.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/layout-land/detail.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/layout-land/detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/layout/detail.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/layout/detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/release/layout/detail.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/release/layout/detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/fdp/build/outputs/lint-results-release-fatal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
     </list>
     <ignored path="fdp.iws" />
@@ -6317,7 +6321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484663817001</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="improvements on validation an take photo">
+      <created>1484843674778</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1484843674778</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6778,7 +6789,7 @@
         <state relative-caret-position="0">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
-            <element signature="e#7256#7272#0" expanded="true" />
+            <element signature="e#7256#7272#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6853,18 +6864,7 @@
         <state relative-caret-position="64">
           <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="683" column="0" selection-start-line="683" selection-start-column="0" selection-end-line="683" selection-end-column="0" />
-          <folding>
-            <element signature="e#5750#5781#0" expanded="true" />
-            <element signature="e#6980#7011#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6882,8 +6882,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80319">
-          <caret line="1018" column="112" selection-start-line="1018" selection-start-column="112" selection-end-line="1018" selection-end-column="112" />
+        <state relative-caret-position="176">
+          <caret line="472" column="71" selection-start-line="472" selection-start-column="55" selection-end-line="472" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="839" column="54" selection-start-line="839" selection-start-column="32" selection-end-line="839" selection-end-column="54" />
           <folding />
         </state>
       </provider>
