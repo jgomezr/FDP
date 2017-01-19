@@ -146,36 +146,6 @@ public class ContactObject extends SalesforceObject {
     public static final String HIRELABOR8 = "hireLabor8__c";
     public static final String HIRELABOR9 = "hireLabor9__c";
     public static final String HOWMANYLABORDAYSHIRE = "howManyLaborDaysHire__c";
-    public static final String IMPLEMENTDRAINNAGE1 = "implementDrainnage1__c";
-    public static final String IMPLEMENTDRAINNAGE10 = "implementDrainnage10__c";
-    public static final String IMPLEMENTDRAINNAGE2 = "implementDrainnage2__c";
-    public static final String IMPLEMENTDRAINNAGE3 = "implementDrainnage3__c";
-    public static final String IMPLEMENTDRAINNAGE4 = "implementDrainnage4__c";
-    public static final String IMPLEMENTDRAINNAGE5 = "implementDrainnage5__c";
-    public static final String IMPLEMENTDRAINNAGE6 = "implementDrainnage6__c";
-    public static final String IMPLEMENTDRAINNAGE7 = "implementDrainnage7__c";
-    public static final String IMPLEMENTDRAINNAGE8 = "implementDrainnage8__c";
-    public static final String IMPLEMENTDRAINNAGE9 = "implementDrainnage9__c";
-    public static final String IMPLEMENTFILLING1 = "implementFilling1__c";
-    public static final String IMPLEMENTFILLING10 = "implementFilling10__c";
-    public static final String IMPLEMENTFILLING2 = "implementFilling2__c";
-    public static final String IMPLEMENTFILLING3 = "implementFilling3__c";
-    public static final String IMPLEMENTFILLING4 = "implementFilling4__c";
-    public static final String IMPLEMENTFILLING5 = "implementFilling5__c";
-    public static final String IMPLEMENTFILLING6 = "implementFilling6__c";
-    public static final String IMPLEMENTFILLING7 = "implementFilling7__c";
-    public static final String IMPLEMENTFILLING8 = "implementFilling8__c";
-    public static final String IMPLEMENTFILLING9 = "implementFilling9__c";
-    public static final String IMPLEMENTLIME1 = "implementLime1__c";
-    public static final String IMPLEMENTLIME10 = "implementLime10__c";
-    public static final String IMPLEMENTLIME2 = "implementLime2__c";
-    public static final String IMPLEMENTLIME3 = "implementLime3__c";
-    public static final String IMPLEMENTLIME4 = "implementLime4__c";
-    public static final String IMPLEMENTLIME5 = "implementLime5__c";
-    public static final String IMPLEMENTLIME6 = "implementLime6__c";
-    public static final String IMPLEMENTLIME7 = "implementLime7__c";
-    public static final String IMPLEMENTLIME8 = "implementLime8__c";
-    public static final String IMPLEMENTLIME9 = "implementLime9__c";
     public static final String LIMENEED1 = "limeNeed1__c";
     public static final String LIMENEED10 = "limeNeed10__c";
     public static final String LIMENEED2 = "limeNeed2__c";
@@ -545,36 +515,6 @@ public class ContactObject extends SalesforceObject {
             HIRELABOR8,
             HIRELABOR9,
             HOWMANYLABORDAYSHIRE,
-            IMPLEMENTDRAINNAGE1,
-            IMPLEMENTDRAINNAGE10,
-            IMPLEMENTDRAINNAGE2,
-            IMPLEMENTDRAINNAGE3,
-            IMPLEMENTDRAINNAGE4,
-            IMPLEMENTDRAINNAGE5,
-            IMPLEMENTDRAINNAGE6,
-            IMPLEMENTDRAINNAGE7,
-            IMPLEMENTDRAINNAGE8,
-            IMPLEMENTDRAINNAGE9,
-            IMPLEMENTFILLING1,
-            IMPLEMENTFILLING10,
-            IMPLEMENTFILLING2,
-            IMPLEMENTFILLING3,
-            IMPLEMENTFILLING4,
-            IMPLEMENTFILLING5,
-            IMPLEMENTFILLING6,
-            IMPLEMENTFILLING7,
-            IMPLEMENTFILLING8,
-            IMPLEMENTFILLING9,
-            IMPLEMENTLIME1,
-            IMPLEMENTLIME10,
-            IMPLEMENTLIME2,
-            IMPLEMENTLIME3,
-            IMPLEMENTLIME4,
-            IMPLEMENTLIME5,
-            IMPLEMENTLIME6,
-            IMPLEMENTLIME7,
-            IMPLEMENTLIME8,
-            IMPLEMENTLIME9,
             LIMENEED1,
             LIMENEED10,
             LIMENEED2,
@@ -946,36 +886,6 @@ public class ContactObject extends SalesforceObject {
             HIRELABOR8,
             HIRELABOR9,
             HOWMANYLABORDAYSHIRE,
-            IMPLEMENTDRAINNAGE1,
-            IMPLEMENTDRAINNAGE10,
-            IMPLEMENTDRAINNAGE2,
-            IMPLEMENTDRAINNAGE3,
-            IMPLEMENTDRAINNAGE4,
-            IMPLEMENTDRAINNAGE5,
-            IMPLEMENTDRAINNAGE6,
-            IMPLEMENTDRAINNAGE7,
-            IMPLEMENTDRAINNAGE8,
-            IMPLEMENTDRAINNAGE9,
-            IMPLEMENTFILLING1,
-            IMPLEMENTFILLING10,
-            IMPLEMENTFILLING2,
-            IMPLEMENTFILLING3,
-            IMPLEMENTFILLING4,
-            IMPLEMENTFILLING5,
-            IMPLEMENTFILLING6,
-            IMPLEMENTFILLING7,
-            IMPLEMENTFILLING8,
-            IMPLEMENTFILLING9,
-            IMPLEMENTLIME1,
-            IMPLEMENTLIME10,
-            IMPLEMENTLIME2,
-            IMPLEMENTLIME3,
-            IMPLEMENTLIME4,
-            IMPLEMENTLIME5,
-            IMPLEMENTLIME6,
-            IMPLEMENTLIME7,
-            IMPLEMENTLIME8,
-            IMPLEMENTLIME9,
             LIMENEED1,
             LIMENEED10,
             LIMENEED2,
@@ -1692,96 +1602,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getHowManyLaborDaysHire() {
         return sanitizeText(rawData.optString(HOWMANYLABORDAYSHIRE));
-    }
-    public String getImplementDrainage1() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE1));
-    }
-    public String getImplementDrainage10() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE10));
-    }
-    public String getImplementDrainage2() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE2));
-    }
-    public String getImplementDrainage3() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE3));
-    }
-    public String getImplementDrainage4() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE4));
-    }
-    public String getImplementDrainage5() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE5));
-    }
-    public String getImplementDrainage6() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE6));
-    }
-    public String getImplementDrainage7() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE7));
-    }
-    public String getImplementDrainage8() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE8));
-    }
-    public String getImplementDranaige9() {
-        return sanitizeText(rawData.optString(IMPLEMENTDRAINNAGE9));
-    }
-    public String getImplementFilling1() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING1));
-    }
-    public String getImplementFillin10() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING10));
-    }
-    public String getImplementFilling2() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING2));
-    }
-    public String getImplementFilling3() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING3));
-    }
-    public String getImplementFilling4() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING4));
-    }
-    public String getImplementFilling5() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING5));
-    }
-    public String getImplementFillin6() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING6));
-    }
-    public String getImplementFilling7() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING7));
-    }
-    public String getImplementFilling8() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING8));
-    }
-    public String getImplementFilling9() {
-        return sanitizeText(rawData.optString(IMPLEMENTFILLING9));
-    }
-    public String getImplementLime1() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME1));
-    }
-    public String getImplementLime10() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME10));
-    }
-    public String getImplementLime2() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME2));
-    }
-    public String getImplementLime3() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME3));
-    }
-    public String getImplementLime4() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME4));
-    }
-    public String getImplementLime5() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME5));
-    }
-    public String getImplementLime6() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME6));
-    }
-    public String getImplementLime7() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME7));
-    }
-    public String getImplementLime8() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME8));
-    }
-    public String getImplementLime9() {
-        return sanitizeText(rawData.optString(IMPLEMENTLIME9));
     }
     public String getLimeNeed1() {
         return sanitizeText(rawData.optString(LIMENEED1));
