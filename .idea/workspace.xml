@@ -66,43 +66,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_fdp_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp-release.apk" afterPath="$PROJECT_DIR$/fdp-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/objects/ContactObject.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/objects/ContactObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$10.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$11.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$12.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$13.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$14.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$15.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$16.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$17.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$18.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$19.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$20.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$21.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$22.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$23.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$5.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$6.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$7.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$8.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$9.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/ui/DetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/objects/ContactObject.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/release/org/grameenfoundation/fdp/objects/ContactObject.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/release/release_1131af31e997eeffbbeb8ff960e0e0050605d530.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/release/release_1131af31e997eeffbbeb8ff960e0e0050605d530.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" afterPath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageRelease/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/fdp/build/outputs/lint-results-release-fatal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values/costs.xml" afterPath="$PROJECT_DIR$/fdp/res/values/costs.xml" />
     </list>
     <ignored path="fdp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,18 +128,7 @@
     <favorites_list name="fdp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ContactObject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="1604" column="5" selection-start-line="1604" selection-start-column="5" selection-end-line="1604" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -5478,7 +5445,6 @@
         <option value="$PROJECT_DIR$/fdp/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/fdp/res/menu/action_bar_menu.xml" />
         <option value="$PROJECT_DIR$/fdp/res/values/cost.xml" />
-        <option value="$PROJECT_DIR$/fdp/res/values/costs.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity1.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity2.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity3.java" />
@@ -5515,6 +5481,7 @@
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartSync/src/com/salesforce/androidsdk/smartsync/manager/SyncManager.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java" />
+        <option value="$PROJECT_DIR$/fdp/res/values/costs.xml" />
       </list>
     </option>
   </component>
@@ -5568,72 +5535,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -5672,7 +5573,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -6317,7 +6234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484844873953</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="improvements">
+      <created>1484854385079</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1484854385079</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6351,7 +6275,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -6370,7 +6294,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32423207" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.48700175" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.48700175" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.49317408" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5068259" order="10" side_tool="false" content_ui="tabs" />
@@ -6458,7 +6382,9 @@
     <MESSAGE value="gps improvements, include minimun living expenses" />
     <MESSAGE value="improvements on validation an take photo" />
     <MESSAGE value="GPS improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="GPS improvements" />
+    <MESSAGE value="improvements" />
+    <MESSAGE value="Cost improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cost improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -6664,13 +6590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/values/costs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="851" column="19" selection-start-line="851" selection-start-column="19" selection-end-line="851" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -6717,13 +6636,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/values-in/strings.xml">
@@ -6810,9 +6729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="322" column="0" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
-          <folding>
-            <element signature="e#10584#10600#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6827,7 +6743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="350" column="55" selection-start-line="350" selection-start-column="55" selection-end-line="350" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6849,7 +6764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="472" column="71" selection-start-line="472" selection-start-column="55" selection-end-line="472" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6857,14 +6771,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="839" column="54" selection-start-line="839" selection-start-column="32" selection-end-line="839" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="524">
           <caret line="1604" column="5" selection-start-line="1604" selection-start-column="5" selection-end-line="1604" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/values/costs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1074" column="45" selection-start-line="1074" selection-start-column="45" selection-end-line="1074" selection-end-column="45" />
           <folding />
         </state>
       </provider>
