@@ -133,7 +133,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         estP10 = (EditText) fragment10.getView().findViewById(R.id.estimatedP_field);
         ageP1 = (EditText) fragment1.getView().findViewById(R.id.plotAgep_field);
         fcondP1 = (EditText) fragment1.getView().findViewById(R.id.farmConditionP_field);
-        steP1 = (EditText) fragment1.getView().findViewById(R.id.shadeTreesP_field);
         limeNP1 = (EditText) fragment1.getView().findViewById(R.id.limeP_field);
         filliP1 = (EditText) fragment1.getView().findViewById(R.id.fillingP_field);
         ph1 = (EditText) fragment1.getView().findViewById(R.id.ph_field);
@@ -157,7 +156,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP1 = (Spinner) fragment1.getView().findViewById(R.id.hireP_field);
         ageP2 = (EditText) fragment2.getView().findViewById(R.id.plotAgep_field);
         fcondP2 = (EditText) fragment2.getView().findViewById(R.id.farmConditionP_field);
-        steP2 = (EditText) fragment2.getView().findViewById(R.id.shadeTreesP_field);
         limeNP2 = (EditText) fragment2.getView().findViewById(R.id.limeP_field);
         filliP2 = (EditText) fragment2.getView().findViewById(R.id.fillingP_field);
         ph2 = (EditText) fragment2.getView().findViewById(R.id.ph_field);
@@ -181,7 +179,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP2 = (Spinner) fragment2.getView().findViewById(R.id.hireP_field);
         ageP3 = (EditText) fragment3.getView().findViewById(R.id.plotAgep_field);
         fcondP3 = (EditText) fragment3.getView().findViewById(R.id.farmConditionP_field);
-        steP3 = (EditText) fragment3.getView().findViewById(R.id.shadeTreesP_field);
         limeNP3 = (EditText) fragment3.getView().findViewById(R.id.limeP_field);
         filliP3 = (EditText) fragment3.getView().findViewById(R.id.fillingP_field);
         ph3 = (EditText) fragment3.getView().findViewById(R.id.ph_field);
@@ -205,7 +202,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP3 = (Spinner) fragment3.getView().findViewById(R.id.hireP_field);
         ageP4 = (EditText) fragment4.getView().findViewById(R.id.plotAgep_field);
         fcondP4 = (EditText) fragment4.getView().findViewById(R.id.farmConditionP_field);
-        steP4 = (EditText) fragment4.getView().findViewById(R.id.shadeTreesP_field);
         limeNP4 = (EditText) fragment4.getView().findViewById(R.id.limeP_field);
         filliP4 = (EditText) fragment4.getView().findViewById(R.id.fillingP_field);
         ph4 = (EditText) fragment4.getView().findViewById(R.id.ph_field);
@@ -229,7 +225,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP4 = (Spinner) fragment4.getView().findViewById(R.id.hireP_field);
         ageP5 = (EditText) fragment5.getView().findViewById(R.id.plotAgep_field);
         fcondP5 = (EditText) fragment5.getView().findViewById(R.id.farmConditionP_field);
-        steP5 = (EditText) fragment5.getView().findViewById(R.id.shadeTreesP_field);
         limeNP5 = (EditText) fragment5.getView().findViewById(R.id.limeP_field);
         filliP5 = (EditText) fragment5.getView().findViewById(R.id.fillingP_field);
         ph5 = (EditText) fragment5.getView().findViewById(R.id.ph_field);
@@ -253,7 +248,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP5 = (Spinner) fragment5.getView().findViewById(R.id.hireP_field);
         ageP6 = (EditText) fragment6.getView().findViewById(R.id.plotAgep_field);
         fcondP6 = (EditText) fragment6.getView().findViewById(R.id.farmConditionP_field);
-        steP6 = (EditText) fragment6.getView().findViewById(R.id.shadeTreesP_field);
         limeNP6 = (EditText) fragment6.getView().findViewById(R.id.limeP_field);
         filliP6 = (EditText) fragment6.getView().findViewById(R.id.fillingP_field);
         ph6 = (EditText) fragment6.getView().findViewById(R.id.ph_field);
@@ -277,7 +271,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP6 = (Spinner) fragment6.getView().findViewById(R.id.hireP_field);
         ageP7 = (EditText) fragment7.getView().findViewById(R.id.plotAgep_field);
         fcondP7 = (EditText) fragment7.getView().findViewById(R.id.farmConditionP_field);
-        steP7 = (EditText) fragment7.getView().findViewById(R.id.shadeTreesP_field);
         limeNP7 = (EditText) fragment7.getView().findViewById(R.id.limeP_field);
         filliP7 = (EditText) fragment7.getView().findViewById(R.id.fillingP_field);
         ph7 = (EditText) fragment7.getView().findViewById(R.id.ph_field);
@@ -301,7 +294,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP7 = (Spinner) fragment7.getView().findViewById(R.id.hireP_field);
         ageP8 = (EditText) fragment8.getView().findViewById(R.id.plotAgep_field);
         fcondP8 = (EditText) fragment8.getView().findViewById(R.id.farmConditionP_field);
-        steP8 = (EditText) fragment8.getView().findViewById(R.id.shadeTreesP_field);
         limeNP8 = (EditText) fragment8.getView().findViewById(R.id.limeP_field);
         filliP8 = (EditText) fragment8.getView().findViewById(R.id.fillingP_field);
         ph8 = (EditText) fragment8.getView().findViewById(R.id.ph_field);
@@ -325,7 +317,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP8 = (Spinner) fragment8.getView().findViewById(R.id.hireP_field);
         ageP9 = (EditText) fragment9.getView().findViewById(R.id.plotAgep_field);
         fcondP9 = (EditText) fragment9.getView().findViewById(R.id.farmConditionP_field);
-        steP9 = (EditText) fragment9.getView().findViewById(R.id.shadeTreesP_field);
         limeNP9 = (EditText) fragment9.getView().findViewById(R.id.limeP_field);
         filliP9 = (EditText) fragment9.getView().findViewById(R.id.fillingP_field);
         ph9 = (EditText) fragment9.getView().findViewById(R.id.ph_field);
@@ -349,7 +340,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         hireNP9 = (Spinner) fragment9.getView().findViewById(R.id.hireP_field);
         ageP10 = (EditText) fragment10.getView().findViewById(R.id.plotAgep_field);
         fcondP10 = (EditText) fragment10.getView().findViewById(R.id.farmConditionP_field);
-        steP10 = (EditText) fragment10.getView().findViewById(R.id.shadeTreesP_field);
         limeNP10 = (EditText) fragment10.getView().findViewById(R.id.limeP_field);
         filliP10 = (EditText) fragment10.getView().findViewById(R.id.fillingP_field);
         ph10 = (EditText) fragment10.getView().findViewById(R.id.ph_field);
@@ -1208,26 +1198,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 1
-            if (sObject.getPlot1ShadeTrees().isEmpty()){
-                steP1.setText(Integer.toString(0));
-            }else {
-                steP1.setText(sObject.getPlot1ShadeTrees());
-            }
-
-            //set field estimated production 1
-            if (sObject.getPlot1Yield().isEmpty()){
-                estP1.setText(Integer.toString(0));
-            }else {
-                estP1.setText(sObject.getPlot1Yield());
             }
 
             //set field planting Material 1
@@ -1682,6 +1688,36 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -1690,12 +1726,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
-            //set field shade trees 2
-            if (sObject.getPlot2ShadeTrees().isEmpty()){
-                steP2.setText(Integer.toString(0));
-            }else {
-                steP2.setText(sObject.getPlot2ShadeTrees());
-            }
 
             //set field estimated production 2
             if (sObject.getPlot2Yield().isEmpty()){
@@ -2156,19 +2186,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 3
-            if (sObject.getPlot3ShadeTrees().isEmpty()){
-                steP3.setText(Integer.toString(0));
-            }else {
-                steP3.setText(sObject.getPlot3ShadeTrees());
             }
 
             //set field estimated production 3
@@ -2630,19 +2683,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 4
-            if (sObject.getPlot4ShadeTrees().isEmpty()){
-                steP4.setText(Integer.toString(0));
-            }else {
-                steP4.setText(sObject.getPlot4ShadeTrees());
             }
 
             //set field estimated production 4
@@ -3105,19 +3181,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 5
-            if (sObject.getPlot5ShadeTrees().isEmpty()){
-                steP5.setText(Integer.toString(0));
-            }else {
-                steP5.setText(sObject.getPlot5ShadeTrees());
             }
 
             //set field estimated production 5
@@ -3579,19 +3678,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 6
-            if (sObject.getPlot6ShadeTrees().isEmpty()){
-                steP6.setText(Integer.toString(0));
-            }else {
-                steP6.setText(sObject.getPlot6ShadeTrees());
             }
 
             //set field estimated production 6
@@ -4053,19 +4175,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 7
-            if (sObject.getPlot7ShadeTrees().isEmpty()){
-                steP7.setText(Integer.toString(0));
-            }else {
-                steP7.setText(sObject.getPlot7ShadeTrees());
             }
 
             //set field estimated production 7
@@ -4527,19 +4672,42 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }
-
-            //set field shade trees 8
-            if (sObject.getPlot8ShadeTrees().isEmpty()){
-                steP8.setText(Integer.toString(0));
-            }else {
-                steP8.setText(sObject.getPlot8ShadeTrees());
             }
 
             //set field estimated production 8
@@ -5001,6 +5169,36 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -5009,12 +5207,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
-            //set field shade trees 9
-            if (sObject.getPlot9ShadeTrees().isEmpty()){
-                steP9.setText(Integer.toString(0));
-            }else {
-                steP9.setText(sObject.getPlot9ShadeTrees());
-            }
 
             //set field estimated production 9
             if (sObject.getPlot9Yield().isEmpty()){
@@ -5475,6 +5667,36 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2x2.5")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance11, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2x3")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance12, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2x4")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance13, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2.5x3.5")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance14, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2.5x4")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -5483,12 +5705,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
-            //set field shade trees 10
-            if (sObject.getPlot10ShadeTrees().isEmpty()){
-                steP10.setText(Integer.toString(0));
-            }else {
-                steP10.setText(sObject.getPlot10ShadeTrees());
-            }
 
             //set field estimated production 10
             if (sObject.getPlot10Yield().isEmpty()){
@@ -5915,7 +6131,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String sestP10 = estP10.getText().toString();
         final String sageP1 = ageP1.getText().toString();
         final String sfcondP1 = fcondP1.getText().toString();
-        final String ssteP1 = steP1.getText().toString();
         final String slimeNP1 = limeNP1.getText().toString();
         final String sfilliP1 = filliP1.getText().toString();
         final String sph1 = ph1.getText().toString();
@@ -5939,7 +6154,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP1 = hireNP1.getSelectedItem().toString();
         final String sageP2 = ageP2.getText().toString();
         final String sfcondP2 = fcondP2.getText().toString();
-        final String ssteP2 = steP2.getText().toString();
         final String slimeNP2 = limeNP2.getText().toString();
         final String sfilliP2 = filliP2.getText().toString();
         final String sph2 = ph2.getText().toString();
@@ -5963,7 +6177,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP2 = hireNP2.getSelectedItem().toString();
         final String sageP3 = ageP3.getText().toString();
         final String sfcondP3 = fcondP3.getText().toString();
-        final String ssteP3 = steP3.getText().toString();
         final String slimeNP3 = limeNP3.getText().toString();
         final String sfilliP3 = filliP3.getText().toString();
         final String sph3 = ph3.getText().toString();
@@ -5987,7 +6200,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP3 = hireNP3.getSelectedItem().toString();
         final String sageP4 = ageP4.getText().toString();
         final String sfcondP4 = fcondP4.getText().toString();
-        final String ssteP4 = steP4.getText().toString();
         final String slimeNP4 = limeNP4.getText().toString();
         final String sfilliP4 = filliP4.getText().toString();
         final String sph4 = ph4.getText().toString();
@@ -6011,7 +6223,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP4 = hireNP4.getSelectedItem().toString();
         final String sageP5 = ageP5.getText().toString();
         final String sfcondP5 = fcondP5.getText().toString();
-        final String ssteP5 = steP5.getText().toString();
         final String slimeNP5 = limeNP5.getText().toString();
         final String sfilliP5 = filliP5.getText().toString();
         final String sph5 = ph5.getText().toString();
@@ -6035,7 +6246,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP5 = hireNP5.getSelectedItem().toString();
         final String sageP6 = ageP6.getText().toString();
         final String sfcondP6 = fcondP6.getText().toString();
-        final String ssteP6 = steP6.getText().toString();
         final String slimeNP6 = limeNP6.getText().toString();
         final String sfilliP6 = filliP6.getText().toString();
         final String sph6 = ph6.getText().toString();
@@ -6059,7 +6269,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP6 = hireNP6.getSelectedItem().toString();
         final String sageP7 = ageP7.getText().toString();
         final String sfcondP7 = fcondP7.getText().toString();
-        final String ssteP7 = steP7.getText().toString();
         final String slimeNP7 = limeNP7.getText().toString();
         final String sfilliP7 = filliP7.getText().toString();
         final String sph7 = ph7.getText().toString();
@@ -6083,7 +6292,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP7 = hireNP7.getSelectedItem().toString();
         final String sageP8 = ageP8.getText().toString();
         final String sfcondP8 = fcondP8.getText().toString();
-        final String ssteP8 = steP8.getText().toString();
         final String slimeNP8 = limeNP8.getText().toString();
         final String sfilliP8 = filliP8.getText().toString();
         final String sph8 = ph8.getText().toString();
@@ -6107,7 +6315,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP8 = hireNP8.getSelectedItem().toString();
         final String sageP9 = ageP9.getText().toString();
         final String sfcondP9 = fcondP9.getText().toString();
-        final String ssteP9 = steP9.getText().toString();
         final String slimeNP9 = limeNP9.getText().toString();
         final String sfilliP9 = filliP9.getText().toString();
         final String sph9 = ph9.getText().toString();
@@ -6131,7 +6338,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP9 = hireNP9.getSelectedItem().toString();
         final String sageP10 = ageP10.getText().toString();
         final String sfcondP10 = fcondP10.getText().toString();
-        final String ssteP10 = steP10.getText().toString();
         final String slimeNP10 = limeNP10.getText().toString();
         final String sfilliP10 = filliP10.getText().toString();
         final String sph10 = ph10.getText().toString();
@@ -6174,7 +6380,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT1AREA,sareP1);
             contact.put(ContactObject.PLOT1COCOATREES,scteP1);
             contact.put(ContactObject.PLOT1YIELD,sestP1);
-            contact.put(ContactObject.PLOT1SHADETREES,ssteP1);
             contact.put(ContactObject.PLANTINGMATERIAL1,splantP1);
             contact.put(ContactObject.FARMCONDITION1,sfcondP1);
             contact.put(ContactObject.TREEHEALTH1,stehelP1);
@@ -6201,7 +6406,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT2AREA,sareP2);
             contact.put(ContactObject.PLOT2COCOATREES,scteP2);
             contact.put(ContactObject.PLOT2YIELD,sestP2);
-            contact.put(ContactObject.PLOT2SHADETREES,ssteP2);
             contact.put(ContactObject.PLANTINGMATERIAL2,splantP2);
             contact.put(ContactObject.FARMCONDITION2,sfcondP2);
             contact.put(ContactObject.TREEHEALTH2,stehelP2);
@@ -6228,7 +6432,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT3AREA,sareP3);
             contact.put(ContactObject.PLOT3COCOATREES,scteP3);
             contact.put(ContactObject.PLOT3YIELD,sestP3);
-            contact.put(ContactObject.PLOT3SHADETREES,ssteP3);
             contact.put(ContactObject.PLANTINGMATERIAL3,splantP3);
             contact.put(ContactObject.FARMCONDITION3,sfcondP3);
             contact.put(ContactObject.TREEHEALTH3,stehelP3);
@@ -6255,7 +6458,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT4AREA,sareP4);
             contact.put(ContactObject.PLOT4COCOATREES,scteP4);
             contact.put(ContactObject.PLOT4YIELD,sestP4);
-            contact.put(ContactObject.PLOT4SHADETREES,ssteP4);
             contact.put(ContactObject.PLANTINGMATERIAL4,splantP4);
             contact.put(ContactObject.FARMCONDITION4,sfcondP4);
             contact.put(ContactObject.TREEHEALTH4,stehelP4);
@@ -6282,7 +6484,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT5AREA,sareP5);
             contact.put(ContactObject.PLOT5COCOATREES,scteP5);
             contact.put(ContactObject.PLOT5YIELD,sestP5);
-            contact.put(ContactObject.PLOT5SHADETREES,ssteP5);
             contact.put(ContactObject.PLANTINGMATERIAL5,splantP5);
             contact.put(ContactObject.FARMCONDITION5,sfcondP5);
             contact.put(ContactObject.TREEHEALTH5,stehelP5);
@@ -6309,7 +6510,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT6AREA,sareP6);
             contact.put(ContactObject.PLOT6COCOATREES,scteP6);
             contact.put(ContactObject.PLOT6YIELD,sestP6);
-            contact.put(ContactObject.PLOT6SHADETREES,ssteP6);
             contact.put(ContactObject.PLANTINGMATERIAL6,splantP6);
             contact.put(ContactObject.FARMCONDITION6,sfcondP6);
             contact.put(ContactObject.TREEHEALTH6,stehelP6);
@@ -6336,7 +6536,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT7AREA,sareP7);
             contact.put(ContactObject.PLOT7COCOATREES,scteP7);
             contact.put(ContactObject.PLOT7YIELD,sestP7);
-            contact.put(ContactObject.PLOT7SHADETREES,ssteP7);
             contact.put(ContactObject.PLANTINGMATERIAL7,splantP7);
             contact.put(ContactObject.FARMCONDITION7,sfcondP7);
             contact.put(ContactObject.TREEHEALTH7,stehelP7);
@@ -6363,7 +6562,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT8AREA,sareP8);
             contact.put(ContactObject.PLOT8COCOATREES,scteP8);
             contact.put(ContactObject.PLOT8YIELD,sestP8);
-            contact.put(ContactObject.PLOT8SHADETREES,ssteP8);
             contact.put(ContactObject.PLANTINGMATERIAL8,splantP8);
             contact.put(ContactObject.FARMCONDITION8,sfcondP8);
             contact.put(ContactObject.TREEHEALTH8,stehelP8);
@@ -6390,7 +6588,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT9AREA,sareP9);
             contact.put(ContactObject.PLOT9COCOATREES,scteP9);
             contact.put(ContactObject.PLOT9YIELD,sestP9);
-            contact.put(ContactObject.PLOT9SHADETREES,ssteP9);
             contact.put(ContactObject.PLANTINGMATERIAL9,splantP9);
             contact.put(ContactObject.FARMCONDITION9,sfcondP9);
             contact.put(ContactObject.TREEHEALTH9,stehelP9);
@@ -6417,7 +6614,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT10AREA,sareP10);
             contact.put(ContactObject.PLOT10COCOATREES,scteP10);
             contact.put(ContactObject.PLOT10YIELD,sestP10);
-            contact.put(ContactObject.PLOT10SHADETREES,ssteP10);
             contact.put(ContactObject.PLANTINGMATERIAL10,splantP10);
             contact.put(ContactObject.FARMCONDITION10,sfcondP10);
             contact.put(ContactObject.TREEHEALTH10,stehelP10);
@@ -6488,7 +6684,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String sestP10 = estP10.getText().toString();
         final String sageP1 = ageP1.getText().toString();
         final String sfcondP1 = fcondP1.getText().toString();
-        final String ssteP1 = steP1.getText().toString();
         final String slimeNP1 = limeNP1.getText().toString();
         final String sfilliP1 = filliP1.getText().toString();
         final String sph1 = ph1.getText().toString();
@@ -6512,7 +6707,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP1 = hireNP1.getSelectedItem().toString();
         final String sageP2 = ageP2.getText().toString();
         final String sfcondP2 = fcondP2.getText().toString();
-        final String ssteP2 = steP2.getText().toString();
         final String slimeNP2 = limeNP2.getText().toString();
         final String sfilliP2 = filliP2.getText().toString();
         final String sph2 = ph2.getText().toString();
@@ -6536,7 +6730,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP2 = hireNP2.getSelectedItem().toString();
         final String sageP3 = ageP3.getText().toString();
         final String sfcondP3 = fcondP3.getText().toString();
-        final String ssteP3 = steP3.getText().toString();
         final String slimeNP3 = limeNP3.getText().toString();
         final String sfilliP3 = filliP3.getText().toString();
         final String sph3 = ph3.getText().toString();
@@ -6560,7 +6753,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP3 = hireNP3.getSelectedItem().toString();
         final String sageP4 = ageP4.getText().toString();
         final String sfcondP4 = fcondP4.getText().toString();
-        final String ssteP4 = steP4.getText().toString();
         final String slimeNP4 = limeNP4.getText().toString();
         final String sfilliP4 = filliP4.getText().toString();
         final String sph4 = ph4.getText().toString();
@@ -6584,7 +6776,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP4 = hireNP4.getSelectedItem().toString();
         final String sageP5 = ageP5.getText().toString();
         final String sfcondP5 = fcondP5.getText().toString();
-        final String ssteP5 = steP5.getText().toString();
         final String slimeNP5 = limeNP5.getText().toString();
         final String sfilliP5 = filliP5.getText().toString();
         final String sph5 = ph5.getText().toString();
@@ -6608,7 +6799,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP5 = hireNP5.getSelectedItem().toString();
         final String sageP6 = ageP6.getText().toString();
         final String sfcondP6 = fcondP6.getText().toString();
-        final String ssteP6 = steP6.getText().toString();
         final String slimeNP6 = limeNP6.getText().toString();
         final String sfilliP6 = filliP6.getText().toString();
         final String sph6 = ph6.getText().toString();
@@ -6632,7 +6822,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP6 = hireNP6.getSelectedItem().toString();
         final String sageP7 = ageP7.getText().toString();
         final String sfcondP7 = fcondP7.getText().toString();
-        final String ssteP7 = steP7.getText().toString();
         final String slimeNP7 = limeNP7.getText().toString();
         final String sfilliP7 = filliP7.getText().toString();
         final String sph7 = ph7.getText().toString();
@@ -6656,7 +6845,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP7 = hireNP7.getSelectedItem().toString();
         final String sageP8 = ageP8.getText().toString();
         final String sfcondP8 = fcondP8.getText().toString();
-        final String ssteP8 = steP8.getText().toString();
         final String slimeNP8 = limeNP8.getText().toString();
         final String sfilliP8 = filliP8.getText().toString();
         final String sph8 = ph8.getText().toString();
@@ -6680,7 +6868,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP8 = hireNP8.getSelectedItem().toString();
         final String sageP9 = ageP9.getText().toString();
         final String sfcondP9 = fcondP9.getText().toString();
-        final String ssteP9 = steP9.getText().toString();
         final String slimeNP9 = limeNP9.getText().toString();
         final String sfilliP9 = filliP9.getText().toString();
         final String sph9 = ph9.getText().toString();
@@ -6704,7 +6891,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String shireNP9 = hireNP9.getSelectedItem().toString();
         final String sageP10 = ageP10.getText().toString();
         final String sfcondP10 = fcondP10.getText().toString();
-        final String ssteP10 = steP10.getText().toString();
         final String slimeNP10 = limeNP10.getText().toString();
         final String sfilliP10 = filliP10.getText().toString();
         final String sph10 = ph10.getText().toString();
@@ -6747,7 +6933,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT1AREA,sareP1);
             contact.put(ContactObject.PLOT1COCOATREES,scteP1);
             contact.put(ContactObject.PLOT1YIELD,sestP1);
-            contact.put(ContactObject.PLOT1SHADETREES,ssteP1);
             contact.put(ContactObject.PLANTINGMATERIAL1,splantP1);
             contact.put(ContactObject.FARMCONDITION1,sfcondP1);
             contact.put(ContactObject.TREEHEALTH1,stehelP1);
@@ -6774,7 +6959,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT2AREA,sareP2);
             contact.put(ContactObject.PLOT2COCOATREES,scteP2);
             contact.put(ContactObject.PLOT2YIELD,sestP2);
-            contact.put(ContactObject.PLOT2SHADETREES,ssteP2);
             contact.put(ContactObject.PLANTINGMATERIAL2,splantP2);
             contact.put(ContactObject.FARMCONDITION2,sfcondP2);
             contact.put(ContactObject.TREEHEALTH2,stehelP2);
@@ -6801,7 +6985,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT3AREA,sareP3);
             contact.put(ContactObject.PLOT3COCOATREES,scteP3);
             contact.put(ContactObject.PLOT3YIELD,sestP3);
-            contact.put(ContactObject.PLOT3SHADETREES,ssteP3);
             contact.put(ContactObject.PLANTINGMATERIAL3,splantP3);
             contact.put(ContactObject.FARMCONDITION3,sfcondP3);
             contact.put(ContactObject.TREEHEALTH3,stehelP3);
@@ -6828,7 +7011,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT4AREA,sareP4);
             contact.put(ContactObject.PLOT4COCOATREES,scteP4);
             contact.put(ContactObject.PLOT4YIELD,sestP4);
-            contact.put(ContactObject.PLOT4SHADETREES,ssteP4);
             contact.put(ContactObject.PLANTINGMATERIAL4,splantP4);
             contact.put(ContactObject.FARMCONDITION4,sfcondP4);
             contact.put(ContactObject.TREEHEALTH4,stehelP4);
@@ -6855,7 +7037,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT5AREA,sareP5);
             contact.put(ContactObject.PLOT5COCOATREES,scteP5);
             contact.put(ContactObject.PLOT5YIELD,sestP5);
-            contact.put(ContactObject.PLOT5SHADETREES,ssteP5);
             contact.put(ContactObject.PLANTINGMATERIAL5,splantP5);
             contact.put(ContactObject.FARMCONDITION5,sfcondP5);
             contact.put(ContactObject.TREEHEALTH5,stehelP5);
@@ -6882,7 +7063,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT6AREA,sareP6);
             contact.put(ContactObject.PLOT6COCOATREES,scteP6);
             contact.put(ContactObject.PLOT6YIELD,sestP6);
-            contact.put(ContactObject.PLOT6SHADETREES,ssteP6);
             contact.put(ContactObject.PLANTINGMATERIAL6,splantP6);
             contact.put(ContactObject.FARMCONDITION6,sfcondP6);
             contact.put(ContactObject.TREEHEALTH6,stehelP6);
@@ -6909,7 +7089,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT7AREA,sareP7);
             contact.put(ContactObject.PLOT7COCOATREES,scteP7);
             contact.put(ContactObject.PLOT7YIELD,sestP7);
-            contact.put(ContactObject.PLOT7SHADETREES,ssteP7);
             contact.put(ContactObject.PLANTINGMATERIAL7,splantP7);
             contact.put(ContactObject.FARMCONDITION7,sfcondP7);
             contact.put(ContactObject.TREEHEALTH7,stehelP7);
@@ -6936,7 +7115,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT8AREA,sareP8);
             contact.put(ContactObject.PLOT8COCOATREES,scteP8);
             contact.put(ContactObject.PLOT8YIELD,sestP8);
-            contact.put(ContactObject.PLOT8SHADETREES,ssteP8);
             contact.put(ContactObject.PLANTINGMATERIAL8,splantP8);
             contact.put(ContactObject.FARMCONDITION8,sfcondP8);
             contact.put(ContactObject.TREEHEALTH8,stehelP8);
@@ -6963,7 +7141,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT9AREA,sareP9);
             contact.put(ContactObject.PLOT9COCOATREES,scteP9);
             contact.put(ContactObject.PLOT9YIELD,sestP9);
-            contact.put(ContactObject.PLOT9SHADETREES,ssteP9);
             contact.put(ContactObject.PLANTINGMATERIAL9,splantP9);
             contact.put(ContactObject.FARMCONDITION9,sfcondP9);
             contact.put(ContactObject.TREEHEALTH9,stehelP9);
@@ -6990,7 +7167,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT10AREA,sareP10);
             contact.put(ContactObject.PLOT10COCOATREES,scteP10);
             contact.put(ContactObject.PLOT10YIELD,sestP10);
-            contact.put(ContactObject.PLOT10SHADETREES,ssteP10);
             contact.put(ContactObject.PLANTINGMATERIAL10,splantP10);
             contact.put(ContactObject.FARMCONDITION10,sfcondP10);
             contact.put(ContactObject.TREEHEALTH10,stehelP10);

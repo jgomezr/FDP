@@ -8,7 +8,7 @@ package com.salesforce.androidsdk;
 
 public final class R {
 	public static final class array {
-		public static final int oauthScopes = 0x7f07003f;
+		public static final int oauthScopes = 0x7f070044;
 	}
 	public static final class color {
 		public static final int sf__forgot_passcode_text = 0x7f08001b;
@@ -64,35 +64,35 @@ public final class R {
 		public static final int sf__toolbar_background = 0x7f02001c;
 	}
 	public static final class id {
-		public static final int buttonPanel = 0x7f0d0115;
-		public static final int fingerprint_container = 0x7f0d0111;
-		public static final int manage_space_layout = 0x7f0d0123;
-		public static final int sf__accounts_group = 0x7f0d0109;
-		public static final int sf__add_account_button = 0x7f0d010b;
-		public static final int sf__apply_button = 0x7f0d010f;
-		public static final int sf__auth_container_phone = 0x7f0d0121;
-		public static final int sf__cancel_button = 0x7f0d0110;
-		public static final int sf__fingerprint_description = 0x7f0d0112;
-		public static final int sf__fingerprint_icon = 0x7f0d0113;
-		public static final int sf__fingerprint_status = 0x7f0d0114;
-		public static final int sf__layout_root = 0x7f0d010c;
-		public static final int sf__menu_clear_cookies = 0x7f0d014d;
-		public static final int sf__menu_clear_custom_url = 0x7f0d014b;
-		public static final int sf__menu_pick_server = 0x7f0d014c;
-		public static final int sf__menu_reload = 0x7f0d014e;
-		public static final int sf__oauth_webview = 0x7f0d0122;
-		public static final int sf__passcode_error = 0x7f0d0127;
-		public static final int sf__passcode_forgot = 0x7f0d0126;
-		public static final int sf__passcode_instructions = 0x7f0d0128;
-		public static final int sf__passcode_text = 0x7f0d0125;
-		public static final int sf__passcode_title = 0x7f0d0124;
-		public static final int sf__picker_custom_label = 0x7f0d010d;
-		public static final int sf__picker_custom_url = 0x7f0d010e;
-		public static final int sf__server_list_group = 0x7f0d0129;
-		public static final int sf__show_custom_url_edit = 0x7f0d012a;
-		public static final int sf__switcher_apply_button = 0x7f0d010a;
-		public static final int sf__use_password_button = 0x7f0d0117;
-		public static final int spacer = 0x7f0d0116;
+		public static final int buttonPanel = 0x7f0d0114;
+		public static final int fingerprint_container = 0x7f0d0110;
+		public static final int manage_space_layout = 0x7f0d0122;
+		public static final int sf__accounts_group = 0x7f0d0108;
+		public static final int sf__add_account_button = 0x7f0d010a;
+		public static final int sf__apply_button = 0x7f0d010e;
+		public static final int sf__auth_container_phone = 0x7f0d0120;
+		public static final int sf__cancel_button = 0x7f0d010f;
+		public static final int sf__fingerprint_description = 0x7f0d0111;
+		public static final int sf__fingerprint_icon = 0x7f0d0112;
+		public static final int sf__fingerprint_status = 0x7f0d0113;
+		public static final int sf__layout_root = 0x7f0d010b;
+		public static final int sf__menu_clear_cookies = 0x7f0d014c;
+		public static final int sf__menu_clear_custom_url = 0x7f0d014a;
+		public static final int sf__menu_pick_server = 0x7f0d014b;
+		public static final int sf__menu_reload = 0x7f0d014d;
+		public static final int sf__oauth_webview = 0x7f0d0121;
+		public static final int sf__passcode_error = 0x7f0d0126;
+		public static final int sf__passcode_forgot = 0x7f0d0125;
+		public static final int sf__passcode_instructions = 0x7f0d0127;
+		public static final int sf__passcode_text = 0x7f0d0124;
+		public static final int sf__passcode_title = 0x7f0d0123;
+		public static final int sf__picker_custom_label = 0x7f0d010c;
+		public static final int sf__picker_custom_url = 0x7f0d010d;
+		public static final int sf__server_list_group = 0x7f0d0128;
+		public static final int sf__show_custom_url_edit = 0x7f0d0129;
+		public static final int sf__switcher_apply_button = 0x7f0d0109;
+		public static final int sf__use_password_button = 0x7f0d0116;
+		public static final int spacer = 0x7f0d0115;
 	}
 	public static final class layout {
 		public static final int sf__account_switcher = 0x7f030007;

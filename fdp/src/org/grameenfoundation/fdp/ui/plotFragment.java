@@ -60,7 +60,7 @@ public class plotFragment extends Fragment  {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (String.valueOf(ph.getText()).isEmpty()){
                     setText(lime,"N/A");
-                }else if (Double.parseDouble(ph.getText().toString()) > 5.8){
+                }else if (Double.parseDouble(ph.getText().toString()) > 5.7){
                     setText(lime,"No");
                 }else{
                     setText(lime,"Yes");
@@ -75,12 +75,10 @@ public class plotFragment extends Fragment  {
         cteP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("3.5x3.5")||cteP.getSelectedItem().toString().equals("3x3.5")){
+                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("2x4")||cteP.getSelectedItem().toString().equals("3x3.5")||cteP.getSelectedItem().toString().equals("2.5x3")||cteP.getSelectedItem().toString().equals("2.5x3.5")||cteP.getSelectedItem().toString().equals("2.5x4")){
                     setText(fillingP,"No");
-                }else if(cteP.getSelectedItem().toString().equals("4x4")||cteP.getSelectedItem().toString().equals("3.5x4")){
+                }else {
                     setText(fillingP,"Yes");
-                }else{
-                    setText(fillingP,"No");
                 }
             }
 
@@ -98,7 +96,7 @@ public class plotFragment extends Fragment  {
                 } else {
                     setText(geneticP, "G");
                 }
-                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3×4")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4×4"))||(Double.parseDouble(ageP.getText().toString()) > 25)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
+                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3×4")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4×4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("3.5x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 25)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
                     setText(fcondP, "B");
                     setText(fillingP,"No");
                 }else{

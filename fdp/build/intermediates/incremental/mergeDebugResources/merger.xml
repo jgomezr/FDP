@@ -322,7 +322,12 @@
 	</string-array><string name="familyMembers">13. Number of people living together including the farmer:</string><string name="plot1" translatable="false">Plot 1</string><string name="plot2" translatable="false">Plot 2</string><string name="costInvest">Cost of Maintenance / Investment:</string><string name="plot3" translatable="false">Plot 3</string><string name="plot4" translatable="false">Plot 4</string><string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string><string name="plot5" translatable="false">Plot 5</string><string name="birthday">3. Farmer Birthday Year:</string><string name="plot6" translatable="false">Plot 6</string><string name="drainage">Drainage</string><string name="daysHire">C21. How many labor days hire:</string><string name="filling">Filling in</string><string-array name="treeDistance">
         <item>N/A</item>
         <item>2x2</item>
+		<item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -367,7 +372,22 @@
 		<item>Quarterly</item>
 		<item>Annually</item>
 		<item>No set frequency</item>
-	</string-array><string name="main_activity_title">Farmer List</string><string name="reasonNotAgree">Comments:</string><string name="productionCocoaLY">28. Total Kg Production of dry cocoa beans in crop year or calendar year:</string><string name="cancel">No</string><string name="dec">December</string><string-array name="yes">
+	</string-array><string name="main_activity_title">Farmer List</string><string name="reasonNotAgree">Comments:</string><string name="productionCocoaLY">28. Total Kg Production of dry cocoa beans in crop year or calendar year:</string><string name="cancel">No</string><string name="dec">December</string><string-array name="treeDistance11">
+        <item>2x2.5</item>
+        <item>2x2</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string-array name="yes">
 		<item>Yes</item>
 		<item>No</item>
 	</string-array><string-array name="treeDistance10">
@@ -376,16 +396,82 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
         <item>4x4</item>
-    </string-array><string name="jan">January</string><string name="plotIncome">Plot Income:</string><string-array name="gender">
+    </string-array><string name="jan">January</string><string-array name="treeDistance13">
+        <item>2x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="plotIncome">Plot Income:</string><string-array name="treeDistance12">
+        <item>2x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string-array name="treeDistance15">
+        <item>2.5x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string-array name="gender">
 		<item>N/A</item>
 		<item>Male</item>
 		<item>Female</item>
-	</string-array><string name="haveCredit">20. Has the family taken a loan over 5M IDR that you have to pay back?</string><string-array name="bank">
+	</string-array><string-array name="treeDistance14">
+        <item>2.5x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="haveCredit">20. Has the family taken a loan over 5M IDR that you have to pay back?</string><string-array name="bank">
         <item>NA</item>
         <item>Standard bank account</item>
         <item>Mobile banking</item>
@@ -397,7 +483,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -406,7 +498,13 @@
     </string-array><string name="plotInformation">PLOT INFORMATION</string><string name="receivesFarmPayment">17. Farmer or spouse receives payment for other work:</string><string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -416,7 +514,13 @@
     </string-array><string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -427,7 +531,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -437,6 +547,11 @@
     </string-array><string-array name="treeDistance2">
         <item>2.5x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -446,7 +561,12 @@
         <item>4x4</item>
     </string-array><string-array name="treeDistance1">
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -457,7 +577,13 @@
     </string-array><string-array name="treeDistance4">
         <item>3x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -467,7 +593,12 @@
     </string-array><string name="moneyBack">C16. How much have they back?</string><string-array name="treeDistance3">
         <item>3x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -710,7 +841,13 @@
     </string-array><string name="estimatedProduction">42. Estimasi Produksi (Kg)</string><string name="delete_title">Sudah yakin?</string><string name="gaps">Perawatan (GAPS)</string><string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string><string name="totalCredit">C11. Berapa total pinjaman yang masih ada?</string><string name="birthday">3. Tahun Kelahiran Petani</string><string name="limeNeed">58. Membutuhkan Kapur</string><string name="photoSuccess">Foto diambil dengan sukses</string><string name="giveLoan">21. Apakah anda memberikan pinjaman kepada seseorang lebih dari 5 juta</string><string name="livingExpenses">23. Pengeluaran tahunan</string><string name="nov">November</string><string name="payOftenForCredit">C13. Seberapa sering anda membayar pinjaman anda ?</string><string name="totalSpouseIncome">C8. Pendapatan bersih pasangan dari pekerjaan yang lain selain di kebun sendiri</string><string name="numberPlots">39. Banyaknya plot</string><string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -720,7 +857,13 @@
     </string-array><string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -731,7 +874,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -746,6 +895,11 @@
     </string-array><string-array name="treeDistance2">
         <item>2.5x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -755,7 +909,12 @@
         <item>4x4</item>
     </string-array><string-array name="treeDistance1">
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -766,7 +925,13 @@
     </string-array><string name="plantingMaterial">44. Bahan tanam</string><string-array name="treeDistance4">
         <item>3x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -776,7 +941,12 @@
     </string-array><string-array name="treeDistance3">
         <item>3x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -802,7 +972,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -915,7 +1091,12 @@
     </string-array><string name="cocoaTrees">45. Jarak antara pohon cocoa</string><string name="daysHire">C21. Berapa hari pekerja digunakan</string><string name="year3">Tahun 3</string><string name="year7">Tahun 7</string><string name="productionCocoaLY">28. Produksi Kg total biji kakao kering di tahun panen atau tahun kalender</string><string name="organicMatter">54. Bahan organik</string><string-array name="treeDistance">
         <item>N/A</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -936,19 +1117,100 @@
     </string-array><string name="no_results_found">Tidak ada di hasil pencarian</string><string name="farmerProfile">PERTANIAN KELUARGA PROFIL</string><string name="ph">43. pH tanah</string><string name="lime">Kapur</string><string name="tool6">Pengeluaran kebun termasuk semua pengelauaran di produksi, fermentasi,penyimpanan dan penjulan cocoa, tolong</string><string-array name="gender_female">
         <item>Wanita</item>
         <item>Pria</item>
-    </string-array><string name="full_name">1. Nama Petani</string><string-array name="creditOftenbiannual">
+    </string-array><string-array name="treeDistance15">
+        <item>2.5x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="full_name">1. Nama Petani</string><string-array name="treeDistance14">
+        <item>2.5x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string-array name="creditOftenbiannual">
         <item>Setiap dua tahun</item>
         <item>Bulanan</item>
         <item>Per tigabulan</item>
         <item>Tahunan</item>
         <item>Frekuensi tidak terset</item>
-    </string-array><string name="action_search">Cari</string><string name="productiveProfile">PROFILE PRODUKTIF</string><string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string><string-array name="treeDistance10">
+    </string-array><string-array name="treeDistance13">
+        <item>2x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="action_search">Cari</string><string-array name="treeDistance12">
+        <item>2x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="productiveProfile">PROFILE PRODUKTIF</string><string-array name="treeDistance11">
+        <item>2x2.5</item>
+        <item>2x2</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array><string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string><string-array name="treeDistance10">
         <item>3.5×4</item>
         <item>3×4</item>
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>

@@ -38,12 +38,6 @@
         android:inputType="numberDecimal"
         android:text="0"/>
 
-    <EditText android:id="@+id/shadeTreesP_field"
-        android:layout_width="145dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center_vertical"
-        android:inputType="number"/>
-
     <EditText android:id="@+id/ph_field"
         android:layout_width="145dp"
         android:layout_height="35dp"
