@@ -642,14 +642,14 @@
         <item>Ya</item>
         <item>Tidak</item>
     </string-array>
-    <string name="accountType">C17. Jenis Rekening</string>
+    <string name="accountType">C16. Jenis Rekening</string>
     <string name="action_add">Tambahkan Petani</string>
     <string name="action_refresh">Sinkronkan</string>
     <string name="action_search">Cari</string>
     <string name="additionalCrops">C20. Tanaman Lain</string>
     <string name="additionalIntervention">TAMBAHAN INTERVENSI</string>
     <string name="agree">Setuju dengan rekomendasi</string>
-    <string name="amountOfLoan">C15. Berapa total pinjaman (piutang) yang anda berikan</string>
+    <string name="amountOfLoan">C14. Berapa total pinjaman (piutang) yang anda berikan</string>
     <string name="ao">ADOPSI OBSERVASI</string>
     <string name="aoResults">HASIL ADOPSI OBSERVASI</string>
     <string name="app_name"><b>FDP</b></string>
@@ -659,9 +659,9 @@
     <string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string>
     <string name="aug">Agusutus</string>
     <string name="autosave">Simpan Otomatis</string>
-    <string name="averageCocoaPrice">29. Rata-rata gerbang Pertanian biji kering kakao harga per Kg</string>
+    <string name="averageCocoaPrice">28. Rata-rata gerbang Pertanian biji kering kakao harga per Kg</string>
     <string name="back">Kembali</string>
-    <string name="bankAccount">27. Pakaha punya rekening bank?</string>
+    <string name="bankAccount">26. Pakaha punya rekening bank?</string>
     <string name="birthday">3. Tahun Kelahiran Petani</string>
     <string name="calcAO">Menghitung</string>
     <string name="cancel">Tidak</string>
@@ -713,10 +713,10 @@
     <string name="dependEconomically">16. Jumlah anggota keluarga yang tergantung dari pendapatan keluarga</string>
     <string name="drainage">Drainase</string>
     <string name="drainageNeed">59. Membutuhkan Drainase</string>
-    <string name="educationExpenses">26. Pengeluaran pendidikan yang di harapkan</string>
+    <string name="educationExpenses">25. Pengeluaran pendidikan yang di harapkan</string>
     <string name="educational_level">5. Tingkat pendidikan</string>
     <string name="estimatedProduction">42. Estimasi Produksi (Kg)</string>
-    <string name="expensesCocoaLY">30. Jumlah Beban pengelolaan kebun kakao tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
+    <string name="expensesCocoaLY">29. Jumlah Beban pengelolaan kebun kakao tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
     <string name="extraSoil">Tambahan manajemen tanah</string>
     <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
     <string name="familyMembers">13. Jumlah orang yang hidup bersama-sama termasuk petani</string>
@@ -745,16 +745,16 @@
     <string name="gender">4. Jenis Kelamin</string>
     <string name="geneticLb">Genetika bahan tanaman</string>
     <string name="getLocation">Dapatkan Lokasi</string>
-    <string name="giveLoan">21. Apakah anda memberikan pinjaman kepada seseorang lebih dari 5 juta</string>
+    <string name="giveLoan">20. Apakah anda memberikan pinjaman kepada seseorang lebih dari 5 juta</string>
     <string name="gps">7. GPS Rumah</string>
     <string name="graft">Sambungan</string>
-    <string name="grossCocoaLY">31. Pendapatan kotor dari cocoa di tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
+    <string name="grossCocoaLY">30. Pendapatan kotor dari cocoa di tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
     <string name="harvesting">52. Pemanenan</string>
-    <string name="haveCredit">20. Apakah anda memiliki pinjaman lebih dari 5 juta yang harus di bayar?</string>
-    <string name="haveOtherCrops">19. Memiliki tanaman lain</string>
+    <string name="haveCredit">19. Apakah anda memiliki pinjaman lebih dari 5 juta yang harus di bayar?</string>
+    <string name="haveOtherCrops">31. Memiliki tanaman lain</string>
     <string name="haveSpouse">11. Punya Pasangan</string>
     <string name="hireLabor">38. Memiliki Pekerja</string>
-    <string name="householdSavings">22. Tabungan rumah tangga</string>
+    <string name="householdSavings">21. Tabungan rumah tangga</string>
     <string name="incomeOtherCrops">C10. pendapat bersih dari semua tanaman di tahun lalu (tahun  lalu di maksud dua musim panen, mid dan main</string>
     <string name="internalInspection">Internal Inspeksi</string>
     <string name="jan">Januari</string>
@@ -763,7 +763,7 @@
     <string name="labor">Pekerja</string>
     <string name="lime">Kapur</string>
     <string name="limeNeed">58. Membutuhkan Kapur</string>
-    <string name="livingExpenses">23. Pengeluaran tahunan</string>
+    <string name="livingExpenses">22. Pengeluaran tahunan</string>
     <string name="logout_button">Keluar</string>
     <string name="logout_title">Keluar?</string>
     <string name="main_activity_title">List Petani</string>
@@ -771,8 +771,8 @@
     <string name="mapPhoto">Mengambil foto dari peta pertanian</string>
     <string name="mar">Maret</string>
     <string name="may">Mei</string>
-    <string name="mobileMoney">C18. Rekening petani memiliki pilihan unutk Mobile banking</string>
-    <string name="moneyBack">C16. Berapa banyak memiliki mereka kembali?</string>
+    <string name="mobileMoney">C17. Rekening petani memiliki pilihan unutk Mobile banking</string>
+    <string name="moneyBack">C15. Berapa banyak memiliki mereka kembali?</string>
     <string name="netFamily">Pendapatan bersih keluarga</string>
     <string name="netFarming">Total pemasukan dalam berkebun</string>
     <string name="netOther">Pendapatan bersih dari semua sumber</string>
@@ -783,8 +783,8 @@
     <string name="numberChildren">12. Jumlah anak</string>
     <string name="numberPlots">39. Banyaknya plot</string>
     <string name="oct">Oktober</string>
-    <string name="organicMatter">54. Bahan organik</string>
-    <string name="otherExpenses">24. Pengeluaran tahunan yang lain</string>
+    <string name="organicMatter">55. Bahan organik</string>
+    <string name="otherExpenses">23. Pengeluaran tahunan yang lain</string>
     <string name="p1">Pembersihan</string>
     <string name="p10">Pekerjaan penyambungan/mengeluarkan plastik</string>
     <string name="p11">Polladring/sanitasi, memotong batang induk setelah menyambung</string>
@@ -809,13 +809,13 @@
     <string name="p7">Penanaman pelindung</string>
     <string name="p8">Pemangkasan/sanitasi</string>
     <string name="p9">Pemupukan</string>
-    <string name="payForCredit">C14. Berapa banyak yang Anda membayar kembali tiap pembayaran?</string>
-    <string name="payOftenForCredit">C13. Seberapa sering anda membayar pinjaman anda ?</string>
+    <string name="payForCredit">C13. Berapa banyak yang Anda membayar kembali tiap pembayaran?</string>
+    <string name="payOftenForCredit">C12. Seberapa sering anda membayar pinjaman anda ?</string>
     <string name="pestDiseaseSanitation">50. Hama penyakit dan sanitasi</string>
     <string name="ph">43. pH tanah</string>
     <string name="phone">9. Nomer Hp</string>
     <string name="photoSuccess">Foto diambil dengan sukses</string>
-    <string name="plannedInvestments">25. Investasi yang direncanakan - pengeluaran selain kakao</string>
+    <string name="plannedInvestments">24. Investasi yang direncanakan - pengeluaran selain kakao</string>
     <string name="plantingMaterial">44. Bahan tanam</string>
     <string name="plotActivityTitle">Informasi Plot</string>
     <string name="plotAge">46. Umur tanaman</string>
@@ -827,7 +827,7 @@
     <string name="plotInformation">INFORMASI PLOT</string>
     <string name="plotPL">Plot Untung dan Rugi</string>
     <string name="postalAddress">8. Kode Pos</string>
-    <string name="productionCocoaLY">28. Produksi Kg total biji kakao kering di tahun panen atau tahun kalender</string>
+    <string name="productionCocoaLY">27. Produksi Kg total biji kakao kering di tahun panen atau tahun kalender</string>
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
     <string name="productiveProfile">PROFILE PRODUKTIF</string>
     <string name="profitOrLost">Untung dan Rugi</string>
@@ -843,7 +843,7 @@
     <string name="socioeconomicProfile">PROFIL SOSIOEKONOMI</string>
     <string name="soilCondition">54. Kondisi Tanah</string>
     <string name="soilFertMngLb">Manajemen kesuburan tanah</string>
-    <string name="sourceCredit">C12. dari mana anda menambil pinjaman tersebut</string>
+    <string name="sourceCredit">C11. dari mana anda menambil pinjaman tersebut</string>
     <string name="spouseBirthday">C2. Tahun kelahiran pasangan</string>
     <string name="spouseEducationalLevel">C3. Tingkat pendidikan pasangan</string>
     <string name="spouseName">C1. Nama Pasangan</string>
@@ -856,7 +856,7 @@
     <string name="tool4">Ration konvrsi untuk basah ke kering adalah 100:35 atau 35%</string>
     <string name="tool5">Ini pengeluaran pendidikan setelah sekolah dan atau diatas pengeluaran sekolah yang normal</string>
     <string name="tool6">Pengeluaran kebun termasuk semua pengelauaran di produksi, fermentasi,penyimpanan dan penjulan cocoa, tolong</string>
-    <string name="totalCredit">C11. Berapa total pinjaman yang masih ada?</string>
+    <string name="totalCredit">C10. Berapa total pinjaman yang masih ada?</string>
     <string name="totalExpenses">Total pengeluaran keluarga</string>
     <string name="totalFamilyMembersIncome">C9. Uang Bersih kontribusi dari anggota keluarga atau orang lain untuk rumah tangga</string>
     <string name="totalIncome">Total pendapatan</string>
@@ -864,7 +864,7 @@
     <string name="totalSpouseIncome">C8. Pendapatan bersih pasangan dari pekerjaan yang lain selain di kebun sendiri</string>
     <string name="treeHealth">47. Kesehatan tanaman</string>
     <string name="village">6. Desa</string>
-    <string name="wantAccount">C19. Menginginkan rekening bank?</string>
+    <string name="wantAccount">C18. Menginginkan rekening bank?</string>
     <string name="weeding">51. Menghilangkan rumput</string>
     <string name="year1">Tahun 1</string>
     <string name="year2">Tahun 2</string>

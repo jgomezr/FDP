@@ -271,7 +271,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     double avg = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9.]+", ""));
                     double prd = 0;
                     try{
-                        prd = Double.parseDouble(prdCocoaLy.getText().toString());
+                        prd = Double.parseDouble(prdCocoaLy.getText().toString().replaceAll("[^0-9.]+", ""));
                     }catch (NumberFormatException e){}
                     int result1 = (int) (avg * prd);
                     Log.d(TAG, "resultado: "+result1);
@@ -338,7 +338,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     double avg = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9.]+", ""));
                     double prd = 0;
                     try{
-                        prd = Double.parseDouble(prdCocoaLy.getText().toString());
+                        prd = Double.parseDouble(prdCocoaLy.getText().toString().replaceAll("[^0-9.]+", ""));
                     }catch (NumberFormatException e){}
                     int result1 = (int) (avg * prd);
                     Log.d(TAG, "resultado: "+result1);
@@ -635,6 +635,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		expensesCCLY.addTextChangedListener(new MoneyTextWatcher(expensesCCLY));
 		grossCC.addTextChangedListener(new MoneyTextWatcher(grossCC));
 		avgCocoaPrice.addTextChangedListener(new MoneyTextWatcher(avgCocoaPrice));
+        prdCocoaLy.addTextChangedListener(new QuantityWatcher(prdCocoaLy));
 
 	}
 
@@ -672,12 +673,20 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 tc= Double.parseDouble(tC.getText().toString());
                 tr= Double.parseDouble(tR.getText().toString());
             }
-            if (tl>toa||tc+tr>toa) {
+            if (tl>toa) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
                 Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
             }else{
                 editText.setBackgroundColor(Color.TRANSPARENT);
             }
+
+            if (tc+tr>tl) {
+                editText.setBackgroundColor(Color.parseColor("#cc0000"));
+                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
+            }else{
+                editText.setBackgroundColor(Color.TRANSPARENT);
+            }
+
         }
     }
 
@@ -757,6 +766,45 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 		}
 	}
+
+    public class QuantityWatcher implements TextWatcher {
+        private final WeakReference<EditText> editTextWeakReference;
+
+        public QuantityWatcher(EditText editText) {
+            editTextWeakReference = new WeakReference<EditText>(editText);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            EditText editText = editTextWeakReference.get();
+            if (editText != null) {
+                String s = editable.toString();
+                editText.removeTextChangedListener(this);
+                DecimalFormat dec = new DecimalFormat("###,###,###");
+                String cleanString = s.replaceAll("[^0-9]+", "");
+                double parsed = 0;
+                try{
+                    parsed = Double.parseDouble(cleanString);
+                }catch (NumberFormatException e){
+                    e.printStackTrace();
+                }
+
+                String formatted = dec.format(parsed);
+                editText.setText(formatted);
+                editText.setSelection(formatted.length());
+                editText.addTextChangedListener(this);
+            }
+
+        }
+    }
 
 	private File createImageFile(String name) throws IOException {
 		// Create an image file name
@@ -1216,18 +1264,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			}else {
 				setText((EditText) findViewById(R.id.productionCocoaLY_Field),
 						sObject.getProductioncocoaly());
-                grossCocoa = Double.parseDouble(sObject.getProductioncocoaly())*Double.parseDouble(sObject.getAveragecocoaprice()) ;
 			}
 
 			//set average cocoa price ly field
 			if (sObject.getAveragecocoaprice().isEmpty()){
 				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),Integer.toString(35000));
 			}else {
-				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),
-						sObject.getAveragecocoaprice());
+				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),sObject.getAveragecocoaprice());
 			}
-
-			setText((EditText) findViewById(R.id.grossCocoaLY_Field), String.valueOf(grossCocoa));
 
 			//set expenses cocoa ly field
 			if (sObject.getExpensescocoaly().isEmpty()){
@@ -1236,6 +1280,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 				setText((EditText) findViewById(R.id.expensesCocoaLY_Field),
 						sObject.getExpensescocoaly());
 			}
+
+            //set gross cocoa income
+            if (sObject.getGROSSINCOME().isEmpty()){
+                setText((EditText) findViewById(R.id.grossCocoaLY_Field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.grossCocoaLY_Field),sObject.getGROSSINCOME());
+            }
 
 			//set income other crops field
 			if (sObject.getIncomeothercrops().isEmpty()){
@@ -1389,24 +1440,28 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             if (sObject.getTotalFarmArea().isEmpty()){
                 setText((EditText) findViewById(R.id.farmArea_field),Integer.toString(0));
             }else {
-                setText((EditText) findViewById(R.id.farmArea_field),
-                        sObject.getTotalFarmArea());
+                setText((EditText) findViewById(R.id.farmArea_field),sObject.getTotalFarmArea());
+            }
+
+            //set Total cultivation Area field
+            if (sObject.getCultivationArea().isEmpty()){
+                setText((EditText) findViewById(R.id.cultivationArea_field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.cultivationArea_field),sObject.getCultivationArea());
             }
 
 			//set Total Cocoa Area field
 			if (sObject.getTotalCocoaArea().isEmpty()){
 				setText((EditText) findViewById(R.id.cocoaArea_field),Integer.toString(0));
 			}else {
-				setText((EditText) findViewById(R.id.cocoaArea_field),
-						sObject.getTotalCocoaArea());
+				setText((EditText) findViewById(R.id.cocoaArea_field),sObject.getTotalCocoaArea());
 			}
 
 			//set Total Renovation Area field
 			if (sObject.getTotalRenovationArea().isEmpty()){
 				setText((EditText) findViewById(R.id.renovationArea_field),Integer.toString(0));
 			}else {
-				setText((EditText) findViewById(R.id.renovationArea_field),
-						sObject.getTotalRenovationArea());
+				setText((EditText) findViewById(R.id.renovationArea_field),sObject.getTotalRenovationArea());
 			}
 
 			setText((EditText) findViewById(R.id.additionalCrops_field),sObject.getAditionalCrops());
@@ -1556,13 +1611,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             setText((EditText) findViewById(R.id.phoneNumber),
                     sObject.getPhoneNumber());
 
-            //set Total cultivation Area field
-            if (sObject.getCultivationArea().isEmpty()){
-                setText((EditText) findViewById(R.id.cultivationArea_field),Integer.toString(0));
-            }else {
-                setText((EditText) findViewById(R.id.cultivationArea_field),
-                        sObject.getCultivationArea());
-            }
 
             //set Hire days
             if (sObject.getHowManyLaborDaysHire().isEmpty()){
@@ -1724,9 +1772,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String haveOtherCrops = ((Spinner) findViewById(R.id.haveOtherCrops_Field)).getSelectedItem().toString();
 		final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
 		final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
-		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString();
+		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
+        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9]+", "");
 		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
@@ -1802,6 +1851,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			contact.put(ContactObject.PRODUCTIONCOCOALY,cocoaProductionLY);
 			contact.put(ContactObject.AVERAGECOCOAPRICE,averageCocoaPrice);
 			contact.put(ContactObject.EXPENSESCOCOALY,expensesCocoaLy);
+            contact.put(ContactObject.GROSSINCOME,grossIncome);
 			contact.put(ContactObject.INCOMEOTHERCROPS,incomeOtherCrops);
 			contact.put(ContactObject.INCOMEFARMLABOR,incomeLabor);
 			contact.put(ContactObject.SPOUSEINCOME,spouseIncome);
@@ -1875,9 +1925,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String haveOtherCrops = ((Spinner) findViewById(R.id.haveOtherCrops_Field)).getSelectedItem().toString();
         final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
         final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
-        final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString();
+        final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
+        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9]+", "");
         final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
@@ -1953,6 +2004,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.PRODUCTIONCOCOALY,cocoaProductionLY);
             contact.put(ContactObject.AVERAGECOCOAPRICE,averageCocoaPrice);
             contact.put(ContactObject.EXPENSESCOCOALY,expensesCocoaLy);
+            contact.put(ContactObject.GROSSINCOME,grossIncome);
             contact.put(ContactObject.INCOMEOTHERCROPS,incomeOtherCrops);
             contact.put(ContactObject.INCOMEFARMLABOR,incomeLabor);
             contact.put(ContactObject.SPOUSEINCOME,spouseIncome);

@@ -2117,7 +2117,7 @@
     <integer name="replantingY7">2000</integer>
     <integer name="tooltip_default_arrow_alignment">3</integer>
     <integer name="tooltip_default_arrow_location">1</integer>
-    <string name="accountType">C17. Account Type</string>
+    <string name="accountType">C16. Account Type</string>
     <string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
     <string name="action_add">Add Farmer</string>
     <string name="action_refresh">Synchronize</string>
@@ -2125,7 +2125,7 @@
     <string name="additionalCrops">C20. Additional Crops:</string>
     <string name="additionalIntervention">ADDITIONAL INTERVENTION</string>
     <string name="agree">Agreed on recommendations:</string>
-    <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
+    <string name="amountOfLoan">C14. What is the total amount of the loan outstanding you give?</string>
     <string name="androidPushNotificationClientId" translatable="false"/>
     <string name="ao">ADOPTION OBSERVATIONS</string>
     <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
@@ -2140,9 +2140,9 @@
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="autosave">Autosaved</string>
-    <string name="averageCocoaPrice">29. Average Farm gate dry bean cocoa price per Kg:</string>
+    <string name="averageCocoaPrice">28. Average Farm gate dry bean cocoa price per Kg:</string>
     <string name="back">Back</string>
-    <string name="bankAccount">27. Have bank account?</string>
+    <string name="bankAccount">26. Have bank account?</string>
     <string name="birthday">3. Farmer Birthday Year:</string>
     <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
@@ -2194,11 +2194,11 @@
     <string name="dependEconomically">16. Number of household members depend on family income:</string>
     <string name="drainage">Drainage</string>
     <string name="drainageNeed">59. Drainage need:</string>
-    <string name="educationExpenses">26. Expected education expenses:</string>
+    <string name="educationExpenses">25. Expected education expenses:</string>
     <string name="educational_level">5. Educational Level:</string>
     <string name="empty" translatable="false"> </string>
     <string name="estimatedProduction">42. Estimated production (Kg):</string>
-    <string name="expensesCocoaLY">30. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
+    <string name="expensesCocoaLY">29. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
     <string name="extraSoil">Extra Soil Management</string>
     <string name="familyLess">The number of family members can not be less than the number of children</string>
     <string name="familyMembers">13. Number of people living together including the farmer:</string>
@@ -2227,18 +2227,18 @@
     <string name="gender">4. Gender:</string>
     <string name="geneticLb">Genetics of plant material:</string>
     <string name="getLocation">Get Location</string>
-    <string name="giveLoan">21. Has the family given someone a loan over 5M IDR?</string>
+    <string name="giveLoan">20. Has the family given someone a loan over 5M IDR?</string>
     <string name="gps">7. House GPS:</string>
     <string name="graft">Graft</string>
     <string name="greater0" translatable="false"/>
-    <string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
+    <string name="grossCocoaLY">30. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="harvesting">52. Harvesting:</string>
-    <string name="haveCredit">20. Has the family taken a loan over 5M IDR that you have to pay back?</string>
-    <string name="haveOtherCrops">19. Have Additional Crops:</string>
+    <string name="haveCredit">19. Has the family taken a loan over 5M IDR that you have to pay back?</string>
+    <string name="haveOtherCrops">31. Have Additional Crops:</string>
     <string name="haveSpouse">11. Have spouse:</string>
     <string name="hireLabor">38. Hire labor:</string>
-    <string name="householdSavings">22. Household Savings:</string>
-    <string name="incomeOtherCrops">C10. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
+    <string name="householdSavings">21. Household Savings:</string>
+    <string name="incomeOtherCrops">C19. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="inspect_db_button" translatable="false">Inspect DB</string>
     <string name="internalInspection">Internal Inspection</string>
     <string name="jan">January</string>
@@ -2247,7 +2247,7 @@
     <string name="labor">Labor</string>
     <string name="lime">Lime</string>
     <string name="limeNeed">58. Lime need:</string>
-    <string name="livingExpenses">23. Annual living expenses:</string>
+    <string name="livingExpenses">22. Annual living expenses:</string>
     <string name="logout_button">Logout</string>
     <string name="logout_title">Log out?</string>
     <string name="main_activity_title">Farmer List</string>
@@ -2255,8 +2255,8 @@
     <string name="mapPhoto">Take a photo of the farm map</string>
     <string name="mar">March</string>
     <string name="may">May</string>
-    <string name="mobileMoney">C18. Farmer account have Mobile money option?</string>
-    <string name="moneyBack">C16. How much have they back?</string>
+    <string name="mobileMoney">C17. Farmer account have Mobile money option?</string>
+    <string name="moneyBack">C15. How much have they back?</string>
     <string name="netFamily">Net family income:</string>
     <string name="netFarming">Total farming income:</string>
     <string name="netOther">Net income from all other sources:</string>
@@ -2270,7 +2270,7 @@
     <string name="oauth_display_type">touch</string>
     <string name="oct">October</string>
     <string name="organicMatter">55. Organic Matter:</string>
-    <string name="otherExpenses">24. Annual other expenses:</string>
+    <string name="otherExpenses">23. Annual other expenses:</string>
     <string name="p1">Clearing</string>
     <string name="p10">Grafting work/ take off the plastic</string>
     <string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string>
@@ -2295,13 +2295,13 @@
     <string name="p7">Shade Planting</string>
     <string name="p8">Pruning/Sanitation</string>
     <string name="p9">Fertilizer</string>
-    <string name="payForCredit">C14. How much do you pay back per payment?</string>
-    <string name="payOftenForCredit">C13. How often do you pay back?</string>
+    <string name="payForCredit">C13. How much do you pay back per payment?</string>
+    <string name="payOftenForCredit">C12. How often do you pay back?</string>
     <string name="pestDiseaseSanitation">50. Pest and Disease and Sanitation:</string>
     <string name="ph">43. Soil PH:</string>
     <string name="phone">9. Phone Number:</string>
     <string name="photoSuccess">Photo taken with success</string>
-    <string name="plannedInvestments">25. Planned investments - expenses other than cocoa:</string>
+    <string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string>
     <string name="plantingMaterial">44. Planting Material:</string>
     <string name="plot1" translatable="false">Plot 1</string>
     <string name="plot10" translatable="false">Plot 10</string>
@@ -2323,7 +2323,7 @@
     <string name="plotInformation">PLOT INFORMATION</string>
     <string name="plotPL">Plot P&amp;L:</string>
     <string name="postalAddress">8. Postal Address:</string>
-    <string name="productionCocoaLY">28. Total Kg Production of dry cocoa beans in crop year or calendar year:</string>
+    <string name="productionCocoaLY">27. Total Kg Production of dry cocoa beans in crop year or calendar year:</string>
     <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
     <string name="productiveProfile">PRODUCTIVE PROFILE</string>
     <string name="profitOrLost">Profit or Loss</string>
@@ -2413,7 +2413,7 @@
     <string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>
     <string name="soilCondition">54. Soil Condition:</string>
     <string name="soilFertMngLb">Soil Fertility Management:</string>
-    <string name="sourceCredit">C12. Where did you take the loan from:</string>
+    <string name="sourceCredit">C11. Where did you take the loan from:</string>
     <string name="spouseBirthday">C2. Spouse Birthday Year:</string>
     <string name="spouseEducationalLevel">C3. Spouse Educational Level:</string>
     <string name="spouseName">C1. Spouse Name:</string>
@@ -2426,7 +2426,7 @@
     <string name="tool4">Conversion ratio for Wet to Dry is 100:35 or 35%</string>
     <string name="tool5">This is educational expense post secondary schooling and/or beyond normal schooling expense</string>
     <string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string>
-    <string name="totalCredit">C11. What is the total amount of the loan outstanding?</string>
+    <string name="totalCredit">C10. What is the total amount of the loan outstanding?</string>
     <string name="totalExpenses">Total family expenses:</string>
     <string name="totalFamilyMembersIncome">C9. Net money contributed from family members or other people to the household:</string>
     <string name="totalIncome">Total income:</string>
@@ -2434,7 +2434,7 @@
     <string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string>
     <string name="treeHealth">47. Tree health:</string>
     <string name="village">6. Village:</string>
-    <string name="wantAccount">C19. Want a bank account?</string>
+    <string name="wantAccount">C18. Want a bank account?</string>
     <string name="weeding">51. Weeding:</string>
     <string name="year1">Year 1</string>
     <string name="year2">Year 2</string>

@@ -98,7 +98,6 @@ public class plotFragment extends Fragment  {
                 }
                 if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3×4")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4×4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("3.5x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 25)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
                     setText(fcondP, "B");
-                    setText(fillingP,"No");
                 }else{
                     setText(fcondP, "G");
                 }

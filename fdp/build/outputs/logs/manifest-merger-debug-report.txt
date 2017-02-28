@@ -23,8 +23,15 @@ MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desk
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:3:5-72
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:22.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.venmo.view.tooltip\tooltip\0.1.2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:10:9-38
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
@@ -84,8 +91,13 @@ MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desk
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:5:5-19
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:22.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.venmo.view.tooltip\tooltip\0.1.2\AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:26:6-38
 	android:manageSpaceActivity

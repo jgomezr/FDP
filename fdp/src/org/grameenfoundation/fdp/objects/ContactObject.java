@@ -40,6 +40,7 @@ public class ContactObject extends SalesforceObject {
     public static final String HAVECREDIT = "haveCredit__c";
     public static final String GIVENSOMEONEALOAN = "givenSomeoneALoan__c";
     public static final String PRODUCTIONCOCOALY = "productionCocoaLY__c";
+    public static final String GROSSINCOME = "grossIncomeCocoaLY__c";
     public static final String AVERAGECOCOAPRICE = "averageCocoaPrice__c";
     public static final String EXPENSESCOCOALY = "expensesCocoaLY__c";
     public static final String INCOMEOTHERCROPS = "incomeOtherCrops__c";
@@ -752,7 +753,8 @@ public class ContactObject extends SalesforceObject {
             SOILMNG7,
             SOILMNG8,
             SOILMNG9,
-            SOILMNG10
+            SOILMNG10,
+            GROSSINCOME
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1123,7 +1125,8 @@ public class ContactObject extends SalesforceObject {
             SOILMNG7,
             SOILMNG8,
             SOILMNG9,
-            SOILMNG10
+            SOILMNG10,
+            GROSSINCOME
     };
 
     private boolean isLocallyModified;
@@ -2242,6 +2245,7 @@ public class ContactObject extends SalesforceObject {
     public String getSOILMNG8() {return sanitizeText(rawData.optString(SOILMNG8));}
     public String getSOILMNG9() {return sanitizeText(rawData.optString(SOILMNG9));}
     public String getSOILMNG10() {return sanitizeText(rawData.optString(SOILMNG10));}
+    public String getGROSSINCOME() {return sanitizeText(rawData.optString(GROSSINCOME));}
 
     /**
      * Returns whether the contact has been locally modified or not.

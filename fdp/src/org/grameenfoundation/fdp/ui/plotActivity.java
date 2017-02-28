@@ -100,7 +100,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         Lp8 = (TextView) fragment8.getView().findViewById(R.id.plot_label);
         Lp9 = (TextView) fragment9.getView().findViewById(R.id.plot_label);
         Lp10 = (TextView) fragment10.getView().findViewById(R.id.plot_label);
-
         gps1 = (EditText) fragment1.getView().findViewById(R.id.gpsp_field);
         gps2 = (EditText) fragment2.getView().findViewById(R.id.gpsp_field);
         gps3 = (EditText) fragment3.getView().findViewById(R.id.gpsp_field);
@@ -935,16 +934,57 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 pA9=0;
                 pA10=0;
             }else{
-                pA1=Double.parseDouble(areP1.getText().toString());
-                pA2= Double.parseDouble(areP2.getText().toString());
-                pA3= Double.parseDouble(areP3.getText().toString());
-                pA4= Double.parseDouble(areP4.getText().toString());
-                pA5= Double.parseDouble(areP5.getText().toString());
-                pA6= Double.parseDouble(areP6.getText().toString());
-                pA7= Double.parseDouble(areP7.getText().toString());
-                pA8= Double.parseDouble(areP8.getText().toString());
-                pA9= Double.parseDouble(areP9.getText().toString());
-                pA10= Double.parseDouble(areP10.getText().toString());
+                if(areP1.getText().toString().startsWith(".")){
+                    pA1 = Double.parseDouble(0+areP1.getText().toString());
+                }else {
+                    pA1 = Double.parseDouble(areP1.getText().toString());
+                }
+                if(areP2.getText().toString().startsWith(".")){
+                    pA2= Double.parseDouble(0+areP2.getText().toString());
+                }else {
+                    pA2= Double.parseDouble(areP2.getText().toString());
+                }
+                if(areP3.getText().toString().startsWith(".")){
+                    pA3= Double.parseDouble(0+areP3.getText().toString());
+                }else {
+                    pA3= Double.parseDouble(areP3.getText().toString());
+                }
+                if(areP4.getText().toString().startsWith(".")){
+                    pA4= Double.parseDouble(0+areP4.getText().toString());
+                }else {
+                    pA4= Double.parseDouble(areP4.getText().toString());
+                }
+                if(areP5.getText().toString().startsWith(".")){
+                    pA5= Double.parseDouble(0+areP5.getText().toString());
+                }else {
+                    pA5= Double.parseDouble(areP5.getText().toString());
+                }
+                if(areP6.getText().toString().startsWith(".")){
+                    pA6= Double.parseDouble(0+areP6.getText().toString());
+                }else {
+                    pA6= Double.parseDouble(areP6.getText().toString());
+                }
+                if(areP7.getText().toString().startsWith(".")){
+                    pA7= Double.parseDouble(0+areP7.getText().toString());
+                }else {
+                    pA7= Double.parseDouble(areP7.getText().toString());
+                }
+                if(areP8.getText().toString().startsWith(".")){
+                    pA8= Double.parseDouble(0+areP8.getText().toString());
+                }else {
+                    pA8= Double.parseDouble(areP8.getText().toString());
+                }
+                if(areP9.getText().toString().startsWith(".")){
+                    pA9= Double.parseDouble(0+areP9.getText().toString());
+                }else {
+                    pA9= Double.parseDouble(areP9.getText().toString());
+                }
+                if(areP10.getText().toString().startsWith(".")){
+                    pA10= Double.parseDouble(0+areP10.getText().toString());
+                }else {
+                    pA10= Double.parseDouble(areP10.getText().toString());
+                }
+
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getTotalCocoaArea())) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));

@@ -1066,7 +1066,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor1().equals("Yes")) {
                         fragment1.mainint("extra","","labor",plot1Area,avgCost,age1);
                     }else{
-                        fragment1.mainint("graft","","",plot1Area,avgCost,age1);
+                        fragment1.mainint("extra","","",plot1Area,avgCost,age1);
                     }
 
                 }else{
@@ -1148,7 +1148,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor2().equals("Yes")) {
                         fragment2.mainint("extra","","labor",plot2Area,avgCost,age2);
                     }else{
-                        fragment2.mainint("graft","","",plot2Area,avgCost,age2);
+                        fragment2.mainint("extra","","",plot2Area,avgCost,age2);
                     }
 
                 }else{
@@ -1231,7 +1231,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor3().equals("Yes")) {
                         fragment3.mainint("extra","","labor",plot3Area,avgCost,age3);
                     }else{
-                        fragment3.mainint("graft","","",plot3Area,avgCost,age3);
+                        fragment3.mainint("extra","","",plot3Area,avgCost,age3);
                     }
 
                 }else{
@@ -1313,7 +1313,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor4().equals("Yes")) {
                         fragment4.mainint("extra","","labor",plot4Area,avgCost,age4);
                     }else{
-                        fragment4.mainint("graft","","",plot4Area,avgCost,age4);
+                        fragment4.mainint("extra","","",plot4Area,avgCost,age4);
                     }
 
                 }else{
@@ -1395,7 +1395,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor5().equals("Yes")) {
                         fragment5.mainint("extra","","labor",plot5Area,avgCost,age5);
                     }else{
-                        fragment5.mainint("graft","","",plot5Area,avgCost,age5);
+                        fragment5.mainint("extra","","",plot5Area,avgCost,age5);
                     }
 
                 }else{
@@ -1476,7 +1476,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor6().equals("Yes")) {
                         fragment6.mainint("extra","","labor",plot6Area,avgCost,age6);
                     }else{
-                        fragment6.mainint("graft","","",plot6Area,avgCost,age6);
+                        fragment6.mainint("extra","","",plot6Area,avgCost,age6);
                     }
 
                 }else{
@@ -1558,7 +1558,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor7().equals("Yes")) {
                         fragment7.mainint("extra","","labor",plot7Area,avgCost,age7);
                     }else{
-                        fragment7.mainint("graft","","",plot7Area,avgCost,age7);
+                        fragment7.mainint("extra","","",plot7Area,avgCost,age7);
                     }
 
                 }else{
@@ -1639,7 +1639,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor8().equals("Yes")) {
                         fragment8.mainint("extra","","labor",plot8Area,avgCost,age8);
                     }else{
-                        fragment8.mainint("graft","","",plot8Area,avgCost,age8);
+                        fragment8.mainint("extra","","",plot8Area,avgCost,age8);
                     }
 
                 }else{
@@ -1721,7 +1721,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor9().equals("Yes")) {
                         fragment9.mainint("extra","","labor",plot9Area,avgCost,age9);
                     }else{
-                        fragment9.mainint("graft","","",plot9Area,avgCost,age9);
+                        fragment9.mainint("extra","","",plot9Area,avgCost,age9);
                     }
 
                 }else{
@@ -1802,7 +1802,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor10().equals("Yes")) {
                         fragment10.mainint("extra","","labor",plot10Area,avgCost,age10);
                     }else{
-                        fragment10.mainint("graft","","",plot10Area,avgCost,age10);
+                        fragment10.mainint("extra","","",plot10Area,avgCost,age10);
                     }
 
                 }else{
