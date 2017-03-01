@@ -19988,14 +19988,7 @@
                     "endOffset": 105824
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 229,
-                        "startColumn": 1,
-                        "startOffset": 14713,
-                        "endColumn": 60,
-                        "endOffset": 14772
-                    }
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
                 }
             },
             {
@@ -20195,20 +20188,27 @@
                     "startLine": 2260,
                     "startColumn": 4,
                     "startOffset": 106663,
-                    "endColumn": 56,
-                    "endOffset": 106715
+                    "endColumn": 54,
+                    "endOffset": 106713
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 1,
+                        "startOffset": 513,
+                        "endColumn": 51,
+                        "endOffset": 563
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 2261,
                     "startColumn": 4,
-                    "startOffset": 106720,
-                    "endColumn": 60,
-                    "endOffset": 106776
+                    "startOffset": 106718,
+                    "endColumn": 56,
+                    "endOffset": 106770
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20218,9 +20218,9 @@
                 "to": {
                     "startLine": 2262,
                     "startColumn": 4,
-                    "startOffset": 106781,
-                    "endColumn": 71,
-                    "endOffset": 106848
+                    "startOffset": 106775,
+                    "endColumn": 60,
+                    "endOffset": 106831
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20230,9 +20230,9 @@
                 "to": {
                     "startLine": 2263,
                     "startColumn": 4,
-                    "startOffset": 106853,
-                    "endColumn": 70,
-                    "endOffset": 106919
+                    "startOffset": 106836,
+                    "endColumn": 71,
+                    "endOffset": 106903
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20242,9 +20242,9 @@
                 "to": {
                     "startLine": 2264,
                     "startColumn": 4,
-                    "startOffset": 106924,
-                    "endColumn": 64,
-                    "endOffset": 106984
+                    "startOffset": 106908,
+                    "endColumn": 70,
+                    "endOffset": 106974
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20254,9 +20254,9 @@
                 "to": {
                     "startLine": 2265,
                     "startColumn": 4,
-                    "startOffset": 106989,
-                    "endColumn": 61,
-                    "endOffset": 107046
+                    "startOffset": 106979,
+                    "endColumn": 64,
+                    "endOffset": 107039
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20266,9 +20266,9 @@
                 "to": {
                     "startLine": 2266,
                     "startColumn": 4,
-                    "startOffset": 107051,
-                    "endColumn": 40,
-                    "endOffset": 107087
+                    "startOffset": 107044,
+                    "endColumn": 61,
+                    "endOffset": 107101
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20278,9 +20278,9 @@
                 "to": {
                     "startLine": 2267,
                     "startColumn": 4,
-                    "startOffset": 107092,
-                    "endColumn": 72,
-                    "endOffset": 107160
+                    "startOffset": 107106,
+                    "endColumn": 40,
+                    "endOffset": 107142
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20290,9 +20290,9 @@
                 "to": {
                     "startLine": 2268,
                     "startColumn": 4,
-                    "startOffset": 107165,
-                    "endColumn": 60,
-                    "endOffset": 107221
+                    "startOffset": 107147,
+                    "endColumn": 72,
+                    "endOffset": 107215
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20302,33 +20302,9 @@
                 "to": {
                     "startLine": 2269,
                     "startColumn": 4,
-                    "startOffset": 107226,
-                    "endColumn": 87,
-                    "endOffset": 107309
-                },
-                "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\bootconfig.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2270,
-                    "startColumn": 4,
-                    "startOffset": 107314,
-                    "endColumn": 52,
-                    "endOffset": 107362
-                },
-                "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2271,
-                    "startColumn": 4,
-                    "startOffset": 107367,
-                    "endColumn": 39,
-                    "endOffset": 107402
+                    "startOffset": 107220,
+                    "endColumn": 60,
+                    "endOffset": 107276
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20336,11 +20312,35 @@
             },
             {
                 "to": {
+                    "startLine": 2270,
+                    "startColumn": 4,
+                    "startOffset": 107281,
+                    "endColumn": 87,
+                    "endOffset": 107364
+                },
+                "from": {
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\bootconfig.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2271,
+                    "startColumn": 4,
+                    "startOffset": 107369,
+                    "endColumn": 52,
+                    "endOffset": 107417
+                },
+                "from": {
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
                     "startLine": 2272,
                     "startColumn": 4,
-                    "startOffset": 107407,
-                    "endColumn": 61,
-                    "endOffset": 107464
+                    "startOffset": 107422,
+                    "endColumn": 39,
+                    "endOffset": 107457
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20350,9 +20350,9 @@
                 "to": {
                     "startLine": 2273,
                     "startColumn": 4,
-                    "startOffset": 107469,
-                    "endColumn": 68,
-                    "endOffset": 107533
+                    "startOffset": 107462,
+                    "endColumn": 61,
+                    "endOffset": 107519
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20362,9 +20362,9 @@
                 "to": {
                     "startLine": 2274,
                     "startColumn": 4,
-                    "startOffset": 107538,
-                    "endColumn": 39,
-                    "endOffset": 107573
+                    "startOffset": 107524,
+                    "endColumn": 68,
+                    "endOffset": 107588
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20374,9 +20374,9 @@
                 "to": {
                     "startLine": 2275,
                     "startColumn": 4,
-                    "startOffset": 107578,
-                    "endColumn": 67,
-                    "endOffset": 107641
+                    "startOffset": 107593,
+                    "endColumn": 39,
+                    "endOffset": 107628
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20386,9 +20386,9 @@
                 "to": {
                     "startLine": 2276,
                     "startColumn": 4,
-                    "startOffset": 107646,
-                    "endColumn": 86,
-                    "endOffset": 107728
+                    "startOffset": 107633,
+                    "endColumn": 67,
+                    "endOffset": 107696
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20398,9 +20398,9 @@
                 "to": {
                     "startLine": 2277,
                     "startColumn": 4,
-                    "startOffset": 107733,
-                    "endColumn": 72,
-                    "endOffset": 107801
+                    "startOffset": 107701,
+                    "endColumn": 86,
+                    "endOffset": 107783
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20410,9 +20410,9 @@
                 "to": {
                     "startLine": 2278,
                     "startColumn": 4,
-                    "startOffset": 107806,
-                    "endColumn": 46,
-                    "endOffset": 107848
+                    "startOffset": 107788,
+                    "endColumn": 72,
+                    "endOffset": 107856
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20422,9 +20422,9 @@
                 "to": {
                     "startLine": 2279,
                     "startColumn": 4,
-                    "startOffset": 107853,
-                    "endColumn": 85,
-                    "endOffset": 107934
+                    "startOffset": 107861,
+                    "endColumn": 46,
+                    "endOffset": 107903
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20434,9 +20434,9 @@
                 "to": {
                     "startLine": 2280,
                     "startColumn": 4,
-                    "startOffset": 107939,
-                    "endColumn": 71,
-                    "endOffset": 108006
+                    "startOffset": 107908,
+                    "endColumn": 85,
+                    "endOffset": 107989
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20446,9 +20446,9 @@
                 "to": {
                     "startLine": 2281,
                     "startColumn": 4,
-                    "startOffset": 108011,
-                    "endColumn": 56,
-                    "endOffset": 108063
+                    "startOffset": 107994,
+                    "endColumn": 71,
+                    "endOffset": 108061
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20458,9 +20458,9 @@
                 "to": {
                     "startLine": 2282,
                     "startColumn": 4,
-                    "startOffset": 108068,
-                    "endColumn": 50,
-                    "endOffset": 108114
+                    "startOffset": 108066,
+                    "endColumn": 56,
+                    "endOffset": 108118
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20470,9 +20470,9 @@
                 "to": {
                     "startLine": 2283,
                     "startColumn": 4,
-                    "startOffset": 108119,
-                    "endColumn": 45,
-                    "endOffset": 108160
+                    "startOffset": 108123,
+                    "endColumn": 50,
+                    "endOffset": 108169
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20482,9 +20482,9 @@
                 "to": {
                     "startLine": 2284,
                     "startColumn": 4,
-                    "startOffset": 108165,
-                    "endColumn": 43,
-                    "endOffset": 108204
+                    "startOffset": 108174,
+                    "endColumn": 45,
+                    "endOffset": 108215
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20494,9 +20494,9 @@
                 "to": {
                     "startLine": 2285,
                     "startColumn": 4,
-                    "startOffset": 108209,
-                    "endColumn": 39,
-                    "endOffset": 108244
+                    "startOffset": 108220,
+                    "endColumn": 43,
+                    "endOffset": 108259
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20506,9 +20506,9 @@
                 "to": {
                     "startLine": 2286,
                     "startColumn": 4,
-                    "startOffset": 108249,
-                    "endColumn": 79,
-                    "endOffset": 108324
+                    "startOffset": 108264,
+                    "endColumn": 39,
+                    "endOffset": 108299
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20518,9 +20518,9 @@
                 "to": {
                     "startLine": 2287,
                     "startColumn": 4,
-                    "startOffset": 108329,
-                    "endColumn": 42,
-                    "endOffset": 108367
+                    "startOffset": 108304,
+                    "endColumn": 79,
+                    "endOffset": 108379
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20530,9 +20530,9 @@
                 "to": {
                     "startLine": 2288,
                     "startColumn": 4,
-                    "startOffset": 108372,
-                    "endColumn": 45,
-                    "endOffset": 108413
+                    "startOffset": 108384,
+                    "endColumn": 42,
+                    "endOffset": 108422
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20542,9 +20542,9 @@
                 "to": {
                     "startLine": 2289,
                     "startColumn": 4,
-                    "startOffset": 108418,
-                    "endColumn": 67,
-                    "endOffset": 108481
+                    "startOffset": 108427,
+                    "endColumn": 45,
+                    "endOffset": 108468
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20554,9 +20554,9 @@
                 "to": {
                     "startLine": 2290,
                     "startColumn": 4,
-                    "startOffset": 108486,
-                    "endColumn": 59,
-                    "endOffset": 108541
+                    "startOffset": 108473,
+                    "endColumn": 67,
+                    "endOffset": 108536
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20566,9 +20566,9 @@
                 "to": {
                     "startLine": 2291,
                     "startColumn": 4,
-                    "startOffset": 108546,
-                    "endColumn": 53,
-                    "endOffset": 108595
+                    "startOffset": 108541,
+                    "endColumn": 59,
+                    "endOffset": 108596
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20578,9 +20578,9 @@
                 "to": {
                     "startLine": 2292,
                     "startColumn": 4,
-                    "startOffset": 108600,
-                    "endColumn": 45,
-                    "endOffset": 108641
+                    "startOffset": 108601,
+                    "endColumn": 53,
+                    "endOffset": 108650
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20590,9 +20590,9 @@
                 "to": {
                     "startLine": 2293,
                     "startColumn": 4,
-                    "startOffset": 108646,
-                    "endColumn": 58,
-                    "endOffset": 108700
+                    "startOffset": 108655,
+                    "endColumn": 45,
+                    "endOffset": 108696
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20602,9 +20602,9 @@
                 "to": {
                     "startLine": 2294,
                     "startColumn": 4,
-                    "startOffset": 108705,
-                    "endColumn": 61,
-                    "endOffset": 108762
+                    "startOffset": 108701,
+                    "endColumn": 58,
+                    "endOffset": 108755
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20614,9 +20614,9 @@
                 "to": {
                     "startLine": 2295,
                     "startColumn": 4,
-                    "startOffset": 108767,
-                    "endColumn": 45,
-                    "endOffset": 108808
+                    "startOffset": 108760,
+                    "endColumn": 61,
+                    "endOffset": 108817
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20626,9 +20626,9 @@
                 "to": {
                     "startLine": 2296,
                     "startColumn": 4,
-                    "startOffset": 108813,
-                    "endColumn": 49,
-                    "endOffset": 108858
+                    "startOffset": 108822,
+                    "endColumn": 45,
+                    "endOffset": 108863
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20638,9 +20638,9 @@
                 "to": {
                     "startLine": 2297,
                     "startColumn": 4,
-                    "startOffset": 108863,
-                    "endColumn": 41,
-                    "endOffset": 108900
+                    "startOffset": 108868,
+                    "endColumn": 49,
+                    "endOffset": 108913
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20650,9 +20650,9 @@
                 "to": {
                     "startLine": 2298,
                     "startColumn": 4,
-                    "startOffset": 108905,
-                    "endColumn": 83,
-                    "endOffset": 108984
+                    "startOffset": 108918,
+                    "endColumn": 41,
+                    "endOffset": 108955
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20662,9 +20662,9 @@
                 "to": {
                     "startLine": 2299,
                     "startColumn": 4,
-                    "startOffset": 108989,
-                    "endColumn": 77,
-                    "endOffset": 109062
+                    "startOffset": 108960,
+                    "endColumn": 83,
+                    "endOffset": 109039
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20674,9 +20674,9 @@
                 "to": {
                     "startLine": 2300,
                     "startColumn": 4,
-                    "startOffset": 109067,
-                    "endColumn": 86,
-                    "endOffset": 109149
+                    "startOffset": 109044,
+                    "endColumn": 77,
+                    "endOffset": 109117
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20686,9 +20686,9 @@
                 "to": {
                     "startLine": 2301,
                     "startColumn": 4,
-                    "startOffset": 109154,
-                    "endColumn": 43,
-                    "endOffset": 109193
+                    "startOffset": 109122,
+                    "endColumn": 86,
+                    "endOffset": 109204
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20698,9 +20698,9 @@
                 "to": {
                     "startLine": 2302,
                     "startColumn": 4,
-                    "startOffset": 109198,
-                    "endColumn": 50,
-                    "endOffset": 109244
+                    "startOffset": 109209,
+                    "endColumn": 43,
+                    "endOffset": 109248
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20710,9 +20710,9 @@
                 "to": {
                     "startLine": 2303,
                     "startColumn": 4,
-                    "startOffset": 109249,
-                    "endColumn": 65,
-                    "endOffset": 109310
+                    "startOffset": 109253,
+                    "endColumn": 50,
+                    "endOffset": 109299
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20722,9 +20722,9 @@
                 "to": {
                     "startLine": 2304,
                     "startColumn": 4,
-                    "startOffset": 109315,
-                    "endColumn": 99,
-                    "endOffset": 109410
+                    "startOffset": 109304,
+                    "endColumn": 65,
+                    "endOffset": 109365
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20734,9 +20734,9 @@
                 "to": {
                     "startLine": 2305,
                     "startColumn": 4,
-                    "startOffset": 109415,
-                    "endColumn": 67,
-                    "endOffset": 109478
+                    "startOffset": 109370,
+                    "endColumn": 99,
+                    "endOffset": 109465
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20746,9 +20746,9 @@
                 "to": {
                     "startLine": 2306,
                     "startColumn": 4,
-                    "startOffset": 109483,
-                    "endColumn": 61,
-                    "endOffset": 109540
+                    "startOffset": 109470,
+                    "endColumn": 67,
+                    "endOffset": 109533
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20758,9 +20758,9 @@
                 "to": {
                     "startLine": 2307,
                     "startColumn": 4,
-                    "startOffset": 109545,
-                    "endColumn": 63,
-                    "endOffset": 109604
+                    "startOffset": 109538,
+                    "endColumn": 61,
+                    "endOffset": 109595
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20770,9 +20770,9 @@
                 "to": {
                     "startLine": 2308,
                     "startColumn": 4,
-                    "startOffset": 109609,
-                    "endColumn": 61,
-                    "endOffset": 109666
+                    "startOffset": 109600,
+                    "endColumn": 63,
+                    "endOffset": 109659
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20782,9 +20782,9 @@
                 "to": {
                     "startLine": 2309,
                     "startColumn": 4,
-                    "startOffset": 109671,
+                    "startOffset": 109664,
                     "endColumn": 61,
-                    "endOffset": 109728
+                    "endOffset": 109721
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20794,9 +20794,9 @@
                 "to": {
                     "startLine": 2310,
                     "startColumn": 4,
-                    "startOffset": 109733,
+                    "startOffset": 109726,
                     "endColumn": 61,
-                    "endOffset": 109790
+                    "endOffset": 109783
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20806,9 +20806,9 @@
                 "to": {
                     "startLine": 2311,
                     "startColumn": 4,
-                    "startOffset": 109795,
+                    "startOffset": 109788,
                     "endColumn": 61,
-                    "endOffset": 109852
+                    "endOffset": 109845
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20818,9 +20818,9 @@
                 "to": {
                     "startLine": 2312,
                     "startColumn": 4,
-                    "startOffset": 109857,
+                    "startOffset": 109850,
                     "endColumn": 61,
-                    "endOffset": 109914
+                    "endOffset": 109907
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20830,9 +20830,9 @@
                 "to": {
                     "startLine": 2313,
                     "startColumn": 4,
-                    "startOffset": 109919,
+                    "startOffset": 109912,
                     "endColumn": 61,
-                    "endOffset": 109976
+                    "endOffset": 109969
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20842,9 +20842,9 @@
                 "to": {
                     "startLine": 2314,
                     "startColumn": 4,
-                    "startOffset": 109981,
+                    "startOffset": 109974,
                     "endColumn": 61,
-                    "endOffset": 110038
+                    "endOffset": 110031
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20854,9 +20854,9 @@
                 "to": {
                     "startLine": 2315,
                     "startColumn": 4,
-                    "startOffset": 110043,
+                    "startOffset": 110036,
                     "endColumn": 61,
-                    "endOffset": 110100
+                    "endOffset": 110093
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20866,9 +20866,9 @@
                 "to": {
                     "startLine": 2316,
                     "startColumn": 4,
-                    "startOffset": 110105,
-                    "endColumn": 62,
-                    "endOffset": 110163
+                    "startOffset": 110098,
+                    "endColumn": 61,
+                    "endOffset": 110155
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20878,9 +20878,9 @@
                 "to": {
                     "startLine": 2317,
                     "startColumn": 4,
-                    "startOffset": 110168,
-                    "endColumn": 49,
-                    "endOffset": 110213
+                    "startOffset": 110160,
+                    "endColumn": 62,
+                    "endOffset": 110218
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20890,9 +20890,9 @@
                 "to": {
                     "startLine": 2318,
                     "startColumn": 4,
-                    "startOffset": 110218,
-                    "endColumn": 56,
-                    "endOffset": 110270
+                    "startOffset": 110223,
+                    "endColumn": 49,
+                    "endOffset": 110268
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20902,9 +20902,9 @@
                 "to": {
                     "startLine": 2319,
                     "startColumn": 4,
-                    "startOffset": 110275,
-                    "endColumn": 98,
-                    "endOffset": 110369
+                    "startOffset": 110273,
+                    "endColumn": 56,
+                    "endOffset": 110325
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20914,9 +20914,9 @@
                 "to": {
                     "startLine": 2320,
                     "startColumn": 4,
-                    "startOffset": 110374,
-                    "endColumn": 49,
-                    "endOffset": 110419
+                    "startOffset": 110330,
+                    "endColumn": 98,
+                    "endOffset": 110424
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20926,9 +20926,9 @@
                 "to": {
                     "startLine": 2321,
                     "startColumn": 4,
-                    "startOffset": 110424,
-                    "endColumn": 57,
-                    "endOffset": 110477
+                    "startOffset": 110429,
+                    "endColumn": 49,
+                    "endOffset": 110474
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20938,9 +20938,9 @@
                 "to": {
                     "startLine": 2322,
                     "startColumn": 4,
-                    "startOffset": 110482,
-                    "endColumn": 51,
-                    "endOffset": 110529
+                    "startOffset": 110479,
+                    "endColumn": 57,
+                    "endOffset": 110532
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20950,9 +20950,9 @@
                 "to": {
                     "startLine": 2323,
                     "startColumn": 4,
-                    "startOffset": 110534,
-                    "endColumn": 60,
-                    "endOffset": 110590
+                    "startOffset": 110537,
+                    "endColumn": 51,
+                    "endOffset": 110584
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20962,9 +20962,9 @@
                 "to": {
                     "startLine": 2324,
                     "startColumn": 4,
-                    "startOffset": 110595,
-                    "endColumn": 48,
-                    "endOffset": 110639
+                    "startOffset": 110589,
+                    "endColumn": 60,
+                    "endOffset": 110645
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20974,9 +20974,9 @@
                 "to": {
                     "startLine": 2325,
                     "startColumn": 4,
-                    "startOffset": 110644,
-                    "endColumn": 60,
-                    "endOffset": 110700
+                    "startOffset": 110650,
+                    "endColumn": 48,
+                    "endOffset": 110694
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20986,9 +20986,9 @@
                 "to": {
                     "startLine": 2326,
                     "startColumn": 4,
-                    "startOffset": 110705,
-                    "endColumn": 119,
-                    "endOffset": 110820
+                    "startOffset": 110699,
+                    "endColumn": 60,
+                    "endOffset": 110755
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -20998,9 +20998,9 @@
                 "to": {
                     "startLine": 2327,
                     "startColumn": 4,
-                    "startOffset": 110825,
-                    "endColumn": 111,
-                    "endOffset": 110932
+                    "startOffset": 110760,
+                    "endColumn": 119,
+                    "endOffset": 110875
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21010,9 +21010,9 @@
                 "to": {
                     "startLine": 2328,
                     "startColumn": 4,
-                    "startOffset": 110937,
-                    "endColumn": 64,
-                    "endOffset": 110997
+                    "startOffset": 110880,
+                    "endColumn": 111,
+                    "endOffset": 110987
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21022,9 +21022,9 @@
                 "to": {
                     "startLine": 2329,
                     "startColumn": 4,
-                    "startOffset": 111002,
-                    "endColumn": 55,
-                    "endOffset": 111053
+                    "startOffset": 110992,
+                    "endColumn": 64,
+                    "endOffset": 111052
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21034,9 +21034,9 @@
                 "to": {
                     "startLine": 2330,
                     "startColumn": 4,
-                    "startOffset": 111058,
-                    "endColumn": 48,
-                    "endOffset": 111102
+                    "startOffset": 111057,
+                    "endColumn": 55,
+                    "endOffset": 111108
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21046,9 +21046,9 @@
                 "to": {
                     "startLine": 2331,
                     "startColumn": 4,
-                    "startOffset": 111107,
-                    "endColumn": 52,
-                    "endOffset": 111155
+                    "startOffset": 111113,
+                    "endColumn": 48,
+                    "endOffset": 111157
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21058,9 +21058,9 @@
                 "to": {
                     "startLine": 2332,
                     "startColumn": 4,
-                    "startOffset": 111160,
-                    "endColumn": 101,
-                    "endOffset": 111257
+                    "startOffset": 111162,
+                    "endColumn": 52,
+                    "endOffset": 111210
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21070,21 +21070,9 @@
                 "to": {
                     "startLine": 2333,
                     "startColumn": 4,
-                    "startOffset": 111262,
-                    "endColumn": 158,
-                    "endOffset": 111416
-                },
-                "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\bootconfig.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2334,
-                    "startColumn": 4,
-                    "startOffset": 111421,
-                    "endColumn": 103,
-                    "endOffset": 111520
+                    "startOffset": 111215,
+                    "endColumn": 101,
+                    "endOffset": 111312
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21092,11 +21080,23 @@
             },
             {
                 "to": {
+                    "startLine": 2334,
+                    "startColumn": 4,
+                    "startOffset": 111317,
+                    "endColumn": 158,
+                    "endOffset": 111471
+                },
+                "from": {
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\bootconfig.xml"
+                }
+            },
+            {
+                "to": {
                     "startLine": 2335,
                     "startColumn": 4,
-                    "startOffset": 111525,
-                    "endColumn": 43,
-                    "endOffset": 111564
+                    "startOffset": 111476,
+                    "endColumn": 103,
+                    "endOffset": 111575
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21106,9 +21106,9 @@
                 "to": {
                     "startLine": 2336,
                     "startColumn": 4,
-                    "startOffset": 111569,
-                    "endColumn": 58,
-                    "endOffset": 111623
+                    "startOffset": 111580,
+                    "endColumn": 43,
+                    "endOffset": 111619
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21118,9 +21118,9 @@
                 "to": {
                     "startLine": 2337,
                     "startColumn": 4,
-                    "startOffset": 111628,
-                    "endColumn": 50,
-                    "endOffset": 111674
+                    "startOffset": 111624,
+                    "endColumn": 58,
+                    "endOffset": 111678
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21130,28 +21130,21 @@
                 "to": {
                     "startLine": 2338,
                     "startColumn": 4,
-                    "startOffset": 111679,
-                    "endColumn": 58,
-                    "endOffset": 111733
+                    "startOffset": 111683,
+                    "endColumn": 50,
+                    "endOffset": 111729
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 228,
-                        "startColumn": 1,
-                        "startOffset": 14657,
-                        "endColumn": 55,
-                        "endOffset": 14711
-                    }
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 2339,
                     "startColumn": 4,
-                    "startOffset": 111738,
-                    "endColumn": 41,
-                    "endOffset": 111775
+                    "startOffset": 111734,
+                    "endColumn": 58,
+                    "endOffset": 111788
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -21161,21 +21154,21 @@
                 "to": {
                     "startLine": 2340,
                     "startColumn": 4,
-                    "startOffset": 111780,
-                    "endColumn": 137,
-                    "endOffset": 111913
+                    "startOffset": 111793,
+                    "endColumn": 41,
+                    "endOffset": 111830
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 2341,
                     "startColumn": 4,
-                    "startOffset": 111918,
-                    "endColumn": 63,
-                    "endOffset": 111977
+                    "startOffset": 111835,
+                    "endColumn": 137,
+                    "endOffset": 111968
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21185,9 +21178,9 @@
                 "to": {
                     "startLine": 2342,
                     "startColumn": 4,
-                    "startOffset": 111982,
-                    "endColumn": 122,
-                    "endOffset": 112100
+                    "startOffset": 111973,
+                    "endColumn": 63,
+                    "endOffset": 112032
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21197,9 +21190,9 @@
                 "to": {
                     "startLine": 2343,
                     "startColumn": 4,
-                    "startOffset": 112105,
-                    "endColumn": 110,
-                    "endOffset": 112211
+                    "startOffset": 112037,
+                    "endColumn": 122,
+                    "endOffset": 112155
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21209,9 +21202,9 @@
                 "to": {
                     "startLine": 2344,
                     "startColumn": 4,
-                    "startOffset": 112216,
-                    "endColumn": 64,
-                    "endOffset": 112276
+                    "startOffset": 112160,
+                    "endColumn": 110,
+                    "endOffset": 112266
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21221,9 +21214,9 @@
                 "to": {
                     "startLine": 2345,
                     "startColumn": 4,
-                    "startOffset": 112281,
-                    "endColumn": 58,
-                    "endOffset": 112335
+                    "startOffset": 112271,
+                    "endColumn": 64,
+                    "endOffset": 112331
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21233,9 +21226,9 @@
                 "to": {
                     "startLine": 2346,
                     "startColumn": 4,
-                    "startOffset": 112340,
-                    "endColumn": 59,
-                    "endOffset": 112395
+                    "startOffset": 112336,
+                    "endColumn": 58,
+                    "endOffset": 112390
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21245,9 +21238,9 @@
                 "to": {
                     "startLine": 2347,
                     "startColumn": 4,
-                    "startOffset": 112400,
-                    "endColumn": 64,
-                    "endOffset": 112460
+                    "startOffset": 112395,
+                    "endColumn": 59,
+                    "endOffset": 112450
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21257,9 +21250,9 @@
                 "to": {
                     "startLine": 2348,
                     "startColumn": 4,
-                    "startOffset": 112465,
-                    "endColumn": 63,
-                    "endOffset": 112524
+                    "startOffset": 112455,
+                    "endColumn": 64,
+                    "endOffset": 112515
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21269,9 +21262,9 @@
                 "to": {
                     "startLine": 2349,
                     "startColumn": 4,
-                    "startOffset": 112529,
-                    "endColumn": 87,
-                    "endOffset": 112612
+                    "startOffset": 112520,
+                    "endColumn": 63,
+                    "endOffset": 112579
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21281,9 +21274,9 @@
                 "to": {
                     "startLine": 2350,
                     "startColumn": 4,
-                    "startOffset": 112617,
-                    "endColumn": 84,
-                    "endOffset": 112697
+                    "startOffset": 112584,
+                    "endColumn": 87,
+                    "endOffset": 112667
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21293,9 +21286,9 @@
                 "to": {
                     "startLine": 2351,
                     "startColumn": 4,
-                    "startOffset": 112702,
-                    "endColumn": 61,
-                    "endOffset": 112759
+                    "startOffset": 112672,
+                    "endColumn": 84,
+                    "endOffset": 112752
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21305,9 +21298,9 @@
                 "to": {
                     "startLine": 2352,
                     "startColumn": 4,
-                    "startOffset": 112764,
-                    "endColumn": 59,
-                    "endOffset": 112819
+                    "startOffset": 112757,
+                    "endColumn": 61,
+                    "endOffset": 112814
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21317,9 +21310,9 @@
                 "to": {
                     "startLine": 2353,
                     "startColumn": 4,
-                    "startOffset": 112824,
-                    "endColumn": 100,
-                    "endOffset": 112920
+                    "startOffset": 112819,
+                    "endColumn": 59,
+                    "endOffset": 112874
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21329,9 +21322,9 @@
                 "to": {
                     "startLine": 2354,
                     "startColumn": 4,
-                    "startOffset": 112925,
-                    "endColumn": 72,
-                    "endOffset": 112993
+                    "startOffset": 112879,
+                    "endColumn": 100,
+                    "endOffset": 112975
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21341,9 +21334,9 @@
                 "to": {
                     "startLine": 2355,
                     "startColumn": 4,
-                    "startOffset": 112998,
-                    "endColumn": 88,
-                    "endOffset": 113082
+                    "startOffset": 112980,
+                    "endColumn": 72,
+                    "endOffset": 113048
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21353,21 +21346,21 @@
                 "to": {
                     "startLine": 2356,
                     "startColumn": 4,
-                    "startOffset": 113087,
-                    "endColumn": 60,
-                    "endOffset": 113143
+                    "startOffset": 113053,
+                    "endColumn": 88,
+                    "endOffset": 113137
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 2357,
                     "startColumn": 4,
-                    "startOffset": 113148,
-                    "endColumn": 56,
-                    "endOffset": 113200
+                    "startOffset": 113142,
+                    "endColumn": 60,
+                    "endOffset": 113198
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21377,9 +21370,9 @@
                 "to": {
                     "startLine": 2358,
                     "startColumn": 4,
-                    "startOffset": 113205,
-                    "endColumn": 58,
-                    "endOffset": 113259
+                    "startOffset": 113203,
+                    "endColumn": 56,
+                    "endOffset": 113255
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21389,9 +21382,9 @@
                 "to": {
                     "startLine": 2359,
                     "startColumn": 4,
-                    "startOffset": 113264,
-                    "endColumn": 64,
-                    "endOffset": 113324
+                    "startOffset": 113260,
+                    "endColumn": 58,
+                    "endOffset": 113314
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21401,9 +21394,9 @@
                 "to": {
                     "startLine": 2360,
                     "startColumn": 4,
-                    "startOffset": 113329,
-                    "endColumn": 109,
-                    "endOffset": 113434
+                    "startOffset": 113319,
+                    "endColumn": 64,
+                    "endOffset": 113379
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21413,9 +21406,9 @@
                 "to": {
                     "startLine": 2361,
                     "startColumn": 4,
-                    "startOffset": 113439,
-                    "endColumn": 63,
-                    "endOffset": 113498
+                    "startOffset": 113384,
+                    "endColumn": 109,
+                    "endOffset": 113489
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21425,9 +21418,9 @@
                 "to": {
                     "startLine": 2362,
                     "startColumn": 4,
-                    "startOffset": 113503,
-                    "endColumn": 79,
-                    "endOffset": 113578
+                    "startOffset": 113494,
+                    "endColumn": 63,
+                    "endOffset": 113553
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21437,9 +21430,9 @@
                 "to": {
                     "startLine": 2363,
                     "startColumn": 4,
-                    "startOffset": 113583,
-                    "endColumn": 75,
-                    "endOffset": 113654
+                    "startOffset": 113558,
+                    "endColumn": 79,
+                    "endOffset": 113633
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21449,9 +21442,9 @@
                 "to": {
                     "startLine": 2364,
                     "startColumn": 4,
-                    "startOffset": 113659,
-                    "endColumn": 80,
-                    "endOffset": 113735
+                    "startOffset": 113638,
+                    "endColumn": 75,
+                    "endOffset": 113709
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21461,9 +21454,9 @@
                 "to": {
                     "startLine": 2365,
                     "startColumn": 4,
-                    "startOffset": 113740,
-                    "endColumn": 79,
-                    "endOffset": 113815
+                    "startOffset": 113714,
+                    "endColumn": 80,
+                    "endOffset": 113790
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21473,9 +21466,9 @@
                 "to": {
                     "startLine": 2366,
                     "startColumn": 4,
-                    "startOffset": 113820,
-                    "endColumn": 77,
-                    "endOffset": 113893
+                    "startOffset": 113795,
+                    "endColumn": 79,
+                    "endOffset": 113870
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21485,9 +21478,9 @@
                 "to": {
                     "startLine": 2367,
                     "startColumn": 4,
-                    "startOffset": 113898,
-                    "endColumn": 64,
-                    "endOffset": 113958
+                    "startOffset": 113875,
+                    "endColumn": 77,
+                    "endOffset": 113948
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21497,9 +21490,9 @@
                 "to": {
                     "startLine": 2368,
                     "startColumn": 4,
-                    "startOffset": 113963,
-                    "endColumn": 56,
-                    "endOffset": 114015
+                    "startOffset": 113953,
+                    "endColumn": 64,
+                    "endOffset": 114013
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21509,9 +21502,9 @@
                 "to": {
                     "startLine": 2369,
                     "startColumn": 4,
-                    "startOffset": 114020,
-                    "endColumn": 62,
-                    "endOffset": 114078
+                    "startOffset": 114018,
+                    "endColumn": 56,
+                    "endOffset": 114070
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21521,9 +21514,9 @@
                 "to": {
                     "startLine": 2370,
                     "startColumn": 4,
-                    "startOffset": 114083,
-                    "endColumn": 60,
-                    "endOffset": 114139
+                    "startOffset": 114075,
+                    "endColumn": 62,
+                    "endOffset": 114133
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21533,9 +21526,9 @@
                 "to": {
                     "startLine": 2371,
                     "startColumn": 4,
-                    "startOffset": 114144,
-                    "endColumn": 85,
-                    "endOffset": 114225
+                    "startOffset": 114138,
+                    "endColumn": 60,
+                    "endOffset": 114194
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21545,9 +21538,9 @@
                 "to": {
                     "startLine": 2372,
                     "startColumn": 4,
-                    "startOffset": 114230,
-                    "endColumn": 60,
-                    "endOffset": 114286
+                    "startOffset": 114199,
+                    "endColumn": 85,
+                    "endOffset": 114280
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -21557,21 +21550,21 @@
                 "to": {
                     "startLine": 2373,
                     "startColumn": 4,
-                    "startOffset": 114291,
-                    "endColumn": 100,
-                    "endOffset": 114387
+                    "startOffset": 114285,
+                    "endColumn": 60,
+                    "endOffset": 114341
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 2374,
                     "startColumn": 4,
-                    "startOffset": 114392,
-                    "endColumn": 49,
-                    "endOffset": 114437
+                    "startOffset": 114346,
+                    "endColumn": 100,
+                    "endOffset": 114442
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21581,9 +21574,9 @@
                 "to": {
                     "startLine": 2375,
                     "startColumn": 4,
-                    "startOffset": 114442,
-                    "endColumn": 153,
-                    "endOffset": 114591
+                    "startOffset": 114447,
+                    "endColumn": 49,
+                    "endOffset": 114492
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21593,9 +21586,9 @@
                 "to": {
                     "startLine": 2376,
                     "startColumn": 4,
-                    "startOffset": 114596,
-                    "endColumn": 124,
-                    "endOffset": 114716
+                    "startOffset": 114497,
+                    "endColumn": 153,
+                    "endOffset": 114646
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21605,9 +21598,9 @@
                 "to": {
                     "startLine": 2377,
                     "startColumn": 4,
-                    "startOffset": 114721,
-                    "endColumn": 134,
-                    "endOffset": 114851
+                    "startOffset": 114651,
+                    "endColumn": 124,
+                    "endOffset": 114771
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21617,9 +21610,9 @@
                 "to": {
                     "startLine": 2378,
                     "startColumn": 4,
-                    "startOffset": 114856,
-                    "endColumn": 98,
-                    "endOffset": 114950
+                    "startOffset": 114776,
+                    "endColumn": 134,
+                    "endOffset": 114906
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21629,9 +21622,9 @@
                 "to": {
                     "startLine": 2379,
                     "startColumn": 4,
-                    "startOffset": 114955,
-                    "endColumn": 120,
-                    "endOffset": 115071
+                    "startOffset": 114911,
+                    "endColumn": 98,
+                    "endOffset": 115005
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21641,9 +21634,9 @@
                 "to": {
                     "startLine": 2380,
                     "startColumn": 4,
-                    "startOffset": 115076,
-                    "endColumn": 142,
-                    "endOffset": 115214
+                    "startOffset": 115010,
+                    "endColumn": 120,
+                    "endOffset": 115126
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21653,9 +21646,9 @@
                 "to": {
                     "startLine": 2381,
                     "startColumn": 4,
-                    "startOffset": 115219,
-                    "endColumn": 97,
-                    "endOffset": 115312
+                    "startOffset": 115131,
+                    "endColumn": 142,
+                    "endOffset": 115269
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21665,9 +21658,9 @@
                 "to": {
                     "startLine": 2382,
                     "startColumn": 4,
-                    "startOffset": 115317,
-                    "endColumn": 80,
-                    "endOffset": 115393
+                    "startOffset": 115274,
+                    "endColumn": 97,
+                    "endOffset": 115367
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21677,9 +21670,9 @@
                 "to": {
                     "startLine": 2383,
                     "startColumn": 4,
-                    "startOffset": 115398,
-                    "endColumn": 190,
-                    "endOffset": 115584
+                    "startOffset": 115372,
+                    "endColumn": 80,
+                    "endOffset": 115448
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21689,9 +21682,9 @@
                 "to": {
                     "startLine": 2384,
                     "startColumn": 4,
-                    "startOffset": 115589,
-                    "endColumn": 72,
-                    "endOffset": 115657
+                    "startOffset": 115453,
+                    "endColumn": 190,
+                    "endOffset": 115639
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21701,9 +21694,9 @@
                 "to": {
                     "startLine": 2385,
                     "startColumn": 4,
-                    "startOffset": 115662,
-                    "endColumn": 93,
-                    "endOffset": 115751
+                    "startOffset": 115644,
+                    "endColumn": 72,
+                    "endOffset": 115712
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21713,9 +21706,9 @@
                 "to": {
                     "startLine": 2386,
                     "startColumn": 4,
-                    "startOffset": 115756,
-                    "endColumn": 70,
-                    "endOffset": 115822
+                    "startOffset": 115717,
+                    "endColumn": 93,
+                    "endOffset": 115806
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21725,9 +21718,9 @@
                 "to": {
                     "startLine": 2387,
                     "startColumn": 4,
-                    "startOffset": 115827,
-                    "endColumn": 69,
-                    "endOffset": 115892
+                    "startOffset": 115811,
+                    "endColumn": 70,
+                    "endOffset": 115877
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21737,9 +21730,9 @@
                 "to": {
                     "startLine": 2388,
                     "startColumn": 4,
-                    "startOffset": 115897,
-                    "endColumn": 84,
-                    "endOffset": 115977
+                    "startOffset": 115882,
+                    "endColumn": 69,
+                    "endOffset": 115947
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21749,9 +21742,9 @@
                 "to": {
                     "startLine": 2389,
                     "startColumn": 4,
-                    "startOffset": 115982,
-                    "endColumn": 93,
-                    "endOffset": 116071
+                    "startOffset": 115952,
+                    "endColumn": 84,
+                    "endOffset": 116032
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21761,9 +21754,9 @@
                 "to": {
                     "startLine": 2390,
                     "startColumn": 4,
-                    "startOffset": 116076,
-                    "endColumn": 53,
-                    "endOffset": 116125
+                    "startOffset": 116037,
+                    "endColumn": 93,
+                    "endOffset": 116126
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21773,9 +21766,9 @@
                 "to": {
                     "startLine": 2391,
                     "startColumn": 4,
-                    "startOffset": 116130,
-                    "endColumn": 55,
-                    "endOffset": 116181
+                    "startOffset": 116131,
+                    "endColumn": 53,
+                    "endOffset": 116180
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21785,9 +21778,9 @@
                 "to": {
                     "startLine": 2392,
                     "startColumn": 4,
-                    "startOffset": 116186,
-                    "endColumn": 100,
-                    "endOffset": 116282
+                    "startOffset": 116185,
+                    "endColumn": 55,
+                    "endOffset": 116236
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21797,9 +21790,9 @@
                 "to": {
                     "startLine": 2393,
                     "startColumn": 4,
-                    "startOffset": 116287,
-                    "endColumn": 139,
-                    "endOffset": 116422
+                    "startOffset": 116241,
+                    "endColumn": 100,
+                    "endOffset": 116337
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21809,9 +21802,9 @@
                 "to": {
                     "startLine": 2394,
                     "startColumn": 4,
-                    "startOffset": 116427,
-                    "endColumn": 76,
-                    "endOffset": 116499
+                    "startOffset": 116342,
+                    "endColumn": 139,
+                    "endOffset": 116477
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21821,9 +21814,9 @@
                 "to": {
                     "startLine": 2395,
                     "startColumn": 4,
-                    "startOffset": 116504,
-                    "endColumn": 57,
-                    "endOffset": 116557
+                    "startOffset": 116482,
+                    "endColumn": 76,
+                    "endOffset": 116554
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21833,9 +21826,9 @@
                 "to": {
                     "startLine": 2396,
                     "startColumn": 4,
-                    "startOffset": 116562,
-                    "endColumn": 45,
-                    "endOffset": 116603
+                    "startOffset": 116559,
+                    "endColumn": 57,
+                    "endOffset": 116612
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21845,9 +21838,9 @@
                 "to": {
                     "startLine": 2397,
                     "startColumn": 4,
-                    "startOffset": 116608,
-                    "endColumn": 146,
-                    "endOffset": 116750
+                    "startOffset": 116617,
+                    "endColumn": 45,
+                    "endOffset": 116658
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21857,9 +21850,9 @@
                 "to": {
                     "startLine": 2398,
                     "startColumn": 4,
-                    "startOffset": 116755,
-                    "endColumn": 69,
-                    "endOffset": 116820
+                    "startOffset": 116663,
+                    "endColumn": 146,
+                    "endOffset": 116805
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21869,9 +21862,9 @@
                 "to": {
                     "startLine": 2399,
                     "startColumn": 4,
-                    "startOffset": 116825,
-                    "endColumn": 67,
-                    "endOffset": 116888
+                    "startOffset": 116810,
+                    "endColumn": 69,
+                    "endOffset": 116875
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21881,9 +21874,9 @@
                 "to": {
                     "startLine": 2400,
                     "startColumn": 4,
-                    "startOffset": 116893,
-                    "endColumn": 62,
-                    "endOffset": 116951
+                    "startOffset": 116880,
+                    "endColumn": 67,
+                    "endOffset": 116943
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21893,9 +21886,9 @@
                 "to": {
                     "startLine": 2401,
                     "startColumn": 4,
-                    "startOffset": 116956,
-                    "endColumn": 64,
-                    "endOffset": 117016
+                    "startOffset": 116948,
+                    "endColumn": 62,
+                    "endOffset": 117006
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21905,9 +21898,9 @@
                 "to": {
                     "startLine": 2402,
                     "startColumn": 4,
-                    "startOffset": 117021,
-                    "endColumn": 68,
-                    "endOffset": 117085
+                    "startOffset": 117011,
+                    "endColumn": 64,
+                    "endOffset": 117071
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21917,9 +21910,9 @@
                 "to": {
                     "startLine": 2403,
                     "startColumn": 4,
-                    "startOffset": 117090,
-                    "endColumn": 65,
-                    "endOffset": 117151
+                    "startOffset": 117076,
+                    "endColumn": 68,
+                    "endOffset": 117140
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21929,9 +21922,9 @@
                 "to": {
                     "startLine": 2404,
                     "startColumn": 4,
-                    "startOffset": 117156,
-                    "endColumn": 69,
-                    "endOffset": 117221
+                    "startOffset": 117145,
+                    "endColumn": 65,
+                    "endOffset": 117206
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21941,8 +21934,8 @@
                 "to": {
                     "startLine": 2405,
                     "startColumn": 4,
-                    "startOffset": 117226,
-                    "endColumn": 54,
+                    "startOffset": 117211,
+                    "endColumn": 69,
                     "endOffset": 117276
                 },
                 "from": {
@@ -21954,8 +21947,8 @@
                     "startLine": 2406,
                     "startColumn": 4,
                     "startOffset": 117281,
-                    "endColumn": 56,
-                    "endOffset": 117333
+                    "endColumn": 54,
+                    "endOffset": 117331
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21965,9 +21958,9 @@
                 "to": {
                     "startLine": 2407,
                     "startColumn": 4,
-                    "startOffset": 117338,
-                    "endColumn": 63,
-                    "endOffset": 117397
+                    "startOffset": 117336,
+                    "endColumn": 56,
+                    "endOffset": 117388
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21977,9 +21970,9 @@
                 "to": {
                     "startLine": 2408,
                     "startColumn": 4,
-                    "startOffset": 117402,
-                    "endColumn": 65,
-                    "endOffset": 117463
+                    "startOffset": 117393,
+                    "endColumn": 63,
+                    "endOffset": 117452
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -21989,9 +21982,9 @@
                 "to": {
                     "startLine": 2409,
                     "startColumn": 4,
-                    "startOffset": 117468,
-                    "endColumn": 75,
-                    "endOffset": 117539
+                    "startOffset": 117457,
+                    "endColumn": 65,
+                    "endOffset": 117518
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22001,9 +21994,9 @@
                 "to": {
                     "startLine": 2410,
                     "startColumn": 4,
-                    "startOffset": 117544,
-                    "endColumn": 63,
-                    "endOffset": 117603
+                    "startOffset": 117523,
+                    "endColumn": 75,
+                    "endOffset": 117594
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22013,9 +22006,9 @@
                 "to": {
                     "startLine": 2411,
                     "startColumn": 4,
-                    "startOffset": 117608,
-                    "endColumn": 77,
-                    "endOffset": 117681
+                    "startOffset": 117599,
+                    "endColumn": 63,
+                    "endOffset": 117658
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22025,9 +22018,9 @@
                 "to": {
                     "startLine": 2412,
                     "startColumn": 4,
-                    "startOffset": 117686,
-                    "endColumn": 61,
-                    "endOffset": 117743
+                    "startOffset": 117663,
+                    "endColumn": 77,
+                    "endOffset": 117736
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22037,21 +22030,21 @@
                 "to": {
                     "startLine": 2413,
                     "startColumn": 4,
-                    "startOffset": 117748,
-                    "endColumn": 65,
-                    "endOffset": 117809
+                    "startOffset": 117741,
+                    "endColumn": 61,
+                    "endOffset": 117798
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 2414,
                     "startColumn": 4,
-                    "startOffset": 117814,
-                    "endColumn": 70,
-                    "endOffset": 117880
+                    "startOffset": 117803,
+                    "endColumn": 65,
+                    "endOffset": 117864
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22061,9 +22054,9 @@
                 "to": {
                     "startLine": 2415,
                     "startColumn": 4,
-                    "startOffset": 117885,
-                    "endColumn": 61,
-                    "endOffset": 117942
+                    "startOffset": 117869,
+                    "endColumn": 70,
+                    "endOffset": 117935
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22073,9 +22066,9 @@
                 "to": {
                     "startLine": 2416,
                     "startColumn": 4,
-                    "startOffset": 117947,
-                    "endColumn": 68,
-                    "endOffset": 118011
+                    "startOffset": 117940,
+                    "endColumn": 61,
+                    "endOffset": 117997
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22085,9 +22078,9 @@
                 "to": {
                     "startLine": 2417,
                     "startColumn": 4,
-                    "startOffset": 118016,
-                    "endColumn": 79,
-                    "endOffset": 118091
+                    "startOffset": 118002,
+                    "endColumn": 68,
+                    "endOffset": 118066
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22097,9 +22090,9 @@
                 "to": {
                     "startLine": 2418,
                     "startColumn": 4,
-                    "startOffset": 118096,
-                    "endColumn": 68,
-                    "endOffset": 118160
+                    "startOffset": 118071,
+                    "endColumn": 79,
+                    "endOffset": 118146
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22109,9 +22102,9 @@
                 "to": {
                     "startLine": 2419,
                     "startColumn": 4,
-                    "startOffset": 118165,
-                    "endColumn": 80,
-                    "endOffset": 118241
+                    "startOffset": 118151,
+                    "endColumn": 68,
+                    "endOffset": 118215
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22121,9 +22114,9 @@
                 "to": {
                     "startLine": 2420,
                     "startColumn": 4,
-                    "startOffset": 118246,
-                    "endColumn": 55,
-                    "endOffset": 118297
+                    "startOffset": 118220,
+                    "endColumn": 80,
+                    "endOffset": 118296
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22133,9 +22126,9 @@
                 "to": {
                     "startLine": 2421,
                     "startColumn": 4,
-                    "startOffset": 118302,
-                    "endColumn": 115,
-                    "endOffset": 118413
+                    "startOffset": 118301,
+                    "endColumn": 55,
+                    "endOffset": 118352
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22145,9 +22138,9 @@
                 "to": {
                     "startLine": 2422,
                     "startColumn": 4,
-                    "startOffset": 118418,
-                    "endColumn": 48,
-                    "endOffset": 118462
+                    "startOffset": 118357,
+                    "endColumn": 115,
+                    "endOffset": 118468
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22157,9 +22150,9 @@
                 "to": {
                     "startLine": 2423,
                     "startColumn": 4,
-                    "startOffset": 118467,
-                    "endColumn": 58,
-                    "endOffset": 118521
+                    "startOffset": 118473,
+                    "endColumn": 48,
+                    "endOffset": 118517
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22169,9 +22162,9 @@
                 "to": {
                     "startLine": 2424,
                     "startColumn": 4,
-                    "startOffset": 118526,
-                    "endColumn": 156,
-                    "endOffset": 118678
+                    "startOffset": 118522,
+                    "endColumn": 58,
+                    "endOffset": 118576
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22181,9 +22174,9 @@
                 "to": {
                     "startLine": 2425,
                     "startColumn": 4,
-                    "startOffset": 118683,
-                    "endColumn": 168,
-                    "endOffset": 118847
+                    "startOffset": 118581,
+                    "endColumn": 156,
+                    "endOffset": 118733
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22193,9 +22186,9 @@
                 "to": {
                     "startLine": 2426,
                     "startColumn": 4,
-                    "startOffset": 118852,
-                    "endColumn": 266,
-                    "endOffset": 119114
+                    "startOffset": 118738,
+                    "endColumn": 168,
+                    "endOffset": 118902
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22205,9 +22198,9 @@
                 "to": {
                     "startLine": 2427,
                     "startColumn": 4,
-                    "startOffset": 119119,
-                    "endColumn": 82,
-                    "endOffset": 119197
+                    "startOffset": 118907,
+                    "endColumn": 266,
+                    "endOffset": 119169
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22217,9 +22210,9 @@
                 "to": {
                     "startLine": 2428,
                     "startColumn": 4,
-                    "startOffset": 119202,
-                    "endColumn": 125,
-                    "endOffset": 119323
+                    "startOffset": 119174,
+                    "endColumn": 82,
+                    "endOffset": 119252
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22229,9 +22222,9 @@
                 "to": {
                     "startLine": 2429,
                     "startColumn": 4,
-                    "startOffset": 119328,
-                    "endColumn": 187,
-                    "endOffset": 119511
+                    "startOffset": 119257,
+                    "endColumn": 125,
+                    "endOffset": 119378
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22241,9 +22234,9 @@
                 "to": {
                     "startLine": 2430,
                     "startColumn": 4,
-                    "startOffset": 119516,
-                    "endColumn": 94,
-                    "endOffset": 119606
+                    "startOffset": 119383,
+                    "endColumn": 187,
+                    "endOffset": 119566
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22253,9 +22246,9 @@
                 "to": {
                     "startLine": 2431,
                     "startColumn": 4,
-                    "startOffset": 119611,
-                    "endColumn": 64,
-                    "endOffset": 119671
+                    "startOffset": 119571,
+                    "endColumn": 94,
+                    "endOffset": 119661
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22265,9 +22258,9 @@
                 "to": {
                     "startLine": 2432,
                     "startColumn": 4,
-                    "startOffset": 119676,
-                    "endColumn": 132,
-                    "endOffset": 119804
+                    "startOffset": 119666,
+                    "endColumn": 64,
+                    "endOffset": 119726
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22277,9 +22270,9 @@
                 "to": {
                     "startLine": 2433,
                     "startColumn": 4,
-                    "startOffset": 119809,
-                    "endColumn": 53,
-                    "endOffset": 119858
+                    "startOffset": 119731,
+                    "endColumn": 132,
+                    "endOffset": 119859
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22289,9 +22282,9 @@
                 "to": {
                     "startLine": 2434,
                     "startColumn": 4,
-                    "startOffset": 119863,
-                    "endColumn": 114,
-                    "endOffset": 119973
+                    "startOffset": 119864,
+                    "endColumn": 53,
+                    "endOffset": 119913
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22301,9 +22294,9 @@
                 "to": {
                     "startLine": 2435,
                     "startColumn": 4,
-                    "startOffset": 119978,
-                    "endColumn": 119,
-                    "endOffset": 120093
+                    "startOffset": 119918,
+                    "endColumn": 114,
+                    "endOffset": 120028
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22313,9 +22306,9 @@
                 "to": {
                     "startLine": 2436,
                     "startColumn": 4,
-                    "startOffset": 120098,
-                    "endColumn": 55,
-                    "endOffset": 120149
+                    "startOffset": 120033,
+                    "endColumn": 119,
+                    "endOffset": 120148
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22325,9 +22318,9 @@
                 "to": {
                     "startLine": 2437,
                     "startColumn": 4,
-                    "startOffset": 120154,
-                    "endColumn": 47,
-                    "endOffset": 120197
+                    "startOffset": 120153,
+                    "endColumn": 55,
+                    "endOffset": 120204
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22337,9 +22330,9 @@
                 "to": {
                     "startLine": 2438,
                     "startColumn": 4,
-                    "startOffset": 120202,
-                    "endColumn": 65,
-                    "endOffset": 120263
+                    "startOffset": 120209,
+                    "endColumn": 47,
+                    "endOffset": 120252
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22349,9 +22342,9 @@
                 "to": {
                     "startLine": 2439,
                     "startColumn": 4,
-                    "startOffset": 120268,
-                    "endColumn": 48,
-                    "endOffset": 120312
+                    "startOffset": 120257,
+                    "endColumn": 65,
+                    "endOffset": 120318
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22361,9 +22354,9 @@
                 "to": {
                     "startLine": 2440,
                     "startColumn": 4,
-                    "startOffset": 120317,
-                    "endColumn": 40,
-                    "endOffset": 120353
+                    "startOffset": 120323,
+                    "endColumn": 48,
+                    "endOffset": 120367
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22373,9 +22366,9 @@
                 "to": {
                     "startLine": 2441,
                     "startColumn": 4,
-                    "startOffset": 120358,
+                    "startOffset": 120372,
                     "endColumn": 40,
-                    "endOffset": 120394
+                    "endOffset": 120408
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22385,9 +22378,9 @@
                 "to": {
                     "startLine": 2442,
                     "startColumn": 4,
-                    "startOffset": 120399,
+                    "startOffset": 120413,
                     "endColumn": 40,
-                    "endOffset": 120435
+                    "endOffset": 120449
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22397,9 +22390,9 @@
                 "to": {
                     "startLine": 2443,
                     "startColumn": 4,
-                    "startOffset": 120440,
+                    "startOffset": 120454,
                     "endColumn": 40,
-                    "endOffset": 120476
+                    "endOffset": 120490
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22409,9 +22402,9 @@
                 "to": {
                     "startLine": 2444,
                     "startColumn": 4,
-                    "startOffset": 120481,
+                    "startOffset": 120495,
                     "endColumn": 40,
-                    "endOffset": 120517
+                    "endOffset": 120531
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22421,9 +22414,9 @@
                 "to": {
                     "startLine": 2445,
                     "startColumn": 4,
-                    "startOffset": 120522,
+                    "startOffset": 120536,
                     "endColumn": 40,
-                    "endOffset": 120558
+                    "endOffset": 120572
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22433,9 +22426,9 @@
                 "to": {
                     "startLine": 2446,
                     "startColumn": 4,
-                    "startOffset": 120563,
+                    "startOffset": 120577,
                     "endColumn": 40,
-                    "endOffset": 120599
+                    "endOffset": 120613
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22445,9 +22438,9 @@
                 "to": {
                     "startLine": 2447,
                     "startColumn": 4,
-                    "startOffset": 120604,
-                    "endColumn": 63,
-                    "endOffset": 120663
+                    "startOffset": 120618,
+                    "endColumn": 40,
+                    "endOffset": 120654
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22457,9 +22450,9 @@
                 "to": {
                     "startLine": 2448,
                     "startColumn": 4,
-                    "startOffset": 120668,
-                    "endColumn": 90,
-                    "endOffset": 120754
+                    "startOffset": 120659,
+                    "endColumn": 63,
+                    "endOffset": 120718
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22469,9 +22462,9 @@
                 "to": {
                     "startLine": 2449,
                     "startColumn": 4,
-                    "startOffset": 120759,
-                    "endColumn": 35,
-                    "endOffset": 120790
+                    "startOffset": 120723,
+                    "endColumn": 90,
+                    "endOffset": 120809
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
@@ -22481,10 +22474,22 @@
                 "to": {
                     "startLine": 2450,
                     "startColumn": 4,
-                    "startOffset": 120795,
-                    "endLine": 2451,
+                    "startOffset": 120814,
+                    "endColumn": 35,
+                    "endOffset": 120845
+                },
+                "from": {
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2451,
+                    "startColumn": 4,
+                    "startOffset": 120850,
+                    "endLine": 2452,
                     "endColumn": 12,
-                    "endOffset": 120835
+                    "endOffset": 120890
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\styles.xml"
@@ -22492,12 +22497,12 @@
             },
             {
                 "to": {
-                    "startLine": 2452,
+                    "startLine": 2453,
                     "startColumn": 4,
-                    "startOffset": 120840,
-                    "endLine": 2458,
+                    "startOffset": 120895,
+                    "endLine": 2459,
                     "endColumn": 12,
-                    "endOffset": 121172
+                    "endOffset": 121227
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\styles.xml"
@@ -22505,12 +22510,12 @@
             },
             {
                 "to": {
-                    "startLine": 2459,
+                    "startLine": 2460,
                     "startColumn": 4,
-                    "startOffset": 121177,
-                    "endLine": 2463,
+                    "startOffset": 121232,
+                    "endLine": 2464,
                     "endColumn": 12,
-                    "endOffset": 121402
+                    "endOffset": 121457
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\styles.xml"
@@ -22518,12 +22523,12 @@
             },
             {
                 "to": {
-                    "startLine": 2464,
+                    "startLine": 2465,
                     "startColumn": 4,
-                    "startOffset": 121407,
-                    "endLine": 2468,
+                    "startOffset": 121462,
+                    "endLine": 2469,
                     "endColumn": 12,
-                    "endOffset": 121626
+                    "endOffset": 121681
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\values\\styles.xml"
@@ -22531,12 +22536,12 @@
             },
             {
                 "to": {
-                    "startLine": 2469,
+                    "startLine": 2470,
                     "startColumn": 4,
-                    "startOffset": 121631,
-                    "endLine": 2470,
+                    "startOffset": 121686,
+                    "endLine": 2471,
                     "endColumn": 12,
-                    "endOffset": 121672
+                    "endOffset": 121727
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22544,12 +22549,12 @@
             },
             {
                 "to": {
-                    "startLine": 2471,
+                    "startLine": 2472,
                     "startColumn": 4,
-                    "startOffset": 121677,
-                    "endLine": 2474,
+                    "startOffset": 121732,
+                    "endLine": 2475,
                     "endColumn": 12,
-                    "endOffset": 121859
+                    "endOffset": 121914
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22557,12 +22562,12 @@
             },
             {
                 "to": {
-                    "startLine": 2475,
+                    "startLine": 2476,
                     "startColumn": 4,
-                    "startOffset": 121864,
-                    "endLine": 2477,
+                    "startOffset": 121919,
+                    "endLine": 2478,
                     "endColumn": 12,
-                    "endOffset": 122014
+                    "endOffset": 122069
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22570,12 +22575,12 @@
             },
             {
                 "to": {
-                    "startLine": 2478,
+                    "startLine": 2479,
                     "startColumn": 4,
-                    "startOffset": 122019,
-                    "endLine": 2481,
+                    "startOffset": 122074,
+                    "endLine": 2482,
                     "endColumn": 12,
-                    "endOffset": 122242
+                    "endOffset": 122297
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22583,12 +22588,12 @@
             },
             {
                 "to": {
-                    "startLine": 2482,
+                    "startLine": 2483,
                     "startColumn": 4,
-                    "startOffset": 122247,
-                    "endLine": 2485,
+                    "startOffset": 122302,
+                    "endLine": 2486,
                     "endColumn": 12,
-                    "endOffset": 122465
+                    "endOffset": 122520
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22596,12 +22601,12 @@
             },
             {
                 "to": {
-                    "startLine": 2486,
+                    "startLine": 2487,
                     "startColumn": 4,
-                    "startOffset": 122470,
-                    "endLine": 2488,
+                    "startOffset": 122525,
+                    "endLine": 2489,
                     "endColumn": 12,
-                    "endOffset": 122589
+                    "endOffset": 122644
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22609,23 +22614,10 @@
             },
             {
                 "to": {
-                    "startLine": 2489,
+                    "startLine": 2490,
                     "startColumn": 4,
-                    "startOffset": 122594,
-                    "endLine": 2491,
-                    "endColumn": 12,
-                    "endOffset": 122786
-                },
-                "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 2492,
-                    "startColumn": 4,
-                    "startOffset": 122791,
-                    "endLine": 2493,
+                    "startOffset": 122649,
+                    "endLine": 2492,
                     "endColumn": 12,
                     "endOffset": 122841
                 },
@@ -22635,12 +22627,12 @@
             },
             {
                 "to": {
-                    "startLine": 2494,
+                    "startLine": 2493,
                     "startColumn": 4,
                     "startOffset": 122846,
-                    "endLine": 2496,
+                    "endLine": 2494,
                     "endColumn": 12,
-                    "endOffset": 122985
+                    "endOffset": 122896
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22648,12 +22640,12 @@
             },
             {
                 "to": {
-                    "startLine": 2497,
+                    "startLine": 2495,
                     "startColumn": 4,
-                    "startOffset": 122990,
-                    "endLine": 2504,
+                    "startOffset": 122901,
+                    "endLine": 2497,
                     "endColumn": 12,
-                    "endOffset": 123494
+                    "endOffset": 123040
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22661,12 +22653,25 @@
             },
             {
                 "to": {
-                    "startLine": 2505,
+                    "startLine": 2498,
                     "startColumn": 4,
-                    "startOffset": 123499,
-                    "endLine": 2510,
+                    "startOffset": 123045,
+                    "endLine": 2505,
+                    "endColumn": 12,
+                    "endOffset": 123549
+                },
+                "from": {
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2506,
+                    "startColumn": 4,
+                    "startOffset": 123554,
+                    "endLine": 2511,
                     "endColumn": 16,
-                    "endOffset": 123803
+                    "endOffset": 123858
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22674,12 +22679,12 @@
             },
             {
                 "to": {
-                    "startLine": 2511,
+                    "startLine": 2512,
                     "startColumn": 4,
-                    "startOffset": 123808,
-                    "endLine": 2517,
+                    "startOffset": 123863,
+                    "endLine": 2518,
                     "endColumn": 12,
-                    "endOffset": 124160
+                    "endOffset": 124215
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22687,12 +22692,12 @@
             },
             {
                 "to": {
-                    "startLine": 2518,
+                    "startLine": 2519,
                     "startColumn": 4,
-                    "startOffset": 124165,
-                    "endLine": 2522,
+                    "startOffset": 124220,
+                    "endLine": 2523,
                     "endColumn": 12,
-                    "endOffset": 124455
+                    "endOffset": 124510
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22700,12 +22705,12 @@
             },
             {
                 "to": {
-                    "startLine": 2523,
+                    "startLine": 2524,
                     "startColumn": 4,
-                    "startOffset": 124460,
-                    "endLine": 2528,
+                    "startOffset": 124515,
+                    "endLine": 2529,
                     "endColumn": 12,
-                    "endOffset": 124812
+                    "endOffset": 124867
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22713,12 +22718,12 @@
             },
             {
                 "to": {
-                    "startLine": 2529,
+                    "startLine": 2530,
                     "startColumn": 4,
-                    "startOffset": 124817,
-                    "endLine": 2534,
+                    "startOffset": 124872,
+                    "endLine": 2535,
                     "endColumn": 12,
-                    "endOffset": 125223
+                    "endOffset": 125278
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22726,12 +22731,12 @@
             },
             {
                 "to": {
-                    "startLine": 2535,
+                    "startLine": 2536,
                     "startColumn": 4,
-                    "startOffset": 125228,
-                    "endLine": 2538,
+                    "startOffset": 125283,
+                    "endLine": 2539,
                     "endColumn": 12,
-                    "endOffset": 125475
+                    "endOffset": 125530
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22739,12 +22744,12 @@
             },
             {
                 "to": {
-                    "startLine": 2539,
+                    "startLine": 2540,
                     "startColumn": 4,
-                    "startOffset": 125480,
-                    "endLine": 2542,
+                    "startOffset": 125535,
+                    "endLine": 2543,
                     "endColumn": 12,
-                    "endOffset": 125659
+                    "endOffset": 125714
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22752,12 +22757,12 @@
             },
             {
                 "to": {
-                    "startLine": 2543,
+                    "startLine": 2544,
                     "startColumn": 4,
-                    "startOffset": 125664,
-                    "endLine": 2545,
+                    "startOffset": 125719,
+                    "endLine": 2546,
                     "endColumn": 12,
-                    "endOffset": 125811
+                    "endOffset": 125866
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22765,12 +22770,12 @@
             },
             {
                 "to": {
-                    "startLine": 2546,
+                    "startLine": 2547,
                     "startColumn": 4,
-                    "startOffset": 125816,
-                    "endLine": 2549,
+                    "startOffset": 125871,
+                    "endLine": 2550,
                     "endColumn": 12,
-                    "endOffset": 126013
+                    "endOffset": 126068
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22778,12 +22783,12 @@
             },
             {
                 "to": {
-                    "startLine": 2550,
+                    "startLine": 2551,
                     "startColumn": 4,
-                    "startOffset": 126018,
-                    "endLine": 2552,
+                    "startOffset": 126073,
+                    "endLine": 2553,
                     "endColumn": 12,
-                    "endOffset": 126169
+                    "endOffset": 126224
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22791,12 +22796,12 @@
             },
             {
                 "to": {
-                    "startLine": 2553,
+                    "startLine": 2554,
                     "startColumn": 4,
-                    "startOffset": 126174,
-                    "endLine": 2559,
+                    "startOffset": 126229,
+                    "endLine": 2560,
                     "endColumn": 12,
-                    "endOffset": 126633
+                    "endOffset": 126688
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22804,12 +22809,12 @@
             },
             {
                 "to": {
-                    "startLine": 2560,
+                    "startLine": 2561,
                     "startColumn": 4,
-                    "startOffset": 126638,
-                    "endLine": 2562,
+                    "startOffset": 126693,
+                    "endLine": 2563,
                     "endColumn": 12,
-                    "endOffset": 126754
+                    "endOffset": 126809
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22817,12 +22822,12 @@
             },
             {
                 "to": {
-                    "startLine": 2563,
+                    "startLine": 2564,
                     "startColumn": 4,
-                    "startOffset": 126759,
-                    "endLine": 2565,
+                    "startOffset": 126814,
+                    "endLine": 2566,
                     "endColumn": 12,
-                    "endOffset": 126946
+                    "endOffset": 127001
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\values\\values.xml"
@@ -22830,12 +22835,12 @@
             },
             {
                 "to": {
-                    "startLine": 2566,
+                    "startLine": 2567,
                     "startColumn": 4,
-                    "startOffset": 126951,
-                    "endLine": 2567,
+                    "startOffset": 127006,
+                    "endLine": 2568,
                     "endColumn": 12,
-                    "endOffset": 126989
+                    "endOffset": 127044
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22843,12 +22848,12 @@
             },
             {
                 "to": {
-                    "startLine": 2568,
+                    "startLine": 2569,
                     "startColumn": 4,
-                    "startOffset": 126994,
-                    "endLine": 2569,
+                    "startOffset": 127049,
+                    "endLine": 2570,
                     "endColumn": 12,
-                    "endOffset": 127042
+                    "endOffset": 127097
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22856,12 +22861,12 @@
             },
             {
                 "to": {
-                    "startLine": 2570,
+                    "startLine": 2571,
                     "startColumn": 4,
-                    "startOffset": 127047,
-                    "endLine": 2575,
+                    "startOffset": 127102,
+                    "endLine": 2576,
                     "endColumn": 12,
-                    "endOffset": 127397
+                    "endOffset": 127452
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22869,12 +22874,12 @@
             },
             {
                 "to": {
-                    "startLine": 2576,
+                    "startLine": 2577,
                     "startColumn": 4,
-                    "startOffset": 127402,
-                    "endLine": 2583,
+                    "startOffset": 127457,
+                    "endLine": 2584,
                     "endColumn": 12,
-                    "endOffset": 127889
+                    "endOffset": 127944
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22882,12 +22887,12 @@
             },
             {
                 "to": {
-                    "startLine": 2584,
+                    "startLine": 2585,
                     "startColumn": 4,
-                    "startOffset": 127894,
-                    "endLine": 2594,
+                    "startOffset": 127949,
+                    "endLine": 2595,
                     "endColumn": 12,
-                    "endOffset": 128565
+                    "endOffset": 128620
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22895,12 +22900,12 @@
             },
             {
                 "to": {
-                    "startLine": 2595,
+                    "startLine": 2596,
                     "startColumn": 4,
-                    "startOffset": 128570,
-                    "endLine": 2598,
+                    "startOffset": 128625,
+                    "endLine": 2599,
                     "endColumn": 12,
-                    "endOffset": 128785
+                    "endOffset": 128840
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"
@@ -22908,12 +22913,12 @@
             },
             {
                 "to": {
-                    "startLine": 2599,
+                    "startLine": 2600,
                     "startColumn": 4,
-                    "startOffset": 128790,
-                    "endLine": 2607,
+                    "startOffset": 128845,
+                    "endLine": 2608,
                     "endColumn": 12,
-                    "endOffset": 129349
+                    "endOffset": 129404
                 },
                 "from": {
                     "file": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SmartStore\\unspecified\\res\\values\\values.xml"

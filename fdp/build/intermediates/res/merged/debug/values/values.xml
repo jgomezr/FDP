@@ -2258,6 +2258,7 @@
     <string name="may">May</string>
     <string name="mobileMoney">C17. Farmer account have Mobile money option?</string>
     <string name="moneyBack">C15. How much have they back?</string>
+    <string name="monitoringLabel">Monitoring</string>
     <string name="netFamily">Net family income:</string>
     <string name="netFarming">Total farming income:</string>
     <string name="netOther">Net income from all other sources:</string>

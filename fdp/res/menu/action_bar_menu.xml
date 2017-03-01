@@ -23,4 +23,8 @@
         android:icon="@drawable/ii"
         android:title="@string/internalInspection"
         android:showAsAction="ifRoom" />
+    <item android:id="@+id/monitoring"
+        android:icon="@drawable/monitor"
+        android:title="@string/monitoringLabel"
+        android:showAsAction="ifRoom" />
 </menu>
