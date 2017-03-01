@@ -848,4 +848,6 @@
     <string name="photoSuccess">Foto diambil dengan sukses</string>
     <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
     <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
+    <string name="investmentLabel">Investasi yang direncanakan</string>
+    <string name="savingsLabel">Tabungan rumah tangga</string>
 </resources>

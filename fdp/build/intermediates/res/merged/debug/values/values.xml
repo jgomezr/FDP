@@ -2147,7 +2147,7 @@
     <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
     <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
-    <string name="changeR">Change for Grafting</string>
+    <string name="changeR">Change for Replanting</string>
     <string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
     <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
@@ -2241,6 +2241,7 @@
     <string name="incomeOtherCrops">C19. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="inspect_db_button" translatable="false">Inspect DB</string>
     <string name="internalInspection">Internal Inspection</string>
+    <string name="investmentLabel">Planned investments</string>
     <string name="jan">January</string>
     <string name="jul">July</string>
     <string name="jun">June</string>
@@ -2335,6 +2336,7 @@
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>
     <string name="saved">Save successful!</string>
+    <string name="savingsLabel">Household Savings</string>
     <string name="sep">September</string>
     <string name="sf__access_token_revoked">Your access token has been revoked by the administrator. You will now be logged out.</string>
     <string name="sf__add_new_account">Add New Account</string>

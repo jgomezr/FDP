@@ -1896,11 +1896,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
             //net other income sources
             double moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
-            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
             double farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
             double spouseWork = Double.parseDouble(sObject.getSpouseincome());
             double familyWork = Double.parseDouble(sObject.getFamilymembersincome());
-            int totalOtherIncome = (int) (moneyBack + hhSavings+farmWork+spouseWork+familyWork);
+            int totalOtherIncome = (int) (moneyBack+farmWork+spouseWork+familyWork);
             setText((TextView) findViewById(R.id.netOtherY1_field), String.valueOf(dec.format(totalOtherIncome)));
             setText((TextView) findViewById(R.id.netOtherY2_field), String.valueOf(dec.format(totalOtherIncome)));
             setText((TextView) findViewById(R.id.netOtherY3_field), String.valueOf(dec.format(totalOtherIncome)));
@@ -2056,6 +2055,14 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             }else{
                 pyl7.setTextColor(Color.parseColor("#cc0000"));
             }
+
+
+            //savings and investments
+            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
+            double hhInvestments = Double.parseDouble(sObject.getPlannedinvestments());
+
+            setText((TextView) findViewById(R.id.savings_field), String.valueOf(dec.format(hhSavings)));
+            setText((TextView) findViewById(R.id.investments_field), String.valueOf(dec.format(hhInvestments)));
         }
     }
 

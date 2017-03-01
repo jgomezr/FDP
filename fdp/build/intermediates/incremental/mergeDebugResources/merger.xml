@@ -309,7 +309,7 @@
 		<item>N/A</item>
 		<item>G</item>
 		<item>B</item>
-	</string-array><string name="changeR">Change for Grafting</string><string name="p1">Clearing</string><string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
+	</string-array><string name="investmentLabel">Planned investments</string><string name="changeR">Change for Replanting</string><string name="p1">Clearing</string><string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
 		<item>G</item>
 		<item>B</item>
 	</string-array><string name="phone">9. Phone Number:</string><string-array name="gender_male">
@@ -339,7 +339,7 @@
 		<item>M</item>
 		<item>G</item>
 		<item>B</item>
-	</string-array><string name="additionalIntervention">ADDITIONAL INTERVENTION</string><string name="farmCondition">Farm Condition:</string><string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string><string name="payForCredit">C13. How much do you pay back per payment?</string><string name="costLabor">Cost of labor:</string><string name="farmAge">32. Year of farm establishment:</string><string-array name="sourceLoanBank">
+	</string-array><string name="additionalIntervention">ADDITIONAL INTERVENTION</string><string name="farmCondition">Farm Condition:</string><string name="savingsLabel">Household Savings</string><string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string><string name="payForCredit">C13. How much do you pay back per payment?</string><string name="costLabor">Cost of labor:</string><string name="farmAge">32. Year of farm establishment:</string><string-array name="sourceLoanBank">
 		<item>Bank</item>
 		<item>Family</item>
 		<item>Friends</item>
@@ -716,7 +716,7 @@
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
-    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">C14. Berapa total pinjaman (piutang) yang anda berikan</string><string name="plannedInvestments">24. Investasi yang direncanakan - pengeluaran selain kakao</string><string name="geneticLb">Genetika bahan tanaman</string><string name="otherExpenses">23. Pengeluaran tahunan yang lain</string><string name="mobileMoney">C17. Rekening petani memiliki pilihan unutk Mobile banking</string><string name="changeR">Perubahan untuk sambungan</string><string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string><string-array name="cert1">
+    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">C14. Berapa total pinjaman (piutang) yang anda berikan</string><string name="plannedInvestments">24. Investasi yang direncanakan - pengeluaran selain kakao</string><string name="geneticLb">Genetika bahan tanaman</string><string name="otherExpenses">23. Pengeluaran tahunan yang lain</string><string name="mobileMoney">C17. Rekening petani memiliki pilihan unutk Mobile banking</string><string name="changeR">Ubah untuk penanaman kembali</string><string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string><string-array name="cert1">
         <item>UTZ</item>
         <item>RA</item>
         <item>FT</item>
@@ -1013,7 +1013,7 @@
         <item>Simpanan di Komunitas</item>
         <item>Organisasi Mikrokredit</item>
         <item>Bank</item>
-    </string-array><string name="renovationArea">37. Total renovasi penanaman kakao sudah di bawah ukuran (Ha)</string><string name="soilCondition">54. Kondisi Tanah</string><string-array name="g_b">
+    </string-array><string name="investmentLabel">Investasi yang direncanakan</string><string name="renovationArea">37. Total renovasi penanaman kakao sudah di bawah ukuran (Ha)</string><string name="soilCondition">54. Kondisi Tanah</string><string-array name="g_b">
         <item>G</item>
         <item>B</item>
     </string-array><string-array name="creditOften">
@@ -1070,7 +1070,7 @@
         <item>Micro finance</item>
         <item>Pinjaman desa</item>
         <item>Lainnya</item>
-    </string-array><string name="plotHireLabor">61. Menggunakan pekerja</string><string name="year2">Tahun 2</string><string name="year1">Tahun 1</string><string name="action_refresh">Sinkronkan</string><string name="year6">Tahun 6</string><string-array name="cert">
+    </string-array><string name="plotHireLabor">61. Menggunakan pekerja</string><string name="savingsLabel">Tabungan rumah tangga</string><string name="year2">Tahun 2</string><string name="year1">Tahun 1</string><string name="action_refresh">Sinkronkan</string><string name="year6">Tahun 6</string><string-array name="cert">
         <item>N/A</item>
         <item>UTZ</item>
         <item>RA</item>

@@ -666,7 +666,7 @@
     <string name="calcAO">Menghitung</string>
     <string name="cancel">Tidak</string>
     <string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string>
-    <string name="changeR">Perubahan untuk sambungan</string>
+    <string name="changeR">Ubah untuk penanaman kembali</string>
     <string name="childrenInSchool">C5. Anak antara 5 dan 17 tahun yang masih sekolah</string>
     <string name="childrenUnder">C4. Anak antara 5 dan 17 tahun</string>
     <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
@@ -757,6 +757,7 @@
     <string name="householdSavings">21. Tabungan rumah tangga</string>
     <string name="incomeOtherCrops">C10. pendapat bersih dari semua tanaman di tahun lalu (tahun  lalu di maksud dua musim panen, mid dan main</string>
     <string name="internalInspection">Internal Inspeksi</string>
+    <string name="investmentLabel">Investasi yang direncanakan</string>
     <string name="jan">Januari</string>
     <string name="jul">July</string>
     <string name="jun">Juni</string>
@@ -838,6 +839,7 @@
     <string name="replant">Penanamman kembali</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>
     <string name="saved">Simpan Berhasil</string>
+    <string name="savingsLabel">Tabungan rumah tangga</string>
     <string name="sep">September</string>
     <string name="shadeManagement">53. Pengaturan Pelindung</string>
     <string name="socioeconomicProfile">PROFIL SOSIOEKONOMI</string>

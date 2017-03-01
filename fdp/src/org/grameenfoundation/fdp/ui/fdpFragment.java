@@ -858,7 +858,7 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age<30){
+            if(age>25){
                 changeR.setVisibility(View.VISIBLE);
             }
             if (relat == "extra"){

@@ -226,6 +226,8 @@
 	<string name="photoSuccess">Photo taken with success</string>
     <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
 	<string name="familyLess">The number of family members can not be less than the number of children</string>
+	<string name="savingsLabel">Household Savings</string>
+	<string name="investmentLabel">Planned investments</string>
     <string-array name="creditOften">
         <item>Monthly</item>
         <item>Quarterly</item>
