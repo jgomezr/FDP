@@ -193,7 +193,7 @@
     <string name="yes">Ya</string>
     <string name="yearsRelationshipWithMars">10. tahun hubungan dengan perusahaan</string>
     <string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string>
-    <string name="changeR">Perubahan untuk sambungan</string>
+    <string name="changeR">Ubah untuk penanaman kembali</string>
     <string name="familyPhoto">Ambil Foto Keluarga</string>
     <string name="geneticLb">Genetika bahan tanaman</string>
     <string name="mapPhoto">Mengambil foto dari peta pertanian</string>

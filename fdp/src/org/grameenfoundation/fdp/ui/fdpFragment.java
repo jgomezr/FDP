@@ -703,66 +703,66 @@ public class fdpFragment extends Fragment {
                 replp.setVisibility(View.GONE);
                 grflp.setVisibility(View.VISIBLE);
                 gaplp.setVisibility(View.VISIBLE);
-                comment.setText("+Change Replant for Grafting "+plotLB.getText()+"+");
+                comment.setText("+Change Grafting for Replanting"+plotLB.getText()+"+");
                 final fdpActivity activity2 = (fdpActivity) getActivity();
                 activity2.comt(plotLB.getText().toString());
                 if (relat == "extra"){
                     exslp.setVisibility(View.VISIBLE);
                     if (labor == "labor"){
-                        laborD1 = (int) ((area * (getResources().getInteger(R.integer.graftY1Total))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
-                        laborD2 = (int) ((area * (getResources().getInteger(R.integer.graftY2Total))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
-                        laborD3 = (int) ((area * (getResources().getInteger(R.integer.graftY3Total))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
-                        laborD4 = (int) ((area * (getResources().getInteger(R.integer.graftY4Total))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
-                        laborD5 = (int) ((area * (getResources().getInteger(R.integer.graftY5Total))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
-                        laborD6 = (int) ((area * (getResources().getInteger(R.integer.graftY6Total))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
-                        laborD7 = (int) ((area * (getResources().getInteger(R.integer.graftY7Total))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
-                        labor1 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
-                        labor2 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
-                        labor3 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
-                        labor4 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
-                        labor5 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
-                        labor6 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
-                        labor7 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                        laborD1 = (int) ((area * (getResources().getInteger(R.integer.replantY1Total))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                        laborD2 = (int) ((area * (getResources().getInteger(R.integer.replantY2Total))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                        laborD3 = (int) ((area * (getResources().getInteger(R.integer.replantY3Total))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                        laborD4 = (int) ((area * (getResources().getInteger(R.integer.replantY4Total))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                        laborD5 = (int) ((area * (getResources().getInteger(R.integer.replantY5Total))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                        laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Total))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                        laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Total))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                        labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                        labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                        labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                        labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                        labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                        labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                        labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                     }
-                    cost1 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
-                    cost2 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
-                    cost3 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
-                    cost4 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Total)))+(area * (getResources().getInteger(R.integer.difInputY4Total))));
-                    cost5 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Total)))+(area * (getResources().getInteger(R.integer.difInputY5Total))));
-                    cost6 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY6Total)))+(area * (getResources().getInteger(R.integer.difInputY6Total))));
-                    cost7 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Total)))+(area * (getResources().getInteger(R.integer.difInputY7Total))));
+                    cost1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
+                    cost2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
+                    cost3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
+                    cost4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Total)))+(area * (getResources().getInteger(R.integer.difInputY4Total))));
+                    cost5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Total)))+(area * (getResources().getInteger(R.integer.difInputY5Total))));
+                    cost6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Total)))+(area * (getResources().getInteger(R.integer.difInputY6Total))));
+                    cost7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Total)))+(area * (getResources().getInteger(R.integer.difInputY7Total))));
                 }else{
                     if (labor == "labor"){
-                        laborD1 = (int) (area * (getResources().getInteger(R.integer.graftY1Total)));
-                        laborD2 = (int) (area * (getResources().getInteger(R.integer.graftY2Total)));
-                        laborD3 = (int) (area * (getResources().getInteger(R.integer.graftY3Total)));
-                        laborD4 = (int) (area * (getResources().getInteger(R.integer.graftY4Total)));
-                        laborD5 = (int) (area * (getResources().getInteger(R.integer.graftY5Total)));
-                        laborD6 = (int) (area * (getResources().getInteger(R.integer.graftY6Total)));
-                        laborD7 = (int) (area * (getResources().getInteger(R.integer.graftY7Total)));
-                        labor1 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY1Total)));
-                        labor2 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY2Total)));
-                        labor3 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY3Total)));
-                        labor4 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY4Total)));
-                        labor5 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
-                        labor6 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
-                        labor7 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                        laborD1 = (int) (area * (getResources().getInteger(R.integer.replantY1Total)));
+                        laborD2 = (int) (area * (getResources().getInteger(R.integer.replantY2Total)));
+                        laborD3 = (int) (area * (getResources().getInteger(R.integer.replantY3Total)));
+                        laborD4 = (int) (area * (getResources().getInteger(R.integer.replantY4Total)));
+                        laborD5 = (int) (area * (getResources().getInteger(R.integer.replantY5Total)));
+                        laborD6 = (int) (area * (getResources().getInteger(R.integer.replantY6Total)));
+                        laborD7 = (int) (area * (getResources().getInteger(R.integer.replantY7Total)));
+                        labor1 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY1Total)));
+                        labor2 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY2Total)));
+                        labor3 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY3Total)));
+                        labor4 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY4Total)));
+                        labor5 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
+                        labor6 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
+                        labor7 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
                     }
-                    cost1 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
-                    cost2 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
-                    cost3 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
-                    cost4 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY4Total)));
-                    cost5 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY5Total)));
-                    cost6 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY6Total)));
-                    cost7 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
+                    cost1 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
+                    cost2 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
+                    cost3 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
+                    cost4 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY4Total)));
+                    cost5 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY5Total)));
+                    cost6 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY6Total)));
+                    cost7 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
                 }
-                income1 =(int) ((area * (getResources().getInteger(R.integer.graftingY1))*avgCost));
-                income2 =(int) ((area * (getResources().getInteger(R.integer.graftingY2))*avgCost));
-                income3 =(int) ((area * (getResources().getInteger(R.integer.graftingY3))*avgCost));
-                income4 =(int) ((area * (getResources().getInteger(R.integer.graftingY4))*avgCost));
-                income5 =(int) ((area * (getResources().getInteger(R.integer.graftingY5))*avgCost));
-                income6 =(int) ((area * (getResources().getInteger(R.integer.graftingY6))*avgCost));
-                income7 =(int) ((area * (getResources().getInteger(R.integer.graftingY7))*avgCost));
+                income1 =(int) ((area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                income2 =(int) ((area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
+                income3 =(int) ((area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
+                income4 =(int) ((area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
+                income5 =(int) ((area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
+                income6 =(int) ((area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
+                income7 =(int) ((area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
             }
         });
 
@@ -798,9 +798,6 @@ public class fdpFragment extends Fragment {
         if (main == "replant"){
             replp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age<30){
-                changeR.setVisibility(View.VISIBLE);
-            }
             if (relat == "extra"){
                 exslp.setVisibility(View.VISIBLE);
                 if (labor == "labor"){
@@ -861,6 +858,9 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
+            if(age<30){
+                changeR.setVisibility(View.VISIBLE);
+            }
             if (relat == "extra"){
                 exslp.setVisibility(View.VISIBLE);
                 if (labor == "labor"){
