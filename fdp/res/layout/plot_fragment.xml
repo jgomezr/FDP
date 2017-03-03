@@ -170,7 +170,7 @@
         android:layout_width="155dp"
         android:layout_height="35dp"
         android:id="@+id/hireP_field"
-        android:entries="@array/yesNo"/>
+        android:entries="@array/yesNoHire"/>
 
     <TextView android:layout_width="match_parent"
         android:layout_height="30dp"

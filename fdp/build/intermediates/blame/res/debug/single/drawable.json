@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__toolbar_background.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable\\sf__toolbar_background.xml"
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__toolbar_background.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ii.png",
@@ -29,11 +29,11 @@
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__header_bg.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable\\sf__header_bg.png"
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__header_bg.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__progress_spinner.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\exploded-aar\\fdp.forcedroid.libs\\SalesforceSDK\\unspecified\\res\\drawable\\sf__progress_spinner.xml"
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__progress_spinner.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_save.png",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\drawable\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\monitor.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\drawable\\monitor.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\info.png",

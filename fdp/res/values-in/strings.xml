@@ -841,6 +841,28 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
     </string-array>
+    <string-array name="yesNoHire">
+        <item>N/A</item>
+        <item>Ya</item>
+        <item>Musiman</item>
+        <item>Tidak</item>
+    </string-array>
+    <string-array name="yesHire">
+        <item>Ya</item>
+        <item>Musiman</item>
+        <item>Tidak</item>
+    </string-array>
+    <string-array name="noHire">
+        <item>Tidak</item>
+        <item>Ya</item>
+        <item>Musiman</item>
+    </string-array>
+    <string-array name="seasonHire">
+        <item>Musiman</item>
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
     <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>

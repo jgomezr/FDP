@@ -17,21 +17,21 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-126:12
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:7:2-40
 uses-sdk
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:9:5-10:41
-MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartSync\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:3:5-72
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
-MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.venmo.view.tooltip\tooltip\0.1.2\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:3:5-72
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:18:5-42
+MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\6db4f16f50841e5b479273be0457c0186bf4589b\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\9924e83ec05492dcad42d81b8552b9c7cf030a88\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\904ca5c670b4ccd92ccfbfd1c522eb63340d82de\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\6431fdcb957fdd56d28e32ef9ad5752e626e5377\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\19af188f3ef66ddabe45f1b171232ba08fe68a34\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:10:9-38
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
@@ -66,7 +66,7 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:18:5-80
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:18:22-78
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:19:5-66
-MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:14:5-67
+MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:14:5-67
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:19:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
@@ -85,19 +85,19 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:22:5-23:35
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:22:19-57
 application
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:25:2-113:16
-MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartSync\unspecified\AndroidManifest.xml:11:5-20
-MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:11:5-15:19
-MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:23:5-103:19
-MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.mcxiaoke.volley\library-aar\1.0.0\AndroidManifest.xml:5:5-19
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.venmo.view.tooltip\tooltip\0.1.2\AndroidManifest.xml:10:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
+MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:23:5-103:19
+MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:10:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\6db4f16f50841e5b479273be0457c0186bf4589b\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\9924e83ec05492dcad42d81b8552b9c7cf030a88\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\904ca5c670b4ccd92ccfbfd1c522eb63340d82de\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\6431fdcb957fdd56d28e32ef9ad5752e626e5377\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\19af188f3ef66ddabe45f1b171232ba08fe68a34\output\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:26:6-38
 	android:manageSpaceActivity
@@ -228,7 +228,7 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:103:4-104:51
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:103:15-57
 meta-data#com.google.android.gms.version
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:110:3-112:60
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:21:9-23:69
 	android:value
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:112:4-57
 	android:name
@@ -240,152 +240,152 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:122:5-123:41
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:122:17-69
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
-ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:14:9-104
+ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:9-104
 	android:name
-		ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SmartStore\unspecified\AndroidManifest.xml:14:19-101
+		ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:19-101
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:11:5-79
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:11:22-76
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:22-76
 uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:12:5-80
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:12:22-77
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:22-77
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:13:5-71
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:13:22-68
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:22-68
 uses-permission#android.permission.MANAGE_ACCOUNTS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:15:5-74
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:5-74
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:15:22-71
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:22-71
 uses-permission#android.permission.USE_CREDENTIALS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:16:5-74
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:5-74
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:16:22-71
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:22-71
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:17:5-68
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:5-68
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:17:22-65
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:22-65
 uses-permission#android.permission.GET_TASKS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:18:5-68
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:5-68
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:18:22-65
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:19:5-82
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:5-82
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:19:22-79
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:22-79
 uses-permission-sdk-23
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:21:5-81
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:21:29-78
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:29-78
 meta-data#android.content.APP_RESTRICTIONS
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:26:9-28:56
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:26:9-28:56
 	android:resource
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:28:13-53
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:28:13-53
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:27:13-60
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:27:13-60
 service#com.salesforce.androidsdk.auth.AuthenticatorService
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:31:9-41:19
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:31:9-41:19
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:33:13-36
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:33:13-36
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:32:13-79
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:32:13-79
 intent-filter#android.accounts.AccountAuthenticator
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:34:13-36:29
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:34:13-36:29
 action#android.accounts.AccountAuthenticator
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:35:17-80
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:17-80
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:35:25-77
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:25-77
 meta-data#android.accounts.AccountAuthenticator
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:38:13-40:57
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:38:13-40:57
 	android:resource
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:40:17-54
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:40:17-54
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:39:17-69
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:39:17-69
 activity#com.salesforce.androidsdk.ui.LoginActivity
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:44:9-46:67
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:44:9-46:67
 	android:theme
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:46:13-64
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:46:13-64
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:45:13-70
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:45:13-70
 activity#com.salesforce.androidsdk.ui.PasscodeActivity
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:49:9-51:67
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:49:9-51:67
 	android:theme
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:51:13-64
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:51:13-64
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:50:13-73
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:50:13-73
 activity#com.salesforce.androidsdk.ui.ManageSpaceActivity
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:54:9-57:67
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:54:9-57:67
 	android:excludeFromRecents
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:56:13-46
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:56:13-46
 	android:theme
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:57:13-64
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:57:13-64
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:55:13-76
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:55:13-76
 activity#com.salesforce.androidsdk.ui.ServerPickerActivity
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:60:9-63:67
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:60:9-63:67
 	android:excludeFromRecents
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:62:13-46
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:62:13-46
 	android:theme
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:63:13-64
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:63:13-64
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:61:13-77
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:61:13-77
 activity#com.salesforce.androidsdk.ui.AccountSwitcherActivity
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:66:9-69:67
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:66:9-69:67
 	android:excludeFromRecents
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:68:13-46
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:68:13-46
 	android:theme
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:69:13-64
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:69:13-64
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:67:13-80
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:67:13-80
 receiver#com.salesforce.androidsdk.push.PushBroadcastReceiver
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:75:9-89:20
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:75:9-89:20
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:77:13-36
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:77:13-36
 	android:permission
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:78:13-73
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:78:13-73
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:76:13-80
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:76:13-80
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:79:13-83:29
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:79:13-83:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:80:17-81
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:17-81
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:80:25-78
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:25-78
 category#${applicationId}
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:82:17-61
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:17-61
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:82:27-58
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:27-58
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
 intent-filter#${applicationId}+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:84:13-88:29
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:84:13-88:29
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:85:17-86
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:17-86
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:85:25-83
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:25-83
 receiver#com.salesforce.androidsdk.push.PushService$RetryRegistrationAlarmReceiver
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:90:9-92:40
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:90:9-92:40
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:92:13-37
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:92:13-37
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:91:13-101
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:91:13-101
 receiver#com.salesforce.androidsdk.push.PushService$SFDCRegistrationRetryAlarmReceiver
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:93:9-95:40
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:93:9-95:40
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:95:13-37
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:94:13-105
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:94:13-105
 receiver#com.salesforce.androidsdk.push.PushService$UnregisterRetryAlarmReceiver
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:96:9-98:40
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:96:9-98:40
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:98:13-37
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:98:13-37
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:97:13-99
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:97:13-99
 service#com.salesforce.androidsdk.push.PushService
-ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:100:9-102:40
+ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:100:9-102:40
 	android:exported
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:102:13-37
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\fdp\build\intermediates\exploded-aar\fdp.forcedroid.libs\SalesforceSDK\unspecified\AndroidManifest.xml:101:13-70
+		ADDED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:101:13-70

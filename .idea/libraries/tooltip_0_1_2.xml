@@ -4,8 +4,8 @@
       <root url="jar://$PROJECT_DIR$/fdp/build/intermediates/exploded-aar/com.venmo.view.tooltip/tooltip/0.1.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/fdp/build/intermediates/exploded-aar/com.venmo.view.tooltip/tooltip/0.1.2/res" />
-      <root url="jar://$PROJECT_DIR$/fdp/build/intermediates/exploded-aar/com.venmo.view.tooltip/tooltip/0.1.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/39f32bf4d09bed4ce9990ad5162852997e78b1a3/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/39f32bf4d09bed4ce9990ad5162852997e78b1a3/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

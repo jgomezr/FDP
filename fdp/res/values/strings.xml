@@ -873,4 +873,26 @@
         <item>Village loan</item>
     </string-array>
 
+	<string-array name="yesNoHire">
+		<item>N/A</item>
+		<item>Yes</item>
+		<item>Seasonal</item>
+		<item>No</item>
+	</string-array>
+	<string-array name="yesHire">
+		<item>Yes</item>
+		<item>Seasonal</item>
+		<item>No</item>
+	</string-array>
+	<string-array name="noHire">
+		<item>No</item>
+		<item>Yes</item>
+		<item>Seasonal</item>
+	</string-array>
+	<string-array name="seasonHire">
+		<item>Seasonal</item>
+		<item>Yes</item>
+		<item>No</item>
+	</string-array>
+
 </resources>

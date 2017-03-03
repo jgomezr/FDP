@@ -44,6 +44,7 @@
     <integer name="GAPSLaborY1Nov">1575000</integer>
     <integer name="GAPSLaborY1Dec">1425000</integer>
     <integer name="GAPSLaborY1Total">12075000</integer>
+    <integer name="GAPSSeasonY1Total">7125000</integer>
     <integer name="GAPSLaborY2Jan">525000</integer>
     <integer name="GAPSLaborY2Feb">600000</integer>
     <integer name="GAPSLaborY2Mar">900000</integer>
@@ -57,6 +58,7 @@
     <integer name="GAPSLaborY2Nov">1575000</integer>
     <integer name="GAPSLaborY2Dec">1425000</integer>
     <integer name="GAPSLaborY2Total">12075000</integer>
+    <integer name="GAPSeasonY2Total">7125000</integer>
     <integer name="GAPSLaborY3Jan">525000</integer>
     <integer name="GAPSLaborY3Feb">600000</integer>
     <integer name="GAPSLaborY3Mar">900000</integer>
@@ -70,6 +72,7 @@
     <integer name="GAPSLaborY3Nov">1575000</integer>
     <integer name="GAPSLaborY3Dec">1425000</integer>
     <integer name="GAPSLaborY3Total">12075000</integer>
+    <integer name="GAPSeasonY3Total">7125000</integer>
     <integer name="GAPSLaborY4Jan">525000</integer>
     <integer name="GAPSLaborY4Feb">600000</integer>
     <integer name="GAPSLaborY4Mar">900000</integer>
@@ -83,6 +86,7 @@
     <integer name="GAPSLaborY4Nov">1575000</integer>
     <integer name="GAPSLaborY4Dec">1425000</integer>
     <integer name="GAPSLaborY4Total">12075000</integer>
+    <integer name="GAPSeasonY4Total">7125000</integer>
     <integer name="GAPSLaborY5Jan">525000</integer>
     <integer name="GAPSLaborY5Feb">600000</integer>
     <integer name="GAPSLaborY5Mar">900000</integer>
@@ -96,6 +100,7 @@
     <integer name="GAPSLaborY5Nov">1575000</integer>
     <integer name="GAPSLaborY5Dec">1425000</integer>
     <integer name="GAPSLaborY5Total">12075000</integer>
+    <integer name="GAPSeasonY5Total">7125000</integer>
     <integer name="GAPSLaborY6Jan">525000</integer>
     <integer name="GAPSLaborY6Feb">600000</integer>
     <integer name="GAPSLaborY6Mar">900000</integer>
@@ -109,6 +114,7 @@
     <integer name="GAPSLaborY6Nov">1575000</integer>
     <integer name="GAPSLaborY6Dec">1425000</integer>
     <integer name="GAPSLaborY6Total">12075000</integer>
+    <integer name="GAPSeasonY6Total">7125000</integer>
     <integer name="GAPSLaborY7Jan">525000</integer>
     <integer name="GAPSLaborY7Feb">600000</integer>
     <integer name="GAPSLaborY7Mar">900000</integer>
@@ -122,6 +128,7 @@
     <integer name="GAPSLaborY7Nov">1575000</integer>
     <integer name="GAPSLaborY7Dec">1425000</integer>
     <integer name="GAPSLaborY7Total">12075000</integer>
+    <integer name="GAPSeasonY7Total">7125000</integer>
     <!--GAPS Input Cost-->
     <integer name="GAPSInputY1Jan">18000</integer>
     <integer name="GAPSInputY1Feb">100800</integer>
@@ -228,6 +235,7 @@
     <integer name="GraftingLaborY1Nov">900000</integer>
     <integer name="GraftingLaborY1Dec">1425000</integer>
     <integer name="GraftingLaborY1Total">12000000</integer>
+    <integer name="GraftingSeasonY1Total">5775000</integer>
     <integer name="GraftingLaborY2Jan">225000</integer>
     <integer name="GraftingLaborY2Feb">300000</integer>
     <integer name="GraftingLaborY2Mar">600000</integer>
@@ -241,6 +249,7 @@
     <integer name="GraftingLaborY2Nov">975000</integer>
     <integer name="GraftingLaborY2Dec">900000</integer>
     <integer name="GraftingLaborY2Total">7200000</integer>
+    <integer name="GraftingSeasonY2Total">4125000</integer>
     <integer name="GraftingLaborY3Jan">525000</integer>
     <integer name="GraftingLaborY3Feb">600000</integer>
     <integer name="GraftingLaborY3Mar">900000</integer>
@@ -254,6 +263,7 @@
     <integer name="GraftingLaborY3Nov">1575000</integer>
     <integer name="GraftingLaborY3Dec">1425000</integer>
     <integer name="GraftingLaborY3Total">12075000</integer>
+    <integer name="GraftingSeasonY3Total">7125000</integer>
     <integer name="GraftingLaborY4Jan">525000</integer>
     <integer name="GraftingLaborY4Feb">600000</integer>
     <integer name="GraftingLaborY4Mar">900000</integer>
@@ -267,6 +277,7 @@
     <integer name="GraftingLaborY4Nov">1575000</integer>
     <integer name="GraftingLaborY4Dec">1425000</integer>
     <integer name="GraftingLaborY4Total">12075000</integer>
+    <integer name="GraftingSeasonY4Total">7125000</integer>
     <integer name="GraftingLaborY5Jan">525000</integer>
     <integer name="GraftingLaborY5Feb">600000</integer>
     <integer name="GraftingLaborY5Mar">900000</integer>
@@ -280,6 +291,7 @@
     <integer name="GraftingLaborY5Nov">1575000</integer>
     <integer name="GraftingLaborY5Dec">1425000</integer>
     <integer name="GraftingLaborY5Total">12075000</integer>
+    <integer name="GraftingSeasonY5Total">7125000</integer>
     <integer name="GraftingLaborY6Jan">525000</integer>
     <integer name="GraftingLaborY6Feb">600000</integer>
     <integer name="GraftingLaborY6Mar">900000</integer>
@@ -293,6 +305,7 @@
     <integer name="GraftingLaborY6Nov">1575000</integer>
     <integer name="GraftingLaborY6Dec">1425000</integer>
     <integer name="GraftingLaborY6Total">12075000</integer>
+    <integer name="GraftingSeasonY6Total">7125000</integer>
     <integer name="GraftingLaborY7Jan">525000</integer>
     <integer name="GraftingLaborY7Feb">600000</integer>
     <integer name="GraftingLaborY7Mar">900000</integer>
@@ -306,6 +319,7 @@
     <integer name="GraftingLaborY7Nov">1575000</integer>
     <integer name="GraftingLaborY7Dec">1425000</integer>
     <integer name="GraftingLaborY7Total">12075000</integer>
+    <integer name="GraftingSeasonY7Total">7125000</integer>
     <!--Graft input Cost-->
     <integer name="GraftingInputY1Jan">240000</integer>
     <integer name="GraftingInputY1Feb">902000</integer>
@@ -412,6 +426,7 @@
     <integer name="ReplantingLaborY1Nov">375000</integer>
     <integer name="ReplantingLaborY1Dec">2025000</integer>
     <integer name="ReplantingLaborY1Total">12150000</integer>
+    <integer name="ReplantingSeasonY1Total">4950000</integer>
     <integer name="ReplantingLaborY2Jan">225000</integer>
     <integer name="ReplantingLaborY2Feb">825000</integer>
     <integer name="ReplantingLaborY2Mar">1200000</integer>
@@ -425,6 +440,7 @@
     <integer name="ReplantingLaborY2Nov">450000</integer>
     <integer name="ReplantingLaborY2Dec">225000</integer>
     <integer name="ReplantingLaborY2Total">6375000</integer>
+    <integer name="ReplantingSeasonY2Total">2550000</integer>
     <integer name="ReplantingLaborY3Jan">150000</integer>
     <integer name="ReplantingLaborY3Feb">225000</integer>
     <integer name="ReplantingLaborY3Mar">600000</integer>
@@ -438,6 +454,7 @@
     <integer name="ReplantingLaborY3Nov">900000</integer>
     <integer name="ReplantingLaborY3Dec">975000</integer>
     <integer name="ReplantingLaborY3Total">6975000</integer>
+    <integer name="ReplantingSeasonY3Total">3900000</integer>
     <integer name="ReplantingLaborY4Jan">450000</integer>
     <integer name="ReplantingLaborY4Feb">525000</integer>
     <integer name="ReplantingLaborY4Mar">825000</integer>
@@ -451,6 +468,7 @@
     <integer name="ReplantingLaborY4Nov">1575000</integer>
     <integer name="ReplantingLaborY4Dec">1425000</integer>
     <integer name="ReplantingLaborY4Total">11250000</integer>
+    <integer name="ReplantingSeasonY4Total">6675000</integer>
     <integer name="ReplantingLaborY5Jan">525000</integer>
     <integer name="ReplantingLaborY5Feb">600000</integer>
     <integer name="ReplantingLaborY5Mar">900000</integer>
@@ -464,6 +482,7 @@
     <integer name="ReplantingLaborY5Nov">1575000</integer>
     <integer name="ReplantingLaborY5Dec">1425000</integer>
     <integer name="ReplantingLaborY5Total">12075000</integer>
+    <integer name="ReplantingSeasonY5Total">7125000</integer>
     <integer name="ReplantingLaborY6Jan">525000</integer>
     <integer name="ReplantingLaborY6Feb">600000</integer>
     <integer name="ReplantingLaborY6Mar">900000</integer>
@@ -477,6 +496,7 @@
     <integer name="ReplantingLaborY6Nov">1575000</integer>
     <integer name="ReplantingLaborY6Dec">1425000</integer>
     <integer name="ReplantingLaborY6Total">12075000</integer>
+    <integer name="ReplantingSeasonY6Total">7125000</integer>
     <integer name="ReplantingLaborY7Jan">525000</integer>
     <integer name="ReplantingLaborY7Feb">600000</integer>
     <integer name="ReplantingLaborY7Mar">900000</integer>
@@ -490,6 +510,7 @@
     <integer name="ReplantingLaborY7Nov">1575000</integer>
     <integer name="ReplantingLaborY7Dec">1425000</integer>
     <integer name="ReplantingLaborY7Total">12075000</integer>
+    <integer name="ReplantingSeasonY7Total">7125000</integer>
     <!--Replanting Input Cost-->
     <integer name="ReplantingInputY1Jan">0</integer>
     <integer name="ReplantingInputY1Feb">0</integer>
@@ -596,6 +617,7 @@
     <integer name="ExtraSoilLaborY1Nov">1950000</integer>
     <integer name="ExtraSoilLaborY1Dec">1425000</integer>
     <integer name="ExtraSoilLaborY1Total">12825000</integer>
+    <integer name="ExtraSoilSeasonY1Total">7875000</integer>
     <integer name="ExtraSoilLaborY2Jan">525000</integer>
     <integer name="ExtraSoilLaborY2Feb">600000</integer>
     <integer name="ExtraSoilLaborY2Mar">900000</integer>
@@ -609,6 +631,7 @@
     <integer name="ExtraSoilLaborY2Nov">1950000</integer>
     <integer name="ExtraSoilLaborY2Dec">1425000</integer>
     <integer name="ExtraSoilLaborY2Total">12825000</integer>
+    <integer name="ExtraSoilSeasonY2Total">7875000</integer>
     <integer name="ExtraSoilLaborY3Jan">525000</integer>
     <integer name="ExtraSoilLaborY3Feb">600000</integer>
     <integer name="ExtraSoilLaborY3Mar">900000</integer>
@@ -622,6 +645,7 @@
     <integer name="ExtraSoilLaborY3Nov">1800000</integer>
     <integer name="ExtraSoilLaborY3Dec">1425000</integer>
     <integer name="ExtraSoilLaborY3Total">12525000</integer>
+    <integer name="ExtraSoilSeasonY3Total">7575000</integer>
     <integer name="ExtraSoilLaborY4Jan">525000</integer>
     <integer name="ExtraSoilLaborY4Feb">600000</integer>
     <integer name="ExtraSoilLaborY4Mar">900000</integer>
@@ -635,6 +659,7 @@
     <integer name="ExtraSoilLaborY4Nov">1575000</integer>
     <integer name="ExtraSoilLaborY4Dec">1425000</integer>
     <integer name="ExtraSoilLaborY4Total">12075000</integer>
+    <integer name="ExtraSoilSeasonY4Total">7125000</integer>
     <integer name="ExtraSoilLaborY5Jan">525000</integer>
     <integer name="ExtraSoilLaborY5Feb">600000</integer>
     <integer name="ExtraSoilLaborY5Mar">900000</integer>
@@ -648,6 +673,7 @@
     <integer name="ExtraSoilLaborY5Nov">1575000</integer>
     <integer name="ExtraSoilLaborY5Dec">1425000</integer>
     <integer name="ExtraSoilLaborY5Total">12075000</integer>
+    <integer name="ExtraSoilSeasonY5Total">7125000</integer>
     <integer name="ExtraSoilLaborY6Jan">525000</integer>
     <integer name="ExtraSoilLaborY6Feb">600000</integer>
     <integer name="ExtraSoilLaborY6Mar">900000</integer>
@@ -661,6 +687,7 @@
     <integer name="ExtraSoilLaborY6Nov">1575000</integer>
     <integer name="ExtraSoilLaborY6Dec">1425000</integer>
     <integer name="ExtraSoilLaborY6Total">12075000</integer>
+    <integer name="ExtraSoilSeasonY6Total">7125000</integer>
     <integer name="ExtraSoilLaborY7Jan">525000</integer>
     <integer name="ExtraSoilLaborY7Feb">600000</integer>
     <integer name="ExtraSoilLaborY7Mar">900000</integer>
@@ -674,6 +701,7 @@
     <integer name="ExtraSoilLaborY7Nov">1575000</integer>
     <integer name="ExtraSoilLaborY7Dec">1425000</integer>
     <integer name="ExtraSoilLaborY7Total">12075000</integer>
+    <integer name="ExtraSoilSeasonY7Total">7125000</integer>
     <!--ExtraSoil Input Cost-->
     <integer name="ExtraSoilInputY1Jan">18000</integer>
     <integer name="ExtraSoilInputY1Feb">100800</integer>
@@ -950,6 +978,7 @@
     <integer name="difInputY7Nov">0</integer>
     <integer name="difInputY7Dec">0</integer>
     <integer name="difInputY7Total">0</integer>
+
     <!-- Man days needed-->
     <integer name="ExtraSoilY1Jan">7</integer>
     <integer name="ExtraSoilY1Feb">8</integer>
@@ -964,6 +993,7 @@
     <integer name="ExtraSoilY1Nov">26</integer>
     <integer name="ExtraSoilY1Dec">19</integer>
     <integer name="ExtraSoilY1Total">171</integer>
+    <integer name="ExtraSoilY1Season">105</integer>
     <integer name="ExtraSoilY2Jan">7</integer>
     <integer name="ExtraSoilY2Feb">8</integer>
     <integer name="ExtraSoilY2Mar">12</integer>
@@ -977,6 +1007,7 @@
     <integer name="ExtraSoilY2Nov">26</integer>
     <integer name="ExtraSoilY2Dec">19</integer>
     <integer name="ExtraSoilY2Total">171</integer>
+    <integer name="ExtraSoilY2Season">105</integer>
     <integer name="ExtraSoilY3Jan">7</integer>
     <integer name="ExtraSoilY3Feb">8</integer>
     <integer name="ExtraSoilY3Mar">12</integer>
@@ -990,6 +1021,7 @@
     <integer name="ExtraSoilY3Nov">24</integer>
     <integer name="ExtraSoilY3Dec">19</integer>
     <integer name="ExtraSoilY3Total">167</integer>
+    <integer name="ExtraSoilY3Season">101</integer>
     <integer name="ExtraSoilY4Jan">7</integer>
     <integer name="ExtraSoilY4Feb">8</integer>
     <integer name="ExtraSoilY4Mar">12</integer>
@@ -1003,6 +1035,7 @@
     <integer name="ExtraSoilY4Nov">21</integer>
     <integer name="ExtraSoilY4Dec">19</integer>
     <integer name="ExtraSoilY4Total">161</integer>
+    <integer name="ExtraSoilY4Season">95</integer>
     <integer name="ExtraSoilY5Jan">7</integer>
     <integer name="ExtraSoilY5Feb">8</integer>
     <integer name="ExtraSoilY5Mar">12</integer>
@@ -1016,6 +1049,7 @@
     <integer name="ExtraSoilY5Nov">21</integer>
     <integer name="ExtraSoilY5Dec">19</integer>
     <integer name="ExtraSoilY5Total">161</integer>
+    <integer name="ExtraSoilY5Season">95</integer>
     <integer name="ExtraSoilY6Jan">7</integer>
     <integer name="ExtraSoilY6Feb">8</integer>
     <integer name="ExtraSoilY6Mar">12</integer>
@@ -1029,6 +1063,7 @@
     <integer name="ExtraSoilY6Nov">21</integer>
     <integer name="ExtraSoilY6Dec">19</integer>
     <integer name="ExtraSoilY6Total">161</integer>
+    <integer name="ExtraSoilY6Season">95</integer>
     <integer name="ExtraSoilY7Jan">7</integer>
     <integer name="ExtraSoilY7Feb">8</integer>
     <integer name="ExtraSoilY7Mar">12</integer>
@@ -1042,6 +1077,7 @@
     <integer name="ExtraSoilY7Nov">21</integer>
     <integer name="ExtraSoilY7Dec">19</integer>
     <integer name="ExtraSoilY7Total">161</integer>
+    <integer name="ExtraSoilY7Season">95</integer>
     <integer name="replantY1Jan">1</integer>
     <integer name="replantY1Feb">1</integer>
     <integer name="replantY1Mar">1</integer>
@@ -1055,6 +1091,7 @@
     <integer name="replantY1Nov">5</integer>
     <integer name="replantY1Dec">27</integer>
     <integer name="replantY1Total">162</integer>
+    <integer name="replantY1Season">66</integer>
     <integer name="replantY2Jan">3</integer>
     <integer name="replantY2Feb">11</integer>
     <integer name="replantY2Mar">16</integer>
@@ -1068,6 +1105,7 @@
     <integer name="replantY2Nov">6</integer>
     <integer name="replantY2Dec">3</integer>
     <integer name="replantY2Total">85</integer>
+    <integer name="replantY2Season">34</integer>
     <integer name="replantY3Jan">2</integer>
     <integer name="replantY3Feb">3</integer>
     <integer name="replantY3Mar">8</integer>
@@ -1081,6 +1119,7 @@
     <integer name="replantY3Nov">12</integer>
     <integer name="replantY3Dec">13</integer>
     <integer name="replantY3Total">93</integer>
+    <integer name="replantY3Season">52</integer>
     <integer name="replantY4Jan">6</integer>
     <integer name="replantY4Feb">7</integer>
     <integer name="replantY4Mar">11</integer>
@@ -1094,6 +1133,7 @@
     <integer name="replantY4Nov">21</integer>
     <integer name="replantY4Dec">19</integer>
     <integer name="replantY4Total">150</integer>
+    <integer name="replantY4Season">89</integer>
     <integer name="replantY5Jan">7</integer>
     <integer name="replantY5Feb">8</integer>
     <integer name="replantY5Mar">12</integer>
@@ -1107,6 +1147,7 @@
     <integer name="replantY5Nov">21</integer>
     <integer name="replantY5Dec">19</integer>
     <integer name="replantY5Total">161</integer>
+    <integer name="replantY5Season">95</integer>
     <integer name="replantY6Jan">7</integer>
     <integer name="replantY6Feb">8</integer>
     <integer name="replantY6Mar">12</integer>
@@ -1120,6 +1161,7 @@
     <integer name="replantY6Nov">21</integer>
     <integer name="replantY6Dec">19</integer>
     <integer name="replantY6Total">161</integer>
+    <integer name="replantY6Season">95</integer>
     <integer name="replantY7Jan">7</integer>
     <integer name="replantY7Feb">8</integer>
     <integer name="replantY7Mar">12</integer>
@@ -1133,6 +1175,7 @@
     <integer name="replantY7Nov">21</integer>
     <integer name="replantY7Dec">19</integer>
     <integer name="replantY7Total">161</integer>
+    <integer name="replantY7Season">95</integer>
     <integer name="graftY1Jan">23</integer>
     <integer name="graftY1Feb">17</integer>
     <integer name="graftY1Mar">13</integer>
@@ -1146,6 +1189,7 @@
     <integer name="graftY1Nov">12</integer>
     <integer name="graftY1Dec">19</integer>
     <integer name="graftY1Total">160</integer>
+    <integer name="graftY1Season">77</integer>
     <integer name="graftY2Jan">3</integer>
     <integer name="graftY2Feb">4</integer>
     <integer name="graftY2Mar">8</integer>
@@ -1159,6 +1203,7 @@
     <integer name="graftY2Nov">13</integer>
     <integer name="graftY2Dec">12</integer>
     <integer name="graftY2Total">96</integer>
+    <integer name="graftY2Season">55</integer>
     <integer name="graftY3Jan">7</integer>
     <integer name="graftY3Feb">8</integer>
     <integer name="graftY3Mar">12</integer>
@@ -1172,6 +1217,7 @@
     <integer name="graftY3Nov">21</integer>
     <integer name="graftY3Dec">19</integer>
     <integer name="graftY3Total">161</integer>
+    <integer name="graftY3Season">95</integer>
     <integer name="graftY4Jan">7</integer>
     <integer name="graftY4Feb">8</integer>
     <integer name="graftY4Mar">12</integer>
@@ -1185,6 +1231,7 @@
     <integer name="graftY4Nov">21</integer>
     <integer name="graftY4Dec">19</integer>
     <integer name="graftY4Total">161</integer>
+    <integer name="graftY4Season">95</integer>
     <integer name="graftY5Jan">7</integer>
     <integer name="graftY5Feb">8</integer>
     <integer name="graftY5Mar">12</integer>
@@ -1198,6 +1245,7 @@
     <integer name="graftY5Nov">21</integer>
     <integer name="graftY5Dec">19</integer>
     <integer name="graftY5Total">161</integer>
+    <integer name="graftY5Season">95</integer>
     <integer name="graftY6Jan">7</integer>
     <integer name="graftY6Feb">8</integer>
     <integer name="graftY6Mar">12</integer>
@@ -1211,6 +1259,7 @@
     <integer name="graftY6Nov">21</integer>
     <integer name="graftY6Dec">19</integer>
     <integer name="graftY6Total">161</integer>
+    <integer name="graftY6Season">95</integer>
     <integer name="graftY7Jan">7</integer>
     <integer name="graftY7Feb">8</integer>
     <integer name="graftY7Mar">12</integer>
@@ -1224,6 +1273,7 @@
     <integer name="graftY7Nov">21</integer>
     <integer name="graftY7Dec">19</integer>
     <integer name="graftY7Total">161</integer>
+    <integer name="graftY7Season">95</integer>
     <integer name="gapY1Jan">7</integer>
     <integer name="gapY1Feb">8</integer>
     <integer name="gapY1Mar">12</integer>
@@ -1237,6 +1287,7 @@
     <integer name="gapY1Nov">21</integer>
     <integer name="gapY1Dec">19</integer>
     <integer name="gapY1Total">161</integer>
+    <integer name="gapY1Season">95</integer>
     <integer name="gapY2Jan">7</integer>
     <integer name="gapY2Feb">8</integer>
     <integer name="gapY2Mar">12</integer>
@@ -1250,6 +1301,7 @@
     <integer name="gapY2Nov">21</integer>
     <integer name="gapY2Dec">19</integer>
     <integer name="gapY2Total">161</integer>
+    <integer name="gapY2Season">95</integer>
     <integer name="gapY3Jan">7</integer>
     <integer name="gapY3Feb">8</integer>
     <integer name="gapY3Mar">12</integer>
@@ -1263,6 +1315,7 @@
     <integer name="gapY3Nov">21</integer>
     <integer name="gapY3Dec">19</integer>
     <integer name="gapY3Total">161</integer>
+    <integer name="gapY3Season">95</integer>
     <integer name="gapY4Jan">7</integer>
     <integer name="gapY4Feb">8</integer>
     <integer name="gapY4Mar">12</integer>
@@ -1276,6 +1329,7 @@
     <integer name="gapY4Nov">21</integer>
     <integer name="gapY4Dec">19</integer>
     <integer name="gapY4Total">161</integer>
+    <integer name="gapY4Season">95</integer>
     <integer name="gapY5Jan">7</integer>
     <integer name="gapY5Feb">8</integer>
     <integer name="gapY5Mar">12</integer>
@@ -1289,6 +1343,7 @@
     <integer name="gapY5Nov">21</integer>
     <integer name="gapY5Dec">19</integer>
     <integer name="gapY5Total">161</integer>
+    <integer name="gapY5Season">95</integer>
     <integer name="gapY6Jan">7</integer>
     <integer name="gapY6Feb">8</integer>
     <integer name="gapY6Mar">12</integer>
@@ -1302,6 +1357,7 @@
     <integer name="gapY6Nov">21</integer>
     <integer name="gapY6Dec">19</integer>
     <integer name="gapY6Total">161</integer>
+    <integer name="gapY6Season">95</integer>
     <integer name="gapY7Jan">7</integer>
     <integer name="gapY7Feb">8</integer>
     <integer name="gapY7Mar">12</integer>
@@ -1315,6 +1371,7 @@
     <integer name="gapY7Nov">21</integer>
     <integer name="gapY7Dec">19</integer>
     <integer name="gapY7Total">161</integer>
+    <integer name="gapY7Season">95</integer>
     <integer name="difDaysY1Jan">0</integer>
     <integer name="difDaysY1Feb">0</integer>
     <integer name="difDaysY1Mar">0</integer>
@@ -1406,5 +1463,4 @@
     <integer name="difDaysY7Nov">0</integer>
     <integer name="difDaysY7Dec">0</integer>
     <integer name="difDaysY7Total">0</integer>
-
 </resources>
