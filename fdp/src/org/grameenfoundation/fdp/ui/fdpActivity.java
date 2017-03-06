@@ -1131,7 +1131,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("replant","extra","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("replant","extra","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("replant","extra","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("replant","extra","",plot2Area,avgCost,age2);
                         }
@@ -1139,7 +1139,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("replant","","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("replant","","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("replant","","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("replant","","",plot2Area,avgCost,age2);
                         }
@@ -1151,7 +1151,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("graft","extra","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("graft","extra","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("graft","extra","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("graft","extra","",plot2Area,avgCost,age2);
                         }
@@ -1159,7 +1159,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("graft","","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("graft","","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("graft","","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("graft","","",plot2Area,avgCost,age2);
                         }
@@ -1170,7 +1170,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                         fragment2.mainint("extra","","labor",plot2Area,avgCost,age2);
                     }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                        fragment2.mainint("extra","","season",plot1Area,avgCost,age1);
+                        fragment2.mainint("extra","","season",plot2Area,avgCost,age2);
                     }else{
                         fragment2.mainint("extra","","",plot2Area,avgCost,age2);
                     }
@@ -1181,7 +1181,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("gap","extra","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("gap","extra","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("gap","extra","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("gap","extra","",plot2Area,avgCost,age2);
                         }
@@ -1189,7 +1189,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("gap","","labor",plot2Area,avgCost,age2);
                         }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.mainint("gap","","season",plot1Area,avgCost,age1);
+                            fragment2.mainint("gap","","season",plot2Area,avgCost,age2);
                         }else{
                             fragment2.mainint("gap","","",plot2Area,avgCost,age2);
                         }
@@ -1225,14 +1225,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())>25)){
                     //Replant
                     if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("replant","extra","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("replant","extra","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("replant","extra","",plot3Area,avgCost,age3);
                         }
                     }else{
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("replant","","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("replant","","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("replant","","",plot3Area,avgCost,age3);
                         }
@@ -1241,14 +1245,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())<25))){
                     //Graft
                     if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("graft","extra","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("graft","extra","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("graft","extra","",plot3Area,avgCost,age3);
                         }
                     }else{
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("graft","","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("graft","","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("graft","","",plot3Area,avgCost,age3);
                         }
@@ -1256,8 +1264,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                 }else if (sObject.getSOILMNG3().equals("B")){
                     //Extra Soil Management
-                    if (sObject.getHireLabor3().equals("Yes")) {
+                    if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                         fragment3.mainint("extra","","labor",plot3Area,avgCost,age3);
+                    }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                        fragment3.mainint("extra","","season",plot3Area,avgCost,age3);
                     }else{
                         fragment3.mainint("extra","","",plot3Area,avgCost,age3);
                     }
@@ -1265,14 +1275,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }else{
                     //GAP
                     if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("gap","extra","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("gap","extra","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("gap","extra","",plot3Area,avgCost,age3);
                         }
                     }else{
-                        if (sObject.getHireLabor3().equals("Yes")) {
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("gap","","labor",plot3Area,avgCost,age3);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.mainint("gap","","season",plot3Area,avgCost,age3);
                         }else{
                             fragment3.mainint("gap","","",plot3Area,avgCost,age3);
                         }
@@ -1280,19 +1294,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //other interventions
-                if (sObject.getHireLabor3().equals("Yes")) {
+                if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                     fragment3.other("labor");
                 }
 
-                if (sObject.getLimeNeed3().equals("Yes")) {
+                if (sObject.getLimeNeed3().equals("Yes")||sObject.getLimeNeed3().equals("Ya")) {
                     fragment3.other("lime");
                 }
 
-                if (sObject.getFillingOption3().equals("Yes")) {
+                if (sObject.getFillingOption3().equals("Yes")||sObject.getFillingOption3().equals("Ya")) {
                     fragment3.other("filling");
                 }
 
-                if (sObject.getDrainageNeed3().equals("Yes")) {
+                if (sObject.getDrainageNeed3().equals("Yes")||sObject.getDrainageNeed3().equals("Ya")) {
                     fragment3.other("drainage");
                 }
                 
@@ -1307,14 +1321,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())>25)){
                     //Replant
                     if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("replant","extra","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("replant","extra","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("replant","extra","",plot4Area,avgCost,age4);
                         }
                     }else{
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("replant","","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("replant","","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("replant","","",plot4Area,avgCost,age4);
                         }
@@ -1323,14 +1341,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())<25))){
                     //Graft
                     if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("graft","extra","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("graft","extra","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("graft","extra","",plot4Area,avgCost,age4);
                         }
                     }else{
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("graft","","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("graft","","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("graft","","",plot4Area,avgCost,age4);
                         }
@@ -1338,8 +1360,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                 }else if (sObject.getSOILMNG4().equals("B")){
                     //Extra Soil Management
-                    if (sObject.getHireLabor4().equals("Yes")) {
+                    if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                         fragment4.mainint("extra","","labor",plot4Area,avgCost,age4);
+                    }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                        fragment4.mainint("extra","","season",plot4Area,avgCost,age4);
                     }else{
                         fragment4.mainint("extra","","",plot4Area,avgCost,age4);
                     }
@@ -1347,14 +1371,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }else{
                     //GAP
                     if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("gap","extra","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("gap","extra","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("gap","extra","",plot4Area,avgCost,age4);
                         }
                     }else{
-                        if (sObject.getHireLabor4().equals("Yes")) {
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("gap","","labor",plot4Area,avgCost,age4);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.mainint("gap","","season",plot4Area,avgCost,age4);
                         }else{
                             fragment4.mainint("gap","","",plot4Area,avgCost,age4);
                         }
@@ -1362,19 +1390,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //other interventions
-                if (sObject.getHireLabor4().equals("Yes")) {
+                if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                     fragment4.other("labor");
                 }
 
-                if (sObject.geLimeNeed4().equals("Yes")) {
+                if (sObject.geLimeNeed4().equals("Yes")||sObject.geLimeNeed4().equals("Ya")) {
                     fragment4.other("lime");
                 }
 
-                if (sObject.getFillingOption4().equals("Yes")) {
+                if (sObject.getFillingOption4().equals("Yes")||sObject.getFillingOption4().equals("Ya")) {
                     fragment4.other("filling");
                 }
 
-                if (sObject.getDrainageNeed4().equals("Yes")) {
+                if (sObject.getDrainageNeed4().equals("Yes")||sObject.getDrainageNeed4().equals("Ya")) {
                     fragment4.other("drainage");
                 }
                 ft.show(fragment4);
@@ -1389,14 +1417,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())>25)){
                     //Replant
                     if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("replant","extra","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.mainint("replant","extra","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("replant","extra","",plot5Area,avgCost,age5);
                         }
                     }else{
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("replant","","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.mainint("replant","","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("replant","","",plot5Area,avgCost,age5);
                         }
@@ -1405,14 +1437,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())<25))){
                     //Graft
                     if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("graft","extra","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.mainint("graft","extra","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("graft","extra","",plot5Area,avgCost,age5);
                         }
                     }else{
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("graft","","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.mainint("graft","","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("graft","","",plot5Area,avgCost,age5);
                         }
@@ -1420,8 +1456,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                 }else if (sObject.getSOILMNG5().equals("B")){
                     //Extra Soil Management
-                    if (sObject.getHireLabor5().equals("Yes")) {
+                    if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                         fragment5.mainint("extra","","labor",plot5Area,avgCost,age5);
+                    }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                        fragment5.mainint("extra","","season",plot5Area,avgCost,age5);
                     }else{
                         fragment5.mainint("extra","","",plot5Area,avgCost,age5);
                     }
@@ -1429,14 +1467,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }else{
                     //GAP
                     if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("gap","extra","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.mainint("gap","extra","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("gap","extra","",plot5Area,avgCost,age5);
                         }
                     }else{
-                        if (sObject.getHireLabor5().equals("Yes")) {
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("gap","","labor",plot5Area,avgCost,age5);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.mainint("gap","","season",plot5Area,avgCost,age5);
                         }else{
                             fragment5.mainint("gap","","",plot5Area,avgCost,age5);
                         }
@@ -1444,19 +1486,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //other interventions
-                if (sObject.getHireLabor5().equals("Yes")) {
+                if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                     fragment5.other("labor");
                 }
 
-                if (sObject.getLimeNeed5().equals("Yes")) {
+                if (sObject.getLimeNeed5().equals("Yes")||sObject.getLimeNeed5().equals("Ya")) {
                     fragment5.other("lime");
                 }
 
-                if (sObject.getFillingOption5().equals("Yes")) {
+                if (sObject.getFillingOption5().equals("Yes")||sObject.getFillingOption5().equals("Ya")) {
                     fragment5.other("filling");
                 }
 
-                if (sObject.getDrainageNeed5().equals("Yes")) {
+                if (sObject.getDrainageNeed5().equals("Yes")||sObject.getDrainageNeed5().equals("Ya")) {
                     fragment5.other("drainage");
                 }
                 ft.show(fragment5);
@@ -1470,14 +1512,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 if (sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())>25)){
                     //Replant
                     if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("replant","extra","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("replant","extra","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("replant","extra","",plot6Area,avgCost,age6);
                         }
                     }else{
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("replant","","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("replant","","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("replant","","",plot6Area,avgCost,age6);
                         }
@@ -1486,14 +1532,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 } else if((sObject.getFarmCondition6().equals("G")&&sObject.getGENETIC6().equals("B"))||(sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())<25))){
                     //Graft
                     if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("graft","extra","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("graft","extra","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("graft","extra","",plot6Area,avgCost,age6);
                         }
                     }else{
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("graft","","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("graft","","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("graft","","",plot6Area,avgCost,age6);
                         }
@@ -1501,8 +1551,10 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                 }else if (sObject.getSOILMNG6().equals("B")){
                     //Extra Soil Management
-                    if (sObject.getHireLabor6().equals("Yes")) {
+                    if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                         fragment6.mainint("extra","","labor",plot6Area,avgCost,age6);
+                    }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                        fragment6.mainint("extra","","season",plot6Area,avgCost,age6);
                     }else{
                         fragment6.mainint("extra","","",plot6Area,avgCost,age6);
                     }
@@ -1510,14 +1562,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }else{
                     //GAP
                     if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("gap","extra","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("gap","extra","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("gap","extra","",plot6Area,avgCost,age6);
                         }
                     }else{
-                        if (sObject.getHireLabor6().equals("Yes")) {
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("gap","","labor",plot6Area,avgCost,age6);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.mainint("gap","","season",plot6Area,avgCost,age6);
                         }else{
                             fragment6.mainint("gap","","",plot6Area,avgCost,age6);
                         }
@@ -1525,19 +1581,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //other interventions
-                if (sObject.getHireLabor6().equals("Yes")) {
+                if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                     fragment6.other("labor");
                 }
 
-                if (sObject.getLimeNeed6().equals("Yes")) {
+                if (sObject.getLimeNeed6().equals("Yes")||sObject.getLimeNeed6().equals("Ya")) {
                     fragment6.other("lime");
                 }
 
-                if (sObject.getFillingOption6().equals("Yes")) {
+                if (sObject.getFillingOption6().equals("Yes")||sObject.getFillingOption6().equals("Ya")) {
                     fragment6.other("filling");
                 }
 
-                if (sObject.getDrainageNeed6().equals("Yes")) {
+                if (sObject.getDrainageNeed6().equals("Yes")||sObject.getDrainageNeed6().equals("Ya")) {
                     fragment6.other("drainage");
                 }
                 ft.show(fragment6);

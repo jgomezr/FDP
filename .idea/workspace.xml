@@ -62,286 +62,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi/common_full_open_on_phone.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi/common_full_open_on_phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi/common_ic_googleplayservices.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-hdpi/common_ic_googleplayservices.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-ldpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-ldpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-mdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-mdpi/common_full_open_on_phone.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-mdpi/common_full_open_on_phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-tvdpi/common_full_open_on_phone.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-tvdpi/common_full_open_on_phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xhdpi/common_full_open_on_phone.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xhdpi/common_full_open_on_phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_bg.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_press.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_press.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__nav_shadow.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__nav_shadow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__refresh_loader.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__refresh_loader.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xxhdpi/common_full_open_on_phone.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable-xxhdpi/common_full_open_on_phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/ii.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/ii.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/info.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/info.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/sf__header_bg.png" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/drawable/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/outputs/aar/SalesforceSDK-debug.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/outputs/aar/SalesforceSDK-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/outputs/aar/SalesforceSDK-release.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/outputs/aar/SalesforceSDK-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/outputs/aar/SmartStore-debug.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/outputs/aar/SmartStore-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/outputs/aar/SmartStore-release.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/outputs/aar/SmartStore-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-ldpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__header_refresh_press.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__nav_shadow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xlarge-v4/sf__refresh_loader.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4/sf__icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/merged/androidTest/debug/drawable/sf__header_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-debug.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-release.aar" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/outputs/aar/SmartSync-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/library_aar_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/library_aar_1_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_8_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_8_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_basement_8_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_25_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_25_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/tooltip_0_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/tooltip_0_1_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build.gradle" afterPath="$PROJECT_DIR$/fdp/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartstore/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartstore/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartsync/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartsync/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/venmo/view/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/venmo/view/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/org/grameenfoundation/fdp/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/org/grameenfoundation/fdp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-af.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-am.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-am.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-bg.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-bg.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-cs.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-da.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-da.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-el.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-el.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rAU.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rAU.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rGB.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rGB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-en-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-es-rUS.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-es-rUS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-et-rEE.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-et-rEE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-eu-rES.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-eu-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fa.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-gl-rES.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-gl-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hr.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hu.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-in.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-in.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-is-rIS.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-is-rIS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-iw.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-iw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ja.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-km-rKH.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-km-rKH.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lt.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lv.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-lv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-my-rMM.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-my-rMM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-nb.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-nb.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-nl.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ro.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ro.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-si-rLK.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-si-rLK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sk.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sl.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sr.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sv.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sw.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-sw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-te-rIN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-te-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-th.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-th.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-tl.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-tl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-tr.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-tr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-uk.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-uk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-vi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-vi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zu.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-zu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-tvdpi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-tvdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable-xxhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values-in/values-in.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values-in/values-in.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/fdp/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/fdp-fdp.iml" afterPath="$PROJECT_DIR$/fdp/fdp-fdp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/layout/plot_fragment.xml" afterPath="$PROJECT_DIR$/fdp/res/layout/plot_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values/costs.xml" afterPath="$PROJECT_DIR$/fdp/res/values/costs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/SalesforceSDK.iml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/SalesforceSDK.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build.gradle" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/R.java" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/bundles/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifests/aapt/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build/intermediates/manifests/aapt/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/SmartStore.iml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/SmartStore.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build.gradle" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/smartstore/R.java" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/smartstore/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-port-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-port-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/menu.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/xml.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/androidTest/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartStore/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/SmartSync.iml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/SmartSync.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build.gradle" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/smartsync/R.java" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/generated/source/r/androidTest/debug/com/salesforce/androidsdk/smartsync/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-port-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-port-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/layout.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/menu.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/xml.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/androidTest/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xlarge-port-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/forcedroid/libs/SmartSync/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
     </list>
     <ignored path="fdp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -392,8 +114,8 @@
       <file leaf-file-name="fdpActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1513">
-              <caret line="1107" column="78" selection-start-line="1107" selection-start-column="78" selection-end-line="1107" selection-end-column="78" />
+            <state relative-caret-position="277">
+              <caret line="1597" column="17" selection-start-line="1597" selection-start-column="17" selection-end-line="1597" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -6079,67 +5801,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+      <pane id="PackagesPane">
+        <subPane />
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
@@ -6181,8 +5846,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -6887,7 +6559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488406215316</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Partially cost fix">
+      <created>1488576867904</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1488576867904</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -7419,7 +7098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7427,7 +7105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-292">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7435,14 +7112,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1513">
-          <caret line="1107" column="78" selection-start-line="1107" selection-start-column="78" selection-end-line="1107" selection-end-column="78" />
+        <state relative-caret-position="277">
+          <caret line="1597" column="17" selection-start-line="1597" selection-start-column="17" selection-end-line="1597" selection-end-column="17" />
           <folding />
         </state>
       </provider>
