@@ -1211,7 +1211,7 @@
     <integer name="GAPSLaborY7Oct">675000</integer>
     <integer name="GAPSLaborY7Sep">675000</integer>
     <integer name="GAPSLaborY7Total">12075000</integer>
-    <integer name="GAPSSeasonY1Total">7125000</integer>
+    <integer name="GAPSeasonY1Total">7125000</integer>
     <integer name="GAPSeasonY2Total">7125000</integer>
     <integer name="GAPSeasonY3Total">7125000</integer>
     <integer name="GAPSeasonY4Total">7125000</integer>

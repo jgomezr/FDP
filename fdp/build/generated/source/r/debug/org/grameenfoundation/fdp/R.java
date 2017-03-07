@@ -1121,7 +1121,7 @@ containing a value of this type.
         public static final int GAPSLaborY7Oct=0x7f0a01d2;
         public static final int GAPSLaborY7Sep=0x7f0a01d3;
         public static final int GAPSLaborY7Total=0x7f0a01d4;
-        public static final int GAPSSeasonY1Total=0x7f0a01d5;
+        public static final int GAPSeasonY1Total=0x7f0a01d5;
         public static final int GAPSeasonY2Total=0x7f0a01d6;
         public static final int GAPSeasonY3Total=0x7f0a01d7;
         public static final int GAPSeasonY4Total=0x7f0a01d8;

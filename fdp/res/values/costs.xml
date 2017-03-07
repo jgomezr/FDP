@@ -44,7 +44,7 @@
     <integer name="GAPSLaborY1Nov">1575000</integer>
     <integer name="GAPSLaborY1Dec">1425000</integer>
     <integer name="GAPSLaborY1Total">12075000</integer>
-    <integer name="GAPSSeasonY1Total">7125000</integer>
+    <integer name="GAPSeasonY1Total">7125000</integer>
     <integer name="GAPSLaborY2Jan">525000</integer>
     <integer name="GAPSLaborY2Feb">600000</integer>
     <integer name="GAPSLaborY2Mar">900000</integer>

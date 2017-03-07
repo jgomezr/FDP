@@ -996,7 +996,7 @@ int integer GAPSLaborY7Nov 0x7f0a01d1
 int integer GAPSLaborY7Oct 0x7f0a01d2
 int integer GAPSLaborY7Sep 0x7f0a01d3
 int integer GAPSLaborY7Total 0x7f0a01d4
-int integer GAPSSeasonY1Total 0x7f0a01d5
+int integer GAPSeasonY1Total 0x7f0a01d5
 int integer GAPSeasonY2Total 0x7f0a01d6
 int integer GAPSeasonY3Total 0x7f0a01d7
 int integer GAPSeasonY4Total 0x7f0a01d8

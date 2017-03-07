@@ -723,6 +723,21 @@ public class fdpFragment extends Fragment {
                         labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
                         labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
                         labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                    }else if(labor =="season"){
+                        laborD1 = (int) ((area * (getResources().getInteger(R.integer.replantY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                        laborD2 = (int) ((area * (getResources().getInteger(R.integer.replantY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                        laborD3 = (int) ((area * (getResources().getInteger(R.integer.replantY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                        laborD4 = (int) ((area * (getResources().getInteger(R.integer.replantY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                        laborD5 = (int) ((area * (getResources().getInteger(R.integer.replantY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                        laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                        laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                        labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                        labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                        labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                        labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                        labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                        labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                        labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                     }
                     cost1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                     cost2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
@@ -747,6 +762,21 @@ public class fdpFragment extends Fragment {
                         labor5 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
                         labor6 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
                         labor7 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                    }else if(labor =="season"){
+                        laborD1 = (int) ((area * (getResources().getInteger(R.integer.replantY1Season))));
+                        laborD2 = (int) ((area * (getResources().getInteger(R.integer.replantY2Season))));
+                        laborD3 = (int) ((area * (getResources().getInteger(R.integer.replantY3Season))));
+                        laborD4 = (int) ((area * (getResources().getInteger(R.integer.replantY4Season))));
+                        laborD5 = (int) ((area * (getResources().getInteger(R.integer.replantY5Season))));
+                        laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Season))));
+                        laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Season))));
+                        labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))));
+                        labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))));
+                        labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total))));
+                        labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total))));
+                        labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total))));
+                        labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY6Total))));
+                        labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total))));
                     }
                     cost1 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
                     cost2 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
@@ -789,6 +819,21 @@ public class fdpFragment extends Fragment {
             gaplabor5 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
             gaplabor6 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
             gaplabor7 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+        }else if(labor =="season"){
+            gaplaborD1 = (int) (area * (getResources().getInteger(R.integer.gapY1Season)));
+            gaplaborD2 = (int) (area * (getResources().getInteger(R.integer.gapY2Season)));
+            gaplaborD3 = (int) (area * (getResources().getInteger(R.integer.gapY3Season)));
+            gaplaborD4 = (int) (area * (getResources().getInteger(R.integer.gapY4Season)));
+            gaplaborD5 = (int) (area * (getResources().getInteger(R.integer.gapY5Season)));
+            gaplaborD6 = (int) (area * (getResources().getInteger(R.integer.gapY6Season)));
+            gaplaborD7 = (int) (area * (getResources().getInteger(R.integer.gapY7Season)));
+            gaplabor1 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY1Total)));
+            gaplabor2 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY2Total)));
+            gaplabor3 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY3Total)));
+            gaplabor4 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY4Total)));
+            gaplabor5 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY5Total)));
+            gaplabor6 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY6Total)));
+            gaplabor7 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY7Total)));
         }
 
 
@@ -815,6 +860,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
                     labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingLaborY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }else if(labor =="season"){
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.replantY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.replantY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.replantY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.replantY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.replantY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
@@ -839,6 +899,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY5Total)));
                     labor6 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY6Total)));
                     labor7 = (int) (area * (getResources().getInteger(R.integer.ReplantingLaborY7Total)));
+                }else if(labor =="season"){
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.replantY1Season)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.replantY2Season)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.replantY3Season)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.replantY4Season)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.replantY5Season)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.replantY6Season)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.replantY7Season)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY6Total)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total)));
                 }
                 cost1 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
@@ -878,6 +953,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
                     labor6 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.GraftingLaborY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }else if(labor =="season"){
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.graftY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.graftY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.graftY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.graftY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.graftY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.graftY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.graftY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
@@ -902,6 +992,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY5Total)));
                     labor6 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY6Total)));
                     labor7 = (int) (area * (getResources().getInteger(R.integer.GraftingLaborY7Total)));
+                }else if(labor =="season"){
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.graftY1Season)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.graftY2Season)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.graftY3Season)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.graftY4Season)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.graftY5Season)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.graftY6Season)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.graftY7Season)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY1Total)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY2Total)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY3Total)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY4Total)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY5Total)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY6Total)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY7Total)));
                 }
                 cost1 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
@@ -937,6 +1042,21 @@ public class fdpFragment extends Fragment {
                 labor5 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilLaborY5Total)));
                 labor6 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilLaborY6Total)));
                 labor7 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilLaborY7Total)));
+            }else if(labor =="season"){
+                laborD1 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY1Season)));
+                laborD2 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY2Season)));
+                laborD3 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY3Season)));
+                laborD4 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY4Season)));
+                laborD5 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY5Season)));
+                laborD6 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY6Season)));
+                laborD7 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilY7Season)));
+                labor1 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY1Total)));
+                labor2 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY2Total)));
+                labor3 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY3Total)));
+                labor4 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY4Total)));
+                labor5 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY5Total)));
+                labor6 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY6Total)));
+                labor7 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY7Total)));
             }
             cost1 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
             cost2 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
@@ -971,6 +1091,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.GAPSLaborY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
                     labor6 = (int) ((area * (getResources().getInteger(R.integer.GAPSLaborY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.GAPSLaborY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }else if(labor =="season") {
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.gapY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.gapY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.gapY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.gapY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.gapY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.gapY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.gapY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
@@ -995,6 +1130,21 @@ public class fdpFragment extends Fragment {
                     labor5 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY5Total)));
                     labor6 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY6Total)));
                     labor7 = (int) (area * (getResources().getInteger(R.integer.GAPSLaborY7Total)));
+                }else if(labor =="season") {
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.gapY1Season)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.gapY2Season)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.gapY3Season)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.gapY4Season)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.gapY5Season)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.gapY6Season)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.gapY7Season)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY1Total)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY2Total)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY3Total)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY4Total)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY5Total)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY6Total)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY7Total)));
                 }
                 cost1 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY2Total)));
