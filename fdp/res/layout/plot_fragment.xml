@@ -44,6 +44,24 @@
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"/>
 
+    <Spinner
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:id="@+id/renovated_field"
+        android:entries="@array/yesNo"/>
+
+    <Spinner
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:id="@+id/reason_field"
+        android:entries="@array/reason"/>
+
+    <Spinner
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:id="@+id/howLong_field"
+        android:entries="@array/howLong"/>
+
     <TextView android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="center_vertical"

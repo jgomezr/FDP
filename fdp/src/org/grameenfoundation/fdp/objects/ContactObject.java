@@ -385,6 +385,36 @@ public class ContactObject extends SalesforceObject {
     public static final String SOILMNG8="soilFertMng_8__c";
     public static final String SOILMNG9="soilFertMng_9__c";
     public static final String SOILMNG10="soilFertMng_10__c";
+    public static final String PLOT1RENOVATION = "plot1Renovation__c";
+    public static final String PLOT2RENOVATION = "plot2Renovation__c";
+    public static final String PLOT3RENOVATION = "plot3Renovation__c";
+    public static final String PLOT4RENOVATION = "plot4Renovation__c";
+    public static final String PLOT5RENOVATION = "plot5Renovation__c";
+    public static final String PLOT6RENOVATION = "plot6Renovation__c";
+    public static final String PLOT7RENOVATION = "plot7Renovation__c";
+    public static final String PLOT8RENOVATION = "plot8Renovation__c";
+    public static final String PLOT9RENOVATION = "plot9Renovation__c";
+    public static final String PLOT10RENOVATION = "plot10Renovation__c";
+    public static final String PLOT1RENOVATIONREASON = "plot1RenovationReason__c";
+    public static final String PLOT2RENOVATIONREASON = "plot2RenovationReason__c";
+    public static final String PLOT3RENOVATIONREASON = "plot3RenovationReason__c";
+    public static final String PLOT4RENOVATIONREASON = "plot4RenovationReason__c";
+    public static final String PLOT5RENOVATIONREASON = "plot5RenovationReason__c";
+    public static final String PLOT6RENOVATIONREASON = "plot6RenovationReason__c";
+    public static final String PLOT7RENOVATIONREASON = "plot7RenovationReason__c";
+    public static final String PLOT8RENOVATIONREASON = "plot8RenovationReason__c";
+    public static final String PLOT9RENOVATIONREASON = "plot9RenovationReason__c";
+    public static final String PLOT10RENOVATIONREASON = "plot10RenovationReason__c";
+    public static final String PLOT1RENOVATIONYEAR = "plot1RenovationYear__c";
+    public static final String PLOT2RENOVATIONYEAR = "plot2RenovationYear__c";
+    public static final String PLOT3RENOVATIONYEAR = "plot3RenovationYear__c";
+    public static final String PLOT4RENOVATIONYEAR = "plot4RenovationYear__c";
+    public static final String PLOT5RENOVATIONYEAR = "plot5RenovationYear__c";
+    public static final String PLOT6RENOVATIONYEAR = "plot6RenovationYear__c";
+    public static final String PLOT7RENOVATIONYEAR = "plot7RenovationYear__c";
+    public static final String PLOT8RENOVATIONYEAR = "plot8RenovationYear__c";
+    public static final String PLOT9RENOVATIONYEAR = "plot9RenovationYear__c";
+    public static final String PLOT10RENOVATIONYEAR = "plot10RenovationYear__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
             LAST_NAME,
@@ -754,7 +784,37 @@ public class ContactObject extends SalesforceObject {
             SOILMNG8,
             SOILMNG9,
             SOILMNG10,
-            GROSSINCOME
+            GROSSINCOME,
+            PLOT1RENOVATION,
+            PLOT2RENOVATION,
+            PLOT3RENOVATION,
+            PLOT4RENOVATION,
+            PLOT5RENOVATION,
+            PLOT6RENOVATION,
+            PLOT7RENOVATION,
+            PLOT8RENOVATION,
+            PLOT9RENOVATION,
+            PLOT10RENOVATION,
+            PLOT1RENOVATIONREASON,
+            PLOT2RENOVATIONREASON,
+            PLOT3RENOVATIONREASON,
+            PLOT4RENOVATIONREASON,
+            PLOT5RENOVATIONREASON,
+            PLOT6RENOVATIONREASON,
+            PLOT7RENOVATIONREASON,
+            PLOT8RENOVATIONREASON,
+            PLOT9RENOVATIONREASON,
+            PLOT10RENOVATIONREASON,
+            PLOT1RENOVATIONYEAR,
+            PLOT2RENOVATIONYEAR,
+            PLOT3RENOVATIONYEAR,
+            PLOT4RENOVATIONYEAR,
+            PLOT5RENOVATIONYEAR,
+            PLOT6RENOVATIONYEAR,
+            PLOT7RENOVATIONYEAR,
+            PLOT8RENOVATIONYEAR,
+            PLOT9RENOVATIONYEAR,
+            PLOT10RENOVATIONYEAR
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1126,7 +1186,37 @@ public class ContactObject extends SalesforceObject {
             SOILMNG8,
             SOILMNG9,
             SOILMNG10,
-            GROSSINCOME
+            GROSSINCOME,
+            PLOT1RENOVATION,
+            PLOT2RENOVATION,
+            PLOT3RENOVATION,
+            PLOT4RENOVATION,
+            PLOT5RENOVATION,
+            PLOT6RENOVATION,
+            PLOT7RENOVATION,
+            PLOT8RENOVATION,
+            PLOT9RENOVATION,
+            PLOT10RENOVATION,
+            PLOT1RENOVATIONREASON,
+            PLOT2RENOVATIONREASON,
+            PLOT3RENOVATIONREASON,
+            PLOT4RENOVATIONREASON,
+            PLOT5RENOVATIONREASON,
+            PLOT6RENOVATIONREASON,
+            PLOT7RENOVATIONREASON,
+            PLOT8RENOVATIONREASON,
+            PLOT9RENOVATIONREASON,
+            PLOT10RENOVATIONREASON,
+            PLOT1RENOVATIONYEAR,
+            PLOT2RENOVATIONYEAR,
+            PLOT3RENOVATIONYEAR,
+            PLOT4RENOVATIONYEAR,
+            PLOT5RENOVATIONYEAR,
+            PLOT6RENOVATIONYEAR,
+            PLOT7RENOVATIONYEAR,
+            PLOT8RENOVATIONYEAR,
+            PLOT9RENOVATIONYEAR,
+            PLOT10RENOVATIONYEAR
     };
 
     private boolean isLocallyModified;
@@ -2246,6 +2336,36 @@ public class ContactObject extends SalesforceObject {
     public String getSOILMNG9() {return sanitizeText(rawData.optString(SOILMNG9));}
     public String getSOILMNG10() {return sanitizeText(rawData.optString(SOILMNG10));}
     public String getGROSSINCOME() {return sanitizeText(rawData.optString(GROSSINCOME));}
+    public String getPLOT1RENOVATION() {return sanitizeText(rawData.optString(PLOT1RENOVATION));}
+    public String getPLOT2RENOVATION() {return sanitizeText(rawData.optString(PLOT2RENOVATION));}
+    public String getPLOT3RENOVATION() {return sanitizeText(rawData.optString(PLOT3RENOVATION));}
+    public String getPLOT4RENOVATION() {return sanitizeText(rawData.optString(PLOT4RENOVATION));}
+    public String getPLOT5RENOVATION() {return sanitizeText(rawData.optString(PLOT5RENOVATION));}
+    public String getPLOT6RENOVATION() {return sanitizeText(rawData.optString(PLOT6RENOVATION));}
+    public String getPLOT7RENOVATION() {return sanitizeText(rawData.optString(PLOT7RENOVATION));}
+    public String getPLOT8RENOVATION() {return sanitizeText(rawData.optString(PLOT8RENOVATION));}
+    public String getPLOT9RENOVATION() {return sanitizeText(rawData.optString(PLOT9RENOVATION));}
+    public String getPLOT10RENOVATION() {return sanitizeText(rawData.optString(PLOT10RENOVATION));}
+    public String getPLOT1RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT1RENOVATIONREASON));}
+    public String getPLOT2RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT2RENOVATIONREASON));}
+    public String getPLOT3RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT3RENOVATIONREASON));}
+    public String getPLOT4RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT4RENOVATIONREASON));}
+    public String getPLOT5RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT5RENOVATIONREASON));}
+    public String getPLOT6RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT6RENOVATIONREASON));}
+    public String getPLOT7RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT7RENOVATIONREASON));}
+    public String getPLOT8RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT8RENOVATIONREASON));}
+    public String getPLOT9RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT9RENOVATIONREASON));}
+    public String getPLOT10RENOVATIONREASON() {return sanitizeText(rawData.optString(PLOT10RENOVATIONREASON));}
+    public String getPLOT1RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT1RENOVATIONYEAR));}
+    public String getPLOT2RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT2RENOVATIONYEAR));}
+    public String getPLOT3RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT3RENOVATIONYEAR));}
+    public String getPLOT4RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT4RENOVATIONYEAR));}
+    public String getPLOT5RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT5RENOVATIONYEAR));}
+    public String getPLOT6RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT6RENOVATIONYEAR));}
+    public String getPLOT7RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT7RENOVATIONYEAR));}
+    public String getPLOT8RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT8RENOVATIONYEAR));}
+    public String getPLOT9RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT9RENOVATIONYEAR));}
+    public String getPLOT10RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT10RENOVATIONYEAR));}
 
     /**
      * Returns whether the contact has been locally modified or not.

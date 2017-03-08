@@ -253,7 +253,11 @@
         <item>Year 4</item>
         <item>Year 6</item>
         <item>Year 7</item>
-    </string-array><string name="productionHiger">Your estimated production is greater than that of the previous year</string><string name="app_package" translatable="false">org.grameenfoundation.fdp</string><string name="totalExpenses">Total family expenses:</string><string name="cocoaArea">36. Total land under cocoa size (Ha):</string><string name="yearDetailActivityTitle">Year Detail</string><string name="estimatedProduction">42. Estimated production (Kg):</string><string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string><string name="action_search">Search</string><string-array name="yesHire">
+    </string-array><string name="productionHiger">Your estimated production is greater than that of the previous year</string><string name="app_package" translatable="false">org.grameenfoundation.fdp</string><string name="totalExpenses">Total family expenses:</string><string name="cocoaArea">36. Total land under cocoa size (Ha):</string><string name="yearDetailActivityTitle">Year Detail</string><string name="estimatedProduction">42. Estimated production (Kg):</string><string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string><string-array name="reason">
+		<item>N/A</item>
+		<item>Replanting</item>
+		<item>Grafting</item>
+	</string-array><string name="action_search">Search</string><string-array name="yesHire">
 		<item>Yes</item>
 		<item>Seasonal</item>
 		<item>No</item>
@@ -286,7 +290,37 @@
 		<item>G</item>
 		<item>M</item>
 		<item>B</item>
-	</string-array><string name="mobileMoney">C17. Farmer account have Mobile money option?</string><string name="totalCredit">C10. What is the total amount of the loan outstanding?</string><string-array name="sourceLoanMicro">
+	</string-array><string name="mobileMoney">C17. Farmer account have Mobile money option?</string><string name="totalCredit">C10. What is the total amount of the loan outstanding?</string><string-array name="howLong4">
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array><string-array name="howLong5">
+        <item>5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array><string-array name="howLong2">
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array><string-array name="howLong3">
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array><string-array name="howLong1">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array><string-array name="sourceLoanMicro">
 		<item>Microcredit Organization</item>
 		<item>Family</item>
 		<item>Friends</item>
@@ -327,7 +361,7 @@
 		<item>B</item>
 		<item>G</item>
 		<item>M</item>
-	</string-array><string name="familyMembers">13. Number of people living together including the farmer:</string><string name="plot1" translatable="false">Plot 1</string><string name="plot2" translatable="false">Plot 2</string><string name="costInvest">Cost of Maintenance / Investment:</string><string name="plot3" translatable="false">Plot 3</string><string name="plot4" translatable="false">Plot 4</string><string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string><string name="plot5" translatable="false">Plot 5</string><string name="birthday">3. Farmer Birthday Year:</string><string name="plot6" translatable="false">Plot 6</string><string name="drainage">Drainage</string><string name="daysHire">C21. How many labor days hire:</string><string name="filling">Filling in</string><string-array name="treeDistance">
+	</string-array><string name="familyMembers">13. Number of people living together including the farmer:</string><string name="plot1" translatable="false">Plot 1</string><string name="plot2" translatable="false">Plot 2</string><string name="costInvest">Cost of Maintenance / Investment:</string><string name="plot3" translatable="false">Plot 3</string><string name="plot4" translatable="false">Plot 4</string><string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string><string name="plot5" translatable="false">Plot 5</string><string name="birthday">3. Farmer Birthday Year:</string><string name="plot6" translatable="false">Plot 6</string><string name="reason">Reason for renovation:</string><string name="drainage">Drainage</string><string name="daysHire">C21. How many labor days hire:</string><string name="filling">Filling in</string><string-array name="treeDistance">
         <item>N/A</item>
         <item>2x2</item>
 		<item>2x2.5</item>
@@ -374,7 +408,7 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
-    </string-array><string name="greater0" translatable="false"/><string name="extraSoil">Extra Soil Management</string><string name="soilCondition">54. Soil Condition:</string><string-array name="creditOftenbiannual">
+    </string-array><string name="howLong">How long ago was made renovation?</string><string name="greater0" translatable="false"/><string name="extraSoil">Extra Soil Management</string><string name="soilCondition">54. Soil Condition:</string><string-array name="creditOftenbiannual">
 		<item>Bi annually</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
@@ -395,6 +429,9 @@
         <item>3×4</item>
         <item>3.5×4</item>
         <item>4x4</item>
+    </string-array><string-array name="reason2">
+        <item>Grafting</item>
+        <item>Replanting</item>
     </string-array><string-array name="yes">
 		<item>Yes</item>
 		<item>No</item>
@@ -486,7 +523,10 @@
         <item>Micro finance</item>
         <item>Village loan</item>
         <item>Other</item>
-    </string-array><string name="yearsRelationshipWithMars">10. Years Relationship with company:</string><string name="farmCertifications">33. Farm Certifications:</string><string name="drainageNeed">59. Drainage need:</string><string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string><string name="empty" translatable="false"> </string><string-array name="seasonHire">
+    </string-array><string name="yearsRelationshipWithMars">10. Years Relationship with company:</string><string name="farmCertifications">33. Farm Certifications:</string><string name="drainageNeed">59. Drainage need:</string><string-array name="reason1">
+        <item>Replanting</item>
+        <item>Grafting</item>
+    </string-array><string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string><string name="empty" translatable="false"> </string><string-array name="seasonHire">
 		<item>Seasonal</item>
 		<item>Yes</item>
 		<item>No</item>
@@ -660,6 +700,13 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
+    </string-array><string-array name="howLong">
+        <item>N/A</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array><string-array name="cert4">
         <item>UTZ/RA</item>
         <item>UTZ</item>
@@ -701,7 +748,7 @@
 	</string-array><string name="hireLabor">38. Hire labor:</string><string name="p17">Pruning/Sanitation</string><string name="year2">Year 2</string><string name="familyLess">The number of family members can not be less than the number of children</string><string name="year1">Year 1</string><string name="organicMatter">55. Organic Matter:</string><string name="year6">Year 6</string><string name="p12">Herbiciding OR mechanical manual weeding</string><string-array name="No">
 		<item>No</item>
 		<item>Yes</item>
-	</string-array><string name="year5">Year 5</string><string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Grafting work/ take off the plastic</string><string name="year3">Year 3</string><string name="p16">P and D Control + Foliar</string><string name="p15">Application of lime, organic fertilizer</string><string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Circle weeding</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string><string name="shadeManagement">53. Shade Management:</string><string name="plotAge">46. Tree Age:</string><string name="numberPlots">39. Number of plots:</string><string-array name="yesNo">
+	</string-array><string name="year5">Year 5</string><string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Grafting work/ take off the plastic</string><string name="year3">Year 3</string><string name="p16">P and D Control + Foliar</string><string name="p15">Application of lime, organic fertilizer</string><string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Circle weeding</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="renovated">This plot was recently renovated?</string><string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string><string name="shadeManagement">53. Shade Management:</string><string name="plotAge">46. Tree Age:</string><string name="numberPlots">39. Number of plots:</string><string-array name="yesNo">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>No</item>

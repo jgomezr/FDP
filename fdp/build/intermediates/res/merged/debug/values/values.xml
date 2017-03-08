@@ -271,6 +271,49 @@
 		<item>M</item>
 		<item>B</item>
 	</string-array>
+    <string-array name="howLong">
+        <item>N/A</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="howLong1">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="howLong2">
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="howLong3">
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="howLong4">
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="howLong5">
+        <item>5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
     <string-array name="m_gb">
 		<item>M</item>
 		<item>G</item>
@@ -283,6 +326,19 @@
 	</string-array>
     <string-array name="oauthScopes" translatable="false">
         <item>api</item>
+    </string-array>
+    <string-array name="reason">
+		<item>N/A</item>
+		<item>Replanting</item>
+		<item>Grafting</item>
+	</string-array>
+    <string-array name="reason1">
+        <item>Replanting</item>
+        <item>Grafting</item>
+    </string-array>
+    <string-array name="reason2">
+        <item>Grafting</item>
+        <item>Replanting</item>
     </string-array>
     <string-array name="seasonHire">
 		<item>Seasonal</item>
@@ -2315,6 +2371,7 @@
     <string name="haveSpouse">11. Have spouse:</string>
     <string name="hireLabor">38. Hire labor:</string>
     <string name="householdSavings">21. Household Savings:</string>
+    <string name="howLong">How long ago was made renovation?</string>
     <string name="incomeOtherCrops">C19. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="inspect_db_button" translatable="false">Inspect DB</string>
     <string name="internalInspection">Internal Inspection</string>
@@ -2407,9 +2464,11 @@
     <string name="productiveProfile">PRODUCTIVE PROFILE</string>
     <string name="profitOrLost">Profit or Loss</string>
     <string name="pruning">49. Pruning:</string>
+    <string name="reason">Reason for renovation:</string>
     <string name="reasonNotAgree">Comments:</string>
     <string name="receivesFarmPayment">17. Farmer or spouse receives payment for other work:</string>
     <string name="remoteAccessConsumerKey" translatable="false">3MVG9ZL0ppGP5UrCq5vTCnQc8VY51CHIKeWfb4RVZT1G4.da.4Pj.cqIcmqJqCyrRg7gyVoxBVIwpci32xFWq</string>
+    <string name="renovated">This plot was recently renovated?</string>
     <string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string>
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>
