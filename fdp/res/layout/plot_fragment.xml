@@ -171,7 +171,8 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
-        android:id="@+id/limeP_field"/>
+        android:id="@+id/limeP_field"
+        android:focusable="false"/>
 
     <Spinner
         android:layout_width="155dp"
@@ -182,7 +183,8 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
-        android:id="@+id/fillingP_field"/>
+        android:id="@+id/fillingP_field"
+        android:focusable="false"/>
 
     <Spinner
         android:layout_width="155dp"

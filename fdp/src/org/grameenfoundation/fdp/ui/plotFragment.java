@@ -1,6 +1,7 @@
 package org.grameenfoundation.fdp.ui;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.grameenfoundation.fdp.R;
 
@@ -20,10 +22,10 @@ import org.grameenfoundation.fdp.R;
  */
 
 public class plotFragment extends Fragment  {
-
-    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP;
+    public String renovSize;
+    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP,area;
     public Button calc;
-    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP;
+    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP,renov,renovReason,renovYear;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -50,6 +52,10 @@ public class plotFragment extends Fragment  {
         fertFP = (Spinner) view.findViewById(R.id.fertFormP_field);
         fertAP = (Spinner) view.findViewById(R.id.fertApplicationP_field);
         calc = (Button) view.findViewById(R.id.calculateP);
+        renov = (Spinner) view.findViewById(R.id.renovated_field);
+        renovReason = (Spinner) view.findViewById(R.id.reason_field);
+        renovYear = (Spinner) view.findViewById(R.id.howLong_field);
+        area = (EditText) view.findViewById(R.id.plotArea_field);
 
         ph.addTextChangedListener(new TextWatcher() {
             @Override
@@ -116,9 +122,54 @@ public class plotFragment extends Fragment  {
             }
         });
 
+        renov.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (renov.getSelectedItem().toString().equals("Yes")||renov.getSelectedItem().toString().equals("Ya")){
+                    renovReason.setEnabled(true);
+                    renovYear.setEnabled(true);
+                    fillingP.setEnabled(false);
+                    geneticP.setEnabled(false);
+                    gapP.setEnabled(false);
+                    soilFertMng.setEnabled(false);
+                    fcondP.setEnabled(false);
+                    ageP.setEnabled(false);
+                    cteP.setEnabled(false);
+                    plantP.setEnabled(false);
+                    tehelP.setEnabled(false);
+                    debDiP.setEnabled(false);
+                    pruniP.setEnabled(false);
+                    pesDiP.setEnabled(false);
+                    weediP.setEnabled(false);
+                    harveP.setEnabled(false);
+                    shadeP.setEnabled(false);
+                    soilCP.setEnabled(false);
+                    orgMaP.setEnabled(false);
+                    fertFP.setEnabled(false);
+                    fertAP.setEnabled(false);
+                    if(Double.parseDouble(area.getText().toString())>Double.parseDouble(renovSize)){
+                        area.setBackgroundColor(Color.parseColor("#cc0000"));
+                        Toast.makeText(getActivity().getApplicationContext(), getString(R.string.renovatedAreaHiger), Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    renovReason.setEnabled(false);
+                    renovYear.setEnabled(false);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         return view;
     }
 
+    public void setrenovSize(String rs){
+        renovSize = rs;
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {

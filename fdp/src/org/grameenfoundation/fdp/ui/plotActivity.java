@@ -1147,46 +1147,59 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     }
 
     private void refreshScreen() {
+
+
         if (sObject != null) {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 setText(Lp1,"PLOT 1");
                 ft.show(fragment1);
+                fragment1.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment1);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 setText(Lp2,"PLOT 2");
                 ft.show(fragment2);
+                fragment2.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment2);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 setText(Lp3,"PLOT 3");
                 ft.show(fragment3);
+                fragment3.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment3);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 setText(Lp4,"PLOT 4");
                 ft.show(fragment4);
+                fragment4.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment4);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 setText(Lp5,"PLOT 5");
                 ft.show(fragment5);
+                fragment5.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment5);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 5) {
                 setText(Lp6,"PLOT 6");
                 ft.show(fragment6);
+                fragment6.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment6);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 6) {
+                setText(Lp7,"PLOT 7");
                 ft.show(fragment7);
+                fragment7.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment7);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 7) {
                 setText(Lp8,"PLOT 8");
                 ft.show(fragment8);
+                fragment8.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment8);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 8) {
                 setText(Lp9,"PLOT 9");
                 ft.show(fragment9);
+                fragment9.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment9);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 9) {
                 setText(Lp10,"PLOT 10");
                 ft.show(fragment10);
+                fragment10.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment10);}
             ft.commitAllowingStateLoss();
 
@@ -6216,6 +6229,829 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 soilFertMng10.setText(sObject.getSOILMNG10());
             }
 
+            if( Double.parseDouble(sObject.getTotalRenovationArea())<=0){
+                renovP1.setEnabled(false);
+                renovP2.setEnabled(false);
+                renovP3.setEnabled(false);
+                renovP4.setEnabled(false);
+                renovP5.setEnabled(false);
+                renovP6.setEnabled(false);
+                renovP7.setEnabled(false);
+                renovP8.setEnabled(false);
+                renovP9.setEnabled(false);
+                renovP10.setEnabled(false);
+                renovReasonP1.setEnabled(false);
+                renovReasonP2.setEnabled(false);
+                renovReasonP3.setEnabled(false);
+                renovReasonP4.setEnabled(false);
+                renovReasonP5.setEnabled(false);
+                renovReasonP6.setEnabled(false);
+                renovReasonP7.setEnabled(false);
+                renovReasonP8.setEnabled(false);
+                renovReasonP9.setEnabled(false);
+                renovReasonP10.setEnabled(false);
+                renovYearP1.setEnabled(false);
+                renovYearP2.setEnabled(false);
+                renovYearP3.setEnabled(false);
+                renovYearP4.setEnabled(false);
+                renovYearP5.setEnabled(false);
+                renovYearP6.setEnabled(false);
+                renovYearP7.setEnabled(false);
+                renovYearP8.setEnabled(false);
+                renovYearP9.setEnabled(false);
+                renovYearP10.setEnabled(false);
+            }else {
+                //set renovated 1
+                if (sObject.getPLOT1RENOVATION().contentEquals("Yes") || sObject.getPLOT1RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT1RENOVATION().contentEquals("No") || sObject.getPLOT1RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP1.setEnabled(false);
+                    renovYearP1.setEnabled(false);
+                    Spinner spinner = renovP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP1.setEnabled(false);
+                    renovYearP1.setEnabled(false);
+                    Spinner spinner = renovP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 2
+                if (sObject.getPLOT2RENOVATION().contentEquals("Yes") || sObject.getPLOT2RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT2RENOVATION().contentEquals("No") || sObject.getPLOT2RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP2.setEnabled(false);
+                    renovYearP2.setEnabled(false);
+                    Spinner spinner = renovP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP2.setEnabled(false);
+                    renovYearP2.setEnabled(false);
+                    Spinner spinner = renovP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 3
+                if (sObject.getPLOT3RENOVATION().contentEquals("Yes") || sObject.getPLOT3RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT3RENOVATION().contentEquals("No") || sObject.getPLOT3RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP3.setEnabled(false);
+                    renovYearP3.setEnabled(false);
+                    Spinner spinner = renovP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP3.setEnabled(false);
+                    renovYearP3.setEnabled(false);
+                    Spinner spinner = renovP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 4
+                if (sObject.getPLOT4RENOVATION().contentEquals("Yes") || sObject.getPLOT4RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT4RENOVATION().contentEquals("No") || sObject.getPLOT4RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP4.setEnabled(false);
+                    renovYearP4.setEnabled(false);
+                    Spinner spinner = renovP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP4.setEnabled(false);
+                    renovYearP4.setEnabled(false);
+                    Spinner spinner = renovP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 5
+                if (sObject.getPLOT5RENOVATION().contentEquals("Yes") || sObject.getPLOT5RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT5RENOVATION().contentEquals("No") || sObject.getPLOT5RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP5.setEnabled(false);
+                    renovYearP5.setEnabled(false);
+                    Spinner spinner = renovP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP5.setEnabled(false);
+                    renovYearP5.setEnabled(false);
+                    Spinner spinner = renovP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 6
+                if (sObject.getPLOT6RENOVATION().contentEquals("Yes") || sObject.getPLOT6RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT6RENOVATION().contentEquals("No") || sObject.getPLOT6RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP6.setEnabled(false);
+                    renovYearP6.setEnabled(false);
+                    Spinner spinner = renovP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP6.setEnabled(false);
+                    renovYearP6.setEnabled(false);
+                    Spinner spinner = renovP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 7
+                if (sObject.getPLOT7RENOVATION().contentEquals("Yes") || sObject.getPLOT7RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT7RENOVATION().contentEquals("No") || sObject.getPLOT7RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP7.setEnabled(false);
+                    renovYearP7.setEnabled(false);
+                    Spinner spinner = renovP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP7.setEnabled(false);
+                    renovYearP7.setEnabled(false);
+                    Spinner spinner = renovP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 8
+                if (sObject.getPLOT8RENOVATION().contentEquals("Yes") || sObject.getPLOT8RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT8RENOVATION().contentEquals("No") || sObject.getPLOT8RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP8.setEnabled(false);
+                    renovYearP8.setEnabled(false);
+                    Spinner spinner = renovP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP8.setEnabled(false);
+                    renovYearP8.setEnabled(false);
+                    Spinner spinner = renovP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 9
+                if (sObject.getPLOT9RENOVATION().contentEquals("Yes") || sObject.getPLOT9RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT9RENOVATION().contentEquals("No") || sObject.getPLOT9RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP9.setEnabled(false);
+                    renovYearP9.setEnabled(false);
+                    Spinner spinner = renovP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP9.setEnabled(false);
+                    renovYearP9.setEnabled(false);
+                    Spinner spinner = renovP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated 10
+                if (sObject.getPLOT10RENOVATION().contentEquals("Yes") || sObject.getPLOT10RENOVATION().contentEquals("Ya")) {
+                    Spinner spinner = renovP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yes, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT10RENOVATION().contentEquals("No") || sObject.getPLOT10RENOVATION().contentEquals("Tidak")) {
+                    renovReasonP10.setEnabled(false);
+                    renovYearP10.setEnabled(false);
+                    Spinner spinner = renovP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.No, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    renovReasonP10.setEnabled(false);
+                    renovYearP10.setEnabled(false);
+                    Spinner spinner = renovP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.yesNo, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 1
+                if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 2
+                if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 3
+                if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 4
+                if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 5
+                if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 6
+                if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 7
+                if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 8
+                if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 9
+                if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated reason 10
+                if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                    Spinner spinner = renovReasonP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Sambungan")) {
+                    Spinner spinner = renovReasonP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovReasonP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.reason, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 1
+                if (sObject.getPLOT1RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT1RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT1RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT1RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP1;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 2
+                if (sObject.getPLOT2RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT2RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT2RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT2RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP2;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 3
+                if (sObject.getPLOT3RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT3RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT3RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT3RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP3;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 4
+                if (sObject.getPLOT4RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT4RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT4RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT4RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP4;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 5
+                if (sObject.getPLOT5RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT5RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT5RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT5RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP5;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 6
+                if (sObject.getPLOT6RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT6RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT6RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT6RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP6;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 7
+                if (sObject.getPLOT7RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT7RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT7RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT7RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP7;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 8
+                if (sObject.getPLOT8RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT8RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT8RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT8RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP8;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 9
+                if (sObject.getPLOT9RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT9RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT9RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT9RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP9;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+
+                //set renovated year 10
+                if (sObject.getPLOT10RENOVATIONYEAR().contentEquals("-1")) {
+                    Spinner spinner = renovYearP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong1, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT10RENOVATIONYEAR().contentEquals("-2")) {
+                    Spinner spinner = renovYearP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong2, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT10RENOVATIONYEAR().contentEquals("-3")) {
+                    Spinner spinner = renovYearP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong3, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else if (sObject.getPLOT10RENOVATIONYEAR().contentEquals("-4")) {
+                    Spinner spinner = renovYearP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong4, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                } else {
+                    Spinner spinner = renovYearP10;
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.howLong, android.R.layout.simple_spinner_item);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner.setAdapter(adapter);
+                }
+            }
+
             ////////////////////////////////////////////////////////
 
         }
@@ -6806,25 +7642,55 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT9RENOVATION,rP9);
             contact.put(ContactObject.PLOT10RENOVATION,rP10);
             contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP1);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP2);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP3);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP4);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP5);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP6);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP7);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP8);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP9);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP10);
+            contact.put(ContactObject.PLOT2RENOVATIONREASON,rRP2);
+            contact.put(ContactObject.PLOT3RENOVATIONREASON,rRP3);
+            contact.put(ContactObject.PLOT4RENOVATIONREASON,rRP4);
+            contact.put(ContactObject.PLOT5RENOVATIONREASON,rRP5);
+            contact.put(ContactObject.PLOT6RENOVATIONREASON,rRP6);
+            contact.put(ContactObject.PLOT7RENOVATIONREASON,rRP7);
+            contact.put(ContactObject.PLOT8RENOVATIONREASON,rRP8);
+            contact.put(ContactObject.PLOT9RENOVATIONREASON,rRP9);
+            contact.put(ContactObject.PLOT10RENOVATIONREASON,rRP10);
             contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP1);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP2);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP3);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP4);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP5);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP6);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP7);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP8);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP9);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP10);
+            contact.put(ContactObject.PLOT2RENOVATIONYEAR,rYP2);
+            contact.put(ContactObject.PLOT3RENOVATIONYEAR,rYP3);
+            contact.put(ContactObject.PLOT4RENOVATIONYEAR,rYP4);
+            contact.put(ContactObject.PLOT5RENOVATIONYEAR,rYP5);
+            contact.put(ContactObject.PLOT6RENOVATIONYEAR,rYP6);
+            contact.put(ContactObject.PLOT7RENOVATIONYEAR,rYP7);
+            contact.put(ContactObject.PLOT8RENOVATIONYEAR,rYP8);
+            contact.put(ContactObject.PLOT9RENOVATIONYEAR,rYP9);
+            contact.put(ContactObject.PLOT10RENOVATIONYEAR,rYP10);
+            if(rP1 !="N/A"){
+                contact.put(ContactObject.STARTYEARP1,rYP1);
+            }
+            if(rP2 != "N/A"){
+                contact.put(ContactObject.STARTYEARP2,rYP2);
+            }
+            if(rP3 != "N/A"){
+                contact.put(ContactObject.STARTYEARP3,rYP3);
+            }
+            if(rP4 != "N/A"){
+                contact.put(ContactObject.STARTYEARP4,rYP4);
+            }
+            if(rP5 != "N/A"){
+                contact.put(ContactObject.STARTYEARP5,rYP5);
+            }
+            if(rP6 != "N/A"){
+                contact.put(ContactObject.STARTYEARP6,rYP6);
+            }
+            if(rP7 != "N/A"){
+                contact.put(ContactObject.STARTYEARP7,rYP7);
+            }
+            if(rP8 != "N/A"){
+                contact.put(ContactObject.STARTYEARP8,rYP8);
+            }
+            if(rP9 != "N/A"){
+                contact.put(ContactObject.STARTYEARP9,rYP9);
+            }
+            if(rP10 != "N/A"){
+                contact.put(ContactObject.STARTYEARP10,rYP10);
+            }
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -7419,25 +8285,25 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT9RENOVATION,rP9);
             contact.put(ContactObject.PLOT10RENOVATION,rP10);
             contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP1);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP2);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP3);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP4);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP5);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP6);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP7);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP8);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP9);
-            contact.put(ContactObject.PLOT1RENOVATIONREASON,rRP10);
+            contact.put(ContactObject.PLOT2RENOVATIONREASON,rRP2);
+            contact.put(ContactObject.PLOT3RENOVATIONREASON,rRP3);
+            contact.put(ContactObject.PLOT4RENOVATIONREASON,rRP4);
+            contact.put(ContactObject.PLOT5RENOVATIONREASON,rRP5);
+            contact.put(ContactObject.PLOT6RENOVATIONREASON,rRP6);
+            contact.put(ContactObject.PLOT7RENOVATIONREASON,rRP7);
+            contact.put(ContactObject.PLOT8RENOVATIONREASON,rRP8);
+            contact.put(ContactObject.PLOT9RENOVATIONREASON,rRP9);
+            contact.put(ContactObject.PLOT10RENOVATIONREASON,rRP10);
             contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP1);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP2);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP3);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP4);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP5);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP6);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP7);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP8);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP9);
-            contact.put(ContactObject.PLOT1RENOVATIONYEAR,rYP10);
+            contact.put(ContactObject.PLOT2RENOVATIONYEAR,rYP2);
+            contact.put(ContactObject.PLOT3RENOVATIONYEAR,rYP3);
+            contact.put(ContactObject.PLOT4RENOVATIONYEAR,rYP4);
+            contact.put(ContactObject.PLOT5RENOVATIONYEAR,rYP5);
+            contact.put(ContactObject.PLOT6RENOVATIONYEAR,rYP6);
+            contact.put(ContactObject.PLOT7RENOVATIONYEAR,rYP7);
+            contact.put(ContactObject.PLOT8RENOVATIONYEAR,rYP8);
+            contact.put(ContactObject.PLOT9RENOVATIONYEAR,rYP9);
+            contact.put(ContactObject.PLOT10RENOVATIONYEAR,rYP10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

@@ -291,35 +291,25 @@
 		<item>M</item>
 		<item>B</item>
 	</string-array><string name="mobileMoney">C17. Farmer account have Mobile money option?</string><string name="totalCredit">C10. What is the total amount of the loan outstanding?</string><string-array name="howLong4">
-        <item>4</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>5</item>
-    </string-array><string-array name="howLong5">
-        <item>5</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
     </string-array><string-array name="howLong2">
-        <item>2</item>
-        <item>1</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array><string-array name="howLong3">
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
     </string-array><string-array name="howLong1">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array><string-array name="sourceLoanMicro">
 		<item>Microcredit Organization</item>
 		<item>Family</item>
@@ -702,11 +692,10 @@
         <item>RA/UTZ/FT</item>
     </string-array><string-array name="howLong">
         <item>N/A</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array><string-array name="cert4">
         <item>UTZ/RA</item>
         <item>UTZ</item>
@@ -748,7 +737,7 @@
 	</string-array><string name="hireLabor">38. Hire labor:</string><string name="p17">Pruning/Sanitation</string><string name="year2">Year 2</string><string name="familyLess">The number of family members can not be less than the number of children</string><string name="year1">Year 1</string><string name="organicMatter">55. Organic Matter:</string><string name="year6">Year 6</string><string name="p12">Herbiciding OR mechanical manual weeding</string><string-array name="No">
 		<item>No</item>
 		<item>Yes</item>
-	</string-array><string name="year5">Year 5</string><string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Grafting work/ take off the plastic</string><string name="year3">Year 3</string><string name="p16">P and D Control + Foliar</string><string name="p15">Application of lime, organic fertilizer</string><string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Circle weeding</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="renovated">This plot was recently renovated?</string><string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string><string name="shadeManagement">53. Shade Management:</string><string name="plotAge">46. Tree Age:</string><string name="numberPlots">39. Number of plots:</string><string-array name="yesNo">
+	</string-array><string name="year5">Year 5</string><string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Grafting work/ take off the plastic</string><string name="year3">Year 3</string><string name="p16">P and D Control + Foliar</string><string name="p15">Application of lime, organic fertilizer</string><string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Circle weeding</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="renovated">This plot was recently renovated?</string><string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string><string name="shadeManagement">53. Shade Management:</string><string name="plotAge">46. Tree Age:</string><string name="numberPlots">39. Number of plots:</string><string-array name="yesNo">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>No</item>
@@ -760,7 +749,15 @@
         <item>Sekolah Menengah Kejuaruan - SMK</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="delete_title">Are you sure?</string><string name="totalIncome">Total income:</string><string name="educational_level">5. Educational Level:</string><string name="childrenUnder">C4. Children between 5 and 17 years old:</string><string name="inspect_db_button" translatable="false">Inspect DB</string><string name="haveSpouse">11. Have spouse:</string><string name="full_name">1. Farmer Name:</string><string name="expensesCocoaLY">29. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="nov">November</string><string name="plotHireLabor">61. Hire labor:</string><string-array name="yesNoHire">
+    </string-array><string name="delete_title">Are you sure?</string><string name="totalIncome">Total income:</string><string name="educational_level">5. Educational Level:</string><string name="childrenUnder">C4. Children between 5 and 17 years old:</string><string-array name="reno1">
+		<item>-1</item>
+	</string-array><string name="inspect_db_button" translatable="false">Inspect DB</string><string name="haveSpouse">11. Have spouse:</string><string-array name="reno4">
+		<item>-4</item>
+	</string-array><string-array name="reno3">
+		<item>-3</item>
+	</string-array><string-array name="reno2">
+		<item>-2</item>
+	</string-array><string name="full_name">1. Farmer Name:</string><string name="expensesCocoaLY">29. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="nov">November</string><string name="plotHireLabor">61. Hire labor:</string><string-array name="yesNoHire">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>Seasonal</item>
@@ -788,6 +785,10 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
+    </string-array><string-array name="reason">
+        <item>N/A</item>
+        <item>Penanamman kembali</item>
+        <item>Sambungan</item>
     </string-array><string name="plotIncome">Pendapatan dari Plot</string><string name="profitOrLost">Untung dan Rugi</string><string name="plotGPS">40. GPS Plot</string><string-array name="year3">
         <item>Tahun 3</item>
         <item>Tahun 1</item>
@@ -804,6 +805,11 @@
         <item>UTZ/RA</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
+    </string-array><string-array name="howLong4">
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
     </string-array><string name="aug">Agusutus</string><string name="p24">Panen,fermntasi,kering, jual</string><string name="plotPL">Plot Untung dan Rugi</string><string-array name="year4">
         <item>Tahun 4</item>
         <item>Tahun 1</item>
@@ -836,6 +842,11 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
+    </string-array><string-array name="howLong2">
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array><string-array name="year6">
         <item>Tahun 6</item>
         <item>Tahun 1</item>
@@ -852,6 +863,11 @@
         <item>UTZ/FT</item>
         <item>RA/FT</item>
         <item>RA/UTZ/FT</item>
+    </string-array><string-array name="howLong3">
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
     </string-array><string name="p21">Sanitasi</string><string-array name="year7">
         <item>Tahun 7</item>
         <item>Tahun 1</item>
@@ -860,7 +876,12 @@
         <item>Tahun 4</item>
         <item>Tahun 5</item>
         <item>Tahun 6</item>
-    </string-array><string name="p20">Produksi/bentuk/menguruangi cabang pohon induk</string><string name="farmCertifications">33. Sertifikasi kebun</string><string name="p23">Pengurangan pelindung/peremajaan tanaman tua</string><string-array name="cert7">
+    </string-array><string name="p20">Produksi/bentuk/menguruangi cabang pohon induk</string><string-array name="howLong1">
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array><string name="farmCertifications">33. Sertifikasi kebun</string><string name="p23">Pengurangan pelindung/peremajaan tanaman tua</string><string-array name="cert7">
         <item>RA/UTZ/FT</item>
         <item>UTZ</item>
         <item>RA</item>
@@ -1090,7 +1111,13 @@
         <item>Setiap dua tahun</item>
         <item>Tahunan</item>
         <item>Frekuensi tidak terset</item>
-    </string-array><string name="logout_button">Keluar</string><string name="treeHealth">47. Kesehatan tanaman</string><string name="receivesFarmPayment">17. Petani atau pasangan menerima pembayaran untuk pekerjaan lain</string><string name="village">6. Desa</string><string name="back">Kembali</string><string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string><string name="may">Mei</string><string name="extraSoil">Tambahan manajemen tanah</string><string name="mar">Maret</string><string name="cancel">Tidak</string><string name="phone">9. Nomer Hp</string><string name="dependEconomically">16. Jumlah anggota keluarga yang tergantung dari pendapatan keluarga</string><string name="numberChildren">12. Jumlah anak</string><string name="totalIncomeLabor">C6. Pendapatan bersih dari semua pekerjaan lain yang petani lakukan di tahun lalu</string><string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string><string-array name="gender_male">
+    </string-array><string name="logout_button">Keluar</string><string name="treeHealth">47. Kesehatan tanaman</string><string name="receivesFarmPayment">17. Petani atau pasangan menerima pembayaran untuk pekerjaan lain</string><string-array name="reason2">
+        <item>Sambungan</item>
+        <item>Penanamman kembali</item>
+    </string-array><string name="village">6. Desa</string><string name="back">Kembali</string><string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string><string name="may">Mei</string><string name="extraSoil">Tambahan manajemen tanah</string><string name="mar">Maret</string><string-array name="reason1">
+        <item>Penanamman kembali</item>
+        <item>Sambungan</item>
+    </string-array><string name="cancel">Tidak</string><string name="phone">9. Nomer Hp</string><string name="dependEconomically">16. Jumlah anggota keluarga yang tergantung dari pendapatan keluarga</string><string name="numberChildren">12. Jumlah anak</string><string name="totalIncomeLabor">C6. Pendapatan bersih dari semua pekerjaan lain yang petani lakukan di tahun lalu</string><string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string><string-array name="gender_male">
         <item>Pria</item>
         <item>Wanita</item>
     </string-array><string name="hireLabor">38. Memiliki Pekerja</string><string name="debilitationDisease">48. Penyakit yang tidak bisa di kendalikan</string><string name="feb">Fabruary</string><string name="logout_title">Keluar?</string><string name="plotArea">41. Ukuran Plot (Ha)</string><string name="finish">Selesai</string><string name="drainageNeed">59. Membutuhkan Drainase</string><string name="harvesting">52. Pemanenan</string><string name="familyPaidWork">18. Anggota keluarga atau orang lain berkontribusi dengan uang untuk rumah tangga</string><string name="farmCondition">Kondisi kebun</string><string name="fmWorkFarm">15. Anggota keluarga atau orang lain bekerja di pertanian tanpa upah dibayar</string><string name="netFamily">Pendapatan bersih keluarga</string><string name="familyMembers">13. Jumlah orang yang hidup bersama-sama termasuk petani</string><string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string><string name="pruning">49. Pemangkasan</string><string-array name="sourceLoanBank">
@@ -1132,6 +1159,12 @@
         <item>Micro finance</item>
         <item>Pinjaman desa</item>
         <item>Lainnya</item>
+    </string-array><string-array name="howLong">
+        <item>N/A</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array><string name="fdpActivityTitle">Perencanaan pengembangan Kebun</string><string name="internalInspection">Internal Inspeksi</string><string name="familyPhoto">Ambil Foto Keluarga</string><string-array name="bank1">
         <item>Rekening standard bank</item>
         <item>Mobile banking</item>
@@ -1351,7 +1384,9 @@
         <item>Teman</item>
         <item>Organisasi Mikrokredit</item>
         <item>Bank</item>
-    </string-array><string name="yearDetailActivityTitle">Detail Tahun</string><string name="aoResults">HASIL ADOPSI OBSERVASI</string><string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string><string name="totalIncome">Total pendapatan</string><string name="ao">ADOPSI OBSERVASI</string><string name="jun">Juni</string><string name="gapLb">GAPS</string><string name="wantAccount">C18. Menginginkan rekening bank?</string><string name="jul">July</string><string name="startYear">Tahun Mulai</string><string name="reasonNotAgree">Komentar</string><string name="netOther">Pendapatan bersih dari semua sumber</string><string-array name="b_g">
+    </string-array><string name="yearDetailActivityTitle">Detail Tahun</string><string name="aoResults">HASIL ADOPSI OBSERVASI</string><string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string><string name="totalIncome">Total pendapatan</string><string name="ao">ADOPSI OBSERVASI</string><string name="jun">Juni</string><string name="gapLb">GAPS</string><string name="wantAccount">C18. Menginginkan rekening bank?</string><string name="jul">July</string><string name="startYear">Tahun Mulai</string><string name="reasonNotAgree">Komentar</string><string-array name="reno1">
+        <item>-1</item>
+    </string-array><string name="netOther">Pendapatan bersih dari semua sumber</string><string-array name="b_g">
         <item>B</item>
         <item>G</item>
     </string-array><string-array name="yesNoHire">
@@ -1359,7 +1394,13 @@
         <item>Ya</item>
         <item>Musiman</item>
         <item>Tidak</item>
-    </string-array><string name="accountType">C16. Jenis Rekening</string><string name="plotActivityTitle">Informasi Plot</string><string name="gps">7. GPS Rumah</string><string-array name="g_mb">
+    </string-array><string name="accountType">C16. Jenis Rekening</string><string-array name="reno4">
+        <item>-4</item>
+    </string-array><string name="plotActivityTitle">Informasi Plot</string><string-array name="reno2">
+        <item>-2</item>
+    </string-array><string-array name="reno3">
+        <item>-3</item>
+    </string-array><string name="gps">7. GPS Rumah</string><string-array name="g_mb">
         <item>G</item>
         <item>M</item>
         <item>B</item>

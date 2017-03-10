@@ -232,6 +232,7 @@
     <string name="renovated">This plot was recently renovated?</string>
     <string name="reason">Reason for renovation:</string>
     <string name="howLong">How long ago was made renovation?</string>
+    <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
     <string-array name="creditOften">
         <item>Monthly</item>
         <item>Quarterly</item>
@@ -912,45 +913,46 @@
     </string-array>
     <string-array name="howLong">
         <item>N/A</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array>
     <string-array name="howLong1">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array>
     <string-array name="howLong2">
-        <item>2</item>
-        <item>1</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
     </string-array>
     <string-array name="howLong3">
-        <item>3</item>
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>5</item>
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
     </string-array>
     <string-array name="howLong4">
-        <item>4</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>5</item>
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
     </string-array>
-    <string-array name="howLong5">
-        <item>5</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
+
+	<string-array name="reno1">
+		<item>-1</item>
+	</string-array>
+	<string-array name="reno2">
+		<item>-2</item>
+	</string-array>
+	<string-array name="reno3">
+		<item>-3</item>
+	</string-array>
+	<string-array name="reno4">
+		<item>-4</item>
+	</string-array>
 </resources>

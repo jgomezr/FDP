@@ -863,6 +863,64 @@
         <item>Tidak</item>
     </string-array>
 
+    <string-array name="reason">
+        <item>N/A</item>
+        <item>Penanamman kembali</item>
+        <item>Sambungan</item>
+    </string-array>
+    <string-array name="reason1">
+        <item>Penanamman kembali</item>
+        <item>Sambungan</item>
+    </string-array>
+    <string-array name="reason2">
+        <item>Sambungan</item>
+        <item>Penanamman kembali</item>
+    </string-array>
+    <string-array name="howLong">
+        <item>N/A</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong1">
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong2">
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong3">
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong4">
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+    </string-array>
+
+    <string-array name="reno1">
+        <item>-1</item>
+    </string-array>
+    <string-array name="reno2">
+        <item>-2</item>
+    </string-array>
+    <string-array name="reno3">
+        <item>-3</item>
+    </string-array>
+    <string-array name="reno4">
+        <item>-4</item>
+    </string-array>
+
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
     <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
