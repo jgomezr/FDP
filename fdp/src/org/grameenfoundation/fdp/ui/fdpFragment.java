@@ -148,7 +148,311 @@ public class fdpFragment extends Fragment {
             DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(start.getSelectedItem().toString().equals("Year 2")||start.getSelectedItem().toString().equals("Tahun 2")){
+                if(start.getSelectedItem().toString().equals("-4")){
+                    if(gappl1 > 0){
+                        plpy1.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy1.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl1 > 0){
+                        plpy2.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy2.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl2 > 0){
+                        plpy3.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl3 > 0){
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl4 > 0){
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl5 > 0){
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl6 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy7.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    setText(incomeY1, String.valueOf(dec.format(income5)));
+                    setText(incomeY2, String.valueOf(dec.format(income6)));
+                    setText(incomeY3, String.valueOf(dec.format(income7)));
+                    setText(incomeY4, String.valueOf(dec.format(income7)));
+                    setText(incomeY5, String.valueOf(dec.format(income7)));
+                    setText(incomeY6, String.valueOf(dec.format(income7)));
+                    setText(incomeY7, String.valueOf(dec.format(income7)));
+                    setText(costY1, String.valueOf(dec.format(cost5)));
+                    setText(costY2, String.valueOf(dec.format(cost6)));
+                    setText(costY3, String.valueOf(dec.format(cost7)));
+                    setText(costY4, String.valueOf(dec.format(cost7)));
+                    setText(costY5, String.valueOf(dec.format(cost7)));
+                    setText(costY6, String.valueOf(dec.format(cost7)));
+                    setText(costY7, String.valueOf(dec.format(cost7)));
+                    setText(lnpy1, String.valueOf(laborD5));
+                    setText(lnpy2, String.valueOf(laborD6));
+                    setText(lnpy3, String.valueOf(laborD7));
+                    setText(lnpy4, String.valueOf(laborD7));
+                    setText(lnpy5, String.valueOf(laborD7));
+                    setText(lnpy6, String.valueOf(laborD7));
+                    setText(lnpy7, String.valueOf(laborD7));
+                    setText(lcpy1, String.valueOf(dec.format(labor5)));
+                    setText(lcpy2, String.valueOf(dec.format(labor6)));
+                    setText(lcpy3, String.valueOf(dec.format(labor7)));
+                    setText(lcpy4, String.valueOf(dec.format(labor7)));
+                    setText(lcpy5, String.valueOf(dec.format(labor7)));
+                    setText(lcpy6, String.valueOf(dec.format(labor7)));
+                    setText(lcpy7, String.valueOf(dec.format(labor7)));
+                    setText(plpy1, String.valueOf(dec.format(pl5)));
+                    setText(plpy2, String.valueOf(dec.format(pl6)));
+                    setText(plpy3, String.valueOf(dec.format(pl7)));
+                    setText(plpy4, String.valueOf(dec.format(pl7)));
+                    setText(plpy5, String.valueOf(dec.format(pl7)));
+                    setText(plpy6, String.valueOf(dec.format(pl7)));
+                    setText(plpy7, String.valueOf(dec.format(pl7)));
+                    activity.calculations();
+                }else if(start.getSelectedItem().toString().equals("-3")){
+                    if(gappl1 > 0){
+                        plpy1.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy1.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl1 > 0){
+                        plpy2.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy2.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl2 > 0){
+                        plpy3.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl3 > 0){
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl4 > 0){
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl5 > 0){
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl6 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy7.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    setText(incomeY1, String.valueOf(dec.format(income4)));
+                    setText(incomeY2, String.valueOf(dec.format(income5)));
+                    setText(incomeY3, String.valueOf(dec.format(income6)));
+                    setText(incomeY4, String.valueOf(dec.format(income7)));
+                    setText(incomeY5, String.valueOf(dec.format(income7)));
+                    setText(incomeY6, String.valueOf(dec.format(income7)));
+                    setText(incomeY7, String.valueOf(dec.format(income7)));
+                    setText(costY1, String.valueOf(dec.format(cost4)));
+                    setText(costY2, String.valueOf(dec.format(cost5)));
+                    setText(costY3, String.valueOf(dec.format(cost6)));
+                    setText(costY4, String.valueOf(dec.format(cost7)));
+                    setText(costY5, String.valueOf(dec.format(cost7)));
+                    setText(costY6, String.valueOf(dec.format(cost7)));
+                    setText(costY7, String.valueOf(dec.format(cost7)));
+                    setText(lnpy1, String.valueOf(laborD4));
+                    setText(lnpy2, String.valueOf(laborD5));
+                    setText(lnpy3, String.valueOf(laborD6));
+                    setText(lnpy4, String.valueOf(laborD7));
+                    setText(lnpy5, String.valueOf(laborD7));
+                    setText(lnpy6, String.valueOf(laborD7));
+                    setText(lnpy7, String.valueOf(laborD7));
+                    setText(lcpy1, String.valueOf(dec.format(labor4)));
+                    setText(lcpy2, String.valueOf(dec.format(labor5)));
+                    setText(lcpy3, String.valueOf(dec.format(labor6)));
+                    setText(lcpy4, String.valueOf(dec.format(labor7)));
+                    setText(lcpy5, String.valueOf(dec.format(labor7)));
+                    setText(lcpy6, String.valueOf(dec.format(labor7)));
+                    setText(lcpy7, String.valueOf(dec.format(labor7)));
+                    setText(plpy1, String.valueOf(dec.format(pl4)));
+                    setText(plpy2, String.valueOf(dec.format(pl5)));
+                    setText(plpy3, String.valueOf(dec.format(pl6)));
+                    setText(plpy4, String.valueOf(dec.format(pl7)));
+                    setText(plpy5, String.valueOf(dec.format(pl7)));
+                    setText(plpy6, String.valueOf(dec.format(pl7)));
+                    setText(plpy7, String.valueOf(dec.format(pl7)));
+                    activity.calculations();
+                }else if(start.getSelectedItem().toString().equals("-2")){
+                    if(gappl1 > 0){
+                        plpy1.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy1.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl1 > 0){
+                        plpy2.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy2.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl2 > 0){
+                        plpy3.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl3 > 0){
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl4 > 0){
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl5 > 0){
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl6 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy7.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    setText(incomeY1, String.valueOf(dec.format(income3)));
+                    setText(incomeY2, String.valueOf(dec.format(income4)));
+                    setText(incomeY3, String.valueOf(dec.format(income5)));
+                    setText(incomeY4, String.valueOf(dec.format(income6)));
+                    setText(incomeY5, String.valueOf(dec.format(income7)));
+                    setText(incomeY6, String.valueOf(dec.format(income7)));
+                    setText(incomeY7, String.valueOf(dec.format(income7)));
+                    setText(costY1, String.valueOf(dec.format(cost3)));
+                    setText(costY2, String.valueOf(dec.format(cost4)));
+                    setText(costY3, String.valueOf(dec.format(cost5)));
+                    setText(costY4, String.valueOf(dec.format(cost6)));
+                    setText(costY5, String.valueOf(dec.format(cost7)));
+                    setText(costY6, String.valueOf(dec.format(cost7)));
+                    setText(costY7, String.valueOf(dec.format(cost7)));
+                    setText(lnpy1, String.valueOf(laborD3));
+                    setText(lnpy2, String.valueOf(laborD4));
+                    setText(lnpy3, String.valueOf(laborD5));
+                    setText(lnpy4, String.valueOf(laborD6));
+                    setText(lnpy5, String.valueOf(laborD7));
+                    setText(lnpy6, String.valueOf(laborD7));
+                    setText(lnpy7, String.valueOf(laborD7));
+                    setText(lcpy1, String.valueOf(dec.format(labor3)));
+                    setText(lcpy2, String.valueOf(dec.format(labor4)));
+                    setText(lcpy3, String.valueOf(dec.format(labor5)));
+                    setText(lcpy4, String.valueOf(dec.format(labor6)));
+                    setText(lcpy5, String.valueOf(dec.format(labor7)));
+                    setText(lcpy6, String.valueOf(dec.format(labor7)));
+                    setText(lcpy7, String.valueOf(dec.format(labor7)));
+                    setText(plpy1, String.valueOf(dec.format(pl3)));
+                    setText(plpy2, String.valueOf(dec.format(pl4)));
+                    setText(plpy3, String.valueOf(dec.format(pl5)));
+                    setText(plpy4, String.valueOf(dec.format(pl6)));
+                    setText(plpy5, String.valueOf(dec.format(pl7)));
+                    setText(plpy6, String.valueOf(dec.format(pl7)));
+                    setText(plpy7, String.valueOf(dec.format(pl7)));
+                    activity.calculations();
+                }else if(start.getSelectedItem().toString().equals("-1")){
+                    if(gappl1 > 0){
+                        plpy1.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy1.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl1 > 0){
+                        plpy2.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy2.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl2 > 0){
+                        plpy3.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl3 > 0){
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    if(pl4 > 0){
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl5 > 0){
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl6 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy7.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    setText(incomeY1, String.valueOf(dec.format(income2)));
+                    setText(incomeY2, String.valueOf(dec.format(income3)));
+                    setText(incomeY3, String.valueOf(dec.format(income4)));
+                    setText(incomeY4, String.valueOf(dec.format(income5)));
+                    setText(incomeY5, String.valueOf(dec.format(income6)));
+                    setText(incomeY6, String.valueOf(dec.format(income7)));
+                    setText(incomeY7, String.valueOf(dec.format(income7)));
+                    setText(costY1, String.valueOf(dec.format(cost2)));
+                    setText(costY2, String.valueOf(dec.format(cost3)));
+                    setText(costY3, String.valueOf(dec.format(cost4)));
+                    setText(costY4, String.valueOf(dec.format(cost5)));
+                    setText(costY5, String.valueOf(dec.format(cost6)));
+                    setText(costY6, String.valueOf(dec.format(cost7)));
+                    setText(costY7, String.valueOf(dec.format(cost7)));
+                    setText(lnpy1, String.valueOf(laborD2));
+                    setText(lnpy2, String.valueOf(laborD3));
+                    setText(lnpy3, String.valueOf(laborD4));
+                    setText(lnpy4, String.valueOf(laborD5));
+                    setText(lnpy5, String.valueOf(laborD6));
+                    setText(lnpy6, String.valueOf(laborD7));
+                    setText(lnpy7, String.valueOf(laborD7));
+                    setText(lcpy1, String.valueOf(dec.format(labor2)));
+                    setText(lcpy2, String.valueOf(dec.format(labor3)));
+                    setText(lcpy3, String.valueOf(dec.format(labor4)));
+                    setText(lcpy4, String.valueOf(dec.format(labor5)));
+                    setText(lcpy5, String.valueOf(dec.format(labor6)));
+                    setText(lcpy6, String.valueOf(dec.format(labor7)));
+                    setText(lcpy7, String.valueOf(dec.format(labor7)));
+                    setText(plpy1, String.valueOf(dec.format(pl2)));
+                    setText(plpy2, String.valueOf(dec.format(pl3)));
+                    setText(plpy3, String.valueOf(dec.format(pl4)));
+                    setText(plpy4, String.valueOf(dec.format(pl5)));
+                    setText(plpy5, String.valueOf(dec.format(pl6)));
+                    setText(plpy6, String.valueOf(dec.format(pl7)));
+                    setText(plpy7, String.valueOf(dec.format(pl7)));
+                    activity.calculations();
+                }else if(start.getSelectedItem().toString().equals("Year 2")||start.getSelectedItem().toString().equals("Tahun 2")){
                     if(gappl1 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -632,7 +936,7 @@ public class fdpFragment extends Fragment {
                     }else{
                         plpy7.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    setText(incomeY1 , String.valueOf(dec.format(income1)));
+                    setText(incomeY1, String.valueOf(dec.format(income1)));
                     setText(incomeY2, String.valueOf(dec.format(income2)));
                     setText(incomeY3, String.valueOf(dec.format(income3)));
                     setText(incomeY4, String.valueOf(dec.format(income4)));
@@ -835,8 +1139,6 @@ public class fdpFragment extends Fragment {
             gaplabor6 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY6Total)));
             gaplabor7 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY7Total)));
         }
-
-
 
         DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
 
@@ -1179,7 +1481,305 @@ public class fdpFragment extends Fragment {
         gappl6 = income6-(gapcost6+gaplabor6);
         gappl7 = income7-(gapcost7+gaplabor7);
 
-        if (startYear.equals("N/A")||startYear.equals("Year 1")||startYear.equals("Tahun 1")){
+        //take start year and put the values in rigth place
+
+        if (startYear.equals("-4")){
+            if(pl1 > 0){
+                plpy1.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy1.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl2 > 0){
+                plpy2.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy2.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl3 > 0){
+                plpy3.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy3.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl4 > 0){
+                plpy4.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl5 > 0){
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl6 > 0){
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl7 > 0){
+                plpy7.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy7.setTextColor(Color.parseColor("#cc0000"));
+            }
+            setText(incomeY1, String.valueOf(dec.format(income5)));
+            setText(incomeY2, String.valueOf(dec.format(income6)));
+            setText(incomeY3, String.valueOf(dec.format(income7)));
+            setText(incomeY4, String.valueOf(dec.format(income7)));
+            setText(incomeY5, String.valueOf(dec.format(income7)));
+            setText(incomeY6, String.valueOf(dec.format(income7)));
+            setText(incomeY7, String.valueOf(dec.format(income7)));
+            setText(costY1, String.valueOf(dec.format(cost5)));
+            setText(costY2, String.valueOf(dec.format(cost6)));
+            setText(costY3, String.valueOf(dec.format(cost7)));
+            setText(costY4, String.valueOf(dec.format(cost7)));
+            setText(costY5, String.valueOf(dec.format(cost7)));
+            setText(costY6, String.valueOf(dec.format(cost7)));
+            setText(costY7, String.valueOf(dec.format(cost7)));
+            setText(lnpy1, String.valueOf(laborD5));
+            setText(lnpy2, String.valueOf(laborD6));
+            setText(lnpy3, String.valueOf(laborD7));
+            setText(lnpy4, String.valueOf(laborD7));
+            setText(lnpy5, String.valueOf(laborD7));
+            setText(lnpy6, String.valueOf(laborD7));
+            setText(lnpy7, String.valueOf(laborD7));
+            setText(lcpy1, String.valueOf(dec.format(labor5)));
+            setText(lcpy2, String.valueOf(dec.format(labor6)));
+            setText(lcpy3, String.valueOf(dec.format(labor7)));
+            setText(lcpy4, String.valueOf(dec.format(labor7)));
+            setText(lcpy5, String.valueOf(dec.format(labor7)));
+            setText(lcpy6, String.valueOf(dec.format(labor7)));
+            setText(lcpy7, String.valueOf(dec.format(labor7)));
+            setText(plpy1, String.valueOf(dec.format(pl5)));
+            setText(plpy2, String.valueOf(dec.format(pl6)));
+            setText(plpy3, String.valueOf(dec.format(pl7)));
+            setText(plpy4, String.valueOf(dec.format(pl7)));
+            setText(plpy5, String.valueOf(dec.format(pl7)));
+            setText(plpy6, String.valueOf(dec.format(pl7)));
+            setText(plpy7, String.valueOf(dec.format(pl7)));
+        }else if (startYear.equals("-3")){
+            if(pl1 > 0){
+                plpy1.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy1.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl2 > 0){
+                plpy2.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy2.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl3 > 0){
+                plpy3.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy3.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl4 > 0){
+                plpy4.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl5 > 0){
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl6 > 0){
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl7 > 0){
+                plpy7.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy7.setTextColor(Color.parseColor("#cc0000"));
+            }
+            setText(incomeY1, String.valueOf(dec.format(income4)));
+            setText(incomeY2, String.valueOf(dec.format(income5)));
+            setText(incomeY3, String.valueOf(dec.format(income6)));
+            setText(incomeY4, String.valueOf(dec.format(income7)));
+            setText(incomeY5, String.valueOf(dec.format(income7)));
+            setText(incomeY6, String.valueOf(dec.format(income7)));
+            setText(incomeY7, String.valueOf(dec.format(income7)));
+            setText(costY1, String.valueOf(dec.format(cost4)));
+            setText(costY2, String.valueOf(dec.format(cost5)));
+            setText(costY3, String.valueOf(dec.format(cost6)));
+            setText(costY4, String.valueOf(dec.format(cost7)));
+            setText(costY5, String.valueOf(dec.format(cost7)));
+            setText(costY6, String.valueOf(dec.format(cost7)));
+            setText(costY7, String.valueOf(dec.format(cost7)));
+            setText(lnpy1, String.valueOf(laborD4));
+            setText(lnpy2, String.valueOf(laborD5));
+            setText(lnpy3, String.valueOf(laborD6));
+            setText(lnpy4, String.valueOf(laborD7));
+            setText(lnpy5, String.valueOf(laborD7));
+            setText(lnpy6, String.valueOf(laborD7));
+            setText(lnpy7, String.valueOf(laborD7));
+            setText(lcpy1, String.valueOf(dec.format(labor4)));
+            setText(lcpy2, String.valueOf(dec.format(labor5)));
+            setText(lcpy3, String.valueOf(dec.format(labor6)));
+            setText(lcpy4, String.valueOf(dec.format(labor7)));
+            setText(lcpy5, String.valueOf(dec.format(labor7)));
+            setText(lcpy6, String.valueOf(dec.format(labor7)));
+            setText(lcpy7, String.valueOf(dec.format(labor7)));
+            setText(plpy1, String.valueOf(dec.format(pl4)));
+            setText(plpy2, String.valueOf(dec.format(pl5)));
+            setText(plpy3, String.valueOf(dec.format(pl6)));
+            setText(plpy4, String.valueOf(dec.format(pl7)));
+            setText(plpy5, String.valueOf(dec.format(pl7)));
+            setText(plpy6, String.valueOf(dec.format(pl7)));
+            setText(plpy7, String.valueOf(dec.format(pl7)));
+        }else if (startYear.equals("-2")){
+            if(pl1 > 0){
+                plpy1.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy1.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl2 > 0){
+                plpy2.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy2.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl3 > 0){
+                plpy3.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy3.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl4 > 0){
+                plpy4.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl5 > 0){
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl6 > 0){
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl7 > 0){
+                plpy7.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy7.setTextColor(Color.parseColor("#cc0000"));
+            }
+            setText(incomeY1, String.valueOf(dec.format(income3)));
+            setText(incomeY2, String.valueOf(dec.format(income4)));
+            setText(incomeY3, String.valueOf(dec.format(income5)));
+            setText(incomeY4, String.valueOf(dec.format(income6)));
+            setText(incomeY5, String.valueOf(dec.format(income7)));
+            setText(incomeY6, String.valueOf(dec.format(income7)));
+            setText(incomeY7, String.valueOf(dec.format(income7)));
+            setText(costY1, String.valueOf(dec.format(cost3)));
+            setText(costY2, String.valueOf(dec.format(cost4)));
+            setText(costY3, String.valueOf(dec.format(cost5)));
+            setText(costY4, String.valueOf(dec.format(cost6)));
+            setText(costY5, String.valueOf(dec.format(cost7)));
+            setText(costY6, String.valueOf(dec.format(cost7)));
+            setText(costY7, String.valueOf(dec.format(cost7)));
+            setText(lnpy1, String.valueOf(laborD3));
+            setText(lnpy2, String.valueOf(laborD4));
+            setText(lnpy3, String.valueOf(laborD5));
+            setText(lnpy4, String.valueOf(laborD6));
+            setText(lnpy5, String.valueOf(laborD7));
+            setText(lnpy6, String.valueOf(laborD7));
+            setText(lnpy7, String.valueOf(laborD7));
+            setText(lcpy1, String.valueOf(dec.format(labor3)));
+            setText(lcpy2, String.valueOf(dec.format(labor4)));
+            setText(lcpy3, String.valueOf(dec.format(labor5)));
+            setText(lcpy4, String.valueOf(dec.format(labor6)));
+            setText(lcpy5, String.valueOf(dec.format(labor7)));
+            setText(lcpy6, String.valueOf(dec.format(labor7)));
+            setText(lcpy7, String.valueOf(dec.format(labor7)));
+            setText(plpy1, String.valueOf(dec.format(pl3)));
+            setText(plpy2, String.valueOf(dec.format(pl4)));
+            setText(plpy3, String.valueOf(dec.format(pl5)));
+            setText(plpy4, String.valueOf(dec.format(pl6)));
+            setText(plpy5, String.valueOf(dec.format(pl7)));
+            setText(plpy6, String.valueOf(dec.format(pl7)));
+            setText(plpy7, String.valueOf(dec.format(pl7)));
+        }else if (startYear.equals("-1")){
+            if(pl1 > 0){
+                plpy1.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy1.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl2 > 0){
+                plpy2.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy2.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl3 > 0){
+                plpy3.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy3.setTextColor(Color.parseColor("#cc0000"));
+            }
+
+            if(pl4 > 0){
+                plpy4.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl5 > 0){
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl6 > 0){
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+            }
+            if(pl7 > 0){
+                plpy7.setTextColor(Color.parseColor("#29a329"));
+            }else{
+                plpy7.setTextColor(Color.parseColor("#cc0000"));
+            }
+            setText(incomeY1 , String.valueOf(dec.format(income2)));
+            setText(incomeY2, String.valueOf(dec.format(income3)));
+            setText(incomeY3, String.valueOf(dec.format(income4)));
+            setText(incomeY4, String.valueOf(dec.format(income5)));
+            setText(incomeY5, String.valueOf(dec.format(income6)));
+            setText(incomeY6, String.valueOf(dec.format(income7)));
+            setText(incomeY7, String.valueOf(dec.format(income7)));
+            setText(costY1, String.valueOf(dec.format(cost2)));
+            setText(costY2, String.valueOf(dec.format(cost3)));
+            setText(costY3, String.valueOf(dec.format(cost4)));
+            setText(costY4, String.valueOf(dec.format(cost5)));
+            setText(costY5, String.valueOf(dec.format(cost6)));
+            setText(costY6, String.valueOf(dec.format(cost7)));
+            setText(costY7, String.valueOf(dec.format(cost7)));
+            setText(lnpy1, String.valueOf(laborD2));
+            setText(lnpy2, String.valueOf(laborD3));
+            setText(lnpy3, String.valueOf(laborD4));
+            setText(lnpy4, String.valueOf(laborD5));
+            setText(lnpy5, String.valueOf(laborD6));
+            setText(lnpy6, String.valueOf(laborD7));
+            setText(lnpy7, String.valueOf(laborD7));
+            setText(lcpy1, String.valueOf(dec.format(labor2)));
+            setText(lcpy2, String.valueOf(dec.format(labor3)));
+            setText(lcpy3, String.valueOf(dec.format(labor4)));
+            setText(lcpy4, String.valueOf(dec.format(labor5)));
+            setText(lcpy5, String.valueOf(dec.format(labor6)));
+            setText(lcpy6, String.valueOf(dec.format(labor7)));
+            setText(lcpy7, String.valueOf(dec.format(labor7)));
+            setText(plpy1, String.valueOf(dec.format(pl2)));
+            setText(plpy2, String.valueOf(dec.format(pl3)));
+            setText(plpy3, String.valueOf(dec.format(pl4)));
+            setText(plpy4, String.valueOf(dec.format(pl5)));
+            setText(plpy5, String.valueOf(dec.format(pl6)));
+            setText(plpy6, String.valueOf(dec.format(pl7)));
+            setText(plpy7, String.valueOf(dec.format(pl7)));
+        }else if (startYear.equals("N/A")||startYear.equals("Year 1")||startYear.equals("Tahun 1")){
             if(pl1 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
