@@ -149,73 +149,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             //visibility of plots
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
                 setText(p1,"PLOT 1");
-                if (sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG1().equals("B")){
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("replant","extra","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("replant","extra","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("replant","extra","",plot1Area,startY1,yearLaunch);
+                if(sObject.getPLOT1RENOVATION().equals("Yes")||sObject.getPLOT1RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT1RENOVATIONREASON().equals("Replanting")||sObject.getPLOT1RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                            fragment1.calc("replant", "", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                            fragment1.calc("replant", "", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc("replant", "", "", plot1Area, startY1, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("replant","","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("replant","","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("replant","","",plot1Area,startY1,yearLaunch);
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                            fragment1.calc("graft", "", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                            fragment1.calc("graft", "", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc("graft", "", "", plot1Area, startY1, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition1().equals("G")&&sObject.getGENETIC1().equals("B"))||(sObject.getFarmCondition1().equals("B")&&(Integer.parseInt(sObject.getPlot1Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG1().equals("B")){
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("graft","extra","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("graft","extra","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("graft","extra","",plot1Area,startY1,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("graft","","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("graft","","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("graft","","",plot1Area,startY1,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG1().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                        fragment1.calc("extra","","labor",plot1Area,startY1,yearLaunch);
-                    }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                        fragment1.calc("extra","","season",plot1Area,startY1,yearLaunch);
-                    }else{
-                        fragment1.calc("extra","","",plot1Area,startY1,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG1().equals("B")){
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("gap","extra","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("gap","extra","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("gap","extra","",plot1Area,startY1,yearLaunch);
+                    if (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
+                        //Replant
+                        if (sObject.getSOILMNG1().equals("B")) {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("replant", "extra", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("replant", "extra", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("replant", "extra", "", plot1Area, startY1, yearLaunch);
+                            }
+                        } else {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("replant", "", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("replant", "", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("replant", "", "", plot1Area, startY1, yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Ya")) {
-                            fragment1.calc("gap","","labor",plot1Area,startY1,yearLaunch);
-                        }else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Musiman")){
-                            fragment1.calc("gap","","season",plot1Area,startY1,yearLaunch);
-                        }else{
-                            fragment1.calc("gap","","",plot1Area,startY1,yearLaunch);
+
+                    } else if ((sObject.getFarmCondition1().equals("G") && sObject.getGENETIC1().equals("B")) || (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) < 25))) {
+                        //Graft
+                        if (sObject.getSOILMNG1().equals("B")) {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("graft", "extra", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("graft", "extra", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("graft", "extra", "", plot1Area, startY1, yearLaunch);
+                            }
+                        } else {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("graft", "", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("graft", "", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("graft", "", "", plot1Area, startY1, yearLaunch);
+                            }
+                        }
+
+                    } else if (sObject.getSOILMNG1().equals("B")) {
+                        //Extra Soil Management
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                            fragment1.calc("extra", "", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                            fragment1.calc("extra", "", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc("extra", "", "", plot1Area, startY1, yearLaunch);
+                        }
+
+                    } else {
+                        //GAP
+                        if (sObject.getSOILMNG1().equals("B")) {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("gap", "extra", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("gap", "extra", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("gap", "extra", "", plot1Area, startY1, yearLaunch);
+                            }
+                        } else {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
+                                fragment1.calc("gap", "", "labor", plot1Area, startY1, yearLaunch);
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
+                                fragment1.calc("gap", "", "season", plot1Area, startY1, yearLaunch);
+                            } else {
+                                fragment1.calc("gap", "", "", plot1Area, startY1, yearLaunch);
+                            }
                         }
                     }
                 }
@@ -223,73 +243,94 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment1);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
                 setText(p2,"PLOT 2");
-                if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG2().equals("B")){
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("replant","extra","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("replant","extra","season",plot2Area,startY2,yearLaunch);
-                        }else{
-                            fragment2.calc("replant","extra","",plot2Area,startY2,yearLaunch);
+
+                if(sObject.getPLOT2RENOVATION().equals("Yes")||sObject.getPLOT2RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT2RENOVATIONREASON().equals("Replanting")||sObject.getPLOT2RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
+                            fragment2.calc("replant", "", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Musiman")) {
+                            fragment2.calc("replant", "", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc("replant", "", "", plot2Area, startY2, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("replant","","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("replant","","season",plot2Area,startY2,yearLaunch);
-                        }else{
-                            fragment2.calc("replant","","",plot2Area,startY2,yearLaunch);
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
+                            fragment2.calc("graft", "", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Musiman")) {
+                            fragment2.calc("graft", "", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc("graft", "", "", plot2Area, startY2, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG2().equals("B")){
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("graft","extra","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("graft","extra","season",plot2Area,startY2,yearLaunch);
-                        }else{
-                            fragment2.calc("graft","extra","",plot2Area,startY2,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("graft","","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("graft","","season",plot2Area,startY2,yearLaunch);
-                        }else{
-                            fragment2.calc("graft","","",plot2Area,startY2,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG2().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                        fragment2.calc("extra","","labor",plot2Area,startY2,yearLaunch);
-                    }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                        fragment2.calc("extra","","season",plot2Area,startY2,yearLaunch);
-                    }else{
-                        fragment2.calc("extra","","",plot2Area,startY2,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG2().equals("B")){
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("gap","extra","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("gap","extra","season",plot2Area,startY2,yearLaunch);
+                    if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG2().equals("B")){
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("replant","extra","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("replant","extra","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("replant","extra","",plot2Area,startY2,yearLaunch);
+                            }
                         }else{
-                            fragment2.calc("gap","extra","",plot2Area,startY2,yearLaunch);
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("replant","","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("replant","","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("replant","","",plot2Area,startY2,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
-                            fragment2.calc("gap","","labor",plot2Area,startY2,yearLaunch);
-                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
-                            fragment2.calc("gap","","season",plot2Area,startY2,yearLaunch);
+
+                    } else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG2().equals("B")){
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("graft","extra","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("graft","extra","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("graft","extra","",plot2Area,startY2,yearLaunch);
+                            }
                         }else{
-                            fragment2.calc("gap","","",plot2Area,startY2,yearLaunch);
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("graft","","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("graft","","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("graft","","",plot2Area,startY2,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG2().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                            fragment2.calc("extra","","labor",plot2Area,startY2,yearLaunch);
+                        }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                            fragment2.calc("extra","","season",plot2Area,startY2,yearLaunch);
+                        }else{
+                            fragment2.calc("extra","","",plot2Area,startY2,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG2().equals("B")){
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("gap","extra","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("gap","extra","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("gap","extra","",plot2Area,startY2,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
+                                fragment2.calc("gap","","labor",plot2Area,startY2,yearLaunch);
+                            }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
+                                fragment2.calc("gap","","season",plot2Area,startY2,yearLaunch);
+                            }else{
+                                fragment2.calc("gap","","",plot2Area,startY2,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -297,73 +338,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment2);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
                 setText(p3,"PLOT 3");
-                if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("replant","extra","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("replant","extra","season",plot3Area,startY3,yearLaunch);
-                        }else{
-                            fragment3.calc("replant","extra","",plot3Area,startY3,yearLaunch);
+                if(sObject.getPLOT3RENOVATION().equals("Yes")||sObject.getPLOT3RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT3RENOVATIONREASON().equals("Replanting")||sObject.getPLOT3RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
+                            fragment3.calc("replant", "", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Musiman")) {
+                            fragment3.calc("replant", "", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc("replant", "", "", plot3Area, startY3, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("replant","","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("replant","","season",plot3Area,startY3,yearLaunch);
-                        }else{
-                            fragment3.calc("replant","","",plot3Area,startY3,yearLaunch);
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
+                            fragment3.calc("graft", "", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Musiman")) {
+                            fragment3.calc("graft", "", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc("graft", "", "", plot3Area, startY3, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("graft","extra","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("graft","extra","season",plot3Area,startY3,yearLaunch);
-                        }else{
-                            fragment3.calc("graft","extra","",plot3Area,startY3,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("graft","","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("graft","","season",plot3Area,startY3,yearLaunch);
-                        }else{
-                            fragment3.calc("graft","","",plot3Area,startY3,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG3().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                        fragment3.calc("extra","","labor",plot3Area,startY3,yearLaunch);
-                    }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                        fragment3.calc("extra","","season",plot3Area,startY3,yearLaunch);
-                    }else{
-                        fragment3.calc("extra","","",plot3Area,startY3,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG3().equals("B")){
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("gap","extra","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("gap","extra","season",plot3Area,startY3,yearLaunch);
+                    if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG3().equals("B")){
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("replant","extra","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("replant","extra","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("replant","extra","",plot3Area,startY3,yearLaunch);
+                            }
                         }else{
-                            fragment3.calc("gap","extra","",plot3Area,startY3,yearLaunch);
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("replant","","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("replant","","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("replant","","",plot3Area,startY3,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
-                            fragment3.calc("gap","","labor",plot3Area,startY3,yearLaunch);
-                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
-                            fragment3.calc("gap","","season",plot3Area,startY3,yearLaunch);
+
+                    } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG3().equals("B")){
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("graft","extra","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("graft","extra","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("graft","extra","",plot3Area,startY3,yearLaunch);
+                            }
                         }else{
-                            fragment3.calc("gap","","",plot3Area,startY3,yearLaunch);
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("graft","","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("graft","","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("graft","","",plot3Area,startY3,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG3().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                            fragment3.calc("extra","","labor",plot3Area,startY3,yearLaunch);
+                        }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                            fragment3.calc("extra","","season",plot3Area,startY3,yearLaunch);
+                        }else{
+                            fragment3.calc("extra","","",plot3Area,startY3,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG3().equals("B")){
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("gap","extra","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("gap","extra","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("gap","extra","",plot3Area,startY3,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
+                                fragment3.calc("gap","","labor",plot3Area,startY3,yearLaunch);
+                            }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
+                                fragment3.calc("gap","","season",plot3Area,startY3,yearLaunch);
+                            }else{
+                                fragment3.calc("gap","","",plot3Area,startY3,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -371,73 +432,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment3);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
                 setText(p4,"PLOT 4");
-                if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("replant","extra","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("replant","extra","season",plot4Area,startY4,yearLaunch);
-                        }else{
-                            fragment4.calc("replant","extra","",plot4Area,startY4,yearLaunch);
+                if(sObject.getPLOT4RENOVATION().equals("Yes")||sObject.getPLOT4RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT4RENOVATIONREASON().equals("Replanting")||sObject.getPLOT4RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
+                            fragment4.calc("replant", "", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Musiman")) {
+                            fragment4.calc("replant", "", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc("replant", "", "", plot4Area, startY4, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("replant","","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("replant","","season",plot4Area,startY4,yearLaunch);
-                        }else{
-                            fragment4.calc("replant","","",plot4Area,startY4,yearLaunch);
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
+                            fragment4.calc("graft", "", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Musiman")) {
+                            fragment4.calc("graft", "", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc("graft", "", "", plot4Area, startY4, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("graft","extra","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("graft","extra","season",plot4Area,startY4,yearLaunch);
-                        }else{
-                            fragment4.calc("graft","extra","",plot4Area,startY4,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("graft","","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("graft","","season",plot4Area,startY4,yearLaunch);
-                        }else{
-                            fragment4.calc("graft","","",plot4Area,startY4,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG4().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                        fragment4.calc("extra","","labor",plot4Area,startY4,yearLaunch);
-                    }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                        fragment4.calc("extra","","season",plot4Area,startY4,yearLaunch);
-                    }else{
-                        fragment4.calc("extra","","",plot4Area,startY4,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG4().equals("B")){
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("gap","extra","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("gap","extra","season",plot4Area,startY4,yearLaunch);
+                    if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG4().equals("B")){
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("replant","extra","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("replant","extra","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("replant","extra","",plot4Area,startY4,yearLaunch);
+                            }
                         }else{
-                            fragment4.calc("gap","extra","",plot4Area,startY4,yearLaunch);
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("replant","","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("replant","","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("replant","","",plot4Area,startY4,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
-                            fragment4.calc("gap","","labor",plot4Area,startY4,yearLaunch);
-                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
-                            fragment4.calc("gap","","season",plot4Area,startY4,yearLaunch);
+
+                    } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG4().equals("B")){
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("graft","extra","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("graft","extra","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("graft","extra","",plot4Area,startY4,yearLaunch);
+                            }
                         }else{
-                            fragment4.calc("gap","","",plot4Area,startY4,yearLaunch);
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("graft","","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("graft","","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("graft","","",plot4Area,startY4,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG4().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                            fragment4.calc("extra","","labor",plot4Area,startY4,yearLaunch);
+                        }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                            fragment4.calc("extra","","season",plot4Area,startY4,yearLaunch);
+                        }else{
+                            fragment4.calc("extra","","",plot4Area,startY4,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG4().equals("B")){
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("gap","extra","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("gap","extra","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("gap","extra","",plot4Area,startY4,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
+                                fragment4.calc("gap","","labor",plot4Area,startY4,yearLaunch);
+                            }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
+                                fragment4.calc("gap","","season",plot4Area,startY4,yearLaunch);
+                            }else{
+                                fragment4.calc("gap","","",plot4Area,startY4,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -445,73 +526,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment4);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
                 setText(p5,"PLOT 5");
-                if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("replant","extra","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("replant","extra","season",plot5Area,startY5,yearLaunch);
-                        }else{
-                            fragment5.calc("replant","extra","",plot5Area,startY5,yearLaunch);
+                if(sObject.getPLOT5RENOVATION().equals("Yes")||sObject.getPLOT5RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT5RENOVATIONREASON().equals("Replanting")||sObject.getPLOT5RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
+                            fragment5.calc("replant", "", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Musiman")) {
+                            fragment5.calc("replant", "", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc("replant", "", "", plot5Area, startY5, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("replant","","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("replant","","season",plot5Area,startY5,yearLaunch);
-                        }else{
-                            fragment5.calc("replant","","",plot5Area,startY5,yearLaunch);
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
+                            fragment5.calc("graft", "", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Musiman")) {
+                            fragment5.calc("graft", "", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc("graft", "", "", plot5Area, startY5, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("graft","extra","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("graft","extra","season",plot5Area,startY5,yearLaunch);
-                        }else{
-                            fragment5.calc("graft","extra","",plot5Area,startY5,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("graft","","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("graft","","season",plot5Area,startY5,yearLaunch);
-                        }else{
-                            fragment5.calc("graft","","",plot5Area,startY5,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG5().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                        fragment5.calc("extra","","labor",plot5Area,startY5,yearLaunch);
-                    }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                        fragment5.calc("extra","","season",plot5Area,startY5,yearLaunch);
-                    }else{
-                        fragment5.calc("extra","","",plot5Area,startY5,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG5().equals("B")){
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("gap","extra","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("gap","extra","season",plot5Area,startY5,yearLaunch);
+                    if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG5().equals("B")){
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("replant","extra","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("replant","extra","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("replant","extra","",plot5Area,startY5,yearLaunch);
+                            }
                         }else{
-                            fragment5.calc("gap","extra","",plot5Area,startY5,yearLaunch);
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("replant","","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("replant","","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("replant","","",plot5Area,startY5,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
-                            fragment5.calc("gap","","labor",plot5Area,startY5,yearLaunch);
-                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
-                            fragment5.calc("gap","","season",plot5Area,startY5,yearLaunch);
+
+                    } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG5().equals("B")){
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("graft","extra","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("graft","extra","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("graft","extra","",plot5Area,startY5,yearLaunch);
+                            }
                         }else{
-                            fragment5.calc("gap","","",plot5Area,startY5,yearLaunch);
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("graft","","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("graft","","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("graft","","",plot5Area,startY5,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG5().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                            fragment5.calc("extra","","labor",plot5Area,startY5,yearLaunch);
+                        }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                            fragment5.calc("extra","","season",plot5Area,startY5,yearLaunch);
+                        }else{
+                            fragment5.calc("extra","","",plot5Area,startY5,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG5().equals("B")){
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("gap","extra","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("gap","extra","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("gap","extra","",plot5Area,startY5,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
+                                fragment5.calc("gap","","labor",plot5Area,startY5,yearLaunch);
+                            }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
+                                fragment5.calc("gap","","season",plot5Area,startY5,yearLaunch);
+                            }else{
+                                fragment5.calc("gap","","",plot5Area,startY5,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -519,73 +620,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment5);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 5) {
                 setText(p6,"PLOT 6");
-                if (sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("replant","extra","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("replant","extra","season",plot6Area,startY6,yearLaunch);
-                        }else{
-                            fragment6.calc("replant","extra","",plot6Area,startY6,yearLaunch);
+                if(sObject.getPLOT6RENOVATION().equals("Yes")||sObject.getPLOT6RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT6RENOVATIONREASON().equals("Replanting")||sObject.getPLOT6RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
+                            fragment6.calc("replant", "", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Musiman")) {
+                            fragment6.calc("replant", "", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc("replant", "", "", plot6Area, startY6, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("replant","","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("replant","","season",plot6Area,startY6,yearLaunch);
-                        }else{
-                            fragment6.calc("replant","","",plot6Area,startY6,yearLaunch);
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
+                            fragment6.calc("graft", "", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Musiman")) {
+                            fragment6.calc("graft", "", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc("graft", "", "", plot6Area, startY6, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition6().equals("G")&&sObject.getGENETIC6().equals("B"))||(sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("graft","extra","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("graft","extra","season",plot6Area,startY6,yearLaunch);
-                        }else{
-                            fragment6.calc("graft","extra","",plot6Area,startY6,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("graft","","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("graft","","season",plot6Area,startY6,yearLaunch);
-                        }else{
-                            fragment6.calc("graft","","",plot6Area,startY6,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG6().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                        fragment6.calc("extra","","labor",plot6Area,startY6,yearLaunch);
-                    }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                        fragment6.calc("extra","","season",plot6Area,startY6,yearLaunch);
-                    }else{
-                        fragment6.calc("extra","","",plot6Area,startY6,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG6().equals("B")){
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("gap","extra","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("gap","extra","season",plot6Area,startY6,yearLaunch);
+                    if (sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG6().equals("B")){
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("replant","extra","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("replant","extra","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("replant","extra","",plot6Area,startY6,yearLaunch);
+                            }
                         }else{
-                            fragment6.calc("gap","extra","",plot6Area,startY6,yearLaunch);
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("replant","","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("replant","","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("replant","","",plot6Area,startY6,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
-                            fragment6.calc("gap","","labor",plot6Area,startY6,yearLaunch);
-                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
-                            fragment6.calc("gap","","season",plot6Area,startY6,yearLaunch);
+
+                    } else if((sObject.getFarmCondition6().equals("G")&&sObject.getGENETIC6().equals("B"))||(sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG6().equals("B")){
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("graft","extra","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("graft","extra","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("graft","extra","",plot6Area,startY6,yearLaunch);
+                            }
                         }else{
-                            fragment6.calc("gap","","",plot6Area,startY6,yearLaunch);
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("graft","","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("graft","","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("graft","","",plot6Area,startY6,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG6().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                            fragment6.calc("extra","","labor",plot6Area,startY6,yearLaunch);
+                        }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                            fragment6.calc("extra","","season",plot6Area,startY6,yearLaunch);
+                        }else{
+                            fragment6.calc("extra","","",plot6Area,startY6,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG6().equals("B")){
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("gap","extra","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("gap","extra","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("gap","extra","",plot6Area,startY6,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
+                                fragment6.calc("gap","","labor",plot6Area,startY6,yearLaunch);
+                            }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
+                                fragment6.calc("gap","","season",plot6Area,startY6,yearLaunch);
+                            }else{
+                                fragment6.calc("gap","","",plot6Area,startY6,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -593,73 +714,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment6);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 6) {
                 setText(p7,"PLOT 7");
-                if (sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG7().equals("B")){
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("replant","extra","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("replant","extra","season",plot7Area,startY7,yearLaunch);
-                        }else{
-                            fragment7.calc("replant","extra","",plot7Area,startY7,yearLaunch);
+                if(sObject.getPLOT7RENOVATION().equals("Yes")||sObject.getPLOT7RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT7RENOVATIONREASON().equals("Replanting")||sObject.getPLOT7RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
+                            fragment7.calc("replant", "", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Musiman")) {
+                            fragment7.calc("replant", "", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc("replant", "", "", plot7Area, startY7, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("replant","","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("replant","","season",plot7Area,startY7,yearLaunch);
-                        }else{
-                            fragment7.calc("replant","","",plot7Area,startY7,yearLaunch);
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
+                            fragment7.calc("graft", "", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Musiman")) {
+                            fragment7.calc("graft", "", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc("graft", "", "", plot7Area, startY7, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition7().equals("G")&&sObject.getGENETIC7().equals("B"))||(sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG7().equals("B")){
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("graft","extra","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("graft","extra","season",plot7Area,startY7,yearLaunch);
-                        }else{
-                            fragment7.calc("graft","extra","",plot7Area,startY7,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("graft","","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("graft","","season",plot7Area,startY7,yearLaunch);
-                        }else{
-                            fragment7.calc("graft","","",plot7Area,startY7,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG7().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                        fragment7.calc("extra","","labor",plot7Area,startY7,yearLaunch);
-                    }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                        fragment7.calc("extra","","season",plot7Area,startY7,yearLaunch);
-                    }else{
-                        fragment7.calc("extra","","",plot7Area,startY7,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG7().equals("B")){
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("gap","extra","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("gap","extra","season",plot7Area,startY7,yearLaunch);
+                    if (sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG7().equals("B")){
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("replant","extra","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("replant","extra","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("replant","extra","",plot7Area,startY7,yearLaunch);
+                            }
                         }else{
-                            fragment7.calc("gap","extra","",plot7Area,startY7,yearLaunch);
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("replant","","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("replant","","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("replant","","",plot7Area,startY7,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
-                            fragment7.calc("gap","","labor",plot7Area,startY7,yearLaunch);
-                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
-                            fragment7.calc("gap","","season",plot7Area,startY7,yearLaunch);
+
+                    } else if((sObject.getFarmCondition7().equals("G")&&sObject.getGENETIC7().equals("B"))||(sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG7().equals("B")){
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("graft","extra","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("graft","extra","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("graft","extra","",plot7Area,startY7,yearLaunch);
+                            }
                         }else{
-                            fragment7.calc("gap","","",plot7Area,startY7,yearLaunch);
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("graft","","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("graft","","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("graft","","",plot7Area,startY7,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG7().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                            fragment7.calc("extra","","labor",plot7Area,startY7,yearLaunch);
+                        }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                            fragment7.calc("extra","","season",plot7Area,startY7,yearLaunch);
+                        }else{
+                            fragment7.calc("extra","","",plot7Area,startY7,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG7().equals("B")){
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("gap","extra","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("gap","extra","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("gap","extra","",plot7Area,startY7,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
+                                fragment7.calc("gap","","labor",plot7Area,startY7,yearLaunch);
+                            }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
+                                fragment7.calc("gap","","season",plot7Area,startY7,yearLaunch);
+                            }else{
+                                fragment7.calc("gap","","",plot7Area,startY7,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -667,73 +808,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment7);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 7) {
                 setText(p8,"PLOT 8");
-                if (sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG8().equals("B")){
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("replant","extra","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("replant","extra","season",plot8Area,startY8,yearLaunch);
-                        }else{
-                            fragment8.calc("replant","extra","",plot8Area,startY8,yearLaunch);
+                if(sObject.getPLOT8RENOVATION().equals("Yes")||sObject.getPLOT8RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT8RENOVATIONREASON().equals("Replanting")||sObject.getPLOT8RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
+                            fragment8.calc("replant", "", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Musiman")) {
+                            fragment8.calc("replant", "", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc("replant", "", "", plot8Area, startY8, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("replant","","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("replant","","season",plot8Area,startY8,yearLaunch);
-                        }else{
-                            fragment8.calc("replant","","",plot8Area,startY8,yearLaunch);
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
+                            fragment8.calc("graft", "", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Musiman")) {
+                            fragment8.calc("graft", "", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc("graft", "", "", plot8Area, startY8, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition8().equals("G")&&sObject.getGENETIC8().equals("B"))||(sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG8().equals("B")){
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("graft","extra","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("graft","extra","season",plot8Area,startY8,yearLaunch);
-                        }else{
-                            fragment8.calc("graft","extra","",plot8Area,startY8,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("graft","","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("graft","","season",plot8Area,startY8,yearLaunch);
-                        }else{
-                            fragment8.calc("graft","","",plot8Area,startY8,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG8().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                        fragment8.calc("extra","","labor",plot8Area,startY8,yearLaunch);
-                    }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                        fragment8.calc("extra","","season",plot8Area,startY8,yearLaunch);
-                    }else{
-                        fragment8.calc("extra","","",plot8Area,startY8,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG8().equals("B")){
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("gap","extra","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("gap","extra","season",plot8Area,startY8,yearLaunch);
+                    if (sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG8().equals("B")){
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("replant","extra","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("replant","extra","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("replant","extra","",plot8Area,startY8,yearLaunch);
+                            }
                         }else{
-                            fragment8.calc("gap","extra","",plot8Area,startY8,yearLaunch);
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("replant","","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("replant","","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("replant","","",plot8Area,startY8,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
-                            fragment8.calc("gap","","labor",plot8Area,startY8,yearLaunch);
-                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
-                            fragment8.calc("gap","","season",plot8Area,startY8,yearLaunch);
+
+                    } else if((sObject.getFarmCondition8().equals("G")&&sObject.getGENETIC8().equals("B"))||(sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG8().equals("B")){
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("graft","extra","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("graft","extra","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("graft","extra","",plot8Area,startY8,yearLaunch);
+                            }
                         }else{
-                            fragment8.calc("gap","","",plot8Area,startY8,yearLaunch);
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("graft","","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("graft","","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("graft","","",plot8Area,startY8,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG8().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                            fragment8.calc("extra","","labor",plot8Area,startY8,yearLaunch);
+                        }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                            fragment8.calc("extra","","season",plot8Area,startY8,yearLaunch);
+                        }else{
+                            fragment8.calc("extra","","",plot8Area,startY8,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG8().equals("B")){
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("gap","extra","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("gap","extra","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("gap","extra","",plot8Area,startY8,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
+                                fragment8.calc("gap","","labor",plot8Area,startY8,yearLaunch);
+                            }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
+                                fragment8.calc("gap","","season",plot8Area,startY8,yearLaunch);
+                            }else{
+                                fragment8.calc("gap","","",plot8Area,startY8,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -741,73 +902,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment8);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 8) {
                 setText(p9,"PLOT 9");
-                if (sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG9().equals("B")){
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("replant","extra","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("replant","extra","season",plot9Area,startY9,yearLaunch);
-                        }else{
-                            fragment9.calc("replant","extra","",plot9Area,startY9,yearLaunch);
+                if(sObject.getPLOT9RENOVATION().equals("Yes")||sObject.getPLOT9RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT9RENOVATIONREASON().equals("Replanting")||sObject.getPLOT9RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
+                            fragment9.calc("replant", "", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Musiman")) {
+                            fragment9.calc("replant", "", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc("replant", "", "", plot9Area, startY9, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("replant","","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("replant","","season",plot9Area,startY9,yearLaunch);
-                        }else{
-                            fragment9.calc("replant","","",plot9Area,startY9,yearLaunch);
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
+                            fragment9.calc("graft", "", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Musiman")) {
+                            fragment9.calc("graft", "", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc("graft", "", "", plot9Area, startY9, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition9().equals("G")&&sObject.getGENETIC9().equals("B"))||(sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG9().equals("B")){
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("graft","extra","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("graft","extra","season",plot9Area,startY9,yearLaunch);
-                        }else{
-                            fragment9.calc("graft","extra","",plot9Area,startY9,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("graft","","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("graft","","season",plot9Area,startY9,yearLaunch);
-                        }else{
-                            fragment9.calc("graft","","",plot9Area,startY9,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG9().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                        fragment9.calc("extra","","labor",plot9Area,startY9,yearLaunch);
-                    }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                        fragment9.calc("extra","","season",plot9Area,startY9,yearLaunch);
-                    }else{
-                        fragment9.calc("extra","","",plot9Area,startY9,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG9().equals("B")){
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("gap","extra","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("gap","extra","season",plot9Area,startY9,yearLaunch);
+                    if (sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG9().equals("B")){
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("replant","extra","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("replant","extra","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("replant","extra","",plot9Area,startY9,yearLaunch);
+                            }
                         }else{
-                            fragment9.calc("gap","extra","",plot9Area,startY9,yearLaunch);
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("replant","","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("replant","","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("replant","","",plot9Area,startY9,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
-                            fragment9.calc("gap","","labor",plot9Area,startY9,yearLaunch);
-                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
-                            fragment9.calc("gap","","season",plot9Area,startY9,yearLaunch);
+
+                    } else if((sObject.getFarmCondition9().equals("G")&&sObject.getGENETIC9().equals("B"))||(sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG9().equals("B")){
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("graft","extra","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("graft","extra","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("graft","extra","",plot9Area,startY9,yearLaunch);
+                            }
                         }else{
-                            fragment9.calc("gap","","",plot9Area,startY9,yearLaunch);
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("graft","","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("graft","","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("graft","","",plot9Area,startY9,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG9().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                            fragment9.calc("extra","","labor",plot9Area,startY9,yearLaunch);
+                        }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                            fragment9.calc("extra","","season",plot9Area,startY9,yearLaunch);
+                        }else{
+                            fragment9.calc("extra","","",plot9Area,startY9,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG9().equals("B")){
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("gap","extra","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("gap","extra","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("gap","extra","",plot9Area,startY9,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
+                                fragment9.calc("gap","","labor",plot9Area,startY9,yearLaunch);
+                            }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
+                                fragment9.calc("gap","","season",plot9Area,startY9,yearLaunch);
+                            }else{
+                                fragment9.calc("gap","","",plot9Area,startY9,yearLaunch);
+                            }
                         }
                     }
                 }
@@ -815,73 +996,93 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             }else{ft.hide(fragment9);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 9) {
                 setText(p10,"PLOT 10");
-                if (sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())>25)){
-                    //Replant
-                    if (sObject.getSOILMNG10().equals("B")){
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("replant","extra","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("replant","extra","season",plot10Area,startY10,yearLaunch);
-                        }else{
-                            fragment10.calc("replant","extra","",plot10Area,startY10,yearLaunch);
+                if(sObject.getPLOT10RENOVATION().equals("Yes")||sObject.getPLOT10RENOVATION().equals("Ya")){
+                    if(sObject.getPLOT10RENOVATIONREASON().equals("Replanting")||sObject.getPLOT10RENOVATIONREASON().equals("Penanamman kembali")){
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
+                            fragment10.calc("replant", "", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Musiman")) {
+                            fragment10.calc("replant", "", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc("replant", "", "", plot10Area, startY10, yearLaunch);
                         }
                     }else{
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("replant","","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("replant","","season",plot10Area,startY10,yearLaunch);
-                        }else{
-                            fragment10.calc("replant","","",plot10Area,startY10,yearLaunch);
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
+                            fragment10.calc("graft", "", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Musiman")) {
+                            fragment10.calc("graft", "", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc("graft", "", "", plot10Area, startY10, yearLaunch);
                         }
                     }
-
-                } else if((sObject.getFarmCondition10().equals("G")&&sObject.getGENETIC10().equals("B"))||(sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())<25))){
-                    //Graft
-                    if (sObject.getSOILMNG10().equals("B")){
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("graft","extra","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("graft","extra","season",plot10Area,startY10,yearLaunch);
-                        }else{
-                            fragment10.calc("graft","extra","",plot10Area,startY10,yearLaunch);
-                        }
-                    }else{
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("graft","","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("graft","","season",plot10Area,startY10,yearLaunch);
-                        }else{
-                            fragment10.calc("graft","","",plot10Area,startY10,yearLaunch);
-                        }
-                    }
-
-                }else if (sObject.getSOILMNG10().equals("B")){
-                    //Extra Soil Management
-                    if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                        fragment10.calc("extra","","labor",plot10Area,startY10,yearLaunch);
-                    }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                        fragment10.calc("extra","","season",plot10Area,startY10,yearLaunch);
-                    }else{
-                        fragment10.calc("extra","","",plot10Area,startY10,yearLaunch);
-                    }
-
                 }else{
-                    //GAP
-                    if (sObject.getSOILMNG10().equals("B")){
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("gap","extra","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("gap","extra","season",plot10Area,startY10,yearLaunch);
+                    if (sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())>25)){
+                        //Replant
+                        if (sObject.getSOILMNG10().equals("B")){
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("replant","extra","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("replant","extra","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("replant","extra","",plot10Area,startY10,yearLaunch);
+                            }
                         }else{
-                            fragment10.calc("gap","extra","",plot10Area,startY10,yearLaunch);
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("replant","","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("replant","","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("replant","","",plot10Area,startY10,yearLaunch);
+                            }
                         }
-                    }else{
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
-                            fragment10.calc("gap","","labor",plot10Area,startY10,yearLaunch);
-                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
-                            fragment10.calc("gap","","season",plot10Area,startY10,yearLaunch);
+
+                    } else if((sObject.getFarmCondition10().equals("G")&&sObject.getGENETIC10().equals("B"))||(sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())<25))){
+                        //Graft
+                        if (sObject.getSOILMNG10().equals("B")){
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("graft","extra","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("graft","extra","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("graft","extra","",plot10Area,startY10,yearLaunch);
+                            }
                         }else{
-                            fragment10.calc("gap","","",plot10Area,startY10,yearLaunch);
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("graft","","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("graft","","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("graft","","",plot10Area,startY10,yearLaunch);
+                            }
+                        }
+
+                    }else if (sObject.getSOILMNG10().equals("B")){
+                        //Extra Soil Management
+                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                            fragment10.calc("extra","","labor",plot10Area,startY10,yearLaunch);
+                        }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                            fragment10.calc("extra","","season",plot10Area,startY10,yearLaunch);
+                        }else{
+                            fragment10.calc("extra","","",plot10Area,startY10,yearLaunch);
+                        }
+
+                    }else{
+                        //GAP
+                        if (sObject.getSOILMNG10().equals("B")){
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("gap","extra","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("gap","extra","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("gap","extra","",plot10Area,startY10,yearLaunch);
+                            }
+                        }else{
+                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
+                                fragment10.calc("gap","","labor",plot10Area,startY10,yearLaunch);
+                            }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
+                                fragment10.calc("gap","","season",plot10Area,startY10,yearLaunch);
+                            }else{
+                                fragment10.calc("gap","","",plot10Area,startY10,yearLaunch);
+                            }
                         }
                     }
                 }

@@ -61,12 +61,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/YearDetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/YearDetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" afterPath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java" />
     </list>
     <ignored path="fdp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,41 +119,7 @@
     <favorites_list name="fdp" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="costs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fdp/res/values/costs.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="526" column="53" selection-start-line="526" selection-start-column="43" selection-end-line="526" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fdpActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-751">
-              <caret line="2438" column="45" selection-start-line="2438" selection-start-column="40" selection-end-line="2438" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fdpFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="220" column="64" selection-start-line="220" selection-start-column="64" selection-end-line="220" selection-end-column="64" />
-              <folding>
-                <element signature="e#53034#64519#0" expanded="true" />
-                <element signature="e#64518#64519#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -5731,19 +5703,19 @@
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartStore/build.gradle" />
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartSync/build.gradle" />
         <option value="$PROJECT_DIR$/fdp/res/values/costs.xml" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment2.java" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java" />
         <option value="$PROJECT_DIR$/fdp/res/layout/plot.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout-land/plot.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
         <option value="$PROJECT_DIR$/fdp/res/layout/plot_fragment.xml" />
-        <option value="$PROJECT_DIR$/fdp/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/fdp/res/values-in/strings.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java" />
+        <option value="$PROJECT_DIR$/fdp/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" />
       </list>
     </option>
   </component>
@@ -5814,12 +5786,102 @@
               <option name="myItemId" value="fdp-fdp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="strings.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
@@ -5860,6 +5922,10 @@
         </subPane>
       </pane>
       <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
         <subPane />
       </pane>
     </panes>
@@ -6648,7 +6714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489180985051</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="renovation fdp screen complete">
+      <created>1489339656489</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1489339656489</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -7057,173 +7130,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment2.java" />
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="1344" column="164" selection-start-line="1344" selection-start-column="164" selection-end-line="1344" selection-end-column="164" />
-          <folding>
-            <element signature="e#4522#4573#0" expanded="false" />
-            <element signature="e#4575#4626#0" expanded="false" />
-            <element signature="e#4667#4718#0" expanded="false" />
-            <element signature="e#4720#4771#0" expanded="false" />
-            <element signature="e#4812#4863#0" expanded="false" />
-            <element signature="e#4865#4916#0" expanded="false" />
-            <element signature="e#4957#5008#0" expanded="false" />
-            <element signature="e#5010#5061#0" expanded="false" />
-            <element signature="e#5102#5153#0" expanded="false" />
-            <element signature="e#5155#5206#0" expanded="false" />
-            <element signature="e#5247#5298#0" expanded="false" />
-            <element signature="e#5300#5351#0" expanded="false" />
-            <element signature="e#5392#5443#0" expanded="false" />
-            <element signature="e#5445#5496#0" expanded="false" />
-            <element signature="e#5537#5588#0" expanded="false" />
-            <element signature="e#5590#5641#0" expanded="false" />
-            <element signature="e#5682#5733#0" expanded="false" />
-            <element signature="e#5735#5786#0" expanded="false" />
-            <element signature="e#5827#5878#0" expanded="false" />
-            <element signature="e#5880#5931#0" expanded="false" />
-            <element signature="e#5972#6023#0" expanded="false" />
-            <element signature="e#6025#6076#0" expanded="false" />
-            <element signature="e#6117#6168#0" expanded="false" />
-            <element signature="e#6170#6221#0" expanded="false" />
-            <element signature="e#6302#6353#0" expanded="false" />
-            <element signature="e#6392#6443#0" expanded="false" />
-            <element signature="e#6482#6533#0" expanded="false" />
-            <element signature="e#6572#6623#0" expanded="false" />
-            <element signature="e#6663#6714#0" expanded="false" />
-            <element signature="e#6716#6767#0" expanded="false" />
-            <element signature="e#6808#6859#0" expanded="false" />
-            <element signature="e#6861#6912#0" expanded="false" />
-            <element signature="e#6953#7004#0" expanded="false" />
-            <element signature="e#7006#7057#0" expanded="false" />
-            <element signature="e#7097#7148#0" expanded="false" />
-            <element signature="e#7187#7238#0" expanded="false" />
-            <element signature="e#7277#7328#0" expanded="false" />
-            <element signature="e#7368#7419#0" expanded="false" />
-            <element signature="e#7421#7472#0" expanded="false" />
-            <element signature="e#7513#7564#0" expanded="false" />
-            <element signature="e#7566#7617#0" expanded="false" />
-            <element signature="e#7677#7728#0" expanded="false" />
-            <element signature="e#9581#9631#0" expanded="false" />
-            <element signature="e#9800#9850#0" expanded="false" />
-            <element signature="e#10019#10069#0" expanded="false" />
-            <element signature="e#10238#10288#0" expanded="false" />
-            <element signature="e#10457#10507#0" expanded="false" />
-            <element signature="e#10618#10675#0" expanded="false" />
-            <element signature="e#10676#10726#0" expanded="false" />
-            <element signature="e#10895#10945#0" expanded="false" />
-            <element signature="e#11114#11164#0" expanded="false" />
-            <element signature="e#11333#11383#0" expanded="false" />
-            <element signature="e#11552#11602#0" expanded="false" />
-            <element signature="e#11771#11821#0" expanded="false" />
-            <element signature="e#11990#12040#0" expanded="false" />
-            <element signature="e#12204#12254#0" expanded="false" />
-            <element signature="e#12365#12415#0" expanded="false" />
-            <element signature="e#12526#12576#0" expanded="false" />
-            <element signature="e#12688#12738#0" expanded="false" />
-            <element signature="e#12907#12957#0" expanded="false" />
-            <element signature="e#13126#13176#0" expanded="false" />
-            <element signature="e#13345#13395#0" expanded="false" />
-            <element signature="e#13506#13556#0" expanded="false" />
-            <element signature="e#13667#13717#0" expanded="false" />
-            <element signature="e#13828#13878#0" expanded="false" />
-            <element signature="e#14047#14097#0" expanded="false" />
-            <element signature="e#14266#14316#0" expanded="false" />
-            <element signature="e#14458#14508#0" expanded="false" />
-            <element signature="e#14619#14669#0" expanded="false" />
-            <element signature="e#14780#14830#0" expanded="false" />
-            <element signature="e#14941#14991#0" expanded="false" />
-            <element signature="e#15102#15152#0" expanded="false" />
-            <element signature="e#15263#15313#0" expanded="false" />
-            <element signature="e#15424#15474#0" expanded="false" />
-            <element signature="e#15585#15635#0" expanded="false" />
-            <element signature="e#15746#15796#0" expanded="false" />
-            <element signature="e#15907#15957#0" expanded="false" />
-            <element signature="e#16068#16118#0" expanded="false" />
-            <element signature="e#16229#16279#0" expanded="false" />
-            <element signature="e#16492#16549#0" expanded="false" />
-            <element signature="e#16660#16717#0" expanded="false" />
-            <element signature="e#16828#16885#0" expanded="false" />
-            <element signature="e#17173#17230#0" expanded="false" />
-            <element signature="e#17341#17398#0" expanded="false" />
-            <element signature="e#17509#17566#0" expanded="false" />
-            <element signature="e#17677#17734#0" expanded="false" />
-            <element signature="e#17845#17902#0" expanded="false" />
-            <element signature="e#18013#18070#0" expanded="false" />
-            <element signature="e#18181#18238#0" expanded="false" />
-            <element signature="e#18349#18406#0" expanded="false" />
-            <element signature="e#18511#18568#0" expanded="false" />
-            <element signature="e#18619#18676#0" expanded="false" />
-            <element signature="e#18727#18784#0" expanded="false" />
-            <element signature="e#18835#18892#0" expanded="false" />
-            <element signature="e#19002#19059#0" expanded="false" />
-            <element signature="e#19170#19227#0" expanded="false" />
-            <element signature="e#19338#19395#0" expanded="false" />
-            <element signature="e#19447#19504#0" expanded="false" />
-            <element signature="e#19555#19612#0" expanded="false" />
-            <element signature="e#19663#19720#0" expanded="false" />
-            <element signature="e#19771#19828#0" expanded="false" />
-            <element signature="e#19829#19886#0" expanded="false" />
-            <element signature="e#19996#20053#0" expanded="false" />
-            <element signature="e#22521#22576#0" expanded="false" />
-            <element signature="e#22577#22632#0" expanded="false" />
-            <element signature="e#22633#22683#0" expanded="false" />
-            <element signature="e#22736#22791#0" expanded="false" />
-            <element signature="e#22792#22847#0" expanded="false" />
-            <element signature="e#22848#22898#0" expanded="false" />
-            <element signature="e#22951#23006#0" expanded="false" />
-            <element signature="e#23007#23062#0" expanded="false" />
-            <element signature="e#23063#23113#0" expanded="false" />
-            <element signature="e#23166#23221#0" expanded="false" />
-            <element signature="e#23222#23277#0" expanded="false" />
-            <element signature="e#23278#23328#0" expanded="false" />
-            <element signature="e#23381#23436#0" expanded="false" />
-            <element signature="e#23437#23492#0" expanded="false" />
-            <element signature="e#23493#23543#0" expanded="false" />
-            <element signature="e#23652#23707#0" expanded="false" />
-            <element signature="e#23708#23758#0" expanded="false" />
-            <element signature="e#25153#25208#0" expanded="false" />
-            <element signature="e#25209#25259#0" expanded="false" />
-            <element signature="e#31400#31455#0" expanded="false" />
-            <element signature="e#38856#38912#0" expanded="false" />
-            <element signature="e#47841#47892#0" expanded="false" />
-            <element signature="e#53565#53615#0" expanded="false" />
-            <element signature="e#73376#73431#0" expanded="false" />
-            <element signature="e#79303#79359#0" expanded="false" />
-            <element signature="e#85185#85235#0" expanded="false" />
-            <element signature="e#85702#85753#0" expanded="false" />
-            <element signature="e#85754#85805#0" expanded="false" />
-            <element signature="e#85806#85856#0" expanded="false" />
-            <element signature="e#87670#87720#0" expanded="false" />
-            <element signature="e#88549#88599#0" expanded="false" />
-            <element signature="e#89821#89871#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout-land/plot.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -7240,11 +7162,6 @@
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout/plot.xml">
@@ -7265,13 +7182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout/plot_fragment.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -7279,14 +7189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="8305" column="44" selection-start-line="8305" selection-start-column="44" selection-end-line="8305" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -7298,46 +7200,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="902" column="24" selection-start-line="902" selection-start-column="14" selection-end-line="902" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/values-in/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="867" column="32" selection-start-line="867" selection-start-column="14" selection-end-line="867" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/values/costs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="8942">
           <caret line="526" column="53" selection-start-line="526" selection-start-column="43" selection-end-line="526" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/yearDelayFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-751">
-          <caret line="2438" column="45" selection-start-line="2438" selection-start-column="40" selection-end-line="2438" selection-end-column="45" />
+        <state relative-caret-position="13804">
+          <caret line="860" column="36" selection-start-line="860" selection-start-column="33" selection-end-line="860" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3740">
+          <caret line="1019" column="64" selection-start-line="1019" selection-start-column="64" selection-end-line="1019" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="220" column="64" selection-start-line="220" selection-start-column="64" selection-end-line="220" selection-end-column="64" />
+        <state relative-caret-position="28067">
+          <caret line="1670" column="21" selection-start-line="1670" selection-start-column="21" selection-end-line="1670" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2278">
+          <caret line="1292" column="22" selection-start-line="1270" selection-start-column="16" selection-end-line="1292" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="1082" column="13" selection-start-line="1082" selection-start-column="13" selection-end-line="1082" selection-end-column="13" />
           <folding>
-            <element signature="e#53034#64519#0" expanded="true" />
-            <element signature="e#64518#64519#0" expanded="true" />
+            <element signature="e#69173#69207#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="30" column="96" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/values-in/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="932" column="55" selection-start-line="932" selection-start-column="27" selection-end-line="932" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="227" column="65" selection-start-line="227" selection-start-column="65" selection-end-line="227" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

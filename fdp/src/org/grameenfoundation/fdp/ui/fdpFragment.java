@@ -149,43 +149,28 @@ public class fdpFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(start.getSelectedItem().toString().equals("-4")){
-                    if(gappl1 > 0){
+                    if(pl5 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy1.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    if(pl1 > 0){
+                    if(pl6 > 0){
                         plpy2.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy2.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl2 > 0){
+                    if(pl7 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
                         plpy3.setTextColor(Color.parseColor("#29a329"));
                     }else{
-                        plpy3.setTextColor(Color.parseColor("#cc0000"));
-                    }
-
-                    if(pl3 > 0){
-                        plpy4.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy4.setTextColor(Color.parseColor("#cc0000"));
-                    }
-
-                    if(pl4 > 0){
-                        plpy5.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy5.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl5 > 0){
-                        plpy6.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy6.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl6 > 0){
-                        plpy7.setTextColor(Color.parseColor("#29a329"));
-                    }else{
                         plpy7.setTextColor(Color.parseColor("#cc0000"));
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
                     }
 
                     setText(incomeY1, String.valueOf(dec.format(income5)));
@@ -225,43 +210,32 @@ public class fdpFragment extends Fragment {
                     setText(plpy7, String.valueOf(dec.format(pl7)));
                     activity.calculations();
                 }else if(start.getSelectedItem().toString().equals("-3")){
-                    if(gappl1 > 0){
+                    if(pl4 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy1.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    if(pl1 > 0){
+
+                    if(pl5 > 0){
                         plpy2.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy2.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl2 > 0){
+                    if(pl6 > 0){
                         plpy3.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy3.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl3 > 0){
+                    if(pl7 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
                         plpy4.setTextColor(Color.parseColor("#29a329"));
                     }else{
-                        plpy4.setTextColor(Color.parseColor("#cc0000"));
-                    }
-
-                    if(pl4 > 0){
-                        plpy5.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy5.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl5 > 0){
-                        plpy6.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy6.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl6 > 0){
-                        plpy7.setTextColor(Color.parseColor("#29a329"));
-                    }else{
                         plpy7.setTextColor(Color.parseColor("#cc0000"));
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
                     }
 
                     setText(incomeY1, String.valueOf(dec.format(income4)));
@@ -301,43 +275,37 @@ public class fdpFragment extends Fragment {
                     setText(plpy7, String.valueOf(dec.format(pl7)));
                     activity.calculations();
                 }else if(start.getSelectedItem().toString().equals("-2")){
-                    if(gappl1 > 0){
+
+                    if(pl3 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy1.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    if(pl1 > 0){
+
+                    if(pl4 > 0){
                         plpy2.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy2.setTextColor(Color.parseColor("#cc0000"));
                     }
 
-                    if(pl2 > 0){
+                    if(pl5 > 0){
                         plpy3.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy3.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl3 > 0){
+                    if(pl6 > 0){
                         plpy4.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy4.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl4 > 0){
+                    if(pl7 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
                         plpy5.setTextColor(Color.parseColor("#29a329"));
                     }else{
-                        plpy5.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl5 > 0){
-                        plpy6.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy6.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl6 > 0){
-                        plpy7.setTextColor(Color.parseColor("#29a329"));
-                    }else{
                         plpy7.setTextColor(Color.parseColor("#cc0000"));
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
                     }
 
                     setText(incomeY1, String.valueOf(dec.format(income3)));
@@ -377,42 +345,39 @@ public class fdpFragment extends Fragment {
                     setText(plpy7, String.valueOf(dec.format(pl7)));
                     activity.calculations();
                 }else if(start.getSelectedItem().toString().equals("-1")){
-                    if(gappl1 > 0){
+                    if(pl2> 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy1.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    if(pl1 > 0){
+
+                    if(pl3 > 0){
                         plpy2.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy2.setTextColor(Color.parseColor("#cc0000"));
                     }
 
-                    if(pl2 > 0){
+                    if(pl4 > 0){
                         plpy3.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy3.setTextColor(Color.parseColor("#cc0000"));
                     }
 
-                    if(pl3 > 0){
+                    if(pl5 > 0){
                         plpy4.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy4.setTextColor(Color.parseColor("#cc0000"));
                     }
-
-                    if(pl4 > 0){
+                    if(pl6 > 0){
                         plpy5.setTextColor(Color.parseColor("#29a329"));
                     }else{
                         plpy5.setTextColor(Color.parseColor("#cc0000"));
                     }
-                    if(pl5 > 0){
+                    if(pl7 > 0){
                         plpy6.setTextColor(Color.parseColor("#29a329"));
-                    }else{
-                        plpy6.setTextColor(Color.parseColor("#cc0000"));
-                    }
-                    if(pl6 > 0){
                         plpy7.setTextColor(Color.parseColor("#29a329"));
                     }else{
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
                         plpy7.setTextColor(Color.parseColor("#cc0000"));
                     }
 
@@ -1484,43 +1449,28 @@ public class fdpFragment extends Fragment {
         //take start year and put the values in rigth place
 
         if (startYear.equals("-4")){
-            if(pl1 > 0){
+            if(pl5 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy1.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl2 > 0){
+            if(pl6 > 0){
                 plpy2.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy2.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl3 > 0){
-                plpy3.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy3.setTextColor(Color.parseColor("#cc0000"));
-            }
-
-            if(pl4 > 0){
-                plpy4.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy4.setTextColor(Color.parseColor("#cc0000"));
-            }
-            if(pl5 > 0){
-                plpy5.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy5.setTextColor(Color.parseColor("#cc0000"));
-            }
-            if(pl6 > 0){
-                plpy6.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy6.setTextColor(Color.parseColor("#cc0000"));
-            }
             if(pl7 > 0){
                 plpy7.setTextColor(Color.parseColor("#29a329"));
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+                plpy4.setTextColor(Color.parseColor("#29a329"));
+                plpy3.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy7.setTextColor(Color.parseColor("#cc0000"));
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
+                plpy3.setTextColor(Color.parseColor("#cc0000"));
             }
             setText(incomeY1, String.valueOf(dec.format(income5)));
             setText(incomeY2, String.valueOf(dec.format(income6)));
@@ -1558,43 +1508,31 @@ public class fdpFragment extends Fragment {
             setText(plpy6, String.valueOf(dec.format(pl7)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
         }else if (startYear.equals("-3")){
-            if(pl1 > 0){
+            if(pl4 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy1.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl2 > 0){
+            if(pl5 > 0){
                 plpy2.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy2.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl3 > 0){
+            if(pl6 > 0){
                 plpy3.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy3.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl4 > 0){
-                plpy4.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy4.setTextColor(Color.parseColor("#cc0000"));
-            }
-            if(pl5 > 0){
-                plpy5.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy5.setTextColor(Color.parseColor("#cc0000"));
-            }
-            if(pl6 > 0){
-                plpy6.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy6.setTextColor(Color.parseColor("#cc0000"));
-            }
             if(pl7 > 0){
                 plpy7.setTextColor(Color.parseColor("#29a329"));
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+                plpy5.setTextColor(Color.parseColor("#29a329"));
+                plpy4.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy7.setTextColor(Color.parseColor("#cc0000"));
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
+                plpy4.setTextColor(Color.parseColor("#cc0000"));
             }
             setText(incomeY1, String.valueOf(dec.format(income4)));
             setText(incomeY2, String.valueOf(dec.format(income5)));
@@ -1632,43 +1570,35 @@ public class fdpFragment extends Fragment {
             setText(plpy6, String.valueOf(dec.format(pl7)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
         }else if (startYear.equals("-2")){
-            if(pl1 > 0){
+            if(pl3 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy1.setTextColor(Color.parseColor("#cc0000"));
             }
 
-            if(pl2 > 0){
+            if(pl4 > 0){
                 plpy2.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy2.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl3 > 0){
+            if(pl5 > 0){
                 plpy3.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy3.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl4 > 0){
+            if(pl6 > 0){
                 plpy4.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy4.setTextColor(Color.parseColor("#cc0000"));
             }
-            if(pl5 > 0){
-                plpy5.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy5.setTextColor(Color.parseColor("#cc0000"));
-            }
-            if(pl6 > 0){
-                plpy6.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy6.setTextColor(Color.parseColor("#cc0000"));
-            }
             if(pl7 > 0){
                 plpy7.setTextColor(Color.parseColor("#29a329"));
+                plpy6.setTextColor(Color.parseColor("#29a329"));
+                plpy5.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy7.setTextColor(Color.parseColor("#cc0000"));
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
+                plpy5.setTextColor(Color.parseColor("#cc0000"));
             }
             setText(incomeY1, String.valueOf(dec.format(income3)));
             setText(incomeY2, String.valueOf(dec.format(income4)));
@@ -1706,43 +1636,39 @@ public class fdpFragment extends Fragment {
             setText(plpy6, String.valueOf(dec.format(pl7)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
         }else if (startYear.equals("-1")){
-            if(pl1 > 0){
+            if(pl2 > 0){
                 plpy1.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy1.setTextColor(Color.parseColor("#cc0000"));
             }
 
-            if(pl2 > 0){
+            if(pl3 > 0){
                 plpy2.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy2.setTextColor(Color.parseColor("#cc0000"));
             }
 
-            if(pl3 > 0){
+            if(pl4 > 0){
                 plpy3.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy3.setTextColor(Color.parseColor("#cc0000"));
             }
-
-            if(pl4 > 0){
+            if(pl5 > 0){
                 plpy4.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy4.setTextColor(Color.parseColor("#cc0000"));
             }
-            if(pl5 > 0){
+            if(pl6 > 0){
                 plpy5.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy5.setTextColor(Color.parseColor("#cc0000"));
             }
-            if(pl6 > 0){
-                plpy6.setTextColor(Color.parseColor("#29a329"));
-            }else{
-                plpy6.setTextColor(Color.parseColor("#cc0000"));
-            }
             if(pl7 > 0){
                 plpy7.setTextColor(Color.parseColor("#29a329"));
+                plpy6.setTextColor(Color.parseColor("#29a329"));
             }else{
                 plpy7.setTextColor(Color.parseColor("#cc0000"));
+                plpy6.setTextColor(Color.parseColor("#cc0000"));
             }
             setText(incomeY1 , String.valueOf(dec.format(income2)));
             setText(incomeY2, String.valueOf(dec.format(income3)));

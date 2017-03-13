@@ -149,7 +149,7 @@ public class yearDelayFragment extends Fragment {
                 dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
             }
         }else{
-            if (yearLaunch.equals("1")){
+            if (yearLaunch.equals("1")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Tahun 1")||yearStart.equals("Tahun 2")||yearStart.equals("Tahun 3")||yearStart.equals("Tahun 4")||yearStart.equals("Tahun 5")||yearStart.equals("Tahun 6")||yearStart.equals("Tahun 7"))){
                 if (main == "replant"){
                     setText(jlb, p24);
                     setText(fblb, p24);
@@ -502,7 +502,7 @@ public class yearDelayFragment extends Fragment {
 
                 }
 
-            }else if (yearLaunch.equals("2")){
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Tahun 1")||yearStart.equals("Tahun 2")||yearStart.equals("Tahun 3")||yearStart.equals("Tahun 4")||yearStart.equals("Tahun 5")||yearStart.equals("Tahun 6")||yearStart.equals("Tahun 7")))){
                 if (main == "replant"){
                     setText(jlb, p16+" + "+ p19);
                     setText(fblb, p13+" + "+ p16+" + "+ p19);
@@ -855,7 +855,7 @@ public class yearDelayFragment extends Fragment {
 
                 }
 
-            }else if (yearLaunch.equals("3")){
+            }else if ((yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("1")&& yearStart.equals("-2"))||(yearLaunch.equals("3")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Tahun 1")||yearStart.equals("Tahun 2")||yearStart.equals("Tahun 3")||yearStart.equals("Tahun 4")||yearStart.equals("Tahun 5")||yearStart.equals("Tahun 6")||yearStart.equals("Tahun 7")))){
 
                 if (main == "replant"){
                     setText(jlb, p16+" + "+ p19);
@@ -1209,7 +1209,7 @@ public class yearDelayFragment extends Fragment {
 
                 }
 
-            }else if (yearLaunch.equals("4")){
+            }else if ((yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& yearStart.equals("-2"))||(yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Tahun 1")||yearStart.equals("Tahun 2")||yearStart.equals("Tahun 3")||yearStart.equals("Tahun 4")||yearStart.equals("Tahun 5")||yearStart.equals("Tahun 6")||yearStart.equals("Tahun 7")))){
 
                 if (main == "replant"){
                     setText(jlb, p16+" + "+ p19);

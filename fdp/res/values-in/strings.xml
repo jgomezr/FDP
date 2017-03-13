@@ -930,4 +930,9 @@
     <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
     <string name="investmentLabel">Investasi yang direncanakan</string>
     <string name="savingsLabel">Tabungan rumah tangga</string>
+    <string name="howLong">Betapa lama dibuat renovasi?</string>
+    <string name="productionLess">Diperkirakan produksi Anda kurang dibandingkan dengan tahun sebelumnya</string>
+    <string name="reason">Alasan untuk renovasi:</string>
+    <string name="renovated">plot ini baru-baru ini direnovasi?</string>
+    <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
 </resources>

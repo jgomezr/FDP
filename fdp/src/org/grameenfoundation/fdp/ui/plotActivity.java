@@ -1078,8 +1078,8 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getProductioncocoaly())) {
                 Toast.makeText(getApplicationContext(), getString(R.string.productionHiger), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+            }else if((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)<Double.parseDouble(sObject.getProductioncocoaly())){
+                Toast.makeText(getApplicationContext(), getString(R.string.productionLess), Toast.LENGTH_SHORT).show();
             }
         }
     }
