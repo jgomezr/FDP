@@ -10,25 +10,25 @@
     <dimen name="sf__inspector_margin">1dp</dimen>
     <dimen name="sf__inspector_query_field_height">36dp</dimen>
     <dimen name="sf__inspector_text_size">10sp</dimen>
-    <string name="app_name">SmartStore</string>
-    <string name="app_package">com.salesforce.androidsdk.smartstore</string>
-    <string name="sf__inspector_clear_button">Clear</string>
-    <string name="sf__inspector_colon_button">:</string>
-    <string name="sf__inspector_from_button">FROM</string>
-    <string name="sf__inspector_indices_button">Indices</string>
-    <string name="sf__inspector_indices_query">select soupName, path, columnType from soup_index_map</string>
-    <string name="sf__inspector_left_bracket_button">{</string>
-    <string name="sf__inspector_no_query_specified">No query specified</string>
-    <string name="sf__inspector_no_rows_returned">No rows returned</string>
-    <string name="sf__inspector_pageindex_hint">Page index (default: 0)</string>
-    <string name="sf__inspector_pagesize_hint">Page size (default: 10)</string>
-    <string name="sf__inspector_querytext_hint">Type your query here</string>
-    <string name="sf__inspector_right_bracket_button">}</string>
-    <string name="sf__inspector_run_button">Run</string>
-    <string name="sf__inspector_select_button">SELECT</string>
-    <string name="sf__inspector_soups_button">Soups</string>
-    <string name="sf__inspector_soups_query">select soupName from soup_names</string>
-    <string name="sf__inspector_where_button">WHERE</string>
+    <string name="app_name" translatable="false">SmartStore</string>
+    <string name="app_package" translatable="false">com.salesforce.androidsdk.smartstore</string>
+    <string name="sf__inspector_clear_button" translatable="false">Clear</string>
+    <string name="sf__inspector_colon_button" translatable="false">:</string>
+    <string name="sf__inspector_from_button" translatable="false">FROM</string>
+    <string name="sf__inspector_indices_button" translatable="false">Indices</string>
+    <string name="sf__inspector_indices_query" translatable="false">select soupName, path, columnType from soup_index_map</string>
+    <string name="sf__inspector_left_bracket_button" translatable="false">{</string>
+    <string name="sf__inspector_no_query_specified" translatable="false">No query specified</string>
+    <string name="sf__inspector_no_rows_returned" translatable="false">No rows returned</string>
+    <string name="sf__inspector_pageindex_hint" translatable="false">Page index (default: 0)</string>
+    <string name="sf__inspector_pagesize_hint" translatable="false">Page size (default: 10)</string>
+    <string name="sf__inspector_querytext_hint" translatable="false">Type your query here</string>
+    <string name="sf__inspector_right_bracket_button" translatable="false">}</string>
+    <string name="sf__inspector_run_button" translatable="false">Run</string>
+    <string name="sf__inspector_select_button" translatable="false">SELECT</string>
+    <string name="sf__inspector_soups_button" translatable="false">Soups</string>
+    <string name="sf__inspector_soups_query" translatable="false">select soupName from soup_names</string>
+    <string name="sf__inspector_where_button" translatable="false">WHERE</string>
     <style name="SmartStore">
     </style>
     <style name="SmartStore.Inspector">

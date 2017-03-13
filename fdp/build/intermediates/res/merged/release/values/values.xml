@@ -271,14 +271,80 @@
 		<item>M</item>
 		<item>B</item>
 	</string-array>
+    <string-array name="howLong">
+        <item>N/A</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong1">
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong2">
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong3">
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="howLong4">
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+    </string-array>
     <string-array name="m_gb">
 		<item>M</item>
 		<item>G</item>
 		<item>B</item>
 	</string-array>
+    <string-array name="noHire">
+		<item>No</item>
+		<item>Yes</item>
+		<item>Seasonal</item>
+	</string-array>
     <string-array name="oauthScopes" translatable="false">
         <item>api</item>
     </string-array>
+    <string-array name="reason">
+		<item>N/A</item>
+		<item>Replanting</item>
+		<item>Grafting</item>
+	</string-array>
+    <string-array name="reason1">
+        <item>Replanting</item>
+        <item>Grafting</item>
+    </string-array>
+    <string-array name="reason2">
+        <item>Grafting</item>
+        <item>Replanting</item>
+    </string-array>
+    <string-array name="reno1">
+		<item>-1</item>
+	</string-array>
+    <string-array name="reno2">
+		<item>-2</item>
+	</string-array>
+    <string-array name="reno3">
+		<item>-3</item>
+	</string-array>
+    <string-array name="reno4">
+		<item>-4</item>
+	</string-array>
+    <string-array name="seasonHire">
+		<item>Seasonal</item>
+		<item>Yes</item>
+		<item>No</item>
+	</string-array>
     <string-array name="sourceLoan">
         <item>Family</item>
         <item>Friends</item>
@@ -317,7 +383,12 @@
     <string-array name="treeDistance">
         <item>N/A</item>
         <item>2x2</item>
+		<item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -328,7 +399,12 @@
     </string-array>
     <string-array name="treeDistance1">
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -343,15 +419,106 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
         <item>4x4</item>
     </string-array>
+    <string-array name="treeDistance11">
+        <item>2x2.5</item>
+        <item>2x2</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance12">
+        <item>2x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance13">
+        <item>2x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance14">
+        <item>2.5x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance15">
+        <item>2.5x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
     <string-array name="treeDistance2">
         <item>2.5x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -363,7 +530,12 @@
     <string-array name="treeDistance3">
         <item>3x2.5</item>
         <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -374,7 +546,13 @@
     <string-array name="treeDistance4">
         <item>3x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
@@ -385,7 +563,13 @@
     <string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -396,7 +580,13 @@
     <string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -408,7 +598,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -421,7 +617,13 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
         <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
@@ -504,9 +706,20 @@
 		<item>Yes</item>
 		<item>No</item>
 	</string-array>
+    <string-array name="yesHire">
+		<item>Yes</item>
+		<item>Seasonal</item>
+		<item>No</item>
+	</string-array>
     <string-array name="yesNo">
 		<item>N/A</item>
 		<item>Yes</item>
+		<item>No</item>
+	</string-array>
+    <string-array name="yesNoHire">
+		<item>N/A</item>
+		<item>Yes</item>
+		<item>Seasonal</item>
 		<item>No</item>
 	</string-array>
     <color name="backGrid">#e5e5e5</color>
@@ -585,97 +798,97 @@
     <dimen name="tooltip_default_arrow_width">16dp</dimen>
     <dimen name="tooltip_default_corner_radius">4dp</dimen>
     <dimen name="tooltip_default_offset">0dp</dimen>
-    <integer name="ExtraSoilInputY1Apr">1092000</integer>
-    <integer name="ExtraSoilInputY1Aug">546000</integer>
-    <integer name="ExtraSoilInputY1Dec">5212500</integer>
-    <integer name="ExtraSoilInputY1Feb">546000</integer>
-    <integer name="ExtraSoilInputY1Jan">180000</integer>
-    <integer name="ExtraSoilInputY1Jul">180000</integer>
-    <integer name="ExtraSoilInputY1Jun">5365000</integer>
-    <integer name="ExtraSoilInputY1Mar">6124500</integer>
-    <integer name="ExtraSoilInputY1May">2521000</integer>
-    <integer name="ExtraSoilInputY1Nov">2521000</integer>
-    <integer name="ExtraSoilInputY1Oct">1092000</integer>
-    <integer name="ExtraSoilInputY1Sep">1092000</integer>
-    <integer name="ExtraSoilInputY1Total">26472000</integer>
-    <integer name="ExtraSoilInputY2Apr">1092000</integer>
-    <integer name="ExtraSoilInputY2Aug">546000</integer>
-    <integer name="ExtraSoilInputY2Dec">5212500</integer>
-    <integer name="ExtraSoilInputY2Feb">546000</integer>
-    <integer name="ExtraSoilInputY2Jan">180000</integer>
-    <integer name="ExtraSoilInputY2Jul">180000</integer>
-    <integer name="ExtraSoilInputY2Jun">5365000</integer>
-    <integer name="ExtraSoilInputY2Mar">6124500</integer>
-    <integer name="ExtraSoilInputY2May">2521000</integer>
-    <integer name="ExtraSoilInputY2Nov">2521000</integer>
-    <integer name="ExtraSoilInputY2Oct">1092000</integer>
-    <integer name="ExtraSoilInputY2Sep">1092000</integer>
-    <integer name="ExtraSoilInputY2Total">26472000</integer>
-    <integer name="ExtraSoilInputY3Apr">1092000</integer>
-    <integer name="ExtraSoilInputY3Aug">546000</integer>
-    <integer name="ExtraSoilInputY3Dec">5212500</integer>
-    <integer name="ExtraSoilInputY3Feb">546000</integer>
-    <integer name="ExtraSoilInputY3Jan">180000</integer>
-    <integer name="ExtraSoilInputY3Jul">180000</integer>
-    <integer name="ExtraSoilInputY3Jun">5365000</integer>
-    <integer name="ExtraSoilInputY3Mar">6124500</integer>
-    <integer name="ExtraSoilInputY3May">1596000</integer>
-    <integer name="ExtraSoilInputY3Nov">596000</integer>
-    <integer name="ExtraSoilInputY3Oct">1092000</integer>
-    <integer name="ExtraSoilInputY3Sep">1092000</integer>
-    <integer name="ExtraSoilInputY3Total">23622000</integer>
-    <integer name="ExtraSoilInputY4Apr">1092000</integer>
-    <integer name="ExtraSoilInputY4Aug">546000</integer>
-    <integer name="ExtraSoilInputY4Dec">5212500</integer>
-    <integer name="ExtraSoilInputY4Feb">546000</integer>
-    <integer name="ExtraSoilInputY4Jan">180000</integer>
-    <integer name="ExtraSoilInputY4Jul">180000</integer>
-    <integer name="ExtraSoilInputY4Jun">5365000</integer>
-    <integer name="ExtraSoilInputY4Mar">6124500</integer>
-    <integer name="ExtraSoilInputY4May">1596000</integer>
-    <integer name="ExtraSoilInputY4Nov">596000</integer>
-    <integer name="ExtraSoilInputY4Oct">1092000</integer>
-    <integer name="ExtraSoilInputY4Sep">1092000</integer>
-    <integer name="ExtraSoilInputY4Total">23622000</integer>
-    <integer name="ExtraSoilInputY5Apr">1092000</integer>
-    <integer name="ExtraSoilInputY5Aug">546000</integer>
-    <integer name="ExtraSoilInputY5Dec">5212500</integer>
-    <integer name="ExtraSoilInputY5Feb">546000</integer>
-    <integer name="ExtraSoilInputY5Jan">180000</integer>
-    <integer name="ExtraSoilInputY5Jul">180000</integer>
-    <integer name="ExtraSoilInputY5Jun">5365000</integer>
-    <integer name="ExtraSoilInputY5Mar">6124500</integer>
-    <integer name="ExtraSoilInputY5May">1596000</integer>
-    <integer name="ExtraSoilInputY5Nov">596000</integer>
-    <integer name="ExtraSoilInputY5Oct">1092000</integer>
-    <integer name="ExtraSoilInputY5Sep">1092000</integer>
-    <integer name="ExtraSoilInputY5Total">23622000</integer>
-    <integer name="ExtraSoilInputY6Apr">1092000</integer>
-    <integer name="ExtraSoilInputY6Aug">546000</integer>
-    <integer name="ExtraSoilInputY6Dec">5212500</integer>
-    <integer name="ExtraSoilInputY6Feb">546000</integer>
-    <integer name="ExtraSoilInputY6Jan">180000</integer>
-    <integer name="ExtraSoilInputY6Jul">180000</integer>
-    <integer name="ExtraSoilInputY6Jun">5365000</integer>
-    <integer name="ExtraSoilInputY6Mar">6124500</integer>
-    <integer name="ExtraSoilInputY6May">1596000</integer>
-    <integer name="ExtraSoilInputY6Nov">596000</integer>
-    <integer name="ExtraSoilInputY6Oct">1092000</integer>
-    <integer name="ExtraSoilInputY6Sep">1092000</integer>
-    <integer name="ExtraSoilInputY6Total">23622000</integer>
-    <integer name="ExtraSoilInputY7Apr">1092000</integer>
-    <integer name="ExtraSoilInputY7Aug">546000</integer>
-    <integer name="ExtraSoilInputY7Dec">5212500</integer>
-    <integer name="ExtraSoilInputY7Feb">546000</integer>
-    <integer name="ExtraSoilInputY7Jan">180000</integer>
-    <integer name="ExtraSoilInputY7Jul">180000</integer>
-    <integer name="ExtraSoilInputY7Jun">5365000</integer>
-    <integer name="ExtraSoilInputY7Mar">6124500</integer>
-    <integer name="ExtraSoilInputY7May">1596000</integer>
-    <integer name="ExtraSoilInputY7Nov">596000</integer>
-    <integer name="ExtraSoilInputY7Oct">1092000</integer>
-    <integer name="ExtraSoilInputY7Sep">1092000</integer>
-    <integer name="ExtraSoilInputY7Total">23622000</integer>
+    <integer name="ExtraSoilInputY1Apr">201600</integer>
+    <integer name="ExtraSoilInputY1Aug">100800</integer>
+    <integer name="ExtraSoilInputY1Dec">2831250</integer>
+    <integer name="ExtraSoilInputY1Feb">100800</integer>
+    <integer name="ExtraSoilInputY1Jan">18000</integer>
+    <integer name="ExtraSoilInputY1Jul">18000</integer>
+    <integer name="ExtraSoilInputY1Jun">2916500</integer>
+    <integer name="ExtraSoilInputY1Mar">3014850</integer>
+    <integer name="ExtraSoilInputY1May">2125800</integer>
+    <integer name="ExtraSoilInputY1Nov">2125800</integer>
+    <integer name="ExtraSoilInputY1Oct">201600</integer>
+    <integer name="ExtraSoilInputY1Sep">201600</integer>
+    <integer name="ExtraSoilInputY1Total">13856600</integer>
+    <integer name="ExtraSoilInputY2Apr">201600</integer>
+    <integer name="ExtraSoilInputY2Aug">100800</integer>
+    <integer name="ExtraSoilInputY2Dec">5050500</integer>
+    <integer name="ExtraSoilInputY2Feb">100800</integer>
+    <integer name="ExtraSoilInputY2Jan">18000</integer>
+    <integer name="ExtraSoilInputY2Jul">18000</integer>
+    <integer name="ExtraSoilInputY2Jun">2916500</integer>
+    <integer name="ExtraSoilInputY2Mar">3014850</integer>
+    <integer name="ExtraSoilInputY2May">2125800</integer>
+    <integer name="ExtraSoilInputY2Nov">2125800</integer>
+    <integer name="ExtraSoilInputY2Oct">201600</integer>
+    <integer name="ExtraSoilInputY2Sep">201600</integer>
+    <integer name="ExtraSoilInputY2Total">16075850</integer>
+    <integer name="ExtraSoilInputY3Apr">201600</integer>
+    <integer name="ExtraSoilInputY3Aug">100800</integer>
+    <integer name="ExtraSoilInputY3Dec">5050500</integer>
+    <integer name="ExtraSoilInputY3Feb">100800</integer>
+    <integer name="ExtraSoilInputY3Jan">18000</integer>
+    <integer name="ExtraSoilInputY3Jul">18000</integer>
+    <integer name="ExtraSoilInputY3Jun">2916500</integer>
+    <integer name="ExtraSoilInputY3Mar">3014850</integer>
+    <integer name="ExtraSoilInputY3May">1663300</integer>
+    <integer name="ExtraSoilInputY3Nov">200800</integer>
+    <integer name="ExtraSoilInputY3Oct">1664100</integer>
+    <integer name="ExtraSoilInputY3Sep">201600</integer>
+    <integer name="ExtraSoilInputY3Total">15150850</integer>
+    <integer name="ExtraSoilInputY4Apr">201600</integer>
+    <integer name="ExtraSoilInputY4Aug">100800</integer>
+    <integer name="ExtraSoilInputY4Dec">5050500</integer>
+    <integer name="ExtraSoilInputY4Feb">100800</integer>
+    <integer name="ExtraSoilInputY4Jan">18000</integer>
+    <integer name="ExtraSoilInputY4Jul">18000</integer>
+    <integer name="ExtraSoilInputY4Jun">2916500</integer>
+    <integer name="ExtraSoilInputY4Mar">3014850</integer>
+    <integer name="ExtraSoilInputY4May">1200800</integer>
+    <integer name="ExtraSoilInputY4Nov">200800</integer>
+    <integer name="ExtraSoilInputY4Oct">201600</integer>
+    <integer name="ExtraSoilInputY4Sep">201600</integer>
+    <integer name="ExtraSoilInputY4Total">13225850</integer>
+    <integer name="ExtraSoilInputY5Apr">201600</integer>
+    <integer name="ExtraSoilInputY5Aug">100800</integer>
+    <integer name="ExtraSoilInputY5Dec">5050500</integer>
+    <integer name="ExtraSoilInputY5Feb">100800</integer>
+    <integer name="ExtraSoilInputY5Jan">18000</integer>
+    <integer name="ExtraSoilInputY5Jul">18000</integer>
+    <integer name="ExtraSoilInputY5Jun">2916500</integer>
+    <integer name="ExtraSoilInputY5Mar">3014850</integer>
+    <integer name="ExtraSoilInputY5May">1200800</integer>
+    <integer name="ExtraSoilInputY5Nov">200800</integer>
+    <integer name="ExtraSoilInputY5Oct">201600</integer>
+    <integer name="ExtraSoilInputY5Sep">201600</integer>
+    <integer name="ExtraSoilInputY5Total">13225850</integer>
+    <integer name="ExtraSoilInputY6Apr">201600</integer>
+    <integer name="ExtraSoilInputY6Aug">100800</integer>
+    <integer name="ExtraSoilInputY6Dec">5050500</integer>
+    <integer name="ExtraSoilInputY6Feb">100800</integer>
+    <integer name="ExtraSoilInputY6Jan">18000</integer>
+    <integer name="ExtraSoilInputY6Jul">18000</integer>
+    <integer name="ExtraSoilInputY6Jun">2916500</integer>
+    <integer name="ExtraSoilInputY6Mar">3014850</integer>
+    <integer name="ExtraSoilInputY6May">1200800</integer>
+    <integer name="ExtraSoilInputY6Nov">200800</integer>
+    <integer name="ExtraSoilInputY6Oct">201600</integer>
+    <integer name="ExtraSoilInputY6Sep">201600</integer>
+    <integer name="ExtraSoilInputY6Total">13225850</integer>
+    <integer name="ExtraSoilInputY7Apr">201600</integer>
+    <integer name="ExtraSoilInputY7Aug">100800</integer>
+    <integer name="ExtraSoilInputY7Dec">5050500</integer>
+    <integer name="ExtraSoilInputY7Feb">100800</integer>
+    <integer name="ExtraSoilInputY7Jan">18000</integer>
+    <integer name="ExtraSoilInputY7Jul">18000</integer>
+    <integer name="ExtraSoilInputY7Jun">2916500</integer>
+    <integer name="ExtraSoilInputY7Mar">3014850</integer>
+    <integer name="ExtraSoilInputY7May">1200800</integer>
+    <integer name="ExtraSoilInputY7Nov">200800</integer>
+    <integer name="ExtraSoilInputY7Oct">201600</integer>
+    <integer name="ExtraSoilInputY7Sep">201600</integer>
+    <integer name="ExtraSoilInputY7Total">13225850</integer>
     <integer name="ExtraSoilLaborY1Apr">975000</integer>
     <integer name="ExtraSoilLaborY1Aug">600000</integer>
     <integer name="ExtraSoilLaborY1Dec">1425000</integer>
@@ -710,11 +923,11 @@
     <integer name="ExtraSoilLaborY3Jul">825000</integer>
     <integer name="ExtraSoilLaborY3Jun">1575000</integer>
     <integer name="ExtraSoilLaborY3Mar">900000</integer>
-    <integer name="ExtraSoilLaborY3May">2400000</integer>
-    <integer name="ExtraSoilLaborY3Nov">2250000</integer>
+    <integer name="ExtraSoilLaborY3May">1950000</integer>
+    <integer name="ExtraSoilLaborY3Nov">1800000</integer>
     <integer name="ExtraSoilLaborY3Oct">675000</integer>
     <integer name="ExtraSoilLaborY3Sep">675000</integer>
-    <integer name="ExtraSoilLaborY3Total">13425000</integer>
+    <integer name="ExtraSoilLaborY3Total">12525000</integer>
     <integer name="ExtraSoilLaborY4Apr">975000</integer>
     <integer name="ExtraSoilLaborY4Aug">600000</integer>
     <integer name="ExtraSoilLaborY4Dec">1425000</integer>
@@ -767,6 +980,13 @@
     <integer name="ExtraSoilLaborY7Oct">675000</integer>
     <integer name="ExtraSoilLaborY7Sep">675000</integer>
     <integer name="ExtraSoilLaborY7Total">12075000</integer>
+    <integer name="ExtraSoilSeasonY1Total">7875000</integer>
+    <integer name="ExtraSoilSeasonY2Total">7875000</integer>
+    <integer name="ExtraSoilSeasonY3Total">7575000</integer>
+    <integer name="ExtraSoilSeasonY4Total">7125000</integer>
+    <integer name="ExtraSoilSeasonY5Total">7125000</integer>
+    <integer name="ExtraSoilSeasonY6Total">7125000</integer>
+    <integer name="ExtraSoilSeasonY7Total">7125000</integer>
     <integer name="ExtraSoilY1Apr">13</integer>
     <integer name="ExtraSoilY1Aug">8</integer>
     <integer name="ExtraSoilY1Dec">19</integer>
@@ -778,6 +998,7 @@
     <integer name="ExtraSoilY1May">28</integer>
     <integer name="ExtraSoilY1Nov">26</integer>
     <integer name="ExtraSoilY1Oct">9</integer>
+    <integer name="ExtraSoilY1Season">105</integer>
     <integer name="ExtraSoilY1Sep">9</integer>
     <integer name="ExtraSoilY1Total">171</integer>
     <integer name="ExtraSoilY2Apr">13</integer>
@@ -791,6 +1012,7 @@
     <integer name="ExtraSoilY2May">28</integer>
     <integer name="ExtraSoilY2Nov">26</integer>
     <integer name="ExtraSoilY2Oct">9</integer>
+    <integer name="ExtraSoilY2Season">105</integer>
     <integer name="ExtraSoilY2Sep">9</integer>
     <integer name="ExtraSoilY2Total">171</integer>
     <integer name="ExtraSoilY3Apr">13</integer>
@@ -801,11 +1023,12 @@
     <integer name="ExtraSoilY3Jul">11</integer>
     <integer name="ExtraSoilY3Jun">21</integer>
     <integer name="ExtraSoilY3Mar">12</integer>
-    <integer name="ExtraSoilY3May">32</integer>
-    <integer name="ExtraSoilY3Nov">30</integer>
+    <integer name="ExtraSoilY3May">26</integer>
+    <integer name="ExtraSoilY3Nov">24</integer>
     <integer name="ExtraSoilY3Oct">9</integer>
+    <integer name="ExtraSoilY3Season">101</integer>
     <integer name="ExtraSoilY3Sep">9</integer>
-    <integer name="ExtraSoilY3Total">179</integer>
+    <integer name="ExtraSoilY3Total">167</integer>
     <integer name="ExtraSoilY4Apr">13</integer>
     <integer name="ExtraSoilY4Aug">8</integer>
     <integer name="ExtraSoilY4Dec">19</integer>
@@ -817,6 +1040,7 @@
     <integer name="ExtraSoilY4May">23</integer>
     <integer name="ExtraSoilY4Nov">21</integer>
     <integer name="ExtraSoilY4Oct">9</integer>
+    <integer name="ExtraSoilY4Season">95</integer>
     <integer name="ExtraSoilY4Sep">9</integer>
     <integer name="ExtraSoilY4Total">161</integer>
     <integer name="ExtraSoilY5Apr">13</integer>
@@ -830,6 +1054,7 @@
     <integer name="ExtraSoilY5May">23</integer>
     <integer name="ExtraSoilY5Nov">21</integer>
     <integer name="ExtraSoilY5Oct">9</integer>
+    <integer name="ExtraSoilY5Season">95</integer>
     <integer name="ExtraSoilY5Sep">9</integer>
     <integer name="ExtraSoilY5Total">161</integer>
     <integer name="ExtraSoilY6Apr">13</integer>
@@ -843,6 +1068,7 @@
     <integer name="ExtraSoilY6May">23</integer>
     <integer name="ExtraSoilY6Nov">21</integer>
     <integer name="ExtraSoilY6Oct">9</integer>
+    <integer name="ExtraSoilY6Season">95</integer>
     <integer name="ExtraSoilY6Sep">9</integer>
     <integer name="ExtraSoilY6Total">161</integer>
     <integer name="ExtraSoilY7Apr">13</integer>
@@ -856,99 +1082,100 @@
     <integer name="ExtraSoilY7May">23</integer>
     <integer name="ExtraSoilY7Nov">21</integer>
     <integer name="ExtraSoilY7Oct">9</integer>
+    <integer name="ExtraSoilY7Season">95</integer>
     <integer name="ExtraSoilY7Sep">9</integer>
     <integer name="ExtraSoilY7Total">161</integer>
-    <integer name="GAPSInputY1Apr">1092000</integer>
-    <integer name="GAPSInputY1Aug">546000</integer>
-    <integer name="GAPSInputY1Dec">5212500</integer>
-    <integer name="GAPSInputY1Feb">546000</integer>
-    <integer name="GAPSInputY1Jan">180000</integer>
-    <integer name="GAPSInputY1Jul">180000</integer>
-    <integer name="GAPSInputY1Jun">5365000</integer>
-    <integer name="GAPSInputY1Mar">6124500</integer>
-    <integer name="GAPSInputY1May">1596000</integer>
-    <integer name="GAPSInputY1Nov">596000</integer>
-    <integer name="GAPSInputY1Oct">1092000</integer>
-    <integer name="GAPSInputY1Sep">1092000</integer>
-    <integer name="GAPSInputY1Total">23622000</integer>
-    <integer name="GAPSInputY2Apr">1092000</integer>
-    <integer name="GAPSInputY2Aug">546000</integer>
-    <integer name="GAPSInputY2Dec">5212500</integer>
-    <integer name="GAPSInputY2Feb">546000</integer>
-    <integer name="GAPSInputY2Jan">180000</integer>
-    <integer name="GAPSInputY2Jul">180000</integer>
-    <integer name="GAPSInputY2Jun">5365000</integer>
-    <integer name="GAPSInputY2Mar">6124500</integer>
-    <integer name="GAPSInputY2May">1596000</integer>
-    <integer name="GAPSInputY2Nov">596000</integer>
-    <integer name="GAPSInputY2Oct">1092000</integer>
-    <integer name="GAPSInputY2Sep">1092000</integer>
-    <integer name="GAPSInputY2Total">23622000</integer>
-    <integer name="GAPSInputY3Apr">1092000</integer>
-    <integer name="GAPSInputY3Aug">546000</integer>
-    <integer name="GAPSInputY3Dec">5212500</integer>
-    <integer name="GAPSInputY3Feb">546000</integer>
-    <integer name="GAPSInputY3Jan">180000</integer>
-    <integer name="GAPSInputY3Jul">180000</integer>
-    <integer name="GAPSInputY3Jun">5365000</integer>
-    <integer name="GAPSInputY3Mar">6124500</integer>
-    <integer name="GAPSInputY3May">1596000</integer>
-    <integer name="GAPSInputY3Nov">596000</integer>
-    <integer name="GAPSInputY3Oct">1092000</integer>
-    <integer name="GAPSInputY3Sep">1092000</integer>
-    <integer name="GAPSInputY3Total">23622000</integer>
-    <integer name="GAPSInputY4Apr">1092000</integer>
-    <integer name="GAPSInputY4Aug">546000</integer>
-    <integer name="GAPSInputY4Dec">5212500</integer>
-    <integer name="GAPSInputY4Feb">546000</integer>
-    <integer name="GAPSInputY4Jan">180000</integer>
-    <integer name="GAPSInputY4Jul">180000</integer>
-    <integer name="GAPSInputY4Jun">5365000</integer>
-    <integer name="GAPSInputY4Mar">6124500</integer>
-    <integer name="GAPSInputY4May">1596000</integer>
-    <integer name="GAPSInputY4Nov">596000</integer>
-    <integer name="GAPSInputY4Oct">1092000</integer>
-    <integer name="GAPSInputY4Sep">1092000</integer>
-    <integer name="GAPSInputY4Total">23622000</integer>
-    <integer name="GAPSInputY5Apr">1092000</integer>
-    <integer name="GAPSInputY5Aug">546000</integer>
-    <integer name="GAPSInputY5Dec">5297750</integer>
-    <integer name="GAPSInputY5Feb">546000</integer>
-    <integer name="GAPSInputY5Jan">180000</integer>
-    <integer name="GAPSInputY5Jul">180000</integer>
-    <integer name="GAPSInputY5Jun">5365000</integer>
-    <integer name="GAPSInputY5Mar">6124500</integer>
-    <integer name="GAPSInputY5May">1596000</integer>
-    <integer name="GAPSInputY5Nov">596000</integer>
-    <integer name="GAPSInputY5Oct">1092000</integer>
-    <integer name="GAPSInputY5Sep">3905250</integer>
-    <integer name="GAPSInputY5Total">26520500</integer>
-    <integer name="GAPSInputY6Apr">1092000</integer>
-    <integer name="GAPSInputY6Aug">546000</integer>
-    <integer name="GAPSInputY6Dec">5212500</integer>
-    <integer name="GAPSInputY6Feb">546000</integer>
-    <integer name="GAPSInputY6Jan">180000</integer>
-    <integer name="GAPSInputY6Jul">180000</integer>
-    <integer name="GAPSInputY6Jun">5365000</integer>
-    <integer name="GAPSInputY6Mar">6124500</integer>
-    <integer name="GAPSInputY6May">1596000</integer>
-    <integer name="GAPSInputY6Nov">596000</integer>
-    <integer name="GAPSInputY6Oct">1092000</integer>
-    <integer name="GAPSInputY6Sep">1092000</integer>
-    <integer name="GAPSInputY6Total">23622000</integer>
-    <integer name="GAPSInputY7Apr">1092000</integer>
-    <integer name="GAPSInputY7Aug">546000</integer>
-    <integer name="GAPSInputY7Dec">5212500</integer>
-    <integer name="GAPSInputY7Feb">546000</integer>
-    <integer name="GAPSInputY7Jan">180000</integer>
-    <integer name="GAPSInputY7Jul">180000</integer>
-    <integer name="GAPSInputY7Jun">5365000</integer>
-    <integer name="GAPSInputY7Mar">6124500</integer>
-    <integer name="GAPSInputY7May">1596000</integer>
-    <integer name="GAPSInputY7Nov">596000</integer>
-    <integer name="GAPSInputY7Oct">1092000</integer>
-    <integer name="GAPSInputY7Sep">1092000</integer>
-    <integer name="GAPSInputY7Total">23622000</integer>
+    <integer name="GAPSInputY1Apr">201600</integer>
+    <integer name="GAPSInputY1Aug">100800</integer>
+    <integer name="GAPSInputY1Dec">5050500</integer>
+    <integer name="GAPSInputY1Feb">100800</integer>
+    <integer name="GAPSInputY1Jan">18000</integer>
+    <integer name="GAPSInputY1Jul">18000</integer>
+    <integer name="GAPSInputY1Jun">2916500</integer>
+    <integer name="GAPSInputY1Mar">3014850</integer>
+    <integer name="GAPSInputY1May">1200800</integer>
+    <integer name="GAPSInputY1Nov">200800</integer>
+    <integer name="GAPSInputY1Oct">201600</integer>
+    <integer name="GAPSInputY1Sep">201600</integer>
+    <integer name="GAPSInputY1Total">13225850</integer>
+    <integer name="GAPSInputY2Apr">201600</integer>
+    <integer name="GAPSInputY2Aug">252000</integer>
+    <integer name="GAPSInputY2Dec">5050500</integer>
+    <integer name="GAPSInputY2Feb">100800</integer>
+    <integer name="GAPSInputY2Jan">18000</integer>
+    <integer name="GAPSInputY2Jul">18000</integer>
+    <integer name="GAPSInputY2Jun">2916500</integer>
+    <integer name="GAPSInputY2Mar">3014850</integer>
+    <integer name="GAPSInputY2May">1200800</integer>
+    <integer name="GAPSInputY2Nov">200800</integer>
+    <integer name="GAPSInputY2Oct">201600</integer>
+    <integer name="GAPSInputY2Sep">201600</integer>
+    <integer name="GAPSInputY2Total">13225850</integer>
+    <integer name="GAPSInputY3Apr">201600</integer>
+    <integer name="GAPSInputY3Aug">252000</integer>
+    <integer name="GAPSInputY3Dec">5050500</integer>
+    <integer name="GAPSInputY3Feb">100800</integer>
+    <integer name="GAPSInputY3Jan">18000</integer>
+    <integer name="GAPSInputY3Jul">18000</integer>
+    <integer name="GAPSInputY3Jun">2916500</integer>
+    <integer name="GAPSInputY3Mar">3014850</integer>
+    <integer name="GAPSInputY3May">1200800</integer>
+    <integer name="GAPSInputY3Nov">200800</integer>
+    <integer name="GAPSInputY3Oct">201600</integer>
+    <integer name="GAPSInputY3Sep">201600</integer>
+    <integer name="GAPSInputY3Total">13225850</integer>
+    <integer name="GAPSInputY4Apr">201600</integer>
+    <integer name="GAPSInputY4Aug">252000</integer>
+    <integer name="GAPSInputY4Dec">5050500</integer>
+    <integer name="GAPSInputY4Feb">100800</integer>
+    <integer name="GAPSInputY4Jan">18000</integer>
+    <integer name="GAPSInputY4Jul">18000</integer>
+    <integer name="GAPSInputY4Jun">2916500</integer>
+    <integer name="GAPSInputY4Mar">3014850</integer>
+    <integer name="GAPSInputY4May">1200800</integer>
+    <integer name="GAPSInputY4Nov">200800</integer>
+    <integer name="GAPSInputY4Oct">201600</integer>
+    <integer name="GAPSInputY4Sep">201600</integer>
+    <integer name="GAPSInputY4Total">13225850</integer>
+    <integer name="GAPSInputY5Apr">201600</integer>
+    <integer name="GAPSInputY5Aug">252000</integer>
+    <integer name="GAPSInputY5Dec">5050500</integer>
+    <integer name="GAPSInputY5Feb">100800</integer>
+    <integer name="GAPSInputY5Jan">18000</integer>
+    <integer name="GAPSInputY5Jul">18000</integer>
+    <integer name="GAPSInputY5Jun">2916500</integer>
+    <integer name="GAPSInputY5Mar">3014850</integer>
+    <integer name="GAPSInputY5May">1200800</integer>
+    <integer name="GAPSInputY5Nov">200800</integer>
+    <integer name="GAPSInputY5Oct">201600</integer>
+    <integer name="GAPSInputY5Sep">201600</integer>
+    <integer name="GAPSInputY5Total">13225850</integer>
+    <integer name="GAPSInputY6Apr">201600</integer>
+    <integer name="GAPSInputY6Aug">252000</integer>
+    <integer name="GAPSInputY6Dec">5050500</integer>
+    <integer name="GAPSInputY6Feb">100800</integer>
+    <integer name="GAPSInputY6Jan">18000</integer>
+    <integer name="GAPSInputY6Jul">18000</integer>
+    <integer name="GAPSInputY6Jun">2916500</integer>
+    <integer name="GAPSInputY6Mar">3014850</integer>
+    <integer name="GAPSInputY6May">1200800</integer>
+    <integer name="GAPSInputY6Nov">200800</integer>
+    <integer name="GAPSInputY6Oct">201600</integer>
+    <integer name="GAPSInputY6Sep">201600</integer>
+    <integer name="GAPSInputY6Total">13225850</integer>
+    <integer name="GAPSInputY7Apr">201600</integer>
+    <integer name="GAPSInputY7Aug">252000</integer>
+    <integer name="GAPSInputY7Dec">5050500</integer>
+    <integer name="GAPSInputY7Feb">100800</integer>
+    <integer name="GAPSInputY7Jan">18000</integer>
+    <integer name="GAPSInputY7Jul">18000</integer>
+    <integer name="GAPSInputY7Jun">2916500</integer>
+    <integer name="GAPSInputY7Mar">3014850</integer>
+    <integer name="GAPSInputY7May">1200800</integer>
+    <integer name="GAPSInputY7Nov">200800</integer>
+    <integer name="GAPSInputY7Oct">201600</integer>
+    <integer name="GAPSInputY7Sep">201600</integer>
+    <integer name="GAPSInputY7Total">13225850</integer>
     <integer name="GAPSLaborY1Apr">975000</integer>
     <integer name="GAPSLaborY1Aug">600000</integer>
     <integer name="GAPSLaborY1Dec">1425000</integer>
@@ -1040,97 +1267,104 @@
     <integer name="GAPSLaborY7Oct">675000</integer>
     <integer name="GAPSLaborY7Sep">675000</integer>
     <integer name="GAPSLaborY7Total">12075000</integer>
-    <integer name="GraftingInputY1Apr">273000</integer>
-    <integer name="GraftingInputY1Aug">409500</integer>
-    <integer name="GraftingInputY1Dec">8182000</integer>
-    <integer name="GraftingInputY1Feb">786500</integer>
+    <integer name="GAPSeasonY1Total">7125000</integer>
+    <integer name="GAPSeasonY2Total">7125000</integer>
+    <integer name="GAPSeasonY3Total">7125000</integer>
+    <integer name="GAPSeasonY4Total">7125000</integer>
+    <integer name="GAPSeasonY5Total">7125000</integer>
+    <integer name="GAPSeasonY6Total">7125000</integer>
+    <integer name="GAPSeasonY7Total">7125000</integer>
+    <integer name="GraftingInputY1Apr">50400</integer>
+    <integer name="GraftingInputY1Aug">75600</integer>
+    <integer name="GraftingInputY1Dec">5628850</integer>
+    <integer name="GraftingInputY1Feb">675200</integer>
     <integer name="GraftingInputY1Jan">240000</integer>
-    <integer name="GraftingInputY1Jul">273000</integer>
-    <integer name="GraftingInputY1Jun">5458000</integer>
-    <integer name="GraftingInputY1Mar">5169000</integer>
-    <integer name="GraftingInputY1May">1323000</integer>
-    <integer name="GraftingInputY1Nov">1459500</integer>
-    <integer name="GraftingInputY1Oct">409500</integer>
-    <integer name="GraftingInputY1Sep">409500</integer>
-    <integer name="GraftingInputY1Total">24392500</integer>
-    <integer name="GraftingInputY2Apr">682500</integer>
-    <integer name="GraftingInputY2Aug">546000</integer>
-    <integer name="GraftingInputY2Dec">5212500</integer>
-    <integer name="GraftingInputY2Feb">341250</integer>
-    <integer name="GraftingInputY2Jan">112500</integer>
-    <integer name="GraftingInputY2Jul">180000</integer>
-    <integer name="GraftingInputY2Jun">5297500</integer>
-    <integer name="GraftingInputY2Mar">5715000</integer>
-    <integer name="GraftingInputY2May">1441250</integer>
-    <integer name="GraftingInputY2Nov">646000</integer>
-    <integer name="GraftingInputY2Oct">1092000</integer>
-    <integer name="GraftingInputY2Sep">1092000</integer>
-    <integer name="GraftingInputY2Total">22358500</integer>
-    <integer name="GraftingInputY3Apr">1092000</integer>
-    <integer name="GraftingInputY3Aug">546000</integer>
-    <integer name="GraftingInputY3Dec">5212500</integer>
-    <integer name="GraftingInputY3Feb">546000</integer>
-    <integer name="GraftingInputY3Jan">180000</integer>
-    <integer name="GraftingInputY3Jul">180000</integer>
-    <integer name="GraftingInputY3Jun">5365000</integer>
-    <integer name="GraftingInputY3Mar">6124500</integer>
-    <integer name="GraftingInputY3May">1646000</integer>
-    <integer name="GraftingInputY3Nov">646000</integer>
-    <integer name="GraftingInputY3Oct">1092000</integer>
-    <integer name="GraftingInputY3Sep">1092000</integer>
-    <integer name="GraftingInputY3Total">23722000</integer>
-    <integer name="GraftingInputY4Apr">1092000</integer>
-    <integer name="GraftingInputY4Aug">546000</integer>
-    <integer name="GraftingInputY4Dec">5212500</integer>
-    <integer name="GraftingInputY4Feb">546000</integer>
-    <integer name="GraftingInputY4Jan">180000</integer>
-    <integer name="GraftingInputY4Jul">180000</integer>
-    <integer name="GraftingInputY4Jun">5365000</integer>
-    <integer name="GraftingInputY4Mar">6124500</integer>
-    <integer name="GraftingInputY4May">1596000</integer>
-    <integer name="GraftingInputY4Nov">596000</integer>
-    <integer name="GraftingInputY4Oct">1092000</integer>
-    <integer name="GraftingInputY4Sep">1092000</integer>
-    <integer name="GraftingInputY4Total">23622000</integer>
-    <integer name="GraftingInputY5Apr">1092000</integer>
-    <integer name="GraftingInputY5Aug">546000</integer>
-    <integer name="GraftingInputY5Dec">5212500</integer>
-    <integer name="GraftingInputY5Feb">546000</integer>
-    <integer name="GraftingInputY5Jan">180000</integer>
-    <integer name="GraftingInputY5Jul">180000</integer>
-    <integer name="GraftingInputY5Jun">5365000</integer>
-    <integer name="GraftingInputY5Mar">6124500</integer>
-    <integer name="GraftingInputY5May">1596000</integer>
-    <integer name="GraftingInputY5Nov">596000</integer>
-    <integer name="GraftingInputY5Oct">1092000</integer>
-    <integer name="GraftingInputY5Sep">1092000</integer>
-    <integer name="GraftingInputY5Total">23622000</integer>
-    <integer name="GraftingInputY6Apr">1092000</integer>
-    <integer name="GraftingInputY6Aug">546000</integer>
-    <integer name="GraftingInputY6Dec">5212500</integer>
-    <integer name="GraftingInputY6Feb">546000</integer>
-    <integer name="GraftingInputY6Jan">180000</integer>
-    <integer name="GraftingInputY6Jul">180000</integer>
-    <integer name="GraftingInputY6Jun">5365000</integer>
-    <integer name="GraftingInputY6Mar">6124500</integer>
-    <integer name="GraftingInputY6May">1596000</integer>
-    <integer name="GraftingInputY6Nov">596000</integer>
-    <integer name="GraftingInputY6Oct">1092000</integer>
-    <integer name="GraftingInputY6Sep">1092000</integer>
-    <integer name="GraftingInputY6Total">23622000</integer>
-    <integer name="GraftingInputY7Apr">1092000</integer>
-    <integer name="GraftingInputY7Aug">546000</integer>
-    <integer name="GraftingInputY7Dec">5212500</integer>
-    <integer name="GraftingInputY7Feb">546000</integer>
-    <integer name="GraftingInputY7Jan">180000</integer>
-    <integer name="GraftingInputY7Jul">180000</integer>
-    <integer name="GraftingInputY7Jun">5365000</integer>
-    <integer name="GraftingInputY7Mar">6124500</integer>
-    <integer name="GraftingInputY7May">1596000</integer>
-    <integer name="GraftingInputY7Nov">596000</integer>
-    <integer name="GraftingInputY7Oct">1092000</integer>
-    <integer name="GraftingInputY7Sep">1092000</integer>
-    <integer name="GraftingInputY7Total">23622000</integer>
+    <integer name="GraftingInputY1Jul">50400</integer>
+    <integer name="GraftingInputY1Jun">2948900</integer>
+    <integer name="GraftingInputY1Mar">2838450</integer>
+    <integer name="GraftingInputY1May">1100400</integer>
+    <integer name="GraftingInputY1Nov">1125600</integer>
+    <integer name="GraftingInputY1Oct">75600</integer>
+    <integer name="GraftingInputY1Sep">75600</integer>
+    <integer name="GraftingInputY1Total">14885000</integer>
+    <integer name="GraftingInputY2Apr">126000</integer>
+    <integer name="GraftingInputY2Aug">100800</integer>
+    <integer name="GraftingInputY2Dec">5050500</integer>
+    <integer name="GraftingInputY2Feb">63000</integer>
+    <integer name="GraftingInputY2Jan">11250</integer>
+    <integer name="GraftingInputY2Jul">18000</integer>
+    <integer name="GraftingInputY2Jun">2909750</integer>
+    <integer name="GraftingInputY2Mar">2939250</integer>
+    <integer name="GraftingInputY2May">1163000</integer>
+    <integer name="GraftingInputY2Nov">200800</integer>
+    <integer name="GraftingInputY2Oct">201600</integer>
+    <integer name="GraftingInputY2Sep">201600</integer>
+    <integer name="GraftingInputY2Total">12985550</integer>
+    <integer name="GraftingInputY3Apr">201600</integer>
+    <integer name="GraftingInputY3Aug">100800</integer>
+    <integer name="GraftingInputY3Dec">5050500</integer>
+    <integer name="GraftingInputY3Feb">100800</integer>
+    <integer name="GraftingInputY3Jan">18000</integer>
+    <integer name="GraftingInputY3Jul">18000</integer>
+    <integer name="GraftingInputY3Jun">2916500</integer>
+    <integer name="GraftingInputY3Mar">3014850</integer>
+    <integer name="GraftingInputY3May">1200800</integer>
+    <integer name="GraftingInputY3Nov">200800</integer>
+    <integer name="GraftingInputY3Oct">201600</integer>
+    <integer name="GraftingInputY3Sep">201600</integer>
+    <integer name="GraftingInputY3Total">13225850</integer>
+    <integer name="GraftingInputY4Apr">201600</integer>
+    <integer name="GraftingInputY4Aug">100800</integer>
+    <integer name="GraftingInputY4Dec">5050500</integer>
+    <integer name="GraftingInputY4Feb">100800</integer>
+    <integer name="GraftingInputY4Jan">18000</integer>
+    <integer name="GraftingInputY4Jul">18000</integer>
+    <integer name="GraftingInputY4Jun">2916500</integer>
+    <integer name="GraftingInputY4Mar">3014850</integer>
+    <integer name="GraftingInputY4May">1200800</integer>
+    <integer name="GraftingInputY4Nov">200800</integer>
+    <integer name="GraftingInputY4Oct">201600</integer>
+    <integer name="GraftingInputY4Sep">201600</integer>
+    <integer name="GraftingInputY4Total">13225850</integer>
+    <integer name="GraftingInputY5Apr">201600</integer>
+    <integer name="GraftingInputY5Aug">100800</integer>
+    <integer name="GraftingInputY5Dec">5050500</integer>
+    <integer name="GraftingInputY5Feb">100800</integer>
+    <integer name="GraftingInputY5Jan">18000</integer>
+    <integer name="GraftingInputY5Jul">18000</integer>
+    <integer name="GraftingInputY5Jun">2916500</integer>
+    <integer name="GraftingInputY5Mar">3014850</integer>
+    <integer name="GraftingInputY5May">1200800</integer>
+    <integer name="GraftingInputY5Nov">200800</integer>
+    <integer name="GraftingInputY5Oct">201600</integer>
+    <integer name="GraftingInputY5Sep">201600</integer>
+    <integer name="GraftingInputY5Total">13225850</integer>
+    <integer name="GraftingInputY6Apr">201600</integer>
+    <integer name="GraftingInputY6Aug">100800</integer>
+    <integer name="GraftingInputY6Dec">5050500</integer>
+    <integer name="GraftingInputY6Feb">100800</integer>
+    <integer name="GraftingInputY6Jan">18000</integer>
+    <integer name="GraftingInputY6Jul">18000</integer>
+    <integer name="GraftingInputY6Jun">2916500</integer>
+    <integer name="GraftingInputY6Mar">3014850</integer>
+    <integer name="GraftingInputY6May">1200800</integer>
+    <integer name="GraftingInputY6Nov">200800</integer>
+    <integer name="GraftingInputY6Oct">201600</integer>
+    <integer name="GraftingInputY6Sep">201600</integer>
+    <integer name="GraftingInputY6Total">13225850</integer>
+    <integer name="GraftingInputY7Apr">201600</integer>
+    <integer name="GraftingInputY7Aug">100800</integer>
+    <integer name="GraftingInputY7Dec">5050500</integer>
+    <integer name="GraftingInputY7Feb">100800</integer>
+    <integer name="GraftingInputY7Jan">18000</integer>
+    <integer name="GraftingInputY7Jul">18000</integer>
+    <integer name="GraftingInputY7Jun">2916500</integer>
+    <integer name="GraftingInputY7Mar">3014850</integer>
+    <integer name="GraftingInputY7May">1200800</integer>
+    <integer name="GraftingInputY7Nov">200800</integer>
+    <integer name="GraftingInputY7Oct">201600</integer>
+    <integer name="GraftingInputY7Sep">201600</integer>
+    <integer name="GraftingInputY7Total">13225850</integer>
     <integer name="GraftingLaborY1Apr">675000</integer>
     <integer name="GraftingLaborY1Aug">525000</integer>
     <integer name="GraftingLaborY1Dec">1425000</integer>
@@ -1222,97 +1456,104 @@
     <integer name="GraftingLaborY7Oct">675000</integer>
     <integer name="GraftingLaborY7Sep">675000</integer>
     <integer name="GraftingLaborY7Total">12075000</integer>
+    <integer name="GraftingSeasonY1Total">5775000</integer>
+    <integer name="GraftingSeasonY2Total">4125000</integer>
+    <integer name="GraftingSeasonY3Total">7125000</integer>
+    <integer name="GraftingSeasonY4Total">7125000</integer>
+    <integer name="GraftingSeasonY5Total">7125000</integer>
+    <integer name="GraftingSeasonY6Total">7125000</integer>
+    <integer name="GraftingSeasonY7Total">7125000</integer>
     <integer name="ReplantingInputY1Apr">0</integer>
     <integer name="ReplantingInputY1Aug">860000</integer>
-    <integer name="ReplantingInputY1Dec">5395000</integer>
+    <integer name="ReplantingInputY1Dec">3368250</integer>
     <integer name="ReplantingInputY1Feb">0</integer>
     <integer name="ReplantingInputY1Jan">0</integer>
     <integer name="ReplantingInputY1Jul">0</integer>
-    <integer name="ReplantingInputY1Jun">7990000</integer>
-    <integer name="ReplantingInputY1Mar">5032500</integer>
+    <integer name="ReplantingInputY1Jun">5703500</integer>
+    <integer name="ReplantingInputY1Mar">2813250</integer>
     <integer name="ReplantingInputY1May">0</integer>
     <integer name="ReplantingInputY1Nov">9075000</integer>
     <integer name="ReplantingInputY1Oct">0</integer>
     <integer name="ReplantingInputY1Sep">60000</integer>
-    <integer name="ReplantingInputY1Total">28412500</integer>
-    <integer name="ReplantingInputY2Apr">273000</integer>
-    <integer name="ReplantingInputY2Aug">409500</integer>
+    <integer name="ReplantingInputY1Total">21880000</integer>
+    <integer name="ReplantingInputY2Apr">50400</integer>
+    <integer name="ReplantingInputY2Aug">75600</integer>
     <integer name="ReplantingInputY2Dec">5032500</integer>
-    <integer name="ReplantingInputY2Feb">273000</integer>
-    <integer name="ReplantingInputY2Jan">273000</integer>
-    <integer name="ReplantingInputY2Jul">409500</integer>
-    <integer name="ReplantingInputY2Jun">5594500</integer>
-    <integer name="ReplantingInputY2Mar">5805500</integer>
-    <integer name="ReplantingInputY2May">1273000</integer>
+    <integer name="ReplantingInputY2Feb">50400</integer>
+    <integer name="ReplantingInputY2Jan">50400</integer>
+    <integer name="ReplantingInputY2Jul">75600</integer>
+    <integer name="ReplantingInputY2Jun">2974100</integer>
+    <integer name="ReplantingInputY2Mar">3363650</integer>
+    <integer name="ReplantingInputY2May">1050400</integer>
     <integer name="ReplantingInputY2Nov">0</integer>
     <integer name="ReplantingInputY2Oct">0</integer>
-    <integer name="ReplantingInputY2Sep">409500</integer>
-    <integer name="ReplantingInputY2Total">19753000</integer>
-    <integer name="ReplantingInputY3Apr">546000</integer>
-    <integer name="ReplantingInputY3Aug">341250</integer>
-    <integer name="ReplantingInputY3Dec">5295000</integer>
-    <integer name="ReplantingInputY3Feb">273000</integer>
-    <integer name="ReplantingInputY3Jan">90000</integer>
-    <integer name="ReplantingInputY3Jul">112500</integer>
-    <integer name="ReplantingInputY3Jun">5425000</integer>
-    <integer name="ReplantingInputY3Mar">5578500</integer>
-    <integer name="ReplantingInputY3May">1273000</integer>
-    <integer name="ReplantingInputY3Nov">341250</integer>
-    <integer name="ReplantingInputY3Oct">682500</integer>
-    <integer name="ReplantingInputY3Sep">682500</integer>
-    <integer name="ReplantingInputY3Total">20640500</integer>
-    <integer name="ReplantingInputY4Apr">1092000</integer>
-    <integer name="ReplantingInputY4Aug">546000</integer>
-    <integer name="ReplantingInputY4Dec">5212500</integer>
-    <integer name="ReplantingInputY4Feb">546000</integer>
-    <integer name="ReplantingInputY4Jan">180000</integer>
-    <integer name="ReplantingInputY4Jul">180000</integer>
-    <integer name="ReplantingInputY4Jun">5365000</integer>
-    <integer name="ReplantingInputY4Mar">6124500</integer>
-    <integer name="ReplantingInputY4May">1596000</integer>
-    <integer name="ReplantingInputY4Nov">596000</integer>
-    <integer name="ReplantingInputY4Oct">1092000</integer>
-    <integer name="ReplantingInputY4Sep">1092000</integer>
-    <integer name="ReplantingInputY4Total">23622000</integer>
-    <integer name="ReplantingInputY5Apr">1092000</integer>
-    <integer name="ReplantingInputY5Aug">546000</integer>
-    <integer name="ReplantingInputY5Dec">5212500</integer>
-    <integer name="ReplantingInputY5Feb">546000</integer>
-    <integer name="ReplantingInputY5Jan">180000</integer>
-    <integer name="ReplantingInputY5Jul">180000</integer>
-    <integer name="ReplantingInputY5Jun">5365000</integer>
-    <integer name="ReplantingInputY5Mar">6124500</integer>
-    <integer name="ReplantingInputY5May">1596000</integer>
-    <integer name="ReplantingInputY5Nov">596000</integer>
-    <integer name="ReplantingInputY5Oct">1092000</integer>
-    <integer name="ReplantingInputY5Sep">1092000</integer>
-    <integer name="ReplantingInputY5Total">23622000</integer>
-    <integer name="ReplantingInputY6Apr">1092000</integer>
-    <integer name="ReplantingInputY6Aug">546000</integer>
-    <integer name="ReplantingInputY6Dec">5212500</integer>
-    <integer name="ReplantingInputY6Feb">546000</integer>
-    <integer name="ReplantingInputY6Jan">180000</integer>
-    <integer name="ReplantingInputY6Jul">180000</integer>
-    <integer name="ReplantingInputY6Jun">5365000</integer>
-    <integer name="ReplantingInputY6Mar">6124500</integer>
-    <integer name="ReplantingInputY6May">1596000</integer>
-    <integer name="ReplantingInputY6Nov">596000</integer>
-    <integer name="ReplantingInputY6Oct">1092000</integer>
-    <integer name="ReplantingInputY6Sep">1092000</integer>
-    <integer name="ReplantingInputY6Total">23622000</integer>
-    <integer name="ReplantingInputY7Apr">1092000</integer>
-    <integer name="ReplantingInputY7Aug">546000</integer>
-    <integer name="ReplantingInputY7Dec">5212500</integer>
-    <integer name="ReplantingInputY7Feb">546000</integer>
-    <integer name="ReplantingInputY7Jan">180000</integer>
-    <integer name="ReplantingInputY7Jul">180000</integer>
-    <integer name="ReplantingInputY7Jun">6365000</integer>
-    <integer name="ReplantingInputY7Mar">6124500</integer>
-    <integer name="ReplantingInputY7May">596000</integer>
-    <integer name="ReplantingInputY7Nov">596000</integer>
-    <integer name="ReplantingInputY7Oct">1092000</integer>
-    <integer name="ReplantingInputY7Sep">1092000</integer>
-    <integer name="ReplantingInputY7Total">23622000</integer>
+    <integer name="ReplantingInputY2Sep">75600</integer>
+    <integer name="ReplantingInputY2Total">12798650</integer>
+    <integer name="ReplantingInputY3Apr">100800</integer>
+    <integer name="ReplantingInputY3Aug">63000</integer>
+    <integer name="ReplantingInputY3Dec">5193750</integer>
+    <integer name="ReplantingInputY3Feb">50400</integer>
+    <integer name="ReplantingInputY3Jan">9000</integer>
+    <integer name="ReplantingInputY3Jul">11250</integer>
+    <integer name="ReplantingInputY3Jun">3057500</integer>
+    <integer name="ReplantingInputY3Mar">2914050</integer>
+    <integer name="ReplantingInputY3May">1050400</integer>
+    <integer name="ReplantingInputY3Nov">63000</integer>
+    <integer name="ReplantingInputY3Oct">126000</integer>
+    <integer name="ReplantingInputY3Sep">126000</integer>
+    <integer name="ReplantingInputY3Total">12765150</integer>
+    <integer name="ReplantingInputY4Apr">201600</integer>
+    <integer name="ReplantingInputY4Aug">100800</integer>
+    <integer name="ReplantingInputY4Dec">5050500</integer>
+    <integer name="ReplantingInputY4Feb">100800</integer>
+    <integer name="ReplantingInputY4Jan">18000</integer>
+    <integer name="ReplantingInputY4Jul">18000</integer>
+    <integer name="ReplantingInputY4Jun">2916500</integer>
+    <integer name="ReplantingInputY4Mar">3014850</integer>
+    <integer name="ReplantingInputY4May">1200800</integer>
+    <integer name="ReplantingInputY4Nov">200800</integer>
+    <integer name="ReplantingInputY4Oct">201600</integer>
+    <integer name="ReplantingInputY4Sep">201600</integer>
+    <integer name="ReplantingInputY4Total">13225850</integer>
+    <integer name="ReplantingInputY5Apr">201600</integer>
+    <integer name="ReplantingInputY5Aug">100800</integer>
+    <integer name="ReplantingInputY5Dec">5050500</integer>
+    <integer name="ReplantingInputY5Feb">100800</integer>
+    <integer name="ReplantingInputY5Jan">18000</integer>
+    <integer name="ReplantingInputY5Jul">18000</integer>
+    <integer name="ReplantingInputY5Jun">2916500</integer>
+    <integer name="ReplantingInputY5Mar">3014850</integer>
+    <integer name="ReplantingInputY5May">1200800</integer>
+    <integer name="ReplantingInputY5Nov">200800</integer>
+    <integer name="ReplantingInputY5Oct">201600</integer>
+    <integer name="ReplantingInputY5Sep">201600</integer>
+    <integer name="ReplantingInputY5Total">13225850</integer>
+    <integer name="ReplantingInputY6Apr">201600</integer>
+    <integer name="ReplantingInputY6Aug">100800</integer>
+    <integer name="ReplantingInputY6Dec">5050500</integer>
+    <integer name="ReplantingInputY6Feb">100800</integer>
+    <integer name="ReplantingInputY6Jan">18000</integer>
+    <integer name="ReplantingInputY6Jul">18000</integer>
+    <integer name="ReplantingInputY6Jun">2916500</integer>
+    <integer name="ReplantingInputY6Mar">3014850</integer>
+    <integer name="ReplantingInputY6May">1200800</integer>
+    <integer name="ReplantingInputY6Nov">200800</integer>
+    <integer name="ReplantingInputY6Oct">201600</integer>
+    <integer name="ReplantingInputY6Sep">201600</integer>
+    <integer name="ReplantingInputY6Total">13225850</integer>
+    <integer name="ReplantingInputY7Apr">201600</integer>
+    <integer name="ReplantingInputY7Aug">100800</integer>
+    <integer name="ReplantingInputY7Dec">5050500</integer>
+    <integer name="ReplantingInputY7Feb">100800</integer>
+    <integer name="ReplantingInputY7Jan">18000</integer>
+    <integer name="ReplantingInputY7Jul">18000</integer>
+    <integer name="ReplantingInputY7Jun">3916500</integer>
+    <integer name="ReplantingInputY7Mar">3014850</integer>
+    <integer name="ReplantingInputY7May">200800</integer>
+    <integer name="ReplantingInputY7Nov">200800</integer>
+    <integer name="ReplantingInputY7Oct">201600</integer>
+    <integer name="ReplantingInputY7Sep">201600</integer>
+    <integer name="ReplantingInputY7Total">13225850</integer>
     <integer name="ReplantingLaborY1Apr">150000</integer>
     <integer name="ReplantingLaborY1Aug">1575000</integer>
     <integer name="ReplantingLaborY1Dec">2025000</integer>
@@ -1404,6 +1645,13 @@
     <integer name="ReplantingLaborY7Oct">675000</integer>
     <integer name="ReplantingLaborY7Sep">675000</integer>
     <integer name="ReplantingLaborY7Total">12075000</integer>
+    <integer name="ReplantingSeasonY1Total">4950000</integer>
+    <integer name="ReplantingSeasonY2Total">2550000</integer>
+    <integer name="ReplantingSeasonY3Total">3900000</integer>
+    <integer name="ReplantingSeasonY4Total">6675000</integer>
+    <integer name="ReplantingSeasonY5Total">7125000</integer>
+    <integer name="ReplantingSeasonY6Total">7125000</integer>
+    <integer name="ReplantingSeasonY7Total">7125000</integer>
     <integer name="difDaysY1Apr">0</integer>
     <integer name="difDaysY1Aug">0</integer>
     <integer name="difDaysY1Dec">0</integer>
@@ -1438,11 +1686,11 @@
     <integer name="difDaysY3Jul">0</integer>
     <integer name="difDaysY3Jun">0</integer>
     <integer name="difDaysY3Mar">0</integer>
-    <integer name="difDaysY3May">9</integer>
-    <integer name="difDaysY3Nov">9</integer>
+    <integer name="difDaysY3May">3</integer>
+    <integer name="difDaysY3Nov">3</integer>
     <integer name="difDaysY3Oct">0</integer>
     <integer name="difDaysY3Sep">0</integer>
-    <integer name="difDaysY3Total">18</integer>
+    <integer name="difDaysY3Total">6</integer>
     <integer name="difDaysY4Apr">0</integer>
     <integer name="difDaysY4Aug">0</integer>
     <integer name="difDaysY4Dec">0</integer>
@@ -1503,11 +1751,11 @@
     <integer name="difInputY1Jul">0</integer>
     <integer name="difInputY1Jun">0</integer>
     <integer name="difInputY1Mar">0</integer>
-    <integer name="difInputY1May">375000</integer>
-    <integer name="difInputY1Nov">375000</integer>
+    <integer name="difInputY1May">925000</integer>
+    <integer name="difInputY1Nov">1925000</integer>
     <integer name="difInputY1Oct">0</integer>
     <integer name="difInputY1Sep">0</integer>
-    <integer name="difInputY1Total">750000</integer>
+    <integer name="difInputY1Total">2850000</integer>
     <integer name="difInputY2Apr">0</integer>
     <integer name="difInputY2Aug">0</integer>
     <integer name="difInputY2Dec">0</integer>
@@ -1516,11 +1764,11 @@
     <integer name="difInputY2Jul">0</integer>
     <integer name="difInputY2Jun">0</integer>
     <integer name="difInputY2Mar">0</integer>
-    <integer name="difInputY2May">375000</integer>
-    <integer name="difInputY2Nov">375000</integer>
+    <integer name="difInputY2May">925000</integer>
+    <integer name="difInputY2Nov">1925000</integer>
     <integer name="difInputY2Oct">0</integer>
     <integer name="difInputY2Sep">0</integer>
-    <integer name="difInputY2Total">750000</integer>
+    <integer name="difInputY2Total">2850000</integer>
     <integer name="difInputY3Apr">0</integer>
     <integer name="difInputY3Aug">0</integer>
     <integer name="difInputY3Dec">0</integer>
@@ -1529,11 +1777,11 @@
     <integer name="difInputY3Jul">0</integer>
     <integer name="difInputY3Jun">0</integer>
     <integer name="difInputY3Mar">0</integer>
-    <integer name="difInputY3May">675000</integer>
-    <integer name="difInputY3Nov">675000</integer>
+    <integer name="difInputY3May">462500</integer>
+    <integer name="difInputY3Nov">1462500</integer>
     <integer name="difInputY3Oct">0</integer>
     <integer name="difInputY3Sep">0</integer>
-    <integer name="difInputY3Total">1350000</integer>
+    <integer name="difInputY3Total">1925000</integer>
     <integer name="difInputY4Apr">0</integer>
     <integer name="difInputY4Aug">0</integer>
     <integer name="difInputY4Dec">0</integer>
@@ -1594,11 +1842,11 @@
     <integer name="difLaborY1Jul">0</integer>
     <integer name="difLaborY1Jun">0</integer>
     <integer name="difLaborY1Mar">0</integer>
-    <integer name="difLaborY1May">925000</integer>
-    <integer name="difLaborY1Nov">1925000</integer>
+    <integer name="difLaborY1May">375000</integer>
+    <integer name="difLaborY1Nov">375000</integer>
     <integer name="difLaborY1Oct">0</integer>
     <integer name="difLaborY1Sep">0</integer>
-    <integer name="difLaborY1Total">2850000</integer>
+    <integer name="difLaborY1Total">750000</integer>
     <integer name="difLaborY2Apr">0</integer>
     <integer name="difLaborY2Aug">0</integer>
     <integer name="difLaborY2Dec">0</integer>
@@ -1607,11 +1855,11 @@
     <integer name="difLaborY2Jul">0</integer>
     <integer name="difLaborY2Jun">0</integer>
     <integer name="difLaborY2Mar">0</integer>
-    <integer name="difLaborY2May">925000</integer>
-    <integer name="difLaborY2Nov">1925000</integer>
+    <integer name="difLaborY2May">375000</integer>
+    <integer name="difLaborY2Nov">375000</integer>
     <integer name="difLaborY2Oct">0</integer>
     <integer name="difLaborY2Sep">0</integer>
-    <integer name="difLaborY2Total">2850000</integer>
+    <integer name="difLaborY2Total">750000</integer>
     <integer name="difLaborY3Apr">0</integer>
     <integer name="difLaborY3Aug">0</integer>
     <integer name="difLaborY3Dec">0</integer>
@@ -1620,11 +1868,11 @@
     <integer name="difLaborY3Jul">0</integer>
     <integer name="difLaborY3Jun">0</integer>
     <integer name="difLaborY3Mar">0</integer>
-    <integer name="difLaborY3May">0</integer>
-    <integer name="difLaborY3Nov">0</integer>
+    <integer name="difLaborY3May">225000</integer>
+    <integer name="difLaborY3Nov">225000</integer>
     <integer name="difLaborY3Oct">0</integer>
     <integer name="difLaborY3Sep">0</integer>
-    <integer name="difLaborY3Total">0</integer>
+    <integer name="difLaborY3Total">450000</integer>
     <integer name="difLaborY4Apr">0</integer>
     <integer name="difLaborY4Aug">0</integer>
     <integer name="difLaborY4Dec">0</integer>
@@ -1640,7 +1888,7 @@
     <integer name="difLaborY4Total">0</integer>
     <integer name="difLaborY5Apr">0</integer>
     <integer name="difLaborY5Aug">0</integer>
-    <integer name="difLaborY5Dec">-85250</integer>
+    <integer name="difLaborY5Dec">0</integer>
     <integer name="difLaborY5Feb">0</integer>
     <integer name="difLaborY5Jan">0</integer>
     <integer name="difLaborY5Jul">0</integer>
@@ -1649,8 +1897,8 @@
     <integer name="difLaborY5May">0</integer>
     <integer name="difLaborY5Nov">0</integer>
     <integer name="difLaborY5Oct">0</integer>
-    <integer name="difLaborY5Sep">-2813250</integer>
-    <integer name="difLaborY5Total">-2898500</integer>
+    <integer name="difLaborY5Sep">0</integer>
+    <integer name="difLaborY5Total">0</integer>
     <integer name="difLaborY6Apr">0</integer>
     <integer name="difLaborY6Aug">0</integer>
     <integer name="difLaborY6Dec">0</integer>
@@ -1695,6 +1943,7 @@
     <integer name="gapY1May">23</integer>
     <integer name="gapY1Nov">21</integer>
     <integer name="gapY1Oct">9</integer>
+    <integer name="gapY1Season">95</integer>
     <integer name="gapY1Sep">9</integer>
     <integer name="gapY1Total">161</integer>
     <integer name="gapY2Apr">13</integer>
@@ -1708,6 +1957,7 @@
     <integer name="gapY2May">23</integer>
     <integer name="gapY2Nov">21</integer>
     <integer name="gapY2Oct">9</integer>
+    <integer name="gapY2Season">95</integer>
     <integer name="gapY2Sep">9</integer>
     <integer name="gapY2Total">161</integer>
     <integer name="gapY3Apr">13</integer>
@@ -1721,6 +1971,7 @@
     <integer name="gapY3May">23</integer>
     <integer name="gapY3Nov">21</integer>
     <integer name="gapY3Oct">9</integer>
+    <integer name="gapY3Season">95</integer>
     <integer name="gapY3Sep">9</integer>
     <integer name="gapY3Total">161</integer>
     <integer name="gapY4Apr">13</integer>
@@ -1734,6 +1985,7 @@
     <integer name="gapY4May">23</integer>
     <integer name="gapY4Nov">21</integer>
     <integer name="gapY4Oct">9</integer>
+    <integer name="gapY4Season">95</integer>
     <integer name="gapY4Sep">9</integer>
     <integer name="gapY4Total">161</integer>
     <integer name="gapY5Apr">13</integer>
@@ -1747,6 +1999,7 @@
     <integer name="gapY5May">23</integer>
     <integer name="gapY5Nov">21</integer>
     <integer name="gapY5Oct">9</integer>
+    <integer name="gapY5Season">95</integer>
     <integer name="gapY5Sep">9</integer>
     <integer name="gapY5Total">161</integer>
     <integer name="gapY6Apr">13</integer>
@@ -1760,6 +2013,7 @@
     <integer name="gapY6May">23</integer>
     <integer name="gapY6Nov">21</integer>
     <integer name="gapY6Oct">9</integer>
+    <integer name="gapY6Season">95</integer>
     <integer name="gapY6Sep">9</integer>
     <integer name="gapY6Total">161</integer>
     <integer name="gapY7Apr">13</integer>
@@ -1773,6 +2027,7 @@
     <integer name="gapY7May">23</integer>
     <integer name="gapY7Nov">21</integer>
     <integer name="gapY7Oct">9</integer>
+    <integer name="gapY7Season">95</integer>
     <integer name="gapY7Sep">9</integer>
     <integer name="gapY7Total">161</integer>
     <integer name="gapsY1">2000</integer>
@@ -1794,6 +2049,7 @@
     <integer name="graftY1May">20</integer>
     <integer name="graftY1Nov">12</integer>
     <integer name="graftY1Oct">7</integer>
+    <integer name="graftY1Season">77</integer>
     <integer name="graftY1Sep">7</integer>
     <integer name="graftY1Total">160</integer>
     <integer name="graftY2Apr">7</integer>
@@ -1807,6 +2063,7 @@
     <integer name="graftY2May">13</integer>
     <integer name="graftY2Nov">13</integer>
     <integer name="graftY2Oct">7</integer>
+    <integer name="graftY2Season">55</integer>
     <integer name="graftY2Sep">7</integer>
     <integer name="graftY2Total">96</integer>
     <integer name="graftY3Apr">13</integer>
@@ -1820,6 +2077,7 @@
     <integer name="graftY3May">23</integer>
     <integer name="graftY3Nov">21</integer>
     <integer name="graftY3Oct">9</integer>
+    <integer name="graftY3Season">95</integer>
     <integer name="graftY3Sep">9</integer>
     <integer name="graftY3Total">161</integer>
     <integer name="graftY4Apr">13</integer>
@@ -1833,6 +2091,7 @@
     <integer name="graftY4May">23</integer>
     <integer name="graftY4Nov">21</integer>
     <integer name="graftY4Oct">9</integer>
+    <integer name="graftY4Season">95</integer>
     <integer name="graftY4Sep">9</integer>
     <integer name="graftY4Total">161</integer>
     <integer name="graftY5Apr">13</integer>
@@ -1846,6 +2105,7 @@
     <integer name="graftY5May">23</integer>
     <integer name="graftY5Nov">21</integer>
     <integer name="graftY5Oct">9</integer>
+    <integer name="graftY5Season">95</integer>
     <integer name="graftY5Sep">9</integer>
     <integer name="graftY5Total">161</integer>
     <integer name="graftY6Apr">13</integer>
@@ -1859,6 +2119,7 @@
     <integer name="graftY6May">23</integer>
     <integer name="graftY6Nov">21</integer>
     <integer name="graftY6Oct">9</integer>
+    <integer name="graftY6Season">95</integer>
     <integer name="graftY6Sep">9</integer>
     <integer name="graftY6Total">161</integer>
     <integer name="graftY7Apr">13</integer>
@@ -1872,6 +2133,7 @@
     <integer name="graftY7May">23</integer>
     <integer name="graftY7Nov">21</integer>
     <integer name="graftY7Oct">9</integer>
+    <integer name="graftY7Season">95</integer>
     <integer name="graftY7Sep">9</integer>
     <integer name="graftY7Total">161</integer>
     <integer name="graftingY1">450</integer>
@@ -1892,6 +2154,7 @@
     <integer name="replantY1May">2</integer>
     <integer name="replantY1Nov">5</integer>
     <integer name="replantY1Oct">40</integer>
+    <integer name="replantY1Season">66</integer>
     <integer name="replantY1Sep">30</integer>
     <integer name="replantY1Total">162</integer>
     <integer name="replantY2Apr">3</integer>
@@ -1905,6 +2168,7 @@
     <integer name="replantY2May">6</integer>
     <integer name="replantY2Nov">6</integer>
     <integer name="replantY2Oct">9</integer>
+    <integer name="replantY2Season">34</integer>
     <integer name="replantY2Sep">6</integer>
     <integer name="replantY2Total">85</integer>
     <integer name="replantY3Apr">8</integer>
@@ -1918,6 +2182,7 @@
     <integer name="replantY3May">11</integer>
     <integer name="replantY3Nov">12</integer>
     <integer name="replantY3Oct">7</integer>
+    <integer name="replantY3Season">52</integer>
     <integer name="replantY3Sep">8</integer>
     <integer name="replantY3Total">93</integer>
     <integer name="replantY4Apr">11</integer>
@@ -1931,6 +2196,7 @@
     <integer name="replantY4May">21</integer>
     <integer name="replantY4Nov">21</integer>
     <integer name="replantY4Oct">9</integer>
+    <integer name="replantY4Season">89</integer>
     <integer name="replantY4Sep">9</integer>
     <integer name="replantY4Total">150</integer>
     <integer name="replantY5Apr">13</integer>
@@ -1944,6 +2210,7 @@
     <integer name="replantY5May">23</integer>
     <integer name="replantY5Nov">21</integer>
     <integer name="replantY5Oct">9</integer>
+    <integer name="replantY5Season">95</integer>
     <integer name="replantY5Sep">9</integer>
     <integer name="replantY5Total">161</integer>
     <integer name="replantY6Apr">13</integer>
@@ -1957,6 +2224,7 @@
     <integer name="replantY6May">23</integer>
     <integer name="replantY6Nov">21</integer>
     <integer name="replantY6Oct">9</integer>
+    <integer name="replantY6Season">95</integer>
     <integer name="replantY6Sep">9</integer>
     <integer name="replantY6Total">161</integer>
     <integer name="replantY7Apr">13</integer>
@@ -1970,6 +2238,7 @@
     <integer name="replantY7May">23</integer>
     <integer name="replantY7Nov">21</integer>
     <integer name="replantY7Oct">9</integer>
+    <integer name="replantY7Season">95</integer>
     <integer name="replantY7Sep">9</integer>
     <integer name="replantY7Total">161</integer>
     <integer name="replantingY1">450</integer>
@@ -1981,7 +2250,7 @@
     <integer name="replantingY7">2000</integer>
     <integer name="tooltip_default_arrow_alignment">3</integer>
     <integer name="tooltip_default_arrow_location">1</integer>
-    <string name="accountType">C17. Account Type</string>
+    <string name="accountType">C16. Account Type</string>
     <string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
     <string name="action_add">Add Farmer</string>
     <string name="action_refresh">Synchronize</string>
@@ -1989,11 +2258,11 @@
     <string name="additionalCrops">C20. Additional Crops:</string>
     <string name="additionalIntervention">ADDITIONAL INTERVENTION</string>
     <string name="agree">Agreed on recommendations:</string>
-    <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
+    <string name="amountOfLoan">C14. What is the total amount of the loan outstanding you give?</string>
     <string name="androidPushNotificationClientId" translatable="false"/>
     <string name="ao">ADOPTION OBSERVATIONS</string>
     <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
-    <string name="api_version">v36.0</string>
+    <string name="api_version" translatable="false">v36.0</string>
     <string name="app_name"><b>FDP</b></string>
     <string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
     <string name="apr">April</string>
@@ -2004,19 +2273,19 @@
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="autosave">Autosaved</string>
-    <string name="averageCocoaPrice">29. Average Farm gate cocoa price per Kg:</string>
+    <string name="averageCocoaPrice">28. Average Farm gate dry bean cocoa price per Kg:</string>
     <string name="back">Back</string>
-    <string name="bankAccount">27. Have bank account?</string>
+    <string name="bankAccount">26. Have bank account?</string>
     <string name="birthday">3. Farmer Birthday Year:</string>
     <string name="calcAO">Calculate</string>
     <string name="cancel">No</string>
     <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
-    <string name="changeR">Change for Grafting</string>
+    <string name="changeR">Change for Replanting</string>
     <string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
     <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
-    <string name="cocoaArea">36. Total land under cocoa Size (Ha):</string>
-    <string name="cocoaTrees">46. Distance between cocoa trees:</string>
+    <string name="cocoaArea">36. Total land under cocoa size (Ha):</string>
+    <string name="cocoaTrees">45. Distance between cocoa trees:</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
     <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
@@ -2049,41 +2318,41 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="costInvest">Cost of Maintenance / Investment:</string>
     <string name="costLabor">Cost of labor:</string>
-    <string name="cultivationArea">35. Total land under cultivation Size (Ha):</string>
+    <string name="cultivationArea">35. Total land under cultivation size (Ha):</string>
     <string name="daysHire">C21. How many labor days hire:</string>
-    <string name="debilitationDisease">49. Debilitating Disease:</string>
+    <string name="debilitationDisease">48. Debilitating Disease:</string>
     <string name="dec">December</string>
     <string name="delete">Delete</string>
     <string name="delete_title">Are you sure?</string>
-    <string name="dependEconomically">16. Number of family members depend on family income:</string>
+    <string name="dependEconomically">16. Number of household members depend on family income:</string>
     <string name="drainage">Drainage</string>
-    <string name="drainageNeed">60. Drainage need:</string>
-    <string name="educationExpenses">26. Expected education expenses:</string>
+    <string name="drainageNeed">59. Drainage need:</string>
+    <string name="educationExpenses">25. Expected education expenses:</string>
     <string name="educational_level">5. Educational Level:</string>
     <string name="empty" translatable="false"> </string>
-    <string name="estimatedProduction">42. Estimated production:</string>
-    <string name="expensesCocoaLY">30. Total Expenses on cocoa last year (Year means past two seasons, mid and main crop):</string>
+    <string name="estimatedProduction">42. Estimated production (Kg):</string>
+    <string name="expensesCocoaLY">29. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
     <string name="extraSoil">Extra Soil Management</string>
     <string name="familyLess">The number of family members can not be less than the number of children</string>
-    <string name="familyMembers">13. Number of Family members living together including the farmer:</string>
-    <string name="familyPaidWork">18. Family Members contributed with money to the household:</string>
+    <string name="familyMembers">13. Number of people living together including the farmer:</string>
+    <string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string>
     <string name="familyPhoto">Take a Family Photo</string>
     <string name="farmAge">32. Year of farm establishment:</string>
-    <string name="farmArea">34. Total land ownership or availability Size (Ha):</string>
+    <string name="farmArea">34. Total land ownership or availability size (Ha):</string>
     <string name="farmCertifications">33. Farm Certifications:</string>
     <string name="farmCondition">Farm Condition:</string>
     <string name="farmerGroup">14. Farmer group</string>
-    <string name="farmerProfile">FARMER PROFILE</string>
-    <string name="farmer_code">2. Farmer Code:</string>
+    <string name="farmerProfile">FARMING FAMILY PROFILE</string>
+    <string name="farmer_code">2. Farmer or Farm Code:</string>
     <string name="farmingProfile">FARMING ECONOMIC PROFILE</string>
     <string name="fdpActivityTitle">Farm Development Plan</string>
     <string name="feb">February</string>
-    <string name="fertilizerApplication">58. Fertilizer Application:</string>
-    <string name="fertilizerFormulation">57. Fertilizer Formulation:</string>
+    <string name="fertilizerApplication">57. Fertilizer Application:</string>
+    <string name="fertilizerFormulation">56. Fertilizer Formulation:</string>
     <string name="filling">Filling in</string>
-    <string name="fillingOption">61. Filling in option:</string>
+    <string name="fillingOption">60. Filling in or Thinning out option:</string>
     <string name="finish">Finish</string>
-    <string name="fmWorkFarm">15. Family members work on farm:</string>
+    <string name="fmWorkFarm">15. Family members or other people work on farm without paid wages:</string>
     <string name="foundsNeeded">Investment in FDP:</string>
     <string name="full_name">1. Farmer Name:</string>
     <string name="gapLb">GAPS:</string>
@@ -2091,27 +2360,29 @@
     <string name="gender">4. Gender:</string>
     <string name="geneticLb">Genetics of plant material:</string>
     <string name="getLocation">Get Location</string>
-    <string name="giveLoan">21. Have you given someone a loan over 5M IDR?</string>
+    <string name="giveLoan">20. Has the family given someone a loan over 5M IDR?</string>
     <string name="gps">7. House GPS:</string>
     <string name="graft">Graft</string>
     <string name="greater0" translatable="false"/>
-    <string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
-    <string name="harvesting">53. Harvesting:</string>
-    <string name="haveCredit">20. Have you taken a loan over 5M IDR that you have to pay back?</string>
-    <string name="haveOtherCrops">19. Have Additional Crops:</string>
+    <string name="grossCocoaLY">30. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
+    <string name="harvesting">52. Harvesting:</string>
+    <string name="haveCredit">19. Has the family taken a loan over 5M IDR that you have to pay back?</string>
+    <string name="haveOtherCrops">31. Have Additional Crops:</string>
     <string name="haveSpouse">11. Have spouse:</string>
     <string name="hireLabor">38. Hire labor:</string>
-    <string name="householdSavings">22. Household Savings:</string>
-    <string name="incomeOtherCrops">C10. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
+    <string name="householdSavings">21. Household Savings:</string>
+    <string name="howLong">How long ago was made renovation?</string>
+    <string name="incomeOtherCrops">C19. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="inspect_db_button" translatable="false">Inspect DB</string>
     <string name="internalInspection">Internal Inspection</string>
+    <string name="investmentLabel">Planned investments</string>
     <string name="jan">January</string>
     <string name="jul">July</string>
     <string name="jun">June</string>
     <string name="labor">Labor</string>
     <string name="lime">Lime</string>
-    <string name="limeNeed">59. Lime need:</string>
-    <string name="livingExpenses">23. Annual living expenses:</string>
+    <string name="limeNeed">58. Lime need:</string>
+    <string name="livingExpenses">22. Annual living expenses:</string>
     <string name="logout_button">Logout</string>
     <string name="logout_title">Log out?</string>
     <string name="main_activity_title">Farmer List</string>
@@ -2119,8 +2390,9 @@
     <string name="mapPhoto">Take a photo of the farm map</string>
     <string name="mar">March</string>
     <string name="may">May</string>
-    <string name="mobileMoney">C18. Farmer account have Mobile money option?</string>
-    <string name="moneyBack">C16. How much they pay back?</string>
+    <string name="mobileMoney">C17. Farmer account have Mobile money option?</string>
+    <string name="moneyBack">C15. How much have they back?</string>
+    <string name="monitoringLabel" translatable="false">Monitoring</string>
     <string name="netFamily">Net family income:</string>
     <string name="netFarming">Total farming income:</string>
     <string name="netOther">Net income from all other sources:</string>
@@ -2131,10 +2403,10 @@
     <string name="numberChildren">12. Total number of children:</string>
     <string name="numberPlots">39. Number of plots:</string>
     <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
-    <string name="oauth_display_type">touch</string>
+    <string name="oauth_display_type" translatable="false">touch</string>
     <string name="oct">October</string>
-    <string name="organicMatter">56. Organic Matter:</string>
-    <string name="otherExpenses">24. Annual other expenses:</string>
+    <string name="organicMatter">55. Organic Matter:</string>
+    <string name="otherExpenses">23. Annual other expenses:</string>
     <string name="p1">Clearing</string>
     <string name="p10">Grafting work/ take off the plastic</string>
     <string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string>
@@ -2159,14 +2431,14 @@
     <string name="p7">Shade Planting</string>
     <string name="p8">Pruning/Sanitation</string>
     <string name="p9">Fertilizer</string>
-    <string name="payForCredit">C14. How much do you pay back?</string>
-    <string name="payOftenForCredit">C13. How often do you pay back?</string>
-    <string name="pestDiseaseSanitation">51. Pest and Disease and Sanitation:</string>
-    <string name="ph">44. Soil PH:</string>
+    <string name="payForCredit">C13. How much do you pay back per payment?</string>
+    <string name="payOftenForCredit">C12. How often do you pay back?</string>
+    <string name="pestDiseaseSanitation">50. Pest and Disease and Sanitation:</string>
+    <string name="ph">43. Soil PH:</string>
     <string name="phone">9. Phone Number:</string>
     <string name="photoSuccess">Photo taken with success</string>
-    <string name="plannedInvestments">25. Planned investments:</string>
-    <string name="plantingMaterial">45. Planting Material:</string>
+    <string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string>
+    <string name="plantingMaterial">44. Planting Material:</string>
     <string name="plot1" translatable="false">Plot 1</string>
     <string name="plot10" translatable="false">Plot 10</string>
     <string name="plot2" translatable="false">Plot 2</string>
@@ -2178,111 +2450,115 @@
     <string name="plot8" translatable="false">Plot 8</string>
     <string name="plot9" translatable="false">Plot 9</string>
     <string name="plotActivityTitle">Plot information</string>
-    <string name="plotAge">47. Tree Age:</string>
+    <string name="plotAge">46. Tree Age:</string>
     <string name="plotArea">41. Plot Size (Ha):</string>
     <string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="plotGPS">40. Plot GPS:</string>
-    <string name="plotHireLabor">62. Hire labor:</string>
+    <string name="plotHireLabor">61. Hire labor:</string>
     <string name="plotIncome">Plot Income:</string>
     <string name="plotInformation">PLOT INFORMATION</string>
     <string name="plotPL">Plot P&amp;L:</string>
     <string name="postalAddress">8. Postal Address:</string>
-    <string name="productionCocoaLY">28. Total Kg Production of cocoa in crop year or calendar year:</string>
+    <string name="productionCocoaLY">27. Total Kg Production of dry cocoa beans in crop year or calendar year:</string>
     <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
+    <string name="productionLess">Your estimated production is less than that of the previous year</string>
     <string name="productiveProfile">PRODUCTIVE PROFILE</string>
     <string name="profitOrLost">Profit or Loss</string>
-    <string name="pruning">50. Pruning:</string>
+    <string name="pruning">49. Pruning:</string>
+    <string name="reason">Reason for renovation:</string>
     <string name="reasonNotAgree">Comments:</string>
-    <string name="receivesFarmPayment">17. Farmer receives payment for other work:</string>
+    <string name="receivesFarmPayment">17. Farmer or spouse receives payment for other work:</string>
     <string name="remoteAccessConsumerKey" translatable="false">3MVG9ZL0ppGP5UrCq5vTCnQc8VY51CHIKeWfb4RVZT1G4.da.4Pj.cqIcmqJqCyrRg7gyVoxBVIwpci32xFWq</string>
-    <string name="renovationArea">37. Total Renovation Size (Ha):</string>
+    <string name="renovated">This plot was recently renovated?</string>
+    <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
+    <string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string>
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>
     <string name="saved">Save successful!</string>
+    <string name="savingsLabel">Household Savings</string>
     <string name="sep">September</string>
-    <string name="sf__access_token_revoked">Your access token has been revoked by the administrator. You will now be logged out.</string>
-    <string name="sf__add_new_account">Add New Account</string>
-    <string name="sf__app_service_host_labels_description">Used to specify login host labels for the application.</string>
-    <string name="sf__app_service_hosts_description">Used to specify login hosts for the application.</string>
-    <string name="sf__auth_login_production">Production</string>
-    <string name="sf__auth_login_sandbox">Sandbox</string>
-    <string name="sf__clear_cookies">Clear Cookies</string>
-    <string name="sf__custom_url_button">Add Connection</string>
-    <string name="sf__fingerprint_cancel">Use Passcode</string>
-    <string name="sf__fingerprint_description">Confirm fingerprint to continue</string>
-    <string name="sf__fingerprint_failed">Fingerprint Authentication Failed</string>
-    <string name="sf__fingerprint_hint">Touch sensor</string>
-    <string name="sf__fingerprint_success">Success</string>
-    <string name="sf__generic_authentication_error">Authentication error. Please try again.</string>
-    <string name="sf__generic_authentication_error_title">Error</string>
-    <string name="sf__generic_error">An error has occurred %s\nPlease try again</string>
-    <string name="sf__inspector_clear_button">Clear</string>
-    <string name="sf__inspector_colon_button">:</string>
-    <string name="sf__inspector_from_button">FROM</string>
-    <string name="sf__inspector_indices_button">Indices</string>
-    <string name="sf__inspector_indices_query">select soupName, path, columnType from soup_index_map</string>
-    <string name="sf__inspector_left_bracket_button">{</string>
-    <string name="sf__inspector_no_query_specified">No query specified</string>
-    <string name="sf__inspector_no_rows_returned">No rows returned</string>
-    <string name="sf__inspector_pageindex_hint">Page index (default: 0)</string>
-    <string name="sf__inspector_pagesize_hint">Page size (default: 10)</string>
-    <string name="sf__inspector_querytext_hint">Type your query here</string>
-    <string name="sf__inspector_right_bracket_button">}</string>
-    <string name="sf__inspector_run_button">Run</string>
-    <string name="sf__inspector_select_button">SELECT</string>
-    <string name="sf__inspector_soups_button">Soups</string>
-    <string name="sf__inspector_soups_query">select soupName from soup_names</string>
-    <string name="sf__inspector_where_button">WHERE</string>
-    <string name="sf__invalid_server_url">Please type in a valid URL starting with https://</string>
-    <string name="sf__login_title">Login</string>
-    <string name="sf__manage_space_confirmation">Clearing user data will log the current user out. Are you sure you want to perform this action?</string>
-    <string name="sf__managed_app_callback_url_description">Used to specify OAuth callback URL for the application.</string>
-    <string name="sf__managed_app_cert_alias_description">Used to specify the certificate alias required for the application.</string>
-    <string name="sf__managed_app_error">Authentication only allowed from managed device.</string>
-    <string name="sf__managed_app_oauth_id_description">Used to specify OAuth consumer key for the application.</string>
-    <string name="sf__passcode_change_instructions">For increased security, your admininstrator requires you to change your passcode.</string>
-    <string name="sf__passcode_confirm_instructions">Confirm your mobile passcode for %s</string>
-    <string name="sf__passcode_confirm_title">Re-enter your %s passcode</string>
-    <string name="sf__passcode_create_instructions">For increased security, please create a passcode that you will use to access %s when the session has timed out due to inactivity.</string>
-    <string name="sf__passcode_create_title">Create %s passcode</string>
-    <string name="sf__passcode_enter_instructions">Enter your mobile passcode for %s</string>
-    <string name="sf__passcode_enter_title">Enter %s Passcode</string>
-    <string name="sf__passcode_final">Final passcode attempt</string>
-    <string name="sf__passcode_forgot_string">&lt;u>Forgot Passcode?&lt;/u></string>
-    <string name="sf__passcode_logout_confirmation">Are you sure you want to logout?</string>
-    <string name="sf__passcode_logout_no">No</string>
-    <string name="sf__passcode_logout_yes">Yes</string>
-    <string name="sf__passcode_min_length">The passcode must be at least %d characters long</string>
-    <string name="sf__passcode_try_again">The passcode you entered is incorrect. Please try again. You have %d attempts remaining.</string>
-    <string name="sf__passcodes_dont_match">Passcodes don\'t match!</string>
-    <string name="sf__pick_server">Change Server</string>
-    <string name="sf__reload">Reload</string>
-    <string name="sf__require_cert_auth_description">Used to specify if certificate based authentication is required for the application.</string>
-    <string name="sf__server_picker_title">Pick Login Server</string>
-    <string name="sf__server_url_add_title">Add Connection</string>
-    <string name="sf__server_url_default_apply">Apply</string>
-    <string name="sf__server_url_default_cancel">Cancel</string>
-    <string name="sf__server_url_default_custom_label">Name</string>
-    <string name="sf__server_url_default_custom_url">URL</string>
-    <string name="sf__server_url_edit_title">Edit Connection</string>
-    <string name="sf__server_url_reset">Reset</string>
-    <string name="sf__ssl_error">SSL Error: %s.</string>
-    <string name="sf__ssl_expired">Expired Certificate</string>
-    <string name="sf__ssl_id_mismatch">Hostname Mismatch</string>
-    <string name="sf__ssl_not_yet_valid">Certificate Not Yet Valid</string>
-    <string name="sf__ssl_unknown_error">Unknown Error</string>
-    <string name="sf__ssl_untrusted">Untrusted Certificate Authority</string>
-    <string name="sf__switch_account">Switch Account</string>
-    <string name="shadeManagement">54. Shade Management:</string>
-    <string name="shadeTrees">43. Number of Shade trees:</string>
+    <string name="sf__access_token_revoked" translatable="false">Your access token has been revoked by the administrator. You will now be logged out.</string>
+    <string name="sf__add_new_account" translatable="false">Add New Account</string>
+    <string name="sf__app_service_host_labels_description" translatable="false">Used to specify login host labels for the application.</string>
+    <string name="sf__app_service_hosts_description" translatable="false">Used to specify login hosts for the application.</string>
+    <string name="sf__auth_login_production" translatable="false">Production</string>
+    <string name="sf__auth_login_sandbox" translatable="false">Sandbox</string>
+    <string name="sf__clear_cookies" translatable="false">Clear Cookies</string>
+    <string name="sf__custom_url_button" translatable="false">Add Connection</string>
+    <string name="sf__fingerprint_cancel" translatable="false">Use Passcode</string>
+    <string name="sf__fingerprint_description" translatable="false">Confirm fingerprint to continue</string>
+    <string name="sf__fingerprint_failed" translatable="false">Fingerprint Authentication Failed</string>
+    <string name="sf__fingerprint_hint" translatable="false">Touch sensor</string>
+    <string name="sf__fingerprint_success" translatable="false">Success</string>
+    <string name="sf__generic_authentication_error" translatable="false">Authentication error. Please try again.</string>
+    <string name="sf__generic_authentication_error_title" translatable="false">Error</string>
+    <string name="sf__generic_error" translatable="false">An error has occurred %s\nPlease try again</string>
+    <string name="sf__inspector_clear_button" translatable="false">Clear</string>
+    <string name="sf__inspector_colon_button" translatable="false">:</string>
+    <string name="sf__inspector_from_button" translatable="false">FROM</string>
+    <string name="sf__inspector_indices_button" translatable="false">Indices</string>
+    <string name="sf__inspector_indices_query" translatable="false">select soupName, path, columnType from soup_index_map</string>
+    <string name="sf__inspector_left_bracket_button" translatable="false">{</string>
+    <string name="sf__inspector_no_query_specified" translatable="false">No query specified</string>
+    <string name="sf__inspector_no_rows_returned" translatable="false">No rows returned</string>
+    <string name="sf__inspector_pageindex_hint" translatable="false">Page index (default: 0)</string>
+    <string name="sf__inspector_pagesize_hint" translatable="false">Page size (default: 10)</string>
+    <string name="sf__inspector_querytext_hint" translatable="false">Type your query here</string>
+    <string name="sf__inspector_right_bracket_button" translatable="false">}</string>
+    <string name="sf__inspector_run_button" translatable="false">Run</string>
+    <string name="sf__inspector_select_button" translatable="false">SELECT</string>
+    <string name="sf__inspector_soups_button" translatable="false">Soups</string>
+    <string name="sf__inspector_soups_query" translatable="false">select soupName from soup_names</string>
+    <string name="sf__inspector_where_button" translatable="false">WHERE</string>
+    <string name="sf__invalid_server_url" translatable="false">Please type in a valid URL starting with https://</string>
+    <string name="sf__login_title" translatable="false">Login</string>
+    <string name="sf__manage_space_confirmation" translatable="false">Clearing user data will log the current user out. Are you sure you want to perform this action?</string>
+    <string name="sf__managed_app_callback_url_description" translatable="false">Used to specify OAuth callback URL for the application.</string>
+    <string name="sf__managed_app_cert_alias_description" translatable="false">Used to specify the certificate alias required for the application.</string>
+    <string name="sf__managed_app_error" translatable="false">Authentication only allowed from managed device.</string>
+    <string name="sf__managed_app_oauth_id_description" translatable="false">Used to specify OAuth consumer key for the application.</string>
+    <string name="sf__passcode_change_instructions" translatable="false">For increased security, your admininstrator requires you to change your passcode.</string>
+    <string name="sf__passcode_confirm_instructions" translatable="false">Confirm your mobile passcode for %s</string>
+    <string name="sf__passcode_confirm_title" translatable="false">Re-enter your %s passcode</string>
+    <string name="sf__passcode_create_instructions" translatable="false">For increased security, please create a passcode that you will use to access %s when the session has timed out due to inactivity.</string>
+    <string name="sf__passcode_create_title" translatable="false">Create %s passcode</string>
+    <string name="sf__passcode_enter_instructions" translatable="false">Enter your mobile passcode for %s</string>
+    <string name="sf__passcode_enter_title" translatable="false">Enter %s Passcode</string>
+    <string name="sf__passcode_final" translatable="false">Final passcode attempt</string>
+    <string name="sf__passcode_forgot_string" translatable="false">&lt;u>Forgot Passcode?&lt;/u></string>
+    <string name="sf__passcode_logout_confirmation" translatable="false">Are you sure you want to logout?</string>
+    <string name="sf__passcode_logout_no" translatable="false">No</string>
+    <string name="sf__passcode_logout_yes" translatable="false">Yes</string>
+    <string name="sf__passcode_min_length" translatable="false">The passcode must be at least %d characters long</string>
+    <string name="sf__passcode_try_again" translatable="false">The passcode you entered is incorrect. Please try again. You have %d attempts remaining.</string>
+    <string name="sf__passcodes_dont_match" translatable="false">Passcodes don\'t match!</string>
+    <string name="sf__pick_server" translatable="false">Change Server</string>
+    <string name="sf__reload" translatable="false">Reload</string>
+    <string name="sf__require_cert_auth_description" translatable="false">Used to specify if certificate based authentication is required for the application.</string>
+    <string name="sf__server_picker_title" translatable="false">Pick Login Server</string>
+    <string name="sf__server_url_add_title" translatable="false">Add Connection</string>
+    <string name="sf__server_url_default_apply" translatable="false">Apply</string>
+    <string name="sf__server_url_default_cancel" translatable="false">Cancel</string>
+    <string name="sf__server_url_default_custom_label" translatable="false">Name</string>
+    <string name="sf__server_url_default_custom_url" translatable="false">URL</string>
+    <string name="sf__server_url_edit_title" translatable="false">Edit Connection</string>
+    <string name="sf__server_url_reset" translatable="false">Reset</string>
+    <string name="sf__ssl_error" translatable="false">SSL Error: %s.</string>
+    <string name="sf__ssl_expired" translatable="false">Expired Certificate</string>
+    <string name="sf__ssl_id_mismatch" translatable="false">Hostname Mismatch</string>
+    <string name="sf__ssl_not_yet_valid" translatable="false">Certificate Not Yet Valid</string>
+    <string name="sf__ssl_unknown_error" translatable="false">Unknown Error</string>
+    <string name="sf__ssl_untrusted" translatable="false">Untrusted Certificate Authority</string>
+    <string name="sf__switch_account" translatable="false">Switch Account</string>
+    <string name="shadeManagement">53. Shade Management:</string>
     <string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>
-    <string name="soilCondition">55. Soil Condition:</string>
+    <string name="soilCondition">54. Soil Condition:</string>
     <string name="soilFertMngLb">Soil Fertility Management:</string>
-    <string name="sourceCredit">C12. Where did you take the loan from:</string>
+    <string name="sourceCredit">C11. Where did you take the loan from:</string>
     <string name="spouseBirthday">C2. Spouse Birthday Year:</string>
     <string name="spouseEducationalLevel">C3. Spouse Educational Level:</string>
     <string name="spouseName">C1. Spouse Name:</string>
-    <string name="spousePaidWork">C7. Spouse have any paid work other than working on own cocoa farm:</string>
+    <string name="spousePaidWork">C7. Does spouse have any paid work other than working on own cocoa farm:</string>
     <string name="startYear">Start Year</string>
     <string name="switch_user_button">Switch User</string>
     <string name="tool1">This includes paid labor on other farms, nursery, other business or services that bring in money into the farmer household</string>
@@ -2291,16 +2567,16 @@
     <string name="tool4">Conversion ratio for Wet to Dry is 100:35 or 35%</string>
     <string name="tool5">This is educational expense post secondary schooling and/or beyond normal schooling expense</string>
     <string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string>
-    <string name="totalCredit">C11. What is the total amount of the loan outstanding?</string>
+    <string name="totalCredit">C10. What is the total amount of the loan outstanding?</string>
     <string name="totalExpenses">Total family expenses:</string>
-    <string name="totalFamilyMembersIncome">C9. Net money contributed from family members to the household:</string>
+    <string name="totalFamilyMembersIncome">C9. Net money contributed from family members or other people to the household:</string>
     <string name="totalIncome">Total income:</string>
     <string name="totalIncomeLabor">C6. Net Income from all other work that farmer does in the past year:</string>
     <string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string>
-    <string name="treeHealth">48. Tree health:</string>
+    <string name="treeHealth">47. Tree health:</string>
     <string name="village">6. Village:</string>
-    <string name="wantAccount">C19. Want a bank account?</string>
-    <string name="weeding">52. Weeding:</string>
+    <string name="wantAccount">C18. Want a bank account?</string>
+    <string name="weeding">51. Weeding:</string>
     <string name="year1">Year 1</string>
     <string name="year2">Year 2</string>
     <string name="year3">Year 3</string>
@@ -2309,7 +2585,7 @@
     <string name="year6">Year 6</string>
     <string name="year7">Year 7</string>
     <string name="yearDetailActivityTitle">Year Detail</string>
-    <string name="yearsRelationshipWithMars">10. Years Relationship With Mars:</string>
+    <string name="yearsRelationshipWithMars">10. Years Relationship with company:</string>
     <string name="yes">Yes</string>
     <style name="FarmerDetail">
     </style>

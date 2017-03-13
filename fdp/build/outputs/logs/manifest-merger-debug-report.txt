@@ -4,7 +4,7 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-126:12
 	package
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:4:2-37
 	android:versionName
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:6:2-27
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:6:2-28
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
 	android:versionCode

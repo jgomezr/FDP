@@ -51,14 +51,28 @@
 
                     <TextView android:layout_width="300dp"
                         android:layout_height="35dp"
-                        android:text="@string/shadeTrees"
+                        android:text="@string/ph"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
                         android:layout_height="35dp"
-                        android:text="@string/ph"
+                        android:text="@string/renovated"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:text="@string/reason"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:text="@string/howLong"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16sp"/>

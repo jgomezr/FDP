@@ -832,6 +832,7 @@
     <string name="haveSpouse">11. Punya Pasangan</string>
     <string name="hireLabor">38. Memiliki Pekerja</string>
     <string name="householdSavings">21. Tabungan rumah tangga</string>
+    <string name="howLong">Betapa lama dibuat renovasi?</string>
     <string name="incomeOtherCrops">C10. pendapat bersih dari semua tanaman di tahun lalu (tahun  lalu di maksud dua musim panen, mid dan main</string>
     <string name="internalInspection">Internal Inspeksi</string>
     <string name="investmentLabel">Investasi yang direncanakan</string>
@@ -907,11 +908,15 @@
     <string name="postalAddress">8. Kode Pos</string>
     <string name="productionCocoaLY">27. Produksi Kg total biji kakao kering di tahun panen atau tahun kalender</string>
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
+    <string name="productionLess">Diperkirakan produksi Anda kurang dibandingkan dengan tahun sebelumnya</string>
     <string name="productiveProfile">PROFILE PRODUKTIF</string>
     <string name="profitOrLost">Untung dan Rugi</string>
     <string name="pruning">49. Pemangkasan</string>
+    <string name="reason">Alasan untuk renovasi:</string>
     <string name="reasonNotAgree">Komentar</string>
     <string name="receivesFarmPayment">17. Petani atau pasangan menerima pembayaran untuk pekerjaan lain</string>
+    <string name="renovated">plot ini baru-baru ini direnovasi?</string>
+    <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
     <string name="renovationArea">37. Total renovasi penanaman kakao sudah di bawah ukuran (Ha)</string>
     <string name="replant">Penanamman kembali</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>
