@@ -188,6 +188,7 @@
 	<string name="greater0" translatable="false"></string>
 	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
+	<string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
 	<string name="saved">Save successful!</string>
 	<string name="autosave">Autosaved</string>
 	<string name="p1">Clearing</string>

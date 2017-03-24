@@ -1319,6 +1319,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
+            //set field estimated production 1
+            if (sObject.getPlot1Yield().isEmpty()){
+                estP1.setText(Integer.toString(0));
+            }else {
+                estP1.setText(sObject.getPlot1Yield());
+            }
+
             //set field planting Material 1
             if (sObject.getPlantingMaterial1().contentEquals("G")) {
                 Spinner spinner = plantP1;

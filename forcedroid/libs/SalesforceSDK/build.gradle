@@ -32,7 +32,7 @@ android {
   defaultConfig {
     testApplicationId "com.salesforce.androidsdk.tests"
     testInstrumentationRunner "com.salesforce.androidsdk.util.test.JUnitReportTestRunner"
-    minSdkVersion 16
+    minSdkVersion 19
     targetSdkVersion 23
   }
   packagingOptions {
@@ -45,6 +45,8 @@ android {
     abortOnError false
   }
   productFlavors {
+  }
+  buildTypes {
   }
 }
 

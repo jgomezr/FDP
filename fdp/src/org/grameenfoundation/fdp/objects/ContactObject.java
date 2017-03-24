@@ -192,61 +192,51 @@ public class ContactObject extends SalesforceObject {
     public static final String PLOT10AREA = "plot10Area__c";
     public static final String PLOT10COCOATREES = "plot10CocoaTrees__c";
     public static final String PLOT10GPS = "plot10GPS__c";
-    public static final String PLOT10SHADETREES = "plot10ShadeTrees__c";
     public static final String PLOT10YIELD = "plot10Yield__c";
     public static final String PLOT1AGE = "plot1Age__c";
     public static final String PLOT1AREA = "plot1Area__c";
     public static final String PLOT1COCOATREES = "plot1CocoaTrees__c";
     public static final String PLOT1GPS = "plot1GPS__c";
-    public static final String PLOT1SHADETREES = "plot1ShadeTrees__c";
     public static final String PLOT1YIELD = "plot1Yield__c";
     public static final String PLOT2AGE = "plot2Age__c";
     public static final String PLOT2AREA = "plot2Area__c";
     public static final String PLOT2COCOATREES = "plot2CocoaTrees__c";
     public static final String PLOT2GPS = "plot2GPS__c";
-    public static final String PLOT2SHADETREES = "plot2ShadeTrees__c";
     public static final String PLOT2YIELD = "plot2Yield__c";
     public static final String PLOT3AGE = "plot3Age__c";
     public static final String PLOT3AREA = "plot3Area__c";
     public static final String PLOT3COCOATREES= "plot3_CocoaTrees__c";
     public static final String PLOT3GPS = "plot3GPS__c";
-    public static final String PLOT3SHADETREES = "plot3ShadeTrees__c";
     public static final String PLOT3YIELD = "plot3Yield__c";
     public static final String PLOT4AGE = "plot4Age__c";
     public static final String PLOT4AREA = "plot4Area__c";
     public static final String PLOT4COCOATREES = "plot4CocoaTrees__c";
     public static final String PLOT4GPS = "plot4GPS__c";
-    public static final String PLOT4SHADETREES = "plot4ShadeTrees__c";
     public static final String PLOT4YIELD = "plot4Yield__c";
     public static final String PLOT5AGE = "plot5Age__c";
     public static final String PLOT5AREA = "plot5Area__c";
     public static final String PLOT5COCOATREES = "plot5CocoaTrees__c";
     public static final String PLOT5GPS = "plot5GPS__c";
-    public static final String PLOT5SHADETREES = "plot5ShadeTrees__c";
     public static final String PLOT5YIELD = "plot5Yield__c";
     public static final String PLOT6AGE = "plot6Age__c";
     public static final String PLOT6AREA = "plot6Area__c";
     public static final String PLOT6COCOATREES = "plot6CocoaTrees__c";
     public static final String PLOT6GPS = "plot6GPS__c";
-    public static final String PLOT6SHADETREES = "plot6ShadeTrees__c";
     public static final String PLOT6YIELD = "plot6Yield__c";
     public static final String PLOT7AGE = "plot7Age__c";
     public static final String PLOT7AREA = "plot7Area__c";
     public static final String PLOT7COCOATREES = "plot7CocoaTrees__c";
     public static final String PLOT7GPS = "plot7GPS__c";
-    public static final String PLOT7SHADETREES = "plot7ShadeTrees__c";
     public static final String PLOT7YIELD = "plot7Yield__c";
     public static final String PLOT8AGE = "plot8Age__c";
     public static final String PLOT8AREA = "plot8Area__c";
     public static final String PLOT8COCOATREES = "plot8CocoaTrees__c";
     public static final String PLOT8GPS = "plot8GPS__c";
-    public static final String PLOT8SHADETREES = "plot8ShadeTrees__c";
     public static final String PLOT8YIELD = "plot8Yield__c";
     public static final String PLOT9AGE = "plot9Age__c";
     public static final String PLOT9AREA = "plot9Area__c";
     public static final String PLOT9COCOATREES = "plot9CocoaTrees__c";
     public static final String PLOT9GPS = "plot9GPS__c";
-    public static final String PLOT9SHADETREES = "plot9ShadeTrees__c";
     public static final String PLOT9YIELD = "plot9Yield__c";
     public static final String PRUNING1 = "pruning1__c";
     public static final String PRUNING10 = "pruning10__c";
@@ -293,26 +283,6 @@ public class ContactObject extends SalesforceObject {
     public static final String TOTALCOCOAAREA = "totalCocoaArea__c";
     public static final String TOTALFARMAREA = "totalFarmArea__c";
     public static final String TOTALRENOVATIONAREA = "totalRenovationArea__c";
-    public static final String TREEAGE1 = "treeAge1__c";
-    public static final String TREEAGE10 = "treeAge10__c";
-    public static final String TREEAGE2 = "treeAge2__c";
-    public static final String TREEAGE3 = "treeAge3__c";
-    public static final String TREEAGE4 = "treeAge4__c";
-    public static final String TREEAGE5 = "treeAge5__c";
-    public static final String TREEAGE6 = "treeAge6__c";
-    public static final String TREEAGE7 = "treeAge7__c";
-    public static final String TREEAGE8 = "treeAge8__c";
-    public static final String TREEAGE9 = "treeAge9__c";
-    public static final String TREEDENSITY1 = "treeDensity1__c";
-    public static final String TREEDENSITY10 = "treeDensity10__c";
-    public static final String TREEDENSITY2 = "treeDensity2__c";
-    public static final String TREEDENSITY3 = "treeDensity3__c";
-    public static final String TREEDENSITY4 = "treeDensity4__c";
-    public static final String TREEDENSITY5 = "treeDensity5__c";
-    public static final String TREEDENSITY6 = "treeDensity6__c";
-    public static final String TREEDENSITY7 = "treeDensity7__c";
-    public static final String TREEDENSITY8 = "treeDensity8__c";
-    public static final String TREEDENSITY9 = "treeDensity9__c";
     public static final String TREEHEALTH1 = "treeHealth1__c";
     public static final String TREEHEALTH10 = "treeHealth10__c";
     public static final String TREEHEALTH2 = "treeHealth2__c";
@@ -591,61 +561,51 @@ public class ContactObject extends SalesforceObject {
             PLOT10AREA,
             PLOT10COCOATREES,
             PLOT10GPS,
-            PLOT10SHADETREES,
             PLOT10YIELD,
             PLOT1AGE,
             PLOT1AREA,
             PLOT1COCOATREES,
             PLOT1GPS,
-            PLOT1SHADETREES,
             PLOT1YIELD,
             PLOT2AGE,
             PLOT2AREA,
             PLOT2COCOATREES,
             PLOT2GPS,
-            PLOT2SHADETREES,
             PLOT2YIELD,
             PLOT3AGE,
             PLOT3AREA,
             PLOT3COCOATREES,
             PLOT3GPS,
-            PLOT3SHADETREES,
             PLOT3YIELD,
             PLOT4AGE,
             PLOT4AREA,
             PLOT4COCOATREES,
             PLOT4GPS,
-            PLOT4SHADETREES,
             PLOT4YIELD,
             PLOT5AGE,
             PLOT5AREA,
             PLOT5COCOATREES,
             PLOT5GPS,
-            PLOT5SHADETREES,
             PLOT5YIELD,
             PLOT6AGE,
             PLOT6AREA,
             PLOT6COCOATREES,
             PLOT6GPS,
-            PLOT6SHADETREES,
             PLOT6YIELD,
             PLOT7AGE,
             PLOT7AREA,
             PLOT7COCOATREES,
             PLOT7GPS,
-            PLOT7SHADETREES,
             PLOT7YIELD,
             PLOT8AGE,
             PLOT8AREA,
             PLOT8COCOATREES,
             PLOT8GPS,
-            PLOT8SHADETREES,
             PLOT8YIELD,
             PLOT9AGE,
             PLOT9AREA,
             PLOT9COCOATREES,
             PLOT9GPS,
-            PLOT9SHADETREES,
             PLOT9YIELD,
             PRUNING1,
             PRUNING10,
@@ -692,26 +652,6 @@ public class ContactObject extends SalesforceObject {
             TOTALCOCOAAREA,
             TOTALFARMAREA,
             TOTALRENOVATIONAREA,
-            TREEAGE1,
-            TREEAGE10,
-            TREEAGE2,
-            TREEAGE3,
-            TREEAGE4,
-            TREEAGE5,
-            TREEAGE6,
-            TREEAGE7,
-            TREEAGE8,
-            TREEAGE9,
-            TREEDENSITY1,
-            TREEDENSITY10,
-            TREEDENSITY2,
-            TREEDENSITY3,
-            TREEDENSITY4,
-            TREEDENSITY5,
-            TREEDENSITY6,
-            TREEDENSITY7,
-            TREEDENSITY8,
-            TREEDENSITY9,
             TREEHEALTH1,
             TREEHEALTH10,
             TREEHEALTH2,
@@ -993,61 +933,51 @@ public class ContactObject extends SalesforceObject {
             PLOT10AREA,
             PLOT10COCOATREES,
             PLOT10GPS,
-            PLOT10SHADETREES,
             PLOT10YIELD,
             PLOT1AGE,
             PLOT1AREA,
             PLOT1COCOATREES,
             PLOT1GPS,
-            PLOT1SHADETREES,
             PLOT1YIELD,
             PLOT2AGE,
             PLOT2AREA,
             PLOT2COCOATREES,
             PLOT2GPS,
-            PLOT2SHADETREES,
             PLOT2YIELD,
             PLOT3AGE,
             PLOT3AREA,
             PLOT3COCOATREES,
             PLOT3GPS,
-            PLOT3SHADETREES,
             PLOT3YIELD,
             PLOT4AGE,
             PLOT4AREA,
             PLOT4COCOATREES,
             PLOT4GPS,
-            PLOT4SHADETREES,
             PLOT4YIELD,
             PLOT5AGE,
             PLOT5AREA,
             PLOT5COCOATREES,
             PLOT5GPS,
-            PLOT5SHADETREES,
             PLOT5YIELD,
             PLOT6AGE,
             PLOT6AREA,
             PLOT6COCOATREES,
             PLOT6GPS,
-            PLOT6SHADETREES,
             PLOT6YIELD,
             PLOT7AGE,
             PLOT7AREA,
             PLOT7COCOATREES,
             PLOT7GPS,
-            PLOT7SHADETREES,
             PLOT7YIELD,
             PLOT8AGE,
             PLOT8AREA,
             PLOT8COCOATREES,
             PLOT8GPS,
-            PLOT8SHADETREES,
             PLOT8YIELD,
             PLOT9AGE,
             PLOT9AREA,
             PLOT9COCOATREES,
             PLOT9GPS,
-            PLOT9SHADETREES,
             PLOT9YIELD,
             PRUNING1,
             PRUNING10,
@@ -1094,26 +1024,6 @@ public class ContactObject extends SalesforceObject {
             TOTALCOCOAAREA,
             TOTALFARMAREA,
             TOTALRENOVATIONAREA,
-            TREEAGE1,
-            TREEAGE10,
-            TREEAGE2,
-            TREEAGE3,
-            TREEAGE4,
-            TREEAGE5,
-            TREEAGE6,
-            TREEAGE7,
-            TREEAGE8,
-            TREEAGE9,
-            TREEDENSITY1,
-            TREEDENSITY10,
-            TREEDENSITY2,
-            TREEDENSITY3,
-            TREEDENSITY4,
-            TREEDENSITY5,
-            TREEDENSITY6,
-            TREEDENSITY7,
-            TREEDENSITY8,
-            TREEDENSITY9,
             TREEHEALTH1,
             TREEHEALTH10,
             TREEHEALTH2,
@@ -1831,9 +1741,6 @@ public class ContactObject extends SalesforceObject {
     public String getPlot10GPS() {
         return sanitizeText(rawData.optString(PLOT10GPS));
     }
-    public String getPlot10ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT10SHADETREES));
-    }
     public String getPlot10Yield() {
         return sanitizeText(rawData.optString(PLOT10YIELD));
     }
@@ -1848,9 +1755,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getPlot1GPS() {
         return sanitizeText(rawData.optString(PLOT1GPS));
-    }
-    public String getPlot1ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT1SHADETREES));
     }
     public String getPlot1Yield() {
         return sanitizeText(rawData.optString(PLOT1YIELD));
@@ -1867,9 +1771,6 @@ public class ContactObject extends SalesforceObject {
     public String getPlot2GPS() {
         return sanitizeText(rawData.optString(PLOT2GPS));
     }
-    public String getPlot2ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT2SHADETREES));
-    }
     public String getPlot2Yield() {
         return sanitizeText(rawData.optString(PLOT2YIELD));
     }
@@ -1884,9 +1785,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getPlot3GPS() {
         return sanitizeText(rawData.optString(PLOT3GPS));
-    }
-    public String getPlot3ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT3SHADETREES));
     }
     public String getPlot3Yield() {
         return sanitizeText(rawData.optString(PLOT3YIELD));
@@ -1903,9 +1801,6 @@ public class ContactObject extends SalesforceObject {
     public String getPlot4GPS() {
         return sanitizeText(rawData.optString(PLOT4GPS));
     }
-    public String getPlot4ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT4SHADETREES));
-    }
     public String getPlot4Yield() {
         return sanitizeText(rawData.optString(PLOT4YIELD));
     }
@@ -1920,9 +1815,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getPlot5GPS() {
         return sanitizeText(rawData.optString(PLOT5GPS));
-    }
-    public String getPlot5ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT5SHADETREES));
     }
     public String getPlot5Yield() {
         return sanitizeText(rawData.optString(PLOT5YIELD));
@@ -1939,9 +1831,6 @@ public class ContactObject extends SalesforceObject {
     public String getPlot6GPS() {
         return sanitizeText(rawData.optString(PLOT6GPS));
     }
-    public String getPlot6ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT6SHADETREES));
-    }
     public String getPlot6Yield() {
         return sanitizeText(rawData.optString(PLOT6YIELD));
     }
@@ -1956,9 +1845,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getPlot7GPS() {
         return sanitizeText(rawData.optString(PLOT7GPS));
-    }
-    public String getPlot7ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT7SHADETREES));
     }
     public String getPlot7Yield() {
         return sanitizeText(rawData.optString(PLOT7YIELD));
@@ -1975,9 +1861,6 @@ public class ContactObject extends SalesforceObject {
     public String getPlot8GPS() {
         return sanitizeText(rawData.optString(PLOT8GPS));
     }
-    public String getPlot8ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT8SHADETREES));
-    }
     public String getPlot8Yield() {
         return sanitizeText(rawData.optString(PLOT8YIELD));
     }
@@ -1992,9 +1875,6 @@ public class ContactObject extends SalesforceObject {
     }
     public String getPlot9GPS() {
         return sanitizeText(rawData.optString(PLOT9GPS));
-    }
-    public String getPlot9ShadeTrees() {
-        return sanitizeText(rawData.optString(PLOT9SHADETREES));
     }
     public String getPlot9Yield() {
         return sanitizeText(rawData.optString(PLOT9YIELD));
@@ -2132,66 +2012,6 @@ public class ContactObject extends SalesforceObject {
         return sanitizeText(rawData.optString(TOTALFARMAREA));
     }
     public String getTotalRenovationArea() {return sanitizeText(rawData.optString(TOTALRENOVATIONAREA));}
-    public String getTreeAge1() {
-        return sanitizeText(rawData.optString(TREEAGE1));
-    }
-    public String getTreeAge10() {
-        return sanitizeText(rawData.optString(TREEAGE10));
-    }
-    public String getTreeAge2() {
-        return sanitizeText(rawData.optString(TREEAGE2));
-    }
-    public String getTreeAge3() {
-        return sanitizeText(rawData.optString(TREEAGE3));
-    }
-    public String getTreeAge4() {
-        return sanitizeText(rawData.optString(TREEAGE4));
-    }
-    public String getTreeAge5() {
-        return sanitizeText(rawData.optString(TREEAGE5));
-    }
-    public String getTreeAge6() {
-        return sanitizeText(rawData.optString(TREEAGE6));
-    }
-    public String getTreeAge7() {
-        return sanitizeText(rawData.optString(TREEAGE7));
-    }
-    public String getTreeAge8() {
-        return sanitizeText(rawData.optString(TREEAGE8));
-    }
-    public String getTreeAge9() {
-        return sanitizeText(rawData.optString(TREEAGE9));
-    }
-    public String getTreeDensity1() {
-        return sanitizeText(rawData.optString(TREEDENSITY1));
-    }
-    public String getTreeDensity10() {
-        return sanitizeText(rawData.optString(TREEDENSITY10));
-    }
-    public String getTreeDensity2() {
-        return sanitizeText(rawData.optString(TREEDENSITY2));
-    }
-    public String getTreeDensity3() {
-        return sanitizeText(rawData.optString(TREEDENSITY3));
-    }
-    public String getTreeDensity4() {
-        return sanitizeText(rawData.optString(TREEDENSITY4));
-    }
-    public String getTreeDensity5() {
-        return sanitizeText(rawData.optString(TREEDENSITY5));
-    }
-    public String getTreeDensity6() {
-        return sanitizeText(rawData.optString(TREEDENSITY6));
-    }
-    public String getTreeDensity7() {
-        return sanitizeText(rawData.optString(TREEDENSITY7));
-    }
-    public String getTreeDensity8() {
-        return sanitizeText(rawData.optString(TREEDENSITY8));
-    }
-    public String getTreeDensity9() {
-        return sanitizeText(rawData.optString(TREEDENSITY9));
-    }
     public String getTreeHealth1() {
         return sanitizeText(rawData.optString(TREEHEALTH1));
     }

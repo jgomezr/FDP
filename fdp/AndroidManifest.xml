@@ -6,7 +6,7 @@
 	android:versionName="1.51"
 	android:installLocation="internalOnly">
 
-    <uses-sdk android:minSdkVersion="16"
+    <uses-sdk android:minSdkVersion="19"
         android:targetSdkVersion="23" />
 
 	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
@@ -111,8 +111,6 @@
 			android:name="com.google.android.gms.version"
 			android:value="@integer/google_play_services_version" />
 	</application>
-
-
 
     <!--
         GCM permission to ensure that only this application can

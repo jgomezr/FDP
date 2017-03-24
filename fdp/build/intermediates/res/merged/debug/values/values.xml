@@ -2472,6 +2472,7 @@
     <string name="renovated">This plot was recently renovated?</string>
     <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
     <string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string>
+    <string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>
     <string name="saved">Save successful!</string>

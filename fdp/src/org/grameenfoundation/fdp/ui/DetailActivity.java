@@ -680,9 +680,15 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 editText.setBackgroundColor(Color.TRANSPARENT);
             }
 
-            if (tc+tr>tl) {
+            if (tc>tl) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
                 Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
+            }else{
+                editText.setBackgroundColor(Color.TRANSPARENT);
+            }
+            if(tr>tc){
+                editText.setBackgroundColor(Color.parseColor("#cc0000"));
+                Toast.makeText(getApplicationContext(), getString(R.string.renovationHigh), Toast.LENGTH_SHORT).show();
             }else{
                 editText.setBackgroundColor(Color.TRANSPARENT);
             }
@@ -1380,6 +1386,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						sObject.getExpectededucationexpenses());
 			}
 
+            //set total credit field
+            if (sObject.getPAYBACK().isEmpty()){
+                setText((EditText) findViewById(R.id.totalCredit_Field),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.totalCredit_Field),
+                        sObject.getPAYBACK());
+            }
+
 			//set pay for credit field
 			if (sObject.getHowmuchpayforcredit().isEmpty()){
 				setText((EditText) findViewById(R.id.payForCredit_Field),Integer.toString(0));
@@ -1569,6 +1583,14 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
 			}
+
+            //set number of Childrens
+            if (sObject.getNUMBERCHILDRENS().isEmpty()){
+                setText((EditText) findViewById(R.id.numChildren),Integer.toString(0));
+            }else {
+                setText((EditText) findViewById(R.id.numChildren),
+                        sObject.getNUMBERCHILDRENS());
+            }
 
             //set sources
             if (sObject.getSOURCELOAN().contentEquals("Friends")||sObject.getSOURCELOAN().contentEquals("Teman")) {

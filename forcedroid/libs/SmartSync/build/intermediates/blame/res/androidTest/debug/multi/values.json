@@ -12,7 +12,15 @@
                     "endOffset": 133
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 19,
+                        "endOffset": 133
+                    }
                 }
             },
             {
@@ -24,7 +32,14 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 50,
+                        "endOffset": 101
+                    }
                 }
             },
             {
@@ -36,7 +51,14 @@
                     "endOffset": 236
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 106,
+                        "endColumn": 51,
+                        "endOffset": 153
+                    }
                 }
             },
             {
@@ -48,7 +70,14 @@
                     "endOffset": 284
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 158,
+                        "endColumn": 47,
+                        "endOffset": 201
+                    }
                 }
             },
             {
@@ -60,7 +89,14 @@
                     "endOffset": 335
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 206,
+                        "endColumn": 50,
+                        "endOffset": 252
+                    }
                 }
             },
             {
@@ -72,7 +108,14 @@
                     "endOffset": 383
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 257,
+                        "endColumn": 47,
+                        "endOffset": 300
+                    }
                 }
             },
             {
@@ -84,7 +127,14 @@
                     "endOffset": 438
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 305,
+                        "endColumn": 54,
+                        "endOffset": 355
+                    }
                 }
             },
             {
@@ -96,7 +146,14 @@
                     "endOffset": 487
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 360,
+                        "endColumn": 48,
+                        "endOffset": 404
+                    }
                 }
             },
             {
@@ -108,7 +165,14 @@
                     "endOffset": 535
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 409,
+                        "endColumn": 47,
+                        "endOffset": 452
+                    }
                 }
             },
             {
@@ -120,7 +184,14 @@
                     "endOffset": 591
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 138,
+                        "endColumn": 55,
+                        "endOffset": 189
+                    }
                 }
             },
             {
@@ -132,7 +203,14 @@
                     "endOffset": 642
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 194,
+                        "endColumn": 50,
+                        "endOffset": 240
+                    }
                 }
             },
             {
@@ -144,7 +222,14 @@
                     "endOffset": 711
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 68,
+                        "endOffset": 119
+                    }
                 }
             },
             {
@@ -156,7 +241,14 @@
                     "endOffset": 781
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 124,
+                        "endColumn": 69,
+                        "endOffset": 189
+                    }
                 }
             },
             {
@@ -168,7 +260,14 @@
                     "endOffset": 845
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 194,
+                        "endColumn": 63,
+                        "endOffset": 253
+                    }
                 }
             },
             {
@@ -180,7 +279,14 @@
                     "endOffset": 915
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 258,
+                        "endColumn": 69,
+                        "endOffset": 323
+                    }
                 }
             },
             {
@@ -192,7 +298,14 @@
                     "endOffset": 974
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 328,
+                        "endColumn": 58,
+                        "endOffset": 382
+                    }
                 }
             },
             {
@@ -204,7 +317,14 @@
                     "endOffset": 1024
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 245,
+                        "endColumn": 49,
+                        "endOffset": 290
+                    }
                 }
             },
             {
@@ -216,7 +336,14 @@
                     "endOffset": 1079
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 295,
+                        "endColumn": 54,
+                        "endOffset": 345
+                    }
                 }
             },
             {
@@ -228,7 +355,14 @@
                     "endOffset": 1136
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 350,
+                        "endColumn": 56,
+                        "endOffset": 402
+                    }
                 }
             },
             {
@@ -240,7 +374,14 @@
                     "endOffset": 1188
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 407,
+                        "endColumn": 51,
+                        "endOffset": 454
+                    }
                 }
             },
             {
@@ -252,7 +393,14 @@
                     "endOffset": 1240
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 459,
+                        "endColumn": 51,
+                        "endOffset": 506
+                    }
                 }
             },
             {
@@ -264,7 +412,14 @@
                     "endOffset": 1292
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 511,
+                        "endColumn": 51,
+                        "endOffset": 558
+                    }
                 }
             },
             {
@@ -276,7 +431,14 @@
                     "endOffset": 1340
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 563,
+                        "endColumn": 47,
+                        "endOffset": 606
+                    }
                 }
             },
             {
@@ -288,7 +450,14 @@
                     "endOffset": 1400
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 611,
+                        "endColumn": 59,
+                        "endOffset": 666
+                    }
                 }
             },
             {
@@ -300,7 +469,14 @@
                     "endOffset": 1456
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 671,
+                        "endColumn": 55,
+                        "endOffset": 722
+                    }
                 }
             },
             {
@@ -312,7 +488,14 @@
                     "endOffset": 1516
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 387,
+                        "endColumn": 59,
+                        "endOffset": 442
+                    }
                 }
             },
             {
@@ -324,7 +507,14 @@
                     "endOffset": 1578
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 447,
+                        "endColumn": 61,
+                        "endOffset": 504
+                    }
                 }
             },
             {
@@ -336,7 +526,14 @@
                     "endOffset": 1629
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 509,
+                        "endColumn": 50,
+                        "endOffset": 555
+                    }
                 }
             },
             {
@@ -348,7 +545,14 @@
                     "endOffset": 1693
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 560,
+                        "endColumn": 63,
+                        "endOffset": 619
+                    }
                 }
             },
             {
@@ -360,7 +564,14 @@
                     "endOffset": 1748
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 624,
+                        "endColumn": 54,
+                        "endOffset": 674
+                    }
                 }
             },
             {
@@ -372,7 +583,14 @@
                     "endOffset": 1809
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 727,
+                        "endColumn": 60,
+                        "endOffset": 783
+                    }
                 }
             },
             {
@@ -384,7 +602,14 @@
                     "endOffset": 1871
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 788,
+                        "endColumn": 61,
+                        "endOffset": 845
+                    }
                 }
             },
             {
@@ -396,7 +621,14 @@
                     "endOffset": 1933
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 850,
+                        "endColumn": 61,
+                        "endOffset": 907
+                    }
                 }
             },
             {
@@ -408,7 +640,14 @@
                     "endOffset": 1996
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 912,
+                        "endColumn": 62,
+                        "endOffset": 970
+                    }
                 }
             },
             {
@@ -420,7 +659,14 @@
                     "endOffset": 2057
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 975,
+                        "endColumn": 60,
+                        "endOffset": 1031
+                    }
                 }
             },
             {
@@ -432,7 +678,14 @@
                     "endOffset": 2120
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1036,
+                        "endColumn": 62,
+                        "endOffset": 1094
+                    }
                 }
             },
             {
@@ -444,7 +697,14 @@
                     "endOffset": 2179
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1099,
+                        "endColumn": 58,
+                        "endOffset": 1153
+                    }
                 }
             },
             {
@@ -456,7 +716,14 @@
                     "endOffset": 2237
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1158,
+                        "endColumn": 57,
+                        "endOffset": 1211
+                    }
                 }
             },
             {
@@ -468,7 +735,14 @@
                     "endOffset": 2297
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1216,
+                        "endColumn": 59,
+                        "endOffset": 1271
+                    }
                 }
             },
             {
@@ -480,7 +754,14 @@
                     "endOffset": 2361
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1276,
+                        "endColumn": 63,
+                        "endOffset": 1335
+                    }
                 }
             },
             {
@@ -492,7 +773,14 @@
                     "endOffset": 2422
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1340,
+                        "endColumn": 60,
+                        "endOffset": 1396
+                    }
                 }
             },
             {
@@ -504,7 +792,14 @@
                     "endOffset": 2477
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1401,
+                        "endColumn": 54,
+                        "endOffset": 1451
+                    }
                 }
             },
             {
@@ -516,7 +811,14 @@
                     "endOffset": 2533
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1456,
+                        "endColumn": 55,
+                        "endOffset": 1507
+                    }
                 }
             },
             {
@@ -528,7 +830,14 @@
                     "endOffset": 2595
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1512,
+                        "endColumn": 61,
+                        "endOffset": 1569
+                    }
                 }
             },
             {
@@ -540,7 +849,14 @@
                     "endOffset": 2655
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1574,
+                        "endColumn": 59,
+                        "endOffset": 1629
+                    }
                 }
             },
             {
@@ -552,7 +868,14 @@
                     "endOffset": 2716
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1634,
+                        "endColumn": 60,
+                        "endOffset": 1690
+                    }
                 }
             },
             {
@@ -564,7 +887,14 @@
                     "endOffset": 2775
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1695,
+                        "endColumn": 58,
+                        "endOffset": 1749
+                    }
                 }
             },
             {
@@ -595,7 +925,14 @@
                     "endOffset": 2916
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1842,
+                        "endColumn": 52,
+                        "endOffset": 1890
+                    }
                 }
             },
             {
@@ -626,7 +963,14 @@
                     "endOffset": 3030
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 457,
+                        "endColumn": 46,
+                        "endOffset": 499
+                    }
                 }
             },
             {
@@ -638,7 +982,14 @@
                     "endOffset": 3106
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartSync\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 504,
+                        "endColumn": 75,
+                        "endOffset": 575
+                    }
                 }
             },
             {
@@ -650,7 +1001,14 @@
                     "endOffset": 3191
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2121,
+                        "endColumn": 84,
+                        "endOffset": 2201
+                    }
                 }
             },
             {
@@ -681,7 +1039,14 @@
                     "endOffset": 3403
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2280,
+                        "endColumn": 137,
+                        "endOffset": 2413
+                    }
                 }
             },
             {
@@ -2081,7 +2446,15 @@
                     "endOffset": 10950
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 97,
+                        "startColumn": 4,
+                        "startOffset": 8358,
+                        "endLine": 98,
+                        "endColumn": 12,
+                        "endOffset": 8399
+                    }
                 }
             },
             {
@@ -2094,7 +2467,15 @@
                     "endOffset": 11137
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 99,
+                        "startColumn": 4,
+                        "startOffset": 8404,
+                        "endLine": 102,
+                        "endColumn": 12,
+                        "endOffset": 8586
+                    }
                 }
             },
             {
@@ -2107,7 +2488,15 @@
                     "endOffset": 11292
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 8591,
+                        "endLine": 105,
+                        "endColumn": 12,
+                        "endOffset": 8741
+                    }
                 }
             },
             {
@@ -2120,7 +2509,15 @@
                     "endOffset": 11520
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 8746,
+                        "endLine": 109,
+                        "endColumn": 12,
+                        "endOffset": 8969
+                    }
                 }
             },
             {
@@ -2133,7 +2530,15 @@
                     "endOffset": 11743
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 110,
+                        "startColumn": 4,
+                        "startOffset": 8974,
+                        "endLine": 113,
+                        "endColumn": 12,
+                        "endOffset": 9192
+                    }
                 }
             },
             {
@@ -2146,7 +2551,15 @@
                     "endOffset": 11867
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 114,
+                        "startColumn": 4,
+                        "startOffset": 9197,
+                        "endLine": 116,
+                        "endColumn": 12,
+                        "endOffset": 9316
+                    }
                 }
             },
             {
@@ -2159,7 +2572,15 @@
                     "endOffset": 12064
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 9321,
+                        "endLine": 119,
+                        "endColumn": 12,
+                        "endOffset": 9513
+                    }
                 }
             },
             {
@@ -2172,7 +2593,15 @@
                     "endOffset": 12119
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 9518,
+                        "endLine": 121,
+                        "endColumn": 12,
+                        "endOffset": 9568
+                    }
                 }
             },
             {
@@ -2185,7 +2614,15 @@
                     "endOffset": 12263
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 122,
+                        "startColumn": 4,
+                        "startOffset": 9573,
+                        "endLine": 124,
+                        "endColumn": 12,
+                        "endOffset": 9712
+                    }
                 }
             },
             {
@@ -2198,7 +2635,15 @@
                     "endOffset": 12772
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 9717,
+                        "endLine": 132,
+                        "endColumn": 12,
+                        "endOffset": 10221
+                    }
                 }
             },
             {
@@ -2211,7 +2656,15 @@
                     "endOffset": 13081
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 133,
+                        "startColumn": 4,
+                        "startOffset": 10226,
+                        "endLine": 138,
+                        "endColumn": 16,
+                        "endOffset": 10530
+                    }
                 }
             },
             {
@@ -2224,7 +2677,15 @@
                     "endOffset": 13438
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 139,
+                        "startColumn": 4,
+                        "startOffset": 10535,
+                        "endLine": 145,
+                        "endColumn": 12,
+                        "endOffset": 10887
+                    }
                 }
             },
             {
@@ -2237,7 +2698,15 @@
                     "endOffset": 13733
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 146,
+                        "startColumn": 4,
+                        "startOffset": 10892,
+                        "endLine": 150,
+                        "endColumn": 12,
+                        "endOffset": 11182
+                    }
                 }
             },
             {
@@ -2250,7 +2719,15 @@
                     "endOffset": 14090
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 151,
+                        "startColumn": 4,
+                        "startOffset": 11187,
+                        "endLine": 156,
+                        "endColumn": 12,
+                        "endOffset": 11539
+                    }
                 }
             },
             {
@@ -2263,7 +2740,15 @@
                     "endOffset": 14501
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 157,
+                        "startColumn": 4,
+                        "startOffset": 11544,
+                        "endLine": 162,
+                        "endColumn": 12,
+                        "endOffset": 11950
+                    }
                 }
             },
             {
@@ -2276,7 +2761,15 @@
                     "endOffset": 14753
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 163,
+                        "startColumn": 4,
+                        "startOffset": 11955,
+                        "endLine": 166,
+                        "endColumn": 12,
+                        "endOffset": 12202
+                    }
                 }
             },
             {
@@ -2289,7 +2782,15 @@
                     "endOffset": 14937
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 167,
+                        "startColumn": 4,
+                        "startOffset": 12207,
+                        "endLine": 170,
+                        "endColumn": 12,
+                        "endOffset": 12386
+                    }
                 }
             },
             {
@@ -2302,7 +2803,15 @@
                     "endOffset": 15089
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 171,
+                        "startColumn": 4,
+                        "startOffset": 12391,
+                        "endLine": 173,
+                        "endColumn": 12,
+                        "endOffset": 12538
+                    }
                 }
             },
             {
@@ -2315,7 +2824,15 @@
                     "endOffset": 15291
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 174,
+                        "startColumn": 4,
+                        "startOffset": 12543,
+                        "endLine": 177,
+                        "endColumn": 12,
+                        "endOffset": 12740
+                    }
                 }
             },
             {
@@ -2328,7 +2845,15 @@
                     "endOffset": 15447
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 178,
+                        "startColumn": 4,
+                        "startOffset": 12745,
+                        "endLine": 180,
+                        "endColumn": 12,
+                        "endOffset": 12896
+                    }
                 }
             },
             {
@@ -2341,7 +2866,15 @@
                     "endOffset": 15911
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 181,
+                        "startColumn": 4,
+                        "startOffset": 12901,
+                        "endLine": 187,
+                        "endColumn": 12,
+                        "endOffset": 13360
+                    }
                 }
             },
             {
@@ -2354,7 +2887,15 @@
                     "endOffset": 16032
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 188,
+                        "startColumn": 4,
+                        "startOffset": 13365,
+                        "endLine": 190,
+                        "endColumn": 12,
+                        "endOffset": 13481
+                    }
                 }
             },
             {
@@ -2367,7 +2908,15 @@
                     "endOffset": 16224
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 191,
+                        "startColumn": 4,
+                        "startOffset": 13486,
+                        "endLine": 193,
+                        "endColumn": 12,
+                        "endOffset": 13673
+                    }
                 }
             },
             {
@@ -2380,7 +2929,15 @@
                     "endOffset": 16267
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2407,
+                        "endLine": 32,
+                        "endColumn": 12,
+                        "endOffset": 2445
+                    }
                 }
             },
             {
@@ -2393,7 +2950,15 @@
                     "endOffset": 16320
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 2450,
+                        "endLine": 34,
+                        "endColumn": 12,
+                        "endOffset": 2498
+                    }
                 }
             },
             {
@@ -2406,7 +2971,15 @@
                     "endOffset": 16675
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 2503,
+                        "endLine": 40,
+                        "endColumn": 12,
+                        "endOffset": 2853
+                    }
                 }
             },
             {
@@ -2419,7 +2992,15 @@
                     "endOffset": 17167
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 2858,
+                        "endLine": 48,
+                        "endColumn": 12,
+                        "endOffset": 3345
+                    }
                 }
             },
             {
@@ -2432,7 +3013,15 @@
                     "endOffset": 17843
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3350,
+                        "endLine": 59,
+                        "endColumn": 12,
+                        "endOffset": 4021
+                    }
                 }
             },
             {
@@ -2445,7 +3034,15 @@
                     "endOffset": 18063
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 4026,
+                        "endLine": 63,
+                        "endColumn": 12,
+                        "endOffset": 4241
+                    }
                 }
             },
             {
@@ -2458,7 +3055,15 @@
                     "endOffset": 18627
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 4246,
+                        "endLine": 72,
+                        "endColumn": 12,
+                        "endOffset": 4805
+                    }
                 }
             }
         ]

@@ -935,4 +935,5 @@
     <string name="reason">Alasan untuk renovasi:</string>
     <string name="renovated">plot ini baru-baru ini direnovasi?</string>
     <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
+    <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
 </resources>

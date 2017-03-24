@@ -114,16 +114,16 @@ public final class R {
         public static final int spacer = 0x7f0d011a;
     }
     public static final class layout {
-        public static final int sf__account_switcher = 0x7f030007;
-        public static final int sf__custom_server_url = 0x7f030008;
-        public static final int sf__fingerprint_dialog = 0x7f030009;
-        public static final int sf__inspector = 0x7f03000a;
-        public static final int sf__inspector_result_cell = 0x7f03000b;
-        public static final int sf__login = 0x7f03000c;
-        public static final int sf__manage_space = 0x7f03000d;
-        public static final int sf__passcode = 0x7f03000e;
-        public static final int sf__server_picker = 0x7f03000f;
-        public static final int sf__server_picker_list = 0x7f030010;
+        public static final int sf__account_switcher = 0x7f030009;
+        public static final int sf__custom_server_url = 0x7f03000a;
+        public static final int sf__fingerprint_dialog = 0x7f03000b;
+        public static final int sf__inspector = 0x7f03000c;
+        public static final int sf__inspector_result_cell = 0x7f03000d;
+        public static final int sf__login = 0x7f03000e;
+        public static final int sf__manage_space = 0x7f03000f;
+        public static final int sf__passcode = 0x7f030010;
+        public static final int sf__server_picker = 0x7f030011;
+        public static final int sf__server_picker_list = 0x7f030012;
     }
     public static final class menu {
         public static final int sf__clear_custom_url = 0x7f0c0001;

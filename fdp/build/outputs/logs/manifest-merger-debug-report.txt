@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-126:12
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:3:1-124:12
 	package
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:4:2-37
 	android:versionName
@@ -24,14 +24,14 @@ MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\bui
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:18:5-42
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:6:5-8:41
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\6db4f16f50841e5b479273be0457c0186bf4589b\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\9924e83ec05492dcad42d81b8552b9c7cf030a88\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\904ca5c670b4ccd92ccfbfd1c522eb63340d82de\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\6431fdcb957fdd56d28e32ef9ad5752e626e5377\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\19af188f3ef66ddabe45f1b171232ba08fe68a34\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\8d55ffd3ce6a5bc14a1f1e7683c97e88132088c1\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\b3431f6207ac5fd92750f0d061291b824ab86fa8\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\8cc79b552f1d7c5ea5e834044b826d9c3f2fbfda\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\db7f57c8da3387d374ca3854d3410b5b9d4d9edb\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\130fc732e88be1e18da6d054b2ef0513fb507585\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\95f48f76b99ab96006d6f9553b98b88d32ed39a1\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\8d55ffd3ce6a5bc14a1f1e7683c97e88132088c1\output\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:10:9-38
 		INJECTED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml
@@ -92,12 +92,12 @@ MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\bui
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:20:5-24:19
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:10:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\fffec246c6c426a7d9428798179b1b274b69cceb\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\6db4f16f50841e5b479273be0457c0186bf4589b\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\9924e83ec05492dcad42d81b8552b9c7cf030a88\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\904ca5c670b4ccd92ccfbfd1c522eb63340d82de\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\6431fdcb957fdd56d28e32ef9ad5752e626e5377\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\19af188f3ef66ddabe45f1b171232ba08fe68a34\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\8d55ffd3ce6a5bc14a1f1e7683c97e88132088c1\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\b3431f6207ac5fd92750f0d061291b824ab86fa8\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\julian\.android\build-cache\8cc79b552f1d7c5ea5e834044b826d9c3f2fbfda\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.android\build-cache\db7f57c8da3387d374ca3854d3410b5b9d4d9edb\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\130fc732e88be1e18da6d054b2ef0513fb507585\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\95f48f76b99ab96006d6f9553b98b88d32ed39a1\output\AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:26:6-38
 	android:manageSpaceActivity
@@ -234,11 +234,11 @@ MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julia
 	android:name
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:111:4-49
 permission#org.grameenfoundation.fdp.C2D_MESSAGE
-ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:122:5-123:41
+ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:120:5-121:41
 	android:protectionLevel
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:123:3-38
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:121:3-38
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:122:17-69
+		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:120:17-69
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
 ADDED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:9-104
 	android:name
