@@ -523,6 +523,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -768,6 +769,23 @@
         <item>3.5×4</item>
         <item>4x4</item>
     </string-array>
+    <string-array name="treeDistance16">
+        <item>2x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
     <string-array name="cert">
         <item>N/A</item>
         <item>UTZ</item>
@@ -936,4 +954,8 @@
     <string name="renovated">plot ini baru-baru ini direnovasi?</string>
     <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
     <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
+    <string name="thinning">penjarangan</string>
+    <string name="takeAgree">Setuju dengan foto</string>
+    <string name="takePhoto">Ambil Foto</string>
+    <string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string>
 </resources>

@@ -84,6 +84,20 @@
             </intent-filter>
         </activity>
 
+        <!-- photo screen -->
+        <activity
+            android:name="org.grameenfoundation.fdp.ui.photoActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="org.grameenfoundation.fdp.ui.DetailActivity"
+            android:theme="@style/SalesforceSDK.ActionBarTheme"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- Plot screen -->
         <activity
             android:name="org.grameenfoundation.fdp.ui.plotActivity"

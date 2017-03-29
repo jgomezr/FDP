@@ -25,7 +25,7 @@ public class fdpFragment extends Fragment {
     public Spinner start;
     private Button changeR;
     private EditText comment;
-    private TextView plotLB,gaplp,grflp,replp,exslp,limlp,dralp,fillp,lablp,lnp,lcp,lnpy1,lnpy2,lnpy3,lnpy4,lnpy5,lnpy6,lnpy7,lcpy1,lcpy2,lcpy3,lcpy4,lcpy5,lcpy6,lcpy7,plpy1,plpy2,plpy3,plpy4,plpy5,plpy6,plpy7,incomeY1,incomeY2,incomeY3,incomeY4,incomeY5,incomeY6,incomeY7,costY1,costY2,costY3,costY4,costY5,costY6,costY7;
+    private TextView plotLB,gaplp,grflp,replp,exslp,limlp,dralp,fillp,thinninglp,lablp,lnp,lcp,lnpy1,lnpy2,lnpy3,lnpy4,lnpy5,lnpy6,lnpy7,lcpy1,lcpy2,lcpy3,lcpy4,lcpy5,lcpy6,lcpy7,plpy1,plpy2,plpy3,plpy4,plpy5,plpy6,plpy7,incomeY1,incomeY2,incomeY3,incomeY4,incomeY5,incomeY6,incomeY7,costY1,costY2,costY3,costY4,costY5,costY6,costY7;
     int income1 = 0;
     int income2 = 0;
     int income3 = 0;
@@ -101,6 +101,7 @@ public class fdpFragment extends Fragment {
         limlp = (TextView)view.findViewById(R.id.limeLabelP_field);
         dralp = (TextView)view.findViewById(R.id.drainageLabelP_field);
         fillp = (TextView)view.findViewById(R.id.fillingLabelP_field);
+        thinninglp = (TextView)view.findViewById(R.id.thinningLabelP_field);
         lablp = (TextView)view.findViewById(R.id.laborLabelP_field);
         lnp = (TextView)view.findViewById(R.id.lnp);
         lcp = (TextView)view.findViewById(R.id.lcp);
@@ -2246,6 +2247,9 @@ public class fdpFragment extends Fragment {
         }
         if (otherint =="filling"){
             fillp.setVisibility(View.VISIBLE);
+        }
+        if (otherint =="thinning"){
+            thinninglp.setVisibility(View.VISIBLE);
         }
         if (otherint =="drainage"){
             dralp.setVisibility(View.VISIBLE);

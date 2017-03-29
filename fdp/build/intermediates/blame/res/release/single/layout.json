@@ -52,6 +52,10 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\layout\\sf__manage_space.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\layout\\photo.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout\\photo.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\layout\\sf__server_picker_list.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\layout\\sf__server_picker_list.xml"
     },

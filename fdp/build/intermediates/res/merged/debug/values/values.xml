@@ -385,6 +385,7 @@
         <item>2x2</item>
 		<item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -511,6 +512,23 @@
         <item>3.5×4</item>
         <item>4x4</item>
     </string-array>
+    <string-array name="treeDistance16">
+		<item>2x3.5</item>
+		<item>2x2</item>
+		<item>2x2.5</item>
+		<item>2x3</item>
+		<item>2x4</item>
+		<item>2.5x2.5</item>
+		<item>2.5x3.5</item>
+		<item>2.5x4</item>
+		<item>3x2.5</item>
+		<item>3x3</item>
+		<item>3x3.5</item>
+		<item>3.5x3.5</item>
+		<item>3×4</item>
+		<item>3.5×4</item>
+		<item>4x4</item>
+	</string-array>
     <string-array name="treeDistance2">
         <item>2.5x2.5</item>
         <item>2x2</item>
@@ -2269,6 +2287,7 @@
     <string name="areaEmpty">Your plots area cannot be empty</string>
     <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
+    <string name="areasInco">Your areas present inconsistencies fix it before continuing</string>
     <string name="aug">August</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -2562,6 +2581,9 @@
     <string name="spousePaidWork">C7. Does spouse have any paid work other than working on own cocoa farm:</string>
     <string name="startYear">Start Year</string>
     <string name="switch_user_button">Switch User</string>
+    <string name="takeAgree">Agree with photo</string>
+    <string name="takePhoto">Take Photo</string>
+    <string name="thinning">Thinning</string>
     <string name="tool1">This includes paid labor on other farms, nursery, other business or services that bring in money into the farmer household</string>
     <string name="tool2">This includes paid labor on other farms, sales from other business or services for other people that bring in money into the household</string>
     <string name="tool3">This includes all money that is available to family excluding that from farmer and spouse. Money can be from brothers, sisters, parents or other family members who can be living in home or sending from other village, city or country</string>

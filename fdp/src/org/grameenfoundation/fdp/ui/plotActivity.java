@@ -1311,6 +1311,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -1812,6 +1818,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = cteP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else{
@@ -2318,6 +2330,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -2819,6 +2837,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = cteP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else{
@@ -3325,6 +3349,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -3826,6 +3856,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = cteP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else{
@@ -4331,6 +4367,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -4832,6 +4874,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = cteP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else{
@@ -5337,6 +5385,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else{
                 Spinner spinner = cteP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -5839,6 +5893,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = cteP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance15, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("2x3.5")) {
+                Spinner spinner = cteP10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.treeDistance16, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else{

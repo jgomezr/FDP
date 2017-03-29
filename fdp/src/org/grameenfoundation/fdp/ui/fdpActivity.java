@@ -1384,7 +1384,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption1().equals("Yes")||sObject.getFillingOption1().equals("Ya")) {
-                    fragment1.other("filling");
+                    if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment1.other("thinning");
+                    }else{
+                        fragment1.other("filling");
+                    }
+
                 }
 
                 if (sObject.getDrainageNeed1().equals("Yes")||sObject.getDrainageNeed1().equals("Ya")) {
@@ -1514,7 +1519,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption2().equals("Yes")||sObject.getFillingOption2().equals("Ya")) {
-                    fragment2.other("filling");
+                    if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment2.other("thinning");
+                    }else{
+                        fragment2.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed2().equals("Yes")||sObject.getDrainageNeed2().equals("Ya")) {
@@ -1646,7 +1655,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption3().equals("Yes")||sObject.getFillingOption3().equals("Ya")) {
-                    fragment3.other("filling");
+                    if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment3.other("thinning");
+                    }else{
+                        fragment3.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed3().equals("Yes")||sObject.getDrainageNeed3().equals("Ya")) {
@@ -1776,7 +1789,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption4().equals("Yes")||sObject.getFillingOption4().equals("Ya")) {
-                    fragment4.other("filling");
+                    if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment4.other("thinning");
+                    }else{
+                        fragment4.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed4().equals("Yes")||sObject.getDrainageNeed4().equals("Ya")) {
@@ -1906,7 +1923,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption5().equals("Yes")||sObject.getFillingOption5().equals("Ya")) {
-                    fragment5.other("filling");
+                    if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment5.other("thinning");
+                    }else{
+                        fragment5.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed5().equals("Yes")||sObject.getDrainageNeed5().equals("Ya")) {
@@ -2035,7 +2056,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption6().equals("Yes")||sObject.getFillingOption6().equals("Ya")) {
-                    fragment6.other("filling");
+                    if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment6.other("thinning");
+                    }else{
+                        fragment6.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed6().equals("Yes")||sObject.getDrainageNeed6().equals("Ya")) {
@@ -2165,7 +2190,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption7().equals("Yes")||sObject.getFillingOption7().equals("Ya")) {
-                    fragment7.other("filling");
+                    if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment7.other("thinning");
+                    }else{
+                        fragment7.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed7().equals("Yes")||sObject.getDrainageNeed7().equals("Ya")) {
@@ -2294,7 +2323,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption8().equals("Yes")||sObject.getFillingOption8().equals("Ya")) {
-                    fragment8.other("filling");
+                    if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment8.other("thinning");
+                    }else{
+                        fragment8.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed8().equals("Yes")||sObject.getDrainageNeed8().equals("Ya")) {
@@ -2424,7 +2457,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption9().equals("Yes")||sObject.getFillingOption9().equals("Ya")) {
-                    fragment9.other("filling");
+                    if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment9.other("thinning");
+                    }else{
+                        fragment9.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed9().equals("Yes")||sObject.getDrainageNeed9().equals("Ya")) {
@@ -2553,7 +2590,11 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption10().equals("Yes")||sObject.getFillingOption10().equals("Ya")) {
-                    fragment10.other("filling");
+                    if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")) {
+                        fragment10.other("thinning");
+                    }else{
+                        fragment10.other("filling");
+                    }
                 }
 
                 if (sObject.getDrainageNeed10().equals("Yes")||sObject.getDrainageNeed10().equals("Ya")) {

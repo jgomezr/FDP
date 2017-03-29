@@ -320,11 +320,15 @@ public class MainActivity extends SalesforceListActivity implements
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         final File[] files = new File(String.valueOf(storageDir)).listFiles();
         if(files != null){
-
             for (int i = 0; i < files.length; i++) {
                 String name = files[i].getName();
                 File f = new File(String.valueOf(files[i]));
-                Bitmap bitmap = BitmapFactory.decodeFile(String.valueOf(f.getAbsolutePath()));
+                BitmapFactory.Options options = new BitmapFactory.Options();
+				options.inSampleSize = 2;
+                String fname= String.valueOf(f.getAbsolutePath());
+                Log.v("fname bitmap:", String.valueOf(fname));
+                Bitmap bitmap = BitmapFactory.decodeFile(fname,options);
+				Log.v("bitmap:", String.valueOf(bitmap));
                 String myBase64Image = encodeToBase64(bitmap, Bitmap.CompressFormat.JPEG, 100);
                 fields.put("Name", name);
                 fields.put("ParentId", name.substring(0, 18));

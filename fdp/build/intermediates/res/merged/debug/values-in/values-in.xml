@@ -382,6 +382,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -500,6 +501,23 @@
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance16">
+        <item>2x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
@@ -734,6 +752,7 @@
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
     <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
     <string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string>
+    <string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string>
     <string name="aug">Agusutus</string>
     <string name="autosave">Simpan Otomatis</string>
     <string name="averageCocoaPrice">28. Rata-rata gerbang Pertanian biji kering kakao harga per Kg</string>
@@ -918,6 +937,7 @@
     <string name="renovated">plot ini baru-baru ini direnovasi?</string>
     <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
     <string name="renovationArea">37. Total renovasi penanaman kakao sudah di bawah ukuran (Ha)</string>
+    <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
     <string name="replant">Penanamman kembali</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>
     <string name="saved">Simpan Berhasil</string>
@@ -934,6 +954,9 @@
     <string name="spousePaidWork">C7. Apakah pasangan memiliki pekerjaan yang dibayar selain bekerja di pertanian kakao sendiri</string>
     <string name="startYear">Tahun Mulai</string>
     <string name="switch_user_button">Ganti Pengguna</string>
+    <string name="takeAgree">Setuju dengan foto</string>
+    <string name="takePhoto">Ambil Foto</string>
+    <string name="thinning">penjarangan</string>
     <string name="tool1">Ini termasuk biaya pekerja di kebun lain,pembibitan, bisnis lain atau servis yang menghasilkan uang untuk petani</string>
     <string name="tool2">Ini termasuk biaya pekerja di kebun lain,penjualan dari bisnis lain atau servis untuk orang lain yang menghasilkan uang</string>
     <string name="tool3">Ini termasuk semua uang yang tersedia di keluarga tidak termasuk dari petani dan pasangan. Pendapatan bisa dari manasaja</string>

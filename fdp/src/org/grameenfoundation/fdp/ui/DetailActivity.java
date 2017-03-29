@@ -9,13 +9,9 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.provider.Settings;
-import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -49,8 +45,6 @@ import org.grameenfoundation.fdp.objects.ContactObject;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.text.DecimalFormat;
 
@@ -78,6 +72,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	public static final String OBJECT_ID_KEY = "object_id";
 	public static final String OBJECT_TITLE_KEY = "object_title";
 	public static final String OBJECT_NAME_KEY = "object_name";
+    public static final String PHOTO_NAME = "photo_Name";
 	String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
 
@@ -668,10 +663,30 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 tc=0;
                 tr=0;
             }else{
-                toa=Double.parseDouble(tOS.getText().toString());
-                tl= Double.parseDouble(tL.getText().toString());
-                tc= Double.parseDouble(tC.getText().toString());
-                tr= Double.parseDouble(tR.getText().toString());
+                if(tOS.getText().toString().startsWith(".")){
+                    toa=Double.parseDouble(0+tOS.getText().toString());
+                }else{
+                    toa=Double.parseDouble(tOS.getText().toString());
+                }
+
+                if(tL.getText().toString().startsWith(".")){
+                    tl= Double.parseDouble(0+tL.getText().toString());
+                }else{
+                    tl= Double.parseDouble(tL.getText().toString());
+                }
+
+                if(tC.getText().toString().startsWith(".")){
+                    tc= Double.parseDouble(0+tC.getText().toString());
+                }else{
+                    tc= Double.parseDouble(tC.getText().toString());
+                }
+
+                if(tR.getText().toString().startsWith(".")){
+                    tr= Double.parseDouble(0+tR.getText().toString());
+                }else{
+                    tr= Double.parseDouble(tR.getText().toString());
+                }
+
             }
             if (tl>toa) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
@@ -714,6 +729,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
         @Override
         public void afterTextChanged(Editable editable) {
+            //savePoint();
             EditText editText = editTextWeakReference.get();
             double qc;
             double fm;
@@ -812,59 +828,29 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         }
     }
 
-	private File createImageFile(String name) throws IOException {
-		// Create an image file name
-
-		String imageFileName = objectId+"_"+ name;
-		File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-		File image = File.createTempFile(
-				imageFileName,  /* prefix */
-				".jpg",         /* suffix */
-				storageDir      /* directory */
-		);
-
-		// Save a file: path for use with ACTION_VIEW intents
-		mCurrentPhotoPath = image.getAbsolutePath();
-		return image;
-	}
 
     public void dispatchTakePictureIntent(View view) {
-		savePoint();
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            File photoFile = null;
-            try {
-                switch (view.getId()) {
-                    case R.id.familyPhoto:
-                        photoFile = createImageFile("family");
-                        break;
-                    case R.id.mapPhoto:
-                        photoFile = createImageFile("farm");
-                        break;
-                }
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-            }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider",
-                        photoFile);
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
+        save();
+        String photoFile = "null";
+        switch (view.getId()) {
+            case R.id.familyPhoto:
+                photoFile = "family";
+                break;
+            case R.id.mapPhoto:
+                photoFile = "farm";
+                break;
         }
+
+        final Intent photoIntent = new Intent(this, photoActivity.class);
+        photoIntent.addCategory(Intent.CATEGORY_DEFAULT);
+        photoIntent.putExtra(OBJECT_ID_KEY, sObject.getObjectId());
+        photoIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
+        photoIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
+        photoIntent.putExtra(PHOTO_NAME, photoFile);
+        startActivity(photoIntent);
+
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
-            Toast.makeText(this, this.getString(R.string.photoSuccess), Toast.LENGTH_LONG).show();
-
-        }
-    }
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -1637,7 +1623,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             setText((EditText) findViewById(R.id.phoneNumber),
                     sObject.getPhoneNumber());
 
-
             //set Hire days
             if (sObject.getHowManyLaborDaysHire().isEmpty()){
                 setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
@@ -1715,25 +1700,25 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						R.array.bank1, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getWANTACCOUNT().contentEquals("Mobile banking")) {
+			} else if (sObject.getACCOUNTTYPE().contentEquals("Mobile banking")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank2, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			}else if (sObject.getWANTACCOUNT().contentEquals("Micro finance")) {
+			}else if (sObject.getACCOUNTTYPE().contentEquals("Micro finance")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank3, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			}else if (sObject.getWANTACCOUNT().contentEquals("Village loan")||sObject.getWANTACCOUNT().contentEquals("Pinjaman desa")) {
+			}else if (sObject.getACCOUNTTYPE().contentEquals("Village loan")||sObject.getACCOUNTTYPE().contentEquals("Pinjaman desa")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank4, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			}else if (sObject.getWANTACCOUNT().contentEquals("Other")||sObject.getWANTACCOUNT().contentEquals("Lainnya")) {
+			}else if (sObject.getACCOUNTTYPE().contentEquals("Other")||sObject.getACCOUNTTYPE().contentEquals("Lainnya")) {
 				Spinner spinner = (Spinner) findViewById(R.id.accountType_field);
 				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 						R.array.bank5, android.R.layout.simple_spinner_item);
@@ -1761,8 +1746,15 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
         final String title = ((EditText) findViewById(R.id.farmer_code_field)).getText().toString();
         final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
+        final double farmArea = Double.parseDouble(((EditText) findViewById(R.id.farmArea_field)).getText().toString());
+        final double farmCocoaArea = Double.parseDouble(((EditText) findViewById(R.id.cocoaArea_field)).getText().toString());
+        final double farmRenArea = Double.parseDouble(((EditText) findViewById(R.id.renovationArea_field)).getText().toString());
+        final double cultivating = Double.parseDouble(((EditText) findViewById(R.id.cultivationArea_field)).getText().toString());
         if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(title)||TextUtils.equals(numberPlots,"0")) {
             Toast.makeText(this, this.getString(R.string.cannotBeEmpty), Toast.LENGTH_LONG).show();
+            return;
+        }else if(cultivating>farmArea||farmCocoaArea>cultivating||farmRenArea>farmCocoaArea){
+            Toast.makeText(this, this.getString(R.string.areasInco), Toast.LENGTH_LONG).show();
             return;
         }else{
 			save();
@@ -1772,7 +1764,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			plotIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
 			plotIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
 			startActivity(plotIntent);
-
         }
 	}
 

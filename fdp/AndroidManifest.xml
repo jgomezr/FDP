@@ -3,7 +3,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="org.grameenfoundation.fdp"
 	android:versionCode="1"
-	android:versionName="1.51"
+	android:versionName="1.52"
 	android:installLocation="internalOnly">
 
     <uses-sdk android:minSdkVersion="19"
@@ -50,6 +50,18 @@
 		<!-- Detail screen -->
 		<activity android:name="org.grameenfoundation.fdp.ui.DetailActivity"
             android:parentActivityName="org.grameenfoundation.fdp.MainActivity"
+			android:configChanges="orientation|screenSize"
+			android:theme="@style/SalesforceSDK.ActionBarTheme"
+			android:windowSoftInputMode="stateHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.DETAIL" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<!-- photo screen -->
+		<activity android:name="org.grameenfoundation.fdp.ui.photoActivity"
+			android:parentActivityName="org.grameenfoundation.fdp.ui.DetailActivity"
 			android:configChanges="orientation|screenSize"
 			android:theme="@style/SalesforceSDK.ActionBarTheme"
 			android:windowSoftInputMode="stateHidden">
