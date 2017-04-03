@@ -507,7 +507,7 @@
         <item>3×4</item>
         <item>3.5×4</item>
         <item>4x4</item>
-    </string-array><string-array name="treeDistance16">
+    </string-array><string name="areasInco">Your areas present inconsistencies fix it before continuing</string><string-array name="treeDistance16">
 		<item>2x3.5</item>
 		<item>2x2</item>
 		<item>2x2.5</item>
@@ -1109,7 +1109,7 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="takePhoto">Ambil Foto</string><string name="gender">4. Jenis Kelamin</string><string name="costInvest">Pengeluaran pemeliharaan/investasi</string><string name="totalExpenses">Total pengeluaran keluarga</string><string name="fertilizerFormulation">56. Formulasi Pupuk</string><string name="moneyBack">C15. Berapa banyak memiliki mereka kembali?</string><string name="fillingOption">60. Opsi untuk penyisipan atau penjarangan</string><string name="spouseEducationalLevel">C3. Tingkat pendidikan pasangan</string><string name="saveContinue">Simpan dan Lanjutkan</string><string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string><string name="graft">Sambungan</string><string-array name="yesHire">
+    </string-array><string name="takePhoto">Ambil Foto</string><string name="gender">4. Jenis Kelamin</string><string name="costInvest">Pengeluaran pemeliharaan/investasi</string><string name="totalExpenses">Total pengeluaran keluarga</string><string name="fertilizerFormulation">56. Formulasi Pupuk</string><string name="moneyBack">C15. Berapa banyak memiliki mereka kembali?</string><string name="fillingOption">60. Opsi untuk penyisipan atau penjarangan</string><string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string><string name="spouseEducationalLevel">C3. Tingkat pendidikan pasangan</string><string name="saveContinue">Simpan dan Lanjutkan</string><string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string><string name="graft">Sambungan</string><string-array name="yesHire">
         <item>Ya</item>
         <item>Musiman</item>
         <item>Tidak</item>

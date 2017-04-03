@@ -1292,9 +1292,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
+                    if (sObject.getFarmCondition1().equals("B")|| (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.mainint("replant", "extra", "labor", plot1Area, avgCost, age1);
                                 fragment1.other("labor");
@@ -1316,9 +1316,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition1().equals("G") && sObject.getGENETIC1().equals("B")) || (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition1().equals("G") && (sObject.getGENETIC1().equals("B")||sObject.getGENETIC1().equals("M"))) || ((Integer.parseInt(sObject.getPlot1Age()) > 20) && (Integer.parseInt(sObject.getPlot1Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.mainint("graft", "extra", "labor", plot1Area, avgCost, age1);
                                 fragment1.other("labor");
@@ -1340,7 +1340,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG1().equals("B")) {
+                    } else if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                             fragment1.mainint("extra", "", "labor", plot1Area, avgCost, age1);
@@ -1354,7 +1354,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.mainint("gap", "extra", "labor", plot1Area, avgCost, age1);
                                 fragment1.other("labor");
@@ -1427,9 +1427,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition2().equals("B") && (Integer.parseInt(sObject.getPlot2Age()) > 25)) {
+                    if (sObject.getFarmCondition2().equals("B") || (Integer.parseInt(sObject.getPlot2Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG2().equals("B")) {
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.mainint("replant", "extra", "labor", plot2Area, avgCost, age2);
                                 fragment2.other("labor");
@@ -1451,9 +1451,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition2().equals("G") && sObject.getGENETIC2().equals("B")) || (sObject.getFarmCondition2().equals("B") && (Integer.parseInt(sObject.getPlot2Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition2().equals("G") && (sObject.getGENETIC2().equals("B")||sObject.getGENETIC2().equals("M"))) || ((Integer.parseInt(sObject.getPlot2Age()) > 20) && (Integer.parseInt(sObject.getPlot2Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG2().equals("B")) {
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.mainint("graft", "extra", "labor", plot2Area, avgCost, age2);
                                 fragment2.other("labor");
@@ -1475,7 +1475,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG2().equals("B")) {
+                    } else if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
                             fragment2.mainint("extra", "", "labor", plot2Area, avgCost, age2);
@@ -1489,7 +1489,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG2().equals("B")) {
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.mainint("gap", "extra", "labor", plot2Area, avgCost, age2);
                                 fragment2.other("labor");
@@ -1562,9 +1562,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition3().equals("B") && (Integer.parseInt(sObject.getPlot3Age()) > 25)) {
+                    if (sObject.getFarmCondition3().equals("B") || (Integer.parseInt(sObject.getPlot3Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG3().equals("B")) {
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.mainint("replant", "extra", "labor", plot3Area, avgCost, age3);
                                 fragment3.other("labor");
@@ -1586,9 +1586,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition3().equals("G") && sObject.getGENETIC3().equals("B")) || (sObject.getFarmCondition3().equals("B") && (Integer.parseInt(sObject.getPlot3Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition3().equals("G") && (sObject.getGENETIC3().equals("B")||sObject.getGENETIC3().equals("M"))) || ((Integer.parseInt(sObject.getPlot3Age()) > 20) && (Integer.parseInt(sObject.getPlot3Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG3().equals("B")) {
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.mainint("graft", "extra", "labor", plot3Area, avgCost, age3);
                                 fragment3.other("labor");
@@ -1610,7 +1610,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG3().equals("B")) {
+                    } else if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
                             fragment3.mainint("extra", "", "labor", plot3Area, avgCost, age3);
@@ -1624,7 +1624,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG3().equals("B")) {
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.mainint("gap", "extra", "labor", plot3Area, avgCost, age3);
                                 fragment3.other("labor");
@@ -1697,9 +1697,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition4().equals("B") && (Integer.parseInt(sObject.getPlot4Age()) > 25)) {
+                    if (sObject.getFarmCondition4().equals("B") || (Integer.parseInt(sObject.getPlot4Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG4().equals("B")) {
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.mainint("replant", "extra", "labor", plot4Area, avgCost, age4);
                                 fragment4.other("labor");
@@ -1721,9 +1721,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition4().equals("G") && sObject.getGENETIC4().equals("B")) || (sObject.getFarmCondition4().equals("B") && (Integer.parseInt(sObject.getPlot4Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition4().equals("G") && (sObject.getGENETIC4().equals("B")||sObject.getGENETIC4().equals("M"))) || ((Integer.parseInt(sObject.getPlot4Age()) > 20) && (Integer.parseInt(sObject.getPlot4Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG4().equals("B")) {
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.mainint("graft", "extra", "labor", plot4Area, avgCost, age4);
                                 fragment4.other("labor");
@@ -1745,7 +1745,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG4().equals("B")) {
+                    } else if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
                             fragment4.mainint("extra", "", "labor", plot4Area, avgCost, age4);
@@ -1759,7 +1759,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG4().equals("B")) {
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.mainint("gap", "extra", "labor", plot4Area, avgCost, age4);
                                 fragment4.other("labor");
@@ -1831,9 +1831,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition5().equals("B") && (Integer.parseInt(sObject.getPlot5Age()) > 25)) {
+                    if (sObject.getFarmCondition5().equals("B") || (Integer.parseInt(sObject.getPlot5Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG5().equals("B")) {
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.mainint("replant", "extra", "labor", plot5Area, avgCost, age5);
                                 fragment5.other("labor");
@@ -1855,9 +1855,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition5().equals("G") && sObject.getGENETIC5().equals("B")) || (sObject.getFarmCondition5().equals("B") && (Integer.parseInt(sObject.getPlot5Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition5().equals("G") && (sObject.getGENETIC5().equals("B")||sObject.getGENETIC5().equals("M"))) || ((Integer.parseInt(sObject.getPlot5Age()) > 20) && (Integer.parseInt(sObject.getPlot5Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG5().equals("B")) {
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.mainint("graft", "extra", "labor", plot5Area, avgCost, age5);
                                 fragment5.other("labor");
@@ -1879,7 +1879,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG5().equals("B")) {
+                    } else if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
                             fragment5.mainint("extra", "", "labor", plot5Area, avgCost, age5);
@@ -1893,7 +1893,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG5().equals("B")) {
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.mainint("gap", "extra", "labor", plot5Area, avgCost, age5);
                                 fragment5.other("labor");
@@ -1964,9 +1964,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition6().equals("B") && (Integer.parseInt(sObject.getPlot6Age()) > 25)) {
+                    if (sObject.getFarmCondition6().equals("B") || (Integer.parseInt(sObject.getPlot6Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG6().equals("B")) {
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.mainint("replant", "extra", "labor", plot6Area, avgCost, age6);
                                 fragment6.other("labor");
@@ -1988,9 +1988,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition6().equals("G") && sObject.getGENETIC6().equals("B")) || (sObject.getFarmCondition6().equals("B") && (Integer.parseInt(sObject.getPlot6Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition6().equals("G") && (sObject.getGENETIC6().equals("B")||sObject.getGENETIC6().equals("M"))) || ((Integer.parseInt(sObject.getPlot6Age()) > 20) && (Integer.parseInt(sObject.getPlot6Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG6().equals("B")) {
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.mainint("graft", "extra", "labor", plot6Area, avgCost, age6);
                                 fragment6.other("labor");
@@ -2012,7 +2012,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG6().equals("B")) {
+                    } else if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
                             fragment6.mainint("extra", "", "labor", plot6Area, avgCost, age6);
@@ -2026,7 +2026,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG6().equals("B")) {
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.mainint("gap", "extra", "labor", plot6Area, avgCost, age6);
                                 fragment6.other("labor");
@@ -2098,9 +2098,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition7().equals("B") && (Integer.parseInt(sObject.getPlot7Age()) > 25)) {
+                    if (sObject.getFarmCondition7().equals("B") || (Integer.parseInt(sObject.getPlot7Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG7().equals("B")) {
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.mainint("replant", "extra", "labor", plot7Area, avgCost, age7);
                                 fragment7.other("labor");
@@ -2122,9 +2122,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition7().equals("G") && sObject.getGENETIC7().equals("B")) || (sObject.getFarmCondition7().equals("B") && (Integer.parseInt(sObject.getPlot7Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition7().equals("G") && (sObject.getGENETIC7().equals("B")||sObject.getGENETIC7().equals("M"))) || ((Integer.parseInt(sObject.getPlot7Age()) > 20) && (Integer.parseInt(sObject.getPlot7Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG7().equals("B")) {
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.mainint("graft", "extra", "labor", plot7Area, avgCost, age7);
                                 fragment7.other("labor");
@@ -2146,7 +2146,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG7().equals("B")) {
+                    } else if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
                             fragment7.mainint("extra", "", "labor", plot7Area, avgCost, age7);
@@ -2160,7 +2160,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG7().equals("B")) {
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.mainint("gap", "extra", "labor", plot7Area, avgCost, age7);
                                 fragment7.other("labor");
@@ -2231,9 +2231,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition8().equals("B") && (Integer.parseInt(sObject.getPlot8Age()) > 25)) {
+                    if (sObject.getFarmCondition8().equals("B") || (Integer.parseInt(sObject.getPlot8Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG8().equals("B")) {
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.mainint("replant", "extra", "labor", plot8Area, avgCost, age8);
                                 fragment8.other("labor");
@@ -2255,9 +2255,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition8().equals("G") && sObject.getGENETIC8().equals("B")) || (sObject.getFarmCondition8().equals("B") && (Integer.parseInt(sObject.getPlot8Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition8().equals("G") && (sObject.getGENETIC8().equals("B")||sObject.getGENETIC8().equals("M"))) || ((Integer.parseInt(sObject.getPlot8Age()) > 20) && (Integer.parseInt(sObject.getPlot8Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG8().equals("B")) {
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.mainint("graft", "extra", "labor", plot8Area, avgCost, age8);
                                 fragment8.other("labor");
@@ -2279,9 +2279,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG8().equals("B") || sObject.getHireLabor8().equals("Ya")) {
+                    } else if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                         //Extra Soil Management
-                        if (sObject.getHireLabor8().equals("Yes")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
                             fragment8.mainint("extra", "", "labor", plot8Area, avgCost, age8);
                             fragment8.other("labor");
                         } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Musiman")) {
@@ -2293,7 +2293,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG8().equals("B")) {
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.mainint("gap", "extra", "labor", plot8Area, avgCost, age8);
                                 fragment8.other("labor");
@@ -2365,9 +2365,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition9().equals("B") && (Integer.parseInt(sObject.getPlot9Age()) > 25)) {
+                    if (sObject.getFarmCondition9().equals("B") || (Integer.parseInt(sObject.getPlot9Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG9().equals("B")) {
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.mainint("replant", "extra", "labor", plot9Area, avgCost, age9);
                                 fragment9.other("labor");
@@ -2389,9 +2389,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition9().equals("G") && sObject.getGENETIC9().equals("B")) || (sObject.getFarmCondition9().equals("B") && (Integer.parseInt(sObject.getPlot9Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition9().equals("G") && (sObject.getGENETIC9().equals("B")||sObject.getGENETIC9().equals("M"))) || ((Integer.parseInt(sObject.getPlot9Age()) > 20) && (Integer.parseInt(sObject.getPlot9Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG9().equals("B")) {
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.mainint("graft", "extra", "labor", plot9Area, avgCost, age9);
                                 fragment9.other("labor");
@@ -2413,7 +2413,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG9().equals("B")) {
+                    } else if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
                             fragment9.mainint("extra", "", "labor", plot9Area, avgCost, age9);
@@ -2427,7 +2427,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG9().equals("B")) {
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.mainint("gap", "extra", "labor", plot9Area, avgCost, age9);
                                 fragment9.other("labor");
@@ -2498,9 +2498,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition10().equals("B") && (Integer.parseInt(sObject.getPlot10Age()) > 25)) {
+                    if (sObject.getFarmCondition10().equals("B") || (Integer.parseInt(sObject.getPlot10Age()) > 25)) {
                         //Replant
-                        if (sObject.getSOILMNG10().equals("B")) {
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.mainint("replant", "extra", "labor", plot10Area, avgCost, age10);
                                 fragment10.other("labor");
@@ -2522,9 +2522,9 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition10().equals("G") && sObject.getGENETIC10().equals("B")) || (sObject.getFarmCondition10().equals("B") && (Integer.parseInt(sObject.getPlot10Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition10().equals("G") && (sObject.getGENETIC10().equals("B")||sObject.getGENETIC10().equals("M"))) || ((Integer.parseInt(sObject.getPlot10Age()) > 20) && (Integer.parseInt(sObject.getPlot10Age()) < 26))) {
                         //Graft
-                        if (sObject.getSOILMNG10().equals("B")) {
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.mainint("graft", "extra", "labor", plot10Area, avgCost, age10);
                                 fragment10.other("labor");
@@ -2546,7 +2546,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if (sObject.getSOILMNG10().equals("B")) {
+                    } else if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
                             fragment10.mainint("extra", "", "labor", plot10Area, avgCost, age10);
@@ -2560,7 +2560,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG10().equals("B")) {
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.mainint("gap", "extra", "labor", plot10Area, avgCost, age10);
                                 fragment10.other("labor");

@@ -114,6 +114,8 @@ public class plotFragment extends Fragment  {
                 }
                 if (soilCP.getSelectedItem().toString().equals("B")||orgMaP.getSelectedItem().toString().equals("B")||fertFP.getSelectedItem().toString().equals("B")||fertAP.getSelectedItem().toString().equals("B")){
                     setText(soilFertMng,"B");
+                }else if (fertFP.getSelectedItem().toString().equals("M")||fertAP.getSelectedItem().toString().equals("M")){
+                    setText(soilFertMng,"M");
                 }else{
                     setText(soilFertMng,"G");
                 }

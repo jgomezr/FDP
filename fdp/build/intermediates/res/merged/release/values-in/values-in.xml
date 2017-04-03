@@ -752,6 +752,7 @@
     <string name="areaEmpty">Daerah plot Anda tidak boleh kosong</string>
     <string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string>
     <string name="areaHigher">Daerah plot Anda tidak bisa lebih tinggi dari di Area Kakao di pertanian, memperbaikinya sebelum melanjutkan</string>
+    <string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string>
     <string name="aug">Agusutus</string>
     <string name="autosave">Simpan Otomatis</string>
     <string name="averageCocoaPrice">28. Rata-rata gerbang Pertanian biji kering kakao harga per Kg</string>
