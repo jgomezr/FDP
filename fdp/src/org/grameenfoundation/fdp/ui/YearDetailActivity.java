@@ -168,9 +168,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
+                    if (sObject.getFarmCondition1().equals("B") || (Integer.parseInt(sObject.getPlot1Age()) > 30)) {
                         //Replant
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.calc("replant", "extra", "labor", plot1Area, startY1, yearLaunch);
                             } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
@@ -188,9 +188,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition1().equals("G") && sObject.getGENETIC1().equals("B")) || (sObject.getFarmCondition1().equals("B") && (Integer.parseInt(sObject.getPlot1Age()) < 25))) {
+                    } else if ((sObject.getFarmCondition1().equals("G") && (sObject.getGENETIC1().equals("B")||sObject.getGENETIC1().equals("M"))) || ((Integer.parseInt(sObject.getPlot1Age()) > 25) && (Integer.parseInt(sObject.getPlot1Age()) < 30))) {
                         //Graft
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.calc("graft", "extra", "labor", plot1Area, startY1, yearLaunch);
                             } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
@@ -208,7 +208,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if (sObject.getSOILMNG1().equals("B")) {
+                    } else if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                         //Extra Soil Management
                         if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                             fragment1.calc("extra", "", "labor", plot1Area, startY1, yearLaunch);
@@ -220,7 +220,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     } else {
                         //GAP
-                        if (sObject.getSOILMNG1().equals("B")) {
+                        if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.calc("gap", "extra", "labor", plot1Area, startY1, yearLaunch);
                             } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Musiman")) {
@@ -263,9 +263,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())>25)){
+                    if (sObject.getFarmCondition2().equals("B")||(Integer.parseInt(sObject.getPlot2Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")){
                             if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.calc("replant","extra","labor",plot2Area,startY2,yearLaunch);
                             }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
@@ -283,9 +283,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition2().equals("G")&&sObject.getGENETIC2().equals("B"))||(sObject.getFarmCondition2().equals("B")&&(Integer.parseInt(sObject.getPlot2Age())<25))){
+                    } else if((sObject.getFarmCondition2().equals("G") && (sObject.getGENETIC2().equals("B")||sObject.getGENETIC2().equals("M"))) || ((Integer.parseInt(sObject.getPlot2Age()) > 25) && (Integer.parseInt(sObject.getPlot2Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")){
                             if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.calc("graft","extra","labor",plot2Area,startY2,yearLaunch);
                             }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
@@ -303,7 +303,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG2().equals("B")){
+                    }else if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                             fragment2.calc("extra","","labor",plot2Area,startY2,yearLaunch);
@@ -315,7 +315,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG2().equals("B")){
+                        if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")){
                             if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.calc("gap","extra","labor",plot2Area,startY2,yearLaunch);
                             }else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Musiman")){
@@ -357,9 +357,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())>25)){
+                    if (sObject.getFarmCondition3().equals("B")||(Integer.parseInt(sObject.getPlot3Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")){
                             if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.calc("replant","extra","labor",plot3Area,startY3,yearLaunch);
                             }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
@@ -377,9 +377,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition3().equals("G")&&sObject.getGENETIC3().equals("B"))||(sObject.getFarmCondition3().equals("B")&&(Integer.parseInt(sObject.getPlot3Age())<25))){
+                    } else if((sObject.getFarmCondition3().equals("G") && (sObject.getGENETIC3().equals("B")||sObject.getGENETIC3().equals("M"))) || ((Integer.parseInt(sObject.getPlot3Age()) > 25) && (Integer.parseInt(sObject.getPlot3Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")){
                             if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.calc("graft","extra","labor",plot3Area,startY3,yearLaunch);
                             }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
@@ -397,7 +397,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG3().equals("B")){
+                    }else if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                             fragment3.calc("extra","","labor",plot3Area,startY3,yearLaunch);
@@ -409,7 +409,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG3().equals("B")){
+                        if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")){
                             if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.calc("gap","extra","labor",plot3Area,startY3,yearLaunch);
                             }else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Musiman")){
@@ -451,9 +451,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())>25)){
+                    if (sObject.getFarmCondition4().equals("B")||(Integer.parseInt(sObject.getPlot4Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")){
                             if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.calc("replant","extra","labor",plot4Area,startY4,yearLaunch);
                             }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
@@ -471,9 +471,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition4().equals("G")&&sObject.getGENETIC4().equals("B"))||(sObject.getFarmCondition4().equals("B")&&(Integer.parseInt(sObject.getPlot4Age())<25))){
+                    } else if((sObject.getFarmCondition4().equals("G") && (sObject.getGENETIC4().equals("B")||sObject.getGENETIC4().equals("M"))) || ((Integer.parseInt(sObject.getPlot4Age()) > 25) && (Integer.parseInt(sObject.getPlot4Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")){
                             if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.calc("graft","extra","labor",plot4Area,startY4,yearLaunch);
                             }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
@@ -491,7 +491,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG4().equals("B")){
+                    }else if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                             fragment4.calc("extra","","labor",plot4Area,startY4,yearLaunch);
@@ -503,7 +503,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG4().equals("B")){
+                        if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")){
                             if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.calc("gap","extra","labor",plot4Area,startY4,yearLaunch);
                             }else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Musiman")){
@@ -545,9 +545,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())>25)){
+                    if (sObject.getFarmCondition5().equals("B")||(Integer.parseInt(sObject.getPlot5Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")){
                             if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.calc("replant","extra","labor",plot5Area,startY5,yearLaunch);
                             }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
@@ -565,9 +565,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition5().equals("G")&&sObject.getGENETIC5().equals("B"))||(sObject.getFarmCondition5().equals("B")&&(Integer.parseInt(sObject.getPlot5Age())<25))){
+                    } else if((sObject.getFarmCondition5().equals("G") && (sObject.getGENETIC5().equals("B")||sObject.getGENETIC5().equals("M"))) || ((Integer.parseInt(sObject.getPlot5Age()) > 25) && (Integer.parseInt(sObject.getPlot5Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")){
                             if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.calc("graft","extra","labor",plot5Area,startY5,yearLaunch);
                             }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
@@ -585,7 +585,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG5().equals("B")){
+                    }else if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                             fragment5.calc("extra","","labor",plot5Area,startY5,yearLaunch);
@@ -597,7 +597,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG5().equals("B")){
+                        if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")){
                             if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.calc("gap","extra","labor",plot5Area,startY5,yearLaunch);
                             }else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Musiman")){
@@ -639,9 +639,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())>25)){
+                    if (sObject.getFarmCondition6().equals("B")||(Integer.parseInt(sObject.getPlot6Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")){
                             if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.calc("replant","extra","labor",plot6Area,startY6,yearLaunch);
                             }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
@@ -659,9 +659,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition6().equals("G")&&sObject.getGENETIC6().equals("B"))||(sObject.getFarmCondition6().equals("B")&&(Integer.parseInt(sObject.getPlot6Age())<25))){
+                    } else if((sObject.getFarmCondition6().equals("G") && (sObject.getGENETIC6().equals("B")||sObject.getGENETIC6().equals("M"))) || ((Integer.parseInt(sObject.getPlot6Age()) > 25) && (Integer.parseInt(sObject.getPlot6Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")){
                             if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.calc("graft","extra","labor",plot6Area,startY6,yearLaunch);
                             }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
@@ -679,7 +679,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG6().equals("B")){
+                    }else if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                             fragment6.calc("extra","","labor",plot6Area,startY6,yearLaunch);
@@ -691,7 +691,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG6().equals("B")){
+                        if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")){
                             if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.calc("gap","extra","labor",plot6Area,startY6,yearLaunch);
                             }else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Musiman")){
@@ -733,9 +733,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())>25)){
+                    if (sObject.getFarmCondition7().equals("B")||(Integer.parseInt(sObject.getPlot7Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")){
                             if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.calc("replant","extra","labor",plot7Area,startY7,yearLaunch);
                             }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
@@ -753,9 +753,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition7().equals("G")&&sObject.getGENETIC7().equals("B"))||(sObject.getFarmCondition7().equals("B")&&(Integer.parseInt(sObject.getPlot7Age())<25))){
+                    } else if((sObject.getFarmCondition7().equals("G") && (sObject.getGENETIC7().equals("B")||sObject.getGENETIC7().equals("M"))) || ((Integer.parseInt(sObject.getPlot7Age()) > 25) && (Integer.parseInt(sObject.getPlot7Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")){
                             if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.calc("graft","extra","labor",plot7Area,startY7,yearLaunch);
                             }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
@@ -773,7 +773,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG7().equals("B")){
+                    }else if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
                             fragment7.calc("extra","","labor",plot7Area,startY7,yearLaunch);
@@ -785,7 +785,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG7().equals("B")){
+                        if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")){
                             if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.calc("gap","extra","labor",plot7Area,startY7,yearLaunch);
                             }else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Musiman")){
@@ -827,9 +827,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())>25)){
+                    if (sObject.getFarmCondition8().equals("B")||(Integer.parseInt(sObject.getPlot8Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")){
                             if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.calc("replant","extra","labor",plot8Area,startY8,yearLaunch);
                             }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
@@ -847,9 +847,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition8().equals("G")&&sObject.getGENETIC8().equals("B"))||(sObject.getFarmCondition8().equals("B")&&(Integer.parseInt(sObject.getPlot8Age())<25))){
+                    } else if((sObject.getFarmCondition8().equals("G") && (sObject.getGENETIC8().equals("B")||sObject.getGENETIC8().equals("M"))) || ((Integer.parseInt(sObject.getPlot8Age()) > 25) && (Integer.parseInt(sObject.getPlot8Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")){
                             if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.calc("graft","extra","labor",plot8Area,startY8,yearLaunch);
                             }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
@@ -867,7 +867,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG8().equals("B")){
+                    }else if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
                             fragment8.calc("extra","","labor",plot8Area,startY8,yearLaunch);
@@ -879,7 +879,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG8().equals("B")){
+                        if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")){
                             if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.calc("gap","extra","labor",plot8Area,startY8,yearLaunch);
                             }else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Musiman")){
@@ -921,9 +921,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())>25)){
+                    if (sObject.getFarmCondition9().equals("B")||(Integer.parseInt(sObject.getPlot9Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")){
                             if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.calc("replant","extra","labor",plot9Area,startY9,yearLaunch);
                             }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
@@ -941,9 +941,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition9().equals("G")&&sObject.getGENETIC9().equals("B"))||(sObject.getFarmCondition9().equals("B")&&(Integer.parseInt(sObject.getPlot9Age())<25))){
+                    } else if((sObject.getFarmCondition9().equals("G") && (sObject.getGENETIC9().equals("B")||sObject.getGENETIC9().equals("M"))) || ((Integer.parseInt(sObject.getPlot9Age()) > 25) && (Integer.parseInt(sObject.getPlot9Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")){
                             if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.calc("graft","extra","labor",plot9Area,startY9,yearLaunch);
                             }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
@@ -961,7 +961,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG9().equals("B")){
+                    }else if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
                             fragment9.calc("extra","","labor",plot9Area,startY9,yearLaunch);
@@ -973,7 +973,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG9().equals("B")){
+                        if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")){
                             if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.calc("gap","extra","labor",plot9Area,startY9,yearLaunch);
                             }else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Musiman")){
@@ -1015,9 +1015,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         }
                     }
                 }else{
-                    if (sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())>25)){
+                    if (sObject.getFarmCondition10().equals("B")||(Integer.parseInt(sObject.getPlot10Age())>30)){
                         //Replant
-                        if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")){
                             if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.calc("replant","extra","labor",plot10Area,startY10,yearLaunch);
                             }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
@@ -1035,9 +1035,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    } else if((sObject.getFarmCondition10().equals("G")&&sObject.getGENETIC10().equals("B"))||(sObject.getFarmCondition10().equals("B")&&(Integer.parseInt(sObject.getPlot10Age())<25))){
+                    } else if((sObject.getFarmCondition10().equals("G") && (sObject.getGENETIC10().equals("B")||sObject.getGENETIC10().equals("M"))) || ((Integer.parseInt(sObject.getPlot10Age()) > 25) && (Integer.parseInt(sObject.getPlot10Age()) < 30))){
                         //Graft
-                        if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")){
                             if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.calc("graft","extra","labor",plot10Area,startY10,yearLaunch);
                             }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){
@@ -1055,7 +1055,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             }
                         }
 
-                    }else if (sObject.getSOILMNG10().equals("B")){
+                    }else if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")){
                         //Extra Soil Management
                         if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
                             fragment10.calc("extra","","labor",plot10Area,startY10,yearLaunch);
@@ -1067,7 +1067,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
 
                     }else{
                         //GAP
-                        if (sObject.getSOILMNG10().equals("B")){
+                        if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")){
                             if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.calc("gap","extra","labor",plot10Area,startY10,yearLaunch);
                             }else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Musiman")){

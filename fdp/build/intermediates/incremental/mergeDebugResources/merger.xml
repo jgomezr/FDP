@@ -295,7 +295,7 @@
 		<item>Primary School</item>
 		<item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
 		<item>Higher Education</item>
 	</string-array><string-array name="gb">
 		<item>N/A</item>
@@ -316,7 +316,7 @@
         <item>Primary School</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array><string-array name="treeDistance">
         <item>N/A</item>
@@ -371,17 +371,17 @@
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array><string name="greater0" translatable="false"/><string-array name="education2">
         <item>Primary School</item>
         <item>Kindergarten</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array><string-array name="education5">
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Junior Secondary School</item>
@@ -392,7 +392,7 @@
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Junior Secondary School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array><string-array name="education6">
         <item>Higher Education</item>
@@ -400,7 +400,7 @@
         <item>Primary School</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
     </string-array><string name="extraSoil">Extra Soil Management</string><string name="soilCondition">54. Soil Condition:</string><string-array name="creditOftenbiannual">
 		<item>Bi annually</item>
 		<item>Monthly</item>

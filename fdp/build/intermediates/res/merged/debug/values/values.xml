@@ -170,7 +170,7 @@
 		<item>Primary School</item>
 		<item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
 		<item>Higher Education</item>
 	</string-array>
     <string-array name="education1">
@@ -178,7 +178,7 @@
         <item>Primary School</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array>
     <string-array name="education2">
@@ -186,7 +186,7 @@
         <item>Kindergarten</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array>
     <string-array name="education3">
@@ -194,7 +194,7 @@
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array>
     <string-array name="education4">
@@ -202,11 +202,11 @@
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Junior Secondary School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Higher Education</item>
     </string-array>
     <string-array name="education5">
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
         <item>Kindergarten</item>
         <item>Primary School</item>
         <item>Junior Secondary School</item>
@@ -219,7 +219,7 @@
         <item>Primary School</item>
         <item>Junior Secondary School</item>
         <item>Senior High School</item>
-        <item>Vocational and technical Education</item>
+        <item>Vocational and Technical Education</item>
     </string-array>
     <string-array name="g_b">
 		<item>G</item>

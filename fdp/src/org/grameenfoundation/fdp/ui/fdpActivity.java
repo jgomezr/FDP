@@ -505,6 +505,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         R.array.reno4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP1().contentEquals("-5")) {
+                Spinner spinner = st1;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP1().contentEquals("Year 1")||sObject.getStartYearP1().contentEquals("Tahun 1")) {
                 Spinner spinner = st1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -578,6 +584,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = st2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.reno4, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP2().contentEquals("-5")) {
+                Spinner spinner = st2;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP2().contentEquals("Year 1")||sObject.getStartYearP2().contentEquals("Tahun 1")) {
@@ -655,6 +667,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         R.array.reno4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP3().contentEquals("-5")) {
+                Spinner spinner = st3;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP3().contentEquals("Year 1")||sObject.getStartYearP3().contentEquals("Tahun 1")) {
                 Spinner spinner = st3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -728,6 +746,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = st4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.reno4, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP4().contentEquals("-5")) {
+                Spinner spinner = st4;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP4().contentEquals("Year 1")||sObject.getStartYearP4().contentEquals("Tahun 1")) {
@@ -805,6 +829,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         R.array.reno4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP5().contentEquals("-5")) {
+                Spinner spinner = st5;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP5().contentEquals("Year 1")||sObject.getStartYearP5().contentEquals("Tahun 1")) {
                 Spinner spinner = st5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -878,6 +908,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = st6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.reno4, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP6().contentEquals("-5")) {
+                Spinner spinner = st6;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP6().contentEquals("Year 1")||sObject.getStartYearP6().contentEquals("Tahun 1")) {
@@ -955,6 +991,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         R.array.reno4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP7().contentEquals("-5")) {
+                Spinner spinner = st7;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP7().contentEquals("Year 1")||sObject.getStartYearP7().contentEquals("Tahun 1")) {
                 Spinner spinner = st7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -1028,6 +1070,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = st8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.reno4, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP8().contentEquals("-5")) {
+                Spinner spinner = st8;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP8().contentEquals("Year 1")||sObject.getStartYearP8().contentEquals("Tahun 1")) {
@@ -1105,6 +1153,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         R.array.reno4, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP9().contentEquals("-5")) {
+                Spinner spinner = st9;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP9().contentEquals("Year 1")||sObject.getStartYearP9().contentEquals("Tahun 1")) {
                 Spinner spinner = st9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -1178,6 +1232,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 Spinner spinner = st10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.reno4, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getStartYearP10().contentEquals("-5")) {
+                Spinner spinner = st10;
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.reno5, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }else if (sObject.getStartYearP10().contentEquals("Year 1")||sObject.getStartYearP10().contentEquals("Tahun 1")) {
@@ -1292,7 +1352,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition1().equals("B")|| (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
+                    if (sObject.getFarmCondition1().equals("B")|| (Integer.parseInt(sObject.getPlot1Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
@@ -1316,7 +1376,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition1().equals("G") && (sObject.getGENETIC1().equals("B")||sObject.getGENETIC1().equals("M"))) || ((Integer.parseInt(sObject.getPlot1Age()) > 20) && (Integer.parseInt(sObject.getPlot1Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition1().equals("G") && (sObject.getGENETIC1().equals("B")||sObject.getGENETIC1().equals("M"))) || ((Integer.parseInt(sObject.getPlot1Age()) > 25) && (Integer.parseInt(sObject.getPlot1Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
@@ -1427,7 +1487,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition2().equals("B") || (Integer.parseInt(sObject.getPlot2Age()) > 25)) {
+                    if (sObject.getFarmCondition2().equals("B") || (Integer.parseInt(sObject.getPlot2Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
@@ -1451,7 +1511,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition2().equals("G") && (sObject.getGENETIC2().equals("B")||sObject.getGENETIC2().equals("M"))) || ((Integer.parseInt(sObject.getPlot2Age()) > 20) && (Integer.parseInt(sObject.getPlot2Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition2().equals("G") && (sObject.getGENETIC2().equals("B")||sObject.getGENETIC2().equals("M"))) || ((Integer.parseInt(sObject.getPlot2Age()) > 25) && (Integer.parseInt(sObject.getPlot2Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
@@ -1562,7 +1622,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition3().equals("B") || (Integer.parseInt(sObject.getPlot3Age()) > 25)) {
+                    if (sObject.getFarmCondition3().equals("B") || (Integer.parseInt(sObject.getPlot3Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
@@ -1586,7 +1646,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition3().equals("G") && (sObject.getGENETIC3().equals("B")||sObject.getGENETIC3().equals("M"))) || ((Integer.parseInt(sObject.getPlot3Age()) > 20) && (Integer.parseInt(sObject.getPlot3Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition3().equals("G") && (sObject.getGENETIC3().equals("B")||sObject.getGENETIC3().equals("M"))) || ((Integer.parseInt(sObject.getPlot3Age()) > 25) && (Integer.parseInt(sObject.getPlot3Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
@@ -1697,7 +1757,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition4().equals("B") || (Integer.parseInt(sObject.getPlot4Age()) > 25)) {
+                    if (sObject.getFarmCondition4().equals("B") || (Integer.parseInt(sObject.getPlot4Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
@@ -1721,7 +1781,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition4().equals("G") && (sObject.getGENETIC4().equals("B")||sObject.getGENETIC4().equals("M"))) || ((Integer.parseInt(sObject.getPlot4Age()) > 20) && (Integer.parseInt(sObject.getPlot4Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition4().equals("G") && (sObject.getGENETIC4().equals("B")||sObject.getGENETIC4().equals("M"))) || ((Integer.parseInt(sObject.getPlot4Age()) > 25) && (Integer.parseInt(sObject.getPlot4Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
@@ -1831,7 +1891,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition5().equals("B") || (Integer.parseInt(sObject.getPlot5Age()) > 25)) {
+                    if (sObject.getFarmCondition5().equals("B") || (Integer.parseInt(sObject.getPlot5Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
@@ -1855,7 +1915,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition5().equals("G") && (sObject.getGENETIC5().equals("B")||sObject.getGENETIC5().equals("M"))) || ((Integer.parseInt(sObject.getPlot5Age()) > 20) && (Integer.parseInt(sObject.getPlot5Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition5().equals("G") && (sObject.getGENETIC5().equals("B")||sObject.getGENETIC5().equals("M"))) || ((Integer.parseInt(sObject.getPlot5Age()) > 25) && (Integer.parseInt(sObject.getPlot5Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
@@ -1964,7 +2024,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition6().equals("B") || (Integer.parseInt(sObject.getPlot6Age()) > 25)) {
+                    if (sObject.getFarmCondition6().equals("B") || (Integer.parseInt(sObject.getPlot6Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
@@ -1988,7 +2048,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition6().equals("G") && (sObject.getGENETIC6().equals("B")||sObject.getGENETIC6().equals("M"))) || ((Integer.parseInt(sObject.getPlot6Age()) > 20) && (Integer.parseInt(sObject.getPlot6Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition6().equals("G") && (sObject.getGENETIC6().equals("B")||sObject.getGENETIC6().equals("M"))) || ((Integer.parseInt(sObject.getPlot6Age()) > 25) && (Integer.parseInt(sObject.getPlot6Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
@@ -2098,7 +2158,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition7().equals("B") || (Integer.parseInt(sObject.getPlot7Age()) > 25)) {
+                    if (sObject.getFarmCondition7().equals("B") || (Integer.parseInt(sObject.getPlot7Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
@@ -2122,7 +2182,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition7().equals("G") && (sObject.getGENETIC7().equals("B")||sObject.getGENETIC7().equals("M"))) || ((Integer.parseInt(sObject.getPlot7Age()) > 20) && (Integer.parseInt(sObject.getPlot7Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition7().equals("G") && (sObject.getGENETIC7().equals("B")||sObject.getGENETIC7().equals("M"))) || ((Integer.parseInt(sObject.getPlot7Age()) > 25) && (Integer.parseInt(sObject.getPlot7Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
@@ -2231,7 +2291,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition8().equals("B") || (Integer.parseInt(sObject.getPlot8Age()) > 25)) {
+                    if (sObject.getFarmCondition8().equals("B") || (Integer.parseInt(sObject.getPlot8Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
@@ -2255,7 +2315,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition8().equals("G") && (sObject.getGENETIC8().equals("B")||sObject.getGENETIC8().equals("M"))) || ((Integer.parseInt(sObject.getPlot8Age()) > 20) && (Integer.parseInt(sObject.getPlot8Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition8().equals("G") && (sObject.getGENETIC8().equals("B")||sObject.getGENETIC8().equals("M"))) || ((Integer.parseInt(sObject.getPlot8Age()) > 25) && (Integer.parseInt(sObject.getPlot8Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
@@ -2365,7 +2425,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition9().equals("B") || (Integer.parseInt(sObject.getPlot9Age()) > 25)) {
+                    if (sObject.getFarmCondition9().equals("B") || (Integer.parseInt(sObject.getPlot9Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
@@ -2389,7 +2449,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition9().equals("G") && (sObject.getGENETIC9().equals("B")||sObject.getGENETIC9().equals("M"))) || ((Integer.parseInt(sObject.getPlot9Age()) > 20) && (Integer.parseInt(sObject.getPlot9Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition9().equals("G") && (sObject.getGENETIC9().equals("B")||sObject.getGENETIC9().equals("M"))) || ((Integer.parseInt(sObject.getPlot9Age()) > 25) && (Integer.parseInt(sObject.getPlot9Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
@@ -2498,7 +2558,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition10().equals("B") || (Integer.parseInt(sObject.getPlot10Age()) > 25)) {
+                    if (sObject.getFarmCondition10().equals("B") || (Integer.parseInt(sObject.getPlot10Age()) > 30)) {
                         //Replant
                         if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
@@ -2522,7 +2582,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                             }
                         }
 
-                    } else if ((sObject.getFarmCondition10().equals("G") && (sObject.getGENETIC10().equals("B")||sObject.getGENETIC10().equals("M"))) || ((Integer.parseInt(sObject.getPlot10Age()) > 20) && (Integer.parseInt(sObject.getPlot10Age()) < 26))) {
+                    } else if ((sObject.getFarmCondition10().equals("G") && (sObject.getGENETIC10().equals("B")||sObject.getGENETIC10().equals("M"))) || ((Integer.parseInt(sObject.getPlot10Age()) > 25) && (Integer.parseInt(sObject.getPlot10Age()) < 30))) {
                         //Graft
                         if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
