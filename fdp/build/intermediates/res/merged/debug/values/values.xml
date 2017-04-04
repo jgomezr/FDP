@@ -166,78 +166,61 @@
 	</string-array>
     <string-array name="education">
 		<item>N/A</item>
-		<item>Sekolah Dasar - SD</item>
-		<item>Sekolah Menengah Pertama - SMP</item>
-		<item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-		<item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+		<item>Kindergarten</item>
+		<item>Primary School</item>
+		<item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and technical Education</item>
+		<item>Higher Education</item>
 	</string-array>
-    <string-array name="education_MAK">
-		<item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-    <string-array name="education_MTS">
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+    <string-array name="education1">
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and technical Education</item>
+        <item>Higher Education</item>
     </string-array>
-    <string-array name="education_S1">
-        <item>Sarjana - S1</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-
+    <string-array name="education2">
+        <item>Primary School</item>
+        <item>Kindergarten</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and technical Education</item>
+        <item>Higher Education</item>
     </string-array>
-    <string-array name="education_SD">
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-    <string-array name="education_SMA">
-		<item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-    <string-array name="education_SMK">
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+    <string-array name="education3">
+        <item>Junior Secondary School</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and technical Education</item>
+        <item>Higher Education</item>
     </string-array>
-    <string-array name="education_SMP">
-		<item>Sekolah Menengah Pertama - SMP</item>
-		<item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
+    <string-array name="education4">
+        <item>Senior High School</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Vocational and technical Education</item>
+        <item>Higher Education</item>
+    </string-array>
+    <string-array name="education5">
+        <item>Vocational and technical Education</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Higher Education</item>
+    </string-array>
+    <string-array name="education6">
+        <item>Higher Education</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and technical Education</item>
+    </string-array>
     <string-array name="g_b">
 		<item>G</item>
 		<item>B</item>
@@ -277,31 +260,43 @@
         <item>-2</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong1">
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong2">
         <item>-2</item>
         <item>-1</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong3">
         <item>-3</item>
         <item>-1</item>
         <item>-2</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong4">
         <item>-4</item>
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
+		<item>-5</item>
     </string-array>
+    <string-array name="howLong5">
+		<item>-5</item>
+		<item>-1</item>
+		<item>-2</item>
+		<item>-3</item>
+		<item>-4</item>
+	</string-array>
     <string-array name="m_gb">
 		<item>M</item>
 		<item>G</item>
@@ -339,6 +334,9 @@
 	</string-array>
     <string-array name="reno4">
 		<item>-4</item>
+	</string-array>
+    <string-array name="reno5">
+		<item>-5</item>
 	</string-array>
     <string-array name="seasonHire">
 		<item>Seasonal</item>
@@ -385,6 +383,7 @@
         <item>2x2</item>
 		<item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -511,6 +510,23 @@
         <item>3.5×4</item>
         <item>4x4</item>
     </string-array>
+    <string-array name="treeDistance16">
+		<item>2x3.5</item>
+		<item>2x2</item>
+		<item>2x2.5</item>
+		<item>2x3</item>
+		<item>2x4</item>
+		<item>2.5x2.5</item>
+		<item>2.5x3.5</item>
+		<item>2.5x4</item>
+		<item>3x2.5</item>
+		<item>3x3</item>
+		<item>3x3.5</item>
+		<item>3.5x3.5</item>
+		<item>3×4</item>
+		<item>3.5×4</item>
+		<item>4x4</item>
+	</string-array>
     <string-array name="treeDistance2">
         <item>2.5x2.5</item>
         <item>2x2</item>
@@ -722,6 +738,7 @@
 		<item>Seasonal</item>
 		<item>No</item>
 	</string-array>
+    <color name="accent">#009688</color>
     <color name="backGrid">#e5e5e5</color>
     <color name="button">#9AC4A6</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
@@ -734,10 +751,16 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <color name="divider">#BDBDBD</color>
     <color name="expenses">#FFCDD2</color>
     <color name="green">#e6ffcc</color>
+    <color name="icons">#FFFFFF</color>
     <color name="income">#DCEDC8</color>
     <color name="lost">#cc0000</color>
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="primary_light">#C8E6C9</color>
+    <color name="primary_text">#212121</color>
     <color name="profit">#29a329</color>
     <color name="ptn1">#D7CCC8</color>
     <color name="ptn2">#CFD8DC</color>
@@ -749,6 +772,7 @@
     <color name="record_opportunity">#fff9cb2c</color>
     <color name="record_other">#ffbbbbbb</color>
     <color name="record_task">#ff1bb68c</color>
+    <color name="secondary_text">#757575</color>
     <color name="sf__forgot_passcode_text">#000</color>
     <color name="sf__hint_color">#42000000</color>
     <color name="sf__inspector_button_background_color">#ccc</color>
@@ -2263,12 +2287,13 @@
     <string name="ao">ADOPTION OBSERVATIONS</string>
     <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
     <string name="api_version" translatable="false">v36.0</string>
-    <string name="app_name"><b>FDP</b></string>
+    <string name="app_name"><b>FDP WAf</b></string>
     <string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
     <string name="apr">April</string>
     <string name="areaEmpty">Your plots area cannot be empty</string>
     <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
+    <string name="areasInco">Your areas present inconsistencies fix it before continuing</string>
     <string name="aug">August</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
@@ -2472,6 +2497,7 @@
     <string name="renovated">This plot was recently renovated?</string>
     <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
     <string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string>
+    <string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
     <string name="replant">Replant</string>
     <string name="saveContinue">Save and Continue</string>
     <string name="saved">Save successful!</string>
@@ -2561,6 +2587,9 @@
     <string name="spousePaidWork">C7. Does spouse have any paid work other than working on own cocoa farm:</string>
     <string name="startYear">Start Year</string>
     <string name="switch_user_button">Switch User</string>
+    <string name="takeAgree">Agree with photo</string>
+    <string name="takePhoto">Take Photo</string>
+    <string name="thinning">Thinning</string>
     <string name="tool1">This includes paid labor on other farms, nursery, other business or services that bring in money into the farmer household</string>
     <string name="tool2">This includes paid labor on other farms, sales from other business or services for other people that bring in money into the household</string>
     <string name="tool3">This includes all money that is available to family excluding that from farmer and spouse. Money can be from brothers, sisters, parents or other family members who can be living in home or sending from other village, city or country</string>
@@ -2744,5 +2773,15 @@
         <item name="android:verticalSpacing">@dimen/sf__inspector_grid_cell_spacing</item>
         <item name="android:listSelector">@null</item>
         <item name="android:stretchMode">columnWidth</item>
+    </style>
+    <style name="appTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:icon">@color/icons</item>
+        <item name="android:colorAccent">@color/accent</item>
     </style>
 </resources>

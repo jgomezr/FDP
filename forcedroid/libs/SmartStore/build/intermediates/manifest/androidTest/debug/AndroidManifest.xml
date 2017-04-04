@@ -3,7 +3,7 @@
     package="com.salesforce.androidsdk.smartstore.tests" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="21"
         android:targetSdkVersion="23" />
 
     <instrumentation

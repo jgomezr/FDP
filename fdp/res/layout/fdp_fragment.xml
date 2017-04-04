@@ -92,6 +92,13 @@
                 android:text="@string/filling"
                 android:layout_gravity="center_vertical" />
 
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/thinningLabelP_field"
+                android:text="@string/thinning"
+                android:layout_gravity="center_vertical" />
+
         </LinearLayout>
 
         <TextView android:text="@string/startYear"

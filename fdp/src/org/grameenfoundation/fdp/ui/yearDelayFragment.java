@@ -93,7 +93,7 @@ public class yearDelayFragment extends Fragment {
         int oct = 0;
         int nov = 0;
         int dec = 0;
-        DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
+        DecimalFormat decF = new DecimalFormat("Ghs ###,###,###");
 
         if (launchYear < startYear){
             setText(jlb, p16+p19+p24);

@@ -13,18 +13,18 @@ public final class R {
         public static final int imageAspectRatioAdjust = 0x7f010000;
     }
     public static final class color {
-        public static final int common_action_bar_splitter = 0x7f080002;
-        public static final int common_signin_btn_dark_text_default = 0x7f080003;
-        public static final int common_signin_btn_dark_text_disabled = 0x7f080004;
-        public static final int common_signin_btn_dark_text_focused = 0x7f080005;
-        public static final int common_signin_btn_dark_text_pressed = 0x7f080006;
-        public static final int common_signin_btn_default_background = 0x7f080007;
-        public static final int common_signin_btn_light_text_default = 0x7f080008;
-        public static final int common_signin_btn_light_text_disabled = 0x7f080009;
-        public static final int common_signin_btn_light_text_focused = 0x7f08000a;
-        public static final int common_signin_btn_light_text_pressed = 0x7f08000b;
-        public static final int common_signin_btn_text_dark = 0x7f080028;
-        public static final int common_signin_btn_text_light = 0x7f080029;
+        public static final int common_action_bar_splitter = 0x7f080003;
+        public static final int common_signin_btn_dark_text_default = 0x7f080004;
+        public static final int common_signin_btn_dark_text_disabled = 0x7f080005;
+        public static final int common_signin_btn_dark_text_focused = 0x7f080006;
+        public static final int common_signin_btn_dark_text_pressed = 0x7f080007;
+        public static final int common_signin_btn_default_background = 0x7f080008;
+        public static final int common_signin_btn_light_text_default = 0x7f080009;
+        public static final int common_signin_btn_light_text_disabled = 0x7f08000a;
+        public static final int common_signin_btn_light_text_focused = 0x7f08000b;
+        public static final int common_signin_btn_light_text_pressed = 0x7f08000c;
+        public static final int common_signin_btn_text_dark = 0x7f080030;
+        public static final int common_signin_btn_text_light = 0x7f080031;
     }
     public static final class drawable {
         public static final int common_full_open_on_phone = 0x7f020000;
@@ -39,8 +39,8 @@ public final class R {
         public static final int google_play_services_version = 0x7f0a04d7;
     }
     public static final class string {
-        public static final int auth_google_play_services_client_facebook_display_name = 0x7f0600f5;
-        public static final int auth_google_play_services_client_google_display_name = 0x7f0600f6;
+        public static final int auth_google_play_services_client_facebook_display_name = 0x7f060033;
+        public static final int auth_google_play_services_client_google_display_name = 0x7f060034;
         public static final int common_android_wear_notification_needs_update_text = 0x7f060000;
         public static final int common_android_wear_update_text = 0x7f060001;
         public static final int common_android_wear_update_title = 0x7f060002;

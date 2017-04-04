@@ -30,7 +30,7 @@ android {
   defaultConfig {
     testApplicationId "com.salesforce.androidsdk.smartsync.tests"
     testInstrumentationRunner "com.salesforce.androidsdk.util.test.JUnitReportTestRunner"
-    minSdkVersion 16
+    minSdkVersion 21
     targetSdkVersion 23
   }
   packagingOptions {

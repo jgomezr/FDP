@@ -25,7 +25,7 @@ public class fdpFragment extends Fragment {
     public Spinner start;
     private Button changeR;
     private EditText comment;
-    private TextView plotLB,gaplp,grflp,replp,exslp,limlp,dralp,fillp,lablp,lnp,lcp,lnpy1,lnpy2,lnpy3,lnpy4,lnpy5,lnpy6,lnpy7,lcpy1,lcpy2,lcpy3,lcpy4,lcpy5,lcpy6,lcpy7,plpy1,plpy2,plpy3,plpy4,plpy5,plpy6,plpy7,incomeY1,incomeY2,incomeY3,incomeY4,incomeY5,incomeY6,incomeY7,costY1,costY2,costY3,costY4,costY5,costY6,costY7;
+    private TextView plotLB,gaplp,grflp,replp,exslp,limlp,dralp,fillp,thinninglp,lablp,lnp,lcp,lnpy1,lnpy2,lnpy3,lnpy4,lnpy5,lnpy6,lnpy7,lcpy1,lcpy2,lcpy3,lcpy4,lcpy5,lcpy6,lcpy7,plpy1,plpy2,plpy3,plpy4,plpy5,plpy6,plpy7,incomeY1,incomeY2,incomeY3,incomeY4,incomeY5,incomeY6,incomeY7,costY1,costY2,costY3,costY4,costY5,costY6,costY7;
     int income1 = 0;
     int income2 = 0;
     int income3 = 0;
@@ -101,6 +101,7 @@ public class fdpFragment extends Fragment {
         limlp = (TextView)view.findViewById(R.id.limeLabelP_field);
         dralp = (TextView)view.findViewById(R.id.drainageLabelP_field);
         fillp = (TextView)view.findViewById(R.id.fillingLabelP_field);
+        thinninglp = (TextView)view.findViewById(R.id.thinningLabelP_field);
         lablp = (TextView)view.findViewById(R.id.laborLabelP_field);
         lnp = (TextView)view.findViewById(R.id.lnp);
         lcp = (TextView)view.findViewById(R.id.lcp);
@@ -145,10 +146,71 @@ public class fdpFragment extends Fragment {
 
         final fdpActivity activity = (fdpActivity) getActivity();
         start.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
+            DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(start.getSelectedItem().toString().equals("-4")){
+                if(start.getSelectedItem().toString().equals("-5")){
+                    if(pl5 > 0){
+                        plpy1.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy1.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl6 > 0){
+                        plpy2.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy2.setTextColor(Color.parseColor("#cc0000"));
+                    }
+                    if(pl7 > 0){
+                        plpy7.setTextColor(Color.parseColor("#29a329"));
+                        plpy6.setTextColor(Color.parseColor("#29a329"));
+                        plpy5.setTextColor(Color.parseColor("#29a329"));
+                        plpy4.setTextColor(Color.parseColor("#29a329"));
+                        plpy3.setTextColor(Color.parseColor("#29a329"));
+                    }else{
+                        plpy7.setTextColor(Color.parseColor("#cc0000"));
+                        plpy6.setTextColor(Color.parseColor("#cc0000"));
+                        plpy5.setTextColor(Color.parseColor("#cc0000"));
+                        plpy4.setTextColor(Color.parseColor("#cc0000"));
+                        plpy3.setTextColor(Color.parseColor("#cc0000"));
+                    }
+
+                    setText(incomeY1, String.valueOf(dec.format(income6)));
+                    setText(incomeY2, String.valueOf(dec.format(income7)));
+                    setText(incomeY3, String.valueOf(dec.format(income7)));
+                    setText(incomeY4, String.valueOf(dec.format(income7)));
+                    setText(incomeY5, String.valueOf(dec.format(income7)));
+                    setText(incomeY6, String.valueOf(dec.format(income7)));
+                    setText(incomeY7, String.valueOf(dec.format(income7)));
+                    setText(costY1, String.valueOf(dec.format(cost6)));
+                    setText(costY2, String.valueOf(dec.format(cost7)));
+                    setText(costY3, String.valueOf(dec.format(cost7)));
+                    setText(costY4, String.valueOf(dec.format(cost7)));
+                    setText(costY5, String.valueOf(dec.format(cost7)));
+                    setText(costY6, String.valueOf(dec.format(cost7)));
+                    setText(costY7, String.valueOf(dec.format(cost7)));
+                    setText(lnpy1, String.valueOf(laborD6));
+                    setText(lnpy2, String.valueOf(laborD7));
+                    setText(lnpy3, String.valueOf(laborD7));
+                    setText(lnpy4, String.valueOf(laborD7));
+                    setText(lnpy5, String.valueOf(laborD7));
+                    setText(lnpy6, String.valueOf(laborD7));
+                    setText(lnpy7, String.valueOf(laborD7));
+                    setText(lcpy1, String.valueOf(dec.format(labor6)));
+                    setText(lcpy2, String.valueOf(dec.format(labor7)));
+                    setText(lcpy3, String.valueOf(dec.format(labor7)));
+                    setText(lcpy4, String.valueOf(dec.format(labor7)));
+                    setText(lcpy5, String.valueOf(dec.format(labor7)));
+                    setText(lcpy6, String.valueOf(dec.format(labor7)));
+                    setText(lcpy7, String.valueOf(dec.format(labor7)));
+                    setText(plpy1, String.valueOf(dec.format(pl6)));
+                    setText(plpy2, String.valueOf(dec.format(pl7)));
+                    setText(plpy3, String.valueOf(dec.format(pl7)));
+                    setText(plpy4, String.valueOf(dec.format(pl7)));
+                    setText(plpy5, String.valueOf(dec.format(pl7)));
+                    setText(plpy6, String.valueOf(dec.format(pl7)));
+                    setText(plpy7, String.valueOf(dec.format(pl7)));
+                    activity.calculations();
+                }else if(start.getSelectedItem().toString().equals("-4")){
                     if(pl5 > 0){
                         plpy1.setTextColor(Color.parseColor("#29a329"));
                     }else{
@@ -1105,7 +1167,7 @@ public class fdpFragment extends Fragment {
             gaplabor7 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY7Total)));
         }
 
-        DecimalFormat dec = new DecimalFormat("IDR ###,###,###");
+        DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
 
         if (main == "replant"){
             replp.setVisibility(View.VISIBLE);
@@ -1200,7 +1262,7 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age>25){
+            if(age>20 && age<26){
                 changeR.setVisibility(View.VISIBLE);
             }
             if (relat == "extra"){
@@ -2246,6 +2308,9 @@ public class fdpFragment extends Fragment {
         }
         if (otherint =="filling"){
             fillp.setVisibility(View.VISIBLE);
+        }
+        if (otherint =="thinning"){
+            thinninglp.setVisibility(View.VISIBLE);
         }
         if (otherint =="drainage"){
             dralp.setVisibility(View.VISIBLE);

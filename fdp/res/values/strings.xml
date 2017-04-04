@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
-	<string name="app_name"><b>FDP</b></string>
+	<string name="app_name"><b>FDP WAf</b></string>
 	<string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
 	<string name="logout_button">Logout</string>
 	<string name="switch_user_button">Switch User</string>
@@ -24,6 +24,8 @@
 	<string name="finish">Finish</string>
 	<string name="back">Back</string>
 	<string name="delete_title">Are you sure?</string>
+	<string name="takePhoto">Take Photo</string>
+    <string name="takeAgree">Agree with photo</string>
 
 	<string name="farmerProfile">FARMING FAMILY PROFILE</string>
 	<string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>
@@ -171,6 +173,7 @@
 	<string name="lime">Lime</string>
 	<string name="drainage">Drainage</string>
 	<string name="filling">Filling in</string>
+	<string name="thinning">Thinning</string>
 	<string name="labor">Labor</string>
 	<string name="empty" translatable="false"> </string>
 	<string name="jan">January</string>
@@ -188,6 +191,8 @@
 	<string name="greater0" translatable="false"></string>
 	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
+	<string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
+	<string name="areasInco">Your areas present inconsistencies fix it before continuing</string>
 	<string name="saved">Save successful!</string>
 	<string name="autosave">Autosaved</string>
 	<string name="p1">Clearing</string>
@@ -284,77 +289,60 @@
 	</string-array>
 	<string-array name="education">
 		<item>N/A</item>
-		<item>Sekolah Dasar - SD</item>
-		<item>Sekolah Menengah Pertama - SMP</item>
-		<item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-		<item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+		<item>Kindergarten</item>
+		<item>Primary School</item>
+		<item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and Technical Education</item>
+		<item>Higher Education</item>
 	</string-array>
-	<string-array name="education_SD">
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-	<string-array name="education_SMP">
-		<item>Sekolah Menengah Pertama - SMP</item>
-		<item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-	<string-array name="education_SMA">
-		<item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-    <string-array name="education_SMK">
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+    <string-array name="education1">
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and Technical Education</item>
+        <item>Higher Education</item>
     </string-array>
-    <string-array name="education_MTS">
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sarjana - S1</item>
+    <string-array name="education2">
+        <item>Primary School</item>
+        <item>Kindergarten</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and Technical Education</item>
+        <item>Higher Education</item>
     </string-array>
-	<string-array name="education_MAK">
-		<item>Madrasah Aliyah Kejuruan - MAK</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sarjana - S1</item>
-	</string-array>
-    <string-array name="education_S1">
-        <item>Sarjana - S1</item>
-        <item>Sekolah Dasar - SD</item>
-        <item>Sekolah Menengah Pertama - SMP</item>
-        <item>Sekolah Menengah Atas - SMA</item>
-        <item>Sekolah Menengah Kejuaruan - SMK</item>
-        <item>Madrasah Tsanawiyah - MTS</item>
-        <item>Madrasah Aliyah Kejuruan - MAK</item>
-
+    <string-array name="education3">
+        <item>Junior Secondary School</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and Technical Education</item>
+        <item>Higher Education</item>
+    </string-array>
+    <string-array name="education4">
+        <item>Senior High School</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Vocational and Technical Education</item>
+        <item>Higher Education</item>
+    </string-array>
+    <string-array name="education5">
+        <item>Vocational and Technical Education</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Higher Education</item>
+    </string-array>
+    <string-array name="education6">
+        <item>Higher Education</item>
+        <item>Kindergarten</item>
+        <item>Primary School</item>
+        <item>Junior Secondary School</item>
+        <item>Senior High School</item>
+        <item>Vocational and Technical Education</item>
     </string-array>
 	<string-array name="gender">
 		<item>N/A</item>
@@ -516,6 +504,7 @@
         <item>2x2</item>
 		<item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -761,6 +750,23 @@
         <item>3.5×4</item>
         <item>4x4</item>
     </string-array>
+	<string-array name="treeDistance16">
+		<item>2x3.5</item>
+		<item>2x2</item>
+		<item>2x2.5</item>
+		<item>2x3</item>
+		<item>2x4</item>
+		<item>2.5x2.5</item>
+		<item>2.5x3.5</item>
+		<item>2.5x4</item>
+		<item>3x2.5</item>
+		<item>3x3</item>
+		<item>3x3.5</item>
+		<item>3.5x3.5</item>
+		<item>3×4</item>
+		<item>3.5×4</item>
+		<item>4x4</item>
+	</string-array>
     <string-array name="cert">
         <item>N/A</item>
         <item>UTZ</item>
@@ -918,32 +924,43 @@
         <item>-2</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong1">
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong2">
         <item>-2</item>
         <item>-1</item>
         <item>-3</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong3">
         <item>-3</item>
         <item>-1</item>
         <item>-2</item>
         <item>-4</item>
+		<item>-5</item>
     </string-array>
     <string-array name="howLong4">
         <item>-4</item>
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
+		<item>-5</item>
     </string-array>
-
+	<string-array name="howLong5">
+		<item>-5</item>
+		<item>-1</item>
+		<item>-2</item>
+		<item>-3</item>
+		<item>-4</item>
+	</string-array>
 	<string-array name="reno1">
 		<item>-1</item>
 	</string-array>
@@ -955,5 +972,8 @@
 	</string-array>
 	<string-array name="reno4">
 		<item>-4</item>
+	</string-array>
+	<string-array name="reno5">
+		<item>-5</item>
 	</string-array>
 </resources>

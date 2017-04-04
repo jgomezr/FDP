@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldpi-v4\\sf__icon.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-ldpi-v4\\sf__icon.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldpi-v4\\sf__icon.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-ldpi-v4\\sf__icon.png"
     }
 ]
