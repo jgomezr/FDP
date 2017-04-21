@@ -105,7 +105,7 @@
     <string name="estimatedProduction">42. Estimated production (Kg):</string>
     <string name="ph">43. Soil PH:</string>
     <string name="plantingMaterial">44. Planting Material:</string>
-    <string name="cocoaTrees">45. Distance between cocoa trees:</string>
+    <string name="cocoaTrees">45. Distance between cocoa trees Mts:</string>
     <string name="plotAge">46. Tree Age:</string>
     <string name="treeHealth">47. Tree health:</string>
     <string name="debilitationDisease">48. Debilitating Disease:</string>
