@@ -1250,7 +1250,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set average cocoa price ly field
 			if (sObject.getAveragecocoaprice().isEmpty()){
-				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),Integer.toString(35000));
+				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),Integer.toString(8302));
 			}else {
 				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),sObject.getAveragecocoaprice());
 			}
