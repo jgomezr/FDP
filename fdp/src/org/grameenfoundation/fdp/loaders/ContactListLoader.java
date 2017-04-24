@@ -125,7 +125,6 @@ public class ContactListLoader extends AsyncTaskLoader<List<ContactObject>> {
     public synchronized void syncDown() {
         curAccount = SmartSyncSDKManager.getInstance().getUserAccountManager().getCurrentUser();
         smartStore.registerSoup(ContactListLoader.CONTACT_SOUP, CONTACTS_INDEX_SPEC);
-        String whereClause = "Assigned_to__c = "+curAccount;
         final SyncUpdateCallback callback = new SyncUpdateCallback() {
 
             @Override
@@ -139,8 +138,7 @@ public class ContactListLoader extends AsyncTaskLoader<List<ContactObject>> {
             if (syncId == -1) {
                 final SyncOptions options = SyncOptions.optionsForSyncDown(SyncState.MergeMode.LEAVE_IF_CHANGED);
                 final String soqlQuery = SOQLBuilder.getInstanceWithFields(ContactObject.CONTACT_FIELDS_SYNC_DOWN)
-                        .from(Constants.SUBMISSION).where(String.format(whereClause)).limit(ContactListLoader.LIMIT).build();
-                //soqlQuery.where(whereClause);
+                        .from(Constants.SUBMISSION).limit(ContactListLoader.LIMIT).build();
                 final SyncDownTarget target = new SoqlSyncDownTarget(soqlQuery);
                 final SyncState sync = syncMgr.syncDown(target, options,
                         ContactListLoader.CONTACT_SOUP, callback);

@@ -1250,7 +1250,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set average cocoa price ly field
 			if (sObject.getAveragecocoaprice().isEmpty()){
-				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),Integer.toString(8302));
+				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),Integer.toString(7));
 			}else {
 				setText((EditText) findViewById(R.id.averageCocoaPrice_Field),sObject.getAveragecocoaprice());
 			}
@@ -1328,7 +1328,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set Living expenses field
 			if (sObject.getAnnuallivingexpenses().isEmpty()){
-				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(1918));
+				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(7152));
 			}else {
 				setText((EditText) findViewById(R.id.livingExpenses_Field),
 						sObject.getAnnuallivingexpenses());

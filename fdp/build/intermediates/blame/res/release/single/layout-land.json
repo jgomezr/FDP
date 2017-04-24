@@ -4,6 +4,10 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout-land\\yeardetail2.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\detail.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\detail.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\fdp.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout-land\\fdp.xml"
     },
@@ -12,11 +16,23 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout-land\\detail.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\plot.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\plot.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\plot.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout-land\\plot.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\yeardetail.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\yeardetail.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\yeardetail.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\res\\layout-land\\yeardetail.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\layout-land\\fdp.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\fdp.xml"
     }
 ]

@@ -2310,7 +2310,7 @@
     <string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
     <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
     <string name="cocoaArea">36. Total land under cocoa size (Ha):</string>
-    <string name="cocoaTrees">45. Distance between cocoa trees:</string>
+    <string name="cocoaTrees">45. Distance between cocoa trees Mts:</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
     <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
@@ -2434,7 +2434,7 @@
     <string name="otherExpenses">23. Annual other expenses:</string>
     <string name="p1">Clearing</string>
     <string name="p10">Grafting work/ take off the plastic</string>
-    <string name="p11">Pollarding/Sanitation, cutting old tree after grafting</string>
+    <string name="p11">Pollarding/Sanitation</string>
     <string name="p12">Herbiciding OR mechanical manual weeding</string>
     <string name="p13">Circle weeding</string>
     <string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string>

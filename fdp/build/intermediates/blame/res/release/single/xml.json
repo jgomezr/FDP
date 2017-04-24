@@ -4,12 +4,32 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\authenticator.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\app_restrictions.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\app_restrictions.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\app_restrictions.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\app_restrictions.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\servers.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\servers.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\farmer_sync_adapter.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\xml\\farmer_sync_adapter.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\servers.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\servers.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\authenticator.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\authenticator.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\file_paths.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\xml\\file_paths.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\release\\xml\\farmer_sync_adapter.xml",

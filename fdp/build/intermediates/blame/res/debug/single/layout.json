@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\fdp.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\fdp.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\sf__inspector.xml",

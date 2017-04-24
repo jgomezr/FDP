@@ -996,7 +996,7 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/livingExpenses_Field"
                     android:layout_width="0dp"
-                    android:text="30000000"
+                    android:text="7152"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
@@ -1250,7 +1250,7 @@
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/averageCocoaPrice_Field"
-                    android:text="35000"
+                    android:text="7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
