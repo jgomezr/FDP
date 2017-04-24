@@ -1014,7 +1014,6 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }else {
                     pA10= Double.parseDouble(areP10.getText().toString());
                 }
-
             }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getTotalCocoaArea())) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));

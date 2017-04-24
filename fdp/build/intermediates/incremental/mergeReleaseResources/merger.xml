@@ -164,7 +164,7 @@
         <item>Year 5</item>
         <item>Year 6</item>
         <item>Year 7</item>
-    </string-array><string name="fertilizerApplication">57. Fertilizer Application:</string><string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string><string name="giveLoan">20. Has the family given someone a loan over 5M IDR?</string><string-array name="year7">
+    </string-array><string name="fertilizerApplication">57. Fertilizer Application:</string><string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string><string name="giveLoan">20. Has the family given someone a loan over 1360 GHS?</string><string-array name="year7">
         <item>Year 7</item>
         <item>Year 1</item>
         <item>Year 2</item>
@@ -525,7 +525,7 @@
 		<item>3×4</item>
 		<item>3.5×4</item>
 		<item>4x4</item>
-	</string-array><string name="haveCredit">19. Has the family taken a loan over 5M IDR that you have to pay back?</string><string-array name="bank">
+	</string-array><string name="haveCredit">19. Has the family taken a loan over 1360 GHS that you have to pay back?</string><string-array name="bank">
         <item>NA</item>
         <item>Standard bank account</item>
         <item>Mobile banking</item>
@@ -800,7 +800,7 @@
         <item name="android:divider">@color/divider</item>
         <item name="android:icon">@color/icons</item>
         <item name="android:colorAccent">@color/accent</item>
-    </style></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/></source><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\rs\release"/><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="C:\Users\julian\Desktop\fdp - waf\fdp\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
+    </style></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/><file name="main" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\layout-land\main.xml" qualifiers="land" type="layout"/></source><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\rs\release"/><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="C:\Users\julian\Desktop\fdp - waf\fdp\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
             <enum name="none" value="0"/>
             <enum name="adjust_width" value="1"/>
             <enum name="adjust_height" value="2"/>

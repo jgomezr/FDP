@@ -22,27 +22,31 @@
         android:inputType="textNoSuggestions"
         android:clickable="true"
         android:focusable="false"
-        android:hint="click to get GPS"/>
+        android:hint="click to get GPS"
+        android:textSize="16sp"/>
 
     <EditText android:id="@+id/plotArea_field"
         android:layout_width="145dp"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
-        android:text="0"/>
+        android:text="0"
+        android:textSize="16sp"/>
 
     <EditText android:id="@+id/estimatedP_field"
         android:layout_width="145dp"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
-        android:text="0"/>
+        android:text="0"
+        android:textSize="16sp"/>
 
     <EditText android:id="@+id/ph_field"
         android:layout_width="145dp"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:textSize="16sp"/>
 
     <Spinner
         android:layout_width="155dp"
@@ -90,7 +94,8 @@
         android:layout_height="35dp"
         android:text="0"
         android:layout_gravity="center_vertical"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:textSize="16sp"/>
 
     <Spinner
         android:layout_width="155dp"

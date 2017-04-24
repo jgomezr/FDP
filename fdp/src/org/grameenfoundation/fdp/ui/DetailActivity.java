@@ -1328,7 +1328,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set Living expenses field
 			if (sObject.getAnnuallivingexpenses().isEmpty()){
-				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(7152));
+				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(9000));
 			}else {
 				setText((EditText) findViewById(R.id.livingExpenses_Field),
 						sObject.getAnnuallivingexpenses());

@@ -124,6 +124,12 @@ public class MainActivity extends SalesforceListActivity implements
 		isRegistered = new AtomicBoolean(false);
         apiVersion = getString(R.string.api_version);
 	}
+	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+
+		// Always call the superclass so it can save the view hierarchy state
+		super.onSaveInstanceState(savedInstanceState);
+	}
 
 	@Override
 	public void onResume(RestClient client) {

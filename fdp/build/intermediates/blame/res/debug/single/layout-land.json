@@ -20,6 +20,10 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\yeardetail.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\main.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\main.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\fdp.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\fdp.xml"
     },

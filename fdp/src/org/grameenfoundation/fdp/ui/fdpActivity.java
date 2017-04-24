@@ -2750,8 +2750,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             double anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
             double anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
             double expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
-            double credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            double credPay = 0;
+            if (sObject.getOFTENPAY().contentEquals("Monthly") ){
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit())*12;
+            }else if (sObject.getOFTENPAY().contentEquals("Quarterly") ){
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit())*4;
+            }else if (sObject.getOFTENPAY().contentEquals("Bi annually") ){
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit())*2;
+            }else{
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            }
             int totalExpenses = (int) (anLivExpen+anOtherExp+expEducExp+credPay);
+
             setText((TextView) findViewById(R.id.totalExpensesY1_field), String.valueOf(dec.format(totalExpenses)));
             setText((TextView) findViewById(R.id.totalExpensesY2_field), String.valueOf(dec.format(totalExpenses)));
             setText((TextView) findViewById(R.id.totalExpensesY3_field), String.valueOf(dec.format(totalExpenses)));

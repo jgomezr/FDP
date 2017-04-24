@@ -2385,13 +2385,13 @@
     <string name="gender">4. Gender:</string>
     <string name="geneticLb">Genetics of plant material:</string>
     <string name="getLocation">Get Location</string>
-    <string name="giveLoan">20. Has the family given someone a loan over 5M IDR?</string>
+    <string name="giveLoan">20. Has the family given someone a loan over 1360 GHS?</string>
     <string name="gps">7. House GPS:</string>
     <string name="graft">Graft</string>
     <string name="greater0" translatable="false"/>
     <string name="grossCocoaLY">30. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
     <string name="harvesting">52. Harvesting:</string>
-    <string name="haveCredit">19. Has the family taken a loan over 5M IDR that you have to pay back?</string>
+    <string name="haveCredit">19. Has the family taken a loan over 1360 GHS that you have to pay back?</string>
     <string name="haveOtherCrops">31. Have Additional Crops:</string>
     <string name="haveSpouse">11. Have spouse:</string>
     <string name="hireLabor">38. Hire labor:</string>
@@ -2775,7 +2775,7 @@
         <item name="android:stretchMode">columnWidth</item>
     </style>
     <style name="appTheme" parent="android:Theme.Material.Light.DarkActionBar">
-        <!-- Main theme colors -->
+        
         <item name="android:colorPrimary">@color/primary</item>
         <item name="android:colorPrimaryDark">@color/primary_dark</item>
         <item name="android:textColorPrimary">@color/primary_text</item>

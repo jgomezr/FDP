@@ -65,12 +65,12 @@
     <string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string>
 	<string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string>
     <string name="totalFamilyMembersIncome">C9. Net money contributed from family members or other people to the household:</string>
-    <string name="haveCredit">19. Has the family taken a loan over 5M IDR that you have to pay back?</string>
+    <string name="haveCredit">19. Has the family taken a loan over 1360 GHS that you have to pay back?</string>
     <string name="totalCredit">C10. What is the total amount of the loan outstanding?</string>
     <string name="sourceCredit">C11. Where did you take the loan from:</string>
     <string name="payOftenForCredit">C12. How often do you pay back?</string>
     <string name="payForCredit">C13. How much do you pay back per payment?</string>
-    <string name="giveLoan">20. Has the family given someone a loan over 5M IDR?</string>
+    <string name="giveLoan">20. Has the family given someone a loan over 1360 GHS?</string>
     <string name="amountOfLoan">C14. What is the total amount of the loan outstanding you give?</string>
     <string name="moneyBack">C15. How much have they back?</string>
     <string name="householdSavings">21. Household Savings:</string>
