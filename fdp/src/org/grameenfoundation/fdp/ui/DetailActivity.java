@@ -1328,7 +1328,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			//set Living expenses field
 			if (sObject.getAnnuallivingexpenses().isEmpty()){
-				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(9000));
+				setText((EditText) findViewById(R.id.livingExpenses_Field),Integer.toString(8000));
 			}else {
 				setText((EditText) findViewById(R.id.livingExpenses_Field),
 						sObject.getAnnuallivingexpenses());
@@ -1530,7 +1530,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						R.array.creditOftenQuarter, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getOFTENPAY().contentEquals("Bi annually")||sObject.getOFTENPAY().contentEquals("Setiap dua tahun")) {
+			} else if (sObject.getOFTENPAY().contentEquals("Monthly")||sObject.getOFTENPAY().contentEquals("Setiap dua tahun")) {
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenbiannual, android.R.layout.simple_spinner_item);

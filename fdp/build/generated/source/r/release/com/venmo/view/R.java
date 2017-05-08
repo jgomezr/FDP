@@ -18,10 +18,10 @@ public final class R {
         public static final int tooltipColor = 0x7f010005;
     }
     public static final class dimen {
-        public static final int tooltip_default_arrow_height = 0x7f09001a;
-        public static final int tooltip_default_arrow_width = 0x7f09001b;
-        public static final int tooltip_default_corner_radius = 0x7f09001c;
-        public static final int tooltip_default_offset = 0x7f09001d;
+        public static final int tooltip_default_arrow_height = 0x7f0a001a;
+        public static final int tooltip_default_arrow_width = 0x7f0a001b;
+        public static final int tooltip_default_corner_radius = 0x7f0a001c;
+        public static final int tooltip_default_offset = 0x7f0a001d;
     }
     public static final class id {
         public static final int anchored_view = 0x7f0d0005;
@@ -32,8 +32,8 @@ public final class R {
         public static final int top = 0x7f0d0004;
     }
     public static final class integer {
-        public static final int tooltip_default_arrow_alignment = 0x7f0a05aa;
-        public static final int tooltip_default_arrow_location = 0x7f0a05ab;
+        public static final int tooltip_default_arrow_alignment = 0x7f0b05aa;
+        public static final int tooltip_default_arrow_location = 0x7f0b05ab;
     }
     public static final class styleable {
         public static final int[] TooltipView = { 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a };

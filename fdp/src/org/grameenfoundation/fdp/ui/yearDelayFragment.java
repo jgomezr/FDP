@@ -96,18 +96,18 @@ public class yearDelayFragment extends Fragment {
         DecimalFormat decF = new DecimalFormat("Ghs ###,###,###");
 
         if (launchYear < startYear){
-            setText(jlb, p16+p19+p24);
-            setText(fblb, p16+p19+p21+p24);
-            setText(mrlb, p14+p16+p19+p21+p24);
-            setText(ablb, p16+p19+p21+p24);
-            setText(mylb, p12+p15+p16+p20+p18+p24);
-            setText(jnlb, p12+p16+p20+p18+p24);
-            setText(jllb, p16+p19+p24);
-            setText(aglb, p16+p19+p21+p24);
-            setText(splb, p16+p19+p21+p24);
-            setText(oclb, p16+p19+p21+p24);
-            setText(nvlb, p12+p15+p16+p20+p18+p24);
-            setText(dclb, p14+p16+p19+p21+p24);
+            setText(jlb, p24);
+            setText(fblb, "");
+            setText(mrlb, p12);
+            setText(ablb, p16+" + "+p19+" + "+p22);
+            setText(mylb, p14+" + "+p15+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+            setText(jnlb, p21+" + "+p24);
+            setText(jllb, "");
+            setText(aglb, p12);
+            setText(splb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p22+" + "+p24);
+            setText(oclb, p15+" + "+p19+" + "+p21+" + "+p24);
+            setText(nvlb, p19+" + "+p21+" + "+p24);
+            setText(dclb, p16+" + "+p23+" + "+p24);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan)+ getResources().getInteger(R.integer.GAPSLaborY1Jan)));
                 feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb)+ getResources().getInteger(R.integer.GAPSLaborY1Feb)));
@@ -258,7 +258,7 @@ public class yearDelayFragment extends Fragment {
                     setText(aglb, p8+" + "+p13);
                     setText(splb, p9+" + "+p10+" + "+p11+" + "+p14+" + "+p16+" + "+p18+" + "+p19+" + "+p20+" + "+p24);
                     setText(oclb, p9+" + "+p10+" + "+p11+" + "+p15+" + "+p16+" + "+p19+" + "+p20+" + "+p24);
-                    setText(nvlb, p11+" + "+p15+" + "+p16+" + "+p24);
+                    setText(nvlb, p11+" + "+p16+" + "+p24);
                     setText(dclb, p13+" + "+p16+" + "+p18);
 
                     if (relat == "extra"){
@@ -864,7 +864,7 @@ public class yearDelayFragment extends Fragment {
                     setText(mylb, p14+" + "+ p15+" + "+ p16+" + "+ p18+" + "+ p19+" + "+ p21);
                     setText(jnlb, p21+" + "+ p24);
                     setText(jllb, p24);
-                    setText(aglb, p12+" + "+ p13+ p24);
+                    setText(aglb, p12+" + "+ p13+" + "+ p24);
                     setText(splb, p14+" + "+ p16+" + "+ p18+" + "+ p19+" + "+ p21+" + "+ p22+" + "+ p24);
                     setText(oclb, p15+" + "+ p19+" + "+ p21+" + "+ p24);
                     setText(nvlb, p19+" + "+ p21+" + "+ p24);

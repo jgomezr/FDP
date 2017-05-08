@@ -8,39 +8,39 @@ package com.salesforce.androidsdk;
 
 public final class R {
     public static final class array {
-        public static final int oauthScopes = 0x7f07002c;
+        public static final int oauthScopes = 0x7f08002c;
     }
     public static final class color {
-        public static final int sf__forgot_passcode_text = 0x7f080023;
-        public static final int sf__hint_color = 0x7f080024;
-        public static final int sf__passcode_bg = 0x7f08002a;
-        public static final int sf__passcode_error_text = 0x7f08002b;
-        public static final int sf__passcode_layout_bg = 0x7f08002c;
-        public static final int sf__success_color = 0x7f08002d;
-        public static final int sf__warning_color = 0x7f08002e;
+        public static final int sf__forgot_passcode_text = 0x7f090023;
+        public static final int sf__hint_color = 0x7f090024;
+        public static final int sf__passcode_bg = 0x7f09002a;
+        public static final int sf__passcode_error_text = 0x7f09002b;
+        public static final int sf__passcode_layout_bg = 0x7f09002c;
+        public static final int sf__success_color = 0x7f09002d;
+        public static final int sf__warning_color = 0x7f09002e;
     }
     public static final class dimen {
-        public static final int sf__button_font_size = 0x7f090000;
-        public static final int sf__button_margin = 0x7f090001;
-        public static final int sf__custom_url_layout_padding = 0x7f090002;
-        public static final int sf__custom_url_margin_top = 0x7f090003;
-        public static final int sf__passcode_error_margin_top = 0x7f090009;
-        public static final int sf__passcode_forgot_margin_top = 0x7f09000a;
-        public static final int sf__passcode_instr_margin_left = 0x7f09000b;
-        public static final int sf__passcode_instr_margin_right = 0x7f09000c;
-        public static final int sf__passcode_instr_margin_top = 0x7f09000d;
-        public static final int sf__passcode_layout_margin_top = 0x7f09000e;
-        public static final int sf__passcode_layout_padding = 0x7f09000f;
-        public static final int sf__passcode_layout_width = 0x7f090010;
-        public static final int sf__passcode_text_min_width = 0x7f090011;
-        public static final int sf__passcode_title_margin_bottom = 0x7f090012;
-        public static final int sf__passcode_title_margin_top = 0x7f090013;
-        public static final int sf__server_button_margin = 0x7f090014;
-        public static final int sf__server_layout_padding = 0x7f090015;
-        public static final int sf__server_picker_margin_bottom = 0x7f090016;
-        public static final int sf__server_picker_margin_left = 0x7f090017;
-        public static final int sf__server_picker_margin_right = 0x7f090018;
-        public static final int sf__server_picker_margin_top = 0x7f090019;
+        public static final int sf__button_font_size = 0x7f0a0000;
+        public static final int sf__button_margin = 0x7f0a0001;
+        public static final int sf__custom_url_layout_padding = 0x7f0a0002;
+        public static final int sf__custom_url_margin_top = 0x7f0a0003;
+        public static final int sf__passcode_error_margin_top = 0x7f0a0009;
+        public static final int sf__passcode_forgot_margin_top = 0x7f0a000a;
+        public static final int sf__passcode_instr_margin_left = 0x7f0a000b;
+        public static final int sf__passcode_instr_margin_right = 0x7f0a000c;
+        public static final int sf__passcode_instr_margin_top = 0x7f0a000d;
+        public static final int sf__passcode_layout_margin_top = 0x7f0a000e;
+        public static final int sf__passcode_layout_padding = 0x7f0a000f;
+        public static final int sf__passcode_layout_width = 0x7f0a0010;
+        public static final int sf__passcode_text_min_width = 0x7f0a0011;
+        public static final int sf__passcode_title_margin_bottom = 0x7f0a0012;
+        public static final int sf__passcode_title_margin_top = 0x7f0a0013;
+        public static final int sf__server_button_margin = 0x7f0a0014;
+        public static final int sf__server_layout_padding = 0x7f0a0015;
+        public static final int sf__server_picker_margin_bottom = 0x7f0a0016;
+        public static final int sf__server_picker_margin_left = 0x7f0a0017;
+        public static final int sf__server_picker_margin_right = 0x7f0a0018;
+        public static final int sf__server_picker_margin_top = 0x7f0a0019;
     }
     public static final class drawable {
         public static final int ic_fp_40px = 0x7f020008;
@@ -175,29 +175,29 @@ public final class R {
         public static final int sf__switch_account = 0x7f06012d;
     }
     public static final class style {
-        public static final int SalesforceSDK = 0x7f0b0004;
-        public static final int SalesforceSDKActionBar = 0x7f0b001a;
-        public static final int SalesforceSDK_AccountSwitcher = 0x7f0b0005;
-        public static final int SalesforceSDK_AccountSwitcher_Button = 0x7f0b0006;
-        public static final int SalesforceSDK_AccountSwitcher_Button_AddAccount = 0x7f0b0007;
-        public static final int SalesforceSDK_AccountSwitcher_Button_Apply = 0x7f0b0008;
-        public static final int SalesforceSDK_AccountSwitcher_List = 0x7f0b0009;
-        public static final int SalesforceSDK_ActionBarTheme = 0x7f0b000a;
-        public static final int SalesforceSDK_Passcode = 0x7f0b000b;
-        public static final int SalesforceSDK_Passcode_Background = 0x7f0b000c;
-        public static final int SalesforceSDK_Passcode_Box = 0x7f0b000d;
-        public static final int SalesforceSDK_Passcode_Text = 0x7f0b000e;
-        public static final int SalesforceSDK_Passcode_Text_Entry = 0x7f0b000f;
-        public static final int SalesforceSDK_Passcode_Text_Error = 0x7f0b0010;
-        public static final int SalesforceSDK_Passcode_Text_ForgotPassword = 0x7f0b0011;
-        public static final int SalesforceSDK_Passcode_Text_Instructions = 0x7f0b0012;
-        public static final int SalesforceSDK_Passcode_Text_Title = 0x7f0b0013;
-        public static final int SalesforceSDK_ServerPicker = 0x7f0b0014;
-        public static final int SalesforceSDK_ServerPicker_Button = 0x7f0b0015;
-        public static final int SalesforceSDK_ServerPicker_ButtonContainer = 0x7f0b0017;
-        public static final int SalesforceSDK_ServerPicker_Button_OkCancel = 0x7f0b0016;
-        public static final int SalesforceSDK_ServerPicker_EditText = 0x7f0b0018;
-        public static final int SalesforceSDK_ServerPicker_List = 0x7f0b0019;
+        public static final int SalesforceSDK = 0x7f070005;
+        public static final int SalesforceSDKActionBar = 0x7f07001b;
+        public static final int SalesforceSDK_AccountSwitcher = 0x7f070006;
+        public static final int SalesforceSDK_AccountSwitcher_Button = 0x7f070007;
+        public static final int SalesforceSDK_AccountSwitcher_Button_AddAccount = 0x7f070008;
+        public static final int SalesforceSDK_AccountSwitcher_Button_Apply = 0x7f070009;
+        public static final int SalesforceSDK_AccountSwitcher_List = 0x7f07000a;
+        public static final int SalesforceSDK_ActionBarTheme = 0x7f07000b;
+        public static final int SalesforceSDK_Passcode = 0x7f07000c;
+        public static final int SalesforceSDK_Passcode_Background = 0x7f07000d;
+        public static final int SalesforceSDK_Passcode_Box = 0x7f07000e;
+        public static final int SalesforceSDK_Passcode_Text = 0x7f07000f;
+        public static final int SalesforceSDK_Passcode_Text_Entry = 0x7f070010;
+        public static final int SalesforceSDK_Passcode_Text_Error = 0x7f070011;
+        public static final int SalesforceSDK_Passcode_Text_ForgotPassword = 0x7f070012;
+        public static final int SalesforceSDK_Passcode_Text_Instructions = 0x7f070013;
+        public static final int SalesforceSDK_Passcode_Text_Title = 0x7f070014;
+        public static final int SalesforceSDK_ServerPicker = 0x7f070015;
+        public static final int SalesforceSDK_ServerPicker_Button = 0x7f070016;
+        public static final int SalesforceSDK_ServerPicker_ButtonContainer = 0x7f070018;
+        public static final int SalesforceSDK_ServerPicker_Button_OkCancel = 0x7f070017;
+        public static final int SalesforceSDK_ServerPicker_EditText = 0x7f070019;
+        public static final int SalesforceSDK_ServerPicker_List = 0x7f07001a;
     }
     public static final class xml {
         public static final int app_restrictions = 0x7f050000;

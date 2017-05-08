@@ -2,10 +2,10 @@
 apply plugin: 'android-library'
 
 dependencies {
-    compile 'com.google.guava:guava:18.0'
-    compile 'org.apache.httpcomponents:httpmime:4.3.2'
-    compile 'org.apache.james:apache-mime4j:0.7.2'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+  compile 'com.google.guava:guava:18.0'
+  compile 'org.apache.httpcomponents:httpmime:4.3.2'
+  compile 'org.apache.james:apache-mime4j:0.7.2'
+  compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 }
 
 android {
@@ -32,7 +32,7 @@ android {
   defaultConfig {
     testApplicationId "com.salesforce.androidsdk.tests"
     testInstrumentationRunner "com.salesforce.androidsdk.util.test.JUnitReportTestRunner"
-    minSdkVersion 21
+    minSdkVersion 19
     targetSdkVersion 23
   }
   packagingOptions {
@@ -44,8 +44,8 @@ android {
   lintOptions {
     abortOnError false
   }
-    productFlavors {
-    }
+  productFlavors {
+  }
     buildTypes {
     }
 }

@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__progress_spinner.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__progress_spinner.xml"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__nav_shadow.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__nav_shadow.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__oauth_background.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__oauth_background.png"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__nav_shadow.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__nav_shadow.png"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__progress_spinner.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__progress_spinner.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__oauth_container_dropshadow.9.png",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_right_border.xml"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__header_drop_shadow.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_drop_shadow.xml"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__refresh_loader.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__refresh_loader.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__header_drop_shadow.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_drop_shadow.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\release\\drawable-xlarge-v4\\sf__header_refresh.png",

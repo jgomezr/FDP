@@ -996,7 +996,7 @@
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/livingExpenses_Field"
                     android:layout_width="0dp"
-                    android:text="9000"
+                    android:text="8000"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
