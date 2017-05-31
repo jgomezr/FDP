@@ -2,7 +2,7 @@
 <resources>
 	<string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
 	<string name="app_name"><b>FDP WAf</b></string>
-	<string name="app_package" translatable="false">org.grameenfoundation.fdp</string>
+	<string name="app_package" translatable="false">org.grameenfoundation.fdpwaf</string>
 	<string name="logout_button">Logout</string>
 	<string name="switch_user_button">Switch User</string>
 	<string name="inspect_db_button" translatable="false">Inspect DB</string>
@@ -48,61 +48,65 @@
     <string name="phone">9. Phone Number:</string>
 	<string name="yearsRelationshipWithMars">10. Years Relationship with company:</string>
 	<string name="haveSpouse">11. Have spouse:</string>
-	<string name="spouseName">C1. Spouse Name:</string>
-	<string name="spouseBirthday">C2. Spouse Birthday Year:</string>
-	<string name="spouseEducationalLevel">C3. Spouse Educational Level:</string>
+	<string name="numberSpouses">C1. Number of spouses:</string>
+	<string name="spouseName">C2. Spouse Name:</string>
+	<string name="spouseBirthday">C3. Spouse Birthday Year:</string>
+	<string name="spouseEducationalLevel">C4. Spouse Educational Level:</string>
 	<string name="numberChildren">12. Total number of children:</string>
-	<string name="childrenUnder">C4. Children between 5 and 17 years old:</string>
-	<string name="childrenInSchool">C5. Children between 5 and 17 years old enrolled in school:</string>
+	<string name="childrenUnder">C5. Children between 5 and 17 years old:</string>
+	<string name="childrenInSchool">C6. Children between 5 and 17 years old enrolled in school:</string>
 	<string name="familyMembers">13. Number of people living together including the farmer:</string>
 	<string name="farmerGroup">14. Farmer group</string>
 	<string name="familyPhoto">Take a Family Photo</string>
 	<string name="fmWorkFarm">15. Family members or other people work on farm without paid wages:</string>
 	<string name="dependEconomically">16. Number of household members depend on family income:</string>
 	<string name="receivesFarmPayment">17. Farmer or spouse receives payment for other work:</string>
-    <string name="totalIncomeLabor">C6. Net Income from all other work that farmer does in the past year:</string>
-	<string name="spousePaidWork">C7. Does spouse have any paid work other than working on own cocoa farm:</string>
-    <string name="totalSpouseIncome">C8. Spouse Net Income from all work other than working on own cocoa farm:</string>
+    <string name="totalIncomeLabor">C7. Net Income from all other work that farmer does in the past year:</string>
+	<string name="spousePaidWork">C8. Does spouse have any paid work other than working on own cocoa farm:</string>
+    <string name="totalSpouseIncome">C9. Spouse Net Income from all work other than working on own cocoa farm:</string>
 	<string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string>
-    <string name="totalFamilyMembersIncome">C9. Net money contributed from family members or other people to the household:</string>
+    <string name="totalFamilyMembersIncome">C10. Net money contributed from family members or other people to the household:</string>
     <string name="haveCredit">19. Has the family taken a loan over 1360 GHS that you have to pay back?</string>
-    <string name="totalCredit">C10. What is the total amount of the loan outstanding?</string>
-    <string name="sourceCredit">C11. Where did you take the loan from:</string>
-    <string name="payOftenForCredit">C12. How often do you pay back?</string>
-    <string name="payForCredit">C13. How much do you pay back per payment?</string>
+    <string name="totalCredit">C11. What is the total amount of the loan outstanding?</string>
+    <string name="sourceCredit">C12. Where did you take the loan from:</string>
+    <string name="payOftenForCredit">C13. How often do you pay back?</string>
+    <string name="payForCredit">C14. How much do you pay back per payment?</string>
     <string name="giveLoan">20. Has the family given someone a loan over 1360 GHS?</string>
-    <string name="amountOfLoan">C14. What is the total amount of the loan outstanding you give?</string>
-    <string name="moneyBack">C15. How much have they back?</string>
+    <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
+    <string name="moneyBack">C16. How much have they back?</string>
     <string name="householdSavings">21. Household Savings:</string>
     <string name="livingExpenses">22. Annual living expenses:</string>
     <string name="otherExpenses">23. Annual other expenses:</string>
     <string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string>
     <string name="educationExpenses">25. Expected education expenses:</string>
 	<string name="bankAccount">26. Have bank account?</string>
-	<string name="accountType">C16. Account Type</string>
-	<string name="mobileMoney">C17. Farmer account have Mobile money option?</string>
-	<string name="wantAccount">C18. Want a bank account?</string>
-    <string name="productionCocoaLY">27. Total Kg Production of dry cocoa beans in crop year or calendar year:</string>
-    <string name="averageCocoaPrice">28. Average Farm gate dry bean cocoa price per Kg:</string>
-	<string name="expensesCocoaLY">29. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
-	<string name="grossCocoaLY">30. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
-	<string name="haveOtherCrops">31. Have Additional Crops:</string>
-	<string name="incomeOtherCrops">C19. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
+	<string name="accountType">C17. Account Type</string>
+	<string name="mobileMoney">C18. Farmer account have Mobile money option?</string>
+	<string name="wantAccount">C19. Want a bank account?</string>
+    <string name="measure">27. Units of measure</string>
+    <string name="area">Area</string>
+    <string name="weight">Weight</string>
+    <string name="bagClarify">*bag = 60kg bag</string>
+    <string name="productionCocoaLY">28. Total Production of dry cocoa beans in crop year or calendar year </string>
+    <string name="averageCocoaPrice">29. Average Farm gate dry bean cocoa price per Kg:</string>
+	<string name="expensesCocoaLY">30. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
+	<string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
+	<string name="haveOtherCrops">32. Have Additional Crops:</string>
+	<string name="incomeOtherCrops">C20. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
+	<string name="additionalCrops">C21. Additional Crops:</string>
 	<string name="mapPhoto">Take a photo of the farm map</string>
-	<string name="farmAge">32. Year of farm establishment:</string>
-    <string name="farmCertifications">33. Farm Certifications:</string>
-    <string name="farmArea">34. Total land ownership or availability size (Ha):</string>
-    <string name="cultivationArea">35. Total land under cultivation size (Ha):</string>
-    <string name="cocoaArea">36. Total land under cocoa size (Ha):</string>
-    <string name="renovationArea">37. Total cocoa planting already under renovation size (Ha):</string>
-    <string name="additionalCrops">C20. Additional Crops:</string>
-    <string name="hireLabor">38. Hire labor:</string>
-    <string name="daysHire">C21. How many labor days hire:</string>
+	<string name="farmAge">33. Year of farm establishment:</string>
+    <string name="farmCertifications">34. Farm Certifications:</string>
+    <string name="farmArea">35. Total land ownership or availability size </string>
+    <string name="cultivationArea">36. Total land under cultivation size </string>
+    <string name="cocoaArea">37. Total land under cocoa size </string>
+    <string name="renovationArea">38. Total cocoa planting already under renovation size </string>
+
     <string name="numberPlots">39. Number of plots:</string>
 
 	<string name="plotGPS">40. Plot GPS:</string>
-    <string name="plotArea">41. Plot Size (Ha):</string>
-    <string name="estimatedProduction">42. Estimated production (Kg):</string>
+    <string name="plotArea">41. Plot Size </string>
+    <string name="estimatedProduction">42. Estimated production </string>
     <string name="ph">43. Soil PH:</string>
     <string name="plantingMaterial">44. Planting Material:</string>
     <string name="cocoaTrees">45. Distance between cocoa trees Mts:</string>
@@ -239,6 +243,12 @@
     <string name="reason">Reason for renovation:</string>
     <string name="howLong">How long ago was made renovation?</string>
     <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
+    <string name="ac">(Ac):</string>
+    <string name="ha">(Ha):</string>
+    <string name="kg">(Kg):</string>
+    <string name="bag">(Bag):</string>
+    <string name="qq">(Qq):</string>
+
     <string-array name="creditOften">
         <item>Monthly</item>
         <item>Quarterly</item>
@@ -976,4 +986,28 @@
 	<string-array name="reno5">
 		<item>-5</item>
 	</string-array>
+    <string-array name="area1">
+        <item>Ha</item>
+        <item>Ac</item>
+    </string-array>
+    <string-array name="area2">
+        <item>Ac</item>
+        <item>Ha</item>
+    </string-array>
+	<string-array name="weight1">
+		<item>Kg</item>
+		<item>Bag</item>
+		<item>Qq</item>
+	</string-array>
+    <string-array name="weight2">
+        <item>Bag</item>
+        <item>Kg</item>
+        <item>Qq</item>
+    </string-array>
+    <string-array name="weight3">
+        <item>Qq</item>
+        <item>Kg</item>
+        <item>Bag</item>
+    </string-array>
+
 </resources>

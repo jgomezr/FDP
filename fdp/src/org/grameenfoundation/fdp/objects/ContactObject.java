@@ -385,6 +385,9 @@ public class ContactObject extends SalesforceObject {
     public static final String PLOT8RENOVATIONYEAR = "plot8RenovationYear__c";
     public static final String PLOT9RENOVATIONYEAR = "plot9RenovationYear__c";
     public static final String PLOT10RENOVATIONYEAR = "plot10RenovationYear__c";
+    public static final String NUMBERSPOUSES = "numberOfSpouses__c";
+    public static final String MEASURE = "unitOfMeasure__c";
+    public static final String AREAUNITS = "areaUnits__c";
     public static final String USER = "Assigned_to__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
@@ -756,7 +759,10 @@ public class ContactObject extends SalesforceObject {
             PLOT8RENOVATIONYEAR,
             PLOT9RENOVATIONYEAR,
             PLOT10RENOVATIONYEAR,
-            USER
+            USER,
+            NUMBERSPOUSES,
+            MEASURE,
+            AREAUNITS
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1129,7 +1135,10 @@ public class ContactObject extends SalesforceObject {
             PLOT8RENOVATIONYEAR,
             PLOT9RENOVATIONYEAR,
             PLOT10RENOVATIONYEAR,
-            USER
+            USER,
+            NUMBERSPOUSES,
+            MEASURE,
+            AREAUNITS
     };
 
     private boolean isLocallyModified;
@@ -2189,6 +2198,9 @@ public class ContactObject extends SalesforceObject {
     public String getPLOT8RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT8RENOVATIONYEAR));}
     public String getPLOT9RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT9RENOVATIONYEAR));}
     public String getPLOT10RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT10RENOVATIONYEAR));}
+    public String getNUMBERSPOUSES() {return sanitizeText(rawData.optString(NUMBERSPOUSES));}
+    public String getMEASURE() {return sanitizeText(rawData.optString(MEASURE));}
+    public String getAREAUNITS() {return sanitizeText(rawData.optString(AREAUNITS));}
     public String getUSER() {return sanitizeText(rawData.optString(USER));}
 
     /**

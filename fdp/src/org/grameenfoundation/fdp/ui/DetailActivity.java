@@ -46,7 +46,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
-import java.text.DecimalFormat;
+import java.util.StringTokenizer;
 
 /**
  * Object detail activity.
@@ -59,9 +59,9 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	private static final String TAG = "SmartSyncExplorer: DetailActivity";
 	private Button button;
 	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,familyIncome,incomeOtherCrops,totalCrd,payCredit,loanAmmount,moneyBack,hhSaving,otherExpenses,planedInvest,eduExpenses,expensesCCLY,grossCC,tOS,tL,tC,tR,childreSchool,childrenUnder,familyMemb;
-    private TextView tHelp1, t1,tHelp2,t2,tHelp3,t3,tHelp4,t4,tHelp5,t5,tHelp6,t6;
-	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,hire,bank;
-	private LinearLayout actType,mbMoney,wntAct,hireDays,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
+    private TextView tHelp1, t1,tHelp2,t2,tHelp3,t3,tHelp4,t4,tHelp5,t5,tHelp6,t6,lv28,lv35,lv36,lv37,lv38;
+	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,bank,weightFld,areaFld;
+	private LinearLayout actType,mbMoney,wntAct,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,numberSpouses,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
 	private LocationManager locationManager;
 	private LocationListener locationListener;
 	private UserAccount curAccount;
@@ -256,19 +256,27 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 		avgCocoaPrice = (EditText) findViewById(R.id.averageCocoaPrice_Field);
 		prdCocoaLy = (EditText) findViewById(R.id.productionCocoaLY_Field);
-		numbChildrens = (EditText) findViewById(R.id.numChildren);
+        weightFld = (Spinner) findViewById(R.id.weight_Field);
 
 		avgCocoaPrice.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus){
-                        savePoint();
+                    savePoint();
                     double avg = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9.]+", ""));
                     double prd = 0;
+                    int result1 = 0;
                     try{
                         prd = Double.parseDouble(prdCocoaLy.getText().toString().replaceAll("[^0-9.]+", ""));
                     }catch (NumberFormatException e){}
-                    int result1 = (int) (avg * prd);
+                    if (weightFld.getSelectedItem().toString().equals("Kg")){
+                        result1 = (int) (avg * prd);
+                    }else if (weightFld.getSelectedItem().toString().equals("Bag")){
+                        result1 = (int) ((avg*60) * prd);
+                    }else if (weightFld.getSelectedItem().toString().equals("Qq")){
+                        result1 = (int) ((avg*100) * prd);
+                    }
+
                     Log.d(TAG, "resultado: "+result1);
                     setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
 
@@ -276,6 +284,76 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
 			}
 		});
+
+        prdCocoaLy.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus){
+                    savePoint();
+                    double avg = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9.]+", ""));
+                    double prd = 0;
+                    int result1 = 0;
+                    try{
+                        prd = Double.parseDouble(prdCocoaLy.getText().toString().replaceAll("[^0-9.]+", ""));
+                    }catch (NumberFormatException e){}
+                    if (weightFld.getSelectedItem().toString().equals("Kg")){
+                        result1 = (int) (avg * prd);
+                    }else if (weightFld.getSelectedItem().toString().equals("Bag")){
+                        result1 = (int) ((avg*60) * prd);
+                    }else if (weightFld.getSelectedItem().toString().equals("Qq")){
+                        result1 = (int) ((avg*100) * prd);
+                    }
+                    Log.d(TAG, "resultado: "+result1);
+                    setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
+                }
+            }
+        });
+
+        lv28 = (TextView) findViewById(R.id.tooltipHelp4);
+        weightFld.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (weightFld.getSelectedItem().toString().equals("Bag")){
+                    lv28.setText(getResources().getString(R.string.productionCocoaLY)+" "+getResources().getString(R.string.bag));
+                }else if (weightFld.getSelectedItem().toString().equals("Qq")){
+                    lv28.setText(getResources().getString(R.string.productionCocoaLY)+" "+getResources().getString(R.string.qq));
+                }else{
+                    lv28.setText(getResources().getString(R.string.productionCocoaLY)+" "+getResources().getString(R.string.kg));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        areaFld = (Spinner) findViewById(R.id.area_Field);
+        lv35 = (TextView) findViewById(R.id.q35);
+        lv36 = (TextView) findViewById(R.id.q36);
+        lv37 = (TextView) findViewById(R.id.q37);
+        lv38 = (TextView) findViewById(R.id.q38);
+        areaFld.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (areaFld.getSelectedItem().toString().equals("Ac")){
+                    lv35.setText(getResources().getString(R.string.farmArea)+" "+getResources().getString(R.string.ac));
+                    lv36.setText(getResources().getString(R.string.cultivationArea)+" "+getResources().getString(R.string.ac));
+                    lv37.setText(getResources().getString(R.string.cocoaArea)+" "+getResources().getString(R.string.ac));
+                    lv38.setText(getResources().getString(R.string.renovationArea)+" "+getResources().getString(R.string.ac));
+                }else{
+                    lv35.setText(getResources().getString(R.string.farmArea)+" "+getResources().getString(R.string.ha));
+                    lv36.setText(getResources().getString(R.string.cultivationArea)+" "+getResources().getString(R.string.ha));
+                    lv37.setText(getResources().getString(R.string.cocoaArea)+" "+getResources().getString(R.string.ha));
+                    lv38.setText(getResources().getString(R.string.renovationArea)+" "+getResources().getString(R.string.ha));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         spousename =(EditText) findViewById(R.id.spouseName);
         spousename.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -325,26 +403,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             }
         });
 
-		prdCocoaLy.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-			@Override
-			public void onFocusChange(View v, boolean hasFocus) {
-				if(!hasFocus){
-                    savePoint();
-                    double avg = Double.parseDouble(avgCocoaPrice.getText().toString().replaceAll("[^0-9.]+", ""));
-                    double prd = 0;
-                    try{
-                        prd = Double.parseDouble(prdCocoaLy.getText().toString().replaceAll("[^0-9.]+", ""));
-                    }catch (NumberFormatException e){}
-                    int result1 = (int) (avg * prd);
-                    Log.d(TAG, "resultado: "+result1);
-					setText((EditText) findViewById(R.id.grossCocoaLY_Field),String.valueOf(result1));
-				}
-			}
-		});
-
 
 		under17 = (LinearLayout) findViewById(R.id.under17);
 		under17School = (LinearLayout)findViewById(R.id.under17School);
+        numbChildrens = (EditText) findViewById(R.id.numChildren);
 		numbChildrens.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -372,6 +434,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		});
 
         haveSpouse = (Spinner) findViewById(R.id.haveSpouse);
+        numberSpouses= (LinearLayout) findViewById(R.id.numberSp);
         spouseName = (LinearLayout) findViewById(R.id.spName);
         spouseBirthday = (LinearLayout) findViewById(R.id.spBday);
         spouseEdLvl = (LinearLayout) findViewById(R.id.spEdlvl);
@@ -381,11 +444,13 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //savePoint();
                 if (haveSpouse.getSelectedItem().toString().equals("Yes")||haveSpouse.getSelectedItem().toString().equals("Ya")){
+                    numberSpouses.setVisibility(View.VISIBLE);
                     spouseName.setVisibility(View.VISIBLE);
                     spouseBirthday.setVisibility(View.VISIBLE);
                     spouseEdLvl.setVisibility(View.VISIBLE);
                     spousePaidWork.setVisibility(View.VISIBLE);
                 }else{
+                    numberSpouses.setVisibility(View.GONE);
                     spouseName.setVisibility(View.GONE);
                     spouseBirthday.setVisibility(View.GONE);
                     spouseEdLvl.setVisibility(View.GONE);
@@ -398,27 +463,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             }
         });
-
-        hire = (Spinner) findViewById(R.id.hireLabor_field);
-        hireDays = (LinearLayout) findViewById(R.id.hireLaborDays_Layout);
-        hire.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (hire.getSelectedItem().toString().equals("Yes")||hire.getSelectedItem().toString().equals("Ya")){
-                    hireDays.setVisibility(View.VISIBLE);
-                }else{
-                    hireDays.setVisibility(View.GONE);
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
 
 		farmP = (Spinner) findViewById(R.id.receivesFarmPayment_Field);
 		farmLY = (LinearLayout) findViewById(R.id.farmLabor_Layout);
@@ -768,21 +812,29 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		@Override
 		public void afterTextChanged(Editable editable) {
 			EditText editText = editTextWeakReference.get();
-			if (editText != null) {
-                String s = editable.toString();
-                editText.removeTextChangedListener(this);
-                DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
-                String cleanString = s.replaceAll("[^0-9]+", "");
-                double parsed = 0;
-                try{
-                    parsed = Double.parseDouble(cleanString);
-                }catch (NumberFormatException e){
-                    e.printStackTrace();
-                }
+            try{
 
-                String formatted = dec.format(parsed);
-                editText.setText(formatted);
-                editText.setSelection(formatted.length());
+                if (editText != null) {
+                    String s = editable.toString();
+                    editText.removeTextChangedListener(this);
+                    if(s.startsWith(".")){
+                        editText.setText("0.");
+                    }
+                    if(s.startsWith("0") && !s.startsWith("0.")){
+                        editText.setText("");
+                    }
+
+                    String str = editText.getText().toString().replaceAll("[^0-9.]+", "");
+                    if (!s.equals(""))
+                        editText.setText("Ghs "+getDecimalFormattedString(str));
+                    editText.setSelection(editText.getText().toString().length());
+                }
+                editText.addTextChangedListener(this);
+                return;
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
                 editText.addTextChangedListener(this);
             }
 
@@ -807,25 +859,80 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         @Override
         public void afterTextChanged(Editable editable) {
             EditText editText = editTextWeakReference.get();
-            if (editText != null) {
-                String s = editable.toString();
-                editText.removeTextChangedListener(this);
-                DecimalFormat dec = new DecimalFormat("###,###,###");
-                String cleanString = s.replaceAll("[^0-9]+", "");
-                double parsed = 0;
-                try{
-                    parsed = Double.parseDouble(cleanString);
-                }catch (NumberFormatException e){
-                    e.printStackTrace();
-                }
+            try{
 
-                String formatted = dec.format(parsed);
-                editText.setText(formatted);
-                editText.setSelection(formatted.length());
+                if (editText != null) {
+                    String s = editable.toString();
+                    editText.removeTextChangedListener(this);
+                    if(s.startsWith(".")){
+                        editText.setText("0.");
+                    }
+                    if(s.startsWith("0") && !s.startsWith("0.")){
+                        editText.setText("");
+                    }
+
+                    String str = editText.getText().toString().replaceAll(",", "");
+                    if (!s.equals(""))
+                        editText.setText(getDecimalFormattedString(str));
+                    editText.setSelection(editText.getText().toString().length());
+                }
+                editText.addTextChangedListener(this);
+                return;
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
                 editText.addTextChangedListener(this);
             }
 
         }
+    }
+
+    public static String getDecimalFormattedString(String value)
+    {
+        StringTokenizer lst = new StringTokenizer(value, ".");
+        String str1 = value;
+        String str2 = "";
+        if (lst.countTokens() > 1)
+        {
+            str1 = lst.nextToken();
+            str2 = lst.nextToken();
+        }
+        String str3 = "";
+        int i = 0;
+        int j = -1 + str1.length();
+        if (str1.charAt( -1 + str1.length()) == '.')
+        {
+            j--;
+            str3 = ".";
+        }
+        for (int k = j;; k--)
+        {
+            if (k < 0)
+            {
+                if (str2.length() > 0)
+                    str3 = str3 + "." + str2;
+                return str3;
+            }
+            if (i == 3)
+            {
+                str3 = "," + str3;
+                i = 0;
+            }
+            str3 = str1.charAt(k) + str3;
+            i++;
+        }
+
+    }
+
+    public static String trimCommaOfString(String string) {
+//        String returnString;
+        if(string.contains(",")){
+            return string.replace(",","");}
+        else {
+            return string;
+        }
+
     }
 
 
@@ -922,8 +1029,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		inflater.inflate(R.menu.action_bar_menu, menu);
 		final MenuItem searchItem = menu.findItem(R.id.action_search);
 		searchItem.setVisible(false);
-		final MenuItem logoutItem = menu.findItem(R.id.action_logout);
-		logoutItem.setVisible(false);
+		//final MenuItem logoutItem = menu.findItem(R.id.action_logout);
+		//logoutItem.setVisible(false);
 		final MenuItem addItem = menu.findItem(R.id.action_add);
 		addItem.setVisible(false);
 		final MenuItem refreshItem = menu.findItem(R.id.action_refresh);
@@ -1055,6 +1162,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 					sObject.getDepartment());
 			setText((EditText) findViewById(R.id.relation_mars_field),
 					sObject.getRelationWithMars());
+            setText((EditText) findViewById(R.id.number_spouses),
+                    sObject.getNUMBERSPOUSES());
 			setText((EditText) findViewById(R.id.spouseName),
 					sObject.getHomePhone());
 			setText((EditText) findViewById(R.id.spouseBirthday),
@@ -1457,35 +1566,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			setText((EditText) findViewById(R.id.additionalCrops_field),sObject.getAditionalCrops());
 			setText((EditText) findViewById(R.id.fmWorkFarm_field),sObject.getFamilyMembersWorkFarm());
 
-			//set hire labor field
-			if (sObject.getHireLabor().contentEquals("Yes")||sObject.getHireLabor().contentEquals("Ya")) {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.yes, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			} else if (sObject.getHireLabor().contentEquals("No")||sObject.getHireLabor().contentEquals("Tidak")) {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.No, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			} else {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.yesNo, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			}
-
-			//set days hire field
-			if (sObject.getHowManyLaborDaysHire().isEmpty()){
-				setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
-			}else {
-				setText((EditText) findViewById(R.id.daysHire_field),
-						sObject.getHowManyLaborDaysHire());
-			}
-
 			//set number of plots field
 			if (sObject.getNumberOfPlots().isEmpty()){
 				setText((EditText) findViewById(R.id.numberPlots_field),Integer.toString(0));
@@ -1609,13 +1689,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             setText((EditText) findViewById(R.id.phoneNumber),
                     sObject.getPhoneNumber());
 
-            //set Hire days
-            if (sObject.getHowManyLaborDaysHire().isEmpty()){
-                setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
-            }else {
-                setText((EditText) findViewById(R.id.daysHire_field),
-                        sObject.getHowManyLaborDaysHire());
-            }
 
 			//set bank account
 			if (sObject.getBANKACCOUNT().contentEquals("Yes")||sObject.getBANKACCOUNT().contentEquals("Ya")) {
@@ -1717,8 +1790,45 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
 			}
+
+            //set weight
+            if (sObject.getMEASURE().contentEquals("Qq")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weight_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.weight3, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else if (sObject.getMEASURE().contentEquals("Bag")) {
+                Spinner spinner = (Spinner) findViewById(R.id.weight_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.weight2, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else {
+                Spinner spinner = (Spinner) findViewById(R.id.weight_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.weight1, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
+
+            //set area
+            if (sObject.getAREAUNITS().contentEquals("Ac")) {
+                Spinner spinner = (Spinner) findViewById(R.id.area_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.area2, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            } else {
+                Spinner spinner = (Spinner) findViewById(R.id.area_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.area1, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }
 		}
         familyMemb.addTextChangedListener(new DetailActivity.familyWatcher(familyMemb));
+
 	}
 
 	private void setText(EditText textField, String text) {
@@ -1726,7 +1836,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			textField.setText(text);
 		}
 	}
-
 
 	public void launchFarm(View view) {
         final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
@@ -1762,6 +1871,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String email = ((EditText) findViewById(R.id.village)).getText().toString();
 		final String department = ((EditText) findViewById(R.id.gps_field)).getText().toString();
 		final String relationMars = ((EditText) findViewById(R.id.relation_mars_field)).getText().toString();
+        final String numSpouses = ((EditText) findViewById(R.id.number_spouses)).getText().toString();
 		final String homePhone = ((EditText) findViewById(R.id.spouseName)).getText().toString();
 		final String spouseBirthday = ((EditText) findViewById(R.id.spouseBirthday)).getText().toString();
 		final String spouseEducationalLvl = ((Spinner) findViewById(R.id.spouseEducationalLevel_field)).getSelectedItem().toString();
@@ -1775,22 +1885,22 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String haveOtherCrops = ((Spinner) findViewById(R.id.haveOtherCrops_Field)).getSelectedItem().toString();
 		final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
 		final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
-		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
+		final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+		final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[^0-9.]+", "");
 		final String farmAge = ((EditText) findViewById(R.id.farmAge_field)).getText().toString();
 		final String farmCert = ((Spinner) findViewById(R.id.farmCertifications_field)).getSelectedItem().toString();
 		final String farmArea = ((EditText) findViewById(R.id.farmArea_field)).getText().toString();
@@ -1798,12 +1908,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String farmRenArea = ((EditText) findViewById(R.id.renovationArea_field)).getText().toString();
 		final String farmAditionalCrops = ((EditText) findViewById(R.id.additionalCrops_field)).getText().toString();
 		final String farmWorkOnFarm = ((EditText) findViewById(R.id.fmWorkFarm_field)).getText().toString();
-		final String hireLabor = ((Spinner) findViewById(R.id.hireLabor_field)).getSelectedItem().toString();
-		final String hireDays = ((EditText) findViewById(R.id.daysHire_field)).getText().toString();
 		final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
 		final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
-        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
+        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[^0-9.]+", "");
         final String oftenPayCredit = ((Spinner)findViewById(R.id.payOftenForCredit_Field)).getSelectedItem().toString();
         final String sourceOfCredit = ((Spinner)findViewById(R.id.sourceCredit_Field)).getSelectedItem().toString();
         final String fmGroup = ((EditText) findViewById(R.id.farmerGp)).getText().toString();
@@ -1814,6 +1922,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String acctType = ((Spinner) findViewById(R.id.accountType_field)).getSelectedItem().toString();
 		final String mbMoney =((Spinner) findViewById(R.id.mobileMoney_field)).getSelectedItem().toString();
 		final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
+        final String measure = ((Spinner) findViewById(R.id.weight_Field)).getSelectedItem().toString();
+        final String area = ((Spinner) findViewById(R.id.area_Field)).getSelectedItem().toString();
 		final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
 		JSONObject contact;
 		try {
@@ -1838,6 +1948,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			contact.put(ContactObject.EMAIL, email);
 			contact.put(ContactObject.DEPARTMENT, department);
 			contact.put(ContactObject.YEARSRELATIONSHIPWITHMARS,relationMars);
+            contact.put(ContactObject.NUMBERSPOUSES,numSpouses);
 			contact.put(ContactObject.HOME_PHONE, homePhone);
 			contact.put(ContactObject.SPOUSEBIRTHDAY,spouseBirthday);
 			contact.put(ContactObject.SPOUSEEDUCATIONALLEVEL,spouseEducationalLvl);
@@ -1874,8 +1985,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			contact.put(ContactObject.TOTALRENOVATIONAREA, farmRenArea);
 			contact.put(ContactObject.ADITIONALCROPS, farmAditionalCrops);
 			contact.put(ContactObject.FAMILYMEMBERSWORKONFARM, farmWorkOnFarm);
-			contact.put(ContactObject.HIRELABOR, hireLabor);
-			contact.put(ContactObject.HOWMANYLABORDAYSHIRE, hireDays);
 			contact.put(ContactObject.NUMBEROFPLOTS, numberPlots);
             contact.put(ContactObject.NUMBERCHILDRENS,numberChildrens);
 			contact.put(ContactObject.HAVESPOUSE,haveSpouse);
@@ -1890,6 +1999,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.ACCOUNTTYPE,acctType);
             contact.put(ContactObject.MOBILEMONEY,mbMoney);
             contact.put(ContactObject.WANTACCOUNT,want);
+            contact.put(ContactObject.MEASURE,measure);
+            contact.put(ContactObject.AREAUNITS,area);
 			contact.put(SyncManager.LOCAL, true);
 			contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
 			contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -1915,6 +2026,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String email = ((EditText) findViewById(R.id.village)).getText().toString();
         final String department = ((EditText) findViewById(R.id.gps_field)).getText().toString();
         final String relationMars = ((EditText) findViewById(R.id.relation_mars_field)).getText().toString();
+        final String numSpouses = ((EditText) findViewById(R.id.number_spouses)).getText().toString();
         final String homePhone = ((EditText) findViewById(R.id.spouseName)).getText().toString();
         final String spouseBirthday = ((EditText) findViewById(R.id.spouseBirthday)).getText().toString();
         final String spouseEducationalLvl = ((Spinner) findViewById(R.id.spouseEducationalLevel_field)).getSelectedItem().toString();
@@ -1928,22 +2040,22 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String haveOtherCrops = ((Spinner) findViewById(R.id.haveOtherCrops_Field)).getSelectedItem().toString();
         final String haveCredit = ((Spinner) findViewById(R.id.haveCredit_Field)).getSelectedItem().toString();
         final String giveLoan = ((Spinner) findViewById(R.id.giveLoan_Field)).getSelectedItem().toString();
-        final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[^0-9]+", "");
-        final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
+        final String cocoaProductionLY = ((EditText) findViewById(R.id.productionCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String averageCocoaPrice = ((EditText) findViewById(R.id.averageCocoaPrice_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String expensesCocoaLy = ((EditText) findViewById(R.id.expensesCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String grossIncome = ((EditText) findViewById(R.id.grossCocoaLY_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String incomeOtherCrops = ((EditText) findViewById(R.id.incomeOtherCrops_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String incomeLabor = ((EditText) findViewById(R.id.totalIncomeLabor_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String spouseIncome = ((EditText) findViewById(R.id.totalSpouseIncome_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String familyIncome = ((EditText) findViewById(R.id.totalFamilyMembersIncome_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String ammountLoan = ((EditText) findViewById(R.id.amountOfLoan_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String moneyBack = ((EditText) findViewById(R.id.moneyBack_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String hhSavings = ((EditText) findViewById(R.id.householdSavings_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String livingExpenses = ((EditText) findViewById(R.id.livingExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String otherExpenses = ((EditText) findViewById(R.id.otherExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String planInvest = ((EditText) findViewById(R.id.plannedInvestments_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String educationalExpenses = ((EditText) findViewById(R.id.educationExpenses_Field)).getText().toString().replaceAll("[^0-9.]+", "");
+        final String payForCredit = ((EditText) findViewById(R.id.payForCredit_Field)).getText().toString().replaceAll("[^0-9.]+", "");
         final String farmAge = ((EditText) findViewById(R.id.farmAge_field)).getText().toString();
         final String farmCert = ((Spinner) findViewById(R.id.farmCertifications_field)).getSelectedItem().toString();
         final String farmArea = ((EditText) findViewById(R.id.farmArea_field)).getText().toString();
@@ -1951,12 +2063,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String farmRenArea = ((EditText) findViewById(R.id.renovationArea_field)).getText().toString();
         final String farmAditionalCrops = ((EditText) findViewById(R.id.additionalCrops_field)).getText().toString();
         final String farmWorkOnFarm = ((EditText) findViewById(R.id.fmWorkFarm_field)).getText().toString();
-        final String hireLabor = ((Spinner) findViewById(R.id.hireLabor_field)).getSelectedItem().toString();
-        final String hireDays = ((EditText) findViewById(R.id.daysHire_field)).getText().toString();
         final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
         final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
-        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[^0-9]+", "");
+        final String totalPayCredit = ((EditText)findViewById(R.id.totalCredit_Field)).getText().toString().replaceAll("[^0-9.]+", "");
         final String oftenPayCredit = ((Spinner)findViewById(R.id.payOftenForCredit_Field)).getSelectedItem().toString();
         final String sourceOfCredit = ((Spinner)findViewById(R.id.sourceCredit_Field)).getSelectedItem().toString();
         final String fmGroup = ((EditText) findViewById(R.id.farmerGp)).getText().toString();
@@ -1967,6 +2077,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String acctType = ((Spinner) findViewById(R.id.accountType_field)).getSelectedItem().toString();
         final String mbMoney =((Spinner) findViewById(R.id.mobileMoney_field)).getSelectedItem().toString();
         final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
+        final String measure = ((Spinner) findViewById(R.id.weight_Field)).getSelectedItem().toString();
+        final String area = ((Spinner) findViewById(R.id.area_Field)).getSelectedItem().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -1991,6 +2103,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.EMAIL, email);
             contact.put(ContactObject.DEPARTMENT, department);
             contact.put(ContactObject.YEARSRELATIONSHIPWITHMARS,relationMars);
+            contact.put(ContactObject.NUMBERSPOUSES,numSpouses);
             contact.put(ContactObject.HOME_PHONE, homePhone);
             contact.put(ContactObject.SPOUSEBIRTHDAY,spouseBirthday);
             contact.put(ContactObject.SPOUSEEDUCATIONALLEVEL,spouseEducationalLvl);
@@ -2027,8 +2140,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.TOTALRENOVATIONAREA, farmRenArea);
             contact.put(ContactObject.ADITIONALCROPS, farmAditionalCrops);
             contact.put(ContactObject.FAMILYMEMBERSWORKONFARM, farmWorkOnFarm);
-            contact.put(ContactObject.HIRELABOR, hireLabor);
-            contact.put(ContactObject.HOWMANYLABORDAYSHIRE, hireDays);
             contact.put(ContactObject.NUMBEROFPLOTS, numberPlots);
             contact.put(ContactObject.NUMBERCHILDRENS,numberChildrens);
             contact.put(ContactObject.HAVESPOUSE,haveSpouse);
@@ -2043,6 +2154,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.ACCOUNTTYPE,acctType);
             contact.put(ContactObject.MOBILEMONEY,mbMoney);
             contact.put(ContactObject.WANTACCOUNT,want);
+            contact.put(ContactObject.MEASURE,measure);
+            contact.put(ContactObject.AREAUNITS,area);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

@@ -1,13 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\xml\\app_restrictions.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\app_restrictions.xml"
-    },
-    {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\xml\\servers.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\servers.xml"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\authenticator.xml"
     },
@@ -18,9 +10,5 @@
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\xml\\servers.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\servers.xml"
-    },
-    {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\debug\\xml\\authenticator.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\xml\\authenticator.xml"
     }
 ]
