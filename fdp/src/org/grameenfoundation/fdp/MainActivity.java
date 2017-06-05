@@ -194,9 +194,6 @@ public class MainActivity extends SalesforceListActivity implements
 				Toast.makeText(this, "Synchronizing...", Toast.LENGTH_SHORT).show();
 				syncUpContacts();
 				return true;
-			case R.id.action_logout:
-				logoutConfirmationDialog.show(getFragmentManager(), "LogoutDialog");
-				return true;
 			case R.id.action_switch_user:
 				launchAccountSwitcherActivity();
 				return true;

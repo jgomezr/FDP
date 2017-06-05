@@ -922,8 +922,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		inflater.inflate(R.menu.action_bar_menu, menu);
 		final MenuItem searchItem = menu.findItem(R.id.action_search);
 		searchItem.setVisible(false);
-		final MenuItem logoutItem = menu.findItem(R.id.action_logout);
-		logoutItem.setVisible(false);
 		final MenuItem addItem = menu.findItem(R.id.action_add);
 		addItem.setVisible(false);
 		final MenuItem refreshItem = menu.findItem(R.id.action_refresh);

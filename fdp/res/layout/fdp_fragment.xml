@@ -173,6 +173,59 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content">
 
+        <TextView android:id="@+id/incomeY0P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/costY0P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right" />
+
+        <TextView android:id="@+id/manDaysY0P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/laborY0P"
+            android:visibility="gone"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+        <TextView android:id="@+id/plY0P"
+            android:text="0"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content">
+
         <TextView android:id="@+id/incomeY1P"
             android:text="0"
             android:lines="2"

@@ -13,9 +13,6 @@
         android:icon="@drawable/ic_action_refresh"
         android:title="@string/action_refresh"
         android:showAsAction="ifRoom" />
-    <item android:id="@+id/action_logout"
-        android:title="@string/logout_button"
-        android:showAsAction="never" />
     <item android:id="@+id/action_switch_user"
         android:title="@string/switch_user_button"
         android:showAsAction="never" />

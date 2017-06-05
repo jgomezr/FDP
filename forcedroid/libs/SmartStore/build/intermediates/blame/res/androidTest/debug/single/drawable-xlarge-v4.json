@@ -4,12 +4,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_drop_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__refresh_loader.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__refresh_loader.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__header_refresh_states.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_refresh_states.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__refresh_loader.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__refresh_loader.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__toolbar_background.xml",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__oauth_container_dropshadow.9.png"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__header_refresh_press.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_refresh_press.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__header_right_border.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_right_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__header_refresh_press.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-xlarge-v4\\sf__header_refresh_press.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp\\forcedroid\\libs\\SmartStore\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xlarge-v4\\sf__progress_spinner.xml",
