@@ -32,8 +32,8 @@ public final class R {
         public static final int top = 0x7f0d0004;
     }
     public static final class integer {
-        public static final int tooltip_default_arrow_alignment = 0x7f0a05f8;
-        public static final int tooltip_default_arrow_location = 0x7f0a05f9;
+        public static final int tooltip_default_arrow_alignment = 0x7f0a0502;
+        public static final int tooltip_default_arrow_location = 0x7f0a0503;
     }
     public static final class styleable {
         public static final int[] TooltipView = { 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a };
