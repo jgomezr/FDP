@@ -438,7 +438,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -489,7 +489,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -540,7 +540,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -591,7 +591,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -642,7 +642,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider,500, 0, locationListener);
             }
         });
 
@@ -693,7 +693,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -744,7 +744,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -795,7 +795,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -846,7 +846,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 
@@ -897,7 +897,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }
                 String locationProvider = LocationManager.GPS_PROVIDER;
-                locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+                locationManager.requestLocationUpdates(locationProvider, 500, 0, locationListener);
             }
         });
 

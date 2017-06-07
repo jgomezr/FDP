@@ -100,6 +100,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
         fdpIntent.putExtra(OBJECT_TITLE_KEY, sObject.getName());
         fdpIntent.putExtra(OBJECT_NAME_KEY, sObject.getEmail());
         startActivity(fdpIntent);
+        finish();
     }
 
     @Override

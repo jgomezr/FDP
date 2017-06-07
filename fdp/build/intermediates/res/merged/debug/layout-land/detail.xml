@@ -1563,52 +1563,6 @@
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/FarmerDetail.ParentView.TextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hireLabor"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
-                <Spinner
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/hireLabor_field"
-                    android:layout_weight=".50"
-                    android:entries="@array/yesNo" />
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/hireLaborDays_Layout"
-                android:visibility="gone">
-
-                <TextView android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/daysHire"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"
-                    style="@style/FarmerDetail.ParentView.TextView" />
-
-                <EditText android:id="@+id/daysHire_field"
-                    android:layout_width="0dp"
-                    android:text="0"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
-                    style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="number" />
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView android:layout_width="0dp"

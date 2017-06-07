@@ -60,8 +60,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	private Button button;
 	private EditText textView,avgCocoaPrice, prdCocoaLy,numbChildrens,fcode,spousename,incomelabor,spouseincome,livinexp,familyIncome,incomeOtherCrops,totalCrd,payCredit,loanAmmount,moneyBack,hhSaving,otherExpenses,planedInvest,eduExpenses,expensesCCLY,grossCC,tOS,tL,tC,tR,childreSchool,childrenUnder,familyMemb;
     private TextView tHelp1, t1,tHelp2,t2,tHelp3,t3,tHelp4,t4,tHelp5,t5,tHelp6,t6;
-	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,hire,bank;
-	private LinearLayout actType,mbMoney,wntAct,hireDays,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
+	private Spinner spouseP,familyP,farmP,credit,loan,aditionalC,haveSpouse,bank;
+	private LinearLayout actType,mbMoney,wntAct,farmLY,spouseLY,familyLY,creditLY,loanLY,amountLY,aditionalLY,under17,under17School,spouseName,spouseBirthday,spouseEdLvl,spousePaidWork,totalCredit,OftenPay,sourceLoan,addCrop;
 	private LocationManager locationManager;
 	private LocationListener locationListener;
 	private UserAccount curAccount;
@@ -391,26 +391,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     spouseEdLvl.setVisibility(View.GONE);
                     spousePaidWork.setVisibility(View.GONE);
                 }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        hire = (Spinner) findViewById(R.id.hireLabor_field);
-        hireDays = (LinearLayout) findViewById(R.id.hireLaborDays_Layout);
-        hire.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (hire.getSelectedItem().toString().equals("Yes")||hire.getSelectedItem().toString().equals("Ya")){
-                    hireDays.setVisibility(View.VISIBLE);
-                }else{
-                    hireDays.setVisibility(View.GONE);
-                }
-
             }
 
             @Override
@@ -877,7 +857,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						return;
 					}
 				}
-				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5, 0, locationListener);
+				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 0, locationListener);
 			}
 		});
 	}
@@ -1469,35 +1449,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			setText((EditText) findViewById(R.id.additionalCrops_field),sObject.getAditionalCrops());
 			setText((EditText) findViewById(R.id.fmWorkFarm_field),sObject.getFamilyMembersWorkFarm());
 
-			//set hire labor field
-			if (sObject.getHireLabor().contentEquals("Yes")||sObject.getHireLabor().contentEquals("Ya")) {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.yes, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			} else if (sObject.getHireLabor().contentEquals("No")||sObject.getHireLabor().contentEquals("Tidak")) {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.No, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			} else {
-				Spinner spinner = (Spinner) findViewById(R.id.hireLabor_field);
-				ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-						R.array.yesNo, android.R.layout.simple_spinner_item);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				spinner.setAdapter(adapter);
-			}
-
-			//set days hire field
-			if (sObject.getHowManyLaborDaysHire().isEmpty()){
-				setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
-			}else {
-				setText((EditText) findViewById(R.id.daysHire_field),
-						sObject.getHowManyLaborDaysHire());
-			}
-
 			//set number of plots field
 			if (sObject.getNumberOfPlots().isEmpty()){
 				setText((EditText) findViewById(R.id.numberPlots_field),Integer.toString(0));
@@ -1620,14 +1571,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             //set phone Number
             setText((EditText) findViewById(R.id.phoneNumber),
                     sObject.getPhoneNumber());
-
-            //set Hire days
-            if (sObject.getHowManyLaborDaysHire().isEmpty()){
-                setText((EditText) findViewById(R.id.daysHire_field),Integer.toString(0));
-            }else {
-                setText((EditText) findViewById(R.id.daysHire_field),
-                        sObject.getHowManyLaborDaysHire());
-            }
 
 			//set bank account
 			if (sObject.getBANKACCOUNT().contentEquals("Yes")||sObject.getBANKACCOUNT().contentEquals("Ya")) {
@@ -1810,8 +1753,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String farmRenArea = ((EditText) findViewById(R.id.renovationArea_field)).getText().toString();
 		final String farmAditionalCrops = ((EditText) findViewById(R.id.additionalCrops_field)).getText().toString();
 		final String farmWorkOnFarm = ((EditText) findViewById(R.id.fmWorkFarm_field)).getText().toString();
-		final String hireLabor = ((Spinner) findViewById(R.id.hireLabor_field)).getSelectedItem().toString();
-		final String hireDays = ((EditText) findViewById(R.id.daysHire_field)).getText().toString();
 		final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
 		final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
@@ -1886,8 +1827,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 			contact.put(ContactObject.TOTALRENOVATIONAREA, farmRenArea);
 			contact.put(ContactObject.ADITIONALCROPS, farmAditionalCrops);
 			contact.put(ContactObject.FAMILYMEMBERSWORKONFARM, farmWorkOnFarm);
-			contact.put(ContactObject.HIRELABOR, hireLabor);
-			contact.put(ContactObject.HOWMANYLABORDAYSHIRE, hireDays);
 			contact.put(ContactObject.NUMBEROFPLOTS, numberPlots);
             contact.put(ContactObject.NUMBERCHILDRENS,numberChildrens);
 			contact.put(ContactObject.HAVESPOUSE,haveSpouse);
@@ -1963,8 +1902,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String farmRenArea = ((EditText) findViewById(R.id.renovationArea_field)).getText().toString();
         final String farmAditionalCrops = ((EditText) findViewById(R.id.additionalCrops_field)).getText().toString();
         final String farmWorkOnFarm = ((EditText) findViewById(R.id.fmWorkFarm_field)).getText().toString();
-        final String hireLabor = ((Spinner) findViewById(R.id.hireLabor_field)).getSelectedItem().toString();
-        final String hireDays = ((EditText) findViewById(R.id.daysHire_field)).getText().toString();
         final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
         final String numberChildrens = ((EditText) findViewById(R.id.numChildren)).getText().toString();
         final String haveSpouse = ((Spinner) findViewById(R.id.haveSpouse)).getSelectedItem().toString();
@@ -2039,8 +1976,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.TOTALRENOVATIONAREA, farmRenArea);
             contact.put(ContactObject.ADITIONALCROPS, farmAditionalCrops);
             contact.put(ContactObject.FAMILYMEMBERSWORKONFARM, farmWorkOnFarm);
-            contact.put(ContactObject.HIRELABOR, hireLabor);
-            contact.put(ContactObject.HOWMANYLABORDAYSHIRE, hireDays);
             contact.put(ContactObject.NUMBEROFPLOTS, numberPlots);
             contact.put(ContactObject.NUMBERCHILDRENS,numberChildrens);
             contact.put(ContactObject.HAVESPOUSE,haveSpouse);

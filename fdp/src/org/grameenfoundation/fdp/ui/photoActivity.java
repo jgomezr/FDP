@@ -123,6 +123,7 @@ public class photoActivity extends SalesforceActivity implements LoaderManager.L
         plotIntent.putExtra(OBJECT_TITLE_KEY, objectTitle);
         plotIntent.putExtra(OBJECT_NAME_KEY, objNameKey);
         startActivity(plotIntent);
+        finish();
     }
 
     @Override
