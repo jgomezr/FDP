@@ -157,8 +157,8 @@
     <integer name="ReplantingInputY2Sep">75600</integer>
     <integer name="ReplantingInputY2Oct">0</integer>
     <integer name="ReplantingInputY2Nov">0</integer>
-    <integer name="ReplantingInputY2Dec">5032500</integer>
-    <integer name="ReplantingInputY2Total">12798650</integer>
+    <integer name="ReplantingInputY2Dec">2813250</integer>
+    <integer name="ReplantingInputY2Total">10579400</integer>
     <integer name="ReplantingInputY3Jan">9000</integer>
     <integer name="ReplantingInputY3Feb">50400</integer>
     <integer name="ReplantingInputY3Mar">2914050</integer>
@@ -170,8 +170,8 @@
     <integer name="ReplantingInputY3Sep">126000</integer>
     <integer name="ReplantingInputY3Oct">126000</integer>
     <integer name="ReplantingInputY3Nov">63000</integer>
-    <integer name="ReplantingInputY3Dec">5193750</integer>
-    <integer name="ReplantingInputY3Total">12765150</integer>
+    <integer name="ReplantingInputY3Dec">2974500</integer>
+    <integer name="ReplantingInputY3Total">10545900</integer>
     <integer name="ReplantingInputY4Jan">18000</integer>
     <integer name="ReplantingInputY4Feb">100800</integer>
     <integer name="ReplantingInputY4Mar">3014850</integer>
@@ -183,8 +183,8 @@
     <integer name="ReplantingInputY4Sep">201600</integer>
     <integer name="ReplantingInputY4Oct">201600</integer>
     <integer name="ReplantingInputY4Nov">200800</integer>
-    <integer name="ReplantingInputY4Dec">5050500</integer>
-    <integer name="ReplantingInputY4Total">13225850</integer>
+    <integer name="ReplantingInputY4Dec">2831250</integer>
+    <integer name="ReplantingInputY4Total">11006600</integer>
     <integer name="ReplantingInputY5Jan">18000</integer>
     <integer name="ReplantingInputY5Feb">100800</integer>
     <integer name="ReplantingInputY5Mar">3014850</integer>
@@ -196,8 +196,8 @@
     <integer name="ReplantingInputY5Sep">201600</integer>
     <integer name="ReplantingInputY5Oct">201600</integer>
     <integer name="ReplantingInputY5Nov">200800</integer>
-    <integer name="ReplantingInputY5Dec">5050500</integer>
-    <integer name="ReplantingInputY5Total">13225850</integer>
+    <integer name="ReplantingInputY5Dec">2831250</integer>
+    <integer name="ReplantingInputY5Total">11006600</integer>
     <integer name="ReplantingInputY6Jan">18000</integer>
     <integer name="ReplantingInputY6Feb">100800</integer>
     <integer name="ReplantingInputY6Mar">3014850</integer>
@@ -209,8 +209,8 @@
     <integer name="ReplantingInputY6Sep">201600</integer>
     <integer name="ReplantingInputY6Oct">201600</integer>
     <integer name="ReplantingInputY6Nov">200800</integer>
-    <integer name="ReplantingInputY6Dec">5050500</integer>
-    <integer name="ReplantingInputY6Total">13225850</integer>
+    <integer name="ReplantingInputY6Dec">2831250</integer>
+    <integer name="ReplantingInputY6Total">11006600</integer>
     <integer name="ReplantingInputY7Jan">18000</integer>
     <integer name="ReplantingInputY7Feb">100800</integer>
     <integer name="ReplantingInputY7Mar">3014850</integer>
@@ -222,8 +222,8 @@
     <integer name="ReplantingInputY7Sep">201600</integer>
     <integer name="ReplantingInputY7Oct">201600</integer>
     <integer name="ReplantingInputY7Nov">200800</integer>
-    <integer name="ReplantingInputY7Dec">5050500</integer>
-    <integer name="ReplantingInputY7Total">13225850</integer>
+    <integer name="ReplantingInputY7Dec">2831250</integer>
+    <integer name="ReplantingInputY7Total">11006600</integer>
 
     <!--Replanting Labor Days-->
     <integer name="replantY1Jan">1</integer>
@@ -451,8 +451,8 @@
     <integer name="GraftingInputY2Sep">201600</integer>
     <integer name="GraftingInputY2Oct">201600</integer>
     <integer name="GraftingInputY2Nov">200800</integer>
-    <integer name="GraftingInputY2Dec">5050500</integer>
-    <integer name="GraftingInputY2Total">12985550</integer>
+    <integer name="GraftingInputY2Dec">2831250</integer>
+    <integer name="GraftingInputY2Total">10766300</integer>
     <integer name="GraftingInputY3Jan">18000</integer>
     <integer name="GraftingInputY3Feb">100800</integer>
     <integer name="GraftingInputY3Mar">3014850</integer>
@@ -464,8 +464,8 @@
     <integer name="GraftingInputY3Sep">201600</integer>
     <integer name="GraftingInputY3Oct">201600</integer>
     <integer name="GraftingInputY3Nov">200800</integer>
-    <integer name="GraftingInputY3Dec">5050500</integer>
-    <integer name="GraftingInputY3Total">13225850</integer>
+    <integer name="GraftingInputY3Dec">2831250</integer>
+    <integer name="GraftingInputY3Total">11006600</integer>
     <integer name="GraftingInputY4Jan">18000</integer>
     <integer name="GraftingInputY4Feb">100800</integer>
     <integer name="GraftingInputY4Mar">3014850</integer>
@@ -477,8 +477,8 @@
     <integer name="GraftingInputY4Sep">201600</integer>
     <integer name="GraftingInputY4Oct">201600</integer>
     <integer name="GraftingInputY4Nov">200800</integer>
-    <integer name="GraftingInputY4Dec">5050500</integer>
-    <integer name="GraftingInputY4Total">13225850</integer>
+    <integer name="GraftingInputY4Dec">2831250</integer>
+    <integer name="GraftingInputY4Total">11006600</integer>
     <integer name="GraftingInputY5Jan">18000</integer>
     <integer name="GraftingInputY5Feb">100800</integer>
     <integer name="GraftingInputY5Mar">3014850</integer>
@@ -490,8 +490,8 @@
     <integer name="GraftingInputY5Sep">201600</integer>
     <integer name="GraftingInputY5Oct">201600</integer>
     <integer name="GraftingInputY5Nov">200800</integer>
-    <integer name="GraftingInputY5Dec">5050500</integer>
-    <integer name="GraftingInputY5Total">13225850</integer>
+    <integer name="GraftingInputY5Dec">2831250</integer>
+    <integer name="GraftingInputY5Total">11006600</integer>
     <integer name="GraftingInputY6Jan">18000</integer>
     <integer name="GraftingInputY6Feb">100800</integer>
     <integer name="GraftingInputY6Mar">3014850</integer>
@@ -503,8 +503,8 @@
     <integer name="GraftingInputY6Sep">201600</integer>
     <integer name="GraftingInputY6Oct">201600</integer>
     <integer name="GraftingInputY6Nov">200800</integer>
-    <integer name="GraftingInputY6Dec">5050500</integer>
-    <integer name="GraftingInputY6Total">13225850</integer>
+    <integer name="GraftingInputY6Dec">2831250</integer>
+    <integer name="GraftingInputY6Total">11006600</integer>
     <integer name="GraftingInputY7Jan">18000</integer>
     <integer name="GraftingInputY7Feb">100800</integer>
     <integer name="GraftingInputY7Mar">3014850</integer>
@@ -516,8 +516,8 @@
     <integer name="GraftingInputY7Sep">201600</integer>
     <integer name="GraftingInputY7Oct">201600</integer>
     <integer name="GraftingInputY7Nov">200800</integer>
-    <integer name="GraftingInputY7Dec">5050500</integer>
-    <integer name="GraftingInputY7Total">13225850</integer>
+    <integer name="GraftingInputY7Dec">2831250</integer>
+    <integer name="GraftingInputY7Total">11006600</integer>
 
     <!--Grafting Labor Days-->
     <integer name="graftY1Jan">23</integer>
@@ -745,8 +745,8 @@
     <integer name="ExtraSoilInputY2Sep">201600</integer>
     <integer name="ExtraSoilInputY2Oct">201600</integer>
     <integer name="ExtraSoilInputY2Nov">2125800</integer>
-    <integer name="ExtraSoilInputY2Dec">5050500</integer>
-    <integer name="ExtraSoilInputY2Total">16075850</integer>
+    <integer name="ExtraSoilInputY2Dec">2831250</integer>
+    <integer name="ExtraSoilInputY2Total">13856600</integer>
     <integer name="ExtraSoilInputY3Jan">18000</integer>
     <integer name="ExtraSoilInputY3Feb">100800</integer>
     <integer name="ExtraSoilInputY3Mar">3014850</integer>
@@ -758,8 +758,8 @@
     <integer name="ExtraSoilInputY3Sep">201600</integer>
     <integer name="ExtraSoilInputY3Oct">1664100</integer>
     <integer name="ExtraSoilInputY3Nov">200800</integer>
-    <integer name="ExtraSoilInputY3Dec">5050500</integer>
-    <integer name="ExtraSoilInputY3Total">15150850</integer>
+    <integer name="ExtraSoilInputY3Dec">2831250</integer>
+    <integer name="ExtraSoilInputY3Total">12931600</integer>
     <integer name="ExtraSoilInputY4Jan">18000</integer>
     <integer name="ExtraSoilInputY4Feb">100800</integer>
     <integer name="ExtraSoilInputY4Mar">3014850</integer>
@@ -771,8 +771,8 @@
     <integer name="ExtraSoilInputY4Sep">201600</integer>
     <integer name="ExtraSoilInputY4Oct">201600</integer>
     <integer name="ExtraSoilInputY4Nov">200800</integer>
-    <integer name="ExtraSoilInputY4Dec">5050500</integer>
-    <integer name="ExtraSoilInputY4Total">13225850</integer>
+    <integer name="ExtraSoilInputY4Dec">2831250</integer>
+    <integer name="ExtraSoilInputY4Total">11006600</integer>
     <integer name="ExtraSoilInputY5Jan">18000</integer>
     <integer name="ExtraSoilInputY5Feb">100800</integer>
     <integer name="ExtraSoilInputY5Mar">3014850</integer>
@@ -784,8 +784,8 @@
     <integer name="ExtraSoilInputY5Sep">201600</integer>
     <integer name="ExtraSoilInputY5Oct">201600</integer>
     <integer name="ExtraSoilInputY5Nov">200800</integer>
-    <integer name="ExtraSoilInputY5Dec">5050500</integer>
-    <integer name="ExtraSoilInputY5Total">13225850</integer>
+    <integer name="ExtraSoilInputY5Dec">2831250</integer>
+    <integer name="ExtraSoilInputY5Total">11006600</integer>
     <integer name="ExtraSoilInputY6Jan">18000</integer>
     <integer name="ExtraSoilInputY6Feb">100800</integer>
     <integer name="ExtraSoilInputY6Mar">3014850</integer>
@@ -797,8 +797,8 @@
     <integer name="ExtraSoilInputY6Sep">201600</integer>
     <integer name="ExtraSoilInputY6Oct">201600</integer>
     <integer name="ExtraSoilInputY6Nov">200800</integer>
-    <integer name="ExtraSoilInputY6Dec">5050500</integer>
-    <integer name="ExtraSoilInputY6Total">13225850</integer>
+    <integer name="ExtraSoilInputY6Dec">2831250</integer>
+    <integer name="ExtraSoilInputY6Total">11006600</integer>
     <integer name="ExtraSoilInputY7Jan">18000</integer>
     <integer name="ExtraSoilInputY7Feb">100800</integer>
     <integer name="ExtraSoilInputY7Mar">3014850</integer>
@@ -810,8 +810,8 @@
     <integer name="ExtraSoilInputY7Sep">201600</integer>
     <integer name="ExtraSoilInputY7Oct">201600</integer>
     <integer name="ExtraSoilInputY7Nov">200800</integer>
-    <integer name="ExtraSoilInputY7Dec">5050500</integer>
-    <integer name="ExtraSoilInputY7Total">13225850</integer>
+    <integer name="ExtraSoilInputY7Dec">2831250</integer>
+    <integer name="ExtraSoilInputY7Total">11006600</integer>
 
     <!--ExtraSoil Labor Days-->
     <integer name="ExtraSoilY1Jan">7</integer>
@@ -1206,8 +1206,8 @@
     <integer name="GAPSInputY1Sep">201600</integer>
     <integer name="GAPSInputY1Oct">201600</integer>
     <integer name="GAPSInputY1Nov">200800</integer>
-    <integer name="GAPSInputY1Dec">5050500</integer>
-    <integer name="GAPSInputY1Total">13225850</integer>
+    <integer name="GAPSInputY1Dec">2831250</integer>
+    <integer name="GAPSInputY1Total">11006600</integer>
     <!--GAPS labor Cost-->
     <integer name="GAPSLaborY1Jan">525000</integer>
     <integer name="GAPSLaborY1Feb">600000</integer>
@@ -1241,90 +1241,94 @@
 
     <!-- Modest GAPS-->
     <!-- Modest GAPS cost-->
-    <integer name="MGAPJan">525000</integer>
-    <integer name="MGAPFeb">600000</integer>
-    <integer name="MGAPMar">900000</integer>
-    <integer name="MGAPApr">975000</integer>
-    <integer name="MGAPMay">1725000</integer>
-    <integer name="MGAPJun">1575000</integer>
-    <integer name="MGAPJul">825000</integer>
-    <integer name="MGAPAug">600000</integer>
-    <integer name="MGAPSep">675000</integer>
-    <integer name="MGAPOct">675000</integer>
-    <integer name="MGAPNov">1575000</integer>
-    <integer name="MGAPDec">1425000</integer>
-    <integer name="MGAPTotal">12075000</integer>
+    <integer name="MGAPJan">18000</integer>
+    <integer name="MGAPFeb">100800</integer>
+    <integer name="MGAPMar">1054100</integer>
+    <integer name="MGAPApr">201600</integer>
+    <integer name="MGAPMay">1200800</integer>
+    <integer name="MGAPJun">870500</integer>
+    <integer name="MGAPJul">18000</integer>
+    <integer name="MGAPAug">100800</integer>
+    <integer name="MGAPSep">201600</integer>
+    <integer name="MGAPOct">201600</integer>
+    <integer name="MGAPNov">200800</integer>
+    <integer name="MGAPDec">870500</integer>
+    <integer name="MGAPTotal">5039100</integer>
     <!-- Modest GAPS Labor cost-->
-    <integer name="MGAPSLaborJan">525000</integer>
-    <integer name="MGAPSLaborFeb">600000</integer>
-    <integer name="MGAPSLaborMar">900000</integer>
-    <integer name="MGAPSLaborApr">975000</integer>
-    <integer name="MGAPSLaborMay">1725000</integer>
-    <integer name="MGAPSLaborJun">1575000</integer>
-    <integer name="MGAPSLaborJul">825000</integer>
-    <integer name="MGAPSLaborAug">600000</integer>
-    <integer name="MGAPSLaborSep">675000</integer>
-    <integer name="MGAPSLaborOct">675000</integer>
-    <integer name="MGAPSLaborNov">1575000</integer>
-    <integer name="MGAPSLaborDec">1425000</integer>
-    <integer name="MGAPSLaborTotal">12075000</integer>
+    <integer name="MGAPSLaborJan">300000</integer>
+    <integer name="MGAPSLaborFeb">300000</integer>
+    <integer name="MGAPSLaborMar">525000</integer>
+    <integer name="MGAPSLaborApr">525000</integer>
+    <integer name="MGAPSLaborMay">975000</integer>
+    <integer name="MGAPSLaborJun">750000</integer>
+    <integer name="MGAPSLaborJul">375000</integer>
+    <integer name="MGAPSLaborAug">375000</integer>
+    <integer name="MGAPSLaborSep">450000</integer>
+    <integer name="MGAPSLaborOct">450000</integer>
+    <integer name="MGAPSLaborNov">900000</integer>
+    <integer name="MGAPSLaborDec">675000</integer>
+    <integer name="MGAPSLaborTotal">6600000</integer>
+    <integer name="MGAPSeasonTotal">3675000</integer>
     <!-- Modest GAPS Labor Days-->
-    <integer name="MGAPSDaysJan">525000</integer>
-    <integer name="MGAPSDaysFeb">600000</integer>
-    <integer name="MGAPSDaysMar">900000</integer>
-    <integer name="MGAPSDaysApr">975000</integer>
-    <integer name="MGAPSDaysMay">1725000</integer>
-    <integer name="MGAPSDaysJun">1575000</integer>
-    <integer name="MGAPSDaysJul">825000</integer>
-    <integer name="MGAPSDaysAug">600000</integer>
-    <integer name="MGAPSDaysSep">675000</integer>
-    <integer name="MGAPSDaysOct">675000</integer>
-    <integer name="MGAPSDaysNov">1575000</integer>
-    <integer name="MGAPSDaysDec">1425000</integer>
-    <integer name="MGAPSDaysTotal">12075000</integer>
+    <integer name="MGAPSDaysJan">4</integer>
+    <integer name="MGAPSDaysFeb">4</integer>
+    <integer name="MGAPSDaysMar">7</integer>
+    <integer name="MGAPSDaysApr">7</integer>
+    <integer name="MGAPSDaysMay">13</integer>
+    <integer name="MGAPSDaysJun">10</integer>
+    <integer name="MGAPSDaysJul">5</integer>
+    <integer name="MGAPSDaysAug">5</integer>
+    <integer name="MGAPSDaysSep">6</integer>
+    <integer name="MGAPSDaysOct">6</integer>
+    <integer name="MGAPSDaysNov">12</integer>
+    <integer name="MGAPSDaysDec">9</integer>
+    <integer name="MGAPSDaysTotal">88</integer>
+    <integer name="MGAPSDaysSeason">49</integer>
 
     <!-- Minimal GAPS-->
     <!-- Minimal GAPS cost-->
-    <integer name="MinGAPJan">525000</integer>
-    <integer name="MinGAPFeb">600000</integer>
-    <integer name="MinGAPMar">900000</integer>
-    <integer name="MinGAPApr">975000</integer>
-    <integer name="MinGAPMay">1725000</integer>
-    <integer name="MinGAPJun">1575000</integer>
-    <integer name="MinGAPJul">825000</integer>
-    <integer name="MinGAPAug">600000</integer>
-    <integer name="MinGAPSep">675000</integer>
-    <integer name="MinGAPOct">675000</integer>
-    <integer name="MinGAPNov">1575000</integer>
-    <integer name="MinGAPDec">1425000</integer>
-    <integer name="MinGAPTotal">12075000</integer>
-    <!-- Modest GAPS Labor cost-->
-    <integer name="MinGAPSLaborJan">525000</integer>
-    <integer name="MinGAPSLaborFeb">600000</integer>
-    <integer name="MinGAPSLaborMar">900000</integer>
-    <integer name="MinGAPSLaborApr">975000</integer>
-    <integer name="MinGAPSLaborMay">1725000</integer>
-    <integer name="MinGAPSLaborJun">1575000</integer>
-    <integer name="MinGAPSLaborJul">825000</integer>
-    <integer name="MinGAPSLaborAug">600000</integer>
-    <integer name="MinGAPSLaborSep">675000</integer>
-    <integer name="MinGAPSLaborOct">675000</integer>
-    <integer name="MinGAPSLaborNov">1575000</integer>
-    <integer name="MinGAPSLaborDec">1425000</integer>
-    <integer name="MinGAPSLaborTotal">12075000</integer>
-    <!-- Modest GAPS Labor Days-->
-    <integer name="MinGAPSDaysJan">525000</integer>
-    <integer name="MinGAPSDaysFeb">600000</integer>
-    <integer name="MinGAPSDaysMar">900000</integer>
-    <integer name="MinGAPSDaysApr">975000</integer>
-    <integer name="MinGAPSDaysMay">1725000</integer>
-    <integer name="MinGAPSDaysJun">1575000</integer>
-    <integer name="MinGAPSDaysJul">825000</integer>
-    <integer name="MinGAPSDaysAug">600000</integer>
-    <integer name="MinGAPSDaysSep">675000</integer>
-    <integer name="MinGAPSDaysOct">675000</integer>
-    <integer name="MinGAPSDaysNov">1575000</integer>
-    <integer name="MinGAPSDaysDec">1425000</integer>
-    <integer name="MinGAPSDaysTotal">12075000</integer>
+    <integer name="MinGAPJan">18000</integer>
+    <integer name="MinGAPFeb">100800</integer>
+    <integer name="MinGAPMar">201600</integer>
+    <integer name="MinGAPApr">201600</integer>
+    <integer name="MinGAPMay">1200800</integer>
+    <integer name="MinGAPJun">18000</integer>
+    <integer name="MinGAPJul">18000</integer>
+    <integer name="MinGAPAug">100800</integer>
+    <integer name="MinGAPSep">201600</integer>
+    <integer name="MinGAPOct">201600</integer>
+    <integer name="MinGAPNov">200800</integer>
+    <integer name="MinGAPDec">18000</integer>
+    <integer name="MinGAPTotal">2481600</integer>
+    <!-- Minimal GAPS Labor cost-->
+    <integer name="MinGAPSLaborJan">225000</integer>
+    <integer name="MinGAPSLaborFeb">300000</integer>
+    <integer name="MinGAPSLaborMar">450000</integer>
+    <integer name="MinGAPSLaborApr">450000</integer>
+    <integer name="MinGAPSLaborMay">600000</integer>
+    <integer name="MinGAPSLaborJun">600000</integer>
+    <integer name="MinGAPSLaborJul">525000</integer>
+    <integer name="MinGAPSLaborAug">300000</integer>
+    <integer name="MinGAPSLaborSep">375000</integer>
+    <integer name="MinGAPSLaborOct">375000</integer>
+    <integer name="MinGAPSLaborNov">750000</integer>
+    <integer name="MinGAPSLaborDec">450000</integer>
+    <integer name="MinGAPSLaborTotal">5400000</integer>
+    <integer name="MinGAPSeasonTotal">2925000</integer>
+    <!-- Minimal GAPS Labor Days-->
+    <integer name="MinGAPSDaysJan">3</integer>
+    <integer name="MinGAPSDaysFeb">4</integer>
+    <integer name="MinGAPSDaysMar">6</integer>
+    <integer name="MinGAPSDaysApr">6</integer>
+    <integer name="MinGAPSDaysMay">8</integer>
+    <integer name="MinGAPSDaysJun">8</integer>
+    <integer name="MinGAPSDaysJul">7</integer>
+    <integer name="MinGAPSDaysAug">4</integer>
+    <integer name="MinGAPSDaysSep">5</integer>
+    <integer name="MinGAPSDaysOct">5</integer>
+    <integer name="MinGAPSDaysNov">10</integer>
+    <integer name="MinGAPSDaysDec">6</integer>
+    <integer name="MinGAPSDaysTotal">72</integer>
+    <integer name="MinGAPSDaysSeason">39</integer>
 
 </resources>
