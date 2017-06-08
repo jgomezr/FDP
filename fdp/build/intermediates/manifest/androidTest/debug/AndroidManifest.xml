@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="com.salesforce.androidsdk.util.test.JUnitReportTestRunner"
-                     android:targetPackage="org.grameenfoundation.fdp"
+                     android:targetPackage="org.grameenfoundation.fdpwaf"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for org.grameenfoundation.fdp"/>
+                     android:label="Tests for org.grameenfoundation.fdpwaf"/>
 </manifest>
