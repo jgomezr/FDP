@@ -399,6 +399,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -417,9 +418,9 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -433,6 +434,7 @@
         <item>2x2.5</item>
         <item>2x2</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -449,6 +451,7 @@
         <item>2x3</item>
         <item>2x2</item>
         <item>2x2.5</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -466,6 +469,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
         <item>2.5x4</item>
@@ -482,6 +486,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x4</item>
@@ -498,6 +503,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -531,6 +537,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x3.5</item>
         <item>2.5x4</item>
@@ -547,6 +554,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -561,9 +569,9 @@
     <string-array name="treeDistance4">
         <item>3x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -578,9 +586,9 @@
     <string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -595,9 +603,9 @@
     <string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -613,9 +621,9 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -632,9 +640,9 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+        <item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -737,14 +745,14 @@
         <item>Musiman</item>
         <item>Tidak</item>
     </string-array>
-    <string name="accountType">C16. Jenis Rekening</string>
+    <string name="accountType">C16. Dan jenis Bank account</string>
     <string name="action_add">Tambahkan Petani</string>
     <string name="action_refresh">Sinkronkan</string>
     <string name="action_search">Cari</string>
-    <string name="additionalCrops">C20. Tanaman Lain</string>
+    <string name="additionalCrops">C20. Apakah memiliki tanaman lain selain kakao ( termasuk palawija, kopi, dll)</string>
     <string name="additionalIntervention">TAMBAHAN INTERVENSI</string>
     <string name="agree">Setuju dengan rekomendasi</string>
-    <string name="amountOfLoan">C14. Berapa total pinjaman (piutang) yang anda berikan</string>
+    <string name="amountOfLoan">"C14. Berapa jumlah pinjaman yang tersisa "</string>
     <string name="ao">ADOPSI OBSERVASI</string>
     <string name="aoResults">HASIL ADOPSI OBSERVASI</string>
     <string name="app_name"><b>FDP</b></string>
@@ -755,19 +763,19 @@
     <string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string>
     <string name="aug">Agusutus</string>
     <string name="autosave">Simpan Otomatis</string>
-    <string name="averageCocoaPrice">28. Rata-rata gerbang Pertanian biji kering kakao harga per Kg</string>
+    <string name="averageCocoaPrice">28. Rata-rata harga biji kakao kering per kg</string>
     <string name="back">Kembali</string>
-    <string name="bankAccount">26. Pakaha punya rekening bank?</string>
+    <string name="bankAccount">26. Apakah petani mempunyai rekening Bank</string>
     <string name="birthday">3. Tahun Kelahiran Petani</string>
     <string name="calcAO">Menghitung</string>
     <string name="cancel">Tidak</string>
     <string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string>
     <string name="changeR">Ubah untuk penanaman kembali</string>
-    <string name="childrenInSchool">C5. Anak antara 5 dan 17 tahun yang masih sekolah</string>
-    <string name="childrenUnder">C4. Anak antara 5 dan 17 tahun</string>
+    <string name="childrenInSchool">C5. Jumlah anak yang berumur 5 sampai 17 tahun yang bersekolah</string>
+    <string name="childrenUnder">C4. Jumlah anak yang berumur 5 sampai 17 tahun</string>
     <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
-    <string name="cocoaArea">36. Total lahan yang di tanamani kakao (Ha)</string>
-    <string name="cocoaTrees">45. Jarak antara pohon cocoa</string>
+    <string name="cocoaArea">36. Jumlah tanah yang digunakan untuk kakao</string>
+    <string name="cocoaTrees">44. Jarak tanam</string>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> perlu pembaruan aplikasi Android Wear."</string>
     <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> tidak akan berjalan jika aplikasi Android Wear tidak diperbarui."</string>
     <string msgid="1366439133145190222" name="common_android_wear_update_title">"Perbarui Android Wear"</string>
@@ -800,59 +808,57 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"Buka di ponsel"</string>
     <string name="costInvest">Pengeluaran pemeliharaan/investasi</string>
     <string name="costLabor">Biaya pekerja</string>
-    <string name="cultivationArea">35. Total lahan yang masih dalam peremajaan (Ha)</string>
-    <string name="daysHire">C21. Berapa hari pekerja digunakan</string>
-    <string name="debilitationDisease">48. Penyakit yang tidak bisa di kendalikan</string>
+    <string name="cultivationArea">"35. Jumlah tanah yang digunakan untuk berkebun atau bertani "</string>
+    <string name="debilitationDisease">47. Penyakit yang menyebabkan produksi menurun secara significan</string>
     <string name="dec">Desember</string>
     <string name="delete">Hapus</string>
     <string name="delete_title">Sudah yakin?</string>
-    <string name="dependEconomically">16. Jumlah anggota keluarga yang tergantung dari pendapatan keluarga</string>
+    <string name="dependEconomically">16. Jumlah anggota keluarga  yang tergantung dari pendapatan keluarga</string>
     <string name="drainage">Drainase</string>
-    <string name="drainageNeed">59. Membutuhkan Drainase</string>
-    <string name="educationExpenses">25. Pengeluaran pendidikan yang di harapkan</string>
+    <string name="drainageNeed">58. Drainase yang dibutuhkan</string>
+    <string name="educationExpenses">25. Total  pengeluaran untuk biaya pendidikan</string>
     <string name="educational_level">5. Tingkat pendidikan</string>
     <string name="estimatedProduction">42. Estimasi Produksi (Kg)</string>
-    <string name="expensesCocoaLY">29. Jumlah Beban pengelolaan kebun kakao tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
+    <string name="expensesCocoaLY">29. Total pengeluaran yang dikeluarkan  oleh petani untuk pengelolaan  kebun kakao  tahun lalu (panen puncak dan tidak puncak)</string>
     <string name="extraSoil">Tambahan manajemen tanah</string>
     <string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string>
-    <string name="familyMembers">13. Jumlah orang yang hidup bersama-sama termasuk petani</string>
-    <string name="familyPaidWork">18. Anggota keluarga atau orang lain berkontribusi dengan uang untuk rumah tangga</string>
-    <string name="familyPhoto">Ambil Foto Keluarga</string>
-    <string name="farmAge">32. Tahun tanam</string>
-    <string name="farmArea">34. Total kepemilihakan lahan atau lahan yang di miliki (ha)</string>
-    <string name="farmCertifications">33. Sertifikasi kebun</string>
+    <string name="familyMembers">13. Jumlah keluarga yang hidup bersama termasuk petani</string>
+    <string name="familyPaidWork">18. Anggota keluarga atau orang lain yang berkontribusi terhadap biaya hidup keluarga.</string>
+    <string name="familyPhoto">Mengambil photo petani dan keluarga</string>
+    <string name="farmAge">32.  Tahun sejak kebun ada</string>
+    <string name="farmArea">34. Jumlah tanah yang dimiliki atau yang bisa digunakan (Ha)</string>
+    <string name="farmCertifications">33. Apakah kebun/petani bergabung dalam program sertifikasi (RA/UTZ)</string>
     <string name="farmCondition">Kondisi kebun</string>
-    <string name="farmerGroup">14. Kelompk tani</string>
+    <string name="farmerGroup">14. Nama Kelompok Tani</string>
     <string name="farmerProfile">PERTANIAN KELUARGA PROFIL</string>
-    <string name="farmer_code">2. Petani atau pertanian kode</string>
-    <string name="farmingProfile">PROFILE EKONOMI KEBUN</string>
+    <string name="farmer_code">2. Kode Kebun/Petani</string>
+    <string name="farmingProfile">PROFILE EKONOMI PETANI</string>
     <string name="fdpActivityTitle">Perencanaan pengembangan Kebun</string>
     <string name="feb">Fabruary</string>
     <string name="fertilizerApplication">57. Aplikasi Pupuk</string>
     <string name="fertilizerFormulation">56. Formulasi Pupuk</string>
     <string name="filling">Penyisipan</string>
-    <string name="fillingOption">60. Opsi untuk penyisipan atau penjarangan</string>
+    <string name="fillingOption">59. Penyisipan</string>
     <string name="finish">Selesai</string>
-    <string name="fmWorkFarm">15. Anggota keluarga atau orang lain bekerja di pertanian tanpa upah dibayar</string>
+    <string name="fmWorkFarm">15. Anggota keluarga atau orang lain yang bekerja di kebun tanpa menerima upah</string>
     <string name="foundsNeeded">Investasi di FDP</string>
     <string name="full_name">1. Nama Petani</string>
-    <string name="gapLb">GAPS</string>
+    <string name="gapLb">GAP</string>
     <string name="gaps">Perawatan (GAPS)</string>
-    <string name="gender">4. Jenis Kelamin</string>
-    <string name="geneticLb">Genetika bahan tanaman</string>
+    <string name="gender">4. Laki-laki/wanita</string>
+    <string name="geneticLb">Genetik bahan tanam</string>
     <string name="getLocation">Dapatkan Lokasi</string>
-    <string name="giveLoan">20. Apakah anda memberikan pinjaman kepada seseorang lebih dari 5 juta</string>
+    <string name="giveLoan">20.  Apakah petani atau keluarga memberikan pinjaman ke orang lain diatas 5 juta</string>
     <string name="gps">7. GPS Rumah</string>
     <string name="graft">Sambungan</string>
-    <string name="grossCocoaLY">30. Pendapatan kotor dari cocoa di tahun lalu (tahun lalu dimaksud dua musim, mid and puncak panen)</string>
-    <string name="harvesting">52. Pemanenan</string>
-    <string name="haveCredit">19. Apakah anda memiliki pinjaman lebih dari 5 juta yang harus di bayar?</string>
-    <string name="haveOtherCrops">31. Memiliki tanaman lain</string>
-    <string name="haveSpouse">11. Punya Pasangan</string>
-    <string name="hireLabor">38. Memiliki Pekerja</string>
-    <string name="householdSavings">21. Tabungan rumah tangga</string>
-    <string name="howLong">Betapa lama dibuat renovasi?</string>
-    <string name="incomeOtherCrops">C10. pendapat bersih dari semua tanaman di tahun lalu (tahun  lalu di maksud dua musim panen, mid dan main</string>
+    <string name="grossCocoaLY">30. Pendapatan kotor dari kakao ditahun lalu (panen puncak dan panen tidak puncak)</string>
+    <string name="harvesting">51. Panen</string>
+    <string name="haveCredit">19. Apakah petani atau keluarga petani mengambil pinjaman diatas 5 juta dan apakah masih melakukan pembayaran</string>
+    <string name="haveOtherCrops">31. Apakah petani memiliki tanaman lain</string>
+    <string name="haveSpouse">11. Ada Istri/Suami</string>
+    <string name="householdSavings">21. Total simpanan  keluarga</string>
+    <string name="howLong">Berapa tahun sebelumnya dilakukan renovasi</string>
+    <string name="incomeOtherCrops">C19. Pendapatan bersih dari tanaman lain di tahun lalu (panen puncak dan tidak puncak)</string>
     <string name="internalInspection">Internal Inspeksi</string>
     <string name="investmentLabel">Investasi yang direncanakan</string>
     <string name="jan">Januari</string>
@@ -860,17 +866,17 @@
     <string name="jun">Juni</string>
     <string name="labor">Pekerja</string>
     <string name="lime">Kapur</string>
-    <string name="limeNeed">58. Membutuhkan Kapur</string>
-    <string name="livingExpenses">22. Pengeluaran tahunan</string>
+    <string name="limeNeed">57. kalpur yang dibutuhkan</string>
+    <string name="livingExpenses">22. Total pengeluaran hidup pertahun</string>
     <string name="logout_button">Keluar</string>
     <string name="logout_title">Keluar?</string>
     <string name="main_activity_title">List Petani</string>
     <string name="manDaysNeed">Kebutuhan pekerja dalam HOK</string>
-    <string name="mapPhoto">Mengambil foto dari peta pertanian</string>
+    <string name="mapPhoto">Mengambil foto kebun</string>
     <string name="mar">Maret</string>
     <string name="may">Mei</string>
-    <string name="mobileMoney">C17. Rekening petani memiliki pilihan unutk Mobile banking</string>
-    <string name="moneyBack">C15. Berapa banyak memiliki mereka kembali?</string>
+    <string name="mobileMoney">C17. Apakah petani memiliki pilihan mobile bank</string>
+    <string name="moneyBack">C15. Berapa jumlah pinjaman yang telah terbayar</string>
     <string name="netFamily">Pendapatan bersih keluarga</string>
     <string name="netFarming">Total pemasukan dalam berkebun</string>
     <string name="netOther">Pendapatan bersih dari semua sumber</string>
@@ -879,10 +885,10 @@
     <string name="no_results_found">Tidak ada di hasil pencarian</string>
     <string name="nov">November</string>
     <string name="numberChildren">12. Jumlah anak</string>
-    <string name="numberPlots">39. Banyaknya plot</string>
+    <string name="numberPlots">39. Jumlah  plot</string>
     <string name="oct">Oktober</string>
-    <string name="organicMatter">55. Bahan organik</string>
-    <string name="otherExpenses">23. Pengeluaran tahunan yang lain</string>
+    <string name="organicMatter">54. Bahan Organic</string>
+    <string name="otherExpenses">23. Total pengeluaran yang lain diluar biaya hidup pertahun dan biaya pendidikan</string>
     <string name="p1">Pembersihan</string>
     <string name="p10">Pekerjaan penyambungan/mengeluarkan plastik</string>
     <string name="p11">Polladring/sanitasi, memotong batang induk setelah menyambung</string>
@@ -907,51 +913,51 @@
     <string name="p7">Penanaman pelindung</string>
     <string name="p8">Pemangkasan/sanitasi</string>
     <string name="p9">Pemupukan</string>
-    <string name="payForCredit">C13. Berapa banyak yang Anda membayar kembali tiap pembayaran?</string>
-    <string name="payOftenForCredit">C12. Seberapa sering anda membayar pinjaman anda ?</string>
-    <string name="pestDiseaseSanitation">50. Hama penyakit dan sanitasi</string>
-    <string name="ph">43. pH tanah</string>
-    <string name="phone">9. Nomer Hp</string>
+    <string name="payForCredit">C13. Berapa biaya pada setiap pembayaran</string>
+    <string name="payOftenForCredit">C12. Seberapa sering melakukan pembayaran</string>
+    <string name="pestDiseaseSanitation">49. Hama dan penyakit dan sanitasi</string>
+    <string name="ph">43.PH tanah</string>
+    <string name="phone">9. No Telephone/HP</string>
     <string name="photoSuccess">Foto diambil dengan sukses</string>
-    <string name="plannedInvestments">24. Investasi yang direncanakan - pengeluaran selain kakao</string>
+    <string name="plannedInvestments">24. Apakah ada perencanaan untuk investasi diluar kakao</string>
     <string name="plantingMaterial">44. Bahan tanam</string>
     <string name="plotActivityTitle">Informasi Plot</string>
-    <string name="plotAge">46. Umur tanaman</string>
-    <string name="plotArea">41. Ukuran Plot (Ha)</string>
+    <string name="plotAge">45. Umur tanaman</string>
+    <string name="plotArea">40. Luas plot</string>
     <string name="plotAreaHiger">Plot area anda tidak bisa lebih tinggi dari area kebun kakao anda</string>
-    <string name="plotGPS">40. GPS Plot</string>
-    <string name="plotHireLabor">61. Menggunakan pekerja</string>
+    <string name="plotGPS">49. Mengambil titik GPS plot</string>
+    <string name="plotHireLabor">60. Memperkerjakan pekerja</string>
     <string name="plotIncome">Pendapatan dari Plot</string>
     <string name="plotInformation">INFORMASI PLOT</string>
     <string name="plotPL">Plot Untung dan Rugi</string>
-    <string name="postalAddress">8. Kode Pos</string>
-    <string name="productionCocoaLY">27. Produksi Kg total biji kakao kering di tahun panen atau tahun kalender</string>
+    <string name="postalAddress">8. Alamat Rumah</string>
+    <string name="productionCocoaLY">27. Total produksi (kg) biji kering dari panen ditahun sebelumnya</string>
     <string name="productionHiger">Estimasi produksi anda lebih besar dibandingkan tahun lalu</string>
     <string name="productionLess">Diperkirakan produksi Anda kurang dibandingkan dengan tahun sebelumnya</string>
-    <string name="productiveProfile">PROFILE PRODUKTIF</string>
+    <string name="productiveProfile">PROFILE PRODUKSI</string>
     <string name="profitOrLost">Untung dan Rugi</string>
-    <string name="pruning">49. Pemangkasan</string>
-    <string name="reason">Alasan untuk renovasi:</string>
+    <string name="pruning">48. Pemangkasan</string>
+    <string name="reason">"Jenis renovasi yang dilakukan "</string>
     <string name="reasonNotAgree">Komentar</string>
-    <string name="receivesFarmPayment">17. Petani atau pasangan menerima pembayaran untuk pekerjaan lain</string>
-    <string name="renovated">plot ini baru-baru ini direnovasi?</string>
+    <string name="receivesFarmPayment">17. Petani atau anggota keluarga yang menerima upah dari pekerjaan lain diluar bertani dan berkebun</string>
+    <string name="renovated">Apakah plot ini telah direnovasi</string>
     <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
-    <string name="renovationArea">37. Total renovasi penanaman kakao sudah di bawah ukuran (Ha)</string>
+    <string name="renovationArea">37. Jumlah kakao yang sudah direnovasi (re-planting atau sambung samping) tetapi belum berproduksi secara maksimal</string>
     <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
     <string name="replant">Penanamman kembali</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>
     <string name="saved">Simpan Berhasil</string>
     <string name="savingsLabel">Tabungan rumah tangga</string>
     <string name="sep">September</string>
-    <string name="shadeManagement">53. Pengaturan Pelindung</string>
-    <string name="socioeconomicProfile">PROFIL SOSIOEKONOMI</string>
+    <string name="shadeManagement">52. Management tanaman pelindung</string>
+    <string name="socioeconomicProfile">PROFILE SOCIAL DAN EKONOMI</string>
     <string name="soilCondition">54. Kondisi Tanah</string>
-    <string name="soilFertMngLb">Manajemen kesuburan tanah</string>
-    <string name="sourceCredit">C11. dari mana anda menambil pinjaman tersebut</string>
-    <string name="spouseBirthday">C2. Tahun kelahiran pasangan</string>
-    <string name="spouseEducationalLevel">C3. Tingkat pendidikan pasangan</string>
-    <string name="spouseName">C1. Nama Pasangan</string>
-    <string name="spousePaidWork">C7. Apakah pasangan memiliki pekerjaan yang dibayar selain bekerja di pertanian kakao sendiri</string>
+    <string name="soilFertMngLb">Pengelolaan tanah:</string>
+    <string name="sourceCredit">C11. Dari mana/siapa mengambil pinjaman/kredit</string>
+    <string name="spouseBirthday">C2. Tahun Kelahiran istri/suami</string>
+    <string name="spouseEducationalLevel">C3. Tingkat pendidikan istri/suami</string>
+    <string name="spouseName">"C1. Nama Istri/Suami "</string>
+    <string name="spousePaidWork">C7. Suami atau istri membayar upah untuk pekerjaan lain di luar berkebun dan bertani</string>
     <string name="startYear">Tahun Mulai</string>
     <string name="switch_user_button">Ganti Pengguna</string>
     <string name="takeAgree">Setuju dengan foto</string>
@@ -963,16 +969,17 @@
     <string name="tool4">Ration konvrsi untuk basah ke kering adalah 100:35 atau 35%</string>
     <string name="tool5">Ini pengeluaran pendidikan setelah sekolah dan atau diatas pengeluaran sekolah yang normal</string>
     <string name="tool6">Pengeluaran kebun termasuk semua pengelauaran di produksi, fermentasi,penyimpanan dan penjulan cocoa, tolong</string>
-    <string name="totalCredit">C10. Berapa total pinjaman yang masih ada?</string>
+    <string name="totalCredit">C10. Berapa jumlah utang/kredit yang tersisa</string>
     <string name="totalExpenses">Total pengeluaran keluarga</string>
-    <string name="totalFamilyMembersIncome">C9. Uang Bersih kontribusi dari anggota keluarga atau orang lain untuk rumah tangga</string>
+    <string name="totalFamilyMembersIncome">C9. Jumlah pendapatan dari anggota keluarga atau orang lain yang berkontribusi untuk kebutuhan keluarga</string>
     <string name="totalIncome">Total pendapatan</string>
-    <string name="totalIncomeLabor">C6. Pendapatan bersih dari semua pekerjaan lain yang petani lakukan di tahun lalu</string>
-    <string name="totalSpouseIncome">C8. Pendapatan bersih pasangan dari pekerjaan yang lain selain di kebun sendiri</string>
-    <string name="treeHealth">47. Kesehatan tanaman</string>
-    <string name="village">6. Desa</string>
+    <string name="totalIncomeLabor">"C6. Pendapatan bersih dari pekerjaan lain diluar berkebun dan bertani di tahun sebelumnya. "</string>
+    <string name="totalSpouseIncome">C8. Jumlah pendapatan bersih dari pekerjaan lain diluar berkebun dan bertani</string>
+    <string name="treeHealth">46. Tingkat kesehatan pohon</string>
+    <string name="village">6. Nama Desa</string>
     <string name="wantAccount">C18. Menginginkan rekening bank?</string>
-    <string name="weeding">51. Menghilangkan rumput</string>
+    <string name="weeding">50. Pembersihan rumput, gulma, dll</string>
+    <string name="year0">Tahun 0</string>
     <string name="year1">Tahun 1</string>
     <string name="year2">Tahun 2</string>
     <string name="year3">Tahun 3</string>
@@ -981,6 +988,6 @@
     <string name="year6">Tahun 6</string>
     <string name="year7">Tahun 7</string>
     <string name="yearDetailActivityTitle">Detail Tahun</string>
-    <string name="yearsRelationshipWithMars">10. tahun hubungan dengan perusahaan</string>
+    <string name="yearsRelationshipWithMars">10. Tahun bekerjasama dengan perusahaan</string>
     <string name="yes">Ya</string>
 </resources>

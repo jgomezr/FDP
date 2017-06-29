@@ -21,8 +21,8 @@ MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\
 MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:3:5-72
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\03cb2544dede0af969ea99088bf8674e3aaa574c\output\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:18:5-42
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\70fa02815818846226a8dc66aa232d9100d400cb\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\843bb3144f56b15ce9352348de5bbf42d3b53c05\output\AndroidManifest.xml:21:5-23:60
@@ -93,8 +93,8 @@ MERGED from [fdp.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\
 MERGED from [fdp.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
 MERGED from [fdp.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:23:5-103:19
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:5:5-19
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\b8068f83e5fc060e59d173b026ae5dfd6af9d38a\output\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\03cb2544dede0af969ea99088bf8674e3aaa574c\output\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:20:5-24:19
 MERGED from [com.venmo.view.tooltip:tooltip:0.1.2] C:\Users\julian\.android\build-cache\39f32bf4d09bed4ce9990ad5162852997e78b1a3\output\AndroidManifest.xml:10:5-20
 MERGED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\70fa02815818846226a8dc66aa232d9100d400cb\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\julian\.android\build-cache\843bb3144f56b15ce9352348de5bbf42d3b53c05\output\AndroidManifest.xml:25:5-20
@@ -244,7 +244,7 @@ ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:116:4-117:51
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:116:15-57
 meta-data#com.google.android.gms.version
 ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:123:3-125:60
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\e7d95fe3433735e1ee3251b6bdae137f81161296\output\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:21:9-23:69
 	android:value
 		ADDED from C:\Users\julian\Desktop\fdp\fdp\AndroidManifest.xml:125:4-57
 	android:name

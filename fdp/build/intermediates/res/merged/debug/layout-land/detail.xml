@@ -414,7 +414,9 @@
                     android:layout_weight=".50"
                     android:inputType="number"
                     android:digits="1234567890"
-                    android:maxLength="2"/>
+                    android:maxLength="2"
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -430,8 +432,8 @@
                     android:text="@string/childrenInSchool"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/childrenInSchool"
@@ -441,7 +443,9 @@
                     android:layout_weight=".50"
                     android:inputType="number"
                     android:digits="1234567890"
-                    android:maxLength="2"/>
+                    android:maxLength="2"
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1079,8 +1083,8 @@
                         android:drawableRight="@drawable/info"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="2"
-                        android:lines="2"/>
+                        android:maxLines="3"
+                        android:lines="3"/>
                     <EditText
                         style="@style/FarmerDetail.ParentView.EditText"
                         android:id="@+id/educationExpenses_Field"
@@ -1465,7 +1469,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1488,7 +1494,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1511,7 +1519,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1534,7 +1544,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"

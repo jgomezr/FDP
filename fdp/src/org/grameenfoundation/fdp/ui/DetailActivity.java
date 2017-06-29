@@ -5,7 +5,6 @@ import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -128,11 +127,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     qcu= Double.parseDouble(childrenUnder.getText().toString());
 
                 }
-                if (qcu > qc) {
-                    childrenUnder.setBackgroundColor(Color.parseColor("#cc0000"));
-                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
-                }else{
-                    childrenUnder.setBackgroundColor(Color.TRANSPARENT);
+                if (qcu > qc ) {
+                    childrenUnder.setError(getString(R.string.childrenVal));
                 }
 
             }
@@ -150,7 +146,6 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             @Override
             public void afterTextChanged(Editable s) {
-
                 double qc;
                 double qcu;
                 double qcs;
@@ -164,12 +159,8 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     qcu= Double.parseDouble(childrenUnder.getText().toString());
                 }
                 if (qc>qcu) {
-                    childreSchool.setBackgroundColor(Color.parseColor("#cc0000"));
-                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
-                }else{
-                    childreSchool.setBackgroundColor(Color.TRANSPARENT);
+                    childreSchool.setError(getString(R.string.childrenVal));
                 }
-
             }
         });
         familyMemb = (EditText) findViewById(R.id.familyMembers);
@@ -669,23 +660,15 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             }
             if (tl>toa) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.areaHiger) );
             }
 
             if (tc>tl) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.areaHiger) );
             }
+
             if(tr>tc){
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.renovationHigh), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.renovationHigh) );
             }
 
         }
@@ -721,11 +704,10 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 qc=Double.parseDouble(numbChildrens.getText().toString());
                 fm= Double.parseDouble(familyMemb.getText().toString());
             }
-            if ((qc+1)>fm) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.familyLess), Toast.LENGTH_SHORT).show();
+            if ((qc+1)<fm ||(qc+1)==fm) {
+
             }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.familyLess) );
             }
         }
     }
@@ -1767,6 +1749,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String acctType = ((Spinner) findViewById(R.id.accountType_field)).getSelectedItem().toString();
 		final String mbMoney =((Spinner) findViewById(R.id.mobileMoney_field)).getSelectedItem().toString();
 		final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
+        final String country = "Indonesia";
 		final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
 		JSONObject contact;
 		try {
@@ -1841,6 +1824,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.ACCOUNTTYPE,acctType);
             contact.put(ContactObject.MOBILEMONEY,mbMoney);
             contact.put(ContactObject.WANTACCOUNT,want);
+            contact.put(ContactObject.COUNTRY,country);
 			contact.put(SyncManager.LOCAL, true);
 			contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
 			contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -1916,6 +1900,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String acctType = ((Spinner) findViewById(R.id.accountType_field)).getSelectedItem().toString();
         final String mbMoney =((Spinner) findViewById(R.id.mobileMoney_field)).getSelectedItem().toString();
         final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
+        final String country = "Indonesia";
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -1990,6 +1975,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.ACCOUNTTYPE,acctType);
             contact.put(ContactObject.MOBILEMONEY,mbMoney);
             contact.put(ContactObject.WANTACCOUNT,want);
+            contact.put(ContactObject.COUNTRY,country);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

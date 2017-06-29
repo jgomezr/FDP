@@ -430,8 +430,8 @@
                     android:text="@string/childrenInSchool"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/childrenInSchool"
@@ -528,8 +528,8 @@
                     android:text="@string/fmWorkFarm"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"
+                    android:maxLines="3"
+                    android:lines="3"
                     style="@style/FarmerDetail.ParentView.TextView" />
 
                 <EditText android:id="@+id/fmWorkFarm_field"
@@ -553,8 +553,8 @@
                     android:text="@string/dependEconomically"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/dependEconomically"
@@ -579,8 +579,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tool1"
                     android:layout_gravity="center_vertical"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -594,8 +594,8 @@
                         android:drawableRight="@drawable/info"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="2"
-                        android:lines="2"/>
+                        android:maxLines="3"
+                        android:lines="3"/>
                     <Spinner
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -620,8 +620,8 @@
                     android:text="@string/totalIncomeLabor"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="4"
+                    android:lines="4"/>
 
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
@@ -648,8 +648,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tool2"
                     android:layout_gravity="center_vertical"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -662,8 +662,8 @@
                         android:text="@string/spousePaidWork"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="2"
-                        android:lines="2"
+                        android:maxLines="3"
+                        android:lines="3"
                         android:drawableRight="@drawable/info"/>
                     <Spinner
                         android:layout_width="0dp"
@@ -729,8 +729,8 @@
                         android:drawableRight="@drawable/info"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="2"
-                        android:lines="2"/>
+                        android:maxLines="3"
+                        android:lines="3"/>
                     <Spinner
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -753,8 +753,8 @@
                     android:text="@string/totalFamilyMembersIncome"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/totalFamilyMembersIncome_Field"
@@ -990,8 +990,8 @@
                     android:text="@string/livingExpenses"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/livingExpenses_Field"
@@ -1014,8 +1014,8 @@
                     android:text="@string/otherExpenses"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/otherExpenses_Field"
@@ -1038,8 +1038,8 @@
                     android:text="@string/plannedInvestments"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="4"
+                    android:lines="4"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/plannedInvestments_Field"
@@ -1063,8 +1063,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tool5"
                     android:layout_gravity="center_vertical"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1079,8 +1079,8 @@
                         android:drawableRight="@drawable/info"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="2"
-                        android:lines="2"/>
+                        android:maxLines="4"
+                        android:lines="4"/>
                     <EditText
                         style="@style/FarmerDetail.ParentView.EditText"
                         android:id="@+id/educationExpenses_Field"
@@ -1245,8 +1245,8 @@
                     android:text="@string/averageCocoaPrice"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"/>
+                    android:maxLines="3"
+                    android:lines="3"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/averageCocoaPrice_Field"
@@ -1286,8 +1286,8 @@
                         android:drawableRight="@drawable/info"
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
-                        android:maxLines="3"
-                        android:lines="3"/>
+                        android:maxLines="5"
+                        android:lines="5"/>
                     <EditText
                         style="@style/FarmerDetail.ParentView.EditText"
                         android:id="@+id/expensesCocoaLY_Field"
@@ -1311,8 +1311,8 @@
                     android:text="@string/grossCocoaLY"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="3"
-                    android:lines="3"/>
+                    android:maxLines="4"
+                    android:lines="4"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/grossCocoaLY_Field"
@@ -1359,8 +1359,8 @@
                     android:text="@string/incomeOtherCrops"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="3"
-                    android:lines="3"/>
+                    android:maxLines="4"
+                    android:lines="4"/>
                 <EditText
                     style="@style/FarmerDetail.ParentView.EditText"
                     android:id="@+id/incomeOtherCrops_Field"
@@ -1465,7 +1465,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1488,7 +1490,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1511,7 +1515,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -1523,8 +1529,8 @@
                     android:text="@string/renovationArea"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"
+                    android:maxLines="3"
+                    android:lines="3"
                     style="@style/FarmerDetail.ParentView.TextView" />
 
                 <EditText android:id="@+id/renovationArea_field"
@@ -1534,7 +1540,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
                     style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" 
+                    android:maxLines="2"
+                    android:lines="2"/>
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
