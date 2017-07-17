@@ -2685,7 +2685,12 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netPlotIncomeY7_field), String.valueOf(dec.format(totalIncomeY7)));
 
             //net income other crops
-            double otherCrops = Double.parseDouble(sObject.getIncomeothercrops());
+            double otherCrops = 0;
+            if (sObject.getIncomeothercrops().isEmpty()){
+                otherCrops = 0;
+            }else {
+                otherCrops = Double.parseDouble(sObject.getIncomeothercrops());
+            }
             setText((TextView) findViewById(R.id.otherCropY0_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY1_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY2_field), String.valueOf(dec.format(otherCrops)));
@@ -2714,10 +2719,33 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netFarmingY7_field), String.valueOf(dec.format(farmingy7)));
 
             //net other income sources
-            double moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
-            double farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
-            double spouseWork = Double.parseDouble(sObject.getSpouseincome());
-            double familyWork = Double.parseDouble(sObject.getFamilymembersincome());
+            double moneyBack = 0;
+            if (sObject.getLoanmoneygetback().isEmpty()){
+                moneyBack = 0;
+            }else {
+                moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
+            }
+
+            double farmWork = 0;
+            if (sObject.getIncomefarmlabor().isEmpty()){
+                farmWork = 0;
+            }else {
+                farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
+            }
+
+            double spouseWork = 0;
+            if (sObject.getSpouseincome().isEmpty()){
+                spouseWork = 0;
+            }else {
+                spouseWork = Double.parseDouble(sObject.getSpouseincome());
+            }
+
+            double familyWork = 0;
+            if (sObject.getFamilymembersincome().isEmpty()){
+                familyWork = 0;
+            }else {
+                familyWork = Double.parseDouble(sObject.getFamilymembersincome());
+            }
             int totalOtherIncome = (int) (moneyBack+farmWork+spouseWork+familyWork);
             setText((TextView) findViewById(R.id.netOtherY0_field), String.valueOf(dec.format(totalOtherIncome)));
             setText((TextView) findViewById(R.id.netOtherY1_field), String.valueOf(dec.format(totalOtherIncome)));
@@ -2747,10 +2775,33 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.totalIncomeY7_field), String.valueOf(dec.format(totalIncomeAllY7)));
 
             //total family costs
-            double anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
-            double anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
-            double expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
-            double credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            double anLivExpen = 0;
+            if (sObject.getAnnuallivingexpenses().isEmpty()){
+                anLivExpen = 0;
+            }else {
+                anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
+            }
+
+            double anOtherExp = 0;
+            if (sObject.getAnnualotherexpenses().isEmpty()){
+                anOtherExp = 0;
+            }else {
+                anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
+            }
+
+            double expEducExp = 0;
+            if (sObject.getExpectededucationexpenses().isEmpty()){
+                expEducExp = 0;
+            }else {
+                expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
+            }
+
+            double credPay = 0;
+            if (sObject.getHowmuchpayforcredit().isEmpty()){
+                credPay = 0;
+            }else {
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            }
             int totalExpenses = (int) (anLivExpen+anOtherExp+expEducExp+credPay);
             setText((TextView) findViewById(R.id.totalExpensesY0_field), String.valueOf(dec.format(totalExpenses)));
             setText((TextView) findViewById(R.id.totalExpensesY1_field), String.valueOf(dec.format(totalExpenses)));
@@ -2897,8 +2948,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
 
             //savings and investments
-            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
-            double hhInvestments = Double.parseDouble(sObject.getPlannedinvestments());
+            double hhSavings = 0;
+            if (sObject.getHouseholdsavings().isEmpty()){
+                hhSavings = 0;
+            }else {
+                hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
+            }
+
+            double hhInvestments = 0;
+            if (sObject.getPlannedinvestments().isEmpty()){
+                hhInvestments = 0;
+            }else {
+                hhInvestments = Double.parseDouble(sObject.getPlannedinvestments());
+            }
 
             setText((TextView) findViewById(R.id.savings_field), String.valueOf(dec.format(hhSavings)));
             setText((TextView) findViewById(R.id.investments_field), String.valueOf(dec.format(hhInvestments)));
