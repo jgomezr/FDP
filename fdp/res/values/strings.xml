@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="account_type" translatable="false">org.grameenfoundation.fdp.login</string>
+	<string name="account_type" translatable="false">org.grameenfoundation.fdpwaf.login</string>
 	<string name="app_name"><b>FDP WAf</b></string>
 	<string name="app_package" translatable="false">org.grameenfoundation.fdpwaf</string>
-	<string name="logout_button">Logout</string>
-	<string name="switch_user_button">Switch User</string>
-	<string name="inspect_db_button" translatable="false">Inspect DB</string>
-	<string name="internalInspection">Internal Inspection</string>
-	<string name="monitoringLabel" translatable="false">Monitoring</string>
-	<string name="action_search">Search</string>
+    <string name="switch_user_button">Switch User</string>
+    <string name="internalInspection">Internal Inspection</string>
+    <string name="action_search">Search</string>
 	<string name="action_refresh">Synchronize</string>
 	<string name="action_add">Add Farmer</string>
 	<string name="no_results_found">No results found</string>
@@ -19,15 +16,13 @@
 	<string name="logout_title">Log out?</string>
 	<string name="yes">Yes</string>
 	<string name="cancel">No</string>
-	<string name="delete">Delete</string>
-	<string name="saveContinue">Save and Continue</string>
+    <string name="saveContinue">Save and Continue</string>
 	<string name="finish">Finish</string>
 	<string name="back">Back</string>
-	<string name="delete_title">Are you sure?</string>
-	<string name="takePhoto">Take Photo</string>
+    <string name="takePhoto">Take Photo</string>
     <string name="takeAgree">Agree with photo</string>
 
-	<string name="farmerProfile">FARMING FAMILY PROFILE</string>
+	<string name="farmerProfile">FARMER FAMILY PROFILE</string>
 	<string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>
 	<string name="farmingProfile">FARMING ECONOMIC PROFILE</string>
 	<string name="productiveProfile">PRODUCTIVE PROFILE</string>
@@ -36,67 +31,67 @@
     <string name="aoResults">ADOPTION OBSERVATION RESULTS</string>
 	<string name="additionalIntervention">ADDITIONAL INTERVENTION</string>
 
-	<string name="full_name">1. Farmer Name:</string>
-	<string name="farmer_code">2. Farmer or Farm Code:</string>
-	<string name="birthday">3. Farmer Birthday Year:</string>>
+	<string name="full_name">1. Farmer name:</string>
+	<string name="farmer_code">2. Farmer or farm code:</string>
+	<string name="birthday">3. Date of birth (year):</string>>
 	<string name="gender">4. Gender:</string>
-	<string name="educational_level">5. Educational Level:</string>
+	<string name="educational_level">5. Educational level:</string>
 	<string name="village">6. Village:</string>
-	<string name="gps">7. House GPS:</string>
-	<string name="getLocation">Get Location</string>
-    <string name="postalAddress">8. Postal Address:</string>
-    <string name="phone">9. Phone Number:</string>
-	<string name="yearsRelationshipWithMars">10. Years Relationship with company:</string>
-	<string name="haveSpouse">11. Have spouse:</string>
+	<string name="gps">7.House location:</string>
+	<string name="getLocation">Get location</string>
+    <string name="postalAddress">8. Postal address:</string>
+    <string name="phone">9. Phone number:</string>
+	<string name="yearsRelationshipWithMars">10. Year started working with or selling to the company:</string>
+	<string name="haveSpouse">11. Spouse:</string>
 	<string name="numberSpouses">C1. Number of spouses:</string>
-	<string name="spouseName">C2. Spouse Name:</string>
-	<string name="spouseBirthday">C3. Spouse Birthday Year:</string>
-	<string name="spouseEducationalLevel">C4. Spouse Educational Level:</string>
+	<string name="spouseName">C2. Spouse name:</string>
+	<string name="spouseBirthday">C3. Spouse date of birth (year):</string>
+	<string name="spouseEducationalLevel">C4. Spouse educational level:</string>
 	<string name="numberChildren">12. Total number of children:</string>
-	<string name="childrenUnder">C5. Children between 5 and 17 years old:</string>
-	<string name="childrenInSchool">C6. Children between 5 and 17 years old enrolled in school:</string>
-	<string name="familyMembers">13. Number of people living together including the farmer:</string>
+	<string name="childrenUnder">C5. Children between 5 to 17 years old:</string>
+	<string name="childrenInSchool">C6. Children between 5 to 17 years old enrolled in school:</string>
+	<string name="familyMembers">13. Number of household members including the farmer:</string>
 	<string name="farmerGroup">14. Farmer group</string>
-	<string name="familyPhoto">Take a Family Photo</string>
-	<string name="fmWorkFarm">15. Family members or other people work on farm without paid wages:</string>
-	<string name="dependEconomically">16. Number of household members depend on family income:</string>
-	<string name="receivesFarmPayment">17. Farmer or spouse receives payment for other work:</string>
-    <string name="totalIncomeLabor">C7. Net Income from all other work that farmer does in the past year:</string>
-	<string name="spousePaidWork">C8. Does spouse have any paid work other than working on own cocoa farm:</string>
-    <string name="totalSpouseIncome">C9. Spouse Net Income from all work other than working on own cocoa farm:</string>
-	<string name="familyPaidWork">18. Family members or other people contribute with money to the household:</string>
-    <string name="totalFamilyMembersIncome">C10. Net money contributed from family members or other people to the household:</string>
-    <string name="haveCredit">19. Has the family taken a loan over 1360 GHS that you have to pay back?</string>
-    <string name="totalCredit">C11. What is the total amount of the loan outstanding?</string>
-    <string name="sourceCredit">C12. Where did you take the loan from:</string>
+	<string name="familyPhoto">Click to take a family photo</string>
+	<string name="fmWorkFarm">15. How many household members (excluding the farmer) work on the farm without paid wages?</string>
+	<string name="dependEconomically">16. How many household members (including the farmer) depend on the total household income?</string>
+	<string name="receivesFarmPayment">17. Does any member of the household earn income for other work?</string>
+    <string name="totalIncomeLabor">C7. Apart from farming cocoa and other crops, how much income does the farmer earn from other sources in a year?</string>
+	<string name="spousePaidWork">C8. Apart from farming cocoa and other crops, does the spouse earn income from other sources?</string>
+    <string name="totalSpouseIncome">C9. How much income does the spouse earn from other sources in a year?</string>
+	<string name="familyPaidWork">18. Does the other household members contribute to the household income?</string>
+    <string name="totalFamilyMembersIncome">C10. How much income does the other household members contribute in a year?</string>
+    <string name="haveCredit">19. Does the household have a loan that needs to be paid back?</string>
+    <string name="totalCredit">C11. How much do you still have to pay back?</string>
+    <string name="sourceCredit">C12. Where did you get the loan?</string>
     <string name="payOftenForCredit">C13. How often do you pay back?</string>
     <string name="payForCredit">C14. How much do you pay back per payment?</string>
-    <string name="giveLoan">20. Has the family given someone a loan over 1360 GHS?</string>
-    <string name="amountOfLoan">C15. What is the total amount of the loan outstanding you give?</string>
-    <string name="moneyBack">C16. How much have they back?</string>
-    <string name="householdSavings">21. Household Savings:</string>
-    <string name="livingExpenses">22. Annual living expenses:</string>
-    <string name="otherExpenses">23. Annual other expenses:</string>
-    <string name="plannedInvestments">24. Planned investments - expenses other than cocoa:</string>
-    <string name="educationExpenses">25. Expected education expenses:</string>
-	<string name="bankAccount">26. Have bank account?</string>
-	<string name="accountType">C17. Account Type</string>
-	<string name="mobileMoney">C18. Farmer account have Mobile money option?</string>
+    <string name="giveLoan">20. Has the household given a loan?</string>
+    <string name="amountOfLoan">C15. How much does the lender have to pay back?</string>
+    <string name="moneyBack">C16. How much do they pay back?</string>
+    <string name="householdSavings">21. Household savings:</string>
+    <string name="livingExpenses">22. How much does the household spend on food, utilities, housing, and transit in a year?</string>
+    <string name="otherExpenses">23. How much does the household spend on other expenses (excluding education) in a year?</string>
+    <string name="plannedInvestments">24. Does the household have any planned investments? If so, how much have they allocated for the investment?</string>
+    <string name="educationExpenses">25. How much will the household spend on education next year? (school fees, books, uniforms, payment for dormitory etc.) </string>
+	<string name="bankAccount">26. Does the farmer have a bank account?</string>
+	<string name="accountType">C17. Account type</string>
+	<string name="mobileMoney">C18. Does the farmer account have a mobile money option?</string>
 	<string name="wantAccount">C19. Want a bank account?</string>
     <string name="measure">27. Units of measure</string>
     <string name="area">Area</string>
     <string name="weight">Weight</string>
     <string name="bagClarify">*bag = 60kg bag</string>
-    <string name="productionCocoaLY">28. Total Production of dry cocoa beans in crop year or calendar year </string>
-    <string name="averageCocoaPrice">29. Average Farm gate dry bean cocoa price per Kg:</string>
-	<string name="expensesCocoaLY">30. Total Expenses on cocoa farm management last year (Year means past two seasons, mid and main crop):</string>
-	<string name="grossCocoaLY">31. Gross Income from Cocoa in the past year (Year means past two seasons, mid and main crop):</string>
-	<string name="haveOtherCrops">32. Have Additional Crops:</string>
-	<string name="incomeOtherCrops">C20. Net Income from all other crops in the past year (Year means past two seasons, mid and main crop):</string>
-	<string name="additionalCrops">C21. Additional Crops:</string>
-	<string name="mapPhoto">Take a photo of the farm map</string>
-	<string name="farmAge">33. Year of farm establishment:</string>
-    <string name="farmCertifications">34. Farm Certifications:</string>
+    <string name="productionCocoaLY">28. What is your total kg production of dry cocoa beans in a crop year or calendar year?</string>
+    <string name="averageCocoaPrice">29. What is the average farm gate dry bean cocoa price per kg for last year?</string>
+	<string name="expensesCocoaLY">30. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string>
+	<string name="grossCocoaLY">31. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string>
+	<string name="haveOtherCrops">32. Do you have additional crops?</string>
+	<string name="incomeOtherCrops">C20. How much income did you earn from other crops in the past year? (year means past two seasons, mid and main crop)</string>
+	<string name="additionalCrops">C21. Additional crops:</string>
+	<string name="mapPhoto">Click to take a photo of the farm map</string>
+	<string name="farmAge">33. Year of farm establishment (first time something was planted)</string>
+    <string name="farmCertifications">34. Farm certifications:</string>
     <string name="farmArea">35. Total land ownership or availability size </string>
     <string name="cultivationArea">36. Total land under cultivation size </string>
     <string name="cocoaArea">37. Total land under cocoa size </string>
@@ -105,45 +100,36 @@
     <string name="numberPlots">39. Number of plots:</string>
 
 	<string name="plotGPS">40. Plot GPS:</string>
-    <string name="plotArea">41. Plot Size </string>
-    <string name="estimatedProduction">42. Estimated production </string>
+    <string name="plotArea">41. Plot size </string>
+    <string name="estimatedProduction">42. Estimated production size in </string>
     <string name="ph">43. Soil PH:</string>
-    <string name="plantingMaterial">44. Planting Material:</string>
-    <string name="cocoaTrees">45. Distance between cocoa trees Mts:</string>
-    <string name="plotAge">46. Tree Age:</string>
+    <string name="plantingMaterial">44. Planting material:</string>
+    <string name="cocoaTrees">45. Tree density:</string>
+    <string name="plotAge">46. Tree age:</string>
     <string name="treeHealth">47. Tree health:</string>
-    <string name="debilitationDisease">48. Debilitating Disease:</string>
+    <string name="debilitationDisease">48. Debilitating disease (CSSV):</string>
     <string name="pruning">49. Pruning:</string>
-    <string name="pestDiseaseSanitation">50. Pest and Disease and Sanitation:</string>
+    <string name="pestDiseaseSanitation">50. Pest and disease and sanitation:</string>
     <string name="weeding">51. Weeding:</string>
     <string name="harvesting">52. Harvesting:</string>
-    <string name="shadeManagement">53. Shade Management:</string>
-    <string name="soilCondition">54. Soil Condition:</string>
-    <string name="organicMatter">55. Organic Matter:</string>
-    <string name="fertilizerFormulation">56. Fertilizer Formulation:</string>
-    <string name="fertilizerApplication">57. Fertilizer Application:</string>
+    <string name="shadeManagement">53. Shade management:</string>
+    <string name="soilCondition">54. Soil condition:</string>
+    <string name="organicMatter">55. Organic matter:</string>
+    <string name="fertilizerFormulation">56. Fertilizer formulation:</string>
+    <string name="fertilizerApplication">57. Fertilizer application:</string>
     <string name="limeNeed">58. Lime need:</string>
     <string name="drainageNeed">59. Drainage need:</string>
-    <string name="fillingOption">60. Filling in or Thinning out option:</string>
+    <string name="fillingOption">60. Filling in or thinning out option:</string>
     <string name="plotHireLabor">61. Hire labor:</string>
 	<string name="geneticLb">Genetics of plant material:</string>
-	<string name="farmCondition">Farm Condition:</string>
+	<string name="farmCondition">Farm condition:</string>
 	<string name="gapLb">GAPS:</string>
-	<string name="soilFertMngLb">Soil Fertility Management:</string>
+	<string name="soilFertMngLb">Soil fertility management:</string>
 	<string name="calcAO">Calculate</string>
 
 
-	<string name="plot1" translatable="false">Plot 1</string>
-	<string name="plot2" translatable="false">Plot 2</string>
-	<string name="plot3" translatable="false">Plot 3</string>
-	<string name="plot4" translatable="false">Plot 4</string>
-	<string name="plot5" translatable="false">Plot 5</string>
-	<string name="plot6" translatable="false">Plot 6</string>
-	<string name="plot7" translatable="false">Plot 7</string>
-	<string name="plot8" translatable="false">Plot 8</string>
-	<string name="plot9" translatable="false">Plot 9</string>
-	<string name="plot10" translatable="false">Plot 10</string>
-	<string name="startYear">Start Year</string>
+    <string name="startYear">Start Year</string>
+	<string name="year0">Year 0</string>
 	<string name="year1">Year 1</string>
 	<string name="year2">Year 2</string>
 	<string name="year3">Year 3</string>
@@ -179,8 +165,7 @@
 	<string name="filling">Filling in</string>
 	<string name="thinning">Thinning</string>
 	<string name="labor">Labor</string>
-	<string name="empty" translatable="false"> </string>
-	<string name="jan">January</string>
+    <string name="jan">January</string>
 	<string name="feb">February</string>
 	<string name="mar">March</string>
 	<string name="apr">April</string>
@@ -192,8 +177,7 @@
 	<string name="oct">October</string>
 	<string name="nov">November</string>
 	<string name="dec">December</string>
-	<string name="greater0" translatable="false"></string>
-	<string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
+    <string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string>
     <string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string>
 	<string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
 	<string name="areasInco">Your areas present inconsistencies fix it before continuing</string>
@@ -234,7 +218,6 @@
 	<string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="areaEmpty">Your plots area cannot be empty</string>
     <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>
-	<string name="photoSuccess">Photo taken with success</string>
     <string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string>
 	<string name="familyLess">The number of family members can not be less than the number of children</string>
 	<string name="savingsLabel">Household Savings</string>
@@ -531,6 +514,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -548,6 +532,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x3.5</item>
         <item>2.5x4</item>
@@ -564,6 +549,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -578,9 +564,9 @@
     <string-array name="treeDistance4">
         <item>3x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -595,9 +581,9 @@
     <string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -612,9 +598,9 @@
     <string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -630,9 +616,9 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -649,9 +635,9 @@
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -667,10 +653,9 @@
         <item>3×4</item>
         <item>3x3.5</item>
         <item>2.5x3</item>
-        <item>2x2</item>
-        <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -684,6 +669,7 @@
         <item>2x2.5</item>
         <item>2x2</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -700,6 +686,7 @@
         <item>2x3</item>
         <item>2x2</item>
         <item>2x2.5</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
@@ -717,6 +704,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>
         <item>2.5x4</item>
@@ -733,6 +721,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x4</item>
@@ -749,6 +738,7 @@
         <item>2x2</item>
         <item>2x2.5</item>
         <item>2x3</item>
+		<item>2x3.5</item>
         <item>2x4</item>
         <item>2.5x2.5</item>
         <item>2.5x3.5</item>

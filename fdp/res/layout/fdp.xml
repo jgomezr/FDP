@@ -7,8 +7,7 @@
     <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/horizontalScrollView" >
+            android:layout_height="match_parent">
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -20,7 +19,7 @@
                     android:alignmentMode="alignBounds"
                     android:horizontalSpacing="0.1dp"
                     android:verticalSpacing="0.1dp"
-                    android:columnCount="9"
+                    android:columnCount="10"
                     android:rowCount="1">
 
                     <TextView android:layout_width="155dp"
@@ -37,13 +36,23 @@
                         android:layout_column="1"
                         android:layout_row="0"/>
 
-                    <Button android:text="@string/year1"
+                    <Button android:text="@string/year0"
                         android:layout_width="143dp"
                         android:background="@color/button"
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_column="2"
+                        android:layout_row="0"
+                        style="@style/FarmerDetail.ParentView.TextView"/>
+
+                    <Button android:text="@string/year1"
+                        android:layout_width="143dp"
+                        android:background="@color/button"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_column="3"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear1"
@@ -55,7 +64,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="3"
+                        android:layout_column="4"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear2"
@@ -67,7 +76,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="4"
+                        android:layout_column="5"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear3"
@@ -79,7 +88,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="5"
+                        android:layout_column="6"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear4"
@@ -91,7 +100,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="6"
+                        android:layout_column="7"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear5"
@@ -103,7 +112,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="7"
+                        android:layout_column="8"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear6"
@@ -115,7 +124,7 @@
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_column="8"
+                        android:layout_column="9"
                         android:layout_row="0"
                         style="@style/FarmerDetail.ParentView.TextView"
                         android:onClick="launchYear7"
@@ -127,61 +136,61 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot1"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot2"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot3"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot4"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot5"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot6"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot7"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot8"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot9"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot10"
-                    android:name="org.grameenfoundation.fdp.ui.fdpFragment"/>
+                    android:name="org.grameenfoundation.fdpwaf.ui.fdpFragment"/>
 
                 <GridLayout
                     android:layout_width="match_parent"
@@ -189,7 +198,7 @@
                     android:alignmentMode="alignBounds"
                     android:horizontalSpacing="0.5dp"
                     android:verticalSpacing="0.5dp"
-                    android:columnCount="8"
+                    android:columnCount="9"
                     android:rowCount="11">
 
                     <TextView android:layout_width="320dp"
@@ -205,7 +214,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY1_field"
+                        android:id="@+id/netPlotIncomeY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -214,7 +223,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY2_field"
+                        android:id="@+id/netPlotIncomeY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -223,7 +232,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY3_field"
+                        android:id="@+id/netPlotIncomeY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -232,7 +241,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY4_field"
+                        android:id="@+id/netPlotIncomeY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -241,7 +250,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY5_field"
+                        android:id="@+id/netPlotIncomeY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -250,7 +259,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY6_field"
+                        android:id="@+id/netPlotIncomeY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -259,10 +268,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netPlotIncomeY7_field"
+                        android:id="@+id/netPlotIncomeY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="0"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netPlotIncomeY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="0"/>
 
                     <TextView android:layout_width="320dp"
@@ -278,7 +296,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY1_field"
+                        android:id="@+id/otherCropY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -287,7 +305,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY2_field"
+                        android:id="@+id/otherCropY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -296,7 +314,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY3_field"
+                        android:id="@+id/otherCropY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -305,7 +323,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY4_field"
+                        android:id="@+id/otherCropY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -314,7 +332,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY5_field"
+                        android:id="@+id/otherCropY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -323,7 +341,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY6_field"
+                        android:id="@+id/otherCropY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -332,10 +350,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/otherCropY7_field"
+                        android:id="@+id/otherCropY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="1"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otherCropY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="1"/>
 
                     <TextView android:layout_width="320dp"
@@ -351,7 +378,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY1_field"
+                        android:id="@+id/netFarmingY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -360,7 +387,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY2_field"
+                        android:id="@+id/netFarmingY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -369,7 +396,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY3_field"
+                        android:id="@+id/netFarmingY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -378,7 +405,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY4_field"
+                        android:id="@+id/netFarmingY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -387,7 +414,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY5_field"
+                        android:id="@+id/netFarmingY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -396,7 +423,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY6_field"
+                        android:id="@+id/netFarmingY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -405,10 +432,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFarmingY7_field"
+                        android:id="@+id/netFarmingY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="2"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netFarmingY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="2"/>
 
                     <TextView android:layout_width="320dp"
@@ -424,7 +460,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY1_field"
+                        android:id="@+id/netOtherY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -433,7 +469,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY2_field"
+                        android:id="@+id/netOtherY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -442,7 +478,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY3_field"
+                        android:id="@+id/netOtherY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -451,7 +487,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY4_field"
+                        android:id="@+id/netOtherY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -460,7 +496,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY5_field"
+                        android:id="@+id/netOtherY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -469,7 +505,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY6_field"
+                        android:id="@+id/netOtherY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -478,10 +514,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netOtherY7_field"
+                        android:id="@+id/netOtherY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="3"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netOtherY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="3"/>
 
                     <TextView android:layout_width="320dp"
@@ -497,7 +542,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY1_field"
+                        android:id="@+id/totalIncomeY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -506,7 +551,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY2_field"
+                        android:id="@+id/totalIncomeY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -515,7 +560,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY3_field"
+                        android:id="@+id/totalIncomeY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -524,7 +569,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY4_field"
+                        android:id="@+id/totalIncomeY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -533,7 +578,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY5_field"
+                        android:id="@+id/totalIncomeY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -542,7 +587,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY6_field"
+                        android:id="@+id/totalIncomeY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -551,10 +596,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalIncomeY7_field"
+                        android:id="@+id/totalIncomeY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="4"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalIncomeY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="4"/>
 
                     <TextView android:layout_width="320dp"
@@ -570,7 +624,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY1_field"
+                        android:id="@+id/totalExpensesY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -579,7 +633,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY2_field"
+                        android:id="@+id/totalExpensesY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -588,7 +642,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY3_field"
+                        android:id="@+id/totalExpensesY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -597,7 +651,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY4_field"
+                        android:id="@+id/totalExpensesY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -606,7 +660,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY5_field"
+                        android:id="@+id/totalExpensesY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -615,7 +669,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY6_field"
+                        android:id="@+id/totalExpensesY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -624,10 +678,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/totalExpensesY7_field"
+                        android:id="@+id/totalExpensesY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="5"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/expenses"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalExpensesY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="5"/>
 
                     <TextView android:layout_width="320dp"
@@ -643,7 +706,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY1_field"
+                        android:id="@+id/netFamilyY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -652,7 +715,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY2_field"
+                        android:id="@+id/netFamilyY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -661,7 +724,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY3_field"
+                        android:id="@+id/netFamilyY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -670,7 +733,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY4_field"
+                        android:id="@+id/netFamilyY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -679,7 +742,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY5_field"
+                        android:id="@+id/netFamilyY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -688,7 +751,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY6_field"
+                        android:id="@+id/netFamilyY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -697,10 +760,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/income"
                         android:layout_height="wrap_content"
-                        android:id="@+id/netFamilyY7_field"
+                        android:id="@+id/netFamilyY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="6"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/income"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netFamilyY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="6"/>
 
                     <TextView android:layout_width="320dp"
@@ -716,7 +788,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY1_field"
+                        android:id="@+id/foundsNeededY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -725,7 +797,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY2_field"
+                        android:id="@+id/foundsNeededY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -734,7 +806,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY3_field"
+                        android:id="@+id/foundsNeededY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -743,7 +815,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY4_field"
+                        android:id="@+id/foundsNeededY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -752,7 +824,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY5_field"
+                        android:id="@+id/foundsNeededY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -761,7 +833,7 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY6_field"
+                        android:id="@+id/foundsNeededY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -770,10 +842,19 @@
                     <TextView android:layout_width="150dp"
                         android:background="@color/expenses"
                         android:layout_height="wrap_content"
-                        android:id="@+id/foundsNeededY7_field"
+                        android:id="@+id/foundsNeededY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="7"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:background="@color/expenses"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/foundsNeededY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="7"/>
 
                     <TextView android:layout_width="320dp"
@@ -787,7 +868,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY1_field"
+                        android:id="@+id/profitOrLostY0_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="1"
@@ -795,7 +876,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY2_field"
+                        android:id="@+id/profitOrLostY1_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="2"
@@ -803,7 +884,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY3_field"
+                        android:id="@+id/profitOrLostY2_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="3"
@@ -811,7 +892,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY4_field"
+                        android:id="@+id/profitOrLostY3_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="4"
@@ -819,7 +900,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY5_field"
+                        android:id="@+id/profitOrLostY4_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="5"
@@ -827,7 +908,7 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY6_field"
+                        android:id="@+id/profitOrLostY5_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="6"
@@ -835,10 +916,18 @@
 
                     <TextView android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/profitOrLostY7_field"
+                        android:id="@+id/profitOrLostY6_field"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical|right"
                         android:layout_column="7"
+                        android:layout_row="8"/>
+
+                    <TextView android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/profitOrLostY7_field"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|right"
+                        android:layout_column="8"
                         android:layout_row="8"/>
 
                     <TextView android:layout_width="320dp"

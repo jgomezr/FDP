@@ -5,7 +5,6 @@ import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -129,10 +128,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
                 }
                 if (qcu > qc) {
-                    childrenUnder.setBackgroundColor(Color.parseColor("#cc0000"));
-                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
-                }else{
-                    childrenUnder.setBackgroundColor(Color.TRANSPARENT);
+                    childrenUnder.setError(getString(R.string.childrenVal));
                 }
 
             }
@@ -164,10 +160,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     qcu= Double.parseDouble(childrenUnder.getText().toString());
                 }
                 if (qc>qcu) {
-                    childreSchool.setBackgroundColor(Color.parseColor("#cc0000"));
-                    Toast.makeText(getApplicationContext(), getString(R.string.childrenVal), Toast.LENGTH_SHORT).show();
-                }else{
-                    childreSchool.setBackgroundColor(Color.TRANSPARENT);
+                    childreSchool.setError(getString(R.string.childrenVal));
                 }
 
             }
@@ -733,25 +726,15 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 
             }
             if (tl>toa) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.areaHiger) );
             }
 
             if (tc>tl) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.areaHiger), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.areaHiger) );
             }
             if(tr>tc){
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.renovationHigh), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.renovationHigh) );
             }
-
         }
     }
 
@@ -786,10 +769,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 fm= Double.parseDouble(familyMemb.getText().toString());
             }
             if ((qc+1)>fm) {
-                editText.setBackgroundColor(Color.parseColor("#cc0000"));
-                Toast.makeText(getApplicationContext(), getString(R.string.familyLess), Toast.LENGTH_SHORT).show();
-            }else{
-                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setError( getString(R.string.familyLess) );
             }
         }
     }
@@ -1924,6 +1904,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
         final String measure = ((Spinner) findViewById(R.id.weight_Field)).getSelectedItem().toString();
         final String area = ((Spinner) findViewById(R.id.area_Field)).getSelectedItem().toString();
+        final String country = "Ghana";
 		final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
 		JSONObject contact;
 		try {
@@ -2001,6 +1982,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.WANTACCOUNT,want);
             contact.put(ContactObject.MEASURE,measure);
             contact.put(ContactObject.AREAUNITS,area);
+            contact.put(ContactObject.COUNTRY,country);
 			contact.put(SyncManager.LOCAL, true);
 			contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
 			contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -2079,6 +2061,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
         final String want = ((Spinner) findViewById(R.id.wantAccount_field)).getSelectedItem().toString();
         final String measure = ((Spinner) findViewById(R.id.weight_Field)).getSelectedItem().toString();
         final String area = ((Spinner) findViewById(R.id.area_Field)).getSelectedItem().toString();
+        final String country = "Ghana";
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -2156,6 +2139,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
             contact.put(ContactObject.WANTACCOUNT,want);
             contact.put(ContactObject.MEASURE,measure);
             contact.put(ContactObject.AREAUNITS,area);
+            contact.put(ContactObject.COUNTRY,country);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

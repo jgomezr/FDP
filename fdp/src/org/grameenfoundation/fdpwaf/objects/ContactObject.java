@@ -389,6 +389,7 @@ public class ContactObject extends SalesforceObject {
     public static final String MEASURE = "unitOfMeasure__c";
     public static final String AREAUNITS = "areaUnits__c";
     public static final String USER = "Assigned_to__c";
+    public static final String COUNTRY = "Country__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
             LAST_NAME,
@@ -762,7 +763,8 @@ public class ContactObject extends SalesforceObject {
             USER,
             NUMBERSPOUSES,
             MEASURE,
-            AREAUNITS
+            AREAUNITS,
+            COUNTRY
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1138,8 +1140,11 @@ public class ContactObject extends SalesforceObject {
             USER,
             NUMBERSPOUSES,
             MEASURE,
-            AREAUNITS
+            AREAUNITS,
+            COUNTRY
     };
+
+    public static final String CONTACT_WHERE = "Country__c = 'Ghana'";
 
     private boolean isLocallyModified;
 
@@ -2202,6 +2207,7 @@ public class ContactObject extends SalesforceObject {
     public String getMEASURE() {return sanitizeText(rawData.optString(MEASURE));}
     public String getAREAUNITS() {return sanitizeText(rawData.optString(AREAUNITS));}
     public String getUSER() {return sanitizeText(rawData.optString(USER));}
+    public String getCOUNTRY() {return sanitizeText(rawData.optString(COUNTRY));}
 
     /**
      * Returns whether the contact has been locally modified or not.

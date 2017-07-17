@@ -6,8 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/white"
-    android:id="@+id/root">
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -1350,7 +1349,6 @@
                         android:layout_weight=".50">
 
                         <TextView
-                            android:id="@+id/area"
                             style="@style/FarmerDetail.ParentView.TextView"
                             android:layout_gravity="center_vertical"
                             android:gravity="center_horizontal"
@@ -1373,7 +1371,6 @@
                         android:layout_weight=".50">
 
                         <TextView
-                            android:id="@+id/weight"
                             style="@style/FarmerDetail.ParentView.TextView"
                             android:layout_gravity="center_vertical"
                             android:gravity="center_horizontal"

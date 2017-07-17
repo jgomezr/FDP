@@ -1330,17 +1330,45 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             }
+            double plot1Area = 0;
+            double plot2Area = 0;
+            double plot3Area = 0;
+            double plot4Area = 0;
+            double plot5Area = 0;
+            double plot6Area = 0;
+            double plot7Area = 0;
+            double plot8Area = 0;
+            double plot9Area = 0;
+            double plot10Area = 0;
 
-            double plot1Area = Double.valueOf(sObject.getPlot1Area());
-            double plot2Area = Double.valueOf(sObject.getPlot2Area());
-            double plot3Area = Double.valueOf(sObject.getPlot3Area());
-            double plot4Area = Double.valueOf(sObject.getPlot4Area());
-            double plot5Area = Double.valueOf(sObject.getPlot5Area());
-            double plot6Area = Double.valueOf(sObject.getPlot6Area());
-            double plot7Area = Double.valueOf(sObject.getPlot7Area());
-            double plot8Area = Double.valueOf(sObject.getPlot8Area());
-            double plot9Area = Double.valueOf(sObject.getPlot9Area());
-            double plot10Area = Double.valueOf(sObject.getPlot10Area());
+            if (sObject.getAREAUNITS().contentEquals("Ac")){
+                plot1Area = Double.valueOf(sObject.getPlot1Area())*0.4046856;
+                plot2Area = Double.valueOf(sObject.getPlot2Area())*0.4046856;
+                plot3Area = Double.valueOf(sObject.getPlot3Area())*0.4046856;
+                plot4Area = Double.valueOf(sObject.getPlot4Area())*0.4046856;
+                plot5Area = Double.valueOf(sObject.getPlot5Area())*0.4046856;
+                plot6Area = Double.valueOf(sObject.getPlot6Area())*0.4046856;
+                plot7Area = Double.valueOf(sObject.getPlot7Area())*0.4046856;
+                plot8Area = Double.valueOf(sObject.getPlot8Area())*0.4046856;
+                plot9Area = Double.valueOf(sObject.getPlot9Area())*0.4046856;
+                plot10Area = Double.valueOf(sObject.getPlot10Area())*0.4046856;
+
+                Log.d(TAG, "plot1area: "+plot1Area);
+
+            }else{
+                plot1Area = Double.valueOf(sObject.getPlot1Area());
+                plot2Area = Double.valueOf(sObject.getPlot2Area());
+                plot3Area = Double.valueOf(sObject.getPlot3Area());
+                plot4Area = Double.valueOf(sObject.getPlot4Area());
+                plot5Area = Double.valueOf(sObject.getPlot5Area());
+                plot6Area = Double.valueOf(sObject.getPlot6Area());
+                plot7Area = Double.valueOf(sObject.getPlot7Area());
+                plot8Area = Double.valueOf(sObject.getPlot8Area());
+                plot9Area = Double.valueOf(sObject.getPlot9Area());
+                plot10Area = Double.valueOf(sObject.getPlot10Area());
+                Log.d(TAG, "plot1area: "+plot1Area);
+            }
+
             String startY1 = sObject.getStartYearP1();
             String startY2 = sObject.getStartYearP2();
             String startY3 = sObject.getStartYearP3();
@@ -1362,16 +1390,56 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             Integer age8 = Integer.valueOf(sObject.getPlot8Age());
             Integer age9 = Integer.valueOf(sObject.getPlot9Age());
             Integer age10 = Integer.valueOf(sObject.getPlot10Age());
-            double estPrd1 = Double.valueOf(sObject.getPlot1Yield());
-            double estPrd2 = Double.valueOf(sObject.getPlot2Yield());
-            double estPrd3 = Double.valueOf(sObject.getPlot3Yield());
-            double estPrd4 = Double.valueOf(sObject.getPlot4Yield());
-            double estPrd5 = Double.valueOf(sObject.getPlot5Yield());
-            double estPrd6 = Double.valueOf(sObject.getPlot6Yield());
-            double estPrd7 = Double.valueOf(sObject.getPlot7Yield());
-            double estPrd8 = Double.valueOf(sObject.getPlot8Yield());
-            double estPrd9 = Double.valueOf(sObject.getPlot9Yield());
-            double estPrd10 = Double.valueOf(sObject.getPlot10Yield());
+
+
+            double estPrd1 = 0;
+            double estPrd2 = 0;
+            double estPrd3 = 0;
+            double estPrd4 = 0;
+            double estPrd5 = 0;
+            double estPrd6 = 0;
+            double estPrd7 = 0;
+            double estPrd8 = 0;
+            double estPrd9 = 0;
+            double estPrd10 = 0;
+
+            if (sObject.getMEASURE().contentEquals("Bag")){
+                estPrd1 = Double.valueOf(sObject.getPlot1Yield())*60;
+                estPrd2 = Double.valueOf(sObject.getPlot2Yield())*60;
+                estPrd3 = Double.valueOf(sObject.getPlot3Yield())*60;
+                estPrd4 = Double.valueOf(sObject.getPlot4Yield())*60;
+                estPrd5 = Double.valueOf(sObject.getPlot5Yield())*60;
+                estPrd6 = Double.valueOf(sObject.getPlot6Yield())*60;
+                estPrd7 = Double.valueOf(sObject.getPlot7Yield())*60;
+                estPrd8 = Double.valueOf(sObject.getPlot8Yield())*60;
+                estPrd9 = Double.valueOf(sObject.getPlot9Yield())*60;
+                estPrd10 = Double.valueOf(sObject.getPlot10Yield())*60;
+                Log.d(TAG, "est prod: "+estPrd1);
+            }else if(sObject.getMEASURE().contentEquals("Qq")){
+                estPrd1 = Double.valueOf(sObject.getPlot1Yield())*100;
+                estPrd2 = Double.valueOf(sObject.getPlot2Yield())*100;
+                estPrd3 = Double.valueOf(sObject.getPlot3Yield())*100;
+                estPrd4 = Double.valueOf(sObject.getPlot4Yield())*100;
+                estPrd5 = Double.valueOf(sObject.getPlot5Yield())*100;
+                estPrd6 = Double.valueOf(sObject.getPlot6Yield())*100;
+                estPrd7 = Double.valueOf(sObject.getPlot7Yield())*100;
+                estPrd8 = Double.valueOf(sObject.getPlot8Yield())*100;
+                estPrd9 = Double.valueOf(sObject.getPlot9Yield())*100;
+                estPrd10 = Double.valueOf(sObject.getPlot10Yield())*100;
+                Log.d(TAG, "est prod: "+estPrd1);
+            }else{
+                estPrd1 = Double.valueOf(sObject.getPlot1Yield());
+                estPrd2 = Double.valueOf(sObject.getPlot2Yield());
+                estPrd3 = Double.valueOf(sObject.getPlot3Yield());
+                estPrd4 = Double.valueOf(sObject.getPlot4Yield());
+                estPrd5 = Double.valueOf(sObject.getPlot5Yield());
+                estPrd6 = Double.valueOf(sObject.getPlot6Yield());
+                estPrd7 = Double.valueOf(sObject.getPlot7Yield());
+                estPrd8 = Double.valueOf(sObject.getPlot8Yield());
+                estPrd9 = Double.valueOf(sObject.getPlot9Yield());
+                estPrd10 = Double.valueOf(sObject.getPlot10Yield());
+                Log.d(TAG, "est prod: "+estPrd1);
+            }
 
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             //plot1
@@ -2744,7 +2812,13 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netPlotIncomeY7_field), String.valueOf(dec.format(totalIncomeY7)));
 
             //net income other crops
-            double otherCrops = Double.parseDouble(sObject.getIncomeothercrops());
+            double otherCrops = 0;
+            if (sObject.getIncomeothercrops().isEmpty()){
+                otherCrops = 0;
+            }else {
+                otherCrops = Double.parseDouble(sObject.getIncomeothercrops());
+            }
+
             setText((TextView) findViewById(R.id.otherCropY0_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY1_field), String.valueOf(dec.format(otherCrops)));
             setText((TextView) findViewById(R.id.otherCropY2_field), String.valueOf(dec.format(otherCrops)));
@@ -2773,10 +2847,33 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.netFarmingY7_field), String.valueOf(dec.format(farmingy7)));
 
             //net other income sources
-            double moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
-            double farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
-            double spouseWork = Double.parseDouble(sObject.getSpouseincome());
-            double familyWork = Double.parseDouble(sObject.getFamilymembersincome());
+            double moneyBack = 0;
+            if (sObject.getLoanmoneygetback().isEmpty()){
+                moneyBack = 0;
+            }else {
+                moneyBack = Double.parseDouble(sObject.getLoanmoneygetback());
+            }
+
+            double farmWork = 0;
+            if (sObject.getIncomefarmlabor().isEmpty()){
+                farmWork = 0;
+            }else {
+                farmWork = Double.parseDouble(sObject.getIncomefarmlabor());
+            }
+
+            double spouseWork = 0;
+            if (sObject.getSpouseincome().isEmpty()){
+                spouseWork = 0;
+            }else {
+                spouseWork = Double.parseDouble(sObject.getSpouseincome());
+            }
+
+            double familyWork = 0;
+            if (sObject.getFamilymembersincome().isEmpty()){
+                familyWork = 0;
+            }else {
+                familyWork = Double.parseDouble(sObject.getFamilymembersincome());
+            }
             int totalOtherIncome = (int) (moneyBack+farmWork+spouseWork+familyWork);
             setText((TextView) findViewById(R.id.netOtherY0_field), String.valueOf(dec.format(totalOtherIncome)));
             setText((TextView) findViewById(R.id.netOtherY1_field), String.valueOf(dec.format(totalOtherIncome)));
@@ -2806,10 +2903,34 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             setText((TextView) findViewById(R.id.totalIncomeY7_field), String.valueOf(dec.format(totalIncomeAllY7)));
 
             //total family costs
-            double anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
-            double anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
-            double expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
-            double credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            double anLivExpen = 0;
+            if (sObject.getAnnuallivingexpenses().isEmpty()){
+                anLivExpen = 0;
+            }else {
+                anLivExpen = Double.parseDouble(sObject.getAnnuallivingexpenses());
+            }
+
+            double anOtherExp = 0;
+            if (sObject.getAnnualotherexpenses().isEmpty()){
+                anOtherExp = 0;
+            }else {
+                anOtherExp = Double.parseDouble(sObject.getAnnualotherexpenses());
+            }
+
+            double expEducExp = 0;
+            if (sObject.getExpectededucationexpenses().isEmpty()){
+                expEducExp = 0;
+            }else {
+                expEducExp = Double.parseDouble(sObject.getExpectededucationexpenses());
+            }
+
+            double credPay = 0;
+            if (sObject.getHowmuchpayforcredit().isEmpty()){
+                credPay = 0;
+            }else {
+                credPay = Double.parseDouble(sObject.getHowmuchpayforcredit());
+            }
+
             int totalExpenses = (int) (anLivExpen+anOtherExp+expEducExp+credPay);
             setText((TextView) findViewById(R.id.totalExpensesY0_field), String.valueOf(dec.format(totalExpenses)));
             setText((TextView) findViewById(R.id.totalExpensesY1_field), String.valueOf(dec.format(totalExpenses)));
@@ -2956,8 +3077,19 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
 
             //savings and investments
-            double hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
-            double hhInvestments = Double.parseDouble(sObject.getPlannedinvestments());
+            double hhSavings = 0;
+            if (sObject.getHouseholdsavings().isEmpty()){
+                hhSavings = 0;
+            }else {
+                hhSavings = Double.parseDouble(sObject.getHouseholdsavings());
+            }
+
+            double hhInvestments = 0;
+            if (sObject.getPlannedinvestments().isEmpty()){
+                hhInvestments = 0;
+            }else {
+                hhInvestments = Double.parseDouble(sObject.getPlannedinvestments());
+            }
 
             setText((TextView) findViewById(R.id.savings_field), String.valueOf(dec.format(hhSavings)));
             setText((TextView) findViewById(R.id.investments_field), String.valueOf(dec.format(hhInvestments)));

@@ -1163,7 +1163,7 @@ public class fdpFragment extends Fragment {
                     cost7 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
                 }
                 income0 =(int) ((area * yield*avgCost));
-                income1 =(int) ((area * (getResources().getInteger(R.integer.replantingY1))*avgCost));
+                income1 =(int) ((area * (yield*0.15)*avgCost));
                 income2 =(int) ((area * (getResources().getInteger(R.integer.replantingY2))*avgCost));
                 income3 =(int) ((area * (getResources().getInteger(R.integer.replantingY3))*avgCost));
                 income4 =(int) ((area * (getResources().getInteger(R.integer.replantingY4))*avgCost));
@@ -1269,7 +1269,7 @@ public class fdpFragment extends Fragment {
                 cost7 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY7Total)));
             }
             income0 =(int) ((area * yield * avgCost));
-            income1 =(int) ((area * (getResources().getInteger(R.integer.replantingY1))* avgCost));
+            income1 =(int) ((area * (yield*0.15)* avgCost));
             income2 =(int) ((area * (getResources().getInteger(R.integer.replantingY2))* avgCost));
             income3 =(int) ((area * (getResources().getInteger(R.integer.replantingY3))* avgCost));
             income4 =(int) ((area * (getResources().getInteger(R.integer.replantingY4))* avgCost));
@@ -1373,7 +1373,7 @@ public class fdpFragment extends Fragment {
                 cost7 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY7Total)));
             }
             income0 =(int) ((area * yield * avgCost));
-            income1 =(int) ((area * (getResources().getInteger(R.integer.graftingY1))* avgCost));
+            income1 =(int) ((area * (yield*0.7)* avgCost));
             income2 =(int) ((area * (getResources().getInteger(R.integer.graftingY2))* avgCost));
             income3 =(int) ((area * (getResources().getInteger(R.integer.graftingY3))* avgCost));
             income4 =(int) ((area * (getResources().getInteger(R.integer.graftingY4))* avgCost));
@@ -1427,9 +1427,10 @@ public class fdpFragment extends Fragment {
             cost5 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY5Total)));
             cost6 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY6Total)));
             cost7 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY7Total)));
+            
             income0 =(int) ((area * yield*avgCost));
-            income1 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY1))*avgCost));
-            income2 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY2))*avgCost));
+            income1 =(int) ((area * ((2000-yield)*0.3+yield)*avgCost));
+            income2 =(int) ((area * ((2000-yield)*0.3+((2000-yield)*0.3+yield))*avgCost));
             income3 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY3))*avgCost));
             income4 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY4))*avgCost));
             income5 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));

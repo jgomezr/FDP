@@ -138,7 +138,7 @@ public class ContactListLoader extends AsyncTaskLoader<List<ContactObject>> {
             if (syncId == -1) {
                 final SyncOptions options = SyncOptions.optionsForSyncDown(SyncState.MergeMode.LEAVE_IF_CHANGED);
                 final String soqlQuery = SOQLBuilder.getInstanceWithFields(ContactObject.CONTACT_FIELDS_SYNC_DOWN)
-                        .from(Constants.SUBMISSION).limit(ContactListLoader.LIMIT).build();
+                        .from(Constants.SUBMISSION).where(ContactObject.CONTACT_WHERE).limit(ContactListLoader.LIMIT).build();
                 final SyncDownTarget target = new SoqlSyncDownTarget(soqlQuery);
                 final SyncState sync = syncMgr.syncDown(target, options,
                         ContactListLoader.CONTACT_SOUP, callback);

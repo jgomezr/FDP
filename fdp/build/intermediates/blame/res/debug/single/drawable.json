@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\monitor.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\monitor.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_refresh.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_refresh.png"
     },
@@ -12,12 +8,12 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\info.png"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ii.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ii.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_save.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_save.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ii.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ii.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__toolbar_background.xml",
