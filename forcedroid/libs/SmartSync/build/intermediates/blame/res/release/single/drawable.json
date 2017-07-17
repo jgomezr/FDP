@@ -8,7 +8,19 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__progress_spinner.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable\\sf__toolbar_background.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__toolbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable\\sf__progress_spinner.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__progress_spinner.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable\\sf__toolbar_background.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__toolbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\release\\drawable\\sf__header_bg.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__header_bg.png"
     }
 ]

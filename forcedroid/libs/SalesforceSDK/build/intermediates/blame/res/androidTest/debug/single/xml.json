@@ -4,11 +4,23 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\servers.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\app_restrictions.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\app_restrictions.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\authenticator.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\authenticator.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\authenticator.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\authenticator.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\app_restrictions.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\app_restrictions.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\servers.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\debug\\res\\xml\\servers.xml"
     }
 ]

@@ -31,7 +31,7 @@ android {
     }
   }
   defaultConfig {
-      applicationId "org.grameenfoundation.fdpwaf"
+      applicationId "org.grameenfoundation.fdpciv"
     testApplicationId "com.salesforce.samples.templateapp.tests"
     testInstrumentationRunner "com.salesforce.androidsdk.util.test.JUnitReportTestRunner"
     minSdkVersion 19

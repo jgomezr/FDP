@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.grameenfoundation.fdpwaf"
+	package="org.grameenfoundation.fdpciv"
 	android:versionCode="2"
 	android:versionName="2.0"
 	android:installLocation="internalOnly">
@@ -10,7 +10,7 @@
         android:targetSdkVersion="23" />
 
 	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
-    <uses-permission android:name="org.grameenfoundation.fdpwaf.C2D_MESSAGE" />
+    <uses-permission android:name="org.grameenfoundation.fdpciv.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -30,7 +30,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.fdpwaf.android.fileprovider"
+            android:authorities="com.fdpciv.android.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
 			<meta-data
@@ -48,8 +48,8 @@
 		</activity>
 
 		<!-- Detail screen -->
-		<activity android:name="org.grameenfoundation.fdpwaf.ui.DetailActivity"
-            android:parentActivityName="org.grameenfoundation.fdpwaf.MainActivity"
+		<activity android:name="org.grameenfoundation.fdpciv.ui.DetailActivity"
+            android:parentActivityName="org.grameenfoundation.fdpciv.MainActivity"
 			android:configChanges="orientation|screenSize"
 			android:windowSoftInputMode="stateHidden">
 			<intent-filter>
@@ -59,8 +59,8 @@
 		</activity>
 
 		<!-- photo screen -->
-		<activity android:name="org.grameenfoundation.fdpwaf.ui.photoActivity"
-			android:parentActivityName="org.grameenfoundation.fdpwaf.ui.DetailActivity"
+		<activity android:name="org.grameenfoundation.fdpciv.ui.photoActivity"
+			android:parentActivityName="org.grameenfoundation.fdpciv.ui.DetailActivity"
 			android:configChanges="orientation|screenSize"
 			android:windowSoftInputMode="stateHidden">
 			<intent-filter>
@@ -70,8 +70,8 @@
 		</activity>
 
 		<!-- Plot screen -->
-		<activity android:name="org.grameenfoundation.fdpwaf.ui.plotActivity"
-            android:parentActivityName="org.grameenfoundation.fdpwaf.ui.DetailActivity"
+		<activity android:name="org.grameenfoundation.fdpciv.ui.plotActivity"
+            android:parentActivityName="org.grameenfoundation.fdpciv.ui.DetailActivity"
 			android:configChanges="orientation|screenSize"
 			android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -81,8 +81,8 @@
 		</activity>
 
 		<!-- fdp screen -->
-		<activity android:name="org.grameenfoundation.fdpwaf.ui.fdpActivity"
-            android:parentActivityName="org.grameenfoundation.fdpwaf.ui.plotActivity"
+		<activity android:name="org.grameenfoundation.fdpciv.ui.fdpActivity"
+            android:parentActivityName="org.grameenfoundation.fdpciv.ui.plotActivity"
 			android:configChanges="orientation|screenSize">
 			<intent-filter>
 				<action android:name="android.intent.action.FDP" />
@@ -91,9 +91,9 @@
 		</activity>
 
 		<!-- Year detail screen -->
-		<activity android:name="org.grameenfoundation.fdpwaf.ui.YearDetailActivity"
+		<activity android:name="org.grameenfoundation.fdpciv.ui.YearDetailActivity"
 			android:configChanges="orientation|screenSize"
-            android:parentActivityName="org.grameenfoundation.fdpwaf.ui.fdpActivity">
+            android:parentActivityName="org.grameenfoundation.fdpciv.ui.fdpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.DETAIL" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -101,7 +101,7 @@
 		</activity>
 
 		<!-- Farmer sync service -->
-		<service android:name="org.grameenfoundation.fdpwaf.sync.ContactSyncService"
+		<service android:name="org.grameenfoundation.fdpciv.sync.ContactSyncService"
 			android:exported="true"
 			android:process=":sync">
 			<intent-filter>
@@ -124,7 +124,7 @@
         receive the messages and registration result. This must be of
         the format <app-package-name>.C2D_MESSAGE for it to work.
     -->
-    <permission android:name="org.grameenfoundation.fdpwaf.C2D_MESSAGE"
+    <permission android:name="org.grameenfoundation.fdpciv.C2D_MESSAGE"
 		android:protectionLevel="signature" />
 
 

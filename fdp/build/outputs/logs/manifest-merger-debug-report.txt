@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:3:1-131:12
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:3:1-131:12
 	package
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:4:2-40
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:4:2-40
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:6:2-27
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:6:2-27
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
 	android:versionCode
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:5:2-25
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:5:2-25
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:3:11-69
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:3:11-69
 	android:installLocation
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:7:2-40
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:7:2-40
 uses-sdk
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:9:5-10:41
-MERGED from [fdp - waf.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [fdp - waf.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
-MERGED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:9:5-10:41
+MERGED from [fdp - civ.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [fdp - civ.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:3:5-72
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\03cb2544dede0af969ea99088bf8674e3aaa574c\output\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:18:5-42
@@ -35,61 +35,61 @@ MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\julian\.android\build-cache\70fa02815818846226a8dc66aa232d9100d400cb\output\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:10:9-38
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:10:9-38
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:9:15-41
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
-		INJECTED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:9:15-41
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
+		INJECTED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml
 uses-permission#android.permission.WRITE_SYNC_SETTINGS
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:12:2-75
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:12:2-75
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:12:19-72
-uses-permission#org.grameenfoundation.fdpwaf.C2D_MESSAGE
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:13:5-80
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:12:19-72
+uses-permission#org.grameenfoundation.fdpciv.C2D_MESSAGE
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:13:5-80
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:13:22-77
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:13:22-77
 uses-permission#android.permission.READ_SYNC_SETTINGS
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:14:5-77
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:14:5-77
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:14:22-74
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:14:22-74
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:16:5-78
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:16:5-78
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:16:22-76
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:16:22-76
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:17:5-88
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:17:5-88
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:17:22-86
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:17:22-86
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:18:5-80
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:18:5-80
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:18:22-78
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:18:22-78
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:19:5-66
-MERGED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:14:5-67
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:19:5-66
+MERGED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:14:5-67
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:19:22-64
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:19:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:20:5-81
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:20:5-81
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:20:22-78
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:20:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:21:5-80
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:21:5-80
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:21:22-77
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:21:22-77
 uses-feature#android.hardware.camera
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:22:5-23:35
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:22:5-23:35
 	android:required
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:23:9-32
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:23:9-32
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:22:19-57
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:22:19-57
 application
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:25:2-120:16
-MERGED from [fdp - waf.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
-MERGED from [fdp - waf.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
-MERGED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:23:5-103:19
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:25:2-120:16
+MERGED from [fdp - civ.forcedroid.libs:SmartSync:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartSync\build\intermediates\bundles\default\AndroidManifest.xml:11:5-20
+MERGED from [fdp - civ.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:23:5-103:19
 MERGED from [com.mcxiaoke.volley:library-aar:1.0.0] C:\Users\julian\.android\build-cache\ff5f0ab79a3e3a209256ed833ef01d0b7faf7917\output\AndroidManifest.xml:5:5-19
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\julian\.android\build-cache\03cb2544dede0af969ea99088bf8674e3aaa574c\output\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:20:5-24:19
@@ -101,293 +101,293 @@ MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\julian\.androi
 MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\julian\.android\build-cache\91472bdc7a987f7fefe43c992379291210af5294\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.2.0] C:\Users\julian\.android\build-cache\79162db6093d2689128ab484cd094ef08d64aed1\output\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:26:6-38
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:26:6-38
 	android:manageSpaceActivity
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:29:3-81
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:29:3-81
 	android:icon
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:25:15-47
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:25:15-47
 	android:theme
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:28:3-34
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:28:3-34
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:27:3-25
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:27:3-25
 provider#android.support.v4.content.FileProvider
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:31:9-39:20
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:31:9-39:20
 	android:authorities
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:33:13-66
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:33:13-66
 	android:grantUriPermissions
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:35:13-47
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:35:13-47
 	android:exported
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:34:13-37
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:32:13-67
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:32:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:36:4-38:42
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:36:4-38:42
 	android:resource
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:38:5-39
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:38:5-39
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:37:5-55
-activity#org.grameenfoundation.fdpwaf.MainActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:42:3-48:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:37:5-55
+activity#org.grameenfoundation.fdpciv.MainActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:42:3-48:14
 	android:label
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:43:7-39
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:43:7-39
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:42:13-41
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:42:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:44:4-47:20
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:44:4-47:20
 action#android.intent.action.MAIN
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:45:5-57
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:45:5-57
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:45:13-54
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:45:13-54
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:46:5-65
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:46:5-65
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:46:15-62
-activity#org.grameenfoundation.fdpwaf.ui.DetailActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:51:3-59:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:46:15-62
+activity#org.grameenfoundation.fdpciv.ui.DetailActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:51:3-59:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:52:13-83
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:52:13-83
 	android:windowSoftInputMode
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:54:4-45
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:54:4-45
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:53:4-50
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:53:4-50
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:51:13-74
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:51:13-74
 intent-filter#android.intent.action.DETAIL+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:55:4-58:20
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:55:4-58:20
 action#android.intent.action.DETAIL
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:56:5-59
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:56:5-59
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:56:13-56
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:56:13-56
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:57:5-64
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:57:5-64
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:57:15-61
-activity#org.grameenfoundation.fdpwaf.ui.photoActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:62:3-70:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:57:15-61
+activity#org.grameenfoundation.fdpciv.ui.photoActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:62:3-70:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:63:4-79
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:63:4-79
 	android:windowSoftInputMode
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:65:4-45
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:65:4-45
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:64:4-50
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:64:4-50
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:62:13-73
-activity#org.grameenfoundation.fdpwaf.ui.plotActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:73:3-81:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:62:13-73
+activity#org.grameenfoundation.fdpciv.ui.plotActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:73:3-81:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:74:13-88
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:74:13-88
 	android:windowSoftInputMode
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:76:4-45
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:76:4-45
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:75:4-50
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:75:4-50
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:73:13-72
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:73:13-72
 intent-filter#android.intent.action.PLOT+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:77:13-80:29
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:77:13-80:29
 action#android.intent.action.PLOT
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:78:17-69
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:78:17-69
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:78:25-66
-activity#org.grameenfoundation.fdpwaf.ui.fdpActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:84:3-91:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:78:25-66
+activity#org.grameenfoundation.fdpciv.ui.fdpActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:84:3-91:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:85:13-86
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:85:13-86
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:86:4-50
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:86:4-50
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:84:13-71
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:84:13-71
 intent-filter#android.intent.action.FDP+android.intent.category.DEFAULT
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:87:4-90:20
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:87:4-90:20
 action#android.intent.action.FDP
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:88:5-56
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:88:5-56
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:88:13-53
-activity#org.grameenfoundation.fdpwaf.ui.YearDetailActivity
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:94:3-101:14
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:88:13-53
+activity#org.grameenfoundation.fdpciv.ui.YearDetailActivity
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:94:3-101:14
 	android:parentActivityName
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:96:13-85
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:96:13-85
 	android:configChanges
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:95:4-50
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:95:4-50
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:94:13-78
-service#org.grameenfoundation.fdpwaf.sync.ContactSyncService
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:104:3-112:13
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:94:13-78
+service#org.grameenfoundation.fdpciv.sync.ContactSyncService
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:104:3-112:13
 	android:process
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:106:4-27
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:106:4-27
 	android:exported
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:105:4-27
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:105:4-27
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:104:12-79
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:104:12-79
 intent-filter#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:107:4-109:20
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:107:4-109:20
 action#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:108:5-57
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:108:5-57
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:108:13-55
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:108:13-55
 meta-data#android.content.SyncAdapter
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:110:4-111:51
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:110:4-111:51
 	android:resource
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:111:5-48
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:111:5-48
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:110:15-57
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:110:15-57
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:117:3-119:60
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:117:3-119:60
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\julian\.android\build-cache\cc06c9c112be710c37ccbc3adf45e8db13552599\output\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:119:4-57
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:119:4-57
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:118:4-49
-permission#org.grameenfoundation.fdpwaf.C2D_MESSAGE
-ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:127:5-128:41
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:118:4-49
+permission#org.grameenfoundation.fdpciv.C2D_MESSAGE
+ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:127:5-128:41
 	android:protectionLevel
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:128:3-38
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:128:3-38
 	android:name
-		ADDED from C:\Users\julian\Desktop\fdp - waf\fdp\AndroidManifest.xml:127:17-72
+		ADDED from C:\Users\julian\Desktop\fdp - civ\fdp\AndroidManifest.xml:127:17-72
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
-ADDED from [fdp - waf.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:9-104
+ADDED from [fdp - civ.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:9-104
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:19-101
+		ADDED from [fdp - civ.forcedroid.libs:SmartStore:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SmartStore\build\intermediates\bundles\default\AndroidManifest.xml:14:19-101
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-79
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:22-76
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:11:22-76
 uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:5-80
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:22-77
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:12:22-77
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:5-71
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:5-71
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:22-68
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:13:22-68
 uses-permission#android.permission.MANAGE_ACCOUNTS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:5-74
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:5-74
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:22-71
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:15:22-71
 uses-permission#android.permission.USE_CREDENTIALS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:5-74
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:5-74
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:22-71
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:16:22-71
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:5-68
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:5-68
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:22-65
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:17:22-65
 uses-permission#android.permission.GET_TASKS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:5-68
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:5-68
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:22-65
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:18:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:5-82
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:5-82
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:22-79
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:19:22-79
 uses-permission-sdk-23
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:5-81
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:29-78
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:21:29-78
 meta-data#android.content.APP_RESTRICTIONS
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:26:9-28:56
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:26:9-28:56
 	android:resource
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:28:13-53
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:28:13-53
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:27:13-60
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:27:13-60
 service#com.salesforce.androidsdk.auth.AuthenticatorService
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:31:9-41:19
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:31:9-41:19
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:33:13-36
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:33:13-36
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:32:13-79
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:32:13-79
 intent-filter#android.accounts.AccountAuthenticator
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:34:13-36:29
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:34:13-36:29
 action#android.accounts.AccountAuthenticator
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:17-80
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:17-80
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:25-77
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:35:25-77
 meta-data#android.accounts.AccountAuthenticator
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:38:13-40:57
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:38:13-40:57
 	android:resource
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:40:17-54
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:40:17-54
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:39:17-69
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:39:17-69
 activity#com.salesforce.androidsdk.ui.LoginActivity
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:44:9-46:67
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:44:9-46:67
 	android:theme
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:46:13-64
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:46:13-64
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:45:13-70
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:45:13-70
 activity#com.salesforce.androidsdk.ui.PasscodeActivity
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:49:9-51:67
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:49:9-51:67
 	android:theme
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:51:13-64
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:51:13-64
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:50:13-73
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:50:13-73
 activity#com.salesforce.androidsdk.ui.ManageSpaceActivity
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:54:9-57:67
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:54:9-57:67
 	android:excludeFromRecents
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:56:13-46
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:56:13-46
 	android:theme
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:57:13-64
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:57:13-64
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:55:13-76
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:55:13-76
 activity#com.salesforce.androidsdk.ui.ServerPickerActivity
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:60:9-63:67
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:60:9-63:67
 	android:excludeFromRecents
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:62:13-46
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:62:13-46
 	android:theme
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:63:13-64
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:63:13-64
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:61:13-77
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:61:13-77
 activity#com.salesforce.androidsdk.ui.AccountSwitcherActivity
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:66:9-69:67
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:66:9-69:67
 	android:excludeFromRecents
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:68:13-46
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:68:13-46
 	android:theme
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:69:13-64
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:69:13-64
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:67:13-80
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:67:13-80
 receiver#com.salesforce.androidsdk.push.PushBroadcastReceiver
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:75:9-89:20
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:75:9-89:20
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:77:13-36
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:77:13-36
 	android:permission
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:78:13-73
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:78:13-73
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:76:13-80
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:76:13-80
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:79:13-83:29
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:79:13-83:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:17-81
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:17-81
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:25-78
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:80:25-78
 category#${applicationId}
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:17-61
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:17-61
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:27-58
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:82:27-58
 intent-filter#${applicationId}+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:84:13-88:29
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:84:13-88:29
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:17-86
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:17-86
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:25-83
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:85:25-83
 receiver#com.salesforce.androidsdk.push.PushService$RetryRegistrationAlarmReceiver
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:90:9-92:40
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:90:9-92:40
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:92:13-37
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:92:13-37
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:91:13-101
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:91:13-101
 receiver#com.salesforce.androidsdk.push.PushService$SFDCRegistrationRetryAlarmReceiver
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:93:9-95:40
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:93:9-95:40
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:95:13-37
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:94:13-105
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:94:13-105
 receiver#com.salesforce.androidsdk.push.PushService$UnregisterRetryAlarmReceiver
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:96:9-98:40
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:96:9-98:40
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:98:13-37
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:98:13-37
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:97:13-99
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:97:13-99
 service#com.salesforce.androidsdk.push.PushService
-ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:100:9-102:40
+ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:100:9-102:40
 	android:exported
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:102:13-37
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from [fdp - waf.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - waf\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:101:13-70
+		ADDED from [fdp - civ.forcedroid.libs:SalesforceSDK:unspecified] C:\Users\julian\Desktop\fdp - civ\forcedroid\libs\SalesforceSDK\build\intermediates\bundles\default\AndroidManifest.xml:101:13-70

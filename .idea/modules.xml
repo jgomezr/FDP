@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/forcedroid/libs/SmartStore/SmartStore.iml" filepath="$PROJECT_DIR$/forcedroid/libs/SmartStore/SmartStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/forcedroid/libs/SmartSync/SmartSync.iml" filepath="$PROJECT_DIR$/forcedroid/libs/SmartSync/SmartSync.iml" />
       <module fileurl="file://$PROJECT_DIR$/fdp/fdp.iml" filepath="$PROJECT_DIR$/fdp/fdp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fdp - waf.iml" filepath="$PROJECT_DIR$/fdp - waf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fdp - civ.iml" filepath="$PROJECT_DIR$/fdp - civ.iml" />
       <module fileurl="file://$PROJECT_DIR$/forcedroid/forcedroid.iml" filepath="$PROJECT_DIR$/forcedroid/forcedroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/forcedroid/libs/libs.iml" filepath="$PROJECT_DIR$/forcedroid/libs/libs.iml" />
     </modules>

@@ -4,8 +4,16 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__icon.png"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__highlight_glare.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__highlight_glare.png"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__ic_refresh_sync_anim0.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__ic_refresh_sync_anim0.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__ic_refresh_sync_anim0.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__ic_refresh_sync_anim0.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__highlight_glare.png",
@@ -14,5 +22,13 @@
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__edit_icon.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__edit_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__icon.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__icon.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SmartSync\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\sf__edit_icon.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable-mdpi-v4\\sf__edit_icon.png"
     }
 ]

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\fdp.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout-land\\fdp.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\main.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout-land\\main.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\plot.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\plot.xml"
     },
@@ -12,11 +20,23 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\main.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\detail.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout-land\\detail.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\fdp.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\fdp.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\detail.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout-land\\detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\plot.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout-land\\plot.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout-land\\yeardetail.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout-land\\yeardetail.xml"
     }
 ]

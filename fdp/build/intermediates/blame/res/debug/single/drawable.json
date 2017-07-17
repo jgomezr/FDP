@@ -1,19 +1,71 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_refresh.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_refresh.png"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\grameen.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\grameen.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sync_local.jpeg",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\sync_local.jpeg"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\info.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\info.png"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_save.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_save.png"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_refresh.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ic_action_refresh.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ii.png",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ii.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_back.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ic_action_back.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sync_success.jpeg",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\sync_success.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_add_person.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ic_action_add_person.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\grameen.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\grameen.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sync_local.jpeg",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\sync_local.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__header_bg.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__header_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_save.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ic_action_save.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\info.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\info.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_refresh.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__progress_spinner.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__progress_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_save.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_save.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__toolbar_background.xml",
@@ -24,28 +76,28 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_add_person.png"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\ic_action_search.png"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__toolbar_background.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__toolbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ii.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ii.png"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\drawable\\ic_action_search.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sync_success.jpeg",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\sync_success.jpeg"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\grameen.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\grameen.png"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__progress_spinner.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__progress_spinner.xml"
     },
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sync_local.jpeg",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\drawable\\sync_local.jpeg"
-    },
-    {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__header_bg.png",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__header_bg.png"
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\sf__header_bg.png",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\drawable\\sf__header_bg.png"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_back.png",

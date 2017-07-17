@@ -288,61 +288,61 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot1"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot2"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot3"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot4"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot5"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot6"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot7"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot8"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot9"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot10"
-                    android:name="org.grameenfoundation.fdpwaf.ui.plotFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.plotFragment"/>
 
             </LinearLayout>
 
