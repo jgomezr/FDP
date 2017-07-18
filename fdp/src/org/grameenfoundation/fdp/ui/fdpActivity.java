@@ -1344,7 +1344,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition1().equals("B")|| (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 1+")||sObject.getFarmCondition1().equals("B")|| (Integer.parseInt(sObject.getPlot1Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
                             if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Ya")) {
@@ -1479,7 +1479,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else{
                     //main intervention
-                    if (sObject.getFarmCondition2().equals("B") || (Integer.parseInt(sObject.getPlot2Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 2+")||sObject.getFarmCondition2().equals("B") || (Integer.parseInt(sObject.getPlot2Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
                             if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Ya")) {
@@ -1614,7 +1614,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition3().equals("B") || (Integer.parseInt(sObject.getPlot3Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 3+")||sObject.getFarmCondition3().equals("B") || (Integer.parseInt(sObject.getPlot3Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
                             if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Ya")) {
@@ -1749,7 +1749,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition4().equals("B") || (Integer.parseInt(sObject.getPlot4Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 4+")||sObject.getFarmCondition4().equals("B") || (Integer.parseInt(sObject.getPlot4Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
                             if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Ya")) {
@@ -1883,7 +1883,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition5().equals("B") || (Integer.parseInt(sObject.getPlot5Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 5+")||sObject.getFarmCondition5().equals("B") || (Integer.parseInt(sObject.getPlot5Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
                             if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Ya")) {
@@ -2016,7 +2016,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition6().equals("B") || (Integer.parseInt(sObject.getPlot6Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 6+")||sObject.getFarmCondition6().equals("B") || (Integer.parseInt(sObject.getPlot6Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
                             if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Ya")) {
@@ -2150,7 +2150,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition7().equals("B") || (Integer.parseInt(sObject.getPlot7Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 7+")||sObject.getFarmCondition7().equals("B") || (Integer.parseInt(sObject.getPlot7Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
                             if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Ya")) {
@@ -2283,7 +2283,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition8().equals("B") || (Integer.parseInt(sObject.getPlot8Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 8+")||sObject.getFarmCondition8().equals("B") || (Integer.parseInt(sObject.getPlot8Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
                             if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Ya")) {
@@ -2417,7 +2417,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition9().equals("B") || (Integer.parseInt(sObject.getPlot9Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 9+")||sObject.getFarmCondition9().equals("B") || (Integer.parseInt(sObject.getPlot9Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
                             if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Ya")) {
@@ -2550,7 +2550,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }
                 }else {
                     //main intervention
-                    if (sObject.getFarmCondition10().equals("B") || (Integer.parseInt(sObject.getPlot10Age()) > 25)) {
+                    if (sObject.getReasonNotAgreed().contains("+Change Grafting for Replanting Plot 10+")||sObject.getFarmCondition10().equals("B") || (Integer.parseInt(sObject.getPlot10Age()) > 25)) {
                         //Replant
                         if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
                             if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Ya")) {
