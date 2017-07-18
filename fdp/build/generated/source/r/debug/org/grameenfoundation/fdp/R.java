@@ -332,8 +332,8 @@ containing a value of this type.
         public static final int action_refresh=0x7f0d015a;
         public static final int action_search=0x7f0d0158;
         public static final int action_switch_user=0x7f0d015b;
-        public static final int additionalCrops_field=0x7f0d0065;
-        public static final int aditionalCrops_Layout=0x7f0d0064;
+        public static final int additionalCrops_field=0x7f0d005e;
+        public static final int aditionalCrops_Layout=0x7f0d005d;
         public static final int adjust_height=0x7f0d0000;
         public static final int adjust_width=0x7f0d0001;
         public static final int amountLoan_Layout=0x7f0d0040;
@@ -352,7 +352,7 @@ containing a value of this type.
         public static final int change=0x7f0d00c3;
         public static final int childrenInSchool=0x7f0d0020;
         public static final int childrenUnder=0x7f0d001e;
-        public static final int cocoaArea_field=0x7f0d0062;
+        public static final int cocoaArea_field=0x7f0d0064;
         public static final int cocoaTreesP_field=0x7f0d0106;
         public static final int comments=0x7f0d00f4;
         public static final int costY0P=0x7f0d00cd;
@@ -363,7 +363,7 @@ containing a value of this type.
         public static final int costY5P=0x7f0d00e6;
         public static final int costY6P=0x7f0d00eb;
         public static final int costY7P=0x7f0d00f0;
-        public static final int cultivationArea_field=0x7f0d0061;
+        public static final int cultivationArea_field=0x7f0d0063;
         public static final int debilitationP_field=0x7f0d0109;
         public static final int dependEconomically=0x7f0d0025;
         public static final int drainageLabelP_field=0x7f0d00c6;
@@ -378,9 +378,9 @@ containing a value of this type.
         public static final int familyMembers=0x7f0d0021;
         public static final int familyPaidWork_Field=0x7f0d0033;
         public static final int familyPhoto=0x7f0d0023;
-        public static final int farmAge_field=0x7f0d005e;
-        public static final int farmArea_field=0x7f0d0060;
-        public static final int farmCertifications_field=0x7f0d005f;
+        public static final int farmAge_field=0x7f0d0060;
+        public static final int farmArea_field=0x7f0d0062;
+        public static final int farmCertifications_field=0x7f0d0061;
         public static final int farmConditionP_field=0x7f0d0118;
         public static final int farmLabor_Layout=0x7f0d0029;
         public static final int farmerAgree_field=0x7f0d00bc;
@@ -464,7 +464,7 @@ containing a value of this type.
         public static final int manDaysY6P=0x7f0d00ec;
         public static final int manDaysY7P=0x7f0d00f1;
         public static final int manage_space_layout=0x7f0d0136;
-        public static final int mapPhoto=0x7f0d005d;
+        public static final int mapPhoto=0x7f0d005f;
         public static final int mbMoney=0x7f0d004e;
         public static final int mobileMoney_field=0x7f0d004f;
         public static final int moneyBack_Field=0x7f0d0043;
@@ -581,7 +581,7 @@ containing a value of this type.
         public static final int receivesFarmPayment_Field=0x7f0d0028;
         public static final int relation_mars_field=0x7f0d0014;
         public static final int renovated_field=0x7f0d0102;
-        public static final int renovationArea_field=0x7f0d0063;
+        public static final int renovationArea_field=0x7f0d0065;
         public static final int replantLabelP_field=0x7f0d00c0;
         public static final int root=0x7f0d0009;
         public static final int savings_field=0x7f0d00ba;

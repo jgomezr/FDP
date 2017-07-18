@@ -209,8 +209,8 @@ int id action_add 0x7f0d0159
 int id action_refresh 0x7f0d015a
 int id action_search 0x7f0d0158
 int id action_switch_user 0x7f0d015b
-int id additionalCrops_field 0x7f0d0065
-int id aditionalCrops_Layout 0x7f0d0064
+int id additionalCrops_field 0x7f0d005e
+int id aditionalCrops_Layout 0x7f0d005d
 int id adjust_height 0x7f0d0000
 int id adjust_width 0x7f0d0001
 int id amountLoan_Layout 0x7f0d0040
@@ -229,7 +229,7 @@ int id center 0x7f0d0006
 int id change 0x7f0d00c3
 int id childrenInSchool 0x7f0d0020
 int id childrenUnder 0x7f0d001e
-int id cocoaArea_field 0x7f0d0062
+int id cocoaArea_field 0x7f0d0064
 int id cocoaTreesP_field 0x7f0d0106
 int id comments 0x7f0d00f4
 int id costY0P 0x7f0d00cd
@@ -240,7 +240,7 @@ int id costY4P 0x7f0d00e1
 int id costY5P 0x7f0d00e6
 int id costY6P 0x7f0d00eb
 int id costY7P 0x7f0d00f0
-int id cultivationArea_field 0x7f0d0061
+int id cultivationArea_field 0x7f0d0063
 int id debilitationP_field 0x7f0d0109
 int id dependEconomically 0x7f0d0025
 int id drainageLabelP_field 0x7f0d00c6
@@ -255,9 +255,9 @@ int id familyIncome_Layout 0x7f0d0034
 int id familyMembers 0x7f0d0021
 int id familyPaidWork_Field 0x7f0d0033
 int id familyPhoto 0x7f0d0023
-int id farmAge_field 0x7f0d005e
-int id farmArea_field 0x7f0d0060
-int id farmCertifications_field 0x7f0d005f
+int id farmAge_field 0x7f0d0060
+int id farmArea_field 0x7f0d0062
+int id farmCertifications_field 0x7f0d0061
 int id farmConditionP_field 0x7f0d0118
 int id farmLabor_Layout 0x7f0d0029
 int id farmerAgree_field 0x7f0d00bc
@@ -341,7 +341,7 @@ int id manDaysY5P 0x7f0d00e7
 int id manDaysY6P 0x7f0d00ec
 int id manDaysY7P 0x7f0d00f1
 int id manage_space_layout 0x7f0d0136
-int id mapPhoto 0x7f0d005d
+int id mapPhoto 0x7f0d005f
 int id mbMoney 0x7f0d004e
 int id mobileMoney_field 0x7f0d004f
 int id moneyBack_Field 0x7f0d0043
@@ -458,7 +458,7 @@ int id reason_field 0x7f0d0103
 int id receivesFarmPayment_Field 0x7f0d0028
 int id relation_mars_field 0x7f0d0014
 int id renovated_field 0x7f0d0102
-int id renovationArea_field 0x7f0d0063
+int id renovationArea_field 0x7f0d0065
 int id replantLabelP_field 0x7f0d00c0
 int id root 0x7f0d0009
 int id savings_field 0x7f0d00ba

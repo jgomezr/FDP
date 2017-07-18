@@ -774,7 +774,7 @@
     <string name="childrenInSchool">C5. Jumlah anak yang berumur 5 sampai 17 tahun yang bersekolah</string>
     <string name="childrenUnder">C4. Jumlah anak yang berumur 5 sampai 17 tahun</string>
     <string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string>
-    <string name="cocoaArea">36. Jumlah tanah yang digunakan untuk kakao</string>
+    <string name="cocoaArea">36. Total luas lahan yang digunakan untuk kakao</string>
     <string name="cocoaTrees">44. Jarak tanam</string>
     <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> perlu pembaruan aplikasi Android Wear."</string>
     <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> tidak akan berjalan jika aplikasi Android Wear tidak diperbarui."</string>
@@ -808,7 +808,7 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"Buka di ponsel"</string>
     <string name="costInvest">Pengeluaran pemeliharaan/investasi</string>
     <string name="costLabor">Biaya pekerja</string>
-    <string name="cultivationArea">"35. Jumlah tanah yang digunakan untuk berkebun atau bertani "</string>
+    <string name="cultivationArea">"35. Total luas lahan yang digunakan untuk berkebun atau bertani "</string>
     <string name="debilitationDisease">47. Penyakit yang menyebabkan produksi menurun secara significan</string>
     <string name="dec">Desember</string>
     <string name="delete">Hapus</string>
@@ -825,8 +825,8 @@
     <string name="familyMembers">13. Jumlah keluarga yang hidup bersama termasuk petani</string>
     <string name="familyPaidWork">18. Anggota keluarga atau orang lain yang berkontribusi terhadap biaya hidup keluarga.</string>
     <string name="familyPhoto">Mengambil photo petani dan keluarga</string>
-    <string name="farmAge">32.  Tahun sejak kebun ada</string>
-    <string name="farmArea">34. Jumlah tanah yang dimiliki atau yang bisa digunakan (Ha)</string>
+    <string name="farmAge">32.  Tahun sejak kebun ada (tahun berapa pertama kali ditanami tanamna )</string>
+    <string name="farmArea">34. Total luas lahan tanah yang dimiliki atau yang bisa digunakan (Ha)</string>
     <string name="farmCertifications">33. Apakah kebun/petani bergabung dalam program sertifikasi (RA/UTZ)</string>
     <string name="farmCondition">Kondisi kebun</string>
     <string name="farmerGroup">14. Nama Kelompok Tani</string>
@@ -851,7 +851,7 @@
     <string name="giveLoan">20.  Apakah petani atau keluarga memberikan pinjaman ke orang lain diatas 5 juta</string>
     <string name="gps">7. GPS Rumah</string>
     <string name="graft">Sambungan</string>
-    <string name="grossCocoaLY">30. Pendapatan kotor dari kakao ditahun lalu (panen puncak dan panen tidak puncak)</string>
+    <string name="grossCocoaLY">30. Pendapatan kotor kakao tahun sebelummnya (panen puncak dan panen tidak puncak)</string>
     <string name="harvesting">51. Panen</string>
     <string name="haveCredit">19. Apakah petani atau keluarga petani mengambil pinjaman diatas 5 juta dan apakah masih melakukan pembayaran</string>
     <string name="haveOtherCrops">31. Apakah petani memiliki tanaman lain</string>
@@ -867,7 +867,7 @@
     <string name="labor">Pekerja</string>
     <string name="lime">Kapur</string>
     <string name="limeNeed">57. kalpur yang dibutuhkan</string>
-    <string name="livingExpenses">22. Total pengeluaran hidup pertahun</string>
+    <string name="livingExpenses">22. Total pengeluaran biaya hidup pertahun</string>
     <string name="logout_button">Keluar</string>
     <string name="logout_title">Keluar?</string>
     <string name="main_activity_title">List Petani</string>
@@ -919,7 +919,7 @@
     <string name="ph">43.PH tanah</string>
     <string name="phone">9. No Telephone/HP</string>
     <string name="photoSuccess">Foto diambil dengan sukses</string>
-    <string name="plannedInvestments">24. Apakah ada perencanaan untuk investasi diluar kakao</string>
+    <string name="plannedInvestments">24. Apakah ada perencanaan untuk investasi selain kebun kakao, berapa biaya yang disiapkan untuk investasi tersebut.</string>
     <string name="plantingMaterial">44. Bahan tanam</string>
     <string name="plotActivityTitle">Informasi Plot</string>
     <string name="plotAge">45. Umur tanaman</string>
@@ -942,7 +942,7 @@
     <string name="receivesFarmPayment">17. Petani atau anggota keluarga yang menerima upah dari pekerjaan lain diluar bertani dan berkebun</string>
     <string name="renovated">Apakah plot ini telah direnovasi</string>
     <string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string>
-    <string name="renovationArea">37. Jumlah kakao yang sudah direnovasi (re-planting atau sambung samping) tetapi belum berproduksi secara maksimal</string>
+    <string name="renovationArea">37. Luas lahan yang ditanami kakao dan sudah  direnovasi (re-planting atau sambung samping) tetapi belum berproduksi secara maksimal</string>
     <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
     <string name="replant">Penanamman kembali</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>

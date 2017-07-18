@@ -1371,6 +1371,29 @@
                     android:layout_weight=".50"
                     android:inputType="number" />
             </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/aditionalCrops_Layout"
+                android:visibility="gone">
+
+                <TextView android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/additionalCrops"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:maxLines="2"
+                    android:lines="2"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <EditText android:id="@+id/additionalCrops_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    style="@style/FarmerDetail.ParentView.EditText"
+                    android:inputType="textNoSuggestions" />
+            </LinearLayout>
 
             <TextView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1545,29 +1568,7 @@
                     android:lines="2"/>
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/aditionalCrops_Layout"
-                android:visibility="gone">
 
-                <TextView android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/additionalCrops"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
-                    android:maxLines="2"
-                    android:lines="2"
-                    style="@style/FarmerDetail.ParentView.TextView" />
-
-                <EditText android:id="@+id/additionalCrops_field"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight=".50"
-                    style="@style/FarmerDetail.ParentView.EditText"
-                    android:inputType="textNoSuggestions" />
-            </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
