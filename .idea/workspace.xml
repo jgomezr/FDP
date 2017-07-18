@@ -61,12 +61,10 @@
     <bookmark url="file://$PROJECT_DIR$/fdp/res/layout/fdp.xml" line="284" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp-release.apk" afterPath="$PROJECT_DIR$/fdp-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="estability fixes, all requirements for v1.54">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/fdp-fdp.iml" afterPath="$PROJECT_DIR$/fdp/fdp-fdp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
     </list>
     <ignored path="fdp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -5849,7 +5847,6 @@
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartSync/build.gradle" />
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartStore/build.gradle" />
         <option value="$PROJECT_DIR$/fdp/res/layout/photo.xml" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" />
         <option value="$PROJECT_DIR$/fdp/res/layout/fdp_fragment.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout/fdp.xml" />
@@ -5859,7 +5856,6 @@
         <option value="$PROJECT_DIR$/fdp/res/layout-land/detail.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/photoActivity.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/YearDetailActivity.java" />
-        <option value="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java" />
         <option value="$PROJECT_DIR$/fdp/res/values/costs.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/loaders/ContactListLoader.java" />
@@ -5871,13 +5867,15 @@
         <option value="$PROJECT_DIR$/fdp/res/layout/detail.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout/plot.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
+        <option value="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -5910,7 +5908,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -5923,7 +5921,88 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdp-fdp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -6417,13 +6496,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466615258775</updated>
     </task>
-    <task id="LOCAL-00008" summary="Plot Screen Modifications and add limits and validations">
-      <created>1479953930987</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1479953931006</updated>
-    </task>
     <task id="LOCAL-00009" summary="Plot Screen Modifications and add limits and validations">
       <created>1480106149098</created>
       <option name="number" value="00009" />
@@ -6760,7 +6832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498778188772</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="estability fixes, all requirements for v1.54">
+      <created>1500329837592</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1500329837592</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6793,7 +6872,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -6809,7 +6888,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34641638" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20726173" sideWeight="0.48700175" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20713201" sideWeight="0.48700175" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.49317408" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5068259" order="10" side_tool="false" content_ui="tabs" />
@@ -6901,7 +6980,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/consulteca" />
     </ignored-roots>
-    <MESSAGE value="GPS improvements" />
     <MESSAGE value="improvements" />
     <MESSAGE value="Cost improvements" />
     <MESSAGE value="Wording improvements some changes on fields base on FDP Core test" />
@@ -6926,7 +7004,8 @@
     <MESSAGE value="Cost update" />
     <MESSAGE value="some improvements in photo and year detail activities" />
     <MESSAGE value="Improvements in wording and tree density fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements in wording and tree density fixes" />
+    <MESSAGE value="estability fixes, all requirements for v1.54" />
+    <option name="LAST_COMMIT_MESSAGE" value="estability fixes, all requirements for v1.54" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -7090,13 +7169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout/fdp_fragment.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -7128,13 +7200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout-land/detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -7156,24 +7221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-369">
           <caret line="125" column="17" selection-start-line="125" selection-start-column="17" selection-end-line="125" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="899" column="71" selection-start-line="899" selection-start-column="55" selection-end-line="899" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -7248,13 +7295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="1356" column="96" selection-start-line="1356" selection-start-column="96" selection-end-line="1356" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/layout/detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -7314,6 +7354,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="1976" column="56" selection-start-line="1976" selection-start-column="56" selection-end-line="1976" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="1083" column="94" selection-start-line="1083" selection-start-column="85" selection-end-line="1083" selection-end-column="94" />
+          <folding>
+            <element signature="e#95945#95998#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1720">
+          <caret line="1723" column="19" selection-start-line="1723" selection-start-column="18" selection-end-line="1723" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="7434" column="46" selection-start-line="7434" selection-start-column="45" selection-end-line="7434" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
