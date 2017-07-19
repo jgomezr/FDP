@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"><b>FDP CIV</b></string>
+    <string name="farmerProfile">PROFIL DE LA FAMILLE DU PLANTEUR</string>
+    <string name="full_name">1. Nom du planteur:</string>
+    <string name="farmer_code">2. Code du planteur ou Code de la plantation:</string>
+    <string name="birthday">3. Date de naissance du planteur (Année):</string>
+    <string name="gender">4. Sexe:</string>
+    <string name="accountType">C17. Quel type de compte?</string>
+    <string name="action_add">Ajouter planteur</string>
+    <string name="action_refresh">Synchroniser</string>
+    <string name="action_search">Rechercher</string>
+    <string name="additionalCrops">C21. Avez-vous d’autres cultures?</string>
+    <string name="additionalIntervention">INTERVENTION SUPPLÉMENTAIRE</string>
+    <string name="agree">D\'accord sur les recommandations</string>
+    <string name="amountOfLoan">C15. Combien vous rembourse-t-on par paiement?</string>
+    <string name="ao">OBSERVATIONS D\'ADOPTION</string>
+    <string name="aoResults">RÉSULTATS D\'OBSERVATION D\'ADOPTION</string>
+    <string name="apr">Avril</string>
+    <string name="area">Superficie</string>
+    <string name="areaEmpty">Votre superficie de parcelles ne peut pas être vide</string>
+    <string name="areaHiger">Vos superficie ne peuvent pas être plus élevées que votre superficie totale de propriété foncière</string>
+    <string name="areaHigher">Votre aire de parcelles ne peut pas être supérieure à la zone Cocoa sur la ferme, réparez-la avant de continuer</string>
+    <string name="areasInco">Vos superficie présentent des incohérences pour le réparer avant de continuer</string>
+    <string name="aug">Août</string>
+    <string name="averageCocoaPrice">29. Quel est le prix d’achat bord champ du kg de cacao l’année dernière ?</string>
+    <string name="back">Arrière</string>
+    <string name="bag">(Sac):</string>
+    <string name="bagClarify">*sac= 60Kg sac</string>
+    <string name="bankAccount">26. Le planteur a/ possède-t-il un compte bancaire?</string>
+    <string name="calcAO">Calculer</string>
+    <string name="cancel">Non</string>
+    <string name="cannotBeEmpty">Le nom du planteur et le code du paysan ne peuvent pas être vides ou le nombre de parcelles doit être supérieur à 0!</string>
+    <string name="changeR">Changement de Replanting</string>
+    <string name="childrenInSchool">C6. Nombre d’enfants ayant un âge compris entre 5 et 17 ans scolarisés/fréquentant une école</string>
+    <string name="childrenUnder">C5. Nombre d’enfants ayant un âge compris entre 5 et 17 ans</string>
+    <string name="childrenVal">Les enfants de 5 à 17 ans ou les enfants inscrits à l\'école ne peuvent pas dépasser le nombre total d\'enfants</string>
+    <string name="cocoaArea">37. Combien d’Ha sont plantées avec du cacao ?</string>
+    <string name="cocoaTrees">45. Distance entre les pieds de cacaoyer/ densité des arbres</string>
+    <string name="costInvest">Coût de maintenance / investissement:</string>
+    <string name="costLabor">Coût de la main d\'oeuvre:</string>
+    <string name="cultivationArea">36. Combien d’hectare(s) est/sont mis en valeur ?</string>
+    <string name="debilitationDisease">48. Maladie handicapante (CSSV)</string>
+    <string name="dec">Décembre</string>
+    <string name="dependEconomically">16. Combien de personnes du ménage y compris le planteur vivent dans la maison et dépendent des revenus de la famille ?</string>
+    <string name="drainageNeed">59. Besoin de drainage</string>
+    <string name="educationExpenses">25. Quel est le montant des dépenses liées à l’éducation pour l’année prochaine (Scolarité, uniformes, livres, internats….)</string>
+    <string name="educational_level">5. Niveau d’etudes</string>
+    <string name="estimatedProduction">42. Estimation de la production en</string>
+    <string name="expensesCocoaLY">30. Quel est le montant total dépensé pour l’achat des intrants de cacao l’année dernière?</string>
+    <string name="extraSoil">Gestion du sol supplémentaire</string>
+    <string name="familyLess">Le nombre de membres de la famille ne peut être inférieur au nombre d\'enfants</string>
+    <string name="familyMembers">13. Combien de membres du ménage y compris le planteur vivent ensemble</string>
+    <string name="familyPaidWork">18. Les membres du ménage ou d’autres personnes contribuent-ils au budget du ménage/apportent-ils de l’argent au ménage?</string>
+    <string name="familyPhoto">Faire une photo de la famille du planteur</string>
+    <string name="farmAge">33. Année de création de la plantation.</string>
+    <string name="farmCertifications">34. Labels de certifications</string>
+    <string name="farmArea">35. Quelle est la superficie totale (Ha) que vous possédez?</string>
+    <string name="farmCondition">Condition de la plantation</string>
+    <string name="farmerGroup">14. Coopérative du planteur.</string>
+    <string name="farmingProfile">PROFILE ÉCONOMIQUE DE LA PLANTATION</string>
+    <string name="fdpActivityTitle">Plan de développement agricole</string>
+    <string name="feb">Février</string>
+    <string name="fertilizerApplication">57. Application de l’engrais</string>
+    <string name="fertilizerFormulation">56. Composition de l’engrais</string>
+    <string name="filling">Remplissage</string>
+    <string name="fillingOption">60. Remplacement de pieds morts ou gestion de la densité.</string>
+    <string name="finish">Terminer</string>
+    <string name="fmWorkFarm">15. Combien de membres de la famille (le planteur non compris) travaillent dans la plantation sans etre payés?</string>
+    <string name="foundsNeeded">Investissement dans FDP:</string>
+    <string name="gapLb">BPAS:</string>
+    <string name="gaps">Entretien (BPAS)</string>
+    <string name="geneticLb">Génétique du matériel végétal</string>
+    <string name="getLocation">Obtenir un emplacement</string>
+    <string name="giveLoan">20. Le ménage a-t-il fait/donné crédit à quelqu’un?</string>
+    <string name="gps">7. Coordonnees GPS du domicile du planteur</string>
+    <string name="graft">Greffer</string>
+    <string name="grossCocoaLY">31. Quel montant/ combien la culture du cacao vous a rapporté l’année dernière?  (Année signifie les deux périodes, la campagne principale et intermédiaire)</string>
+    <string name="harvesting">52. Récolte</string>
+    <string name="haveCredit">19. Le ménage a-t-il un prêt qui doit être remboursé?</string>
+    <string name="haveOtherCrops">32. Avez-vous d’autres cultures ?</string>
+    <string name="haveSpouse">11. Le planteur a-t-il une compagne/épouse ?</string>
+    <string name="householdSavings">21. Economies du ménage</string>
+    <string name="howLong">Quand est-ce que l’activité de rénovation a-t-elle été faite?</string>
+    <string name="incomeOtherCrops">C20. Combien vous ont rapporté les autres cultures l’année dernière ?</string>
+    <string name="internalInspection">Inspection interne</string>
+    <string name="investmentLabel">Investissements prévus</string>
+    <string name="jan">Janvier</string>
+    <string name="jul">Juillet</string>
+    <string name="jun">Juin</string>
+    <string name="labor">La main d\'oeuvre</string>
+    <string name="lime">Chaux</string>
+    <string name="limeNeed">58. Besoin en chaux</string>
+    <string name="livingExpenses">22. Combien sont les dépenses annuelles du ménage en nourriture,, eau, électricité, gaz, transport)?</string>
+    <string name="main_activity_title">Liste des planteurs</string>
+    <string name="mapPhoto">Prendre une photo de la carte de la plantation</string>
+    <string name="mar">Mars</string>
+    <string name="may">Mai</string>
+    <string name="measure">27. Unités de mesure</string>
+    <string name="mobileMoney">C18. Le compte du planteur inclut-il un compte mobile money ?</string>
+    <string name="moneyBack">C16. Combien vous rembourse-t-on par an ?</string>
+    <string name="netFamily">Revenu familial net:</string>
+    <string name="netFarming">Total des revenus agricoles:</string>
+    <string name="netOther">Revenu net de toutes les autres sources:</string>
+    <string name="netOtherCrops">Revenu net d\'autres cultures:</string>
+    <string name="netPlotIncome">Bénéfice net de Cocoa:</string>
+    <string name="no_results_found">Aucun résultat trouvé</string>
+    <string name="nov">Novembre</string>
+    <string name="numberChildren">12. Nombre d’enfants</string>
+    <string name="numberPlots">39. Nombre de parcelles</string>
+    <string name="numberSpouses">C1. Nombre de compagne ou de l’épouse:</string>
+    <string name="oct">Octobre</string>
+    <string name="organicMatter">55. Matières organiques</string>
+    <string name="otherExpenses">23. Combien sont les autres dépenses annuelles du ménage, dépenses scolaires non comprises?</string>
+    <string name="p1">Clairière</string>
+    <string name="p10">Travaux de greffage / élimination du plastique</string>
+    <string name="p11">Pollarding / Assainissement</string>
+    <string name="p12">Désherbage</string>
+    <string name="p13">Cercle de désherbage</string>
+    <string name="p14">Engrais</string>
+    <string name="p15">Chaux</string>
+    <string name="p16">Contrôle P et D</string>
+    <string name="p17">la taille Maint</string>
+    <string name="p18">Taille de la forme</string>
+    <string name="p19">Entretien</string>
+    <string name="p2">Drainage</string>
+    <string name="p20">Réduire les branches des arbres mères</string>
+    <string name="p21">Assainissement</string>
+    <string name="p22">Taille de la forme</string>
+    <string name="p23">Plantation d\'ombre</string>
+    <string name="p24">Récolte</string>
+    <string name="p3">Doublure de coca et d\'ombre</string>
+    <string name="p4">Plantation de cacao</string>
+    <string name="p5">Reconstituer ou inter-planter du cacao</string>
+    <string name="p6">Ombre temporaire</string>
+    <string name="p7">Plantation d\'ombre</string>
+    <string name="p8">Éraillage / Assainissement</string>
+    <string name="p9">Engrais</string>
+    <string name="payForCredit">C14. Quel montant remboursez-vous/combien payez-vous chaque Paiement ?</string>
+    <string name="payOftenForCredit">C13 Quel est l’échéancier/ la période de remboursement?</string>
+    <string name="pestDiseaseSanitation">50. Insectes, maladies et état sanitaire</string>
+    <string name="ph">43. PH du sol</string>
+    <string name="phone">Numéro de telephone</string>
+    <string name="plannedInvestments">24. Le ménage a t-il un/des projet(s) d’investissement? Si oui, combien a-t-il identifié pour la réalisation du/des projet(s)?</string>
+    <string name="plantingMaterial">44. Matériel végétal</string>
+    <string name="plotActivityTitle">Informations sur les parcelles</string>
+    <string name="plotAge">46. Age des arbres</string>
+    <string name="plotArea">41. Taille de la parcelle</string>
+    <string name="plotAreaHiger">Votre zone de parcelles ne peut pas être supérieure à la zone de cacao dans la ferme</string>
+    <string name="plotGPS">40. GPS de la sous parcelle</string>
+    <string name="plotHireLabor">61. Location de main d’oeuvre</string>
+    <string name="plotIncome">Revenus de parcelles:</string>
+    <string name="plotInformation">INFORMATION SUR LES PARCELLES</string>
+    <string name="plotPL">Parcelle P ou P</string>
+    <string name="postalAddress">8. Adresse postale</string>
+    <string name="productionCocoaLY">28. Quel est le prix d’achat bord champ du kg de cacao l’année dernière ?</string>
+    <string name="productionHiger">Votre production estimée est supérieure à celle de l\'année précédente</string>
+    <string name="productionLess">Votre production estimée est inférieure à celle de l\'année précédente</string>
+    <string name="productiveProfile">PROFIL DE PRODUCTION</string>
+    <string name="profitOrLost">Profit ou perte:</string>
+    <string name="pruning">49. Elagage</string>
+    <string name="reason">Quelle activité de rénovation a été faite?</string>
+    <string name="reasonNotAgree">Commentaires:</string>
+    <string name="receivesFarmPayment">17. Est-ce que quelqu’un dans le ménage a une source de revenus provenant d’autres activités ?</string>
+    <string name="renovated">La parcelle a-t-elle été récemment rénovée?</string>
+    <string name="renovatedAreaHiger">Votre taille de parcelle rénovée ne peut pas être supérieure à votre taille de rénovation</string>
+    <string name="renovationArea">38. Sur la parcelle dédiée au cacao, combien ont été déjà réhabilité/rénové ?</string>
+    <string name="renovationHigh">Votre zone de rénovation ne peut pas être supérieure à celle de votre zone de cacao</string>
+    <string name="replant">Replanter</string>
+    <string name="saveContinue">Sauvegarder et continuer</string>
+    <string name="saved">Sauver succès!</string>
+    <string name="savingsLabel">Économies du ménage</string>
+    <string name="sep">Septembre</string>
+    <string name="shadeManagement">Gestion de l’ombrage</string>
+    <string name="socioeconomicProfile">PROFIL SOCIO-ÉCONOMIQUE</string>
+    <string name="soilCondition">54. Conditions du sol</string>
+    <string name="soilFertMngLb">Gestion de la fertilité du sol</string>
+    <string name="sourceCredit">C12. Où avez-vous contracté/obtenu le prêt ?</string>
+    <string name="spouseBirthday">C3. Date de naissance de la compagne/ l’épouse (Année)</string>
+    <string name="spouseEducationalLevel">C4. Niveau d’études de la compagne/ l’épouse</string>
+    <string name="spouseName">C2. Nom de la compagne ou de l’épouse</string>
+    <string name="spousePaidWork">C8. A part le cacao et les autres cultures, la compagne/l’épouse a-t-elle une/d’autre(s) activité(s) qui lui rapporte(nt) de l’argent ?</string>
+    <string name="startYear">Année de début</string>
+    <string name="switch_user_button">Changer d\'utilisateur</string>
+    <string name="takeAgree">D\'accord avec la photo</string>
+    <string name="takePhoto">Prendre une photo</string>
+    <string name="thinning">Éclaircissement</string>
+    <string name="tool1">Cela comprend le travail rémunéré dans d\'autres fermes, une pépinière, d\'autres entreprises ou des services qui apportent de l\'argent dans le ménage des agriculteurs</string>
+    <string name="tool2">Cela comprend le travail rémunéré dans d\'autres fermes, les ventes d\'autres entreprises ou de services pour d\'autres personnes qui apportent de l\'argent dans le ménage</string>
+    <string name="tool3">Cela comprend tout l\'argent qui est disponible pour la famille, à l\'exclusion de celle de l\'agriculteur et du conjoint. L\'argent peut provenir de frères, sœurs, parents ou autres membres de la famille qui vivent à la maison ou qui envoient d\'autres villages, villes ou pays</string>
+    <string name="tool4">Taux de conversion pour humide à sec est 100: 35 ou 35%</string>
+    <string name="tool5">Il s\'agit de frais de scolarité postsecondaire scolaire et / ou au-delà des frais scolaires normaux</string>
+    <string name="tool6">Les dépenses agricoles comprennent toutes les dépenses engagées dans la production, la fermentation, le stockage et la vente de cacao. Veuillez tenir compte de tous les intrants, paiements de main-d\'œuvre, etc.</string>
+    <string name="totalCredit">C11. Quel est le montant total restant à rembourser?</string>
+    <string name="totalExpenses">Total des dépenses familiales:</string>
+    <string name="totalFamilyMembersIncome">C10. Quel est le montant net annuel de la contribution des autres membres du ménage ou autres personnes au budget du ménage?</string>
+    <string name="totalIncome">Revenu total:</string>
+    <string name="totalIncomeLabor">C7. A part le cacao et les autres cultures quel est le gain/revenu net que le planteur obtient d’autres sources par an?</string>
+    <string name="totalSpouseIncome">C9. Quel est le gain/revenu net provenant de l’/des autre(s) activité(s) de la compagne/l’épouse ?</string>
+    <string name="treeHealth">47. Etat de santé des arbres</string>
+    <string name="village">6. Village:</string>
+    <string name="wantAccount">C19. Vous voulez un compte bancaire?</string>
+    <string name="weeding">51. Nettoyage</string>
+    <string name="weight">Poids</string>
+    <string name="year0">Année 0</string>
+    <string name="year1">Année 1</string>
+    <string name="year2">Année 2</string>
+    <string name="year3">Année 3</string>
+    <string name="year4">Année 4</string>
+    <string name="year5">Année 5</string>
+    <string name="year6">Année 6</string>
+    <string name="year7">Année 7</string>
+    <string name="yearDetailActivityTitle">Détail de l\'année</string>
+    <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur est-il membre de la coopérative ou vend-il son cacao à la coopérative ?</string>
+    <string name="yes">Oui</string>
+
+    <String-array name = "creditOften">
+        <Item> Mensuel </ item>
+        <Item> Trimestriel </ item>
+        <Item> Bi chaque année </ item>
+        <Item> Annuellement </ item>
+        <Item> Pas de fréquence définie </ item>
+    </ String-array>
+    <String-array name = "creditOftenQuarter">
+        <Item> Trimestriel </ item>
+        <Item> Mensuel </ item>
+        <Item> Bi chaque année </ item>
+        <Item> Annuellement </ item>
+        <Item> Pas de fréquence définie </ item>
+    </ String-array>
+    <String-array name = "creditOftenbiannual">
+        <Item> Bi chaque année </ item>
+        <Item> Mensuel </ item>
+        <Item> Trimestriel </ item>
+        <Item> Annuellement </ item>
+        <Item> Pas de fréquence définie </ item>
+    </ String-array>
+    <String-array name = "creditOftenNoSet">
+        <Item> Pas de fréquence définie </ item>
+        <Item> Mensuel </ item>
+        <Item> Trimestriel </ item>
+        <Item> Bi chaque année </ item>
+        <Item> Annuellement </ item>
+    </ String-array>
+    <String-array name = "creditOftenAnnual">
+        <Item> Annuellement </ item>
+        <Item> Mensuel </ item>
+        <Item> Trimestriel </ item>
+        <Item> Bi chaque année </ item>
+        <Item> Pas de fréquence définie </ item>
+    </ String-array>
+    <String-array name = "yesNo">
+        <Item> N / A </ item>
+        <Item> Oui </ item>
+        <Item> Non </ item>
+    </ String-array>
+    <String-array name = "yes">
+        <Item> Oui </ item>
+        <Item> Non </ item>
+    </ String-array>
+    <String-array name = "No">
+        <Item> Non </ item>
+        <Item> Oui </ item>
+    </ String-array>
+    <String-array name = "gender">
+        <Item> N / A </ item>
+        <Item> Homme </ item>
+        <Item> Femme </ item>
+    </ String-array>
+    <String-array name = "gender_male">
+        <Item> Homme </ item>
+        <Item> Femme </ item>
+    </ String-array>
+    <String-array name = "gender_female">
+        <Item> Femme </ item>
+        <Item> Homme </ item>
+    </ String-array>
+    <String-array name = "years">
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+
+    <String-array name = "year1">
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year2">
+        <Item> Année 2 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year3">
+        <Item> Année 3 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year4">
+        <Item> Année 4 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year5">
+        <Item> Année 5 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 6 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year6">
+        <Item> Année 6 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 7 </ item>
+    </ String-array>
+    <String-array name = "year7">
+        <Item> Année 7 </ item>
+        <Item> Année 1 </ item>
+        <Item> Année 2 </ item>
+        <Item> Année 3 </ item>
+        <Item> Année 4 </ item>
+        <Item> Année 5 </ item>
+        <Item> Année 6 </ item>
+    </ String-array>
+    <String-array name = "sourceLoan">
+        <Item> Famille </ item>
+        <Item> Amis </ item>
+        <Item> Économies communautaires </ item>
+        <Item> Organisation de microcrédit </ item>
+        <Item> Banque </ item>
+    </ String-array>
+    <String-array name = "sourceLoanFriend">
+        <Item> Amis </ item>
+        <Item> Famille </ item>
+        <Item> Économies communautaires </ item>
+        <Item> Organisation de microcrédit </ item>
+        <Item> Banque </ item>
+    </ String-array>
+    <String-array name = "sourceLoanCommunity">
+        <Item> Économies communautaires </ item>
+        <Item> Famille </ item>
+        <Item> Amis </ item>
+        <Item> Organisation de microcrédit </ item>
+        <Item> Banque </ item>
+    </ String-array>
+    <String-array name = "sourceLoanMicro">
+        <Item> Organisation de microcrédit </ item>
+        <Item> Famille </ item>
+        <Item> Amis </ item>
+        <Item> Économies communautaires </ item>
+        <Item> Banque </ item>
+    </ String-array>
+    <String-array name = "sourceLoanBank">
+        <Item> Banque </ item>
+        <Item> Famille </ item>
+        <Item> Amis </ item>
+        <Item> Économies communautaires </ item>
+        <Item> Organisation de microcrédit </ item>
+    </ String-array>
+    <String-array name = "bank">
+        <Item> NA </ item>
+        <Item> Compte bancaire standard </ item>
+        <Item> Mobile banking </ item>
+        <Item> Micro finance </ item>
+        <Item> Prêt de village </ item>
+        <Item> Autre </ item>
+    </ String-array>
+    <String-array name = "bank1">
+        <Item> Compte bancaire standard </ item>
+        <Item> Mobile banking </ item>
+        <Item> Micro finance </ item>
+        <Item> Prêt de village </ item>
+        <Item> Autre </ item>
+    </ String-array>
+    <String-array name = "bank2">
+        <Item> Mobile banking </ item>
+        <Item> Compte bancaire standard </ item>
+        <Item> Micro finance </ item>
+        <Item> Prêt de village </ item>
+        <Item> Autre </ item>
+    </ String-array>
+    <String-array name = "bank3">
+        <Item> Micro finance </ item>
+        <Item> Compte bancaire standard </ item>
+        <Item> Mobile banking </ item>
+        <Item> Prêt de village </ item>
+        <Item> Autre </ item>
+    </ String-array>
+    <String-array name = "bank4">
+        <Item> Prêt de village </ item>
+        <Item> Compte bancaire standard </ item>
+        <Item> Mobile banking </ item>
+        <Item> Micro finance </ item>
+        <Item> Autre </ item>
+    </ String-array>
+    <String-array name = "bank5">
+        <Item> Autre </ item>
+        <Item> Compte bancaire standard </ item>
+        <Item> Mobile banking </ item>
+        <Item> Micro finance </ item>
+        <Item> Prêt de village </ item>
+    </ String-array>
+
+    <String-array name = "yesNoHire">
+        <Item> N / A </ item>
+        <Item> Oui </ item>
+        <Item> Saisonnier </ item>
+        <Item> Non </ item>
+    </ String-array>
+    <String-array name = "yesHire">
+        <Item> Oui </ item>
+        <Item> Saisonnier </ item>
+        <Item> Non </ item>
+    </ String-array>
+    <String-array name = "noHire">
+        <Item> Non </ item>
+        <Item> Oui </ item>
+        <Item> Saisonnier </ item>
+    </ String-array>
+    <String-array name = "seasonHire">
+        <Item> Saisonnier </ item>
+        <Item> Oui </ item>
+        <Item> Non </ item>
+    </ String-array>
+    <String-array name = "reason">
+        <Item> N / A </ item>
+        <Item> Replanting </ item>
+        <Item> Greffage </ item>
+    </ String-array>
+    <String-array name = "reason1">
+        <Item> Replanting </ item>
+        <Item> Greffage </ item>
+    </ String-array>
+    <String-array name = "reason2">
+        <Item> Greffage </ item>
+        <Item> Replanting </ item>
+    </ String-array>
+
+    <string-array name="weight1">
+        <item>Kg</item>
+        <item>Sac</item>
+        <item>Qq</item>
+    </string-array>
+    <string-array name="weight2">
+        <item>Sac</item>
+        <item>Kg</item>
+        <item>Qq</item>
+    </string-array>
+    <string-array name="weight3">
+        <item>Qq</item>
+        <item>Kg</item>
+        <item>Sac</item>
+    </string-array>
+
+
+</resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="account_type" translatable="false">org.grameenfoundation.fdpciv.login</string>
-	<string name="app_name"><b>FDP CIV</b></string>
+	<string name="app_name" translatable="false"><b>FDP CIV</b></string>
 	<string name="app_package" translatable="false">org.grameenfoundation.fdpciv</string>
     <string name="switch_user_button">Switch User</string>
     <string name="internalInspection">Internal Inspection</string>
@@ -13,7 +13,7 @@
 	<string name="plotActivityTitle">Plot information</string>
 	<string name="fdpActivityTitle">Farm Development Plan</string>
 	<string name="yearDetailActivityTitle">Year Detail</string>
-	<string name="logout_title">Log out?</string>
+	<string name="logout_title" translatable="false">Log out?</string>
 	<string name="yes">Yes</string>
 	<string name="cancel">No</string>
     <string name="saveContinue">Save and Continue</string>
@@ -140,7 +140,7 @@
 
 	<string name="plotIncome">Plot Income:</string>
 	<string name="costInvest">Cost of Maintenance / Investment:</string>
-	<string name="manDaysNeed">Labor needed in man days:</string>
+	<string name="manDaysNeed" translatable="false">Labor needed in man days:</string>
 	<string name="costLabor">Cost of labor:</string>
 	<string name="plotPL">Plot P&amp;L:</string>
 	<string name="changeR">Change for Replanting</string>
@@ -161,9 +161,9 @@
 	<string name="replant">Replant</string>
 	<string name="extraSoil">Extra Soil Management</string>
 	<string name="lime">Lime</string>
-	<string name="drainage">Drainage</string>
+	<string name="drainage" translatable="false">Drainage</string>
 	<string name="filling">Filling in</string>
-	<string name="thinning">Thinning</string>
+	<string name="thinning">Thinning Out</string>
 	<string name="labor">Labor</string>
     <string name="jan">January</string>
 	<string name="feb">February</string>
@@ -182,31 +182,31 @@
 	<string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
 	<string name="areasInco">Your areas present inconsistencies fix it before continuing</string>
 	<string name="saved">Save successful!</string>
-	<string name="autosave">Autosaved</string>
+	<string name="autosave" translatable="false">Autosaved</string>
 	<string name="p1">Clearing</string>
 	<string name="p2">Drainage</string>
-	<string name="p3">Lining-cocoa and shade</string>
+	<string name="p3">Lining for coca and shade</string>
 	<string name="p4">Cocoa Planting</string>
 	<string name="p5">Cocoa re- or inter-planting</string>
-	<string name="p6">Coconut leaf - temporary shade</string>
+	<string name="p6">Temporary shade</string>
 	<string name="p7">Shade Planting</string>
 	<string name="p8">Pruning/Sanitation</string>
 	<string name="p9">Fertilizer</string>
-	<string name="p10">Grafting work/ take off the plastic</string>
+	<string name="p10">Grafting work/ remove plastic</string>
 	<string name="p11">Pollarding/Sanitation</string>
-	<string name="p12">Herbiciding OR mechanical manual weeding</string>
+	<string name="p12">Weeding</string>
 	<string name="p13">Circle weeding</string>
-	<string name="p14">Fertilizing NPK, Cocoa Fertilizer, foliar at planting</string>
-	<string name="p15">Application of lime, organic fertilizer</string>
-	<string name="p16">P and D Control + Foliar</string>
-	<string name="p17">Pruning/Sanitation</string>
+	<string name="p14">Fertilizer</string>
+	<string name="p15">Lime</string>
+	<string name="p16">P and D Control</string>
+	<string name="p17">Maint pruning</string>
 	<string name="p18">Shape pruning</string>
 	<string name="p19">Maintenance</string>
-	<string name="p20">Production/shape/Reducing mother trees branches</string>
+	<string name="p20">Reducing mother trees branches</string>
 	<string name="p21">Sanitation</string>
 	<string name="p22">Shape pruning</string>
-	<string name="p23">Shade reducing/rejuvenate old shade</string>
-	<string name="p24">Harvest, ferment, dry, sell</string>
+	<string name="p23">Shade replanting</string>
+	<string name="p24">Harvest</string>
 	<string name="tool1">This includes paid labor on other farms, nursery, other business or services that bring in money into the farmer household</string>
 	<string name="tool2">This includes paid labor on other farms, sales from other business or services for other people that bring in money into the household</string>
 	<string name="tool3">This includes all money that is available to family excluding that from farmer and spouse. Money can be from brothers, sisters, parents or other family members who can be living in home or sending from other village, city or country</string>
@@ -222,15 +222,15 @@
 	<string name="familyLess">The number of family members can not be less than the number of children</string>
 	<string name="savingsLabel">Household Savings</string>
 	<string name="investmentLabel">Planned investments</string>
-    <string name="renovated">This plot was recently renovated?</string>
-    <string name="reason">Reason for renovation:</string>
+	<string name="reason">Reason for renovation:</string>
     <string name="howLong">How long ago was made renovation?</string>
     <string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string>
-    <string name="ac">(Ac):</string>
-    <string name="ha">(Ha):</string>
-    <string name="kg">(Kg):</string>
+    <string name="ac" translatable="false">(Ac):</string>
+    <string name="ha" translatable="false">(Ha):</string>
+    <string name="kg" translatable="false">(Kg):</string>
     <string name="bag">(Bag):</string>
-    <string name="qq">(Qq):</string>
+    <string name="qq" translatable="false">(Qq):</string>
+	<string name="renovated">Was this plot recently renovated?</string>
 
     <string-array name="creditOften">
         <item>Monthly</item>
