@@ -52,7 +52,7 @@
 
     <Spinner
         android:layout_width="155dp"
-        android:layout_height="35dp"
+        android:layout_height="38dp"
         android:id="@+id/reason_field"
         android:entries="@array/reason"/>
 
