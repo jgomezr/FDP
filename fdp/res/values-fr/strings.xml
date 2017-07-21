@@ -91,7 +91,7 @@
     <string name="labor">La main d\'oeuvre</string>
     <string name="lime">Chaux</string>
     <string name="limeNeed">58. Besoin en chaux</string>
-    <string name="livingExpenses">22. Combien sont les dépenses annuelles du ménage en nourriture,, eau, électricité, gaz, transport)?</string>
+    <string name="livingExpenses">22. Combien sont les dépenses annuelles du ménage en nourriture, eau, électricité, gaz, transport)?</string>
     <string name="main_activity_title">Liste des planteurs</string>
     <string name="mapPhoto">Prendre une photo de la carte de la plantation</string>
     <string name="mar">Mars</string>
@@ -917,6 +917,50 @@
     <string-array name="reno5">
         <item>-5</item>
     </string-array>
+    <string-array name="education">
+        <item>N/A</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
+    </string-array>
+    <string-array name="education1">
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
+    </string-array>
+    <string-array name="education2">
+        <item>Enseignement Primaire</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
+    </string-array>
+    <string-array name="education3">
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
+    </string-array>
+    <string-array name="education4">
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Supérieur Public</item>
+    </string-array>
+    <string-array name="education5">
+        <item>Enseignement Supérieur Public</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+    </string-array>
+
     <string name="pt1">PARCELLE 1</string>
     <string name="pt10">PARCELLE 10</string>
     <string name="pt2">PARCELLE 2</string>

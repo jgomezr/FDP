@@ -60,7 +60,7 @@
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="40dp"
                         android:text="@string/renovated"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -74,7 +74,7 @@
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="40dp"
                         android:text="@string/howLong"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -99,7 +99,7 @@
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="40dp"
                         android:text="@string/cocoaTrees"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -216,7 +216,7 @@
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="40dp"
                         android:text="@string/fillingOption"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -230,7 +230,7 @@
                         android:textSize="16sp"/>
 
                     <TextView android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
                         android:text="@string/aoResults"
                         android:textAlignment="center"
@@ -274,7 +274,7 @@
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:textColor="@color/white"
-                        android:layout_margin="25dp"
+                        android:layout_margin="10dp"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:padding="6dp"

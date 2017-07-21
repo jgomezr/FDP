@@ -275,8 +275,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/yearsRelationshipWithMars" />
 
                 <EditText
@@ -492,8 +492,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/childrenInSchool" />
 
                 <EditText
@@ -519,8 +519,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/familyMembers" />
 
                 <EditText
@@ -599,8 +599,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/fmWorkFarm" />
 
                 <EditText
@@ -626,8 +626,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/dependEconomically" />
 
                 <EditText
@@ -653,8 +653,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@color/green"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/tool1"
                     android:visibility="gone" />
 
@@ -671,8 +671,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
                         android:drawableRight="@drawable/info"
-                        android:lines="2"
-                        android:maxLines="2"
+                        android:lines="3"
+                        android:maxLines="3"
                         android:text="@string/receivesFarmPayment" />
 
                     <Spinner
@@ -699,8 +699,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/totalIncomeLabor" />
 
                 <EditText
@@ -726,8 +726,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@color/green"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/tool2"
                     android:visibility="gone" />
 
@@ -744,8 +744,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
                         android:drawableRight="@drawable/info"
-                        android:lines="2"
-                        android:maxLines="2"
+                        android:lines="4"
+                        android:maxLines="4"
                         android:text="@string/spousePaidWork" />
 
                     <Spinner
@@ -771,8 +771,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="3"
-                    android:maxLines="3"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/totalSpouseIncome" />
 
                 <EditText
@@ -815,8 +815,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
                         android:drawableRight="@drawable/info"
-                        android:lines="2"
-                        android:maxLines="2"
+                        android:lines="5"
+                        android:maxLines="5"
                         android:text="@string/familyPaidWork" />
 
                     <Spinner
@@ -841,8 +841,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/totalFamilyMembersIncome" />
 
                 <EditText
@@ -867,8 +867,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/haveCredit" />
 
                 <Spinner
@@ -1098,8 +1098,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/livingExpenses" />
 
                 <EditText
@@ -1124,8 +1124,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/otherExpenses" />
 
                 <EditText
@@ -1150,8 +1150,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/plannedInvestments" />
 
                 <EditText
@@ -1176,8 +1176,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@color/green"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/tool5"
                     android:visibility="gone" />
 
@@ -1194,8 +1194,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight=".50"
                         android:drawableRight="@drawable/info"
-                        android:lines="2"
-                        android:maxLines="2"
+                        android:lines="5"
+                        android:maxLines="5"
                         android:text="@string/educationExpenses" />
 
                     <EditText
@@ -1452,8 +1452,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/averageCocoaPrice" />
 
                 <EditText
@@ -1478,8 +1478,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@color/green"
-                    android:lines="3"
-                    android:maxLines="3"
+                    android:lines="4"
+                    android:maxLines="4"
                     android:text="@string/tool6"
                     android:visibility="gone" />
 
@@ -1523,8 +1523,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="3"
-                    android:maxLines="3"
+                    android:lines="5"
+                    android:maxLines="5"
                     android:text="@string/grossCocoaLY" />
 
                 <EditText
@@ -1703,6 +1703,7 @@
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
+                    android:id="@+id/q35"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -1729,6 +1730,7 @@
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
+                    android:id="@+id/q36"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -1755,6 +1757,7 @@
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
+                    android:id="@+id/q37"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -1781,12 +1784,13 @@
 
                 <TextView
                     style="@style/FarmerDetail.ParentView.TextView"
+                    android:id="@+id/q38"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight=".50"
-                    android:lines="2"
-                    android:maxLines="2"
+                    android:lines="3"
+                    android:maxLines="3"
                     android:text="@string/renovationArea" />
 
                 <EditText

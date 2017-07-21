@@ -8,7 +8,7 @@ package com.salesforce.androidsdk;
 
 public final class R {
     public static final class array {
-        public static final int oauthScopes = 0x7f07005b;
+        public static final int oauthScopes = 0x7f07005a;
     }
     public static final class color {
         public static final int sf__forgot_passcode_text = 0x7f09001e;

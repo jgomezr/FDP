@@ -294,60 +294,46 @@
 	</string-array>
 	<string-array name="education">
 		<item>N/A</item>
-		<item>Kindergarten</item>
-		<item>Primary School</item>
-		<item>Junior Secondary School</item>
-        <item>Senior High School</item>
-        <item>Vocational and Technical Education</item>
-		<item>Higher Education</item>
+		<item>Enseignement Préscolaire</item>
+		<item>Enseignement Primaire</item>
+		<item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
 	</string-array>
     <string-array name="education1">
-        <item>Kindergarten</item>
-        <item>Primary School</item>
-        <item>Junior Secondary School</item>
-        <item>Senior High School</item>
-        <item>Vocational and Technical Education</item>
-        <item>Higher Education</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
     </string-array>
     <string-array name="education2">
-        <item>Primary School</item>
-        <item>Kindergarten</item>
-        <item>Junior Secondary School</item>
-        <item>Senior High School</item>
-        <item>Vocational and Technical Education</item>
-        <item>Higher Education</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
     </string-array>
     <string-array name="education3">
-        <item>Junior Secondary School</item>
-        <item>Kindergarten</item>
-        <item>Primary School</item>
-        <item>Senior High School</item>
-        <item>Vocational and Technical Education</item>
-        <item>Higher Education</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Supérieur Public</item>
     </string-array>
     <string-array name="education4">
-        <item>Senior High School</item>
-        <item>Kindergarten</item>
-        <item>Primary School</item>
-        <item>Junior Secondary School</item>
-        <item>Vocational and Technical Education</item>
-        <item>Higher Education</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Supérieur Public</item>
     </string-array>
     <string-array name="education5">
-        <item>Vocational and Technical Education</item>
-        <item>Kindergarten</item>
-        <item>Primary School</item>
-        <item>Junior Secondary School</item>
-        <item>Senior High School</item>
-        <item>Higher Education</item>
-    </string-array>
-    <string-array name="education6">
-        <item>Higher Education</item>
-        <item>Kindergarten</item>
-        <item>Primary School</item>
-        <item>Junior Secondary School</item>
-        <item>Senior High School</item>
-        <item>Vocational and Technical Education</item>
+        <item>Enseignement Supérieur Public</item>
+        <item>Enseignement Préscolaire</item>
+        <item>Enseignement Primaire</item>
+        <item>Enseignement secondaire Général</item>
+        <item>Enseignement Secondaire Technique et Professionnel</item>
     </string-array>
 	<string-array name="gender">
 		<item>N/A</item>
