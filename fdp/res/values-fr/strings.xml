@@ -215,251 +215,251 @@
     <string name="yes">Oui</string>
 
     <String-array name = "creditOften">
-        <Item> Mensuel </ item>
-        <Item> Trimestriel </ item>
-        <Item> Bi chaque année </ item>
-        <Item> Annuellement </ item>
-        <Item> Pas de fréquence définie </ item>
+        <Item>Mensuel</ item>
+        <Item>Trimestriel</ item>
+        <Item>Bi chaque année</ item>
+        <Item>Annuellement</ item>
+        <Item>Pas de fréquence définie</ item>
     </ String-array>
     <String-array name = "creditOftenQuarter">
-        <Item> Trimestriel </ item>
-        <Item> Mensuel </ item>
-        <Item> Bi chaque année </ item>
-        <Item> Annuellement </ item>
-        <Item> Pas de fréquence définie </ item>
+        <Item>Trimestriel</ item>
+        <Item>Mensuel</ item>
+        <Item>Bi chaque année</ item>
+        <Item>Annuellement</ item>
+        <Item>Pas de fréquence définie</ item>
     </ String-array>
     <String-array name = "creditOftenbiannual">
-        <Item> Bi chaque année </ item>
-        <Item> Mensuel </ item>
-        <Item> Trimestriel </ item>
-        <Item> Annuellement </ item>
-        <Item> Pas de fréquence définie </ item>
+        <Item>Bi chaque année</ item>
+        <Item>Mensuel</ item>
+        <Item>Trimestriel</ item>
+        <Item>Annuellement</ item>
+        <Item>Pas de fréquence définie</ item>
     </ String-array>
     <String-array name = "creditOftenNoSet">
-        <Item> Pas de fréquence définie </ item>
-        <Item> Mensuel </ item>
-        <Item> Trimestriel </ item>
-        <Item> Bi chaque année </ item>
-        <Item> Annuellement </ item>
+        <Item>Pas de fréquence définie</ item>
+        <Item>Mensuel</ item>
+        <Item>Trimestriel</ item>
+        <Item>Bi chaque année</ item>
+        <Item>Annuellement</ item>
     </ String-array>
     <String-array name = "creditOftenAnnual">
-        <Item> Annuellement </ item>
-        <Item> Mensuel </ item>
-        <Item> Trimestriel </ item>
-        <Item> Bi chaque année </ item>
-        <Item> Pas de fréquence définie </ item>
+        <Item>Annuellement</ item>
+        <Item>Mensuel</ item>
+        <Item>Trimestriel</ item>
+        <Item>Bi chaque année</ item>
+        <Item>Pas de fréquence définie</ item>
     </ String-array>
     <String-array name = "yesNo">
-        <Item> N / A </ item>
-        <Item> Oui </ item>
-        <Item> Non </ item>
+        <Item>N / A</ item>
+        <Item>Oui</ item>
+        <Item>Non</ item>
     </ String-array>
     <String-array name = "yes">
-        <Item> Oui </ item>
-        <Item> Non </ item>
+        <Item>Oui</ item>
+        <Item>Non</ item>
     </ String-array>
     <String-array name = "No">
-        <Item> Non </ item>
-        <Item> Oui </ item>
+        <Item>Non</ item>
+        <Item>Oui</ item>
     </ String-array>
     <String-array name = "gender">
-        <Item> N / A </ item>
-        <Item> Homme </ item>
-        <Item> Femme </ item>
+        <Item>N / A</ item>
+        <Item>Homme</ item>
+        <Item>Femme</ item>
     </ String-array>
     <String-array name = "gender_male">
-        <Item> Homme </ item>
-        <Item> Femme </ item>
+        <Item>Homme</ item>
+        <Item>Femme</ item>
     </ String-array>
     <String-array name = "gender_female">
-        <Item> Femme </ item>
-        <Item> Homme </ item>
+        <Item>Femme</ item>
+        <Item>Homme</ item>
     </ String-array>
     <String-array name = "years">
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
 
     <String-array name = "year1">
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year2">
-        <Item> Année 2 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 2</ item>
+        <Item>Année 1</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year3">
-        <Item> Année 3 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 3</ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year4">
-        <Item> Année 4 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 4</ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year5">
-        <Item> Année 5 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 6 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 5</ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 6</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year6">
-        <Item> Année 6 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 7 </ item>
+        <Item>Année 6</ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 7</ item>
     </ String-array>
     <String-array name = "year7">
-        <Item> Année 7 </ item>
-        <Item> Année 1 </ item>
-        <Item> Année 2 </ item>
-        <Item> Année 3 </ item>
-        <Item> Année 4 </ item>
-        <Item> Année 5 </ item>
-        <Item> Année 6 </ item>
+        <Item>Année 7</ item>
+        <Item>Année 1</ item>
+        <Item>Année 2</ item>
+        <Item>Année 3</ item>
+        <Item>Année 4</ item>
+        <Item>Année 5</ item>
+        <Item>Année 6</ item>
     </ String-array>
     <String-array name = "sourceLoan">
-        <Item> Famille </ item>
-        <Item> Amis </ item>
-        <Item> Économies communautaires </ item>
-        <Item> Organisation de microcrédit </ item>
-        <Item> Banque </ item>
+        <Item>Famille</ item>
+        <Item>Amis</ item>
+        <Item>Économies communautaires</ item>
+        <Item>Organisation de microcrédit</ item>
+        <Item>Banque</ item>
     </ String-array>
     <String-array name = "sourceLoanFriend">
-        <Item> Amis </ item>
-        <Item> Famille </ item>
-        <Item> Économies communautaires </ item>
-        <Item> Organisation de microcrédit </ item>
-        <Item> Banque </ item>
+        <Item>Amis</ item>
+        <Item>Famille</ item>
+        <Item>Économies communautaires</ item>
+        <Item>Organisation de microcrédit</ item>
+        <Item>Banque</ item>
     </ String-array>
     <String-array name = "sourceLoanCommunity">
-        <Item> Économies communautaires </ item>
-        <Item> Famille </ item>
-        <Item> Amis </ item>
-        <Item> Organisation de microcrédit </ item>
-        <Item> Banque </ item>
+        <Item>Économies communautaires</ item>
+        <Item>Famille</ item>
+        <Item>Amis</ item>
+        <Item>Organisation de microcrédit</ item>
+        <Item>Banque</ item>
     </ String-array>
     <String-array name = "sourceLoanMicro">
-        <Item> Organisation de microcrédit </ item>
-        <Item> Famille </ item>
-        <Item> Amis </ item>
-        <Item> Économies communautaires </ item>
-        <Item> Banque </ item>
+        <Item>Organisation de microcrédit</ item>
+        <Item>Famille</ item>
+        <Item>Amis</ item>
+        <Item>Économies communautaires</ item>
+        <Item>Banque</ item>
     </ String-array>
     <String-array name = "sourceLoanBank">
-        <Item> Banque </ item>
-        <Item> Famille </ item>
-        <Item> Amis </ item>
-        <Item> Économies communautaires </ item>
-        <Item> Organisation de microcrédit </ item>
+        <Item>Banque</ item>
+        <Item>Famille</ item>
+        <Item>Amis</ item>
+        <Item>Économies communautaires</ item>
+        <Item>Organisation de microcrédit</ item>
     </ String-array>
     <String-array name = "bank">
-        <Item> NA </ item>
-        <Item> Compte bancaire standard </ item>
-        <Item> Mobile banking </ item>
-        <Item> Micro finance </ item>
-        <Item> Prêt de village </ item>
-        <Item> Autre </ item>
+        <Item>N/A</ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Mobile banking</ item>
+        <Item>Micro finance</ item>
+        <Item>Prêt de village</ item>
+        <Item>Autre</ item>
     </ String-array>
     <String-array name = "bank1">
-        <Item> Compte bancaire standard </ item>
-        <Item> Mobile banking </ item>
-        <Item> Micro finance </ item>
-        <Item> Prêt de village </ item>
-        <Item> Autre </ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Mobile banking</ item>
+        <Item>Micro finance</ item>
+        <Item>Prêt de village</ item>
+        <Item>Autre</ item>
     </ String-array>
     <String-array name = "bank2">
-        <Item> Mobile banking </ item>
-        <Item> Compte bancaire standard </ item>
-        <Item> Micro finance </ item>
-        <Item> Prêt de village </ item>
-        <Item> Autre </ item>
+        <Item>Mobile banking</ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Micro finance</ item>
+        <Item>Prêt de village</ item>
+        <Item>Autre</ item>
     </ String-array>
     <String-array name = "bank3">
-        <Item> Micro finance </ item>
-        <Item> Compte bancaire standard </ item>
-        <Item> Mobile banking </ item>
-        <Item> Prêt de village </ item>
-        <Item> Autre </ item>
+        <Item>Micro finance</ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Mobile banking</ item>
+        <Item>Prêt de village</ item>
+        <Item>Autre</ item>
     </ String-array>
     <String-array name = "bank4">
-        <Item> Prêt de village </ item>
-        <Item> Compte bancaire standard </ item>
-        <Item> Mobile banking </ item>
-        <Item> Micro finance </ item>
-        <Item> Autre </ item>
+        <Item>Prêt de village</ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Mobile banking</ item>
+        <Item>Micro finance</ item>
+        <Item>Autre</ item>
     </ String-array>
     <String-array name = "bank5">
-        <Item> Autre </ item>
-        <Item> Compte bancaire standard </ item>
-        <Item> Mobile banking </ item>
-        <Item> Micro finance </ item>
-        <Item> Prêt de village </ item>
+        <Item>Autre</ item>
+        <Item>Compte bancaire standard</ item>
+        <Item>Mobile banking</ item>
+        <Item>Micro finance</ item>
+        <Item>Prêt de village</ item>
     </ String-array>
 
     <String-array name = "yesNoHire">
-        <Item> N / A </ item>
-        <Item> Oui </ item>
-        <Item> Saisonnier </ item>
-        <Item> Non </ item>
+        <Item>N/A</ item>
+        <Item>Oui</ item>
+        <Item>Saisonnier</ item>
+        <Item>Non</ item>
     </ String-array>
     <String-array name = "yesHire">
-        <Item> Oui </ item>
-        <Item> Saisonnier </ item>
-        <Item> Non </ item>
+        <Item>Oui</ item>
+        <Item>Saisonnier</ item>
+        <Item>Non</ item>
     </ String-array>
     <String-array name = "noHire">
-        <Item> Non </ item>
-        <Item> Oui </ item>
-        <Item> Saisonnier </ item>
+        <Item>Non</ item>
+        <Item>Oui</ item>
+        <Item>Saisonnier</ item>
     </ String-array>
     <String-array name = "seasonHire">
-        <Item> Saisonnier </ item>
-        <Item> Oui </ item>
-        <Item> Non </ item>
+        <Item>Saisonnier</ item>
+        <Item>Oui</ item>
+        <Item>Non</ item>
     </ String-array>
     <String-array name = "reason">
-        <Item> N / A </ item>
-        <Item> Replanting </ item>
-        <Item> Greffage </ item>
+        <Item>N/A</ item>
+        <Item>Replanting</ item>
+        <Item>Greffage</ item>
     </ String-array>
     <String-array name = "reason1">
-        <Item> Replanting </ item>
-        <Item> Greffage </ item>
+        <Item>Replanting</ item>
+        <Item>Greffage</ item>
     </ String-array>
     <String-array name = "reason2">
-        <Item> Greffage </ item>
-        <Item> Replanting </ item>
+        <Item>Greffage</ item>
+        <Item>Replanting</ item>
     </ String-array>
 
     <string-array name="weight1">
@@ -477,6 +477,456 @@
         <item>Kg</item>
         <item>Sac</item>
     </string-array>
+    <string-array name="gmb">
+        <item>N/A</item>
+        <item>G</item>
+        <item>M</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="g_mb">
+        <item>G</item>
+        <item>M</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="m_gb">
+        <item>M</item>
+        <item>G</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="b_gm">
+        <item>B</item>
+        <item>G</item>
+        <item>M</item>
+    </string-array>
+    <string-array name="gb">
+        <item>N/A</item>
+        <item>G</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="g_b">
+        <item>G</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="b_g">
+        <item>B</item>
+        <item>G</item>
+    </string-array>
+    <string-array name="treeDistance">
+        <item>N/A</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance1">
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance2">
+        <item>2.5x2.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance3">
+        <item>3x2.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance4">
+        <item>3x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance5">
+        <item>3.5x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance6">
+        <item>4x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+    </string-array>
+    <string-array name="treeDistance8">
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance9">
+        <item>3×4</item>
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance10">
+        <item>3.5×4</item>
+        <item>3×4</item>
+        <item>3x3.5</item>
+        <item>2.5x3</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3.5x3.5</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance11">
+        <item>2x2.5</item>
+        <item>2x2</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance12">
+        <item>2x3</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance13">
+        <item>2x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance14">
+        <item>2.5x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance15">
+        <item>2.5x4</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x3.5</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="treeDistance16">
+        <item>2x3.5</item>
+        <item>2x2</item>
+        <item>2x2.5</item>
+        <item>2x3</item>
+        <item>2x4</item>
+        <item>2.5x2.5</item>
+        <item>2.5x3.5</item>
+        <item>2.5x4</item>
+        <item>3x2.5</item>
+        <item>3x3</item>
+        <item>3x3.5</item>
+        <item>3.5x3.5</item>
+        <item>3×4</item>
+        <item>3.5×4</item>
+        <item>4x4</item>
+    </string-array>
+    <string-array name="cert">
+        <item>N/A</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert1">
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert2">
+        <item>RA</item>
+        <item>UTZ</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert3">
+        <item>FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert4">
+        <item>UTZ/RA</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert5">
+        <item>UTZ/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>RA/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert6">
+        <item>RA/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/UTZ/FT</item>
+    </string-array>
+    <string-array name="cert7">
+        <item>RA/UTZ/FT</item>
+        <item>UTZ</item>
+        <item>RA</item>
+        <item>FT</item>
+        <item>UTZ/RA</item>
+        <item>UTZ/FT</item>
+        <item>RA/FT</item>
+    </string-array>
+    <string-array name="howLong">
+        <item>N/A</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+    </string-array>
+    <string-array name="howLong1">
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+    </string-array>
+    <string-array name="howLong2">
+        <item>-2</item>
+        <item>-1</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+    </string-array>
+    <string-array name="howLong3">
+        <item>-3</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-4</item>
+        <item>-5</item>
+    </string-array>
+    <string-array name="howLong4">
+        <item>-4</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-5</item>
+    </string-array>
+    <string-array name="howLong5">
+        <item>-5</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+    </string-array>
+    <string-array name="reno1">
+        <item>-1</item>
+    </string-array>
+    <string-array name="reno2">
+        <item>-2</item>
+    </string-array>
+    <string-array name="reno3">
+        <item>-3</item>
+    </string-array>
+    <string-array name="reno4">
+        <item>-4</item>
+    </string-array>
+    <string-array name="reno5">
+        <item>-5</item>
+    </string-array>
+    <string name="pt1">PARCELLE 1</string>
+    <string name="pt10">PARCELLE 10</string>
+    <string name="pt2">PARCELLE 2</string>
+    <string name="pt3">PARCELLE 3</string>
+    <string name="pt4">PARCELLE 4</string>
+    <string name="pt5">PARCELLE 5</string>
+    <string name="pt6">PARCELLE 6</string>
+    <string name="pt7">PARCELLE 7</string>
+    <string name="pt8">PARCELLE 8</string>
+    <string name="pt9">PARCELLE 9</string>
 
 
 </resources>
