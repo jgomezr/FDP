@@ -27,7 +27,7 @@
     <string name="back">Arrière</string>
     <string name="bag">(Sac):</string>
     <string name="bagClarify">*sac= 60Kg sac</string>
-    <string name="bankAccount">26. Le planteur a/ possède-t-il un compte bancaire?</string>
+    <string name="bankAccount">26. Le planteur a/possède-t-il un compte bancaire?</string>
     <string name="calcAO">Calculer</string>
     <string name="cancel">Non</string>
     <string name="cannotBeEmpty">Le nom du planteur et le code du paysan ne peuvent pas être vides ou le nombre de parcelles doit être supérieur à 0!</string>
@@ -36,8 +36,8 @@
     <string name="childrenUnder">C5. Nombre d’enfants ayant un âge compris entre 5 et 17 ans</string>
     <string name="childrenVal">Les enfants de 5 à 17 ans ou les enfants inscrits à l\'école ne peuvent pas dépasser le nombre total d\'enfants</string>
     <string name="cocoaArea">37. Combien d’Ha sont plantées avec du cacao ?</string>
-    <string name="cocoaTrees">45. Distance entre les pieds de cacaoyer/ densité des arbres</string>
-    <string name="costInvest">Coût de maintenance / investissement:</string>
+    <string name="cocoaTrees">45. Distance entre les pieds de cacaoyer/densité des arbres</string>
+    <string name="costInvest">Coût de maintenance /investissement:</string>
     <string name="costLabor">Coût de la main d\'oeuvre:</string>
     <string name="cultivationArea">36. Combien d’hectare(s) est/sont mis en valeur ?</string>
     <string name="debilitationDisease">48. Maladie handicapante (CSSV)</string>
@@ -75,7 +75,7 @@
     <string name="giveLoan">20. Le ménage a-t-il fait/donné crédit à quelqu’un?</string>
     <string name="gps">7. Coordonnees GPS du domicile du planteur</string>
     <string name="graft">Greffer</string>
-    <string name="grossCocoaLY">31. Quel montant/ combien la culture du cacao vous a rapporté l’année dernière?  (Année signifie les deux périodes, la campagne principale et intermédiaire)</string>
+    <string name="grossCocoaLY">31. Quel montant/combien la culture du cacao vous a rapporté l’année dernière?  (Année signifie les deux périodes, la campagne principale et intermédiaire)</string>
     <string name="harvesting">52. Récolte</string>
     <string name="haveCredit">19. Le ménage a-t-il un prêt qui doit être remboursé?</string>
     <string name="haveOtherCrops">32. Avez-vous d’autres cultures ?</string>
@@ -113,8 +113,8 @@
     <string name="organicMatter">55. Matières organiques</string>
     <string name="otherExpenses">23. Combien sont les autres dépenses annuelles du ménage, dépenses scolaires non comprises?</string>
     <string name="p1">Clairière</string>
-    <string name="p10">Travaux de greffage / élimination du plastique</string>
-    <string name="p11">Pollarding / Assainissement</string>
+    <string name="p10">Travaux de greffage /élimination du plastique</string>
+    <string name="p11">Pollarding /Assainissement</string>
     <string name="p12">Désherbage</string>
     <string name="p13">Cercle de désherbage</string>
     <string name="p14">Engrais</string>
@@ -134,10 +134,10 @@
     <string name="p5">Reconstituer ou inter-planter du cacao</string>
     <string name="p6">Ombre temporaire</string>
     <string name="p7">Plantation d\'ombre</string>
-    <string name="p8">Éraillage / Assainissement</string>
+    <string name="p8">Éraillage /Assainissement</string>
     <string name="p9">Engrais</string>
     <string name="payForCredit">C14. Quel montant remboursez-vous/combien payez-vous chaque Paiement ?</string>
-    <string name="payOftenForCredit">C13 Quel est l’échéancier/ la période de remboursement?</string>
+    <string name="payOftenForCredit">C13 Quel est l’échéancier/la période de remboursement?</string>
     <string name="pestDiseaseSanitation">50. Insectes, maladies et état sanitaire</string>
     <string name="ph">43. PH du sol</string>
     <string name="phone">Numéro de telephone</string>
@@ -176,8 +176,8 @@
     <string name="soilCondition">54. Conditions du sol</string>
     <string name="soilFertMngLb">Gestion de la fertilité du sol</string>
     <string name="sourceCredit">C12. Où avez-vous contracté/obtenu le prêt ?</string>
-    <string name="spouseBirthday">C3. Date de naissance de la compagne/ l’épouse (Année)</string>
-    <string name="spouseEducationalLevel">C4. Niveau d’études de la compagne/ l’épouse</string>
+    <string name="spouseBirthday">C3. Date de naissance de la compagne/l’épouse (Année)</string>
+    <string name="spouseEducationalLevel">C4. Niveau d’études de la compagne/l’épouse</string>
     <string name="spouseName">C2. Nom de la compagne ou de l’épouse</string>
     <string name="spousePaidWork">C8. A part le cacao et les autres cultures, la compagne/l’épouse a-t-elle une/d’autre(s) activité(s) qui lui rapporte(nt) de l’argent ?</string>
     <string name="startYear">Année de début</string>
@@ -189,7 +189,7 @@
     <string name="tool2">Cela comprend le travail rémunéré dans d\'autres fermes, les ventes d\'autres entreprises ou de services pour d\'autres personnes qui apportent de l\'argent dans le ménage</string>
     <string name="tool3">Cela comprend tout l\'argent qui est disponible pour la famille, à l\'exclusion de celle de l\'agriculteur et du conjoint. L\'argent peut provenir de frères, sœurs, parents ou autres membres de la famille qui vivent à la maison ou qui envoient d\'autres villages, villes ou pays</string>
     <string name="tool4">Taux de conversion pour humide à sec est 100: 35 ou 35%</string>
-    <string name="tool5">Il s\'agit de frais de scolarité postsecondaire scolaire et / ou au-delà des frais scolaires normaux</string>
+    <string name="tool5">Il s\'agit de frais de scolarité postsecondaire scolaire et /ou au-delà des frais scolaires normaux</string>
     <string name="tool6">Les dépenses agricoles comprennent toutes les dépenses engagées dans la production, la fermentation, le stockage et la vente de cacao. Veuillez tenir compte de tous les intrants, paiements de main-d\'œuvre, etc.</string>
     <string name="totalCredit">C11. Quel est le montant total restant à rembourser?</string>
     <string name="totalExpenses">Total des dépenses familiales:</string>
@@ -214,253 +214,253 @@
     <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur est-il membre de la coopérative ou vend-il son cacao à la coopérative ?</string>
     <string name="yes">Oui</string>
 
-    <String-array name = "creditOften">
-        <Item>Mensuel</ item>
-        <Item>Trimestriel</ item>
-        <Item>Bi chaque année</ item>
-        <Item>Annuellement</ item>
-        <Item>Pas de fréquence définie</ item>
-    </ String-array>
-    <String-array name = "creditOftenQuarter">
-        <Item>Trimestriel</ item>
-        <Item>Mensuel</ item>
-        <Item>Bi chaque année</ item>
-        <Item>Annuellement</ item>
-        <Item>Pas de fréquence définie</ item>
-    </ String-array>
-    <String-array name = "creditOftenbiannual">
-        <Item>Bi chaque année</ item>
-        <Item>Mensuel</ item>
-        <Item>Trimestriel</ item>
-        <Item>Annuellement</ item>
-        <Item>Pas de fréquence définie</ item>
-    </ String-array>
-    <String-array name = "creditOftenNoSet">
-        <Item>Pas de fréquence définie</ item>
-        <Item>Mensuel</ item>
-        <Item>Trimestriel</ item>
-        <Item>Bi chaque année</ item>
-        <Item>Annuellement</ item>
-    </ String-array>
-    <String-array name = "creditOftenAnnual">
-        <Item>Annuellement</ item>
-        <Item>Mensuel</ item>
-        <Item>Trimestriel</ item>
-        <Item>Bi chaque année</ item>
-        <Item>Pas de fréquence définie</ item>
-    </ String-array>
-    <String-array name = "yesNo">
-        <Item>N / A</ item>
-        <Item>Oui</ item>
-        <Item>Non</ item>
-    </ String-array>
-    <String-array name = "yes">
-        <Item>Oui</ item>
-        <Item>Non</ item>
-    </ String-array>
-    <String-array name = "No">
-        <Item>Non</ item>
-        <Item>Oui</ item>
-    </ String-array>
-    <String-array name = "gender">
-        <Item>N / A</ item>
-        <Item>Homme</ item>
-        <Item>Femme</ item>
-    </ String-array>
-    <String-array name = "gender_male">
-        <Item>Homme</ item>
-        <Item>Femme</ item>
-    </ String-array>
-    <String-array name = "gender_female">
-        <Item>Femme</ item>
-        <Item>Homme</ item>
-    </ String-array>
-    <String-array name = "years">
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
+    <string-array name = "creditOften">
+        <item>Mensuel</item>
+        <item>Trimestriel</item>
+        <item>Bi chaque année</item>
+        <item>Annuellement</item>
+        <item>Pas de fréquence définie</item>
+    </string-array>
+    <string-array name = "creditOftenQuarter">
+        <item>Trimestriel</item>
+        <item>Mensuel</item>
+        <item>Bi chaque année</item>
+        <item>Annuellement</item>
+        <item>Pas de fréquence définie</item>
+    </string-array>
+    <string-array name = "creditOftenbiannual">
+        <item>Bi chaque année</item>
+        <item>Mensuel</item>
+        <item>Trimestriel</item>
+        <item>Annuellement</item>
+        <item>Pas de fréquence définie</item>
+    </string-array>
+    <string-array name = "creditOftenNoSet">
+        <item>Pas de fréquence définie</item>
+        <item>Mensuel</item>
+        <item>Trimestriel</item>
+        <item>Bi chaque année</item>
+        <item>Annuellement</item>
+    </string-array>
+    <string-array name = "creditOftenAnnual">
+        <item>Annuellement</item>
+        <item>Mensuel</item>
+        <item>Trimestriel</item>
+        <item>Bi chaque année</item>
+        <item>Pas de fréquence définie</item>
+    </string-array>
+    <string-array name = "yesNo">
+        <item>N /A</item>
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name = "yes">
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name = "No">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <string-array name = "gender">
+        <item>N /A</item>
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+    <string-array name = "gender_male">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+    <string-array name = "gender_female">
+        <item>Femme</item>
+        <item>Homme</item>
+    </string-array>
+    <string-array name = "years">
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
 
-    <String-array name = "year1">
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year2">
-        <Item>Année 2</ item>
-        <Item>Année 1</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year3">
-        <Item>Année 3</ item>
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year4">
-        <Item>Année 4</ item>
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year5">
-        <Item>Année 5</ item>
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 6</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year6">
-        <Item>Année 6</ item>
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 7</ item>
-    </ String-array>
-    <String-array name = "year7">
-        <Item>Année 7</ item>
-        <Item>Année 1</ item>
-        <Item>Année 2</ item>
-        <Item>Année 3</ item>
-        <Item>Année 4</ item>
-        <Item>Année 5</ item>
-        <Item>Année 6</ item>
-    </ String-array>
-    <String-array name = "sourceLoan">
-        <Item>Famille</ item>
-        <Item>Amis</ item>
-        <Item>Économies communautaires</ item>
-        <Item>Organisation de microcrédit</ item>
-        <Item>Banque</ item>
-    </ String-array>
-    <String-array name = "sourceLoanFriend">
-        <Item>Amis</ item>
-        <Item>Famille</ item>
-        <Item>Économies communautaires</ item>
-        <Item>Organisation de microcrédit</ item>
-        <Item>Banque</ item>
-    </ String-array>
-    <String-array name = "sourceLoanCommunity">
-        <Item>Économies communautaires</ item>
-        <Item>Famille</ item>
-        <Item>Amis</ item>
-        <Item>Organisation de microcrédit</ item>
-        <Item>Banque</ item>
-    </ String-array>
-    <String-array name = "sourceLoanMicro">
-        <Item>Organisation de microcrédit</ item>
-        <Item>Famille</ item>
-        <Item>Amis</ item>
-        <Item>Économies communautaires</ item>
-        <Item>Banque</ item>
-    </ String-array>
-    <String-array name = "sourceLoanBank">
-        <Item>Banque</ item>
-        <Item>Famille</ item>
-        <Item>Amis</ item>
-        <Item>Économies communautaires</ item>
-        <Item>Organisation de microcrédit</ item>
-    </ String-array>
-    <String-array name = "bank">
-        <Item>N/A</ item>
-        <Item>Compte bancaire standard</ item>
-        <Item>Mobile banking</ item>
-        <Item>Micro finance</ item>
-        <Item>Prêt de village</ item>
-        <Item>Autre</ item>
-    </ String-array>
-    <String-array name = "bank1">
-        <Item>Compte bancaire standard</ item>
-        <Item>Mobile banking</ item>
-        <Item>Micro finance</ item>
-        <Item>Prêt de village</ item>
-        <Item>Autre</ item>
-    </ String-array>
-    <String-array name = "bank2">
-        <Item>Mobile banking</ item>
-        <Item>Compte bancaire standard</ item>
-        <Item>Micro finance</ item>
-        <Item>Prêt de village</ item>
-        <Item>Autre</ item>
-    </ String-array>
-    <String-array name = "bank3">
-        <Item>Micro finance</ item>
-        <Item>Compte bancaire standard</ item>
-        <Item>Mobile banking</ item>
-        <Item>Prêt de village</ item>
-        <Item>Autre</ item>
-    </ String-array>
-    <String-array name = "bank4">
-        <Item>Prêt de village</ item>
-        <Item>Compte bancaire standard</ item>
-        <Item>Mobile banking</ item>
-        <Item>Micro finance</ item>
-        <Item>Autre</ item>
-    </ String-array>
-    <String-array name = "bank5">
-        <Item>Autre</ item>
-        <Item>Compte bancaire standard</ item>
-        <Item>Mobile banking</ item>
-        <Item>Micro finance</ item>
-        <Item>Prêt de village</ item>
-    </ String-array>
+    <string-array name = "year1">
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year2">
+        <item>Année 2</item>
+        <item>Année 1</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year3">
+        <item>Année 3</item>
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year4">
+        <item>Année 4</item>
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year5">
+        <item>Année 5</item>
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 6</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year6">
+        <item>Année 6</item>
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 7</item>
+    </string-array>
+    <string-array name = "year7">
+        <item>Année 7</item>
+        <item>Année 1</item>
+        <item>Année 2</item>
+        <item>Année 3</item>
+        <item>Année 4</item>
+        <item>Année 5</item>
+        <item>Année 6</item>
+    </string-array>
+    <string-array name = "sourceLoan">
+        <item>Famille</item>
+        <item>Amis</item>
+        <item>Économies communautaires</item>
+        <item>Organisation de microcrédit</item>
+        <item>Banque</item>
+    </string-array>
+    <string-array name = "sourceLoanFriend">
+        <item>Amis</item>
+        <item>Famille</item>
+        <item>Économies communautaires</item>
+        <item>Organisation de microcrédit</item>
+        <item>Banque</item>
+    </string-array>
+    <string-array name = "sourceLoanCommunity">
+        <item>Économies communautaires</item>
+        <item>Famille</item>
+        <item>Amis</item>
+        <item>Organisation de microcrédit</item>
+        <item>Banque</item>
+    </string-array>
+    <string-array name = "sourceLoanMicro">
+        <item>Organisation de microcrédit</item>
+        <item>Famille</item>
+        <item>Amis</item>
+        <item>Économies communautaires</item>
+        <item>Banque</item>
+    </string-array>
+    <string-array name = "sourceLoanBank">
+        <item>Banque</item>
+        <item>Famille</item>
+        <item>Amis</item>
+        <item>Économies communautaires</item>
+        <item>Organisation de microcrédit</item>
+    </string-array>
+    <string-array name = "bank">
+        <item>N/A</item>
+        <item>Compte bancaire standard</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Prêt de village</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name = "bank1">
+        <item>Compte bancaire standard</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Prêt de village</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name = "bank2">
+        <item>Mobile banking</item>
+        <item>Compte bancaire standard</item>
+        <item>Micro finance</item>
+        <item>Prêt de village</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name = "bank3">
+        <item>Micro finance</item>
+        <item>Compte bancaire standard</item>
+        <item>Mobile banking</item>
+        <item>Prêt de village</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name = "bank4">
+        <item>Prêt de village</item>
+        <item>Compte bancaire standard</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Autre</item>
+    </string-array>
+    <string-array name = "bank5">
+        <item>Autre</item>
+        <item>Compte bancaire standard</item>
+        <item>Mobile banking</item>
+        <item>Micro finance</item>
+        <item>Prêt de village</item>
+    </string-array>
 
-    <String-array name = "yesNoHire">
-        <Item>N/A</ item>
-        <Item>Oui</ item>
-        <Item>Saisonnier</ item>
-        <Item>Non</ item>
-    </ String-array>
-    <String-array name = "yesHire">
-        <Item>Oui</ item>
-        <Item>Saisonnier</ item>
-        <Item>Non</ item>
-    </ String-array>
-    <String-array name = "noHire">
-        <Item>Non</ item>
-        <Item>Oui</ item>
-        <Item>Saisonnier</ item>
-    </ String-array>
-    <String-array name = "seasonHire">
-        <Item>Saisonnier</ item>
-        <Item>Oui</ item>
-        <Item>Non</ item>
-    </ String-array>
-    <String-array name = "reason">
-        <Item>N/A</ item>
-        <Item>Replanting</ item>
-        <Item>Greffage</ item>
-    </ String-array>
-    <String-array name = "reason1">
-        <Item>Replanting</ item>
-        <Item>Greffage</ item>
-    </ String-array>
-    <String-array name = "reason2">
-        <Item>Greffage</ item>
-        <Item>Replanting</ item>
-    </ String-array>
+    <string-array name = "yesNoHire">
+        <item>N/A</item>
+        <item>Oui</item>
+        <item>Saisonnier</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name = "yesHire">
+        <item>Oui</item>
+        <item>Saisonnier</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name = "noHire">
+        <item>Non</item>
+        <item>Oui</item>
+        <item>Saisonnier</item>
+    </string-array>
+    <string-array name = "seasonHire">
+        <item>Saisonnier</item>
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+    <string-array name = "reason">
+        <item>N/A</item>
+        <item>Replanting</item>
+        <item>Greffage</item>
+    </string-array>
+    <string-array name = "reason1">
+        <item>Replanting</item>
+        <item>Greffage</item>
+    </string-array>
+    <string-array name = "reason2">
+        <item>Greffage</item>
+        <item>Replanting</item>
+    </string-array>
 
     <string-array name="weight1">
         <item>Kg</item>
