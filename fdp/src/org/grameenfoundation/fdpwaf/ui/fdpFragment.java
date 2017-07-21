@@ -1170,6 +1170,11 @@ public class fdpFragment extends Fragment {
                 income5 =(int) ((area * (getResources().getInteger(R.integer.replantingY5))*avgCost));
                 income6 =(int) ((area * (getResources().getInteger(R.integer.replantingY6))*avgCost));
                 income7 =(int) ((area * (getResources().getInteger(R.integer.replantingY7))*avgCost));
+                start.post(new Runnable() {
+                    public void run() {
+                        start.setSelection(1);
+                    }
+                });
             }
         });
 

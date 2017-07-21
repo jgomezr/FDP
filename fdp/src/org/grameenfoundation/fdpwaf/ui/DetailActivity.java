@@ -1590,13 +1590,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 						R.array.creditOftenQuarter, android.R.layout.simple_spinner_item);
 				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 				spinner.setAdapter(adapter);
-			} else if (sObject.getOFTENPAY().contentEquals("Monthly")||sObject.getOFTENPAY().contentEquals("Setiap dua tahun")) {
-                Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                        R.array.creditOftenbiannual, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner.setAdapter(adapter);
-            } else if (sObject.getOFTENPAY().contentEquals("Annually")||sObject.getOFTENPAY().contentEquals("Tahunan")) {
+			}  else if (sObject.getOFTENPAY().contentEquals("Annually")||sObject.getOFTENPAY().contentEquals("Tahunan")) {
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenAnnual, android.R.layout.simple_spinner_item);
@@ -1606,6 +1600,12 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                 Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.creditOftenNoSet, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner.setAdapter(adapter);
+            }else if (sObject.getOFTENPAY().contentEquals("Bi annually")) {
+                Spinner spinner = (Spinner) findViewById(R.id.payOftenForCredit_Field);
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                        R.array.creditOftenbiannual, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
             } else {
