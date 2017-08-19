@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/root">
+
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/farmerProfile"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:typeface="normal"
+                android:textSize="18sp"
+                android:background="@color/ptn1" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:maxLines="2"
+                    android:lines="2"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <EditText android:id="@+id/full_name_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    style="@style/FarmerDetail.ParentView.EditText"
+                    android:inputType="textCapWords"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/farmer_code"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    android:maxLines="2"
+                    android:lines="2"
+                    style="@style/FarmerDetail.ParentView.TextView" />
+
+                <EditText android:id="@+id/farmer_code_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".50"
+                    style="@style/FarmerDetail.ParentView.EditText"
+                    android:inputType="textNoSuggestions"
+                    />
+            </LinearLayout>
+            <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/button"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_margin="25dp"
+                android:layout_gravity="center"
+                android:text="@string/save"
+                android:gravity="center"
+                android:padding="6dp"
+                android:onClick="saveFarmer"
+                android:clickable="true" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

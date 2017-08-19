@@ -62,15 +62,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b1227a4-896b-4103-8e92-38145d4316f9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fdp/res/layout/new_farmer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/newFarmer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp-release.apk" afterPath="$PROJECT_DIR$/fdp-release.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/google/android/gms/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/google/android/gms/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/google/android/gms/appindexing/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/google/android/gms/appindexing/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/R$layout.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartstore/R$layout.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartstore/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartstore/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartstore/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartsync/R$layout.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartsync/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartsync/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/com/salesforce/androidsdk/smartsync/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$1.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$ContactListAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$LoadCompleteReceiver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity$NameFieldFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$layout.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$menu.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$string.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$style.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$styleable.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$xml.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/DetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/LogoutDialogFragment.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/LogoutDialogFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/YearDetailActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/YearDetailActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/fdpActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/fdpActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/plotActivity.class" afterPath="$PROJECT_DIR$/fdp/build/intermediates/classes/debug/org/grameenfoundation/fdp/ui/plotActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/zip-cache/t+A72nEZosTlRPn1IuFe4vTK5Bc=" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/zip-cache/t+A72nEZosTlRPn1IuFe4vTK5Bc=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" afterPath="$PROJECT_DIR$/fdp/build/intermediates/pre-dexed/debug/debug_8b4a4e9ee654f271014b22e34552b35046fbe957.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/fdp/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" afterPath="$PROJECT_DIR$/fdp/build/outputs/apk/fdp-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartstore/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartstore/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartsync/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/com/salesforce/androidsdk/smartsync/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/org/grameenfoundation/fdp/R.java" afterPath="$PROJECT_DIR$/fdp/build/generated/source/r/debug/org/grameenfoundation/fdp/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-in.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values-in.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/fdp/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values-in/values-in.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values-in/values-in.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/fdp/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/fdp/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/fdp/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values-in/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/res/values/strings.xml" afterPath="$PROJECT_DIR$/fdp/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" afterPath="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
     </list>
     <ignored path="fdp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,8 +172,8 @@
         <option value="resourceFile" />
         <option value="ASClass" />
         <option value="valueResourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -5824,8 +5871,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/helpers/plotHelper.java" />
-        <option value="$PROJECT_DIR$/fdp/res/xml/file_paths.xml" />
         <option value="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/src/com/salesforce/androidsdk/accounts/UserAccount.java" />
         <option value="$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/build.gradle" />
         <option value="$PROJECT_DIR$/fdp/res/layout/yeardetail_fragment.xml" />
@@ -5853,7 +5898,6 @@
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartSync/build.gradle" />
         <option value="$PROJECT_DIR$/forcedroid/libs/SmartStore/build.gradle" />
         <option value="$PROJECT_DIR$/fdp/res/layout/photo.xml" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" />
         <option value="$PROJECT_DIR$/fdp/res/layout/fdp_fragment.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout/fdp.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout-land/fdp.xml" />
@@ -5865,16 +5909,19 @@
         <option value="$PROJECT_DIR$/fdp/res/values/costs.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/loaders/ContactListLoader.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/objects/ContactObject.java" />
-        <option value="$PROJECT_DIR$/fdp/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/fdp/res/menu/action_bar_menu.xml" />
         <option value="$PROJECT_DIR$/fdp/res/layout/plot.xml" />
-        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
-        <option value="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/fdp/res/values-in/strings.xml" />
-        <option value="$PROJECT_DIR$/fdp/res/layout/detail.xml" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpActivity.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/fdpFragment.java" />
         <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/plotFragment.java" />
+        <option value="$PROJECT_DIR$/fdp/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/fdp/res/layout/detail.xml" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/fdp/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/newFarmer.java" />
+        <option value="$PROJECT_DIR$/fdp/res/layout/new_farmer.xml" />
+        <option value="$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java" />
       </list>
     </option>
   </component>
@@ -5936,56 +5983,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="fdp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp-fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -6488,13 +6485,6 @@
       <option name="presentableId" value="Default" />
       <updated>1466615258775</updated>
     </task>
-    <task id="LOCAL-00013" summary="Year detail changes, question numbering, screen rotation bug fix">
-      <created>1480354172715</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1480354172715</updated>
-    </task>
     <task id="LOCAL-00014" summary="fixes in bugs find by tester dpena.">
       <created>1481585940200</created>
       <option name="number" value="00014" />
@@ -6831,7 +6821,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500670846001</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Fixes in Tree density">
+      <created>1503098739070</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1503098739070</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -6874,6 +6871,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.78327644" sideWeight="0.5182094" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.78327644" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7866894" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -6897,7 +6895,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32423207" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -6972,7 +6969,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/consulteca" />
     </ignored-roots>
-    <MESSAGE value="check validation rules areas done, check gross income done, check recos done, put zero separator done" />
     <MESSAGE value="Change logic for &quot;Change recomendation&quot;" />
     <MESSAGE value="Review Year Delay and add HH savings and investment in FDP Screen" />
     <MESSAGE value="Fu icon menu" />
@@ -6997,7 +6993,8 @@
     <MESSAGE value="Bahasa translations fixes and C20 relocated" />
     <MESSAGE value="improvements in change graf to replant" />
     <MESSAGE value="improvements in presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvements in presentation" />
+    <MESSAGE value="Fixes in Tree density" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes in Tree density" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -7006,26 +7003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/forcedroid/libs/SalesforceSDK/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forcedroid/libs/SmartSync/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forcedroid/libs/SmartStore/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -7186,23 +7163,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/menu/action_bar_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="423" column="21" selection-start-line="423" selection-start-column="21" selection-end-line="423" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -7259,24 +7219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="1976" column="56" selection-start-line="1976" selection-start-column="56" selection-end-line="1976" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
       <provider selected="true" editor-type-id="string-resource-editor">
         <state />
@@ -7290,34 +7232,12 @@
     <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
       <provider selected="true" editor-type-id="string-resource-editor">
         <state />
-      </provider>
-    </entry>
-    <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="121" column="51" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdp/res/values-in/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="150" column="57" selection-start-line="150" selection-start-column="57" selection-end-line="150" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdp/res/layout/detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="1395" column="27" selection-start-line="1395" selection-start-column="27" selection-end-line="1395" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -7383,6 +7303,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="4315" column="69" selection-start-line="4315" selection-start-column="66" selection-end-line="4315" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="android-dummy://C:/Users/julian/Desktop/fdp/fdp-fdp/Translations Editor">
+      <provider selected="true" editor-type-id="string-resource-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/menu/action_bar_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="203" column="28" selection-start-line="203" selection-start-column="28" selection-end-line="203" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/layout/detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="1606" column="43" selection-start-line="1606" selection-start-column="33" selection-end-line="1606" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/newFarmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="106" column="26" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4089#4090#0" expanded="true" />
+            <element signature="e#4111#4112#0" expanded="true" />
+            <element signature="e#5936#5966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/res/layout/new_farmer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding>
+            <element signature="e#841#864#0" expanded="true" />
+            <element signature="e#1449#1468#0" expanded="true" />
+            <element signature="e#2463#2484#0" expanded="true" />
+            <element signature="e#3609#3623#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/src/org/grameenfoundation/fdp/ui/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="889" column="14" selection-start-line="889" selection-start-column="14" selection-end-line="889" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#4593:5552" expanded="false" />
+            <element signature="class#5604:6557" expanded="false" />
+            <element signature="class#6829:8234" expanded="false" />
+            <element signature="method#onItemSelected#0;class#9028:10094" expanded="false" />
+            <element signature="class#areaWatcher#0;class#DetailActivity#0" expanded="false" />
+            <element signature="class#familyWatcher#0;class#DetailActivity#0" expanded="false" />
+            <element signature="class#MoneyTextWatcher#0;class#DetailActivity#0" expanded="false" />
+            <element signature="class#QuantityWatcher#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#dispatchTakePictureIntent#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#DetailActivity#0" expanded="false" />
+            <element signature="method#configureButton#0;class#DetailActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdp/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
           <folding />
         </state>
       </provider>

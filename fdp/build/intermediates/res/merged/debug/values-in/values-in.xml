@@ -945,6 +945,7 @@
     <string name="renovationArea">37. Luas lahan yang ditanami kakao dan sudah  direnovasi (re-planting atau sambung samping) tetapi belum berproduksi secara maksimal</string>
     <string name="renovationHigh">Ukuran renovasi Anda tidak bisa lebih tinggi dari ukuran Cocoa Anda</string>
     <string name="replant">Penanamman kembali</string>
+    <string name="save">Simpan</string>
     <string name="saveContinue">Simpan dan Lanjutkan</string>
     <string name="saved">Simpan Berhasil</string>
     <string name="savingsLabel">Tabungan rumah tangga</string>

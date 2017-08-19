@@ -50,6 +50,7 @@ import org.grameenfoundation.fdp.loaders.ContactListLoader;
 import org.grameenfoundation.fdp.objects.ContactObject;
 import org.grameenfoundation.fdp.ui.DetailActivity;
 import org.grameenfoundation.fdp.ui.LogoutDialogFragment;
+import org.grameenfoundation.fdp.ui.newFarmer;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -198,7 +199,7 @@ public class MainActivity extends SalesforceListActivity implements
 				launchAccountSwitcherActivity();
 				return true;
 			case R.id.action_add:
-				launchDetailActivity(Constants.EMPTY_STRING, "New Farmer",
+				launchNewFarmer(Constants.EMPTY_STRING, "New Farmer",
 						Constants.EMPTY_STRING);
 				return true;
             case R.id.internal_Inspection:
@@ -276,6 +277,16 @@ public class MainActivity extends SalesforceListActivity implements
 
 	private void refreshList(List<ContactObject> data) {
 		listAdapter.setData(data);
+	}
+
+	private void launchNewFarmer(String objId, String objName,
+									  String objTitle) {
+		final Intent newFarmerIntent = new Intent(this, newFarmer.class);
+		newFarmerIntent.addCategory(Intent.CATEGORY_DEFAULT);
+		newFarmerIntent.putExtra(OBJECT_ID_KEY, objId);
+		newFarmerIntent.putExtra(OBJECT_TITLE_KEY, objTitle);
+		newFarmerIntent.putExtra(OBJECT_NAME_KEY, objName);
+		startActivity(newFarmerIntent);
 	}
 
 	private void launchDetailActivity(String objId, String objName,
