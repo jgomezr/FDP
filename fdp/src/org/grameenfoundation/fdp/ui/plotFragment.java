@@ -160,7 +160,25 @@ public class plotFragment extends Fragment  {
                 }else{
                     renovReason.setEnabled(false);
                     renovYear.setEnabled(false);
-
+                    fillingP.setEnabled(true);
+                    geneticP.setEnabled(true);
+                    gapP.setEnabled(true);
+                    soilFertMng.setEnabled(true);
+                    fcondP.setEnabled(true);
+                    ageP.setEnabled(true);
+                    cteP.setEnabled(true);
+                    plantP.setEnabled(true);
+                    tehelP.setEnabled(true);
+                    debDiP.setEnabled(true);
+                    pruniP.setEnabled(true);
+                    pesDiP.setEnabled(true);
+                    weediP.setEnabled(true);
+                    harveP.setEnabled(true);
+                    shadeP.setEnabled(true);
+                    soilCP.setEnabled(true);
+                    orgMaP.setEnabled(true);
+                    fertFP.setEnabled(true);
+                    fertAP.setEnabled(true);
                 }
             }
 

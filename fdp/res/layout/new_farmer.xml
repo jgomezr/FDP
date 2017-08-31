@@ -13,16 +13,6 @@
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/farmerProfile"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                android:typeface="normal"
-                android:textSize="18sp"
-                android:background="@color/ptn1" />
 
             <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"

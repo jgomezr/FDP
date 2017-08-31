@@ -60,7 +60,7 @@
 			</intent-filter>
 		</activity>
 
-		<!-- Detail screen -->
+		<!-- new farmer screen -->
 		<activity android:name="org.grameenfoundation.fdp.ui.newFarmer"
 			android:parentActivityName="org.grameenfoundation.fdp.MainActivity"
 			android:configChanges="orientation|screenSize"
