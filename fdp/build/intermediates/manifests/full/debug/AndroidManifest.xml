@@ -20,6 +20,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-feature android:name="android.hardware.location.gps" />
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -75,6 +76,20 @@
             android:name="org.grameenfoundation.fdpwaf.ui.DetailActivity"
             android:configChanges="orientation|screenSize"
             android:parentActivityName="org.grameenfoundation.fdpwaf.MainActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- new farmer screen -->
+        <activity
+            android:name="org.grameenfoundation.fdpwaf.ui.newFarmer"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="org.grameenfoundation.fdpwaf.MainActivity"
+            android:theme="@style/SalesforceSDK.ActionBarTheme"
             android:windowSoftInputMode="stateHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.DETAIL" />

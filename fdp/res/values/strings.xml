@@ -21,6 +21,7 @@
 	<string name="back">Back</string>
     <string name="takePhoto">Take Photo</string>
     <string name="takeAgree">Agree with photo</string>
+	<string name="save">Save</string>
 
 	<string name="farmerProfile">FARMER FAMILY PROFILE</string>
 	<string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>

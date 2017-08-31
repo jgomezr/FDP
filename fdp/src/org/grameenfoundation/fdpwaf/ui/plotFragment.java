@@ -104,19 +104,21 @@ public class plotFragment extends Fragment  {
                 }else {
                     setText(geneticP, "G");
                 }
-                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3×4")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4×4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("3.5x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 30)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
+                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4x4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("2x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 30)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
                     setText(fcondP, "B");
                 }else{
                     setText(fcondP, "G");
                 }
                 if (pruniP.getSelectedItem().toString().equals("B")||pesDiP.getSelectedItem().toString().equals("B")||weediP.getSelectedItem().toString().equals("B")||harveP.getSelectedItem().toString().equals("B")||shadeP.getSelectedItem().toString().equals("B")){
                     setText(gapP,"B");
+                }else if(pruniP.getSelectedItem().toString().equals("M")||pesDiP.getSelectedItem().toString().equals("M")){
+                    setText(gapP,"M");
                 }else{
                     setText(gapP, "G");
                 }
                 if (soilCP.getSelectedItem().toString().equals("B")||orgMaP.getSelectedItem().toString().equals("B")||fertFP.getSelectedItem().toString().equals("B")||fertAP.getSelectedItem().toString().equals("B")){
                     setText(soilFertMng,"B");
-                }else if (fertFP.getSelectedItem().toString().equals("M")||fertAP.getSelectedItem().toString().equals("M")){
+                }else if (fertFP.getSelectedItem().toString().equals("M")||fertAP.getSelectedItem().toString().equals("M")||orgMaP.getSelectedItem().toString().equals("M")){
                     setText(soilFertMng,"M");
                 }else{
                     setText(soilFertMng,"G");
@@ -158,7 +160,25 @@ public class plotFragment extends Fragment  {
                 }else{
                     renovReason.setEnabled(false);
                     renovYear.setEnabled(false);
-
+                    fillingP.setEnabled(true);
+                    geneticP.setEnabled(true);
+                    gapP.setEnabled(true);
+                    soilFertMng.setEnabled(true);
+                    fcondP.setEnabled(true);
+                    ageP.setEnabled(true);
+                    cteP.setEnabled(true);
+                    plantP.setEnabled(true);
+                    tehelP.setEnabled(true);
+                    debDiP.setEnabled(true);
+                    pruniP.setEnabled(true);
+                    pesDiP.setEnabled(true);
+                    weediP.setEnabled(true);
+                    harveP.setEnabled(true);
+                    shadeP.setEnabled(true);
+                    soilCP.setEnabled(true);
+                    orgMaP.setEnabled(true);
+                    fertFP.setEnabled(true);
+                    fertAP.setEnabled(true);
                 }
             }
 

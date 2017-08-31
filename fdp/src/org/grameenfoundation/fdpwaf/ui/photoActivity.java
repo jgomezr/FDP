@@ -93,7 +93,7 @@ public class photoActivity extends SalesforceActivity implements LoaderManager.L
 
             // Continue only if the File was successfully created
             if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,"com.example.android.fileprovider",photoFile);
+                Uri photoURI = FileProvider.getUriForFile(this,"com.fdpwaf.android.fileprovider",photoFile);
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                     imageToUploadUri = Uri.fromFile(photoFile);

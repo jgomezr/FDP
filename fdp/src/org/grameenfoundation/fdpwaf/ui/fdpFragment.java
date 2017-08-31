@@ -1066,8 +1066,8 @@ public class fdpFragment extends Fragment {
         changeR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replp.setVisibility(View.GONE);
-                grflp.setVisibility(View.VISIBLE);
+                replp.setVisibility(View.VISIBLE);
+                grflp.setVisibility(View.GONE);
                 gaplp.setVisibility(View.VISIBLE);
                 comment.setText("+Change Grafting for Replanting"+plotLB.getText()+"+");
                 final fdpActivity activity2 = (fdpActivity) getActivity();
@@ -1284,7 +1284,7 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age>20 && age<26){
+            if(age>25 && age<30){
                 changeR.setVisibility(View.VISIBLE);
             }
             if (relat == "extra"){

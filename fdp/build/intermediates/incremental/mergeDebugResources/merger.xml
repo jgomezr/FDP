@@ -796,7 +796,7 @@
 		<item>-3</item>
 	</string-array><string-array name="reno2">
 		<item>-2</item>
-	</string-array><string name="full_name">1. Farmer name:</string><string name="expensesCocoaLY">30. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string><string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string><string name="numberSpouses">C1. Number of spouses:</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="nov">November</string><string name="plotHireLabor">61. Hire labor:</string><string-array name="yesNoHire">
+	</string-array><string name="full_name">1. Farmer name:</string><string name="expensesCocoaLY">30. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string><string name="save">Save</string><string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string><string name="numberSpouses">C1. Number of spouses:</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="nov">November</string><string name="plotHireLabor">61. Hire labor:</string><string-array name="yesNoHire">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>Seasonal</item>
@@ -834,7 +834,7 @@
         <item name="android:divider">@color/divider</item>
         <item name="android:icon">@color/icons</item>
         <item name="android:colorAccent">@color/accent</item>
-    </style></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/></source><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\rs\debug"/><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\julian\Desktop\fdp - waf\fdp\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
+    </style></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/><file name="new_farmer" path="C:\Users\julian\Desktop\fdp - waf\fdp\res\layout\new_farmer.xml" qualifiers="" type="layout"/></source><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\rs\debug"/><source path="C:\Users\julian\Desktop\fdp - waf\fdp\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\julian\Desktop\fdp - waf\fdp\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
             <enum name="none" value="0"/>
             <enum name="adjust_width" value="1"/>
             <enum name="adjust_height" value="2"/>

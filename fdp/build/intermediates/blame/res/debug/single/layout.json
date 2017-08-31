@@ -68,6 +68,10 @@
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\layout\\sf__fingerprint_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\new_farmer.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\new_farmer.xml"
+    },
+    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\yeardetail.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\yeardetail.xml"
     },

@@ -1014,7 +1014,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 		final MenuItem addItem = menu.findItem(R.id.action_add);
 		addItem.setVisible(false);
 		final MenuItem refreshItem = menu.findItem(R.id.action_refresh);
-		refreshItem.setIcon(R.drawable.ic_action_save);
+		refreshItem.setVisible(false);
         final MenuItem internal = menu.findItem(R.id.internal_Inspection);
         internal.setVisible(false);
         final MenuItem changeUser = menu.findItem(R.id.action_switch_user);
@@ -1818,13 +1818,35 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
 	}
 
 	public void launchFarm(View view) {
+        final double farmArea;
+        final double farmCocoaArea;
+        final double farmRenArea;
+        final double cultivating;
         final String firstName = ((EditText) findViewById(R.id.full_name_field)).getText().toString();
         final String title = ((EditText) findViewById(R.id.farmer_code_field)).getText().toString();
         final String numberPlots = ((EditText) findViewById(R.id.numberPlots_field)).getText().toString();
-        final double farmArea = Double.parseDouble(((EditText) findViewById(R.id.farmArea_field)).getText().toString());
-        final double farmCocoaArea = Double.parseDouble(((EditText) findViewById(R.id.cocoaArea_field)).getText().toString());
-        final double farmRenArea = Double.parseDouble(((EditText) findViewById(R.id.renovationArea_field)).getText().toString());
-        final double cultivating = Double.parseDouble(((EditText) findViewById(R.id.cultivationArea_field)).getText().toString());
+
+        if(((EditText) findViewById(R.id.farmArea_field)).getText().toString().isEmpty()){
+            farmArea = 0;
+        }else{
+            farmArea = Double.parseDouble(((EditText) findViewById(R.id.farmArea_field)).getText().toString());
+        }
+        if(((EditText) findViewById(R.id.cocoaArea_field)).getText().toString().isEmpty()){
+            farmCocoaArea = 0;
+        }else{
+            farmCocoaArea = Double.parseDouble(((EditText) findViewById(R.id.cocoaArea_field)).getText().toString());
+        }
+        if(((EditText) findViewById(R.id.renovationArea_field)).getText().toString().isEmpty()){
+            farmRenArea = 0;
+        }else{
+            farmRenArea = Double.parseDouble(((EditText) findViewById(R.id.renovationArea_field)).getText().toString());
+        }
+        if(((EditText) findViewById(R.id.cultivationArea_field)).getText().toString().isEmpty()){
+            cultivating = 0;
+        }else{
+            cultivating = Double.parseDouble(((EditText) findViewById(R.id.cultivationArea_field)).getText().toString());
+        }
+
         if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(title)||TextUtils.equals(numberPlots,"0")) {
             Toast.makeText(this, this.getString(R.string.cannotBeEmpty), Toast.LENGTH_LONG).show();
             return;

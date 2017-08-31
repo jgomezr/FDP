@@ -954,6 +954,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             double pA8;
             double pA9;
             double pA10;
+            double tarea;
             if(areP1.getText().toString().isEmpty()||areP2.getText().toString().isEmpty()||areP3.getText().toString().isEmpty()||areP4.getText().toString().isEmpty()||areP5.getText().toString().isEmpty()||areP6.getText().toString().isEmpty()||areP7.getText().toString().isEmpty()||areP8.getText().toString().isEmpty()||areP9.getText().toString().isEmpty()||areP10.getText().toString().isEmpty()){
                 pA1=0;
                 pA2=0;
@@ -1017,7 +1018,12 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     pA10= Double.parseDouble(areP10.getText().toString());
                 }
             }
-            if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getTotalCocoaArea())) {
+            if(sObject.getTotalCocoaArea().isEmpty()){
+                tarea = 0;
+            }else{
+                tarea = Double.parseDouble(sObject.getTotalCocoaArea());
+            }
+            if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>tarea) {
                 editText.setBackgroundColor(Color.parseColor("#cc0000"));
                 Toast.makeText(getApplicationContext(), getString(R.string.plotAreaHiger), Toast.LENGTH_SHORT).show();
             }else{
@@ -1054,6 +1060,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             double pA8;
             double pA9;
             double pA10;
+            double ply;
             if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()||estP6.getText().toString().isEmpty()||estP7.getText().toString().isEmpty()||estP8.getText().toString().isEmpty()||estP9.getText().toString().isEmpty()||estP10.getText().toString().isEmpty()){
                 pA1=0;
                 pA2=0;
@@ -1077,9 +1084,14 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 pA9= Double.parseDouble(estP9.getText().toString());
                 pA10= Double.parseDouble(estP10.getText().toString());
             }
-            if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>Double.parseDouble(sObject.getProductioncocoaly())) {
+            if(sObject.getProductioncocoaly().isEmpty()){
+                ply=0;
+            }else{
+                ply=Double.parseDouble(sObject.getProductioncocoaly());
+            }
+            if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>ply) {
                 Toast.makeText(getApplicationContext(), getString(R.string.productionHiger), Toast.LENGTH_SHORT).show();
-            }else if((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)<Double.parseDouble(sObject.getProductioncocoaly())){
+            }else if((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)<ply){
                 Toast.makeText(getApplicationContext(), getString(R.string.productionLess), Toast.LENGTH_SHORT).show();
             }
         }
@@ -1092,17 +1104,84 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     }
 
     public void launchFdp(View view) {
-        double p1=Double.parseDouble(areP1.getText().toString());
-        double p2=Double.parseDouble(areP2.getText().toString());
-        double p3=Double.parseDouble(areP3.getText().toString());
-        double p4=Double.parseDouble(areP4.getText().toString());
-        double p5=Double.parseDouble(areP5.getText().toString());
-        double p6=Double.parseDouble(areP6.getText().toString());
-        double p7=Double.parseDouble(areP7.getText().toString());
-        double p8=Double.parseDouble(areP8.getText().toString());
-        double p9=Double.parseDouble(areP9.getText().toString());
-        double p10=Double.parseDouble(areP10.getText().toString());
-        double total=Double.parseDouble(sObject.getTotalCocoaArea());
+        double p1;
+        double p2;
+        double p3;
+        double p4;
+        double p5;
+        double p6;
+        double p7;
+        double p8;
+        double p9;
+        double p10;
+        double total;
+
+        if (areP1.getText().toString().isEmpty()){
+            p1 = 0;
+        }else{
+            p1=Double.parseDouble(areP1.getText().toString());
+        }
+
+        if (areP2.getText().toString().isEmpty()){
+            p2 = 0;
+        }else{
+            p2=Double.parseDouble(areP2.getText().toString());
+        }
+
+        if (areP3.getText().toString().isEmpty()){
+            p3 = 0;
+        }else{
+            p3=Double.parseDouble(areP3.getText().toString());
+        }
+
+        if (areP4.getText().toString().isEmpty()){
+            p4 = 0;
+        }else{
+            p4=Double.parseDouble(areP4.getText().toString());
+        }
+
+        if (areP5.getText().toString().isEmpty()){
+            p5 = 0;
+        }else{
+            p5=Double.parseDouble(areP5.getText().toString());
+        }
+
+        if (areP6.getText().toString().isEmpty()){
+            p6 = 0;
+        }else{
+            p6=Double.parseDouble(areP6.getText().toString());
+        }
+
+        if (areP7.getText().toString().isEmpty()){
+            p7 = 0;
+        }else{
+            p7=Double.parseDouble(areP7.getText().toString());
+        }
+
+        if (areP8.getText().toString().isEmpty()){
+            p8 = 0;
+        }else{
+            p8=Double.parseDouble(areP8.getText().toString());
+        }
+
+        if (areP9.getText().toString().isEmpty()){
+            p9 = 0;
+        }else{
+            p9=Double.parseDouble(areP9.getText().toString());
+        }
+
+        if (areP10.getText().toString().isEmpty()){
+            p10 = 0;
+        }else{
+            p10=Double.parseDouble(areP1.getText().toString());
+        }
+
+        if (sObject.getTotalCocoaArea().isEmpty()){
+            total = 0;
+        }else{
+            total=Double.parseDouble(sObject.getTotalCocoaArea());
+        }
+
         if((p1+p2+p3+p4+p5+p6+p7+p8+p9+p10)>total){
             Toast.makeText(this, this.getString(R.string.areaHigher), Toast.LENGTH_SHORT).show();
         }else if(TextUtils.isEmpty(areP1.getText())||TextUtils.isEmpty(areP2.getText())||TextUtils.isEmpty(areP3.getText())||TextUtils.isEmpty(areP4.getText())||TextUtils.isEmpty(areP5.getText())||TextUtils.isEmpty(areP6.getText())||TextUtils.isEmpty(areP7.getText())||TextUtils.isEmpty(areP8.getText())||TextUtils.isEmpty(areP9.getText())||TextUtils.isEmpty(areP10.getText())){
@@ -6295,8 +6374,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else {
                 soilFertMng10.setText(sObject.getSOILMNG10());
             }
-
-            if( Double.parseDouble(sObject.getTotalRenovationArea())<=0){
+            double tra;
+            if (sObject.getTotalRenovationArea().isEmpty()){
+                tra = 0;
+            }else{
+                tra = Double.parseDouble(sObject.getTotalRenovationArea());
+            }
+            if( tra<=0){
                 renovP1.setEnabled(false);
                 renovP2.setEnabled(false);
                 renovP3.setEnabled(false);
