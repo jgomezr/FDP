@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jul 17 17:35:29 COT 2017
+#Thu Aug 31 15:09:19 COT 2017
 76.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
 5.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\folders\\2000\\1f\\main
 86.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
@@ -42,6 +42,7 @@
 8.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\sf__clear_custom_url.xml
 12.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
 8.set=ANDROID_RESOURCE
+89.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\new_farmer.xml
 45.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\folders\\2000\\1f\\main\\lib\\x86\\libsqlcipher_android.so
 46.set=ANDROID_RESOURCE
 55.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\yeardetail_fragment.xml
@@ -88,6 +89,7 @@
 23.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\assets\\debug
 1.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_action_back.png
 71.set=ANDROID_RESOURCE
+89.set=ANDROID_RESOURCE
 82.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\common_signin_btn_text_dark.xml
 33.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\folders\\2000\\1f\\main
 66.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml-v21\\app_restrictions.xml
@@ -95,7 +97,7 @@
 27.set=ANDROID_RESOURCE
 76.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\info.png
 60.set=ANDROID_RESOURCE
-count=89
+count=90
 78.set=ANDROID_RESOURCE
 5.file=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\folders\\2000\\1f\\main\\lib\\armeabi\\libsqlcipher_android.so
 27.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
@@ -205,6 +207,7 @@ count=89
 61.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
 8.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
 11.set=ANDROID_RESOURCE
+89.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\resources-debug.ap_
 29.set=ANDROID_RESOURCE
 45.base=C\:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\folders\\2000\\1f\\main
 62.set=ANDROID_RESOURCE

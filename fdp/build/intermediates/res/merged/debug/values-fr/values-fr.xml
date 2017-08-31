@@ -4,6 +4,14 @@
         <item>Non</item>
         <item>Oui</item>
     </string-array>
+    <string-array name="area1">
+        <item>Ha</item>
+        <item>Ac</item>
+    </string-array>
+    <string-array name="area2">
+        <item>Ac</item>
+        <item>Ha</item>
+    </string-array>
     <string-array name="b_g">
         <item>B</item>
         <item>G</item>
@@ -753,7 +761,6 @@
     <string name="amountOfLoan">C15. Combien vous rembourse-t-on par paiement?</string>
     <string name="ao">OBSERVATIONS D\'ADOPTION</string>
     <string name="aoResults">RÉSULTATS D\'OBSERVATION D\'ADOPTION</string>
-    <string name="app_name"><b>FDP CIV</b></string>
     <string name="apr">Avril</string>
     <string name="area">Superficie</string>
     <string name="areaEmpty">Votre superficie de parcelles ne peut pas être vide</string>
@@ -950,6 +957,7 @@
     <string name="renovationArea">38. Sur la parcelle dédiée au cacao, combien ont été déjà réhabilité/rénové ?</string>
     <string name="renovationHigh">Votre zone de rénovation ne peut pas être supérieure à celle de votre zone de cacao</string>
     <string name="replant">Replanter</string>
+    <string name="save">sauvegarder</string>
     <string name="saveContinue">Sauvegarder et continuer</string>
     <string name="saved">Sauver succès!</string>
     <string name="savingsLabel">Économies du ménage</string>
@@ -985,6 +993,7 @@
     <string name="wantAccount">C19. Vous voulez un compte bancaire?</string>
     <string name="weeding">51. Nettoyage</string>
     <string name="weight">Poids</string>
+    <string name="year">"ANNÉE "</string>
     <string name="year0">Année 0</string>
     <string name="year1">Année 1</string>
     <string name="year2">Année 2</string>

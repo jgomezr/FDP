@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation" >
 	<string name="account_type" translatable="false">org.grameenfoundation.fdpciv.login</string>
 	<string name="app_name" translatable="false"><b>FDP CIV</b></string>
 	<string name="app_package" translatable="false">org.grameenfoundation.fdpciv</string>
@@ -21,6 +21,7 @@
 	<string name="back">Back</string>
     <string name="takePhoto">Take Photo</string>
     <string name="takeAgree">Agree with photo</string>
+	<string name="save">Save</string>
 
 	<string name="farmerProfile">FARMER FAMILY PROFILE</string>
 	<string name="socioeconomicProfile">SOCIOECONOMIC PROFILE</string>

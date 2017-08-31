@@ -1781,6 +1781,7 @@
     <string name="renovationArea">38. Total cocoa planting already under renovation size </string>
     <string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string>
     <string name="replant">Replant</string>
+    <string name="save">Save</string>
     <string name="saveContinue">Save and Continue</string>
     <string name="saved">Save successful!</string>
     <string name="savingsLabel">Household Savings</string>

@@ -58,6 +58,18 @@
 			</intent-filter>
 		</activity>
 
+		<!-- new farmer screen -->
+		<activity android:name="org.grameenfoundation.fdpciv.ui.newFarmer"
+			android:parentActivityName="org.grameenfoundation.fdpciv.MainActivity"
+			android:configChanges="orientation|screenSize"
+			android:theme="@style/SalesforceSDK.ActionBarTheme"
+			android:windowSoftInputMode="stateHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.DETAIL" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
 		<!-- photo screen -->
 		<activity android:name="org.grameenfoundation.fdpciv.ui.photoActivity"
 			android:parentActivityName="org.grameenfoundation.fdpciv.ui.DetailActivity"

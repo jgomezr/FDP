@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
-        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\fdp.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\fdp.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\res\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\sf__fingerprint_dialog.xml",
@@ -130,6 +130,10 @@
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\sf__server_picker.xml",
         "source": "C:\\Users\\julian\\Desktop\\fdp - waf\\forcedroid\\libs\\SalesforceSDK\\build\\intermediates\\bundles\\default\\res\\layout\\sf__server_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\new_farmer.xml",
+        "source": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\layout\\new_farmer.xml"
     },
     {
         "merged": "C:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
