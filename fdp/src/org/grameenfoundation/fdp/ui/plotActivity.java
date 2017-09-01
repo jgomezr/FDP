@@ -1060,6 +1060,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             double pA9;
             double pA10;
             double ply;
+            double lyp;
             if(estP1.getText().toString().isEmpty()||estP2.getText().toString().isEmpty()||estP3.getText().toString().isEmpty()||estP4.getText().toString().isEmpty()||estP5.getText().toString().isEmpty()||estP6.getText().toString().isEmpty()||estP7.getText().toString().isEmpty()||estP8.getText().toString().isEmpty()||estP9.getText().toString().isEmpty()||estP10.getText().toString().isEmpty()){
                 pA1=0;
                 pA2=0;
@@ -1088,9 +1089,14 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else{
                 ply=Double.parseDouble(sObject.getProductioncocoaly());
             }
+            if(sObject.getProductioncocoaly().isEmpty()){
+                lyp=0;
+            }else{
+                lyp=Double.parseDouble(sObject.getProductioncocoaly());
+            }
             if ((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)>ply) {
                 Toast.makeText(getApplicationContext(), getString(R.string.productionHiger), Toast.LENGTH_SHORT).show();
-            }else if((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)<Double.parseDouble(sObject.getProductioncocoaly())){
+            }else if((pA1+pA2+pA3+pA4+pA5+pA6+pA7+pA8+pA9+pA10)<lyp){
                 Toast.makeText(getApplicationContext(), getString(R.string.productionLess), Toast.LENGTH_SHORT).show();
             }
         }
@@ -1172,7 +1178,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         if (areP10.getText().toString().isEmpty()){
             p10 = 0;
         }else{
-            p10=Double.parseDouble(areP1.getText().toString());
+            p10=Double.parseDouble(areP10.getText().toString());
         }
 
         if (sObject.getTotalCocoaArea().isEmpty()){

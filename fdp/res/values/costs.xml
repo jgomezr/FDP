@@ -928,6 +928,7 @@
     <integer name="difLaborY1Nov">375000</integer>
     <integer name="difLaborY1Dec">0</integer>
     <integer name="difLaborY1Total">750000</integer>
+    <integer name="difLaborY1Season">750000</integer>
     <integer name="difLaborY2Jan">0</integer>
     <integer name="difLaborY2Feb">0</integer>
     <integer name="difLaborY2Mar">0</integer>
@@ -941,6 +942,7 @@
     <integer name="difLaborY2Nov">375000</integer>
     <integer name="difLaborY2Dec">0</integer>
     <integer name="difLaborY2Total">750000</integer>
+    <integer name="difLaborY2Season">750000</integer>
     <integer name="difLaborY3Jan">0</integer>
     <integer name="difLaborY3Feb">0</integer>
     <integer name="difLaborY3Mar">0</integer>
@@ -954,6 +956,7 @@
     <integer name="difLaborY3Nov">225000</integer>
     <integer name="difLaborY3Dec">0</integer>
     <integer name="difLaborY3Total">450000</integer>
+    <integer name="difLaborY3Season">450000</integer>
     <integer name="difLaborY4Jan">0</integer>
     <integer name="difLaborY4Feb">0</integer>
     <integer name="difLaborY4Mar">0</integer>

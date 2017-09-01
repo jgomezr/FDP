@@ -76,10 +76,10 @@ public final class R {
         public static final int sf__fingerprint_icon = 0x7f0d0126;
         public static final int sf__fingerprint_status = 0x7f0d0127;
         public static final int sf__layout_root = 0x7f0d011f;
-        public static final int sf__menu_clear_cookies = 0x7f0d015f;
-        public static final int sf__menu_clear_custom_url = 0x7f0d015d;
-        public static final int sf__menu_pick_server = 0x7f0d015e;
-        public static final int sf__menu_reload = 0x7f0d0160;
+        public static final int sf__menu_clear_cookies = 0x7f0d017d;
+        public static final int sf__menu_clear_custom_url = 0x7f0d017b;
+        public static final int sf__menu_pick_server = 0x7f0d017c;
+        public static final int sf__menu_reload = 0x7f0d017e;
         public static final int sf__oauth_webview = 0x7f0d0135;
         public static final int sf__passcode_error = 0x7f0d013a;
         public static final int sf__passcode_forgot = 0x7f0d0139;

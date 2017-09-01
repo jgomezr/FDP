@@ -1791,6 +1791,7 @@
     <integer name="difLaborY1May">375000</integer>
     <integer name="difLaborY1Nov">375000</integer>
     <integer name="difLaborY1Oct">0</integer>
+    <integer name="difLaborY1Season">750000</integer>
     <integer name="difLaborY1Sep">0</integer>
     <integer name="difLaborY1Total">750000</integer>
     <integer name="difLaborY2Apr">0</integer>
@@ -1804,6 +1805,7 @@
     <integer name="difLaborY2May">375000</integer>
     <integer name="difLaborY2Nov">375000</integer>
     <integer name="difLaborY2Oct">0</integer>
+    <integer name="difLaborY2Season">750000</integer>
     <integer name="difLaborY2Sep">0</integer>
     <integer name="difLaborY2Total">750000</integer>
     <integer name="difLaborY3Apr">0</integer>
@@ -1817,6 +1819,7 @@
     <integer name="difLaborY3May">225000</integer>
     <integer name="difLaborY3Nov">225000</integer>
     <integer name="difLaborY3Oct">0</integer>
+    <integer name="difLaborY3Season">450000</integer>
     <integer name="difLaborY3Sep">0</integer>
     <integer name="difLaborY3Total">450000</integer>
     <integer name="difLaborY4Apr">0</integer>
@@ -2443,6 +2446,7 @@
     <string name="village">6. Village:</string>
     <string name="wantAccount">C18. Want a bank account?</string>
     <string name="weeding">50. Weeding:</string>
+    <string name="year">YEAR </string>
     <string name="year0">Year 0</string>
     <string name="year1">Year 1</string>
     <string name="year2">Year 2</string>

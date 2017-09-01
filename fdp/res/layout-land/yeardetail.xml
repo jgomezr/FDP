@@ -7,196 +7,345 @@
     <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/horizontalScrollView" >
+            android:layout_height="wrap_content">
 
             <LinearLayout android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/yearDetail"
-                    android:text=""
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/yearDetail"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jan"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jan"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/feb"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feb"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mar"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mar"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/apr"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apr"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/may"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/may"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jun"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jun"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jul"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jul"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/aug"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aug"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sep"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sep"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/oct"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/oct"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nov"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nov"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
 
-                <TextView android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dec"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="1dp"
-                    android:background="#fff"
-                    style="@style/FarmerDetail.ParentView.TextView" />
-            </LinearLayout>
+                    <TextView android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dec"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="#fff"
+                        style="@style/FarmerDetail.ParentView.TextView" />
+                </LinearLayout>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot1"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot1"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot1"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot1"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot2"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot2"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot2"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot2"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot3"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot3"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot3"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot3"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot4"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot4"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot4"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot4"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot5"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot5"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot5"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot5"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot6"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot6"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot6"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot6"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot7"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot7"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot7"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot7"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot8"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot8"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot8"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot8"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot9"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot9"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot9"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot9"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot10"
                     android:name="org.grameenfoundation.fdp.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot10"
+                    android:name="org.grameenfoundation.fdp.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot10"
+                    android:name="org.grameenfoundation.fdp.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot10"
+                    android:name="org.grameenfoundation.fdp.ui.extraDetailFragment"/>
 
                 <Button android:layout_width="match_parent"
                     android:layout_height="wrap_content"
