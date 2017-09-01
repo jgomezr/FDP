@@ -1179,7 +1179,7 @@ public class fdpFragment extends Fragment {
             }
         });
 
-        DecimalFormat dec = new DecimalFormat("FCFA ###,###,###");
+        DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
 
         if (main == "replant"){
             replp.setVisibility(View.VISIBLE);
