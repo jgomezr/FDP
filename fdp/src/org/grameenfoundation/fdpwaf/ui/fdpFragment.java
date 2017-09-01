@@ -126,6 +126,7 @@ public class fdpFragment extends Fragment {
         changeR = (Button)view.findViewById(R.id.change);
         start =(Spinner)view.findViewById(R.id.startP_field);
 
+
         final fdpActivity activity = (fdpActivity) getActivity();
         start.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
@@ -511,7 +512,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl7)));
                     setText(plpy7, String.valueOf(dec.format(pl7)));
                     activity.calculations();
-                }else if(start.getSelectedItem().toString().equals("Year 2")||start.getSelectedItem().toString().equals("Tahun 2")){
+                }else if(start.getSelectedItem().toString().equals("Year 2")||start.getSelectedItem().toString().equals("Année 2")){
 
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
@@ -593,7 +594,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl5)));
                     setText(plpy7, String.valueOf(dec.format(pl6)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 3")||start.getSelectedItem().toString().equals("Tahun 3")){
+                }else if (start.getSelectedItem().toString().equals("Year 3")||start.getSelectedItem().toString().equals("Année 3")){
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
                         plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -669,7 +670,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl4)));
                     setText(plpy7, String.valueOf(dec.format(pl5)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 4")||start.getSelectedItem().toString().equals("Tahun 4")){
+                }else if (start.getSelectedItem().toString().equals("Year 4")||start.getSelectedItem().toString().equals("Année 4")){
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
                         plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -744,7 +745,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl3)));
                     setText(plpy7, String.valueOf(dec.format(pl4)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 5")||start.getSelectedItem().toString().equals("Tahun 5")){
+                }else if (start.getSelectedItem().toString().equals("Year 5")||start.getSelectedItem().toString().equals("Année 5")){
 
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
@@ -816,7 +817,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl2)));
                     setText(plpy7, String.valueOf(dec.format(pl3)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 6")||start.getSelectedItem().toString().equals("Tahun 6")){
+                }else if (start.getSelectedItem().toString().equals("Year 6")||start.getSelectedItem().toString().equals("Année 6")){
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
                         plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -884,7 +885,7 @@ public class fdpFragment extends Fragment {
                     setText(plpy6, String.valueOf(dec.format(pl1)));
                     setText(plpy7, String.valueOf(dec.format(pl2)));
                     activity.calculations();
-                }else if (start.getSelectedItem().toString().equals("Year 7")||start.getSelectedItem().toString().equals("Tahun 7")){
+                }else if (start.getSelectedItem().toString().equals("Year 7")||start.getSelectedItem().toString().equals("Année 7")){
                     if(pl0 > 0){
                         plpy0.setTextColor(Color.parseColor("#29a329"));
                         plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -1101,8 +1102,8 @@ public class fdpFragment extends Fragment {
                         laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
                         laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
                         labor0 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY1Total)));
-                        labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
-                        labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                        labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                        labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
                         labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
                         labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
                         labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
@@ -1178,7 +1179,7 @@ public class fdpFragment extends Fragment {
             }
         });
 
-        DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
+        DecimalFormat dec = new DecimalFormat("FCFA ###,###,###");
 
         if (main == "replant"){
             replp.setVisibility(View.VISIBLE);
@@ -1212,8 +1213,8 @@ public class fdpFragment extends Fragment {
                     laborD6 = (int) ((area * (getResources().getInteger(R.integer.replantY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
                     laborD7 = (int) ((area * (getResources().getInteger(R.integer.replantY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
                     labor0 = (int) (area * (getResources().getInteger(R.integer.MinGAPSeasonTotal)));
-                    labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
-                    labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
                     labor3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
                     labor4 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
@@ -1284,7 +1285,7 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age>25 && age<30){
+            if(age>25 && age<31){
                 changeR.setVisibility(View.VISIBLE);
             }
             if (relat == "extra"){
@@ -1316,8 +1317,8 @@ public class fdpFragment extends Fragment {
                     laborD6 = (int) ((area * (getResources().getInteger(R.integer.graftY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
                     laborD7 = (int) ((area * (getResources().getInteger(R.integer.graftY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
                     labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSeasonTotal)));
-                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
-                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
                     labor3 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
                     labor4 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
@@ -1472,8 +1473,8 @@ public class fdpFragment extends Fragment {
                     laborD6 = (int) ((area * (getResources().getInteger(R.integer.gapY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
                     laborD7 = (int) ((area * (getResources().getInteger(R.integer.gapY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
                     labor0 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY1Total)));
-                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
-                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
                     labor3 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
                     labor4 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
                     labor5 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
@@ -1900,7 +1901,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl6)));
             setText(plpy6, String.valueOf(dec.format(pl7)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
-        }else if (startYear.equals("N/A")||startYear.equals("Year 1")||startYear.equals("Tahun 1")){
+        }else if (startYear.equals("N/A")||startYear.equals("Year 1")||startYear.equals("Année 1")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
             }else{
@@ -1984,7 +1985,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl5)));
             setText(plpy6, String.valueOf(dec.format(pl6)));
             setText(plpy7, String.valueOf(dec.format(pl7)));
-        }else if (startYear.equals("Year 2")||startYear.equals("Tahun 2")){
+        }else if (startYear.equals("Year 2")||startYear.equals("Année 2")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -2066,7 +2067,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl4)));
             setText(plpy6, String.valueOf(dec.format(pl5)));
             setText(plpy7, String.valueOf(dec.format(pl6)));
-        }else if (startYear.equals("Year 3")||startYear.equals("Tahun 3")){
+        }else if (startYear.equals("Year 3")||startYear.equals("Année 3")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -2142,7 +2143,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl3)));
             setText(plpy6, String.valueOf(dec.format(pl4)));
             setText(plpy7, String.valueOf(dec.format(pl5)));
-        }else if (startYear.equals("Year 4")||startYear.equals("Tahun 4")){
+        }else if (startYear.equals("Year 4")||startYear.equals("Année 4")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -2216,7 +2217,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl2)));
             setText(plpy6, String.valueOf(dec.format(pl3)));
             setText(plpy7, String.valueOf(dec.format(pl4)));
-        }else if (startYear.equals("Year 5")||startYear.equals("Tahun 5")){
+        }else if (startYear.equals("Year 5")||startYear.equals("Année 5")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -2287,7 +2288,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl1)));
             setText(plpy6, String.valueOf(dec.format(pl2)));
             setText(plpy7, String.valueOf(dec.format(pl3)));
-        }else if (startYear.equals("Year 6")||startYear.equals("Tahun 6")){
+        }else if (startYear.equals("Year 6")||startYear.equals("Année 6")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));
@@ -2355,7 +2356,7 @@ public class fdpFragment extends Fragment {
             setText(plpy5, String.valueOf(dec.format(pl0)));
             setText(plpy6, String.valueOf(dec.format(pl1)));
             setText(plpy7, String.valueOf(dec.format(pl2)));
-        }else if (startYear.equals("Year 7")||startYear.equals("Tahun 7")){
+        }else if (startYear.equals("Year 7")||startYear.equals("Année 7")){
             if(pl0 > 0){
                 plpy0.setTextColor(Color.parseColor("#29a329"));
                 plpy1.setTextColor(Color.parseColor("#29a329"));

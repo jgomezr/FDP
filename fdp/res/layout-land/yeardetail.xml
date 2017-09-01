@@ -141,61 +141,211 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot1"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot1"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot1"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot1"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot2"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot2"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot2"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot2"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot3"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot3"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot3"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot3"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot4"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot4"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot4"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot4"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot5"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot5"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot5"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot5"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot6"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot6"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot6"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot6"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot7"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot7"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot7"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot7"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot8"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot8"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot8"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot8"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot9"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot9"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot9"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot9"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <fragment
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/fgPlot10"
-                    android:name="org.grameenfoundation.fdpwaf.ui.yearDelayFragment"/>
+                    android:name="org.grameenfoundation.fdpciv.ui.yearDelayFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgrPlot10"
+                    android:name="org.grameenfoundation.fdpciv.ui.replantDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fggPlot10"
+                    android:name="org.grameenfoundation.fdpciv.ui.graftingDetailFragment"/>
+                <fragment
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fgePlot10"
+                    android:name="org.grameenfoundation.fdpciv.ui.extraDetailFragment"/>
 
                 <Button android:layout_width="match_parent"
                     android:layout_height="wrap_content"

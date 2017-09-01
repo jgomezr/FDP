@@ -232,6 +232,17 @@
     <string name="kg">(Kg):</string>
     <string name="bag">(Bag):</string>
     <string name="qq">(Qq):</string>
+	<string name="pt1">PLOT 1</string>
+	<string name="pt2">PLOT 2</string>
+	<string name="pt3">PLOT 3</string>
+	<string name="pt4">PLOT 4</string>
+	<string name="pt5">PLOT 5</string>
+	<string name="pt6">PLOT 6</string>
+	<string name="pt7">PLOT 7</string>
+	<string name="pt8">PLOT 8</string>
+	<string name="pt9">PLOT 9</string>
+	<string name="pt10">PLOT 10</string>
+	<string name="year">YEAR </string>
 
     <string-array name="creditOften">
         <item>Monthly</item>

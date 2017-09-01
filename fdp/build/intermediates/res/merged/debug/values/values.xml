@@ -1503,7 +1503,15 @@
     <integer name="difInputY5Total">0</integer>
     <integer name="difInputY6Total">0</integer>
     <integer name="difInputY7Total">0</integer>
+    <integer name="difLaborY1May">400</integer>
+    <integer name="difLaborY1Oct">300</integer>
+    <integer name="difLaborY1Season">400</integer>
+    <integer name="difLaborY1Sep">100</integer>
     <integer name="difLaborY1Total">800</integer>
+    <integer name="difLaborY2May">250</integer>
+    <integer name="difLaborY2Oct">150</integer>
+    <integer name="difLaborY2Season">250</integer>
+    <integer name="difLaborY2Sep">100</integer>
     <integer name="difLaborY2Total">500</integer>
     <integer name="difLaborY3Total">0</integer>
     <integer name="difLaborY4Total">0</integer>
