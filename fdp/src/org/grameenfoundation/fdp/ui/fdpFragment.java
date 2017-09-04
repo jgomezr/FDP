@@ -996,7 +996,6 @@ public class fdpFragment extends Fragment {
         changeR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                comment.setText("+Change Grafting for Replanting"+plotLB.getText()+"+");
                 final fdpActivity activity2 = (fdpActivity) getActivity();
                 activity2.comt(plotLB.getText().toString());
                 if (relat == "extra"){

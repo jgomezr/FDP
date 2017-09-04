@@ -520,7 +520,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 spinner.setAdapter(adapter);
             }
 
-            setText(comments,sObject.getReasonNotAgreed());
+            setText(comments,sObject.getFarmerComments());
 
             //Set start year 1
             if (sObject.getStartYearP1().contentEquals("-1")) {
@@ -2500,7 +2500,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         }
     }
     public void comt(String plot){
-        comments.setText("+Change Replant for Grafting "+plot+"+");
+        comments.setText("Change Grafting for Replant "+plot+" ");
     }
 
     public void change(String plot,String reco){
@@ -2553,7 +2553,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     contact.put(ContactObject.RECO10,reco);
                     break;
             }
-            contact.put(ContactObject.REASONSNOTAGREED,coments);
+            contact.put(ContactObject.FARMERCOMMENTS,coments);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -2927,7 +2927,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.STARTYEARP9,start9);
             contact.put(ContactObject.STARTYEARP10,start10);
             contact.put(ContactObject.AGREERECOMENDATIONS,agree);
-            contact.put(ContactObject.REASONSNOTAGREED,coments);
+            contact.put(ContactObject.FARMERCOMMENTS,coments);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
