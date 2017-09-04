@@ -253,7 +253,7 @@
         <item>Year 4</item>
         <item>Year 6</item>
         <item>Year 7</item>
-    </string-array><string name="productionHiger">Your estimated production is greater than that of the previous year</string><string name="app_package" translatable="false">org.grameenfoundation.fdp</string><string name="totalExpenses">Total family expenses:</string><string name="cocoaArea">36. How many hectares are used for cocoa?</string><string name="yearDetailActivityTitle">Year Detail</string><string name="estimatedProduction">41. Estimated production size in kg:</string><string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string><string-array name="reason">
+    </string-array><string name="productionHiger">Your estimated production is greater than production of the previous year</string><string name="app_package" translatable="false">org.grameenfoundation.fdp</string><string name="totalExpenses">Total family expenses:</string><string name="cocoaArea">36. How many hectares are used for cocoa?</string><string name="yearDetailActivityTitle">Year Detail</string><string name="estimatedProduction">41. Estimated production size in kg:</string><string name="areaHigher">Your plots area can not be higher than Cocoa Area on farm, fix it before continue</string><string-array name="reason">
 		<item>N/A</item>
 		<item>Replanting</item>
 		<item>Grafting</item>
@@ -535,7 +535,7 @@
         <item>Micro finance</item>
         <item>Village loan</item>
         <item>Other</item>
-    </string-array><string name="yearsRelationshipWithMars">10. Year started working with or selling to the company:</string><string name="farmCertifications">33. Farm certifications:</string><string name="drainageNeed">58. Drainage need:</string><string name="productionLess">Your estimated production is less than that of the previous year</string><string-array name="reason1">
+    </string-array><string name="yearsRelationshipWithMars">10. Year started working with or selling to the company:</string><string name="farmCertifications">33. Farm certifications:</string><string name="drainageNeed">58. Drainage need:</string><string name="productionLess">Your estimated production is less than production of the previous year</string><string-array name="reason1">
         <item>Replanting</item>
         <item>Grafting</item>
     </string-array><string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string><string name="empty" translatable="false"> </string><string-array name="seasonHire">

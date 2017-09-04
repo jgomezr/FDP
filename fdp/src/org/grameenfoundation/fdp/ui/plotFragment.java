@@ -23,9 +23,9 @@ import org.grameenfoundation.fdp.R;
 
 public class plotFragment extends Fragment  {
     public String renovSize;
-    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP,area;
+    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP,area,reco;
     public Button calc;
-    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP,renov,renovReason,renovYear;
+    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP,renov,renovReason,renovYear,hire;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -56,6 +56,8 @@ public class plotFragment extends Fragment  {
         renovReason = (Spinner) view.findViewById(R.id.reason_field);
         renovYear = (Spinner) view.findViewById(R.id.howLong_field);
         area = (EditText) view.findViewById(R.id.plotArea_field);
+        hire = (Spinner) view.findViewById(R.id.hireP_field);
+        reco = (EditText) view.findViewById(R.id.reco_field);
 
         ph.addTextChangedListener(new TextWatcher() {
             @Override
@@ -124,6 +126,8 @@ public class plotFragment extends Fragment  {
                     setText(soilFertMng,"G");
                 }
 
+                recommendation();
+
                 ((plotActivity)getActivity()).partialSave();
             }
         });
@@ -189,6 +193,34 @@ public class plotFragment extends Fragment  {
         });
 
         return view;
+    }
+
+
+    public void recommendation(){
+        if (fcondP.getText().toString().equals("B")||(Integer.parseInt(ageP.getText().toString()) > 25)) {
+            //Replant
+            if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+                setText(reco,"replanting+extra");
+            } else {
+                setText(reco,"replanting");
+            }
+
+        } else if ((fcondP.getText().toString().equals("G") && (geneticP.getText().toString().equals("B")||geneticP.getText().toString().equals("M"))) || ((Integer.parseInt(ageP.getText().toString()) > 20) && (Integer.parseInt(ageP.getText().toString()) < 26))) {
+            //Graft
+            if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+                setText(reco,"grafting+extra");
+            } else {
+                setText(reco,"grafting");
+            }
+
+        } else if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+            //Extra Soil Management
+            setText(reco,"extra");
+
+        } else {
+            setText(reco,"gap");
+        }
+
     }
 
     public void setrenovSize(String rs){

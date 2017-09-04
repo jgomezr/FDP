@@ -386,6 +386,16 @@ public class ContactObject extends SalesforceObject {
     public static final String PLOT9RENOVATIONYEAR = "plot9RenovationYear__c";
     public static final String PLOT10RENOVATIONYEAR = "plot10RenovationYear__c";
     public static final String COUNTRY = "Country__c";
+    public static final String RECO1 = "reco1__c";
+    public static final String RECO2 = "reco2__c";
+    public static final String RECO3 = "reco3__c";
+    public static final String RECO4 = "reco4__c";
+    public static final String RECO5 = "reco5__c";
+    public static final String RECO6 = "reco6__c";
+    public static final String RECO7 = "reco7__c";
+    public static final String RECO8 = "reco8__c";
+    public static final String RECO9 = "reco9__c";
+    public static final String RECO10 = "reco10__c";
     public static final String[] CONTACT_FIELDS_SYNC_DOWN = {
             FIRST_NAME,
             LAST_NAME,
@@ -756,7 +766,17 @@ public class ContactObject extends SalesforceObject {
             PLOT8RENOVATIONYEAR,
             PLOT9RENOVATIONYEAR,
             PLOT10RENOVATIONYEAR,
-            COUNTRY
+            COUNTRY,
+            RECO1,
+            RECO2,
+            RECO3,
+            RECO4,
+            RECO5,
+            RECO6,
+            RECO7,
+            RECO8,
+            RECO9,
+            RECO10
     };
     public static final String[] CONTACT_FIELDS_SYNC_UP = {
             Constants.ID,
@@ -1129,7 +1149,17 @@ public class ContactObject extends SalesforceObject {
             PLOT8RENOVATIONYEAR,
             PLOT9RENOVATIONYEAR,
             PLOT10RENOVATIONYEAR,
-            COUNTRY
+            COUNTRY,
+            RECO1,
+            RECO2,
+            RECO3,
+            RECO4,
+            RECO5,
+            RECO6,
+            RECO7,
+            RECO8,
+            RECO9,
+            RECO10
     };
 
     public static final String CONTACT_WHERE = "Country__c = 'Indonesia'";
@@ -2192,6 +2222,16 @@ public class ContactObject extends SalesforceObject {
     public String getPLOT9RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT9RENOVATIONYEAR));}
     public String getPLOT10RENOVATIONYEAR() {return sanitizeText(rawData.optString(PLOT10RENOVATIONYEAR));}
     public String getCOUNTRY() {return sanitizeText(rawData.optString(COUNTRY));}
+    public String getRECO1() {return sanitizeText(rawData.optString(RECO1));}
+    public String getRECO2() {return sanitizeText(rawData.optString(RECO2));}
+    public String getRECO3() {return sanitizeText(rawData.optString(RECO3));}
+    public String getRECO4() {return sanitizeText(rawData.optString(RECO4));}
+    public String getRECO5() {return sanitizeText(rawData.optString(RECO5));}
+    public String getRECO6() {return sanitizeText(rawData.optString(RECO6));}
+    public String getRECO7() {return sanitizeText(rawData.optString(RECO7));}
+    public String getRECO8() {return sanitizeText(rawData.optString(RECO8));}
+    public String getRECO9() {return sanitizeText(rawData.optString(RECO9));}
+    public String getRECO10() {return sanitizeText(rawData.optString(RECO10));}
 
     /**
      * Returns whether the contact has been locally modified or not.

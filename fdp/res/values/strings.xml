@@ -229,8 +229,8 @@
     <string name="tool4">Conversion ratio for Wet to Dry is 100:35 or 35%</string>
     <string name="tool5">This is educational expense post secondary schooling and/or beyond normal schooling expense</string>
     <string name="tool6">Farm expenses include all expenses incurred in the production, fermentation, storage and sale of cocoa. Please account for all inputs, labor payments etc</string>
-    <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
-	<string name="productionLess">Your estimated production is less than that of the previous year</string>
+    <string name="productionHiger">Your estimated production is greater than production of the previous year</string>
+	<string name="productionLess">Your estimated production is less than production of the previous year</string>
 	<string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string>
     <string name="areaEmpty">Your plots area cannot be empty</string>
     <string name="areaHiger">Your areas cannot be higher than your Total Land Ownership Area</string>

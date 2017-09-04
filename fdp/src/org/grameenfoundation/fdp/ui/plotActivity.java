@@ -61,7 +61,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     private LocationManager locationManager;
     private LocationListener locationListener;
     public TextView Lp1, Lp2, Lp3, Lp4, Lp5, Lp6, Lp7, Lp8, Lp9, Lp10;
-    public EditText gps1,gps2,gps3,gps4,gps5,gps6,gps7,gps8,gps9,gps10,areP1,areP2,areP3,areP4,areP5,areP6,areP7,areP8,areP9,areP10,estP1,estP2,estP3,estP4,estP5,estP6,estP7,estP8,estP9,estP10,ageP1,steP1,fcondP1,limeNP1,filliP1,ph1,geneticP1,gapP1,soilFertMng1,ageP2,steP2,fcondP2,limeNP2,filliP2,ph2,geneticP2,gapP2,soilFertMng2,ageP3,steP3,fcondP3,limeNP3,filliP3,ph3,geneticP3,gapP3,soilFertMng3,ageP4,steP4,fcondP4,limeNP4,filliP4,ph4,geneticP4,gapP4,soilFertMng4,ageP5,steP5,fcondP5,limeNP5,filliP5,ph5,geneticP5,gapP5,soilFertMng5,ageP6,steP6,fcondP6,limeNP6,filliP6,ph6,geneticP6,gapP6,soilFertMng6,ageP7,steP7,fcondP7,limeNP7,filliP7,ph7,geneticP7,gapP7,soilFertMng7,ageP8,steP8,fcondP8,limeNP8,filliP8,ph8,geneticP8,gapP8,soilFertMng8,ageP9,steP9,fcondP9,limeNP9,filliP9,ph9,geneticP9,gapP9,soilFertMng9,ageP10,steP10,fcondP10,limeNP10,filliP10,ph10,geneticP10,gapP10,soilFertMng10;
+    public EditText gps1,gps2,gps3,gps4,gps5,gps6,gps7,gps8,gps9,gps10,areP1,areP2,areP3,areP4,areP5,areP6,areP7,areP8,areP9,areP10,estP1,estP2,estP3,estP4,estP5,estP6,estP7,estP8,estP9,estP10,ageP1,steP1,fcondP1,limeNP1,filliP1,ph1,geneticP1,gapP1,soilFertMng1,ageP2,steP2,fcondP2,limeNP2,filliP2,ph2,geneticP2,gapP2,soilFertMng2,ageP3,steP3,fcondP3,limeNP3,filliP3,ph3,geneticP3,gapP3,soilFertMng3,ageP4,steP4,fcondP4,limeNP4,filliP4,ph4,geneticP4,gapP4,soilFertMng4,ageP5,steP5,fcondP5,limeNP5,filliP5,ph5,geneticP5,gapP5,soilFertMng5,ageP6,steP6,fcondP6,limeNP6,filliP6,ph6,geneticP6,gapP6,soilFertMng6,ageP7,steP7,fcondP7,limeNP7,filliP7,ph7,geneticP7,gapP7,soilFertMng7,ageP8,steP8,fcondP8,limeNP8,filliP8,ph8,geneticP8,gapP8,soilFertMng8,ageP9,steP9,fcondP9,limeNP9,filliP9,ph9,geneticP9,gapP9,soilFertMng9,ageP10,steP10,fcondP10,limeNP10,filliP10,ph10,geneticP10,gapP10,soilFertMng10,reco1,reco2,reco3,reco4,reco5,reco6,reco7,reco8,reco9,reco10;
     public Spinner cteP1,plantP1,tehelP1,debDiP1,pruniP1,pesDiP1,weediP1,harveP1,shadeP1,soilCP1,orgMaP1,fertFP1,fertAP1,drainP1,hireNP1,cteP2,plantP2,tehelP2,debDiP2,pruniP2,pesDiP2,weediP2,harveP2,shadeP2,soilCP2,orgMaP2,fertFP2,fertAP2,drainP2,hireNP2,cteP3,plantP3,tehelP3,debDiP3,pruniP3,pesDiP3,weediP3,harveP3,shadeP3,soilCP3,orgMaP3,fertFP3,fertAP3,drainP3,hireNP3,cteP4,plantP4,tehelP4,debDiP4,pruniP4,pesDiP4,weediP4,harveP4,shadeP4,soilCP4,orgMaP4,fertFP4,fertAP4,drainP4,hireNP4,cteP5,plantP5,tehelP5,debDiP5,pruniP5,pesDiP5,weediP5,harveP5,shadeP5,soilCP5,orgMaP5,fertFP5,fertAP5,drainP5,hireNP5,cteP6,plantP6,tehelP6,debDiP6,pruniP6,pesDiP6,weediP6,harveP6,shadeP6,soilCP6,orgMaP6,fertFP6,fertAP6,drainP6,hireNP6,cteP7,plantP7,tehelP7,debDiP7,pruniP7,pesDiP7,weediP7,harveP7,shadeP7,soilCP7,orgMaP7,fertFP7,fertAP7,drainP7,hireNP7,cteP8,plantP8,tehelP8,debDiP8,pruniP8,pesDiP8,weediP8,harveP8,shadeP8,soilCP8,orgMaP8,fertFP8,fertAP8,drainP8,hireNP8,cteP9,plantP9,tehelP9,debDiP9,pruniP9,pesDiP9,weediP9,harveP9,shadeP9,soilCP9,orgMaP9,fertFP9,fertAP9,drainP9,hireNP9,cteP10,plantP10,tehelP10,debDiP10,pruniP10,pesDiP10,weediP10,harveP10,shadeP10,soilCP10,orgMaP10,fertFP10,fertAP10,drainP10,hireNP10,renovP1,renovP2,renovP3,renovP4,renovP5,renovP6,renovP7,renovP8,renovP9,renovP10,renovReasonP1,renovReasonP2,renovReasonP3,renovReasonP4,renovReasonP5,renovReasonP6,renovReasonP7,renovReasonP8,renovReasonP9,renovReasonP10,renovYearP1,renovYearP2,renovYearP3,renovYearP4,renovYearP5,renovYearP6,renovYearP7,renovYearP8,renovYearP9,renovYearP10;
     public plotFragment fragment1,fragment2,fragment3,fragment4,fragment5,fragment6,fragment7,fragment8,fragment9,fragment10;
 
@@ -390,6 +390,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         renovYearP8 = (Spinner) fragment8.getView().findViewById(R.id.howLong_field);
         renovYearP9 = (Spinner) fragment9.getView().findViewById(R.id.howLong_field);
         renovYearP10 = (Spinner) fragment10.getView().findViewById(R.id.howLong_field);
+        reco1 = (EditText) fragment1.getView().findViewById(R.id.reco_field);
+        reco2 = (EditText) fragment2.getView().findViewById(R.id.reco_field);
+        reco3 = (EditText) fragment3.getView().findViewById(R.id.reco_field);
+        reco4 = (EditText) fragment4.getView().findViewById(R.id.reco_field);
+        reco5 = (EditText) fragment5.getView().findViewById(R.id.reco_field);
+        reco6 = (EditText) fragment6.getView().findViewById(R.id.reco_field);
+        reco7 = (EditText) fragment7.getView().findViewById(R.id.reco_field);
+        reco8 = (EditText) fragment8.getView().findViewById(R.id.reco_field);
+        reco9 = (EditText) fragment9.getView().findViewById(R.id.reco_field);
+        reco10 = (EditText) fragment10.getView().findViewById(R.id.reco_field);
 
         gps1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -7208,9 +7218,17 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                     spinner.setAdapter(adapter);
                 }
             }
-
+            setText(reco1, sObject.getRECO1());
+            setText(reco2, sObject.getRECO2());
+            setText(reco3, sObject.getRECO3());
+            setText(reco4, sObject.getRECO4());
+            setText(reco5, sObject.getRECO5());
+            setText(reco6, sObject.getRECO6());
+            setText(reco7, sObject.getRECO7());
+            setText(reco8, sObject.getRECO8());
+            setText(reco9, sObject.getRECO9());
+            setText(reco10, sObject.getRECO10());
             ////////////////////////////////////////////////////////
-
         }
     }
 
@@ -7512,6 +7530,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String rYP8 =renovYearP8.getSelectedItem().toString();
         final String rYP9 =renovYearP9.getSelectedItem().toString();
         final String rYP10 =renovYearP10.getSelectedItem().toString();
+        final String recop1 =reco1.getText().toString();
+        final String recop2 =reco2.getText().toString();
+        final String recop3 =reco3.getText().toString();
+        final String recop4 =reco4.getText().toString();
+        final String recop5 =reco5.getText().toString();
+        final String recop6 =reco6.getText().toString();
+        final String recop7 =reco7.getText().toString();
+        final String recop8 =reco8.getText().toString();
+        final String recop9 =reco9.getText().toString();
+        final String recop10 =reco10.getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -7848,6 +7876,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             if(rP10 != "N/A"){
                 contact.put(ContactObject.STARTYEARP10,rYP10);
             }
+            contact.put(ContactObject.RECO1,recop1);
+            contact.put(ContactObject.RECO2,recop2);
+            contact.put(ContactObject.RECO3,recop3);
+            contact.put(ContactObject.RECO4,recop4);
+            contact.put(ContactObject.RECO5,recop5);
+            contact.put(ContactObject.RECO6,recop6);
+            contact.put(ContactObject.RECO7,recop7);
+            contact.put(ContactObject.RECO8,recop8);
+            contact.put(ContactObject.RECO9,recop9);
+            contact.put(ContactObject.RECO10,recop10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -8155,6 +8193,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String rYP8 =renovYearP8.getSelectedItem().toString();
         final String rYP9 =renovYearP9.getSelectedItem().toString();
         final String rYP10 =renovYearP10.getSelectedItem().toString();
+        final String recop1 =reco1.getText().toString();
+        final String recop2 =reco2.getText().toString();
+        final String recop3 =reco3.getText().toString();
+        final String recop4 =reco4.getText().toString();
+        final String recop5 =reco5.getText().toString();
+        final String recop6 =reco6.getText().toString();
+        final String recop7 =reco7.getText().toString();
+        final String recop8 =reco8.getText().toString();
+        final String recop9 =reco9.getText().toString();
+        final String recop10 =reco10.getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -8461,6 +8509,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT8RENOVATIONYEAR,rYP8);
             contact.put(ContactObject.PLOT9RENOVATIONYEAR,rYP9);
             contact.put(ContactObject.PLOT10RENOVATIONYEAR,rYP10);
+            contact.put(ContactObject.RECO1,recop1);
+            contact.put(ContactObject.RECO2,recop2);
+            contact.put(ContactObject.RECO3,recop3);
+            contact.put(ContactObject.RECO4,recop4);
+            contact.put(ContactObject.RECO5,recop5);
+            contact.put(ContactObject.RECO6,recop6);
+            contact.put(ContactObject.RECO7,recop7);
+            contact.put(ContactObject.RECO8,recop8);
+            contact.put(ContactObject.RECO9,recop9);
+            contact.put(ContactObject.RECO10,recop10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);

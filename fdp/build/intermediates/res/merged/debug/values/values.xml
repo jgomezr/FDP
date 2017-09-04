@@ -2324,8 +2324,8 @@
     <string name="plotPL">Plot P&amp;L:</string>
     <string name="postalAddress">8. Postal address:</string>
     <string name="productionCocoaLY">27. What is your total kg production of dry cocoa beans in a crop year or calendar year?</string>
-    <string name="productionHiger">Your estimated production is greater than that of the previous year</string>
-    <string name="productionLess">Your estimated production is less than that of the previous year</string>
+    <string name="productionHiger">Your estimated production is greater than production of the previous year</string>
+    <string name="productionLess">Your estimated production is less than production of the previous year</string>
     <string name="productiveProfile">PRODUCTIVE PROFILE</string>
     <string name="profitOrLost">Profit or Loss</string>
     <string name="pruning">48. Pruning:</string>
