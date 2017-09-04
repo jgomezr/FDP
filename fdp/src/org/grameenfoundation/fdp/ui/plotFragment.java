@@ -83,7 +83,7 @@ public class plotFragment extends Fragment  {
         cteP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("2x4")||cteP.getSelectedItem().toString().equals("3x3.5")||cteP.getSelectedItem().toString().equals("2.5x3")||cteP.getSelectedItem().toString().equals("2.5x3.5")||cteP.getSelectedItem().toString().equals("2.5x4")){
+                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("2x4")||cteP.getSelectedItem().toString().equals("3x3.5")||cteP.getSelectedItem().toString().equals("2.5x3")||cteP.getSelectedItem().toString().equals("2.5x3.5")||cteP.getSelectedItem().toString().equals("2.5x4")||cteP.getSelectedItem().toString().equals("3.5x3.5")||cteP.getSelectedItem().toString().equals("3x4")||cteP.getSelectedItem().toString().equals("2x3.5")){
                     setText(fillingP,"No");
                 }else {
                     setText(fillingP,"Yes");
