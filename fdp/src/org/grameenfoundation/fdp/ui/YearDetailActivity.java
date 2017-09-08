@@ -164,7 +164,7 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             String startY8 = sObject.getStartYearP8();
             String startY9 = sObject.getStartYearP9();
             String startY10 = sObject.getStartYearP10();
-            setText((TextView) findViewById(R.id.yearDetail),(getString(R.string.year)+yearLaunch));
+            setText((TextView) findViewById(R.id.yearDetail),(getString(R.string.year)+" "+yearLaunch));
 
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             //visibility of plots

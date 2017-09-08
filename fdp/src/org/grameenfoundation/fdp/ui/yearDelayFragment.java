@@ -80,8 +80,6 @@ public class yearDelayFragment extends Fragment {
     }
 
     public void calc(String plot, final String relat, final String labor, final Double area, String yearStart, String yearLaunch){
-        int startYear = Integer.parseInt(yearStart.replaceAll("[^0-9]+", ""));
-        int launchYear = Integer.valueOf(yearLaunch);
         int jan = 0;
         int feb = 0;
         int mar = 0;
