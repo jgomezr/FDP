@@ -94,7 +94,7 @@ public class extraDetailFragment extends Fragment {
         int oct = 0;
         int nov = 0;
         int dec = 0;
-        DecimalFormat decF = new DecimalFormat("FCFA ###,###,###");
+        DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
         setText(plt, plot);
 
         if (launchYear < startYear){
@@ -151,19 +151,19 @@ public class extraDetailFragment extends Fragment {
                 dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
             }
         }else{
-            if (yearLaunch.equals("1")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7"))){
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+            if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
+                setText(jlb, "extra 1"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "extra 1"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "extra 1"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "extra 1"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "extra 1"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "extra 1"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "extra 1"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                 if (labor == "labor"){
                     jan = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY1Jan)+getResources().getInteger(R.integer.ExtraSoilLaborY1Jan)));
@@ -206,19 +206,19 @@ public class extraDetailFragment extends Fragment {
                     dec = (int) (area * getResources().getInteger(R.integer.ExtraSoilInputY1Dec));
                 }
 
-            }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
+                setText(jlb, "extra 2"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "extra 2"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "extra 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "extra 2"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "extra 2"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "extra 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "extra 2"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                 if (labor == "labor"){
                     jan = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY2Jan)+getResources().getInteger(R.integer.ExtraSoilLaborY2Jan)));
@@ -261,20 +261,20 @@ public class extraDetailFragment extends Fragment {
                     dec = (int) (area * getResources().getInteger(R.integer.ExtraSoilInputY2Dec));
                 }
 
-            }else if ((yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("1")&& yearStart.equals("-2"))||(yearLaunch.equals("3")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
+            }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, "extra 3"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "extra 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "extra 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "extra 3"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "extra 3"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "extra 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "extra 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY3Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Jan))));

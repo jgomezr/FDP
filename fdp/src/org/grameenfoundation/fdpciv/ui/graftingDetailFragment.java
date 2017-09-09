@@ -94,7 +94,7 @@ public class graftingDetailFragment extends Fragment {
         int oct = 0;
         int nov = 0;
         int dec = 0;
-        DecimalFormat decF = new DecimalFormat("FCFA ###,###,###");
+        DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
         setText(plt, plot);
 
         if (launchYear < startYear){
@@ -151,19 +151,19 @@ public class graftingDetailFragment extends Fragment {
                 dec = (int) (area * getResources().getInteger(R.integer.MGAPDec));
             }
         }else{
-            if (yearLaunch.equals("1")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7"))){
-                setText(jlb, p8+" + "+p9+" + "+p14+" + "+p19+" + "+p24);
-                setText(fblb, p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mrlb, p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(ablb, p16+" + "+p19+" + "+p21+" + "+ p24);
-                setText(mylb, p12+" + "+p15+" + "+p22+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+p16+" + "+p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+p19+" + "+p24);
-                setText(aglb, p16+" + "+p22+" + "+p21+" + "+p24);
-                setText(splb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(oclb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(nvlb, p12+" + "+p15+" + "+p22+" + "+p24);
-                setText(dclb, p11+" + "+p14+" + "+p16+" + "+p19+" + "+p24);
+            if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
+                setText(jlb, "graft 1"+p8+" + "+p9+" + "+p14+" + "+p19+" + "+p24);
+                setText(fblb, "graft 1"+p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+                setText(mrlb, "graft 1"+p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
+                setText(ablb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+ p24);
+                setText(mylb, "graft 1"+p12+" + "+p15+" + "+p22+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 1"+p14+" + "+p16+" + "+p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 1"+p16+" + "+p19+" + "+p24);
+                setText(aglb, "graft 1"+p16+" + "+p22+" + "+p21+" + "+p24);
+                setText(splb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+p24);
+                setText(oclb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+p24);
+                setText(nvlb, "graft 1"+p12+" + "+p15+" + "+p22+" + "+p24);
+                setText(dclb, "graft 1"+p11+" + "+p14+" + "+p16+" + "+p19+" + "+p24);
 
                 if (relat == "extra"){
 
@@ -251,19 +251,19 @@ public class graftingDetailFragment extends Fragment {
                     }
                 }
 
-            }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
-                setText(jlb, p16+" + "+ p19);
-                setText(fblb, p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, p14+" + "+ p16+" + "+ p22+" + "+ p21);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p20+" + "+ p24);
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
+                setText(jlb, "graft 2"+p16+" + "+ p19);
+                setText(fblb, "graft 2"+p16+" + "+ p19+" + "+ p21);
+                setText(mrlb, "graft 2"+p14+" + "+ p16+" + "+ p22+" + "+ p21);
+                setText(ablb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 2"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 2"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "graft 2"+p14+" + "+ p16+" + "+ p20+" + "+ p24);
 
                 if (relat == "extra"){
 
@@ -351,20 +351,20 @@ public class graftingDetailFragment extends Fragment {
                     }
                 }
 
-            }else if ((yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("1")&& yearStart.equals("-2"))||(yearLaunch.equals("3")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
+            }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+p20 +" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p20+" + "+ p24);
+                setText(jlb, "graft 3"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "graft 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 3"+p14+" + "+ p16+" + "+p20 +" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 3"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 3"+p12+" + "+ p15+" + "+ p20+" + "+ p24);
+                setText(dclb, "graft 3"+p14+" + "+ p16+" + "+ p20+" + "+ p24);
 
                 if (relat == "extra"){
 
@@ -452,20 +452,20 @@ public class graftingDetailFragment extends Fragment {
                     }
                 }
 
-            }else if ((yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& yearStart.equals("-2"))||(yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, "graft 4"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "graft 4"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 4"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 4"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 4"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 4"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "graft 4"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
                 if (relat == "extra"){
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
@@ -550,22 +550,22 @@ public class graftingDetailFragment extends Fragment {
                         dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Dec))));
                     }
                 }
-                
-            }else if ((yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("5")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
+
+                setText(jlb, "graft 5"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "graft 5"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 5"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 5"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 5"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 5"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "graft 5"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Feb)))+(area * (getResources().getInteger(R.integer.GraftingLaborY5Feb))));
@@ -606,20 +606,20 @@ public class graftingDetailFragment extends Fragment {
                     nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Nov))));
                     dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Dec))));
                 }
-            }else if ((yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("6")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, "graft 6"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "graft 6"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 6"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 6"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 6"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 6"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "graft 6"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
@@ -662,20 +662,20 @@ public class graftingDetailFragment extends Fragment {
                     dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY6Dec))));
                 }
 
-            }else if ((yearLaunch.equals("6")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-5"))||(yearLaunch.equals("7")&&(yearStart.equals("Year 1")||yearStart.equals("Year 2")||yearStart.equals("Year 3")||yearStart.equals("Year 4")||yearStart.equals("Year 5")||yearStart.equals("Year 6")||yearStart.equals("Year 7")||yearStart.equals("Année 1")||yearStart.equals("Année 2")||yearStart.equals("Année 3")||yearStart.equals("Année 4")||yearStart.equals("Année 5")||yearStart.equals("Année 6")||yearStart.equals("Année 7")))){
+            }else{
 
-                setText(jlb, p16+" + "+ p19+" + "+ p24);
-                setText(fblb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, p16+" + "+ p19+" + "+ p24);
-                setText(aglb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb,  "graft 7"+p16+" + "+ p19+" + "+ p24);
+                setText(fblb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mrlb, "graft 7"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(ablb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(mylb, "graft 7"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jnlb, "graft 7"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(jllb, "graft 7"+p16+" + "+ p19+" + "+ p24);
+                setText(aglb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(splb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(oclb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(nvlb, "graft 7"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
+                setText(dclb, "graft 7"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY7Jan))));
@@ -716,60 +716,6 @@ public class graftingDetailFragment extends Fragment {
                     oct = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Oct))));
                     nov = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Nov))));
                     dec = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Dec))));
-                }
-
-            }else{
-                setText(jlb, p16+" + "+p19+" + "+p24);
-                setText(fblb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mrlb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(ablb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mylb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(jnlb, p12+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(jllb, p16+" + "+p19+" + "+p24);
-                setText(aglb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(splb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(oclb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(nvlb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(dclb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                if (labor == "labor"){
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Dec))));
-                }else if(labor =="season") {
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Dec))));
-                }else{
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec))));
                 }
 
             }
