@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class yearDelayFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -70,6 +70,51 @@ public class yearDelayFragment extends Fragment {
         p22 = getString(R.string.p22);
         p23 = getString(R.string.p23);
         p24 = getString(R.string.p24);
+        p25 = getString(R.string.p25);
+        p26 = getString(R.string.p26);
+        p27 = getString(R.string.p27);
+        p28 = getString(R.string.p28);
+        p29 = getString(R.string.p29);
+        p30 = getString(R.string.p30);
+        p31 = getString(R.string.p31);
+        p32 = getString(R.string.p32);
+        p33 = getString(R.string.p33);
+        p34 = getString(R.string.p34);
+        p35 = getString(R.string.p35);
+        p36 = getString(R.string.p36);
+        p37 = getString(R.string.p37);
+        p38 = getString(R.string.p38);
+        p39 = getString(R.string.p39);
+        p40 = getString(R.string.p40);
+        p41 = getString(R.string.p41);
+        p42 = getString(R.string.p42);
+        p43 = getString(R.string.p43);
+        p44 = getString(R.string.p44);
+        p45 = getString(R.string.p45);
+        p46 = getString(R.string.p46);
+        p47 = getString(R.string.p47);
+        p48 = getString(R.string.p48);
+        p49 = getString(R.string.p49);
+        p50 = getString(R.string.p50);
+        p51 = getString(R.string.p51);
+        p52 = getString(R.string.p52);
+        p53 = getString(R.string.p53);
+        p54 = getString(R.string.p54);
+        p55 = getString(R.string.p55);
+        p56 = getString(R.string.p56);
+        p57 = getString(R.string.p57);
+        p58 = getString(R.string.p58);
+        p59 = getString(R.string.p59);
+        p60 = getString(R.string.p60);
+        p61 = getString(R.string.p61);
+        p62 = getString(R.string.p62);
+        p63 = getString(R.string.p63);
+        p64 = getString(R.string.p64);
+        p65 = getString(R.string.p65);
+        p66 = getString(R.string.p66);
+        p67 = getString(R.string.p67);
+        p68 = getString(R.string.p68);
+        p69 = getString(R.string.p69);
 
         return view;
     }
@@ -93,19 +138,18 @@ public class yearDelayFragment extends Fragment {
         int nov = 0;
         int dec = 0;
         DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
-        setText(jlb, p16+p19+p24);
-        setText(jlb, p16+p19+p24);
-        setText(fblb, p16+p19+p21+p24);
-        setText(mrlb, p14+p16+p19+p21+p24);
-        setText(ablb, p16+p19+p21+p24);
-        setText(mylb, p12+p15+p16+p20+p18+p24);
-        setText(jnlb, p12+p16+p20+p18+p24);
-        setText(jllb, p16+p19+p24);
-        setText(aglb, p16+p19+p21+p24);
-        setText(splb, p16+p19+p21+p24);
-        setText(oclb, p16+p19+p21+p24);
-        setText(nvlb, p12+p15+p16+p20+p18+p24);
-        setText(dclb, p14+p16+p19+p21+p24);
+        setText(jlb, p19);
+        setText(fblb, p19);
+        setText(mrlb, p19+","+p15);
+        setText(ablb, p19);
+        setText(mylb, p19+","+p40+","+p8+","+p54);
+        setText(jnlb, p19+","+p15);
+        setText(jllb, p19);
+        setText(aglb, p19);
+        setText(splb, p19);
+        setText(oclb, p19);
+        setText(nvlb, p19+","+p40+","+p8+","+p54);
+        setText(dclb, p19+","+p15);
         setText(plt, plot);
         if (labor == "labor") {
             jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));

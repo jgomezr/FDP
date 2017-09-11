@@ -213,7 +213,7 @@
         <item>Year 5</item>
         <item>Year 6</item>
         <item>Year 7</item>
-    </string-array><string name="fertilizerApplication">56. Fertilizer fpplication:</string><string name="totalSpouseIncome">C8. How much income does the spouse earn from other sources in a year?</string><string name="giveLoan">20. Has the household given a loan?</string><string-array name="year7">
+    </string-array><string name="fertilizerApplication">56. Fertilizer application:</string><string name="totalSpouseIncome">C8. How much income does the spouse earn from other sources in a year?</string><string name="giveLoan">20. Has the household given a loan?</string><string-array name="year7">
         <item>Year 7</item>
         <item>Year 1</item>
         <item>Year 2</item>
