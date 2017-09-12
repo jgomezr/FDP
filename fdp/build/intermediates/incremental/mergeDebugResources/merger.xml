@@ -143,7 +143,7 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Sekolah Menengah Atas - SMA</item>
         <item>Sarjana - S1</item>
-	</string-array><string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string><string name="haveOtherCrops">31. Do you have additional crops?</string><string name="oct">October</string><string name="profitOrLost">Profit or Loss</string><string-array name="education_SMK">
+	</string-array><string name="childrenVal">Children between 5 and 17 or children enrolled in school cannot be higher than Total number of children</string><string name="p63">Shape pruning and maintenance pruning topping</string><string name="haveOtherCrops">31. Do you have additional crops?</string><string name="p62">Shape pruning</string><string name="p61">Shape and production pruning</string><string name="p60">Re-planting dead young cocoa trees</string><string name="oct">October</string><string name="profitOrLost">Profit or Loss</string><string-array name="education_SMK">
         <item>Sekolah Menengah Kejuaruan - SMK</item>
         <item>Sekolah Dasar - SD</item>
         <item>Sekolah Menengah Pertama - SMP</item>
@@ -160,7 +160,7 @@
         <item>Bi annually</item>
         <item>Annually</item>
         <item>No set frequency</item>
-    </string-array><string name="cultivationArea">35. How many hectares is your total land under cultivation?</string><string name="payOftenForCredit">C12. How often do you pay back?</string><string name="debilitationDisease">47. Debilitating disease:</string><string name="startYear">Start Year</string><string name="plantingMaterial">43. Planting material:</string><string name="year">YEAR </string><string name="netFarming">Total farming income:</string><string name="p9">Fertilizer</string><string name="p8">Pruning/Sanitation</string><string name="averageCocoaPrice">28. What is the average farm gate dry bean cocoa price per kg for last year?</string><string name="fillingOption">59. Filling in or thinning out option:</string><string name="p7">Shade Planting</string><string-array name="education_SMA">
+    </string-array><string name="cultivationArea">35. How many hectares is your total land under cultivation?</string><string name="p67">Thinning out trees</string><string name="p66">Sunlight protection for young trees</string><string name="p65">Shape pruning young trees</string><string name="p64">Shape pruning old trees</string><string name="p69">Weeds control</string><string name="payOftenForCredit">C12. How often do you pay back?</string><string name="p68">Topping and maintenance pruning</string><string name="debilitationDisease">47. Debilitating disease:</string><string name="startYear">Start Year</string><string name="plantingMaterial">43. Planting material:</string><string name="p52">Production and shape pruning young trees</string><string name="p51">Production and shape pruning</string><string name="p50">Pollarding</string><string name="year">YEAR </string><string name="netFarming">Total farming income:</string><string name="p9">Dolomite 100% dose</string><string name="p8">Dolomite</string><string name="averageCocoaPrice">28. What is the average farm gate dry bean cocoa price per kg for last year?</string><string name="fillingOption">59. Filling in or thinning out option:</string><string name="p7">Digging holes for cocoa</string><string-array name="education_SMA">
 		<item>Sekolah Menengah Atas - SMA</item>
         <item>Sekolah Dasar - SD</item>
         <item>Sekolah Menengah Pertama - SMP</item>
@@ -168,13 +168,13 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-	</string-array><string name="p6">Temporary shade</string><string name="netFamily">Net family income:</string><string name="p5">Cocoa re- or inter-planting</string><string name="p4">Cocoa Planting</string><string-array name="sourceLoan">
+	</string-array><string name="p6">Digging holes</string><string name="netFamily">Net family income:</string><string name="p5">Cocoa re-planting</string><string name="p4">Cocoa planting</string><string-array name="sourceLoan">
         <item>Family</item>
         <item>Friends</item>
         <item>Community Savings</item>
         <item>Microcredit Organization</item>
         <item>Bank</item>
-	</string-array><string name="p3">Lining-cocoa and shade</string><string name="p2">Drainage</string><string name="netPlotIncome">Net income from Cocoa:</string><string name="spouseBirthday">C2. Spouse date of birth (year):</string><string name="amountOfLoan">C14. How much does the lender have to pay back?</string><string name="grossCocoaLY">30. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string><string name="lime">Lime</string><string name="saved">Save successful!</string><string-array name="education_SD">
+	</string-array><string name="p3">Clearing</string><string name="p2">Circle weeding</string><string name="netPlotIncome">Net income from Cocoa:</string><string name="p56">Pruning to medium standard</string><string name="p55">Pruning old trees</string><string name="p54">Pruning</string><string name="p53">Production pruning</string><string name="spouseBirthday">C2. Spouse date of birth (year):</string><string name="p59">Reducing canopy old trees</string><string name="p58">Reduce size of mother trees</string><string name="amountOfLoan">C14. How much does the lender have to pay back?</string><string name="grossCocoaLY">30. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string><string name="p57">Pruning to reduce canopy of old trees</string><string name="lime">Lime</string><string name="saved">Save successful!</string><string-array name="education_SD">
         <item>Sekolah Dasar - SD</item>
         <item>Sekolah Menengah Pertama - SMP</item>
         <item>Sekolah Menengah Atas - SMA</item>
@@ -341,7 +341,7 @@
 		<item>N/A</item>
 		<item>G</item>
 		<item>B</item>
-	</string-array><string name="investmentLabel">Planned investments</string><string name="changeR">Change for Replanting</string><string name="p1">Clearing</string><string name="monitoringLabel" translatable="false">Monitoring</string><string name="familyPaidWork">18. Does the other household members contribute to the household income?</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
+	</string-array><string name="investmentLabel">Planned investments</string><string name="changeR">Change for Replanting</string><string name="p1">Basic fertilizers </string><string name="monitoringLabel" translatable="false">Monitoring</string><string name="familyPaidWork">18. Does the other household members contribute to the household income?</string><string name="plot7" translatable="false">Plot 7</string><string name="plot8" translatable="false">Plot 8</string><string name="plotAreaHiger">Your plots area cannot be higher than Cocoa Area on farm</string><string name="plot9" translatable="false">Plot 9</string><string name="gaps">Maintenance (GAPS)</string><string-array name="g_b">
 		<item>G</item>
 		<item>B</item>
 	</string-array><string name="phone">9. Phone number:</string><string-array name="gender_male">
@@ -753,16 +753,16 @@
         <item>UTZ/RA</item>
         <item>UTZ/FT</item>
         <item>RA/FT</item>
-    </string-array><string name="replant">Replant</string><string name="delete">Delete</string><string name="p23">Shade reduction</string><string name="p22">Pruning shape &amp; maintenance</string><string name="p21">Sanitation</string><string name="p20">Reduce size of mother trees</string><string name="autosave">Autosaved</string><string name="aug">August</string><string name="pestDiseaseSanitation">49. Pest and disease and sanitation:</string><string name="p24">Harvest</string><string name="weeding">50. Weeding:</string><string name="plot10" translatable="false">Plot 10</string><string name="takePhoto">Take Photo</string><string name="plotGPS">39. Plot GPS:</string><string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string><string name="jul">July</string><string name="action_refresh">Synchronize</string><string name="no_results_found">No results found</string><string name="farmerProfile">FARMER FAMILY PROFILE</string><string name="otherExpenses">23. How much does the household spend on other expenses (excluding education) in a year?</string><string name="jun">June</string><string name="p19">Maintenance</string><string name="geneticLb">Genetics of plant material:</string><string name="p18">Pruning shape &amp; maintenance</string><string-array name="creditOftenNoSet">
+    </string-array><string name="replant">Replant</string><string name="p29">Heavy pruning</string><string name="p28">Harvest only</string><string name="delete">Delete</string><string name="p23">GAP to medium standard but full P&amp;D</string><string name="p22">GAP (spraying, maintenance pruning) </string><string name="p21">GAP (spraying)</string><string name="p20">GAP (labor and cost adjusted for young, small trees)</string><string name="autosave">Autosaved</string><string name="p27">Harvest</string><string name="p26">Graft/remove plastic</string><string name="aug">August</string><string name="p25">GAP(maintenance pruning)</string><string name="pestDiseaseSanitation">49. Pest and disease and sanitation:</string><string name="p24">GAP(maintenance pruning, herbiciding)</string><string name="weeding">50. Weeding:</string><string name="plot10" translatable="false">Plot 10</string><string name="takePhoto">Take Photo</string><string name="plotGPS">39. Plot GPS:</string><string name="cannotBeEmpty">Farmer Name and Farmer Code cannot be empty or Number of Plots need to be higher than 0 !</string><string name="jul">July</string><string name="action_refresh">Synchronize</string><string name="no_results_found">No results found</string><string name="farmerProfile">FARMER FAMILY PROFILE</string><string name="otherExpenses">23. How much does the household spend on other expenses (excluding education) in a year?</string><string name="jun">June</string><string name="p19">GAP</string><string name="geneticLb">Genetics of plant material:</string><string name="p18">Fertilizer 33% of dose</string><string-array name="creditOftenNoSet">
 		<item>No set frequency</item>
 		<item>Monthly</item>
 		<item>Quarterly</item>
 		<item>Bi annually</item>
 		<item>Annually</item>
-	</string-array><string name="p17">Sanitation</string><string name="year2">Year 2</string><string name="familyLess">The number of family members can not be less than the number of children</string><string name="year1">Year 1</string><string name="year0">Year 0</string><string name="organicMatter">54. Organic matter:</string><string name="year6">Year 6</string><string name="p12">Weeding</string><string-array name="No">
+	</string-array><string name="p17">Fertilizer 200% dose</string><string name="year2">Year 2</string><string name="familyLess">The number of family members can not be less than the number of children</string><string name="year1">Year 1</string><string name="year0">Year 0</string><string name="organicMatter">54. Organic matter:</string><string name="year6">Year 6</string><string name="p12">Dolomite 200% extra dose</string><string-array name="No">
 		<item>No</item>
 		<item>Yes</item>
-	</string-array><string name="year5">Year 5</string><string name="p11">Pollarding</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Graft / Remove plastic</string><string name="year3">Year 3</string><string name="p16">P&amp;D Control &amp; sanitation</string><string name="p15">Organic fert.</string><string name="p14">Fertilizer</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Circle weeding</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="renovated">Was this plot recently renovated?</string><string name="plannedInvestments">24. Does the household have any planned investments? If so, how much have they allocated for the investment?</string><string name="shadeManagement">52. Shade management:</string><string name="plotAge">45. Tree age:</string><string name="numberPlots">38. Number of plots:</string><string-array name="yesNo">
+	</string-array><string name="year5">Year 5</string><string name="p11">Dolomite 200% dose</string><string name="plotActivityTitle">Plot information</string><string name="year4">Year 4</string><string name="p10">Dolomite 150% dose</string><string name="year3">Year 3</string><string name="p16">Fertilizer 150% dose</string><string name="p15">Fertilizer</string><string name="p14">Drainage</string><string name="accountType">C16. Account Type</string><string name="year7">Year 7</string><string name="p13">Dolomite half of extra dose</string><string name="p41">Organic fertilizer 100% dose</string><string name="internalInspection">Internal Inspection</string><string name="yes">Yes</string><string name="renovatedAreaHiger">Your plot renovated size cannot be higher than your under renovation size</string><string name="p40">Organic fertilizer</string><string name="farmingProfile">FARMING ECONOMIC PROFILE</string><string name="gapLb">GAPS:</string><string name="renovated">Was this plot recently renovated?</string><string name="plannedInvestments">24. Does the household have any planned investments? If so, how much have they allocated for the investment?</string><string name="shadeManagement">52. Shade management:</string><string name="plotAge">45. Tree age:</string><string name="numberPlots">38. Number of plots:</string><string-array name="yesNo">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>No</item>
@@ -774,20 +774,20 @@
         <item>Sekolah Menengah Kejuaruan - SMK</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="delete_title">Are you sure?</string><string name="totalIncome">Total income:</string><string name="educational_level">5. Educational level:</string><string name="childrenUnder">C4. Children between 5 to 17 years old:</string><string-array name="reno1">
+    </string-array><string name="p45">Organic fertilizer and dolomite 150% dose</string><string name="p44">Organic fertilizer and dolomite</string><string name="delete_title">Are you sure?</string><string name="p43">Organic fertilizer 200% dose</string><string name="p42">Organic fertilizer 150% dose</string><string name="totalIncome">Total income:</string><string name="p49">Planting new cocoa trees</string><string name="p48">Permanent and temporary shade planting</string><string name="educational_level">5. Educational level:</string><string name="p47">Organic fertilizer half of extra dose</string><string name="childrenUnder">C4. Children between 5 to 17 years old:</string><string name="p46">Organic fertilizer and dolomite 200% dose</string><string-array name="reno1">
 		<item>-1</item>
-	</string-array><string name="inspect_db_button" translatable="false">Inspect DB</string><string name="haveSpouse">11. Spouse:</string><string-array name="reno4">
+	</string-array><string name="p30">Lime</string><string name="inspect_db_button" translatable="false">Inspect DB</string><string name="haveSpouse">11. Spouse:</string><string-array name="reno4">
 		<item>-4</item>
 	</string-array><string-array name="reno3">
 		<item>-3</item>
 	</string-array><string-array name="reno2">
 		<item>-2</item>
-	</string-array><string name="full_name">1. Farmer name:</string><string name="expensesCocoaLY">29. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string><string name="save">Save</string><string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="nov">November</string><string name="plotHireLabor">60. Hire labor:</string><string-array name="yesNoHire">
+	</string-array><string name="full_name">1. Farmer name:</string><string name="expensesCocoaLY">29. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string><string name="save">Save</string><string name="renovationHigh">Your renovation area can not be higher than you Cocoa Area</string><string name="p39">Organic fertilizer 200% dose</string><string name="p34">Maintenance pruning</string><string name="p33">Maintenance and shape pruning</string><string name="fdpActivityTitle">Farm Development Plan</string><string name="p32">Lining cocoa and shade</string><string name="p31">Lime 200% dose</string><string name="nov">November</string><string name="p38">No fertilizer</string><string name="p37">n/s</string><string name="plotHireLabor">60. Hire labor:</string><string-array name="yesNoHire">
 		<item>N/A</item>
 		<item>Yes</item>
 		<item>Seasonal</item>
 		<item>No</item>
-	</string-array></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values\styles.xml" qualifiers=""><style name="FarmerDetail">
+	</string-array><string name="p36">Medium pruning</string><string name="p35">Maintenance pruning and topping shape pruning</string></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values\styles.xml" qualifiers=""><style name="FarmerDetail">
     </style><style name="FarmerDetail.ParentView">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_marginTop">4dp</item>
@@ -802,7 +802,7 @@
         <item name="android:layout_marginLeft">8dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
-    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">"C14. Berapa jumlah pinjaman yang tersisa "</string><string name="plannedInvestments">24. Apakah ada perencanaan untuk investasi selain kebun kakao, berapa biaya yang disiapkan untuk investasi tersebut.</string><string name="geneticLb">Genetik bahan tanam</string><string name="otherExpenses">23. Total pengeluaran yang lain diluar biaya hidup pertahun dan biaya pendidikan</string><string name="mobileMoney">C17. Apakah petani memiliki pilihan mobile bank</string><string name="changeR">Ubah untuk penanaman kembali</string><string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string><string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string><string-array name="cert1">
+    </style></file><file path="C:\Users\julian\Desktop\fdp\fdp\res\values-in\strings.xml" qualifiers="in"><string name="amountOfLoan">"C14. Berapa jumlah pinjaman yang tersisa "</string><string name="plannedInvestments">24. Apakah ada perencanaan untuk investasi selain kebun kakao, berapa biaya yang disiapkan untuk investasi tersebut.</string><string name="geneticLb">Genetik bahan tanam</string><string name="otherExpenses">23. Total pengeluaran yang lain diluar biaya hidup pertahun dan biaya pendidikan</string><string name="p30">Dolomit</string><string name="mobileMoney">C17. Apakah petani memiliki pilihan mobile bank</string><string name="changeR">Ubah untuk penanaman kembali</string><string name="areaHiger">Daerah anda tidak bisa lebih tinggi dari Anda Jumlah Kepemilikan Tanah Lokasi</string><string name="renovatedAreaHiger">Plot ukuran Anda direnovasi tidak bisa lebih tinggi dari ukuran renovasi di bawah Anda</string><string-array name="cert1">
         <item>UTZ</item>
         <item>RA</item>
         <item>FT</item>
@@ -814,7 +814,7 @@
         <item>N/A</item>
         <item>Penanamman kembali</item>
         <item>Sambungan</item>
-    </string-array><string name="plotIncome">Pendapatan dari Plot</string><string name="profitOrLost">Untung dan Rugi</string><string name="plotGPS">49. Mengambil titik GPS plot</string><string-array name="year3">
+    </string-array><string name="p29">Pemangkasan berat</string><string name="p28">Panen saja</string><string name="plotIncome">Pendapatan dari Plot</string><string name="profitOrLost">Untung dan Rugi</string><string name="plotGPS">49. Mengambil titik GPS plot</string><string-array name="year3">
         <item>Tahun 3</item>
         <item>Tahun 1</item>
         <item>Tahun 2</item>
@@ -835,7 +835,7 @@
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
-    </string-array><string name="aug">Agusutus</string><string name="p24">Panen,fermntasi,kering, jual</string><string name="plotPL">Plot Untung dan Rugi</string><string-array name="year4">
+    </string-array><string name="p25">GAP( pemangkasan pemeliharaan)</string><string name="aug">Agusutus</string><string name="p24">GAP( pemangkasan pemeliharaan, pengendalian gulma)</string><string name="plotPL">Plot Untung dan Rugi</string><string-array name="year4">
         <item>Tahun 4</item>
         <item>Tahun 1</item>
         <item>Tahun 2</item>
@@ -872,7 +872,7 @@
         <item>-1</item>
         <item>-3</item>
         <item>-4</item>
-    </string-array><string-array name="year6">
+    </string-array><string name="p27">Panen</string><string-array name="year6">
         <item>Tahun 6</item>
         <item>Tahun 1</item>
         <item>Tahun 2</item>
@@ -893,7 +893,7 @@
         <item>-1</item>
         <item>-2</item>
         <item>-4</item>
-    </string-array><string name="p21">Sanitasi</string><string-array name="year7">
+    </string-array><string name="p26">Penyambungan/pembukaan sungkup</string><string name="p21">GAP(penyemprotan)</string><string-array name="year7">
         <item>Tahun 7</item>
         <item>Tahun 1</item>
         <item>Tahun 2</item>
@@ -901,12 +901,12 @@
         <item>Tahun 4</item>
         <item>Tahun 5</item>
         <item>Tahun 6</item>
-    </string-array><string name="p20">Produksi/bentuk/menguruangi cabang pohon induk</string><string-array name="howLong1">
+    </string-array><string name="p20">GAP (tenaga kerja dan onkos untuk pohon mudah dan kecil)</string><string-array name="howLong1">
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
         <item>-4</item>
-    </string-array><string name="farmCertifications">33. Apakah kebun/petani bergabung dalam program sertifikasi (RA/UTZ)</string><string name="p23">Pengurangan pelindung/peremajaan tanaman tua</string><string-array name="cert7">
+    </string-array><string name="farmCertifications">33. Apakah kebun/petani bergabung dalam program sertifikasi (RA/UTZ)</string><string name="p23">GAP (standar medium), P&amp;D complet</string><string-array name="cert7">
         <item>RA/UTZ/FT</item>
         <item>UTZ</item>
         <item>RA</item>
@@ -914,7 +914,7 @@
         <item>UTZ/RA</item>
         <item>UTZ/FT</item>
         <item>RA/FT</item>
-    </string-array><string name="p22">Pemangkasan bentuk</string><string-array name="cert6">
+    </string-array><string name="p22">GAP(penyemprotan, pemangkasan pemeliharaan)</string><string-array name="cert6">
         <item>RA/FT</item>
         <item>UTZ</item>
         <item>RA</item>
@@ -928,7 +928,7 @@
         <item>Per tigabulan</item>
         <item>Setiap dua tahun</item>
         <item>Tahunan</item>
-    </string-array><string name="manDaysNeed">Kebutuhan pekerja dalam HOK</string><string name="yes">Ya</string><string-array name="year1">
+    </string-array><string name="p41">Pemupukan organik 100% dosis</string><string name="p40">Pemupukan organic</string><string name="manDaysNeed">Kebutuhan pekerja dalam HOK</string><string name="yes">Ya</string><string-array name="year1">
         <item>Tahun 1</item>
         <item>Tahun 2</item>
         <item>Tahun 3</item>
@@ -948,7 +948,7 @@
         <item>N/A</item>
         <item>G</item>
         <item>B</item>
-    </string-array><string name="estimatedProduction">42. Estimasi Produksi (Kg)</string><string name="delete_title">Sudah yakin?</string><string name="gaps">Perawatan (GAPS)</string><string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string><string name="totalCredit">C10. Berapa jumlah utang/kredit yang tersisa</string><string name="birthday">3. Tahun Kelahiran Petani</string><string name="limeNeed">57. Butuh Kapur</string><string name="photoSuccess">Foto diambil dengan sukses</string><string name="giveLoan">20.  Apakah petani atau keluarga memberikan pinjaman ke orang lain diatas 5 juta</string><string name="livingExpenses">22. Total pengeluaran biaya hidup pertahun</string><string name="nov">November</string><string name="payOftenForCredit">C12. Seberapa sering melakukan pembayaran</string><string name="totalSpouseIncome">C8. Jumlah pendapatan bersih dari pekerjaan lain diluar berkebun dan bertani</string><string name="renovated">"Apakah plot ini telah direhabilitasi "</string><string name="numberPlots">39. Jumlah  plot</string><string-array name="treeDistance6">
+    </string-array><string name="estimatedProduction">42. Estimasi Produksi (Kg)</string><string name="delete_title">Sudah yakin?</string><string name="gaps">Perawatan (GAPS)</string><string name="cannotBeEmpty">Nama petani dan Kode petani tidak boleh kosong atau Jumlah Plot harus lebih tinggi dari 0</string><string name="totalCredit">C10. Berapa jumlah utang/kredit yang tersisa</string><string name="p39">Pemupukan organik 200% dosis</string><string name="birthday">3. Tahun Kelahiran Petani</string><string name="p36">Pemangkasan dengan standard medium</string><string name="limeNeed">57. Butuh Kapur</string><string name="photoSuccess">Foto diambil dengan sukses</string><string name="p35">Pemangkasan bentuk &amp; pemeliharaan</string><string name="giveLoan">20.  Apakah petani atau keluarga memberikan pinjaman ke orang lain diatas 5 juta</string><string name="livingExpenses">22. Total pengeluaran biaya hidup pertahun</string><string name="nov">November</string><string name="p38">Tidak pakai pupuk anorganic</string><string name="payOftenForCredit">C12. Seberapa sering melakukan pembayaran</string><string name="totalSpouseIncome">C8. Jumlah pendapatan bersih dari pekerjaan lain diluar berkebun dan bertani</string><string name="p37">n/a</string><string name="renovated">"Apakah plot ini telah direhabilitasi "</string><string name="p32">Pengajiran kakao &amp; pelindung</string><string name="p31">Dolomit 200% dosis</string><string name="numberPlots">39. Jumlah  plot</string><string name="p34">Pemangkasan pemeliharaan</string><string name="p33">Pemangkasan bentuk &amp; pemeliharaan</string><string-array name="treeDistance6">
         <item>4x4</item>
         <item>2x2</item>
         <item>2x2.5</item>
@@ -964,7 +964,7 @@
         <item>3.5x3.5</item>
         <item>3x4</item>
         <item>3.5x4</item>
-    </string-array><string-array name="treeDistance5">
+    </string-array><string name="p50">Pemotongan pohon induk</string><string-array name="treeDistance5">
         <item>3.5x3.5</item>
         <item>2x2</item>
         <item>2x2.5</item>
@@ -997,7 +997,7 @@
         <item>3x4</item>
         <item>3.5x4</item>
         <item>4x4</item>
-    </string-array><string name="replant">Penanamman kembali</string><string name="saved">Simpan Berhasil</string><string-array name="gmb">
+    </string-array><string name="p52">Pemangkasan bentuk dan produksi</string><string name="replant">Penanamman kembali</string><string name="p51">Pemangkasan bentuk dan produksi</string><string name="saved">Simpan Berhasil</string><string-array name="gmb">
         <item>N/A</item>
         <item>G</item>
         <item>M</item>
@@ -1080,7 +1080,7 @@
         <item>Tahun 5</item>
         <item>Tahun 6</item>
         <item>Tahun 7</item>
-    </string-array><string name="grossCocoaLY">30. Pendapatan kotor kakao tahun sebelummnya (panen puncak dan panen tidak puncak)</string><string-array name="treeDistance9">
+    </string-array><string name="p47">Pemupukan organik 150% dosis</string><string name="p46">Pemupukan organik dan dolomit 200% dosis</string><string name="p49">Penanaman sisipan</string><string name="grossCocoaLY">30. Pendapatan kotor kakao tahun sebelummnya (panen puncak dan panen tidak puncak)</string><string name="p48">Penanaman pelindung permanen dan sementara</string><string name="p43">Pemupukan organik 200% dosis</string><string-array name="treeDistance9">
         <item>3x4</item>
         <item>3x3.5</item>
         <item>2.5x3</item>
@@ -1097,7 +1097,7 @@
         <item>3.5x3.5</item>
         <item>3.5x4</item>
         <item>4x4</item>
-    </string-array><string-array name="education_S1">
+    </string-array><string name="p42">Pemupukan organik 150% dosis</string><string name="p45">Pemupukan organik dan dolomit 150% dosis</string><string name="p44">Pemupukan organic dan dolomit</string><string name="p61">Pemangkasan bentuk &amp; produksi</string><string name="p60">Penyisipan pohon muda yang mati</string><string-array name="education_S1">
         <item>Sarjana - S1</item>
         <item>Sekolah Dasar - SD</item>
         <item>Sekolah Menengah Pertama - SMP</item>
@@ -1106,7 +1106,7 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
 
-    </string-array><string name="additionalCrops">C20. Apakah memiliki tanaman lain selain kakao ( termasuk palawija, kopi, dll)</string><string name="farmer_code">2. Kode Kebun/Petani</string><string-array name="sourceLoanFriend">
+    </string-array><string name="p63">Pemangkasan bentuk &amp; pemeliharaan</string><string name="p62">Pemangkasan bentuk</string><string name="additionalCrops">C20. Apakah memiliki tanaman lain selain kakao ( termasuk palawija, kopi, dll)</string><string name="farmer_code">2. Kode Kebun/Petani</string><string-array name="sourceLoanFriend">
         <item>Teman</item>
         <item>Keluarga</item>
         <item>Simpanan di Komunitas</item>
@@ -1120,7 +1120,7 @@
         <item>Madrasah Tsanawiyah - MTS</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="takePhoto">Ambil Foto</string><string name="gender">4. Laki-laki/wanita</string><string name="costInvest">Pengeluaran pemeliharaan/investasi</string><string name="totalExpenses">Total pengeluaran keluarga</string><string name="fertilizerFormulation">56. Formulasi Pupuk</string><string name="moneyBack">C15. Berapa jumlah pinjaman yang telah terbayar</string><string name="fillingOption">59. Butuh Penyisipan</string><string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string><string name="spouseEducationalLevel">C3. Tingkat pendidikan istri/suami</string><string name="saveContinue">Simpan dan Lanjutkan</string><string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string><string name="graft">Sambungan</string><string-array name="yesHire">
+    </string-array><string name="p58">Pengurangan pohon induk</string><string name="p57">Pengurangan tajuk pohon</string><string name="takePhoto">Ambil Foto</string><string name="p59">Pengurangan tajuk pohon</string><string name="gender">4. Laki-laki/wanita</string><string name="p54">Pemangkasan</string><string name="p53">Pemangkasan produksi</string><string name="p56">Pankas dengan standard medium</string><string name="costInvest">Pengeluaran pemeliharaan/investasi</string><string name="totalExpenses">Total pengeluaran keluarga</string><string name="p55">Pemangkasan pohon tua</string><string name="fertilizerFormulation">56. Formulasi Pupuk</string><string name="moneyBack">C15. Berapa jumlah pinjaman yang telah terbayar</string><string name="fillingOption">59. Butuh Penyisipan</string><string name="areasInco">daerah Anda inkonsistensi hadir memperbaikinya sebelum melanjutkan</string><string name="spouseEducationalLevel">C3. Tingkat pendidikan istri/suami</string><string name="saveContinue">Simpan dan Lanjutkan</string><string name="childrenVal">Anak antara 5 dan 17 atau anak yang masih sekolah tidak bisa lebih tinggi dari jumlah anak</string><string name="graft">Sambungan</string><string-array name="yesHire">
         <item>Ya</item>
         <item>Musiman</item>
         <item>Tidak</item>
@@ -1139,7 +1139,7 @@
         <item>Setiap dua tahun</item>
         <item>Tahunan</item>
         <item>Frekuensi tidak terset</item>
-    </string-array><string name="logout_button">Keluar</string><string name="treeHealth">46. Tingkat kesehatan pohon</string><string name="receivesFarmPayment">17. Petani atau anggota keluarga yang menerima upah dari pekerjaan lain diluar bertani dan berkebun</string><string-array name="reason2">
+    </string-array><string name="p69">Pengendalian gulma</string><string name="logout_button">Keluar</string><string name="p68">Pemangkasan bentuk (toping) &amp; pemeliharaan</string><string name="treeHealth">46. Tingkat kesehatan pohon</string><string name="receivesFarmPayment">17. Petani atau anggota keluarga yang menerima upah dari pekerjaan lain diluar bertani dan berkebun</string><string name="p65">Pemangkasan bentuk dan produksi</string><string name="p64">Pemangkasan bentuk &amp; produksi</string><string name="p67">Penjarangan pohon</string><string name="p66">Proteksi pohon mudah</string><string-array name="reason2">
         <item>Sambungan</item>
         <item>Penanamman kembali</item>
     </string-array><string name="reason">"Jenis Rehabilitasi yang dilakukan "</string><string name="village">6. Nama Desa</string><string name="back">Kembali</string><string name="familyLess">Jumlah anggota keluarga tidak bisa kurang dari jumlah anak</string><string name="may">Mei</string><string name="extraSoil">Tambahan manajemen tanah</string><string name="mar">Maret</string><string-array name="reason1">
@@ -1378,7 +1378,7 @@
         <item>M</item>
         <item>G</item>
         <item>B</item>
-    </string-array><string name="netOtherCrops">Pendapatan bersih dari tanaman lain</string><string name="p5">penananaman kembali atau penyisipan</string><string name="spouseName">"C1. Nama Istri/Suami "</string><string name="apr">April</string><string name="drainage">Drainase</string><string name="p4">Penanaman cocoa</string><string name="p3">Pengajiran cocoa dan pelindung</string><string name="p2">Drainase</string><string name="postalAddress">8. Alamat Rumah</string><string name="p9">Pemupukan</string><string name="p8">Pemangkasan/sanitasi</string><string name="p7">Penanaman pelindung</string><string name="p6">Daun kelapa - pelindung sementara</string><string name="bankAccount">26. Apakah petani mempunyai rekening Bank</string><string name="cultivationArea">"35. Total luas lahan yang digunakan untuk berkebun atau bertani "</string><string name="p1">Pembersihan</string><string name="jan">Januari</string><string name="getLocation">Dapatkan Lokasi</string><string name="haveSpouse">11. Ada Istri/Suami</string><string-array name="education_SMA">
+    </string-array><string name="netOtherCrops">Pendapatan bersih dari tanaman lain</string><string name="p5">Penyulaman</string><string name="spouseName">"C1. Nama Istri/Suami "</string><string name="apr">April</string><string name="drainage">Drainase</string><string name="p4">Penanaman kakao</string><string name="p3">Pengajiran cocoa dan pelindung</string><string name="p2">Pembersihan piringan</string><string name="postalAddress">8. Alamat Rumah</string><string name="p9">Pemupukan</string><string name="p8">Pemangkasan/sanitasi</string><string name="p7">Penanaman pelindung</string><string name="p6">Penyiapan lubang tanam penyisipan</string><string name="bankAccount">26. Apakah petani mempunyai rekening Bank</string><string name="cultivationArea">"35. Total luas lahan yang digunakan untuk berkebun atau bertani "</string><string name="p1">Pupuk dasar</string><string name="jan">Januari</string><string name="getLocation">Dapatkan Lokasi</string><string name="haveSpouse">11. Ada Istri/Suami</string><string-array name="education_SMA">
         <item>Sekolah Menengah Atas - SMA</item>
         <item>Sekolah Dasar - SD</item>
         <item>Sekolah Menengah Pertama - SMP</item>
@@ -1462,7 +1462,7 @@
         <item>Sekolah Menengah Kejuaruan - SMK</item>
         <item>Madrasah Aliyah Kejuruan - MAK</item>
         <item>Sarjana - S1</item>
-    </string-array><string name="childrenUnder">C4. Jumlah anak yang berumur 5 sampai 17 tahun</string><string name="fertilizerApplication">57. Aplikasi Pupuk</string><string name="farmArea">34. Total luas lahan tanah yang dimiliki atau yang bisa digunakan (Ha)</string><string name="yearsRelationshipWithMars">10. Tahun bekerjasama dengan perusahaan</string><string name="sourceCredit">C11. Dari mana/siapa mengambil pinjaman/kredit</string><string name="save">Simpan</string><string name="app_name"><b>FDP</b></string><string name="autosave">Simpan Otomatis</string><string name="p17">Sanitasi</string><string name="p18">Pemangkasan Pemeliharaan</string><string name="calcAO">Menghitung</string><string name="p19">Pemangkasan Pemeliharaan + Panen</string><string name="p13">"Pengendalian Rumput "</string><string name="p14">"Pemupukan NPK + Pengendalian Hama/Penyakit + Folior "</string><string name="p15">Aplikasi kapur, pupuk organik</string><string name="p16">"Pengendalian Hama/penyakit + Folior "</string><string name="p10">Pekerjaan penyambungan/mengeluarkan plastik</string><string name="p11">Polladring/sanitasi, memotong batang induk setelah menyambung</string><string name="p12">Menyemprot pestisida atau melakukan secara manual</string></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/><file name="new_farmer" path="C:\Users\julian\Desktop\fdp\fdp\res\layout\new_farmer.xml" qualifiers="" type="layout"/></source><source path="C:\Users\julian\Desktop\fdp\fdp\build\generated\res\rs\debug"/><source path="C:\Users\julian\Desktop\fdp\fdp\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\julian\Desktop\fdp\fdp\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
+    </string-array><string name="childrenUnder">C4. Jumlah anak yang berumur 5 sampai 17 tahun</string><string name="fertilizerApplication">57. Aplikasi Pupuk</string><string name="farmArea">34. Total luas lahan tanah yang dimiliki atau yang bisa digunakan (Ha)</string><string name="yearsRelationshipWithMars">10. Tahun bekerjasama dengan perusahaan</string><string name="sourceCredit">C11. Dari mana/siapa mengambil pinjaman/kredit</string><string name="save">Simpan</string><string name="app_name"><b>FDP</b></string><string name="autosave">Simpan Otomatis</string><string name="p17">Pemupukan anorganic 200% dose</string><string name="p18">Pupuk anorganic 33% dari dose</string><string name="calcAO">Menghitung</string><string name="p19">GAP</string><string name="p13">dolomit 150% dosis</string><string name="p14">Drainase</string><string name="p15">Pemupukan anorganik</string><string name="p16">Pemupukan anorganic 150% dose</string><string name="p10">Dolomit 150% dosis</string><string name="p11">Dolomite 200% dosis</string><string name="p12">Dolomit 200% dosis</string></file><file name="farmer_sync_adapter" path="C:\Users\julian\Desktop\fdp\fdp\res\xml\farmer_sync_adapter.xml" qualifiers="" type="xml"/><file name="file_paths" path="C:\Users\julian\Desktop\fdp\fdp\res\xml\file_paths.xml" qualifiers="" type="xml"/><file name="new_farmer" path="C:\Users\julian\Desktop\fdp\fdp\res\layout\new_farmer.xml" qualifiers="" type="layout"/></source><source path="C:\Users\julian\Desktop\fdp\fdp\build\generated\res\rs\debug"/><source path="C:\Users\julian\Desktop\fdp\fdp\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\julian\Desktop\fdp\fdp\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust">
             <enum name="none" value="0"/>
             <enum name="adjust_width" value="1"/>
             <enum name="adjust_height" value="2"/>

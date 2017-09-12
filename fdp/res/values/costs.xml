@@ -1046,8 +1046,8 @@
     <integer name="difInputY3Jul">0</integer>
     <integer name="difInputY3Aug">0</integer>
     <integer name="difInputY3Sep">0</integer>
-    <integer name="difInputY3Oct">0</integer>
-    <integer name="difInputY3Nov">1462500</integer>
+    <integer name="difInputY3Oct">1462500</integer>
+    <integer name="difInputY3Nov">0</integer>
     <integer name="difInputY3Dec">0</integer>
     <integer name="difInputY3Total">1925000</integer>
     <integer name="difInputY4Jan">0</integer>

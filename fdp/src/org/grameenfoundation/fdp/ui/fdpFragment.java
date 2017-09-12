@@ -35,6 +35,7 @@ public class fdpFragment extends Fragment {
     int income6 = 0;
     int income7 = 0;
     int cost0 = 0;
+    int cost00 = 0;
     int cost1 = 0;
     int cost2 = 0;
     int cost3 = 0;
@@ -491,7 +492,7 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income5)));
                     setText(incomeY7, String.valueOf(dec.format(income6)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
                     setText(costY2, String.valueOf(dec.format(cost1)));
                     setText(costY3, String.valueOf(dec.format(cost2)));
                     setText(costY4, String.valueOf(dec.format(cost3)));
@@ -567,8 +568,8 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income4)));
                     setText(incomeY7, String.valueOf(dec.format(income5)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
-                    setText(costY2, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
+                    setText(costY2, String.valueOf(dec.format(cost00)));
                     setText(costY3, String.valueOf(dec.format(cost1)));
                     setText(costY4, String.valueOf(dec.format(cost2)));
                     setText(costY5, String.valueOf(dec.format(cost3)));
@@ -642,9 +643,9 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income3)));
                     setText(incomeY7, String.valueOf(dec.format(income4)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
-                    setText(costY2, String.valueOf(dec.format(cost0)));
-                    setText(costY3, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
+                    setText(costY2, String.valueOf(dec.format(cost00)));
+                    setText(costY3, String.valueOf(dec.format(cost00)));
                     setText(costY4, String.valueOf(dec.format(cost1)));
                     setText(costY5, String.valueOf(dec.format(cost2)));
                     setText(costY6, String.valueOf(dec.format(cost3)));
@@ -714,10 +715,10 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income2)));
                     setText(incomeY7, String.valueOf(dec.format(income3)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
-                    setText(costY2, String.valueOf(dec.format(cost0)));
-                    setText(costY3, String.valueOf(dec.format(cost0)));
-                    setText(costY4, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
+                    setText(costY2, String.valueOf(dec.format(cost00)));
+                    setText(costY3, String.valueOf(dec.format(cost00)));
+                    setText(costY4, String.valueOf(dec.format(cost00)));
                     setText(costY5, String.valueOf(dec.format(cost1)));
                     setText(costY6, String.valueOf(dec.format(cost2)));
                     setText(costY7, String.valueOf(dec.format(cost3)));
@@ -782,11 +783,11 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income1)));
                     setText(incomeY7, String.valueOf(dec.format(income2)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
-                    setText(costY2, String.valueOf(dec.format(cost0)));
-                    setText(costY3, String.valueOf(dec.format(cost0)));
-                    setText(costY4, String.valueOf(dec.format(cost0)));
-                    setText(costY5, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
+                    setText(costY2, String.valueOf(dec.format(cost00)));
+                    setText(costY3, String.valueOf(dec.format(cost00)));
+                    setText(costY4, String.valueOf(dec.format(cost00)));
+                    setText(costY5, String.valueOf(dec.format(cost00)));
                     setText(costY6, String.valueOf(dec.format(cost1)));
                     setText(costY7, String.valueOf(dec.format(cost2)));
                     setText(lnpy0, String.valueOf(laborD0));
@@ -847,12 +848,12 @@ public class fdpFragment extends Fragment {
                     setText(incomeY6, String.valueOf(dec.format(income0)));
                     setText(incomeY7, String.valueOf(dec.format(income1)));
                     setText(costY0, String.valueOf(dec.format(cost0)));
-                    setText(costY1, String.valueOf(dec.format(cost0)));
-                    setText(costY2, String.valueOf(dec.format(cost0)));
-                    setText(costY3, String.valueOf(dec.format(cost0)));
-                    setText(costY4, String.valueOf(dec.format(cost0)));
-                    setText(costY5, String.valueOf(dec.format(cost0)));
-                    setText(costY6, String.valueOf(dec.format(cost0)));
+                    setText(costY1, String.valueOf(dec.format(cost00)));
+                    setText(costY2, String.valueOf(dec.format(cost00)));
+                    setText(costY3, String.valueOf(dec.format(cost00)));
+                    setText(costY4, String.valueOf(dec.format(cost00)));
+                    setText(costY5, String.valueOf(dec.format(cost00)));
+                    setText(costY6, String.valueOf(dec.format(cost00)));
                     setText(costY7, String.valueOf(dec.format(cost1)));
                     setText(lnpy0, String.valueOf(laborD0));
                     setText(lnpy1, String.valueOf(laborD0));
@@ -1050,6 +1051,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MinGAPTotal)));
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
                 cost3 = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
@@ -1094,6 +1096,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) (area * (getResources().getInteger(R.integer.ReplantingSeasonY7Total)));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MinGAPTotal)));
                 cost1 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Total)));
                 cost3 = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY3Total)));
@@ -1154,6 +1157,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.GraftingSeasonY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
                 cost3 = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
@@ -1198,6 +1202,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) (area * (getResources().getInteger(R.integer.GraftingSeasonY7Total)));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
                 cost1 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Total)));
                 cost3 = (int) (area * (getResources().getInteger(R.integer.GraftingInputY3Total)));
@@ -1254,6 +1259,7 @@ public class fdpFragment extends Fragment {
                 labor7 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilSeasonY7Total)));
             }
             cost0 = (int) (area * fCost);
+            cost00 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
             cost1 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY1Total)));
             cost2 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY2Total)));
             cost3 = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY3Total)));
@@ -1310,6 +1316,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) ((area * (getResources().getInteger(R.integer.GAPSeasonY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
                 cost1 = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
                 cost2 = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
                 cost3 = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
@@ -1354,6 +1361,7 @@ public class fdpFragment extends Fragment {
                     labor7 = (int) (area * (getResources().getInteger(R.integer.GAPSeasonY1Total)));
                 }
                 cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
                 cost1 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
                 cost2 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
                 cost3 = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Total)));
@@ -1816,7 +1824,7 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income5)));
             setText(incomeY7, String.valueOf(dec.format(income6)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
             setText(costY2, String.valueOf(dec.format(cost1)));
             setText(costY3, String.valueOf(dec.format(cost2)));
             setText(costY4, String.valueOf(dec.format(cost3)));
@@ -1892,8 +1900,8 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income4)));
             setText(incomeY7, String.valueOf(dec.format(income5)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
-            setText(costY2, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
+            setText(costY2, String.valueOf(dec.format(cost00)));
             setText(costY3, String.valueOf(dec.format(cost1)));
             setText(costY4, String.valueOf(dec.format(cost2)));
             setText(costY5, String.valueOf(dec.format(cost3)));
@@ -1966,9 +1974,9 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income3)));
             setText(incomeY7, String.valueOf(dec.format(income4)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
-            setText(costY2, String.valueOf(dec.format(cost0)));
-            setText(costY3, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
+            setText(costY2, String.valueOf(dec.format(cost00)));
+            setText(costY3, String.valueOf(dec.format(cost00)));
             setText(costY4, String.valueOf(dec.format(cost1)));
             setText(costY5, String.valueOf(dec.format(cost2)));
             setText(costY6, String.valueOf(dec.format(cost3)));
@@ -2037,10 +2045,10 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income2)));
             setText(incomeY7, String.valueOf(dec.format(income3)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
-            setText(costY2, String.valueOf(dec.format(cost0)));
-            setText(costY3, String.valueOf(dec.format(cost0)));
-            setText(costY4, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
+            setText(costY2, String.valueOf(dec.format(cost00)));
+            setText(costY3, String.valueOf(dec.format(cost00)));
+            setText(costY4, String.valueOf(dec.format(cost00)));
             setText(costY5, String.valueOf(dec.format(cost1)));
             setText(costY6, String.valueOf(dec.format(cost2)));
             setText(costY7, String.valueOf(dec.format(cost3)));
@@ -2105,11 +2113,11 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income1)));
             setText(incomeY7, String.valueOf(dec.format(income2)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
-            setText(costY2, String.valueOf(dec.format(cost0)));
-            setText(costY3, String.valueOf(dec.format(cost0)));
-            setText(costY4, String.valueOf(dec.format(cost0)));
-            setText(costY5, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
+            setText(costY2, String.valueOf(dec.format(cost00)));
+            setText(costY3, String.valueOf(dec.format(cost00)));
+            setText(costY4, String.valueOf(dec.format(cost00)));
+            setText(costY5, String.valueOf(dec.format(cost00)));
             setText(costY6, String.valueOf(dec.format(cost1)));
             setText(costY7, String.valueOf(dec.format(cost2)));
             setText(lnpy0, String.valueOf(laborD0));
@@ -2170,12 +2178,12 @@ public class fdpFragment extends Fragment {
             setText(incomeY6, String.valueOf(dec.format(income0)));
             setText(incomeY7, String.valueOf(dec.format(income1)));
             setText(costY0, String.valueOf(dec.format(cost0)));
-            setText(costY1, String.valueOf(dec.format(cost0)));
-            setText(costY2, String.valueOf(dec.format(cost0)));
-            setText(costY3, String.valueOf(dec.format(cost0)));
-            setText(costY4, String.valueOf(dec.format(cost0)));
-            setText(costY5, String.valueOf(dec.format(cost0)));
-            setText(costY6, String.valueOf(dec.format(cost0)));
+            setText(costY1, String.valueOf(dec.format(cost00)));
+            setText(costY2, String.valueOf(dec.format(cost00)));
+            setText(costY3, String.valueOf(dec.format(cost00)));
+            setText(costY4, String.valueOf(dec.format(cost00)));
+            setText(costY5, String.valueOf(dec.format(cost00)));
+            setText(costY6, String.valueOf(dec.format(cost00)));
             setText(costY7, String.valueOf(dec.format(cost1)));
             setText(lnpy0, String.valueOf(laborD0));
             setText(lnpy1, String.valueOf(laborD0));

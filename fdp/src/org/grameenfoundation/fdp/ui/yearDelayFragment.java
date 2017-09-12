@@ -140,16 +140,16 @@ public class yearDelayFragment extends Fragment {
         DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
         setText(jlb, p19);
         setText(fblb, p19);
-        setText(mrlb, p19+","+p15);
+        setText(mrlb, p19 + ", " + p15);
         setText(ablb, p19);
-        setText(mylb, p19+","+p40+","+p8+","+p54);
-        setText(jnlb, p19+","+p15);
+        setText(mylb, p19 + ", " + p40 + ", " + p8 + ", " + p54);
+        setText(jnlb, p19 + ", " + p15);
         setText(jllb, p19);
         setText(aglb, p19);
         setText(splb, p19);
         setText(oclb, p19);
-        setText(nvlb, p19+","+p40+","+p8+","+p54);
-        setText(dclb, p19+","+p15);
+        setText(nvlb, p19 + ", " + p40 + ", " + p8 + ", " + p54);
+        setText(dclb, p19 + ", " + p15);
         setText(plt, plot);
         if (labor == "labor") {
             jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));

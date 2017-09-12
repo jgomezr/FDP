@@ -106,7 +106,7 @@
     <string name="p10">Dolomit 150% dosis</string>
     <string name="p11">Dolomite 200% dosis</string>
     <string name="p12">Dolomit 200% dosis</string>
-    <string name="p13">dolomit 150% dosis</string>
+    <string name="p13">Dolomit 150% dosis</string>
     <string name="p14">Drainase</string>
     <string name="p15">Pemupukan anorganik</string>
     <string name="p16">Pemupukan anorganic 150% dose</string>
@@ -119,13 +119,13 @@
     <string name="p22">GAP(penyemprotan, pemangkasan pemeliharaan)</string>
     <string name="p23">GAP (standar medium), P&amp;D complet</string>
     <string name="p24">GAP( pemangkasan pemeliharaan, pengendalian gulma)</string>
-    <string name="p3">Pengajiran cocoa dan pelindung</string>
+    <string name="p3">Pembersihan lahan</string>
     <string name="p4">Penanaman kakao</string>
     <string name="p5">Penyulaman</string>
-    <string name="p6">Penyiapan lubang tanam penyisipan</string>
+    <string name="p6">Pembuatan lubang tanam</string>
     <string name="p7">Penanaman pelindung</string>
-    <string name="p8">Pemangkasan/sanitasi</string>
-    <string name="p9">Pemupukan</string>
+    <string name="p8">Dolomit</string>
+    <string name="p9">Dolomit 100% dosis</string>
     <string name="payForCredit">"C13. Berapa jumlah angsuran pada setiap pembayaran "</string>
     <string name="payOftenForCredit">C12. Seberapa sering melakukan pembayaran</string>
     <string name="pestDiseaseSanitation">49. Hama dan penyakit dan sanitasi</string>
@@ -999,7 +999,7 @@
     <string name="p55">Pemangkasan pohon tua</string>
     <string name="p56">Pankas dengan standard medium</string>
     <string name="p57">Pengurangan tajuk pohon</string>
-    <string name="p58">Pengurangan pohon induk</string>
+    <string name="p58">pengurangan cabang pohon induk</string>
     <string name="p59">Pengurangan tajuk pohon</string>
     <string name="p60">Penyisipan pohon muda yang mati</string>
     <string name="p61">Pemangkasan bentuk &amp; produksi</string>
@@ -1011,4 +1011,5 @@
     <string name="p67">Penjarangan pohon</string>
     <string name="p68">Pemangkasan bentuk (toping) &amp; pemeliharaan</string>
     <string name="p69">Pengendalian gulma</string>
+    <string name="year">Tahun</string>
 </resources>
