@@ -779,7 +779,15 @@
                     "endOffset": 11881
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 512,
+                        "startColumn": 4,
+                        "startOffset": 26035,
+                        "endLine": 529,
+                        "endColumn": 19,
+                        "endOffset": 26530
+                    }
                 }
             },
             {
@@ -792,7 +800,15 @@
                     "endOffset": 12340
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 530,
+                        "startColumn": 4,
+                        "startOffset": 26536,
+                        "endLine": 546,
+                        "endColumn": 19,
+                        "endOffset": 27006
+                    }
                 }
             },
             {
@@ -805,7 +821,15 @@
                     "endOffset": 12802
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 668,
+                        "startColumn": 4,
+                        "startOffset": 30400,
+                        "endLine": 684,
+                        "endColumn": 19,
+                        "endOffset": 30873
+                    }
                 }
             },
             {
@@ -818,7 +842,15 @@
                     "endOffset": 13262
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 685,
+                        "startColumn": 4,
+                        "startOffset": 30879,
+                        "endLine": 701,
+                        "endColumn": 19,
+                        "endOffset": 31350
+                    }
                 }
             },
             {
@@ -831,7 +863,15 @@
                     "endOffset": 13722
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 702,
+                        "startColumn": 4,
+                        "startOffset": 31356,
+                        "endLine": 718,
+                        "endColumn": 19,
+                        "endOffset": 31827
+                    }
                 }
             },
             {
@@ -844,7 +884,15 @@
                     "endOffset": 14182
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 719,
+                        "startColumn": 4,
+                        "startOffset": 31833,
+                        "endLine": 735,
+                        "endColumn": 19,
+                        "endOffset": 32304
+                    }
                 }
             },
             {
@@ -857,7 +905,15 @@
                     "endOffset": 14642
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 736,
+                        "startColumn": 4,
+                        "startOffset": 32310,
+                        "endLine": 752,
+                        "endColumn": 19,
+                        "endOffset": 32781
+                    }
                 }
             },
             {
@@ -870,7 +926,15 @@
                     "endOffset": 15102
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 753,
+                        "startColumn": 4,
+                        "startOffset": 32787,
+                        "endLine": 769,
+                        "endColumn": 19,
+                        "endOffset": 33258
+                    }
                 }
             },
             {
@@ -883,7 +947,15 @@
                     "endOffset": 15562
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 770,
+                        "startColumn": 4,
+                        "startOffset": 33264,
+                        "endLine": 786,
+                        "endColumn": 19,
+                        "endOffset": 33735
+                    }
                 }
             },
             {
@@ -896,7 +968,15 @@
                     "endOffset": 16021
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 547,
+                        "startColumn": 4,
+                        "startOffset": 27012,
+                        "endLine": 563,
+                        "endColumn": 19,
+                        "endOffset": 27482
+                    }
                 }
             },
             {
@@ -909,7 +989,15 @@
                     "endOffset": 16480
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 564,
+                        "startColumn": 4,
+                        "startOffset": 27488,
+                        "endLine": 580,
+                        "endColumn": 19,
+                        "endOffset": 27958
+                    }
                 }
             },
             {
@@ -922,7 +1010,15 @@
                     "endOffset": 16939
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 581,
+                        "startColumn": 4,
+                        "startOffset": 27964,
+                        "endLine": 597,
+                        "endColumn": 19,
+                        "endOffset": 28434
+                    }
                 }
             },
             {
@@ -935,7 +1031,15 @@
                     "endOffset": 17398
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 598,
+                        "startColumn": 4,
+                        "startOffset": 28440,
+                        "endLine": 614,
+                        "endColumn": 19,
+                        "endOffset": 28910
+                    }
                 }
             },
             {
@@ -948,7 +1052,15 @@
                     "endOffset": 17857
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 615,
+                        "startColumn": 4,
+                        "startOffset": 28916,
+                        "endLine": 631,
+                        "endColumn": 19,
+                        "endOffset": 29386
+                    }
                 }
             },
             {
@@ -961,7 +1073,15 @@
                     "endOffset": 18343
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 632,
+                        "startColumn": 4,
+                        "startOffset": 29392,
+                        "endLine": 649,
+                        "endColumn": 19,
+                        "endOffset": 29890
+                    }
                 }
             },
             {
@@ -974,7 +1094,15 @@
                     "endOffset": 18829
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
+                    "position": {
+                        "startLine": 650,
+                        "startColumn": 4,
+                        "startOffset": 29896,
+                        "endLine": 667,
+                        "endColumn": 19,
+                        "endOffset": 30394
+                    }
                 }
             },
             {
@@ -3653,14 +3781,7 @@
                     "endOffset": 39980
                 },
                 "from": {
-                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml",
-                    "position": {
-                        "startLine": 982,
-                        "startColumn": 4,
-                        "startOffset": 39958,
-                        "endColumn": 44,
-                        "endOffset": 39998
-                    }
+                    "file": "C:\\Users\\julian\\Desktop\\fdp - civ\\fdp\\res\\values-fr\\strings.xml"
                 }
             },
             {

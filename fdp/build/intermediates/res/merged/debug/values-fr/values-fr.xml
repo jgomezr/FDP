@@ -383,8 +383,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance1">
@@ -400,13 +400,13 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance10">
-        <item>3.5×4</item>
-        <item>3×4</item>
+        <item>3.5x4</item>
+        <item>3x4</item>
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2.5</item>
@@ -434,8 +434,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance12">
@@ -451,8 +451,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance13">
@@ -468,8 +468,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance14">
@@ -485,8 +485,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance15">
@@ -502,8 +502,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance16">
@@ -519,8 +519,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance2">
@@ -536,8 +536,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance3">
@@ -553,8 +553,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance4">
@@ -570,8 +570,8 @@
         <item>3x2.5</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance5">
@@ -587,8 +587,8 @@
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance6">
@@ -605,8 +605,8 @@
         <item>3x3</item>
         <item>3x3.5</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
     </string-array>
     <string-array name="treeDistance8">
         <item>3x3.5</item>
@@ -622,12 +622,12 @@
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
-        <item>3×4</item>
-        <item>3.5×4</item>
+        <item>3x4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="treeDistance9">
-        <item>3×4</item>
+        <item>3x4</item>
         <item>3x3.5</item>
         <item>2.5x3</item>
         <item>2x2</item>
@@ -641,7 +641,7 @@
         <item>3x2.5</item>
         <item>3x3</item>
         <item>3.5x3.5</item>
-        <item>3.5×4</item>
+        <item>3.5x4</item>
         <item>4x4</item>
     </string-array>
     <string-array name="weight1">
