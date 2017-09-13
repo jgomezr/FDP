@@ -169,15 +169,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             //visibility of plots
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
-                if(sObject.getPLOT1RENOVATION().equals("Yes")||sObject.getPLOT1RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT1RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT1RENOVATION().equals("Yes") || sObject.getPLOT1RENOVATION().equals("Oui") || sObject.getPLOT1RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT1RENOVATIONREASON().equals("Replanting") || sObject.getPLOT1RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.show(replant1);
                         ft.hide(fragment1);
                         ft.hide(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             replant1.calc(getString(R.string.plot1),"", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             replant1.calc(getString(R.string.plot1),"", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             replant1.calc(getString(R.string.plot1),"", "", plot1Area, startY1, yearLaunch);
@@ -188,9 +188,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant1);
                         ft.show(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             graft1.calc(getString(R.string.plot1), "", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             graft1.calc(getString(R.string.plot1), "", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             graft1.calc(getString(R.string.plot1), "", "", plot1Area, startY1, yearLaunch);
@@ -203,9 +203,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment1);
                         ft.hide(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             replant1.calc(getString(R.string.plot1), "", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             replant1.calc(getString(R.string.plot1), "", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             replant1.calc(getString(R.string.plot1), "", "", plot1Area, startY1, yearLaunch);
@@ -216,9 +216,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment1);
                         ft.hide(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             replant1.calc(getString(R.string.plot1), "extra", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             replant1.calc(getString(R.string.plot1), "extra", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             replant1.calc(getString(R.string.plot1), "extra", "", plot1Area, startY1, yearLaunch);
@@ -230,9 +230,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant1);
                         ft.show(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             graft1.calc(getString(R.string.plot1), "extra", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             graft1.calc(getString(R.string.plot1), "extra", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             graft1.calc(getString(R.string.plot1), "extra", "", plot1Area, startY1, yearLaunch);
@@ -242,9 +242,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant1);
                         ft.show(graft1);
                         ft.hide(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             graft1.calc(getString(R.string.plot1), "", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             graft1.calc(getString(R.string.plot1), "", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             graft1.calc(getString(R.string.plot1), "", "", plot1Area, startY1, yearLaunch);
@@ -256,9 +256,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant1);
                         ft.hide(graft1);
                         ft.show(extra1);
-                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                        if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                             extra1.calc(getString(R.string.plot1), "", "labor", plot1Area, startY1, yearLaunch);
-                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                             extra1.calc(getString(R.string.plot1), "", "season", plot1Area, startY1, yearLaunch);
                         } else {
                             extra1.calc(getString(R.string.plot1), "", "", plot1Area, startY1, yearLaunch);
@@ -271,17 +271,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft1);
                         ft.hide(extra1);
                         if (sObject.getSOILMNG1().equals("B")||sObject.getSOILMNG1().equals("M")) {
-                            if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.calc(getString(R.string.plot1), "extra", "labor", plot1Area, startY1, yearLaunch);
-                            } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                                 fragment1.calc(getString(R.string.plot1), "extra", "season", plot1Area, startY1, yearLaunch);
                             } else {
                                 fragment1.calc(getString(R.string.plot1), "extra", "", plot1Area, startY1, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui")) {
+                            if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui") || sObject.getHireLabor1().equals("Ya")) {
                                 fragment1.calc(getString(R.string.plot1), "", "labor", plot1Area, startY1, yearLaunch);
-                            } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor1().equals("Seasonal") || sObject.getHireLabor1().equals("Saisonnier") || sObject.getHireLabor1().equals("Musiman")) {
                                 fragment1.calc(getString(R.string.plot1), "", "season", plot1Area, startY1, yearLaunch);
                             } else {
                                 fragment1.calc(getString(R.string.plot1), "", "", plot1Area, startY1, yearLaunch);
@@ -297,15 +297,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra1);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
-                if(sObject.getPLOT2RENOVATION().equals("Yes")||sObject.getPLOT2RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT2RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT2RENOVATION().equals("Yes") || sObject.getPLOT2RENOVATION().equals("Oui") || sObject.getPLOT2RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT2RENOVATIONREASON().equals("Replanting") || sObject.getPLOT2RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.show(replant2);
                         ft.hide(fragment2);
                         ft.hide(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             replant2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             replant2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             replant2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -316,9 +316,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment2);
                         ft.show(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             graft2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             graft2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             graft2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -331,9 +331,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment2);
                         ft.hide(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             replant2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             replant2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             replant2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -344,9 +344,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment2);
                         ft.hide(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             replant2.calc(getString(R.string.plot2), "extra", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             replant2.calc(getString(R.string.plot2), "extra", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             replant2.calc(getString(R.string.plot2), "extra", "", plot2Area, startY2, yearLaunch);
@@ -358,9 +358,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant2);
                         ft.show(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             graft2.calc(getString(R.string.plot2), "extra", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             graft2.calc(getString(R.string.plot2), "extra", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             graft2.calc(getString(R.string.plot2), "extra", "", plot2Area, startY2, yearLaunch);
@@ -370,9 +370,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant2);
                         ft.show(graft2);
                         ft.hide(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             graft2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             graft2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             graft2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -384,9 +384,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant2);
                         ft.hide(graft2);
                         ft.show(extra2);
-                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                        if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                             extra2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                             extra2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                         } else {
                             extra2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -399,17 +399,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft2);
                         ft.hide(extra2);
                         if (sObject.getSOILMNG2().equals("B")||sObject.getSOILMNG2().equals("M")) {
-                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                            if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.calc(getString(R.string.plot2), "extra", "labor", plot2Area, startY2, yearLaunch);
-                            } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                                 fragment2.calc(getString(R.string.plot2), "extra", "season", plot2Area, startY2, yearLaunch);
                             } else {
                                 fragment2.calc(getString(R.string.plot2), "extra", "", plot2Area, startY2, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui")) {
+                            if (sObject.getHireLabor2().equals("Yes") || sObject.getHireLabor2().equals("Oui") || sObject.getHireLabor2().equals("Ya")) {
                                 fragment2.calc(getString(R.string.plot2), "", "labor", plot2Area, startY2, yearLaunch);
-                            } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor2().equals("Seasonal") || sObject.getHireLabor2().equals("Saisonnier") || sObject.getHireLabor2().equals("Musiman")) {
                                 fragment2.calc(getString(R.string.plot2), "", "season", plot2Area, startY2, yearLaunch);
                             } else {
                                 fragment2.calc(getString(R.string.plot2), "", "", plot2Area, startY2, yearLaunch);
@@ -425,15 +425,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra2);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
-                if(sObject.getPLOT3RENOVATION().equals("Yes")||sObject.getPLOT3RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT3RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT3RENOVATION().equals("Yes") || sObject.getPLOT3RENOVATION().equals("Oui") || sObject.getPLOT3RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT3RENOVATIONREASON().equals("Replanting") || sObject.getPLOT2RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment3);
                         ft.show(replant3);
                         ft.hide(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             replant3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             replant3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             replant3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -444,9 +444,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant3);
                         ft.show(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             graft3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             graft3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             graft3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -459,9 +459,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment3);
                         ft.hide(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             replant3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             replant3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             replant3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -472,9 +472,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment3);
                         ft.hide(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             replant3.calc(getString(R.string.plot3), "extra", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             replant3.calc(getString(R.string.plot3), "extra", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             replant3.calc(getString(R.string.plot3), "extra", "", plot3Area, startY3, yearLaunch);
@@ -486,9 +486,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant3);
                         ft.show(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui")) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             graft3.calc(getString(R.string.plot3), "extra", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             graft3.calc(getString(R.string.plot3), "extra", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             graft3.calc(getString(R.string.plot3), "extra", "", plot3Area, startY3, yearLaunch);
@@ -498,9 +498,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant3);
                         ft.show(graft3);
                         ft.hide(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             graft3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             graft3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             graft3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -512,9 +512,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant3);
                         ft.hide(graft3);
                         ft.show(extra3);
-                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                        if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                             extra3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                             extra3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                         } else {
                             extra3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -527,17 +527,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft3);
                         ft.hide(extra3);
                         if (sObject.getSOILMNG3().equals("B")||sObject.getSOILMNG3().equals("M")) {
-                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                            if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.calc(getString(R.string.plot3), "extra", "labor", plot3Area, startY3, yearLaunch);
-                            } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                                 fragment3.calc(getString(R.string.plot3), "extra", "season", plot3Area, startY3, yearLaunch);
                             } else {
                                 fragment3.calc(getString(R.string.plot3), "extra", "", plot3Area, startY3, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui")) {
+                            if (sObject.getHireLabor3().equals("Yes") || sObject.getHireLabor3().equals("Oui") || sObject.getHireLabor3().equals("Ya")) {
                                 fragment3.calc(getString(R.string.plot3), "", "labor", plot3Area, startY3, yearLaunch);
-                            } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor3().equals("Seasonal") || sObject.getHireLabor3().equals("Saisonnier") || sObject.getHireLabor3().equals("Musiman")) {
                                 fragment3.calc(getString(R.string.plot3), "", "season", plot3Area, startY3, yearLaunch);
                             } else {
                                 fragment3.calc(getString(R.string.plot3), "", "", plot3Area, startY3, yearLaunch);
@@ -553,15 +553,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra3);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
-                if(sObject.getPLOT4RENOVATION().equals("Yes")||sObject.getPLOT4RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT4RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT4RENOVATION().equals("Yes") || sObject.getPLOT4RENOVATION().equals("Oui") || sObject.getPLOT4RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT4RENOVATIONREASON().equals("Replanting") || sObject.getPLOT4RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment4);
                         ft.show(replant4);
                         ft.hide(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             replant4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             replant4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             replant4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -572,9 +572,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant4);
                         ft.show(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             graft4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             graft4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             graft4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -587,9 +587,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment4);
                         ft.hide(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             replant4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             replant4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             replant4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -600,9 +600,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment4);
                         ft.hide(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             replant4.calc(getString(R.string.plot4), "extra", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             replant4.calc(getString(R.string.plot4), "extra", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             replant4.calc(getString(R.string.plot4), "extra", "", plot4Area, startY4, yearLaunch);
@@ -614,9 +614,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant4);
                         ft.show(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui")) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             graft4.calc(getString(R.string.plot4), "extra", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             graft4.calc(getString(R.string.plot4), "extra", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             graft4.calc(getString(R.string.plot4), "extra", "", plot4Area, startY4, yearLaunch);
@@ -626,9 +626,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant4);
                         ft.show(graft4);
                         ft.hide(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             graft4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             graft4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             graft4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -640,9 +640,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant4);
                         ft.hide(graft4);
                         ft.show(extra4);
-                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                        if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                             extra4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                             extra4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                         } else {
                             extra4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -655,17 +655,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft4);
                         ft.hide(extra4);
                         if (sObject.getSOILMNG4().equals("B")||sObject.getSOILMNG4().equals("M")) {
-                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                            if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.calc(getString(R.string.plot4), "extra", "labor", plot4Area, startY4, yearLaunch);
-                            } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                                 fragment4.calc(getString(R.string.plot4), "extra", "season", plot4Area, startY4, yearLaunch);
                             } else {
                                 fragment4.calc(getString(R.string.plot4), "extra", "", plot4Area, startY4, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui")) {
+                            if (sObject.getHireLabor4().equals("Yes") || sObject.getHireLabor4().equals("Oui") || sObject.getHireLabor4().equals("Ya")) {
                                 fragment4.calc(getString(R.string.plot4), "", "labor", plot4Area, startY4, yearLaunch);
-                            } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor4().equals("Seasonal") || sObject.getHireLabor4().equals("Saisonnier") || sObject.getHireLabor4().equals("Musiman")) {
                                 fragment4.calc(getString(R.string.plot4), "", "season", plot4Area, startY4, yearLaunch);
                             } else {
                                 fragment4.calc(getString(R.string.plot4), "", "", plot4Area, startY4, yearLaunch);
@@ -681,15 +681,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra4);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
-                if(sObject.getPLOT5RENOVATION().equals("Yes")||sObject.getPLOT5RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT5RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT5RENOVATION().equals("Yes") || sObject.getPLOT5RENOVATION().equals("Oui") || sObject.getPLOT5RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT5RENOVATIONREASON().equals("Replanting") || sObject.getPLOT5RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment5);
                         ft.show(replant5);
                         ft.hide(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             replant5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             replant5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             replant5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -700,9 +700,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant5);
                         ft.show(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             graft5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             graft5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             graft5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -715,9 +715,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment5);
                         ft.hide(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             replant5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             replant5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             replant5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -728,9 +728,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment5);
                         ft.hide(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             replant5.calc(getString(R.string.plot5), "extra", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             replant5.calc(getString(R.string.plot5), "extra", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             replant5.calc(getString(R.string.plot5), "extra", "", plot5Area, startY5, yearLaunch);
@@ -742,9 +742,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant5);
                         ft.show(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui")) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             graft5.calc(getString(R.string.plot5), "extra", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             graft5.calc(getString(R.string.plot5), "extra", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             graft5.calc(getString(R.string.plot5), "extra", "", plot5Area, startY5, yearLaunch);
@@ -754,9 +754,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant5);
                         ft.show(graft5);
                         ft.hide(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             graft5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             graft5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             graft5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -768,9 +768,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant5);
                         ft.hide(graft5);
                         ft.show(extra5);
-                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                        if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                             extra5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                             extra5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                         } else {
                             extra5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -783,17 +783,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft5);
                         ft.hide(extra5);
                         if (sObject.getSOILMNG5().equals("B")||sObject.getSOILMNG5().equals("M")) {
-                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                            if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.calc(getString(R.string.plot5), "extra", "labor", plot5Area, startY5, yearLaunch);
-                            } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                                 fragment5.calc(getString(R.string.plot5), "extra", "season", plot5Area, startY5, yearLaunch);
                             } else {
                                 fragment5.calc(getString(R.string.plot5), "extra", "", plot5Area, startY5, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui")) {
+                            if (sObject.getHireLabor5().equals("Yes") || sObject.getHireLabor5().equals("Oui") || sObject.getHireLabor5().equals("Ya")) {
                                 fragment5.calc(getString(R.string.plot5), "", "labor", plot5Area, startY5, yearLaunch);
-                            } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor5().equals("Seasonal") || sObject.getHireLabor5().equals("Saisonnier") || sObject.getHireLabor5().equals("Musiman")) {
                                 fragment5.calc(getString(R.string.plot5), "", "season", plot5Area, startY5, yearLaunch);
                             } else {
                                 fragment5.calc(getString(R.string.plot5), "", "", plot5Area, startY5, yearLaunch);
@@ -809,15 +809,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra5);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 5) {
-                if(sObject.getPLOT6RENOVATION().equals("Yes")||sObject.getPLOT6RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT6RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT6RENOVATION().equals("Yes") || sObject.getPLOT6RENOVATION().equals("Oui") || sObject.getPLOT6RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT6RENOVATIONREASON().equals("Replanting") || sObject.getPLOT6RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment6);
                         ft.show(replant6);
                         ft.hide(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             replant6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             replant6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             replant6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -828,9 +828,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant6);
                         ft.show(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             graft6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             graft6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             graft6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -843,9 +843,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment6);
                         ft.hide(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             replant6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             replant6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             replant6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -856,9 +856,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment6);
                         ft.hide(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             replant6.calc(getString(R.string.plot6), "extra", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             replant6.calc(getString(R.string.plot6), "extra", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             replant6.calc(getString(R.string.plot6), "extra", "", plot6Area, startY6, yearLaunch);
@@ -870,9 +870,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant6);
                         ft.show(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui")) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             graft6.calc(getString(R.string.plot6), "extra", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             graft6.calc(getString(R.string.plot6), "extra", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             graft6.calc(getString(R.string.plot6), "extra", "", plot6Area, startY6, yearLaunch);
@@ -882,9 +882,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant6);
                         ft.show(graft6);
                         ft.hide(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             graft6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             graft6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             graft6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -896,9 +896,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant6);
                         ft.hide(graft6);
                         ft.show(extra6);
-                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                        if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                             extra6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                             extra6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                         } else {
                             extra6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -911,17 +911,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft6);
                         ft.hide(extra6);
                         if (sObject.getSOILMNG6().equals("B")||sObject.getSOILMNG6().equals("M")) {
-                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                            if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.calc(getString(R.string.plot6), "extra", "labor", plot6Area, startY6, yearLaunch);
-                            } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                                 fragment6.calc(getString(R.string.plot6), "extra", "season", plot6Area, startY6, yearLaunch);
                             } else {
                                 fragment6.calc(getString(R.string.plot6), "extra", "", plot6Area, startY6, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui")) {
+                            if (sObject.getHireLabor6().equals("Yes") || sObject.getHireLabor6().equals("Oui") || sObject.getHireLabor6().equals("Ya")) {
                                 fragment6.calc(getString(R.string.plot6), "", "labor", plot6Area, startY6, yearLaunch);
-                            } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor6().equals("Seasonal") || sObject.getHireLabor6().equals("Saisonnier") || sObject.getHireLabor6().equals("Musiman")) {
                                 fragment6.calc(getString(R.string.plot6), "", "season", plot6Area, startY6, yearLaunch);
                             } else {
                                 fragment6.calc(getString(R.string.plot6), "", "", plot6Area, startY6, yearLaunch);
@@ -937,15 +937,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra6);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 6) {
-                if(sObject.getPLOT7RENOVATION().equals("Yes")||sObject.getPLOT7RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT7RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT7RENOVATION().equals("Yes") || sObject.getPLOT7RENOVATION().equals("Oui") || sObject.getPLOT7RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT7RENOVATIONREASON().equals("Replanting") || sObject.getPLOT7RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment7);
                         ft.show(replant7);
                         ft.hide(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             replant7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             replant7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             replant7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -956,9 +956,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant7);
                         ft.show(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             graft7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             graft7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             graft7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -971,9 +971,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment7);
                         ft.hide(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             replant7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             replant7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             replant7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -984,9 +984,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment7);
                         ft.hide(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             replant7.calc(getString(R.string.plot7), "extra", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             replant7.calc(getString(R.string.plot7), "extra", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             replant7.calc(getString(R.string.plot7), "extra", "", plot7Area, startY7, yearLaunch);
@@ -998,9 +998,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant7);
                         ft.show(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui")) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             graft7.calc(getString(R.string.plot7), "extra", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             graft7.calc(getString(R.string.plot7), "extra", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             graft7.calc(getString(R.string.plot7), "extra", "", plot7Area, startY7, yearLaunch);
@@ -1010,9 +1010,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant7);
                         ft.show(graft7);
                         ft.hide(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             graft7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             graft7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             graft7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -1024,9 +1024,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant7);
                         ft.hide(graft7);
                         ft.show(extra7);
-                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                        if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                             extra7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                             extra7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                         } else {
                             extra7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -1039,17 +1039,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft7);
                         ft.hide(extra7);
                         if (sObject.getSOILMNG7().equals("B")||sObject.getSOILMNG7().equals("M")) {
-                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                            if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.calc(getString(R.string.plot7), "extra", "labor", plot7Area, startY7, yearLaunch);
-                            } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                                 fragment7.calc(getString(R.string.plot7), "extra", "season", plot7Area, startY7, yearLaunch);
                             } else {
                                 fragment7.calc(getString(R.string.plot7), "extra", "", plot7Area, startY7, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui")) {
+                            if (sObject.getHireLabor7().equals("Yes") || sObject.getHireLabor7().equals("Oui") || sObject.getHireLabor7().equals("Ya")) {
                                 fragment7.calc(getString(R.string.plot7), "", "labor", plot7Area, startY7, yearLaunch);
-                            } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor7().equals("Seasonal") || sObject.getHireLabor7().equals("Saisonnier") || sObject.getHireLabor7().equals("Musiman")) {
                                 fragment7.calc(getString(R.string.plot7), "", "season", plot7Area, startY7, yearLaunch);
                             } else {
                                 fragment7.calc(getString(R.string.plot7), "", "", plot7Area, startY7, yearLaunch);
@@ -1065,15 +1065,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra7);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 7) {
-                if(sObject.getPLOT8RENOVATION().equals("Yes")||sObject.getPLOT8RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT8RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT8RENOVATION().equals("Yes") || sObject.getPLOT8RENOVATION().equals("Oui") || sObject.getPLOT8RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT8RENOVATIONREASON().equals("Replanting") || sObject.getPLOT8RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment8);
                         ft.show(replant8);
                         ft.hide(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             replant8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             replant8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             replant8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1084,9 +1084,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant8);
                         ft.show(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             graft8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             graft8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             graft8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1099,9 +1099,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment8);
                         ft.hide(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             replant8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             replant8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             replant8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1112,9 +1112,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment8);
                         ft.hide(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             replant8.calc(getString(R.string.plot8), "extra", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             replant8.calc(getString(R.string.plot8), "extra", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             replant8.calc(getString(R.string.plot8), "extra", "", plot8Area, startY8, yearLaunch);
@@ -1126,9 +1126,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant8);
                         ft.show(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             graft8.calc(getString(R.string.plot8), "extra", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             graft8.calc(getString(R.string.plot8), "extra", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             graft8.calc(getString(R.string.plot8), "extra", "", plot8Area, startY8, yearLaunch);
@@ -1138,9 +1138,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant8);
                         ft.show(graft8);
                         ft.hide(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             graft8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             graft8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             graft8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1152,9 +1152,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant8);
                         ft.hide(graft8);
                         ft.show(extra8);
-                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                        if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                             extra8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                             extra8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                         } else {
                             extra8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1167,17 +1167,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft8);
                         ft.hide(extra8);
                         if (sObject.getSOILMNG8().equals("B")||sObject.getSOILMNG8().equals("M")) {
-                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                            if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.calc(getString(R.string.plot8), "extra", "labor", plot8Area, startY8, yearLaunch);
-                            } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                                 fragment8.calc(getString(R.string.plot8), "extra", "season", plot8Area, startY8, yearLaunch);
                             } else {
                                 fragment8.calc(getString(R.string.plot8), "extra", "", plot8Area, startY8, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui")) {
+                            if (sObject.getHireLabor8().equals("Yes") || sObject.getHireLabor8().equals("Oui") || sObject.getHireLabor8().equals("Ya")) {
                                 fragment8.calc(getString(R.string.plot8), "", "labor", plot8Area, startY8, yearLaunch);
-                            } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor8().equals("Seasonal") || sObject.getHireLabor8().equals("Saisonnier") || sObject.getHireLabor8().equals("Musiman")) {
                                 fragment8.calc(getString(R.string.plot8), "", "season", plot8Area, startY8, yearLaunch);
                             } else {
                                 fragment8.calc(getString(R.string.plot8), "", "", plot8Area, startY8, yearLaunch);
@@ -1193,15 +1193,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra8);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 8) {
-                if(sObject.getPLOT9RENOVATION().equals("Yes")||sObject.getPLOT9RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT9RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT9RENOVATION().equals("Yes") || sObject.getPLOT9RENOVATION().equals("Oui") || sObject.getPLOT9RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT9RENOVATIONREASON().equals("Replanting") || sObject.getPLOT9RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment9);
                         ft.show(replant9);
                         ft.hide(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             replant9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             replant9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             replant9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1212,9 +1212,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant9);
                         ft.show(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             graft9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             graft9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             graft9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1227,9 +1227,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment9);
                         ft.hide(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             replant9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             replant9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             replant9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1240,9 +1240,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment9);
                         ft.hide(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             replant9.calc(getString(R.string.plot9), "extra", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             replant9.calc(getString(R.string.plot9), "extra", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             replant9.calc(getString(R.string.plot9), "extra", "", plot9Area, startY9, yearLaunch);
@@ -1254,9 +1254,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant9);
                         ft.show(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui")) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             graft9.calc(getString(R.string.plot9), "extra", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             graft9.calc(getString(R.string.plot9), "extra", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             graft9.calc(getString(R.string.plot9), "extra", "", plot9Area, startY9, yearLaunch);
@@ -1266,9 +1266,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant9);
                         ft.show(graft9);
                         ft.hide(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             graft9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             graft9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             graft9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1280,9 +1280,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant9);
                         ft.hide(graft9);
                         ft.show(extra9);
-                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                        if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                             extra9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                             extra9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                         } else {
                             extra9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1295,17 +1295,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft9);
                         ft.hide(extra9);
                         if (sObject.getSOILMNG9().equals("B")||sObject.getSOILMNG9().equals("M")) {
-                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                            if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.calc(getString(R.string.plot9), "extra", "labor", plot9Area, startY9, yearLaunch);
-                            } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                                 fragment9.calc(getString(R.string.plot9), "extra", "season", plot9Area, startY9, yearLaunch);
                             } else {
                                 fragment9.calc(getString(R.string.plot9), "extra", "", plot9Area, startY9, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui")) {
+                            if (sObject.getHireLabor9().equals("Yes") || sObject.getHireLabor9().equals("Oui") || sObject.getHireLabor9().equals("Ya")) {
                                 fragment9.calc(getString(R.string.plot9), "", "labor", plot9Area, startY9, yearLaunch);
-                            } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor9().equals("Seasonal") || sObject.getHireLabor9().equals("Saisonnier") || sObject.getHireLabor9().equals("Musiman")) {
                                 fragment9.calc(getString(R.string.plot9), "", "season", plot9Area, startY9, yearLaunch);
                             } else {
                                 fragment9.calc(getString(R.string.plot9), "", "", plot9Area, startY9, yearLaunch);
@@ -1321,15 +1321,15 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                 ft.hide(extra9);
             }
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 9) {
-                if(sObject.getPLOT10RENOVATION().equals("Yes")||sObject.getPLOT10RENOVATION().equals("Oui")){
-                    if(sObject.getPLOT10RENOVATIONREASON().equals("Replanting")){
+                if (sObject.getPLOT10RENOVATION().equals("Yes") || sObject.getPLOT10RENOVATION().equals("Oui") || sObject.getPLOT10RENOVATION().equals("Ya")) {
+                    if (sObject.getPLOT10RENOVATIONREASON().equals("Replanting") || sObject.getPLOT10RENOVATIONREASON().equals("Penanamman kembali")) {
                         ft.hide(fragment10);
                         ft.show(replant10);
                         ft.hide(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             replant10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             replant10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             replant10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
@@ -1340,9 +1340,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant10);
                         ft.show(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             graft10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             graft10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             graft10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
@@ -1354,9 +1354,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment10);
                         ft.hide(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             replant10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             replant10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             replant10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
@@ -1367,9 +1367,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(fragment10);
                         ft.hide(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             replant10.calc(getString(R.string.plot10), "extra", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             replant10.calc(getString(R.string.plot10), "extra", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             replant10.calc(getString(R.string.plot10), "extra", "", plot10Area, startY10, yearLaunch);
@@ -1381,9 +1381,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant10);
                         ft.show(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui")) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             graft10.calc(getString(R.string.plot10), "extra", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             graft10.calc(getString(R.string.plot10), "extra", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             graft10.calc(getString(R.string.plot10), "extra", "", plot10Area, startY10, yearLaunch);
@@ -1393,9 +1393,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant10);
                         ft.show(graft10);
                         ft.hide(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             graft10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             graft10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             graft10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
@@ -1407,9 +1407,9 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(replant10);
                         ft.hide(graft10);
                         ft.show(extra10);
-                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                        if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                             extra10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier")) {
+                        } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                             extra10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                         } else {
                             extra10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
@@ -1422,17 +1422,17 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                         ft.hide(graft10);
                         ft.hide(extra10);
                         if (sObject.getSOILMNG10().equals("B")||sObject.getSOILMNG10().equals("M")) {
-                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                            if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.calc(getString(R.string.plot10), "extra", "labor", plot10Area, startY10, yearLaunch);
-                            } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                                 fragment10.calc(getString(R.string.plot10), "extra", "season", plot10Area, startY10, yearLaunch);
                             } else {
                                 fragment10.calc(getString(R.string.plot10), "extra", "", plot10Area, startY10, yearLaunch);
                             }
                         } else {
-                            if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui")) {
+                            if (sObject.getHireLabor10().equals("Yes") || sObject.getHireLabor10().equals("Oui") || sObject.getHireLabor10().equals("Ya")) {
                                 fragment10.calc(getString(R.string.plot10), "", "labor", plot10Area, startY10, yearLaunch);
-                            } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            } else if (sObject.getHireLabor10().equals("Seasonal") || sObject.getHireLabor10().equals("Saisonnier") || sObject.getHireLabor10().equals("Musiman")) {
                                 fragment10.calc(getString(R.string.plot10), "", "season", plot10Area, startY10, yearLaunch);
                             } else {
                                 fragment10.calc(getString(R.string.plot10), "", "", plot10Area, startY10, yearLaunch);
