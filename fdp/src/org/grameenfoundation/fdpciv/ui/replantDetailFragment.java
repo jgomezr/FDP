@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class replantDetailFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -70,7 +70,41 @@ public class replantDetailFragment extends Fragment {
         p22 = getString(R.string.p22);
         p23 = getString(R.string.p23);
         p24 = getString(R.string.p24);
-
+        p25 = getString(R.string.p25);
+        p26 = getString(R.string.p26);
+        p27 = getString(R.string.p27);
+        p28 = getString(R.string.p28);
+        p29 = getString(R.string.p29);
+        p30 = getString(R.string.p30);
+        p31 = getString(R.string.p31);
+        p32 = getString(R.string.p32);
+        p33 = getString(R.string.p33);
+        p34 = getString(R.string.p34);
+        p35 = getString(R.string.p35);
+        p36 = getString(R.string.p36);
+        p37 = getString(R.string.p37);
+        p38 = getString(R.string.p38);
+        p39 = getString(R.string.p39);
+        p40 = getString(R.string.p40);
+        p41 = getString(R.string.p41);
+        p42 = getString(R.string.p42);
+        p43 = getString(R.string.p43);
+        p44 = getString(R.string.p44);
+        p45 = getString(R.string.p45);
+        p46 = getString(R.string.p46);
+        p47 = getString(R.string.p47);
+        p48 = getString(R.string.p48);
+        p49 = getString(R.string.p49);
+        p50 = getString(R.string.p50);
+        p51 = getString(R.string.p51);
+        p52 = getString(R.string.p52);
+        p53 = getString(R.string.p53);
+        p54 = getString(R.string.p54);
+        p55 = getString(R.string.p55);
+        p56 = getString(R.string.p56);
+        p57 = getString(R.string.p57);
+        p58 = getString(R.string.p58);
+        p59 = getString(R.string.p59);
         return view;
     }
 
@@ -94,22 +128,22 @@ public class replantDetailFragment extends Fragment {
         int oct = 0;
         int nov = 0;
         int dec = 0;
-        DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
+        DecimalFormat decF = new DecimalFormat("FCFA ###,###,###");
         setText(plt, plot);
 
         if (launchYear < startYear){
-            setText(jlb, p16+p19+p24);
-            setText(fblb, p16+p19+p21+p24);
-            setText(mrlb, p14+p16+p19+p21+p24);
-            setText(ablb, p16+p19+p21+p24);
-            setText(mylb, p12+p15+p16+p20+p18+p24);
-            setText(jnlb, p12+p16+p20+p18+p24);
-            setText(jllb, p16+p19+p24);
-            setText(aglb, p16+p19+p21+p24);
-            setText(splb, p16+p19+p21+p24);
-            setText(oclb, p16+p19+p21+p24);
-            setText(nvlb, p12+p15+p16+p20+p18+p24);
-            setText(dclb, p14+p16+p19+p21+p24);
+            setText(jlb, p17);
+            setText(fblb, p33);
+            setText(mrlb, p26);
+            setText(ablb, p14+", "+p25);
+            setText(mylb, p14+", "+p15+", "+p24+", "+p34+", "+p35+", "+p17+", "+p19);
+            setText(jnlb, p15+", "+p17);
+            setText(jllb, p33);
+            setText(aglb, p26);
+            setText(splb, p14+", "+p15+", "+p24+", "+p34+", "+p17);
+            setText(oclb, p15+", "+p23+", "+p35+", "+p17+", "+p19);
+            setText(nvlb, p15+", "+p23+", "+p17);
+            setText(dclb, p14+", "+p17);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.MinGAPJan) + getResources().getInteger(R.integer.MinGAPSLaborJan)));
                 feb = (int) (area * (getResources().getInteger(R.integer.MinGAPFeb) + getResources().getInteger(R.integer.MinGAPSLaborFeb)));
@@ -153,18 +187,20 @@ public class replantDetailFragment extends Fragment {
 
         }else{
             if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
-                setText(jlb, "replant 1 +"+p24);
-                setText(fblb, "replant 1 +"+p24);
-                setText(mrlb, "replant 1 +"+p24);
-                setText(ablb, "replant 1 +"+p24);
-                setText(mylb, "replant 1 +"+p24);
-                setText(jnlb, "replant 1 +"+p24+p1);
-                setText(jllb, "replant 1 +"+"");
-                setText(aglb, "replant 1 +"+p3);
-                setText(splb, "replant 1 +"+p2);
-                setText(oclb, "replant 1 +"+p4+p7);
-                setText(nvlb, "replant 1 +"+p12+p15);
-                setText(dclb, "replant 1 +"+p4+p6+p14+p16);
+
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p33);
+                setText(ablb, p27+", "+p39);
+                setText(mylb, p39+", "+p50+", "+p17);
+                setText(jnlb, p17);
+                setText(jllb, p7);
+                setText(aglb, p7);
+                setText(splb, p7);
+                setText(oclb, p22+", "+p11);
+                setText(nvlb, p59+", "+p53+", "+p11);
+                setText(dclb, p53+", "+p11);
+                setText(plt, plot);
                 if (relat == "extra"){
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jan)+getResources().getInteger(R.integer.ReplantingLaborY1Jan)+getResources().getInteger(R.integer.difInputY1Jan))+getResources().getInteger(R.integer.difLaborY1Jan));
@@ -250,19 +286,20 @@ public class replantDetailFragment extends Fragment {
                 }
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
-                setText(jlb, "replant 2 +"+p16+" + "+ p19);
-                setText(fblb, "replant 2 +"+p13+" + "+ p16+" + "+ p19);
-                setText(mrlb, "replant 2 +"+p5+" + "+p7+" + "+ p12+" + "+ p14+" + "+ p16+" + "+ p22);
-                setText(ablb, "replant 2 +"+p16+" + "+ p19);
-                setText(mylb, "replant 2 +"+p15+" + "+ p19);
-                setText(jnlb, "replant 2 +"+p13+" + "+ p14+" + "+ p16+" + "+ p22);
-                setText(jllb, "replant 2 +"+p12+" + "+ p16+" + "+ p19);
-                setText(aglb, "replant 2 +"+p16+" + "+ p19);
-                setText(splb, "replant 2 +"+p14+" + "+ p16+" + "+ p22);
-                setText(oclb, "replant 2 +"+p13+" + "+ p16+" + "+ p19);
-                setText(nvlb, "replant 2 +"+p12+" + "+ p15+" + "+ p19);
-                setText(dclb, "replant 2 +"+p14+" + "+ p16+" + "+ p19);
                 if (relat == "extra"){
+                    setText(jlb, p11);
+                    setText(fblb, p11);
+                    setText(mrlb, p7+", "+p8);
+                    setText(ablb, p7+", "+p8);
+                    setText(mylb, p8+", "+p53+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p33);
+                    setText(jllb, p58+", "+p39);
+                    setText(aglb, p33);
+                    setText(splb, p9+", "+p54+", "+p39+", "+p12+", "+p36+", "+p19);
+                    setText(oclb, p58);
+                    setText(nvlb, p39);
+                    setText(dclb, p58+", "+p54);
+                    setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)+getResources().getInteger(R.integer.difInputY2Jan))+getResources().getInteger(R.integer.difLaborY2Jan));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Feb)+getResources().getInteger(R.integer.ReplantingLaborY2Feb)+getResources().getInteger(R.integer.difInputY2Feb))+getResources().getInteger(R.integer.difLaborY2Feb));
@@ -304,6 +341,19 @@ public class replantDetailFragment extends Fragment {
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.difInputY2Dec)));
                     }
                 }else {
+                    setText(jlb, p11);
+                    setText(fblb, p11);
+                    setText(mrlb, p7+", "+p8);
+                    setText(ablb, p7+", "+p8);
+                    setText(mylb, p8+", "+p53+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p33);
+                    setText(jllb, p58+", "+p39);
+                    setText(aglb, p33);
+                    setText(splb, p9+", "+p54+", "+p39+", "+p12+", "+p36+", "+p19);
+                    setText(oclb, p58);
+                    setText(nvlb, p39);
+                    setText(dclb, p58+", "+p54);
+                    setText(plt, plot);
                     if (labor == "labor") {
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Feb)+getResources().getInteger(R.integer.ReplantingLaborY2Feb)));
@@ -348,19 +398,19 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, "replant 3 +"+p16+" + "+ p19);
-                setText(fblb, "replant 3 +"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "replant 3 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
-                setText(ablb, "replant 3 +"+p16+" + "+ p22+" + "+ p21);
-                setText(mylb, "replant 3 +"+p15+" + "+ p20+" + "+ p22);
-                setText(jnlb, "replant 3 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "replant 3 +"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "replant 3 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "replant 3 +"+p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "replant 3 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "replant 3 +"+ p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "replant 3 +"+p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
                 if (relat == "extra"){
+                    setText(jlb, p33);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p54+", "+p27+", "+p39);
+                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p50);
+                    setText(jllb, p18);
+                    setText(aglb, p58+", "+p18);
+                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12);
+                    setText(oclb, p27+", "+p50+", "+p36+", "+p19);
+                    setText(nvlb, p27+", "+p50);
+                    setText(dclb, p39+", "+p54+", "+p52);
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan)))+getResources().getInteger(R.integer.difLaborY3Jan));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Feb)))+(area * (getResources().getInteger(R.integer.difInputY3Feb)))+getResources().getInteger(R.integer.difLaborY3Feb));
@@ -402,6 +452,19 @@ public class replantDetailFragment extends Fragment {
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec)))+(area * (getResources().getInteger(R.integer.difInputY3Dec))));
                     }
                 }else {
+                    setText(jlb, p33);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p54+", "+p27+", "+p39);
+                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p50);
+                    setText(jllb, p18);
+                    setText(aglb, p58+", "+p18);
+                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12);
+                    setText(oclb, p27+", "+p50+", "+p36+", "+p19);
+                    setText(nvlb, p27+", "+p50);
+                    setText(dclb, p39+", "+p54+", "+p52);
+                    setText(plt, plot);
                     if (labor == "labor") {
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Feb))));
@@ -446,18 +509,19 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
 
-                setText(jlb, "replant 4 +"+p16+" + "+ p19);
-                setText(fblb, "replant 4 +"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "replant 4 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
-                setText(ablb, "replant 4 +"+p16+" + "+ p22+" + "+ p21);
-                setText(mylb, "replant 4 +"+p15+" + "+ p20+" + "+ p22);
-                setText(jnlb, "replant 4 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "replant 4 +"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "replant 4 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "replant 4 +"+p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "replant 4 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "replant 4 +"+p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "replant 4 +"+p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
+                setText(jlb, p33);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
                 if (relat == "extra"){
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
@@ -544,19 +608,19 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
 
-                setText(jlb, "replant 5 +"+p16+" + "+ p19);
-                setText(fblb, "replant 5 +"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "replant 5 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
-                setText(ablb, "replant 5 +"+p16+" + "+ p22+" + "+ p21);
-                setText(mylb, "replant 5 +"+p15+" + "+ p20+" + "+ p22);
-                setText(jnlb, "replant 5 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "replant 5 +"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "replant 5 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "replant 5 +"+p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "replant 5 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "replant 5 +"+p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "replant 5 +"+p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
-
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Feb))));
@@ -600,18 +664,19 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
 
-                setText(jlb, "replant 6 +"+p16+" + "+ p19);
-                setText(fblb, "replant 6 +"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "replant 6 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
-                setText(ablb, "replant 6 +"+p16+" + "+ p22+" + "+ p21);
-                setText(mylb, "replant 6 +"+p15+" + "+ p20+" + "+ p22);
-                setText(jnlb, "replant 6 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "replant 6 +"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "replant 6 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "replant 6 +"+p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "replant 6 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "replant 6 +"+p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "replant 6 +"+p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor") {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
@@ -656,18 +721,19 @@ public class replantDetailFragment extends Fragment {
 
             }else {
 
-                setText(jlb, "replant 7 +"+p16+" + "+ p19);
-                setText(fblb, "replant 7 +"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "replant 7 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p21);
-                setText(ablb, "replant 7 +"+p16+" + "+ p22+" + "+ p21);
-                setText(mylb, "replant 7 +"+p15+" + "+ p20+" + "+ p22);
-                setText(jnlb, "replant 7 +"+p12+" + "+ p14+" + "+ p16+" + "+ p19+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "replant 7 +"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "replant 7 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "replant 7 +"+p12+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "replant 7 +"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "replant 7 +"+p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "replant 7 +"+p12+" + "+ p14+" + "+ p16+" + "+ p20+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor") {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Jan))));

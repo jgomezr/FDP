@@ -303,16 +303,16 @@
     </string-array>
     <string-array name="reason">
         <item>N/A</item>
-        <item>Replanting</item>
+        <item>Replantation</item>
         <item>Greffage</item>
     </string-array>
     <string-array name="reason1">
-        <item>Replanting</item>
+        <item>Replantation</item>
         <item>Greffage</item>
     </string-array>
     <string-array name="reason2">
         <item>Greffage</item>
-        <item>Replanting</item>
+        <item>Replantation</item>
     </string-array>
     <string-array name="reno1">
         <item>-1</item>
@@ -777,7 +777,7 @@
     <string name="calcAO">Calculer</string>
     <string name="cancel">Non</string>
     <string name="cannotBeEmpty">Le nom du planteur et le code du paysan ne peuvent pas être vides ou le nombre de parcelles doit être supérieur à 0!</string>
-    <string name="changeR">Changement de Replanting</string>
+    <string name="changeR">Changement de Replantation</string>
     <string name="childrenInSchool">C6. Nombre d’enfants ayant un âge compris entre 5 et 17 ans scolarisés/fréquentant une école</string>
     <string name="childrenUnder">C5. Nombre d’enfants ayant un âge compris entre 5 et 17 ans</string>
     <string name="childrenVal">Les enfants de 5 à 17 ans ou les enfants inscrits à l\'école ne peuvent pas dépasser le nombre total d\'enfants</string>

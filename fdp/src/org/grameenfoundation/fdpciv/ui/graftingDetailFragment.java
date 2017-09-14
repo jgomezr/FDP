@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class graftingDetailFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -70,6 +70,41 @@ public class graftingDetailFragment extends Fragment {
         p22 = getString(R.string.p22);
         p23 = getString(R.string.p23);
         p24 = getString(R.string.p24);
+        p25 = getString(R.string.p25);
+        p26 = getString(R.string.p26);
+        p27 = getString(R.string.p27);
+        p28 = getString(R.string.p28);
+        p29 = getString(R.string.p29);
+        p30 = getString(R.string.p30);
+        p31 = getString(R.string.p31);
+        p32 = getString(R.string.p32);
+        p33 = getString(R.string.p33);
+        p34 = getString(R.string.p34);
+        p35 = getString(R.string.p35);
+        p36 = getString(R.string.p36);
+        p37 = getString(R.string.p37);
+        p38 = getString(R.string.p38);
+        p39 = getString(R.string.p39);
+        p40 = getString(R.string.p40);
+        p41 = getString(R.string.p41);
+        p42 = getString(R.string.p42);
+        p43 = getString(R.string.p43);
+        p44 = getString(R.string.p44);
+        p45 = getString(R.string.p45);
+        p46 = getString(R.string.p46);
+        p47 = getString(R.string.p47);
+        p48 = getString(R.string.p48);
+        p49 = getString(R.string.p49);
+        p50 = getString(R.string.p50);
+        p51 = getString(R.string.p51);
+        p52 = getString(R.string.p52);
+        p53 = getString(R.string.p53);
+        p54 = getString(R.string.p54);
+        p55 = getString(R.string.p55);
+        p56 = getString(R.string.p56);
+        p57 = getString(R.string.p57);
+        p58 = getString(R.string.p58);
+        p59 = getString(R.string.p59);
 
         return view;
     }
@@ -98,18 +133,19 @@ public class graftingDetailFragment extends Fragment {
         setText(plt, plot);
 
         if (launchYear < startYear){
-            setText(jlb, p16+p19+p24);
-            setText(fblb, p16+p19+p21+p24);
-            setText(mrlb, p14+p16+p19+p21+p24);
-            setText(ablb, p16+p19+p21+p24);
-            setText(mylb, p12+p15+p16+p20+p18+p24);
-            setText(jnlb, p12+p16+p20+p18+p24);
-            setText(jllb, p16+p19+p24);
-            setText(aglb, p16+p19+p21+p24);
-            setText(splb, p16+p19+p21+p24);
-            setText(oclb, p16+p19+p21+p24);
-            setText(nvlb, p12+p15+p16+p20+p18+p24);
-            setText(dclb, p14+p16+p19+p21+p24);
+            setText(jlb, p17);
+            setText(fblb, p33);
+            setText(mrlb, p32);
+            setText(ablb, p14+", "+p31);
+            setText(mylb, p14+", "+p15+", "+p30+", "+p5+", "+p6+", "+p17+", "+p19);
+            setText(jnlb, p15+", "+p17);
+            setText(jllb, p33);
+            setText(aglb, p32);
+            setText(splb, p14+", "+p15+", "+p30+", "+p5+", "+p17);
+            setText(oclb, p15+", "+p28+", "+p6+", "+p17+", "+p19);
+            setText(nvlb, p15+", "+p28+", "+p17);
+            setText(dclb, p14+", "+p17);
+            setText(plt, plot);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.MGAPJan) + getResources().getInteger(R.integer.MGAPSLaborJan)));
                 feb = (int) (area * (getResources().getInteger(R.integer.MGAPFeb) + getResources().getInteger(R.integer.MGAPSLaborFeb)));
@@ -152,20 +188,22 @@ public class graftingDetailFragment extends Fragment {
             }
         }else{
             if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
-                setText(jlb, "graft 1"+p8+" + "+p9+" + "+p14+" + "+p19+" + "+p24);
-                setText(fblb, "graft 1"+p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mrlb, "graft 1"+p10+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(ablb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+ p24);
-                setText(mylb, "graft 1"+p12+" + "+p15+" + "+p22+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 1"+p14+" + "+p16+" + "+p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 1"+p16+" + "+p19+" + "+p24);
-                setText(aglb, "graft 1"+p16+" + "+p22+" + "+p21+" + "+p24);
-                setText(splb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(oclb, "graft 1"+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(nvlb, "graft 1"+p12+" + "+p15+" + "+p22+" + "+p24);
-                setText(dclb, "graft 1"+p11+" + "+p14+" + "+p16+" + "+p19+" + "+p24);
+
 
                 if (relat == "extra"){
+                    setText(jlb, p17);
+                    setText(fblb, p33);
+                    setText(mrlb, p33);
+                    setText(ablb, p33);
+                    setText(mylb, p46+", "+p47+", "+p40+", "+p12+", "+p16+", "+p36+", "+p19);
+                    setText(jnlb, p43+", "+p47+", "+p16+", "+p49+", "+p36);
+                    setText(jllb, p39+", "+p49);
+                    setText(aglb, p58);
+                    setText(splb, p12+", "+p57+", "+p48+", "+p42+", "+p39+", "+p54+", "+p17);
+                    setText(oclb, p55+", "+p10+", "+p12+", "+p36+", "+p39+", "+p17+", "+p19);
+                    setText(nvlb, p39+", "+p42+", "+p50+", "+p17);
+                    setText(dclb, p58+", "+p39+", "+p54);
+                    setText(plt, plot);
 
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Jan)+getResources().getInteger(R.integer.GraftingLaborY1Jan)+getResources().getInteger(R.integer.difInputY1Jan))+getResources().getInteger(R.integer.difLaborY1Jan));
@@ -209,6 +247,19 @@ public class graftingDetailFragment extends Fragment {
                     }
 
                 }else{
+                    setText(jlb, p17);
+                    setText(fblb, p33);
+                    setText(mrlb, p33);
+                    setText(ablb, p33);
+                    setText(mylb, p46+", "+p47+", "+p40+", "+p12+", "+p16+", "+p36+", "+p19);
+                    setText(jnlb, p43+", "+p47+", "+p16+", "+p49+", "+p36);
+                    setText(jllb, p39+", "+p49);
+                    setText(aglb, p58);
+                    setText(splb, p12+", "+p57+", "+p48+", "+p42+", "+p39+", "+p54+", "+p17);
+                    setText(oclb, p55+", "+p10+", "+p12+", "+p36+", "+p39+", "+p17+", "+p19);
+                    setText(nvlb, p39+", "+p42+", "+p50+", "+p17);
+                    setText(dclb, p58+", "+p39+", "+p54);
+                    setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Jan)+getResources().getInteger(R.integer.GraftingLaborY1Jan)));
                         feb = (int) (area * (getResources().getInteger(R.integer.GraftingInputY1Feb)+getResources().getInteger(R.integer.GraftingLaborY1Feb)));
@@ -252,20 +303,21 @@ public class graftingDetailFragment extends Fragment {
                 }
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
-                setText(jlb, "graft 2"+p16+" + "+ p19);
-                setText(fblb, "graft 2"+p16+" + "+ p19+" + "+ p21);
-                setText(mrlb, "graft 2"+p14+" + "+ p16+" + "+ p22+" + "+ p21);
-                setText(ablb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 2"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 2"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "graft 2"+p14+" + "+ p16+" + "+ p20+" + "+ p24);
 
                 if (relat == "extra"){
+                    setText(jlb, p33);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p39+", "+p27+", "+p54);
+                    setText(mylb, p12+", "+p39+", "+p54+", "+p27+", "+p36+", "+p17+", "+p19);
+                    setText(jnlb, p17);
+                    setText(jllb, p33);
+                    setText(aglb, p58);
+                    setText(splb, p39+", "+p12+", "+p27+", "+p54+", "+p17);
+                    setText(oclb, p27+", "+p54+", "+p36+", "+p17+", "+p19);
+                    setText(nvlb, p27+", "+p17);
+                    setText(dclb, p39+", "+p52+", "+p17);
+                    setText(plt, plot);
 
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Jan)+getResources().getInteger(R.integer.GraftingLaborY2Jan)+getResources().getInteger(R.integer.difInputY2Jan))+getResources().getInteger(R.integer.difLaborY2Jan));
@@ -309,6 +361,19 @@ public class graftingDetailFragment extends Fragment {
                     }
 
                 }else{
+                    setText(jlb, p33);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p39+", "+p27+", "+p54);
+                    setText(mylb, p12+", "+p39+", "+p54+", "+p27+", "+p36+", "+p17+", "+p19);
+                    setText(jnlb, p17);
+                    setText(jllb, p33);
+                    setText(aglb, p58);
+                    setText(splb, p39+", "+p12+", "+p27+", "+p54+", "+p17);
+                    setText(oclb, p27+", "+p54+", "+p36+", "+p17+", "+p19);
+                    setText(nvlb, p27+", "+p17);
+                    setText(dclb, p39+", "+p52+", "+p17);
+                    setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Jan)+getResources().getInteger(R.integer.GraftingLaborY2Jan)));
                         feb = (int) (area * (getResources().getInteger(R.integer.GraftingInputY2Feb)+getResources().getInteger(R.integer.GraftingLaborY2Feb)));
@@ -353,20 +418,20 @@ public class graftingDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, "graft 3"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "graft 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 3"+p14+" + "+ p16+" + "+p20 +" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 3"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 3"+p12+" + "+ p15+" + "+ p20+" + "+ p24);
-                setText(dclb, "graft 3"+p14+" + "+ p16+" + "+ p20+" + "+ p24);
-
                 if (relat == "extra"){
+                    setText(jlb, p17);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p54+", "+p27+", "+p39);
+                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p50+", "+p17);
+                    setText(jllb, p33);
+                    setText(aglb, p58);
+                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                    setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                    setText(nvlb, p27+", "+p50+", "+p17);
+                    setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                    setText(plt, plot);
 
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY3Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan)))+getResources().getInteger(R.integer.difLaborY3Jan));
@@ -410,6 +475,19 @@ public class graftingDetailFragment extends Fragment {
                     }
 
                 }else{
+                    setText(jlb, p17);
+                    setText(fblb, p33);
+                    setText(mrlb, p58);
+                    setText(ablb, p54+", "+p27+", "+p39);
+                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                    setText(jnlb, p50+", "+p17);
+                    setText(jllb, p33);
+                    setText(aglb, p58);
+                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                    setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                    setText(nvlb, p27+", "+p50+", "+p17);
+                    setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                    setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY3Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY3Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY3Feb)))+(area * (getResources().getInteger(R.integer.GraftingLaborY3Feb))));
@@ -454,18 +532,19 @@ public class graftingDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
 
-                setText(jlb, "graft 4"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "graft 4"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 4"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 4"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 4"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 4"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 4"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "graft 4"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
                 if (relat == "extra"){
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY4Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
@@ -553,18 +632,19 @@ public class graftingDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
 
-                setText(jlb, "graft 5"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "graft 5"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 5"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 5"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 5"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 5"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 5"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "graft 5"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY5Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY5Jan))));
@@ -608,18 +688,19 @@ public class graftingDetailFragment extends Fragment {
                 }
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
 
-                setText(jlb, "graft 6"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "graft 6"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 6"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 6"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 6"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 6"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 6"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "graft 6"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY6Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY6Jan))));
@@ -664,18 +745,19 @@ public class graftingDetailFragment extends Fragment {
 
             }else{
 
-                setText(jlb,  "graft 7"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "graft 7"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "graft 7"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "graft 7"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "graft 7"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "graft 7"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "graft 7"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "graft 7"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p54+", "+p27+", "+p39);
+                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
+                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
+                setText(nvlb, p27+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.GraftingInputY7Jan)))+(area * (getResources().getInteger(R.integer.GraftingLaborY7Jan))));

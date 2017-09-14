@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class extraDetailFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -70,6 +70,41 @@ public class extraDetailFragment extends Fragment {
         p22 = getString(R.string.p22);
         p23 = getString(R.string.p23);
         p24 = getString(R.string.p24);
+        p25 = getString(R.string.p25);
+        p26 = getString(R.string.p26);
+        p27 = getString(R.string.p27);
+        p28 = getString(R.string.p28);
+        p29 = getString(R.string.p29);
+        p30 = getString(R.string.p30);
+        p31 = getString(R.string.p31);
+        p32 = getString(R.string.p32);
+        p33 = getString(R.string.p33);
+        p34 = getString(R.string.p34);
+        p35 = getString(R.string.p35);
+        p36 = getString(R.string.p36);
+        p37 = getString(R.string.p37);
+        p38 = getString(R.string.p38);
+        p39 = getString(R.string.p39);
+        p40 = getString(R.string.p40);
+        p41 = getString(R.string.p41);
+        p42 = getString(R.string.p42);
+        p43 = getString(R.string.p43);
+        p44 = getString(R.string.p44);
+        p45 = getString(R.string.p45);
+        p46 = getString(R.string.p46);
+        p47 = getString(R.string.p47);
+        p48 = getString(R.string.p48);
+        p49 = getString(R.string.p49);
+        p50 = getString(R.string.p50);
+        p51 = getString(R.string.p51);
+        p52 = getString(R.string.p52);
+        p53 = getString(R.string.p53);
+        p54 = getString(R.string.p54);
+        p55 = getString(R.string.p55);
+        p56 = getString(R.string.p56);
+        p57 = getString(R.string.p57);
+        p58 = getString(R.string.p58);
+        p59 = getString(R.string.p59);
 
         return view;
     }
@@ -98,18 +133,19 @@ public class extraDetailFragment extends Fragment {
         setText(plt, plot);
 
         if (launchYear < startYear){
-            setText(jlb, p16+p19+p24);
-            setText(fblb, p16+p19+p21+p24);
-            setText(mrlb, p14+p16+p19+p21+p24);
-            setText(ablb, p16+p19+p21+p24);
-            setText(mylb, p12+p15+p16+p20+p18+p24);
-            setText(jnlb, p12+p16+p20+p18+p24);
-            setText(jllb, p16+p19+p24);
-            setText(aglb, p16+p19+p21+p24);
-            setText(splb, p16+p19+p21+p24);
-            setText(oclb, p16+p19+p21+p24);
-            setText(nvlb, p12+p15+p16+p20+p18+p24);
-            setText(dclb, p14+p16+p19+p21+p24);
+            setText(jlb, p17);
+            setText(fblb, p33);
+            setText(mrlb, p58);
+            setText(ablb, p39+", "+p46);
+            setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+            setText(jnlb, p50+", "+p17);
+            setText(jllb, p33);
+            setText(aglb, p58);
+            setText(splb, p46+", "+p40+", "+p12+", "+p17);
+            setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+            setText(nvlb, p45+", "+p50+", "+p17);
+            setText(dclb, p39+", "+p52+", "+p17);
+            setText(plt, plot);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
                 feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb) + getResources().getInteger(R.integer.GAPSLaborY1Feb)));
@@ -152,18 +188,19 @@ public class extraDetailFragment extends Fragment {
             }
         }else{
             if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
-                setText(jlb, "extra 1"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "extra 1"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "extra 1"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "extra 1"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "extra 1"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "extra 1"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "extra 1"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "extra 1"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p13+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p13+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p37+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY1Jan)+getResources().getInteger(R.integer.ExtraSoilLaborY1Jan)));
@@ -207,18 +244,19 @@ public class extraDetailFragment extends Fragment {
                 }
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
-                setText(jlb, "extra 2"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "extra 2"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "extra 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "extra 2"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "extra 2"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "extra 2"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "extra 2"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "extra 2"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p13+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p13+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p37+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) (area * (getResources().getInteger(R.integer.ExtraSoilInputY2Jan)+getResources().getInteger(R.integer.ExtraSoilLaborY2Jan)));
@@ -263,18 +301,19 @@ public class extraDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, "extra 3"+p16+" + "+ p19+" + "+ p24);
-                setText(fblb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mrlb, "extra 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(ablb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(mylb, "extra 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jnlb, "extra 3"+p14+" + "+ p16+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(jllb, "extra 3"+p16+" + "+ p19+" + "+ p24);
-                setText(aglb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(splb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(oclb, "extra 3"+p16+" + "+ p19+" + "+ p21+" + "+ p24);
-                setText(nvlb, "extra 3"+p12+" + "+ p15+" + "+ p20+" + "+ p22+" + "+ p24);
-                setText(dclb, "extra 3"+p14+" + "+ p16+" + "+ p19+" + "+ p21+" + "+ p24);
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p12+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
 
                 if (labor == "labor"){
                     jan = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY3Jan)))+(area * (getResources().getInteger(R.integer.ExtraSoilLaborY3Jan))));
@@ -317,58 +356,227 @@ public class extraDetailFragment extends Fragment {
                     dec = (int) ((area * (getResources().getInteger(R.integer.ExtraSoilInputY3Dec))));
                 }
 
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
+
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p12+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
+                if (labor == "labor") {
+                    jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
+                    feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb) + getResources().getInteger(R.integer.GAPSLaborY1Feb)));
+                    mar = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Mar) + getResources().getInteger(R.integer.GAPSLaborY1Mar)));
+                    apr = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Apr) + getResources().getInteger(R.integer.GAPSLaborY1Apr)));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Aug) + getResources().getInteger(R.integer.GAPSLaborY1Aug)));
+                    sep = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Sep) + getResources().getInteger(R.integer.GAPSLaborY1Sep)));
+                    oct = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Oct) + getResources().getInteger(R.integer.GAPSLaborY1Oct)));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else if (labor == "season") {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * getResources().getInteger(R.integer.GAPSInputY1May));
+                    jun = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jun));
+                    jul = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jul));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Nov));
+                    dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
+                }
+
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
+
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p12+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
+                if (labor == "labor") {
+                    jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
+                    feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb) + getResources().getInteger(R.integer.GAPSLaborY1Feb)));
+                    mar = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Mar) + getResources().getInteger(R.integer.GAPSLaborY1Mar)));
+                    apr = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Apr) + getResources().getInteger(R.integer.GAPSLaborY1Apr)));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Aug) + getResources().getInteger(R.integer.GAPSLaborY1Aug)));
+                    sep = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Sep) + getResources().getInteger(R.integer.GAPSLaborY1Sep)));
+                    oct = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Oct) + getResources().getInteger(R.integer.GAPSLaborY1Oct)));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else if (labor == "season") {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * getResources().getInteger(R.integer.GAPSInputY1May));
+                    jun = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jun));
+                    jul = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jul));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Nov));
+                    dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
+                }
+
+            }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
+
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p12+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
+                if (labor == "labor") {
+                    jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
+                    feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb) + getResources().getInteger(R.integer.GAPSLaborY1Feb)));
+                    mar = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Mar) + getResources().getInteger(R.integer.GAPSLaborY1Mar)));
+                    apr = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Apr) + getResources().getInteger(R.integer.GAPSLaborY1Apr)));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Aug) + getResources().getInteger(R.integer.GAPSLaborY1Aug)));
+                    sep = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Sep) + getResources().getInteger(R.integer.GAPSLaborY1Sep)));
+                    oct = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Oct) + getResources().getInteger(R.integer.GAPSLaborY1Oct)));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else if (labor == "season") {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * getResources().getInteger(R.integer.GAPSInputY1May));
+                    jun = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jun));
+                    jul = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jul));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Nov));
+                    dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
+                }
+
             }else{
-                setText(jlb, p16+" + "+p19+" + "+p24);
-                setText(fblb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mrlb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(ablb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(mylb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(jnlb, p12+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(jllb, p16+" + "+p19+" + "+p24);
-                setText(aglb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(splb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(oclb, p16+" + "+p19+" + "+p21+" + "+p24);
-                setText(nvlb, p12+" + "+p15+" + "+p16+" + "+p20+" + "+p18+" + "+p24);
-                setText(dclb, p14+" + "+p16+" + "+p19+" + "+p21+" + "+p24);
-                if (labor == "labor"){
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Dec))));
-                }else if(labor =="season") {
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec)))+(area * (getResources().getInteger(R.integer.GAPSLaborY1Dec))));
-                }else{
-                    jan = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jan))));
-                    feb = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Feb))));
-                    mar = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Mar))));
-                    apr = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Jul))));
-                    aug = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.GAPSInputY1Dec))));
+                setText(jlb, p17);
+                setText(fblb, p33);
+                setText(mrlb, p58);
+                setText(ablb, p39+", "+p46);
+                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
+                setText(jnlb, p50+", "+p17);
+                setText(jllb, p33);
+                setText(aglb, p58);
+                setText(splb, p46+", "+p40+", "+p12+", "+p17);
+                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
+                setText(nvlb, p45+", "+p50+", "+p17);
+                setText(dclb, p39+", "+p52+", "+p17);
+                setText(plt, plot);
+                if (labor == "labor") {
+                    jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
+                    feb = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Feb) + getResources().getInteger(R.integer.GAPSLaborY1Feb)));
+                    mar = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Mar) + getResources().getInteger(R.integer.GAPSLaborY1Mar)));
+                    apr = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Apr) + getResources().getInteger(R.integer.GAPSLaborY1Apr)));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Aug) + getResources().getInteger(R.integer.GAPSLaborY1Aug)));
+                    sep = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Sep) + getResources().getInteger(R.integer.GAPSLaborY1Sep)));
+                    oct = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Oct) + getResources().getInteger(R.integer.GAPSLaborY1Oct)));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else if (labor == "season") {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1May) + getResources().getInteger(R.integer.GAPSLaborY1May)));
+                    jun = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jun) + getResources().getInteger(R.integer.GAPSLaborY1Jun)));
+                    jul = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jul) + getResources().getInteger(R.integer.GAPSLaborY1Jul)));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Nov) + getResources().getInteger(R.integer.GAPSLaborY1Nov)));
+                    dec = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Dec) + getResources().getInteger(R.integer.GAPSLaborY1Dec)));
+                } else {
+                    jan = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jan));
+                    feb = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Feb));
+                    mar = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Mar));
+                    apr = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Apr));
+                    may = (int) (area * getResources().getInteger(R.integer.GAPSInputY1May));
+                    jun = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jun));
+                    jul = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Jul));
+                    aug = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Aug));
+                    sep = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Sep));
+                    oct = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Oct));
+                    nov = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Nov));
+                    dec = (int) (area * getResources().getInteger(R.integer.GAPSInputY1Dec));
                 }
 
             }
