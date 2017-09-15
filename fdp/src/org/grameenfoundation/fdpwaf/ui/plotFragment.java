@@ -23,9 +23,9 @@ import org.grameenfoundation.fdpwaf.R;
 
 public class plotFragment extends Fragment  {
     public String renovSize;
-    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP,area;
+    public EditText ph,lime,fillingP,geneticP,gapP,soilFertMng,fcondP,ageP,area,reco;
     public Button calc;
-    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP,renov,renovReason,renovYear;
+    public Spinner cteP,plantP,tehelP,debDiP,pruniP,pesDiP,weediP,harveP,shadeP,soilCP,orgMaP,fertFP,fertAP,renov,renovReason,renovYear,hire;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -56,6 +56,8 @@ public class plotFragment extends Fragment  {
         renovReason = (Spinner) view.findViewById(R.id.reason_field);
         renovYear = (Spinner) view.findViewById(R.id.howLong_field);
         area = (EditText) view.findViewById(R.id.plotArea_field);
+        hire = (Spinner) view.findViewById(R.id.hireP_field);
+        reco = (EditText) view.findViewById(R.id.reco_field);
 
         ph.addTextChangedListener(new TextWatcher() {
             @Override
@@ -67,9 +69,9 @@ public class plotFragment extends Fragment  {
                 if (String.valueOf(ph.getText()).isEmpty()){
                     setText(lime,"N/A");
                 }else if (Double.parseDouble(ph.getText().toString()) > 5.7){
-                    setText(lime,"No");
+                    setText(lime,getString(R.string.cancel));
                 }else{
-                    setText(lime,"Yes");
+                    setText(lime,getString(R.string.yes));
                 }
             }
             @Override
@@ -81,10 +83,10 @@ public class plotFragment extends Fragment  {
         cteP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("2x4")||cteP.getSelectedItem().toString().equals("3x3.5")||cteP.getSelectedItem().toString().equals("2.5x3")||cteP.getSelectedItem().toString().equals("2.5x3.5")||cteP.getSelectedItem().toString().equals("2.5x4")){
+                if (cteP.getSelectedItem().toString().equals("3x2.5")||cteP.getSelectedItem().toString().equals("3x3")||cteP.getSelectedItem().toString().equals("2x4")||cteP.getSelectedItem().toString().equals("3x3.5")||cteP.getSelectedItem().toString().equals("2.5x3")||cteP.getSelectedItem().toString().equals("2.5x3.5")||cteP.getSelectedItem().toString().equals("2.5x4")||cteP.getSelectedItem().toString().equals("3.5x3.5")||cteP.getSelectedItem().toString().equals("3x4")||cteP.getSelectedItem().toString().equals("2x3.5")){
                     setText(fillingP,"No");
                 }else {
-                    setText(fillingP,"Yes");
+                    setText(fillingP,getString(R.string.yes));
                 }
             }
 
@@ -104,7 +106,7 @@ public class plotFragment extends Fragment  {
                 }else {
                     setText(geneticP, "G");
                 }
-                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3.5×4")||cteP.getSelectedItem().toString().equals("4x4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("2x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 30)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
+                if ((cteP.getSelectedItem().toString().equals("2x2")||cteP.getSelectedItem().toString().equals("2.5x2.5")||cteP.getSelectedItem().toString().equals("3.5x4")||cteP.getSelectedItem().toString().equals("4x4")||cteP.getSelectedItem().toString().equals("2x2.5")||cteP.getSelectedItem().toString().equals("2x3")||cteP.getSelectedItem().toString().equals("2x3.5"))||(Double.parseDouble(ageP.getText().toString()) > 30)||(tehelP.getSelectedItem().toString().equals("B"))||(debDiP.getSelectedItem().toString().equals("B"))) {
                     setText(fcondP, "B");
                 }else{
                     setText(fcondP, "G");
@@ -124,6 +126,7 @@ public class plotFragment extends Fragment  {
                     setText(soilFertMng,"G");
                 }
 
+                recommendation();
                 ((plotActivity)getActivity()).partialSave();
             }
         });
@@ -131,7 +134,7 @@ public class plotFragment extends Fragment  {
         renov.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (renov.getSelectedItem().toString().equals("Yes")||renov.getSelectedItem().toString().equals("Ya")){
+                if (renov.getSelectedItem().toString().equals("Yes")||renov.getSelectedItem().toString().equals("Oui")){
                     renovReason.setEnabled(true);
                     renovYear.setEnabled(true);
                     fillingP.setEnabled(false);
@@ -189,6 +192,33 @@ public class plotFragment extends Fragment  {
         });
 
         return view;
+    }
+
+    public void recommendation(){
+        if (fcondP.getText().toString().equals("B")||(Integer.parseInt(ageP.getText().toString()) > 30)) {
+            //Replant
+            if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+                setText(reco,"replanting+extra");
+            } else {
+                setText(reco,"replanting");
+            }
+
+        } else if ((fcondP.getText().toString().equals("G") && (geneticP.getText().toString().equals("B")||geneticP.getText().toString().equals("M"))) || ((Integer.parseInt(ageP.getText().toString()) > 25) && (Integer.parseInt(ageP.getText().toString()) < 30))) {
+            //Graft
+            if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+                setText(reco,"grafting+extra");
+            } else {
+                setText(reco,"grafting");
+            }
+
+        } else if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
+            //Extra Soil Management
+            setText(reco,"extra");
+
+        } else {
+            setText(reco,"gap");
+        }
+
     }
 
     public void setrenovSize(String rs){

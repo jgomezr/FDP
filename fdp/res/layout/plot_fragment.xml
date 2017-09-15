@@ -50,7 +50,7 @@
 
     <Spinner
         android:layout_width="155dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:id="@+id/renovated_field"
         android:entries="@array/yesNo"/>
 
@@ -62,7 +62,7 @@
 
     <Spinner
         android:layout_width="155dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:id="@+id/howLong_field"
         android:entries="@array/howLong"/>
 
@@ -85,7 +85,7 @@
 
     <Spinner
         android:layout_width="155dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:id="@+id/cocoaTreesP_field"
         android:entries="@array/treeDistance" />
 
@@ -187,7 +187,7 @@
 
     <EditText
         android:layout_width="155dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:id="@+id/fillingP_field"
         android:focusable="false"/>
 
@@ -198,7 +198,7 @@
         android:entries="@array/yesNoHire"/>
 
     <TextView android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
         android:gravity="center_horizontal"
@@ -234,6 +234,15 @@
         android:id="@+id/soilFertMng_field"
         android:clickable="true"
         android:focusable="false"/>
+
+    <EditText
+        android:layout_width="155dp"
+        android:layout_height="35dp"
+        android:background="#00000000"
+        android:textColor="#FFFFFF"
+        android:id="@+id/reco_field"
+        android:focusable="false"
+        android:inputType="textNoSuggestions"/>
 
     <Button android:layout_width="150dp"
         android:layout_height="wrap_content"

@@ -61,7 +61,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
     private LocationManager locationManager;
     private LocationListener locationListener;
     public TextView Lp1, Lp2, Lp3, Lp4, Lp5, Lp6, Lp7, Lp8, Lp9, Lp10,q41,q42;
-    public EditText gps1,gps2,gps3,gps4,gps5,gps6,gps7,gps8,gps9,gps10,areP1,areP2,areP3,areP4,areP5,areP6,areP7,areP8,areP9,areP10,estP1,estP2,estP3,estP4,estP5,estP6,estP7,estP8,estP9,estP10,ageP1,steP1,fcondP1,limeNP1,filliP1,ph1,geneticP1,gapP1,soilFertMng1,ageP2,steP2,fcondP2,limeNP2,filliP2,ph2,geneticP2,gapP2,soilFertMng2,ageP3,steP3,fcondP3,limeNP3,filliP3,ph3,geneticP3,gapP3,soilFertMng3,ageP4,steP4,fcondP4,limeNP4,filliP4,ph4,geneticP4,gapP4,soilFertMng4,ageP5,steP5,fcondP5,limeNP5,filliP5,ph5,geneticP5,gapP5,soilFertMng5,ageP6,steP6,fcondP6,limeNP6,filliP6,ph6,geneticP6,gapP6,soilFertMng6,ageP7,steP7,fcondP7,limeNP7,filliP7,ph7,geneticP7,gapP7,soilFertMng7,ageP8,steP8,fcondP8,limeNP8,filliP8,ph8,geneticP8,gapP8,soilFertMng8,ageP9,steP9,fcondP9,limeNP9,filliP9,ph9,geneticP9,gapP9,soilFertMng9,ageP10,steP10,fcondP10,limeNP10,filliP10,ph10,geneticP10,gapP10,soilFertMng10;
+    public EditText gps1,gps2,gps3,gps4,gps5,gps6,gps7,gps8,gps9,gps10,areP1,areP2,areP3,areP4,areP5,areP6,areP7,areP8,areP9,areP10,estP1,estP2,estP3,estP4,estP5,estP6,estP7,estP8,estP9,estP10,ageP1,steP1,fcondP1,limeNP1,filliP1,ph1,geneticP1,gapP1,soilFertMng1,ageP2,steP2,fcondP2,limeNP2,filliP2,ph2,geneticP2,gapP2,soilFertMng2,ageP3,steP3,fcondP3,limeNP3,filliP3,ph3,geneticP3,gapP3,soilFertMng3,ageP4,steP4,fcondP4,limeNP4,filliP4,ph4,geneticP4,gapP4,soilFertMng4,ageP5,steP5,fcondP5,limeNP5,filliP5,ph5,geneticP5,gapP5,soilFertMng5,ageP6,steP6,fcondP6,limeNP6,filliP6,ph6,geneticP6,gapP6,soilFertMng6,ageP7,steP7,fcondP7,limeNP7,filliP7,ph7,geneticP7,gapP7,soilFertMng7,ageP8,steP8,fcondP8,limeNP8,filliP8,ph8,geneticP8,gapP8,soilFertMng8,ageP9,steP9,fcondP9,limeNP9,filliP9,ph9,geneticP9,gapP9,soilFertMng9,ageP10,steP10,fcondP10,limeNP10,filliP10,ph10,geneticP10,gapP10,soilFertMng10,reco1,reco2,reco3,reco4,reco5,reco6,reco7,reco8,reco9,reco10;
     public Spinner cteP1,plantP1,tehelP1,debDiP1,pruniP1,pesDiP1,weediP1,harveP1,shadeP1,soilCP1,orgMaP1,fertFP1,fertAP1,drainP1,hireNP1,cteP2,plantP2,tehelP2,debDiP2,pruniP2,pesDiP2,weediP2,harveP2,shadeP2,soilCP2,orgMaP2,fertFP2,fertAP2,drainP2,hireNP2,cteP3,plantP3,tehelP3,debDiP3,pruniP3,pesDiP3,weediP3,harveP3,shadeP3,soilCP3,orgMaP3,fertFP3,fertAP3,drainP3,hireNP3,cteP4,plantP4,tehelP4,debDiP4,pruniP4,pesDiP4,weediP4,harveP4,shadeP4,soilCP4,orgMaP4,fertFP4,fertAP4,drainP4,hireNP4,cteP5,plantP5,tehelP5,debDiP5,pruniP5,pesDiP5,weediP5,harveP5,shadeP5,soilCP5,orgMaP5,fertFP5,fertAP5,drainP5,hireNP5,cteP6,plantP6,tehelP6,debDiP6,pruniP6,pesDiP6,weediP6,harveP6,shadeP6,soilCP6,orgMaP6,fertFP6,fertAP6,drainP6,hireNP6,cteP7,plantP7,tehelP7,debDiP7,pruniP7,pesDiP7,weediP7,harveP7,shadeP7,soilCP7,orgMaP7,fertFP7,fertAP7,drainP7,hireNP7,cteP8,plantP8,tehelP8,debDiP8,pruniP8,pesDiP8,weediP8,harveP8,shadeP8,soilCP8,orgMaP8,fertFP8,fertAP8,drainP8,hireNP8,cteP9,plantP9,tehelP9,debDiP9,pruniP9,pesDiP9,weediP9,harveP9,shadeP9,soilCP9,orgMaP9,fertFP9,fertAP9,drainP9,hireNP9,cteP10,plantP10,tehelP10,debDiP10,pruniP10,pesDiP10,weediP10,harveP10,shadeP10,soilCP10,orgMaP10,fertFP10,fertAP10,drainP10,hireNP10,renovP1,renovP2,renovP3,renovP4,renovP5,renovP6,renovP7,renovP8,renovP9,renovP10,renovReasonP1,renovReasonP2,renovReasonP3,renovReasonP4,renovReasonP5,renovReasonP6,renovReasonP7,renovReasonP8,renovReasonP9,renovReasonP10,renovYearP1,renovYearP2,renovYearP3,renovYearP4,renovYearP5,renovYearP6,renovYearP7,renovYearP8,renovYearP9,renovYearP10;
     public plotFragment fragment1,fragment2,fragment3,fragment4,fragment5,fragment6,fragment7,fragment8,fragment9,fragment10;
 
@@ -392,6 +392,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         renovYearP10 = (Spinner) fragment10.getView().findViewById(R.id.howLong_field);
         q41 = (TextView) findViewById(R.id.q41);
         q42 = (TextView) findViewById(R.id.q42);
+        reco1 = (EditText) fragment1.getView().findViewById(R.id.reco_field);
+        reco2 = (EditText) fragment2.getView().findViewById(R.id.reco_field);
+        reco3 = (EditText) fragment3.getView().findViewById(R.id.reco_field);
+        reco4 = (EditText) fragment4.getView().findViewById(R.id.reco_field);
+        reco5 = (EditText) fragment5.getView().findViewById(R.id.reco_field);
+        reco6 = (EditText) fragment6.getView().findViewById(R.id.reco_field);
+        reco7 = (EditText) fragment7.getView().findViewById(R.id.reco_field);
+        reco8 = (EditText) fragment8.getView().findViewById(R.id.reco_field);
+        reco9 = (EditText) fragment9.getView().findViewById(R.id.reco_field);
+        reco10 = (EditText) fragment10.getView().findViewById(R.id.reco_field);
 
         gps1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1237,52 +1247,52 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         if (sObject != null) {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 0) {
-                setText(Lp1,"PLOT 1");
+                setText(Lp1, getString(R.string.pt1));
                 ft.show(fragment1);
                 fragment1.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment1);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 1) {
-                setText(Lp2,"PLOT 2");
+                setText(Lp2,getString(R.string.pt2));
                 ft.show(fragment2);
                 fragment2.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment2);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 2) {
-                setText(Lp3,"PLOT 3");
+                setText(Lp3,getString(R.string.pt3));
                 ft.show(fragment3);
                 fragment3.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment3);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 3) {
-                setText(Lp4,"PLOT 4");
+                setText(Lp4,getString(R.string.pt4));
                 ft.show(fragment4);
                 fragment4.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment4);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 4) {
-                setText(Lp5,"PLOT 5");
+                setText(Lp5,getString(R.string.pt5));
                 ft.show(fragment5);
                 fragment5.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment5);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 5) {
-                setText(Lp6,"PLOT 6");
+                setText(Lp6,getString(R.string.pt6));
                 ft.show(fragment6);
                 fragment6.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment6);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 6) {
-                setText(Lp7,"PLOT 7");
+                setText(Lp7,getString(R.string.pt7));
                 ft.show(fragment7);
                 fragment7.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment7);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 7) {
-                setText(Lp8,"PLOT 8");
+                setText(Lp8,getString(R.string.pt8));
                 ft.show(fragment8);
                 fragment8.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment8);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 8) {
-                setText(Lp9,"PLOT 9");
+                setText(Lp9,getString(R.string.pt9));
                 ft.show(fragment9);
                 fragment9.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment9);}
             if (Integer.valueOf(sObject.getNumberOfPlots()) > 9) {
-                setText(Lp10,"PLOT 10");
+                setText(Lp10,getString(R.string.pt10));
                 ft.show(fragment10);
                 fragment10.setrenovSize(sObject.getTotalRenovationArea());
             }else{ft.hide(fragment10);}
@@ -1354,13 +1364,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot1CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot1CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot1CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -1714,13 +1724,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 1
-            if (sObject.getDrainageNeed1().contentEquals("Yes")||sObject.getDrainageNeed1().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed1().contentEquals("Yes")||sObject.getDrainageNeed1().contentEquals("Oui")) {
                 Spinner spinner = drainP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed1().contentEquals("No")||sObject.getDrainageNeed1().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed1().contentEquals("No")||sObject.getDrainageNeed1().contentEquals("Non")) {
                 Spinner spinner = drainP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -1742,19 +1752,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 1
-            if (sObject.getHireLabor1().contentEquals("Yes")||sObject.getHireLabor1().contentEquals("Ya")) {
+            if (sObject.getHireLabor1().contentEquals("Yes")||sObject.getHireLabor1().contentEquals("Oui")) {
                 Spinner spinner = hireNP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor1().contentEquals("No")||sObject.getHireLabor1().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor1().contentEquals("No")||sObject.getHireLabor1().contentEquals("Non")) {
                 Spinner spinner = hireNP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor1().contentEquals("Seasonal")||sObject.getHireLabor1().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor1().contentEquals("Seasonal")||sObject.getHireLabor1().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP1;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -1863,13 +1873,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot2CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot2CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot2CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -2224,13 +2234,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 2
-            if (sObject.getDrainageNeed2().contentEquals("Yes")||sObject.getDrainageNeed2().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed2().contentEquals("Yes")||sObject.getDrainageNeed2().contentEquals("Oui")) {
                 Spinner spinner = drainP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed2().contentEquals("No")||sObject.getDrainageNeed2().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed2().contentEquals("No")||sObject.getDrainageNeed2().contentEquals("Non")) {
                 Spinner spinner = drainP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2252,19 +2262,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 2
-            if (sObject.getHireLabor2().contentEquals("Yes")||sObject.getHireLabor2().contentEquals("Ya")) {
+            if (sObject.getHireLabor2().contentEquals("Yes")||sObject.getHireLabor2().contentEquals("Oui")) {
                 Spinner spinner = hireNP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor2().contentEquals("No")||sObject.getHireLabor2().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor2().contentEquals("No")||sObject.getHireLabor2().contentEquals("Non")) {
                 Spinner spinner = hireNP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor2().contentEquals("Seasonal")||sObject.getHireLabor2().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor2().contentEquals("Seasonal")||sObject.getHireLabor2().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP2;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -2373,13 +2383,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot3CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot3CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot3CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -2733,13 +2743,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 3
-            if (sObject.getDrainageNeed3().contentEquals("Yes")||sObject.getDrainageNeed3().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed3().contentEquals("Yes")||sObject.getDrainageNeed3().contentEquals("Oui")) {
                 Spinner spinner = drainP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed3().contentEquals("No")||sObject.getDrainageNeed3().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed3().contentEquals("No")||sObject.getDrainageNeed3().contentEquals("Non")) {
                 Spinner spinner = drainP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -2761,19 +2771,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 3
-            if (sObject.getHireLabor3().contentEquals("Yes")||sObject.getHireLabor3().contentEquals("Ya")) {
+            if (sObject.getHireLabor3().contentEquals("Yes")||sObject.getHireLabor3().contentEquals("Oui")) {
                 Spinner spinner = hireNP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor3().contentEquals("No")||sObject.getHireLabor3().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor3().contentEquals("No")||sObject.getHireLabor3().contentEquals("Non")) {
                 Spinner spinner = hireNP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor3().contentEquals("Seasonal")||sObject.getHireLabor3().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor3().contentEquals("Seasonal")||sObject.getHireLabor3().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP3;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -2882,13 +2892,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot4CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot4CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot4CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -3242,13 +3252,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 4
-            if (sObject.getDrainageNeed4().contentEquals("Yes")||sObject.getDrainageNeed4().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed4().contentEquals("Yes")||sObject.getDrainageNeed4().contentEquals("Oui")) {
                 Spinner spinner = drainP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed4().contentEquals("No")||sObject.getDrainageNeed4().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed4().contentEquals("No")||sObject.getDrainageNeed4().contentEquals("Non")) {
                 Spinner spinner = drainP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3270,19 +3280,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 4
-            if (sObject.getHireLabor4().contentEquals("Yes")||sObject.getHireLabor4().contentEquals("Ya")) {
+            if (sObject.getHireLabor4().contentEquals("Yes")||sObject.getHireLabor4().contentEquals("Oui")) {
                 Spinner spinner = hireNP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor4().contentEquals("No")||sObject.getHireLabor4().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor4().contentEquals("No")||sObject.getHireLabor4().contentEquals("Non")) {
                 Spinner spinner = hireNP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor4().contentEquals("Seasonal")||sObject.getHireLabor4().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor4().contentEquals("Seasonal")||sObject.getHireLabor4().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP4;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -3392,13 +3402,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot5CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot5CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot5CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -3752,13 +3762,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 5
-            if (sObject.getDrainageNeed5().contentEquals("Yes")||sObject.getDrainageNeed5().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed5().contentEquals("Yes")||sObject.getDrainageNeed5().contentEquals("Oui")) {
                 Spinner spinner = drainP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed5().contentEquals("No")||sObject.getDrainageNeed5().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed5().contentEquals("No")||sObject.getDrainageNeed5().contentEquals("Non")) {
                 Spinner spinner = drainP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -3780,19 +3790,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 5
-            if (sObject.getHireLabor5().contentEquals("Yes")||sObject.getHireLabor5().contentEquals("Ya")) {
+            if (sObject.getHireLabor5().contentEquals("Yes")||sObject.getHireLabor5().contentEquals("Oui")) {
                 Spinner spinner = hireNP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor5().contentEquals("No")||sObject.getHireLabor5().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor5().contentEquals("No")||sObject.getHireLabor5().contentEquals("Non")) {
                 Spinner spinner = hireNP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor5().contentEquals("Seasonal")||sObject.getHireLabor5().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor5().contentEquals("Seasonal")||sObject.getHireLabor5().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP5;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -3901,13 +3911,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot6CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot6CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot6CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -4261,13 +4271,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 6
-            if (sObject.getDrainageNeed6().contentEquals("Yes")||sObject.getDrainageNeed6().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed6().contentEquals("Yes")||sObject.getDrainageNeed6().contentEquals("oui")) {
                 Spinner spinner = drainP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed6().contentEquals("No")||sObject.getDrainageNeed6().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed6().contentEquals("No")||sObject.getDrainageNeed6().contentEquals("Non")) {
                 Spinner spinner = drainP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4289,19 +4299,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 6
-            if (sObject.getHireLabor6().contentEquals("Yes")||sObject.getHireLabor6().contentEquals("Ya")) {
+            if (sObject.getHireLabor6().contentEquals("Yes")||sObject.getHireLabor6().contentEquals("Oui")) {
                 Spinner spinner = hireNP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor6().contentEquals("No")||sObject.getHireLabor6().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor6().contentEquals("No")||sObject.getHireLabor6().contentEquals("Non")) {
                 Spinner spinner = hireNP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor6().contentEquals("Seasonal")||sObject.getHireLabor6().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor6().contentEquals("Seasonal")||sObject.getHireLabor6().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP6;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -4410,13 +4420,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot7CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot7CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot7CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -4770,13 +4780,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 7
-            if (sObject.getDrainageNeed7().contentEquals("Yes")||sObject.getDrainageNeed7().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed7().contentEquals("Yes")||sObject.getDrainageNeed7().contentEquals("Oui")) {
                 Spinner spinner = drainP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed7().contentEquals("No")||sObject.getDrainageNeed7().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed7().contentEquals("No")||sObject.getDrainageNeed7().contentEquals("Non")) {
                 Spinner spinner = drainP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -4798,19 +4808,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 7
-            if (sObject.getHireLabor7().contentEquals("Yes")||sObject.getHireLabor7().contentEquals("Ya")) {
+            if (sObject.getHireLabor7().contentEquals("Yes")||sObject.getHireLabor7().contentEquals("Oui")) {
                 Spinner spinner = hireNP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor7().contentEquals("No")||sObject.getHireLabor7().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor7().contentEquals("No")||sObject.getHireLabor7().contentEquals("Non")) {
                 Spinner spinner = hireNP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor7().contentEquals("Seasonal")||sObject.getHireLabor7().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor7().contentEquals("Seasonal")||sObject.getHireLabor7().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP7;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -4919,13 +4929,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot8CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot8CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot8CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -5279,13 +5289,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 8
-            if (sObject.getDrainageNeed8().contentEquals("Yes")||sObject.getDrainageNeed8().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed8().contentEquals("Yes")||sObject.getDrainageNeed8().contentEquals("Oui")) {
                 Spinner spinner = drainP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed8().contentEquals("No")||sObject.getDrainageNeed8().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed8().contentEquals("No")||sObject.getDrainageNeed8().contentEquals("Non")) {
                 Spinner spinner = drainP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5307,19 +5317,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 8
-            if (sObject.getHireLabor8().contentEquals("Yes")||sObject.getHireLabor8().contentEquals("Ya")) {
+            if (sObject.getHireLabor8().contentEquals("Yes")||sObject.getHireLabor8().contentEquals("Oui")) {
                 Spinner spinner = hireNP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor8().contentEquals("No")||sObject.getHireLabor8().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor8().contentEquals("No")||sObject.getHireLabor8().contentEquals("Non")) {
                 Spinner spinner = hireNP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor8().contentEquals("Seasonal")||sObject.getHireLabor8().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor8().contentEquals("Seasonal")||sObject.getHireLabor8().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP8;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -5428,13 +5438,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot9CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot9CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot9CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -5789,13 +5799,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 9
-            if (sObject.getDrainageNeed9().contentEquals("Yes")||sObject.getDrainageNeed9().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed9().contentEquals("Yes")||sObject.getDrainageNeed9().contentEquals("Oui")) {
                 Spinner spinner = drainP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed9().contentEquals("No")||sObject.getDrainageNeed9().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed9().contentEquals("No")||sObject.getDrainageNeed9().contentEquals("Non")) {
                 Spinner spinner = drainP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -5817,19 +5827,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 9
-            if (sObject.getHireLabor9().contentEquals("Yes")||sObject.getHireLabor9().contentEquals("Ya")) {
+            if (sObject.getHireLabor9().contentEquals("Yes")||sObject.getHireLabor9().contentEquals("Oui")) {
                 Spinner spinner = hireNP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor9().contentEquals("No")||sObject.getHireLabor9().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor9().contentEquals("No")||sObject.getHireLabor9().contentEquals("Non")) {
                 Spinner spinner = hireNP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor9().contentEquals("Seasonal")||sObject.getHireLabor9().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor9().contentEquals("Seasonal")||sObject.getHireLabor9().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP9;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -5938,13 +5948,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                         R.array.treeDistance8, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot10CocoaTrees().contentEquals("3×4")) {
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("3x4")) {
                 Spinner spinner = cteP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance9, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getPlot10CocoaTrees().contentEquals("3.5×4")) {
+            }else if (sObject.getPlot10CocoaTrees().contentEquals("3.5x4")) {
                 Spinner spinner = cteP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.treeDistance10, android.R.layout.simple_spinner_item);
@@ -6299,13 +6309,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field drainage needed 10
-            if (sObject.getDrainageNeed10().contentEquals("Yes")||sObject.getDrainageNeed10().contentEquals("Ya")) {
+            if (sObject.getDrainageNeed10().contentEquals("Yes")||sObject.getDrainageNeed10().contentEquals("Oui")) {
                 Spinner spinner = drainP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yes, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getDrainageNeed10().contentEquals("No")||sObject.getDrainageNeed10().contentEquals("Tidak")) {
+            } else if (sObject.getDrainageNeed10().contentEquals("No")||sObject.getDrainageNeed10().contentEquals("Non")) {
                 Spinner spinner = drainP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.No, android.R.layout.simple_spinner_item);
@@ -6327,19 +6337,19 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }
 
             //set field hire labor 10
-            if (sObject.getHireLabor10().contentEquals("Yes")||sObject.getHireLabor10().contentEquals("Ya")) {
+            if (sObject.getHireLabor10().contentEquals("Yes")||sObject.getHireLabor10().contentEquals("Oui")) {
                 Spinner spinner = hireNP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.yesHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            } else if (sObject.getHireLabor10().contentEquals("No")||sObject.getHireLabor10().contentEquals("Tidak")) {
+            } else if (sObject.getHireLabor10().contentEquals("No")||sObject.getHireLabor10().contentEquals("Non")) {
                 Spinner spinner = hireNP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.noHire, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(adapter);
-            }else if (sObject.getHireLabor10().contentEquals("Seasonal")||sObject.getHireLabor10().contentEquals("Musiman")) {
+            }else if (sObject.getHireLabor10().contentEquals("Seasonal")||sObject.getHireLabor10().contentEquals("Saisonnier")) {
                 Spinner spinner = hireNP10;
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                         R.array.seasonHire, android.R.layout.simple_spinner_item);
@@ -6380,6 +6390,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else {
                 soilFertMng10.setText(sObject.getSOILMNG10());
             }
+
             double tra;
             if (sObject.getTotalRenovationArea().isEmpty()){
                 tra = 0;
@@ -6419,13 +6430,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 renovYearP10.setEnabled(false);
             }else {
                 //set renovated 1
-                if (sObject.getPLOT1RENOVATION().contentEquals("Yes") || sObject.getPLOT1RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT1RENOVATION().contentEquals("Yes") || sObject.getPLOT1RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP1;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT1RENOVATION().contentEquals("No") || sObject.getPLOT1RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT1RENOVATION().contentEquals("No") || sObject.getPLOT1RENOVATION().contentEquals("Non")) {
                     renovReasonP1.setEnabled(false);
                     renovYearP1.setEnabled(false);
                     Spinner spinner = renovP1;
@@ -6444,13 +6455,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 2
-                if (sObject.getPLOT2RENOVATION().contentEquals("Yes") || sObject.getPLOT2RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT2RENOVATION().contentEquals("Yes") || sObject.getPLOT2RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP2;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT2RENOVATION().contentEquals("No") || sObject.getPLOT2RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT2RENOVATION().contentEquals("No") || sObject.getPLOT2RENOVATION().contentEquals("Non")) {
                     renovReasonP2.setEnabled(false);
                     renovYearP2.setEnabled(false);
                     Spinner spinner = renovP2;
@@ -6469,13 +6480,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 3
-                if (sObject.getPLOT3RENOVATION().contentEquals("Yes") || sObject.getPLOT3RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT3RENOVATION().contentEquals("Yes") || sObject.getPLOT3RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP3;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT3RENOVATION().contentEquals("No") || sObject.getPLOT3RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT3RENOVATION().contentEquals("No") || sObject.getPLOT3RENOVATION().contentEquals("Non")) {
                     renovReasonP3.setEnabled(false);
                     renovYearP3.setEnabled(false);
                     Spinner spinner = renovP3;
@@ -6494,13 +6505,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 4
-                if (sObject.getPLOT4RENOVATION().contentEquals("Yes") || sObject.getPLOT4RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT4RENOVATION().contentEquals("Yes") || sObject.getPLOT4RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP4;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT4RENOVATION().contentEquals("No") || sObject.getPLOT4RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT4RENOVATION().contentEquals("No") || sObject.getPLOT4RENOVATION().contentEquals("Non")) {
                     renovReasonP4.setEnabled(false);
                     renovYearP4.setEnabled(false);
                     Spinner spinner = renovP4;
@@ -6519,13 +6530,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 5
-                if (sObject.getPLOT5RENOVATION().contentEquals("Yes") || sObject.getPLOT5RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT5RENOVATION().contentEquals("Yes") || sObject.getPLOT5RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP5;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT5RENOVATION().contentEquals("No") || sObject.getPLOT5RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT5RENOVATION().contentEquals("No") || sObject.getPLOT5RENOVATION().contentEquals("Non")) {
                     renovReasonP5.setEnabled(false);
                     renovYearP5.setEnabled(false);
                     Spinner spinner = renovP5;
@@ -6544,13 +6555,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 6
-                if (sObject.getPLOT6RENOVATION().contentEquals("Yes") || sObject.getPLOT6RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT6RENOVATION().contentEquals("Yes") || sObject.getPLOT6RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP6;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT6RENOVATION().contentEquals("No") || sObject.getPLOT6RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT6RENOVATION().contentEquals("No") || sObject.getPLOT6RENOVATION().contentEquals("Non")) {
                     renovReasonP6.setEnabled(false);
                     renovYearP6.setEnabled(false);
                     Spinner spinner = renovP6;
@@ -6569,13 +6580,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 7
-                if (sObject.getPLOT7RENOVATION().contentEquals("Yes") || sObject.getPLOT7RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT7RENOVATION().contentEquals("Yes") || sObject.getPLOT7RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP7;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT7RENOVATION().contentEquals("No") || sObject.getPLOT7RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT7RENOVATION().contentEquals("No") || sObject.getPLOT7RENOVATION().contentEquals("Non")) {
                     renovReasonP7.setEnabled(false);
                     renovYearP7.setEnabled(false);
                     Spinner spinner = renovP7;
@@ -6594,13 +6605,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 8
-                if (sObject.getPLOT8RENOVATION().contentEquals("Yes") || sObject.getPLOT8RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT8RENOVATION().contentEquals("Yes") || sObject.getPLOT8RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP8;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT8RENOVATION().contentEquals("No") || sObject.getPLOT8RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT8RENOVATION().contentEquals("No") || sObject.getPLOT8RENOVATION().contentEquals("Non")) {
                     renovReasonP8.setEnabled(false);
                     renovYearP8.setEnabled(false);
                     Spinner spinner = renovP8;
@@ -6619,13 +6630,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 9
-                if (sObject.getPLOT9RENOVATION().contentEquals("Yes") || sObject.getPLOT9RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT9RENOVATION().contentEquals("Yes") || sObject.getPLOT9RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP9;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT9RENOVATION().contentEquals("No") || sObject.getPLOT9RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT9RENOVATION().contentEquals("No") || sObject.getPLOT9RENOVATION().contentEquals("Non")) {
                     renovReasonP9.setEnabled(false);
                     renovYearP9.setEnabled(false);
                     Spinner spinner = renovP9;
@@ -6644,13 +6655,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated 10
-                if (sObject.getPLOT10RENOVATION().contentEquals("Yes") || sObject.getPLOT10RENOVATION().contentEquals("Ya")) {
+                if (sObject.getPLOT10RENOVATION().contentEquals("Yes") || sObject.getPLOT10RENOVATION().contentEquals("Oui")) {
                     Spinner spinner = renovP10;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.yes, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT10RENOVATION().contentEquals("No") || sObject.getPLOT10RENOVATION().contentEquals("Tidak")) {
+                } else if (sObject.getPLOT10RENOVATION().contentEquals("No") || sObject.getPLOT10RENOVATION().contentEquals("Non")) {
                     renovReasonP10.setEnabled(false);
                     renovYearP10.setEnabled(false);
                     Spinner spinner = renovP10;
@@ -6669,13 +6680,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 1
-                if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP1;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT1RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT1RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP1;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6690,13 +6701,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 2
-                if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP2;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT2RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT2RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP2;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6711,13 +6722,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 3
-                if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP3;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT3RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT3RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP3;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6732,13 +6743,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 4
-                if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP4;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT4RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT4RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP4;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6753,13 +6764,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 5
-                if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP5;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT5RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT5RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP5;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6774,13 +6785,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 6
-                if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP6;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT6RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT6RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP6;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6795,13 +6806,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 7
-                if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP7;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT7RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT7RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP7;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6816,13 +6827,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 8
-                if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP8;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT8RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT8RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP8;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6837,13 +6848,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 9
-                if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP9;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT9RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT9RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP9;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -6858,13 +6869,13 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 //set renovated reason 10
-                if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Penanamman kembali")) {
+                if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Replanting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Replantation")) {
                     Spinner spinner = renovReasonP1;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason1, android.R.layout.simple_spinner_item);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(adapter);
-                } else if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Sambungan")) {
+                } else if (sObject.getPLOT10RENOVATIONREASON().contentEquals("Grafting") || sObject.getPLOT10RENOVATIONREASON().contentEquals("Greffage")) {
                     Spinner spinner = renovReasonP10;
                     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                             R.array.reason2, android.R.layout.simple_spinner_item);
@@ -7269,7 +7280,7 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
                 }
             }
 
-            if (sObject.getMEASURE().contentEquals("Bag")){
+            if (sObject.getMEASURE().contentEquals("Bag")||sObject.getMEASURE().contentEquals("Sac")){
                 q42.setText(getResources().getString(R.string.estimatedProduction)+" "+getResources().getString(R.string.bag));
             }else if(sObject.getMEASURE().contentEquals("Qq")){
                 q42.setText(getResources().getString(R.string.estimatedProduction)+" "+getResources().getString(R.string.qq));
@@ -7282,7 +7293,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             }else{
                 q41.setText(getResources().getString(R.string.plotArea)+" "+getResources().getString(R.string.ha));
             }
-
+            setText(reco1, sObject.getRECO1());
+            setText(reco2, sObject.getRECO2());
+            setText(reco3, sObject.getRECO3());
+            setText(reco4, sObject.getRECO4());
+            setText(reco5, sObject.getRECO5());
+            setText(reco6, sObject.getRECO6());
+            setText(reco7, sObject.getRECO7());
+            setText(reco8, sObject.getRECO8());
+            setText(reco9, sObject.getRECO9());
+            setText(reco10, sObject.getRECO10());
             ////////////////////////////////////////////////////////
 
         }
@@ -7586,6 +7606,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String rYP8 =renovYearP8.getSelectedItem().toString();
         final String rYP9 =renovYearP9.getSelectedItem().toString();
         final String rYP10 =renovYearP10.getSelectedItem().toString();
+        final String recop1 =reco1.getText().toString();
+        final String recop2 =reco2.getText().toString();
+        final String recop3 =reco3.getText().toString();
+        final String recop4 =reco4.getText().toString();
+        final String recop5 =reco5.getText().toString();
+        final String recop6 =reco6.getText().toString();
+        final String recop7 =reco7.getText().toString();
+        final String recop8 =reco8.getText().toString();
+        final String recop9 =reco9.getText().toString();
+        final String recop10 =reco10.getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -7922,6 +7952,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             if(rP10 != "N/A"){
                 contact.put(ContactObject.STARTYEARP10,rYP10);
             }
+            contact.put(ContactObject.RECO1,recop1);
+            contact.put(ContactObject.RECO2,recop2);
+            contact.put(ContactObject.RECO3,recop3);
+            contact.put(ContactObject.RECO4,recop4);
+            contact.put(ContactObject.RECO5,recop5);
+            contact.put(ContactObject.RECO6,recop6);
+            contact.put(ContactObject.RECO7,recop7);
+            contact.put(ContactObject.RECO8,recop8);
+            contact.put(ContactObject.RECO9,recop9);
+            contact.put(ContactObject.RECO10,recop10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
@@ -8229,6 +8269,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
         final String rYP8 =renovYearP8.getSelectedItem().toString();
         final String rYP9 =renovYearP9.getSelectedItem().toString();
         final String rYP10 =renovYearP10.getSelectedItem().toString();
+        final String recop1 =reco1.getText().toString();
+        final String recop2 =reco2.getText().toString();
+        final String recop3 =reco3.getText().toString();
+        final String recop4 =reco4.getText().toString();
+        final String recop5 =reco5.getText().toString();
+        final String recop6 =reco6.getText().toString();
+        final String recop7 =reco7.getText().toString();
+        final String recop8 =reco8.getText().toString();
+        final String recop9 =reco9.getText().toString();
+        final String recop10 =reco10.getText().toString();
         final SmartStore smartStore = SmartSyncSDKManager.getInstance().getSmartStore(curAccount);
         JSONObject contact;
         try {
@@ -8535,6 +8585,16 @@ public class plotActivity extends SalesforceActivity implements LoaderManager.Lo
             contact.put(ContactObject.PLOT8RENOVATIONYEAR,rYP8);
             contact.put(ContactObject.PLOT9RENOVATIONYEAR,rYP9);
             contact.put(ContactObject.PLOT10RENOVATIONYEAR,rYP10);
+            contact.put(ContactObject.RECO1,recop1);
+            contact.put(ContactObject.RECO2,recop2);
+            contact.put(ContactObject.RECO3,recop3);
+            contact.put(ContactObject.RECO4,recop4);
+            contact.put(ContactObject.RECO5,recop5);
+            contact.put(ContactObject.RECO6,recop6);
+            contact.put(ContactObject.RECO7,recop7);
+            contact.put(ContactObject.RECO8,recop8);
+            contact.put(ContactObject.RECO9,recop9);
+            contact.put(ContactObject.RECO10,recop10);
             contact.put(SyncManager.LOCAL, true);
             contact.put(SyncManager.LOCALLY_UPDATED, !isCreate);
             contact.put(SyncManager.LOCALLY_CREATED, isCreate);
