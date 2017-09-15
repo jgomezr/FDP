@@ -129,7 +129,7 @@ public class graftingDetailFragment extends Fragment {
         int oct = 0;
         int nov = 0;
         int dec = 0;
-        DecimalFormat decF = new DecimalFormat("IDR ###,###,###");
+        DecimalFormat decF = new DecimalFormat("FCFA ###,###,###");
         setText(plt, plot);
 
         if (launchYear < startYear){
