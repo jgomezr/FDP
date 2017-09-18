@@ -49,8 +49,8 @@
 	<string name="spouseBirthday">C3. Spouse date of birth (year):</string>
 	<string name="spouseEducationalLevel">C4. Spouse educational level:</string>
 	<string name="numberChildren">12. Total number of children:</string>
-	<string name="childrenUnder">C5. Children between 5 to 17 years old:</string>
-	<string name="childrenInSchool">C6. Children between 5 to 17 years old enrolled in school:</string>
+	<string name="childrenUnder">C5. Children between 6 to 16 years old:</string>
+	<string name="childrenInSchool">C6. Children between 6 to 16 years old enrolled in school:</string>
 	<string name="familyMembers">13. Number of household members including the farmer:</string>
 	<string name="farmerGroup">14. Farmer group</string>
 	<string name="familyPhoto">Click to take a family photo</string>
@@ -146,6 +146,8 @@
 	<string name="costLabor">Cost of labor:</string>
 	<string name="plotPL">Plot P&amp;L:</string>
 	<string name="changeR">Change for Replanting</string>
+	<string name="changeFilling">Change for Filling in</string>
+    <string name="changeThinning">Change for Thinning out</string>
 
 	<string name="netPlotIncome">Net income from Cocoa:</string>
     <string name="netOtherCrops">Net income from Other Crops:</string>

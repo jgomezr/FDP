@@ -1016,6 +1016,8 @@
         <item>Ha</item>
     </string-array>
     <string name="save">sauvegarder</string>
+    <string name="changeFilling">Changement de remplissage</string>
+    <string name="changeThinning">Changer pour l\'éclaircissage</string>
 
 
 </resources>
