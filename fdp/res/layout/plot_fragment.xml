@@ -238,8 +238,8 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
-        android:background="#00000000"
-        android:textColor="#FFFFFF"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/transparent"
         android:id="@+id/reco_field"
         android:focusable="false"
         android:inputType="textNoSuggestions"/>

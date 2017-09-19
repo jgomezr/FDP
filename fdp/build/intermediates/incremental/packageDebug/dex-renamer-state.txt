@@ -1,4 +1,4 @@
-#Fri Sep 01 17:56:27 COT 2017
+#Tue Sep 19 15:05:20 COT 2017
 base.0=C\:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\julian\\Desktop\\fdp - waf\\fdp\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
