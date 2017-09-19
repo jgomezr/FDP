@@ -689,7 +689,7 @@
     <integer name="difInputY1Jan">0</integer>
     <integer name="difInputY1Feb">0</integer>
     <integer name="difInputY1Mar">0</integer>
-    <integer name="difInputY1Apr">-2400</integer>
+    <integer name="difInputY1Apr">0</integer>
     <integer name="difInputY1May">104275</integer>
     <integer name="difInputY1Jun">0</integer>
     <integer name="difInputY1Jul">0</integer>
@@ -906,7 +906,7 @@
     <integer name="thinningDaysY1Nov">14</integer>
     <integer name="thinningDaysY1Dec">14</integer>
     <integer name="thinningDaysY1Total">146</integer>
-    <integer name="thinningDaysY1Season">65</integer>
+    <integer name="thinningDaysY1Season">77</integer>
     <integer name="thinningDaysY2Jan">4</integer>
     <integer name="thinningDaysY2Feb">0</integer>
     <integer name="thinningDaysY2Mar">2</integer>
@@ -920,7 +920,7 @@
     <integer name="thinningDaysY2Nov">14</integer>
     <integer name="thinningDaysY2Dec">14</integer>
     <integer name="thinningDaysY2Total">86</integer>
-    <integer name="thinningDaysY2Season">59</integer>
+    <integer name="thinningDaysY2Season">77</integer>
     <integer name="thinningDaysY3Jan">4</integer>
     <integer name="thinningDaysY3Feb">0</integer>
     <integer name="thinningDaysY3Mar">2</integer>
@@ -934,7 +934,7 @@
     <integer name="thinningDaysY3Nov">14</integer>
     <integer name="thinningDaysY3Dec">14</integer>
     <integer name="thinningDaysY3Total">126</integer>
-    <integer name="thinningDaysY3Season">59</integer>
+    <integer name="thinningDaysY3Season">77</integer>
     <integer name="thinningDaysY4Jan">4</integer>
     <integer name="thinningDaysY4Feb">0</integer>
     <integer name="thinningDaysY4Mar">2</integer>
@@ -948,7 +948,7 @@
     <integer name="thinningDaysY4Nov">14</integer>
     <integer name="thinningDaysY4Dec">14</integer>
     <integer name="thinningDaysY4Total">126</integer>
-    <integer name="thinningDaysY4Season">59</integer>
+    <integer name="thinningDaysY4Season">77</integer>
     <integer name="thinningDaysY5Jan">4</integer>
     <integer name="thinningDaysY5Feb">0</integer>
     <integer name="thinningDaysY5Mar">2</integer>
@@ -962,7 +962,7 @@
     <integer name="thinningDaysY5Nov">14</integer>
     <integer name="thinningDaysY5Dec">14</integer>
     <integer name="thinningDaysY5Total">126</integer>
-    <integer name="thinningDaysY5Season">59</integer>
+    <integer name="thinningDaysY5Season">77</integer>
     <integer name="thinningDaysY6Jan">4</integer>
     <integer name="thinningDaysY6Feb">0</integer>
     <integer name="thinningDaysY6Mar">2</integer>
@@ -976,7 +976,7 @@
     <integer name="thinningDaysY6Nov">14</integer>
     <integer name="thinningDaysY6Dec">14</integer>
     <integer name="thinningDaysY6Total">126</integer>
-    <integer name="thinningDaysY6Season">59</integer>
+    <integer name="thinningDaysY6Season">77</integer>
     <integer name="thinningDaysY7Jan">4</integer>
     <integer name="thinningDaysY7Feb">0</integer>
     <integer name="thinningDaysY7Mar">2</integer>
@@ -990,7 +990,7 @@
     <integer name="thinningDaysY7Nov">14</integer>
     <integer name="thinningDaysY7Dec">14</integer>
     <integer name="thinningDaysY7Total">126</integer>
-    <integer name="thinningDaysY7Season">59</integer>
+    <integer name="thinningDaysY7Season">77</integer>
     <!-- Thinning Labor Cost-->
     <integer name="thinningLaborCostY1Jan">11000</integer>
     <integer name="thinningLaborCostY1Feb">0</integer>
@@ -1005,7 +1005,7 @@
     <integer name="thinningLaborCostY1Nov">38500</integer>
     <integer name="thinningLaborCostY1Dec">38500</integer>
     <integer name="thinningLaborCostY1Total">401500</integer>
-    <integer name="thinningLaborCostY1Season">178750</integer>
+    <integer name="thinningLaborCostY1Season">211750</integer>
     <integer name="thinningLaborCostY2Jan">11000</integer>
     <integer name="thinningLaborCostY2Feb">0</integer>
     <integer name="thinningLaborCostY2Mar">5500</integer>
@@ -1019,7 +1019,7 @@
     <integer name="thinningLaborCostY2Nov">38500</integer>
     <integer name="thinningLaborCostY2Dec">38500</integer>
     <integer name="thinningLaborCostY2Total">346500</integer>
-    <integer name="thinningLaborCostY2Season">162250</integer>
+    <integer name="thinningLaborCostY2Season">211750</integer>
     <integer name="thinningLaborCostY3Jan">11000</integer>
     <integer name="thinningLaborCostY3Feb">0</integer>
     <integer name="thinningLaborCostY3Mar">5500</integer>
@@ -1033,7 +1033,7 @@
     <integer name="thinningLaborCostY3Nov">38500</integer>
     <integer name="thinningLaborCostY3Dec">38500</integer>
     <integer name="thinningLaborCostY3Total">346500</integer>
-    <integer name="thinningLaborCostY3Season">162250</integer>
+    <integer name="thinningLaborCostY3Season">211750</integer>
     <integer name="thinningLaborCostY4Jan">11000</integer>
     <integer name="thinningLaborCostY4Feb">0</integer>
     <integer name="thinningLaborCostY4Mar">5500</integer>
@@ -1047,7 +1047,7 @@
     <integer name="thinningLaborCostY4Nov">38500</integer>
     <integer name="thinningLaborCostY4Dec">38500</integer>
     <integer name="thinningLaborCostY4Total">346500</integer>
-    <integer name="thinningLaborCostY4Season">162250</integer>
+    <integer name="thinningLaborCostY4Season">211750</integer>
     <integer name="thinningLaborCostY5Jan">11000</integer>
     <integer name="thinningLaborCostY5Feb">0</integer>
     <integer name="thinningLaborCostY5Mar">5500</integer>
@@ -1061,7 +1061,7 @@
     <integer name="thinningLaborCostY5Nov">38500</integer>
     <integer name="thinningLaborCostY5Dec">38500</integer>
     <integer name="thinningLaborCostY5Total">346500</integer>
-    <integer name="thinningLaborCostY5Season">162250</integer>
+    <integer name="thinningLaborCostY5Season">211750</integer>
     <integer name="thinningLaborCostY6Jan">11000</integer>
     <integer name="thinningLaborCostY6Feb">0</integer>
     <integer name="thinningLaborCostY6Mar">5500</integer>
@@ -1075,7 +1075,7 @@
     <integer name="thinningLaborCostY6Nov">38500</integer>
     <integer name="thinningLaborCostY6Dec">38500</integer>
     <integer name="thinningLaborCostY6Total">346500</integer>
-    <integer name="thinningLaborCostY6Season">162250</integer>
+    <integer name="thinningLaborCostY6Season">211750</integer>
     <integer name="thinningLaborCostY7Jan">11000</integer>
     <integer name="thinningLaborCostY7Feb">0</integer>
     <integer name="thinningLaborCostY7Mar">5500</integer>
@@ -1089,7 +1089,7 @@
     <integer name="thinningLaborCostY7Nov">38500</integer>
     <integer name="thinningLaborCostY7Dec">38500</integer>
     <integer name="thinningLaborCostY7Total">346500</integer>
-    <integer name="thinningLaborCostY7Season">162250</integer>
+    <integer name="thinningLaborCostY7Season">211750</integer>
     <!-- Thinning Inputs cost-->
     <integer name="thinningInputsY1Jan">0</integer>
     <integer name="thinningInputsY1Feb">0</integer>
@@ -1198,7 +1198,7 @@
     <integer name="fillingDaysY1Nov">14</integer>
     <integer name="fillingDaysY1Dec">13</integer>
     <integer name="fillingDaysY1Total">111</integer>
-    <integer name="fillingDaysY1Season">54</integer>
+    <integer name="fillingDaysY1Season">67</integer>
     <integer name="fillingDaysY2Jan">4</integer>
     <integer name="fillingDaysY2Feb">2</integer>
     <integer name="fillingDaysY2Mar">7</integer>
@@ -1212,7 +1212,7 @@
     <integer name="fillingDaysY2Nov">10</integer>
     <integer name="fillingDaysY2Dec">11</integer>
     <integer name="fillingDaysY2Total">116</integer>
-    <integer name="fillingDaysY2Season">57</integer>
+    <integer name="fillingDaysY2Season">61</integer>
     <integer name="fillingDaysY3Jan">3</integer>
     <integer name="fillingDaysY3Feb">0</integer>
     <integer name="fillingDaysY3Mar">3</integer>
@@ -1226,7 +1226,7 @@
     <integer name="fillingDaysY3Nov">11</integer>
     <integer name="fillingDaysY3Dec">12</integer>
     <integer name="fillingDaysY3Total">106</integer>
-    <integer name="fillingDaysY3Season">49</integer>
+    <integer name="fillingDaysY3Season">63</integer>
     <integer name="fillingDaysY4Jan">3</integer>
     <integer name="fillingDaysY4Feb">0</integer>
     <integer name="fillingDaysY4Mar">3</integer>
@@ -1240,7 +1240,7 @@
     <integer name="fillingDaysY4Nov">12</integer>
     <integer name="fillingDaysY4Dec">13</integer>
     <integer name="fillingDaysY4Total">115</integer>
-    <integer name="fillingDaysY4Season">53</integer>
+    <integer name="fillingDaysY4Season">70</integer>
     <integer name="fillingDaysY5Jan">4</integer>
     <integer name="fillingDaysY5Feb">0</integer>
     <integer name="fillingDaysY5Mar">2</integer>
@@ -1254,7 +1254,7 @@
     <integer name="fillingDaysY5Nov">14</integer>
     <integer name="fillingDaysY5Dec">13</integer>
     <integer name="fillingDaysY5Total">123</integer>
-    <integer name="fillingDaysY5Season">57</integer>
+    <integer name="fillingDaysY5Season">75</integer>
     <integer name="fillingDaysY6Jan">4</integer>
     <integer name="fillingDaysY6Feb">0</integer>
     <integer name="fillingDaysY6Mar">2</integer>
@@ -1268,7 +1268,7 @@
     <integer name="fillingDaysY6Nov">14</integer>
     <integer name="fillingDaysY6Dec">14</integer>
     <integer name="fillingDaysY6Total">125</integer>
-    <integer name="fillingDaysY6Season">59</integer>
+    <integer name="fillingDaysY6Season">77</integer>
     <integer name="fillingDaysY7Jan">4</integer>
     <integer name="fillingDaysY7Feb">0</integer>
     <integer name="fillingDaysY7Mar">2</integer>
@@ -1282,7 +1282,7 @@
     <integer name="fillingDaysY7Nov">14</integer>
     <integer name="fillingDaysY7Dec">14</integer>
     <integer name="fillingDaysY7Total">126</integer>
-    <integer name="fillingDaysY7Season">59</integer>
+    <integer name="fillingDaysY7Season">77</integer>
     <!-- Filling Labor cost-->
     <integer name="fillingLaborCostY1Jan">9350</integer>
     <integer name="fillingLaborCostY1Feb">0</integer>
@@ -1297,7 +1297,7 @@
     <integer name="fillingLaborCostY1Nov">38500</integer>
     <integer name="fillingLaborCostY1Dec">35200</integer>
     <integer name="fillingLaborCostY1Total">304425</integer>
-    <integer name="fillingLaborCostY1Season">148225</integer>
+    <integer name="fillingLaborCostY1Season">185350</integer>
     <integer name="fillingLaborCostY2Jan">11825</integer>
     <integer name="fillingLaborCostY2Feb">4125</integer>
     <integer name="fillingLaborCostY2Mar">17875</integer>
@@ -1311,7 +1311,7 @@
     <integer name="fillingLaborCostY2Nov">28600</integer>
     <integer name="fillingLaborCostY2Dec">30250</integer>
     <integer name="fillingLaborCostY2Total">320100</integer>
-    <integer name="fillingLaborCostY2Season">141625</integer>
+    <integer name="fillingLaborCostY2Season">170500</integer>
     <integer name="fillingLaborCostY3Jan">7700</integer>
     <integer name="fillingLaborCostY3Feb">0</integer>
     <integer name="fillingLaborCostY3Mar">8800</integer>
@@ -1325,7 +1325,7 @@
     <integer name="fillingLaborCostY3Nov">29425</integer>
     <integer name="fillingLaborCostY3Dec">32725</integer>
     <integer name="fillingLaborCostY3Total">291225</integer>
-    <integer name="fillingLaborCostY3Season">132550</integer>
+    <integer name="fillingLaborCostY3Season">171325</integer>
     <integer name="fillingLaborCostY4Jan">7700</integer>
     <integer name="fillingLaborCostY4Feb">0</integer>
     <integer name="fillingLaborCostY4Mar">7150</integer>
@@ -1339,7 +1339,7 @@
     <integer name="fillingLaborCostY4Nov">33550</integer>
     <integer name="fillingLaborCostY4Dec">35200</integer>
     <integer name="fillingLaborCostY4Total">316800</integer>
-    <integer name="fillingLaborCostY4Season">161700</integer>
+    <integer name="fillingLaborCostY4Season">191950</integer>
     <integer name="fillingLaborCostY5Jan">10175</integer>
     <integer name="fillingLaborCostY5Feb">0</integer>
     <integer name="fillingLaborCostY5Mar">5500</integer>
@@ -1353,7 +1353,7 @@
     <integer name="fillingLaborCostY5Nov">37675</integer>
     <integer name="fillingLaborCostY5Dec">36850</integer>
     <integer name="fillingLaborCostY5Total">338250</integer>
-    <integer name="fillingLaborCostY5Season">157300</integer>
+    <integer name="fillingLaborCostY5Season">205975</integer>
     <integer name="fillingLaborCostY6Jan">11000</integer>
     <integer name="fillingLaborCostY6Feb">0</integer>
     <integer name="fillingLaborCostY6Mar">5500</integer>
@@ -1367,7 +1367,7 @@
     <integer name="fillingLaborCostY6Nov">37675</integer>
     <integer name="fillingLaborCostY6Dec">37675</integer>
     <integer name="fillingLaborCostY6Total">343200</integer>
-    <integer name="fillingLaborCostY6Season">159775</integer>
+    <integer name="fillingLaborCostY6Season">209275</integer>
     <integer name="fillingLaborCostY7Jan">11000</integer>
     <integer name="fillingLaborCostY7Feb">0</integer>
     <integer name="fillingLaborCostY7Mar">5500</integer>
@@ -1381,7 +1381,7 @@
     <integer name="fillingLaborCostY7Nov">38500</integer>
     <integer name="fillingLaborCostY7Dec">38500</integer>
     <integer name="fillingLaborCostY7Total">346500</integer>
-    <integer name="fillingLaborCostY7Season">162250</integer>
+    <integer name="fillingLaborCostY7Season">211750</integer>
     <!-- Filling Inputs cost-->
     <integer name="fillingInputsY1Jan">0</integer>
     <integer name="fillingInputsY1Feb">0</integer>
