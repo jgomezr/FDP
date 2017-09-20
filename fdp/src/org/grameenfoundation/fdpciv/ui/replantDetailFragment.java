@@ -158,16 +158,16 @@ public class replantDetailFragment extends Fragment {
                 nov = (int) (area * (getResources().getInteger(R.integer.MinGAPNov) + getResources().getInteger(R.integer.MinGAPSLaborNov)));
                 dec = (int) (area * (getResources().getInteger(R.integer.MinGAPDec) + getResources().getInteger(R.integer.MinGAPSLaborDec)));
             } else if (labor == "season") {
-                jan = (int) (area * getResources().getInteger(R.integer.MinGAPJan));
+                jan = (int) (area * (getResources().getInteger(R.integer.MinGAPJan) + getResources().getInteger(R.integer.MinGAPSLaborJan)));
                 feb = (int) (area * getResources().getInteger(R.integer.MinGAPFeb));
                 mar = (int) (area * getResources().getInteger(R.integer.MinGAPMar));
                 apr = (int) (area * getResources().getInteger(R.integer.MinGAPApr));
-                may = (int) (area * (getResources().getInteger(R.integer.MinGAPMay) + getResources().getInteger(R.integer.MinGAPSLaborMay)));
-                jun = (int) (area * (getResources().getInteger(R.integer.MinGAPJun) + getResources().getInteger(R.integer.MinGAPSLaborJun)));
-                jul = (int) (area * (getResources().getInteger(R.integer.MinGAPJul) + getResources().getInteger(R.integer.MinGAPSLaborJul)));
+                may = (int) (area * getResources().getInteger(R.integer.MinGAPMay) );
+                jun = (int) (area * getResources().getInteger(R.integer.MinGAPJun) );
+                jul = (int) (area * getResources().getInteger(R.integer.MinGAPJul) );
                 aug = (int) (area * getResources().getInteger(R.integer.MinGAPAug));
-                sep = (int) (area * getResources().getInteger(R.integer.MinGAPSep));
-                oct = (int) (area * getResources().getInteger(R.integer.MinGAPOct));
+                sep = (int) (area * (getResources().getInteger(R.integer.MinGAPSep) + getResources().getInteger(R.integer.MinGAPSLaborSep)));
+                oct = (int) (area * (getResources().getInteger(R.integer.MinGAPOct) + getResources().getInteger(R.integer.MinGAPSLaborOct)));
                 nov = (int) (area * (getResources().getInteger(R.integer.MinGAPNov) + getResources().getInteger(R.integer.MinGAPSLaborNov)));
                 dec = (int) (area * (getResources().getInteger(R.integer.MinGAPDec) + getResources().getInteger(R.integer.MinGAPSLaborDec)));
             } else {
