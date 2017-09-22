@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class extraDetailFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71,p72,p73,p74,p75,p76,p77,p78;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -105,6 +105,25 @@ public class extraDetailFragment extends Fragment {
         p57 = getString(R.string.p57);
         p58 = getString(R.string.p58);
         p59 = getString(R.string.p59);
+        p60 = getString(R.string.p60);
+        p61 = getString(R.string.p61);
+        p62 = getString(R.string.p62);
+        p63 = getString(R.string.p63);
+        p64 = getString(R.string.p64);
+        p65 = getString(R.string.p65);
+        p66 = getString(R.string.p66);
+        p67 = getString(R.string.p67);
+        p68 = getString(R.string.p68);
+        p69 = getString(R.string.p69);
+        p70 = getString(R.string.p70);
+        p71 = getString(R.string.p71);
+        p72 = getString(R.string.p72);
+        p73 = getString(R.string.p73);
+        p74 = getString(R.string.p74);
+        p75 = getString(R.string.p75);
+        p76 = getString(R.string.p76);
+        p77 = getString(R.string.p77);
+        p78 = getString(R.string.p78);
 
         return view;
     }
@@ -133,18 +152,18 @@ public class extraDetailFragment extends Fragment {
         setText(plt, plot);
 
         if (launchYear < startYear){
-            setText(jlb, p17);
-            setText(fblb, p33);
-            setText(mrlb, p58);
-            setText(ablb, p39+", "+p46);
-            setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-            setText(jnlb, p50+", "+p17);
-            setText(jllb, p33);
-            setText(aglb, p58);
-            setText(splb, p46+", "+p40+", "+p12+", "+p17);
-            setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-            setText(nvlb, p45+", "+p50+", "+p17);
-            setText(dclb, p39+", "+p52+", "+p17);
+            setText(jlb, p45);
+            setText(fblb, p45);
+            setText(mrlb, p78+", "+p36);
+            setText(ablb, p27+", "+p68);
+            setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+            setText(jnlb, p45);
+            setText(jllb, p45);
+            setText(aglb, p78+", "+p36);
+            setText(splb, p26+", "+p21+", "+p41);
+            setText(oclb, p25+", "+p47+", "+p41);
+            setText(nvlb, p25);
+            setText(dclb, p26);
             setText(plt, plot);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
@@ -188,18 +207,18 @@ public class extraDetailFragment extends Fragment {
             }
         }else{
             if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p13+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p13+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p37+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p2+", "+p4+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p2+", "+p41);
+                setText(oclb, p25+", "+p4+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
 
                 if (labor == "labor"){
@@ -244,18 +263,18 @@ public class extraDetailFragment extends Fragment {
                 }
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p13+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p13+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p37+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p3+", "+p2+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p2+", "+p41);
+                setText(oclb, p25+", "+p3+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
 
                 if (labor == "labor"){
@@ -301,18 +320,18 @@ public class extraDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p12+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
 
                 if (labor == "labor"){
@@ -358,18 +377,18 @@ public class extraDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p12+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
@@ -414,18 +433,18 @@ public class extraDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p12+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
@@ -470,18 +489,18 @@ public class extraDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p12+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));
@@ -525,18 +544,18 @@ public class extraDetailFragment extends Fragment {
                 }
 
             }else{
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p39+", "+p46);
-                setText(mylb, p46+", "+p40+", "+p12+", "+p38+", "+p17+", "+p4+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p46+", "+p40+", "+p12+", "+p17);
-                setText(oclb, p45+", "+p50+", "+p38+", "+p17+", "+p4+p19);
-                setText(nvlb, p45+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) (area * (getResources().getInteger(R.integer.GAPSInputY1Jan) + getResources().getInteger(R.integer.GAPSLaborY1Jan)));

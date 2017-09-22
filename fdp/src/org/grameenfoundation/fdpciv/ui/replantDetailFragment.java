@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class replantDetailFragment extends Fragment {
     private TextView jlb,fblb,mrlb,ablb,mylb,jnlb,jllb,aglb,splb,oclb,nvlb,dclb,jvl,fbvl,mrvl,abvl,myvl,jnvl,jlvl,agvl,spvl,ocvl,nvvl,dcvl,plt;
-    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59;
+    private String p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71,p72,p73,p74,p75,p76,p77,p78;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.yeardetail_fragment, container, false);
@@ -105,6 +105,25 @@ public class replantDetailFragment extends Fragment {
         p57 = getString(R.string.p57);
         p58 = getString(R.string.p58);
         p59 = getString(R.string.p59);
+        p60 = getString(R.string.p60);
+        p61 = getString(R.string.p61);
+        p62 = getString(R.string.p62);
+        p63 = getString(R.string.p63);
+        p64 = getString(R.string.p64);
+        p65 = getString(R.string.p65);
+        p66 = getString(R.string.p66);
+        p67 = getString(R.string.p67);
+        p68 = getString(R.string.p68);
+        p69 = getString(R.string.p69);
+        p70 = getString(R.string.p70);
+        p71 = getString(R.string.p71);
+        p72 = getString(R.string.p72);
+        p73 = getString(R.string.p73);
+        p74 = getString(R.string.p74);
+        p75 = getString(R.string.p75);
+        p76 = getString(R.string.p76);
+        p77 = getString(R.string.p77);
+        p78 = getString(R.string.p78);
         return view;
     }
 
@@ -132,18 +151,19 @@ public class replantDetailFragment extends Fragment {
         setText(plt, plot);
 
         if (launchYear < startYear){
-            setText(jlb, p17);
-            setText(fblb, p33);
-            setText(mrlb, p26);
-            setText(ablb, p14+", "+p25);
-            setText(mylb, p14+", "+p15+", "+p24+", "+p34+", "+p35+", "+p17+", "+p19);
-            setText(jnlb, p15+", "+p17);
-            setText(jllb, p33);
-            setText(aglb, p26);
-            setText(splb, p14+", "+p15+", "+p24+", "+p34+", "+p17);
-            setText(oclb, p15+", "+p23+", "+p35+", "+p17+", "+p19);
-            setText(nvlb, p15+", "+p23+", "+p17);
-            setText(dclb, p14+", "+p17);
+            setText(jlb, p45);
+            setText(fblb, p45);
+            setText(mrlb, p39);
+            setText(ablb, p77+", "+p24+", "+p38);
+            setText(mylb, p77+", "+p24+", "+p38);
+            setText(jnlb, p45);
+            setText(jllb, p45);
+            setText(aglb, p39);
+            setText(splb, p77+", "+p24+", "+p38);
+            setText(oclb, p77+", "+p24+", "+p38);
+            setText(nvlb, p45);
+            setText(dclb, p48);
+            setText(plt, plot);
             if (labor == "labor") {
                 jan = (int) (area * (getResources().getInteger(R.integer.MinGAPJan) + getResources().getInteger(R.integer.MinGAPSLaborJan)));
                 feb = (int) (area * (getResources().getInteger(R.integer.MinGAPFeb) + getResources().getInteger(R.integer.MinGAPSLaborFeb)));
@@ -188,18 +208,18 @@ public class replantDetailFragment extends Fragment {
         }else{
             if ((yearLaunch.equals("1")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("2")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 7")||yearStart.equals("Tahun 7")||yearStart.equals("Année 7")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p33);
-                setText(ablb, p27+", "+p39);
-                setText(mylb, p39+", "+p50+", "+p17);
-                setText(jnlb, p17);
-                setText(jllb, p7);
-                setText(aglb, p7);
-                setText(splb, p7);
-                setText(oclb, p22+", "+p11);
-                setText(nvlb, p59+", "+p53+", "+p11);
-                setText(dclb, p53+", "+p11);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p45);
+                setText(ablb, p48);
+                setText(mylb, p48);
+                setText(jnlb, p45);
+                setText(jllb, p13);
+                setText(aglb, p13);
+                setText(splb, p13);
+                setText(oclb, p20+", "+p37);
+                setText(nvlb, p20+", "+p37+", "+p52);
+                setText(dclb, p20+", "+p52);
                 setText(plt, plot);
                 if (relat == "extra"){
                     if (labor == "labor"){
@@ -216,18 +236,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov)+getResources().getInteger(R.integer.difInputY1Nov))+getResources().getInteger(R.integer.difLaborY1Nov));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Dec)+getResources().getInteger(R.integer.ReplantingLaborY1Dec)+getResources().getInteger(R.integer.difInputY1Dec))+getResources().getInteger(R.integer.difLaborY1Dec));
                     }else if(labor =="season") {
-                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jan)+getResources().getInteger(R.integer.difInputY1Jan)));
+                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jan)+getResources().getInteger(R.integer.ReplantingLaborY1Jan)+getResources().getInteger(R.integer.difInputY1Jan))+getResources().getInteger(R.integer.difLaborY1Jan));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Feb)+getResources().getInteger(R.integer.difInputY1Feb)));
                         mar = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Mar)+getResources().getInteger(R.integer.difInputY1Mar)));
                         apr = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Apr)+ getResources().getInteger(R.integer.difInputY1Apr)));
-                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1May)+getResources().getInteger(R.integer.ReplantingLaborY1May)+getResources().getInteger(R.integer.difInputY1May))+getResources().getInteger(R.integer.difLaborY1May));
-                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jun)+getResources().getInteger(R.integer.ReplantingLaborY1Jun)+getResources().getInteger(R.integer.difInputY1Jun)));
-                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jul)+getResources().getInteger(R.integer.ReplantingLaborY1Jul)+getResources().getInteger(R.integer.difInputY1Jul)));
+                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1May)+getResources().getInteger(R.integer.difInputY1May)));
+                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jun)+getResources().getInteger(R.integer.difInputY1Jun)));
+                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jul)+getResources().getInteger(R.integer.difInputY1Jul)));
                         aug = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Aug)+getResources().getInteger(R.integer.difInputY1Aug)));
-                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Sep)+getResources().getInteger(R.integer.difInputY1Sep)));
-                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Oct)+getResources().getInteger(R.integer.difInputY1Oct)));
-                        nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov)+getResources().getInteger(R.integer.difInputY1Nov)));
-                        dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Dec)+getResources().getInteger(R.integer.ReplantingLaborY1Dec)+getResources().getInteger(R.integer.difInputY1Dec)));
+                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Sep)+getResources().getInteger(R.integer.ReplantingLaborY1Sep)+getResources().getInteger(R.integer.difInputY1Sep))+getResources().getInteger(R.integer.difLaborY1Sep));
+                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Oct)+getResources().getInteger(R.integer.ReplantingLaborY1Oct)+getResources().getInteger(R.integer.difInputY1Oct))+getResources().getInteger(R.integer.difLaborY1Oct));
+                        nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov)+getResources().getInteger(R.integer.difInputY1Nov))+getResources().getInteger(R.integer.difLaborY1Nov));
+                        dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Dec)+getResources().getInteger(R.integer.ReplantingLaborY1Dec)+getResources().getInteger(R.integer.difInputY1Dec))+getResources().getInteger(R.integer.difLaborY1Dec));
                     }else{
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jan)+getResources().getInteger(R.integer.difInputY1Jan)));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Feb)+getResources().getInteger(R.integer.difInputY1Feb)));
@@ -257,17 +277,17 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov)));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Dec)+getResources().getInteger(R.integer.ReplantingLaborY1Dec)));
                     }else if(labor =="season") {
-                        jan = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Jan));
+                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jan)+getResources().getInteger(R.integer.ReplantingLaborY1Jan)));
                         feb = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Feb));
                         mar = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Mar));
                         apr = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Apr));
-                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1May)+getResources().getInteger(R.integer.ReplantingLaborY1May)));
-                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jun)+getResources().getInteger(R.integer.ReplantingLaborY1Jun)));
-                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Jul)+getResources().getInteger(R.integer.ReplantingLaborY1Jul)));
+                        may = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1May));
+                        jun = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Jun));
+                        jul = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Jul));
                         aug = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Aug));
-                        sep = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Sep));
-                        oct = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Oct));
-                        nov = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov));
+                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Sep)+getResources().getInteger(R.integer.ReplantingLaborY1Sep)));
+                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Oct)+getResources().getInteger(R.integer.ReplantingLaborY1Oct)));
+                        nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Nov)+getResources().getInteger(R.integer.ReplantingLaborY1Nov)));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY1Dec)+getResources().getInteger(R.integer.ReplantingLaborY1Dec)));
                     }else {
                         jan = (int) (area * getResources().getInteger(R.integer.ReplantingInputY1Jan));
@@ -287,18 +307,18 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-1"))||(yearLaunch.equals("2")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("3")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 6")||yearStart.equals("Tahun 6")||yearStart.equals("Année 6")))){
                 if (relat == "extra"){
-                    setText(jlb, p11);
-                    setText(fblb, p11);
-                    setText(mrlb, p7+", "+p8);
-                    setText(ablb, p7+", "+p8);
-                    setText(mylb, p8+", "+p53+", "+p12+", "+p36+", "+p19);
-                    setText(jnlb, p33);
-                    setText(jllb, p58+", "+p39);
-                    setText(aglb, p33);
-                    setText(splb, p9+", "+p54+", "+p39+", "+p12+", "+p36+", "+p19);
-                    setText(oclb, p58);
-                    setText(nvlb, p39);
-                    setText(dclb, p58+", "+p54);
+                    setText(jlb, p20);
+                    setText(fblb, p20);
+                    setText(mrlb, p10);
+                    setText(ablb, p10+", "+p54+", "+p6);
+                    setText(mylb, p10+", "+p54+", "+p6+", "+p1+", "+p2+", "+p4+", "+p22);
+                    setText(jnlb, p10+", "+p54+", "+p6);
+                    setText(jllb, p78+", "+p49);
+                    setText(aglb, p45);
+                    setText(splb, p48+", "+p65+", "+p2+", "+p4+", "+p68+", "+p75);
+                    setText(oclb, p78+", "+p36);
+                    setText(nvlb, p48);
+                    setText(dclb, p78+", "+p36+", "+p68);
                     setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)+getResources().getInteger(R.integer.difInputY2Jan))+getResources().getInteger(R.integer.difLaborY2Jan));
@@ -314,18 +334,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Nov)+getResources().getInteger(R.integer.ReplantingLaborY2Nov)+getResources().getInteger(R.integer.difInputY2Nov))+getResources().getInteger(R.integer.difLaborY2Nov));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.ReplantingLaborY2Dec)+getResources().getInteger(R.integer.difInputY2Dec))+getResources().getInteger(R.integer.difLaborY2Dec));
                     }else if(labor =="season") {
-                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.difInputY2Jan)));
+                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)+getResources().getInteger(R.integer.difInputY2Jan))+getResources().getInteger(R.integer.difLaborY2Jan));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Feb)+getResources().getInteger(R.integer.difInputY2Feb)));
                         mar = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Mar)+getResources().getInteger(R.integer.difInputY2Mar)));
                         apr = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Apr)+getResources().getInteger(R.integer.difInputY2Apr)));
-                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2May)+getResources().getInteger(R.integer.ReplantingLaborY2May)+getResources().getInteger(R.integer.difInputY2May))+getResources().getInteger(R.integer.difLaborY2May));
-                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jun)+getResources().getInteger(R.integer.ReplantingLaborY2Jun)+getResources().getInteger(R.integer.difInputY2Jun)));
-                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jul)+getResources().getInteger(R.integer.ReplantingLaborY2Jul)+getResources().getInteger(R.integer.difInputY2Jul)));
+                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2May)+getResources().getInteger(R.integer.difInputY2May)));
+                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jun)+getResources().getInteger(R.integer.difInputY2Jun)));
+                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jul)+getResources().getInteger(R.integer.difInputY2Jul)));
                         aug = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Aug)+getResources().getInteger(R.integer.difInputY2Aug)));
-                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Sep)+getResources().getInteger(R.integer.difInputY2Sep)));
-                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Oct)+getResources().getInteger(R.integer.difInputY2Oct)));
-                        nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Nov)+getResources().getInteger(R.integer.ReplantingLaborY2Nov)+getResources().getInteger(R.integer.difInputY2Nov)));
-                        dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.ReplantingLaborY2Dec)+getResources().getInteger(R.integer.difInputY2Dec)));
+                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Sep)+getResources().getInteger(R.integer.ReplantingLaborY2Sep)+getResources().getInteger(R.integer.difInputY2Sep))+getResources().getInteger(R.integer.difLaborY2Sep));
+                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Oct)+getResources().getInteger(R.integer.ReplantingLaborY2Oct)+getResources().getInteger(R.integer.difInputY2Oct))+getResources().getInteger(R.integer.difLaborY2Oct));
+                        nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Nov)+getResources().getInteger(R.integer.ReplantingLaborY2Nov)+getResources().getInteger(R.integer.difInputY2Nov))+getResources().getInteger(R.integer.difLaborY2Nov));
+                        dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.ReplantingLaborY2Dec)+getResources().getInteger(R.integer.difInputY2Dec))+getResources().getInteger(R.integer.difLaborY2Dec));
                     }else{
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.difInputY2Jan)));
                         feb = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Feb)+getResources().getInteger(R.integer.difInputY2Feb)));
@@ -341,18 +361,18 @@ public class replantDetailFragment extends Fragment {
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.difInputY2Dec)));
                     }
                 }else {
-                    setText(jlb, p11);
-                    setText(fblb, p11);
-                    setText(mrlb, p7+", "+p8);
-                    setText(ablb, p7+", "+p8);
-                    setText(mylb, p8+", "+p53+", "+p12+", "+p36+", "+p19);
-                    setText(jnlb, p33);
-                    setText(jllb, p58+", "+p39);
-                    setText(aglb, p33);
-                    setText(splb, p9+", "+p54+", "+p39+", "+p12+", "+p36+", "+p19);
-                    setText(oclb, p58);
-                    setText(nvlb, p39);
-                    setText(dclb, p58+", "+p54);
+                    setText(jlb, p20);
+                    setText(fblb, p20);
+                    setText(mrlb, p10);
+                    setText(ablb, p10+", "+p54+", "+p6);
+                    setText(mylb, p10+", "+p54+", "+p6+", "+p1+", "+p22);
+                    setText(jnlb, p10+", "+p54+", "+p6);
+                    setText(jllb, p78+", "+p49);
+                    setText(aglb, p45);
+                    setText(splb, p48+", "+p65+", "+p21+", "+p68+", "+p75);
+                    setText(oclb, p78+", "+p36);
+                    setText(nvlb, p48);
+                    setText(dclb, p78+", "+p36+", "+p68);
                     setText(plt, plot);
                     if (labor == "labor") {
                         jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)));
@@ -368,16 +388,16 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Nov)+getResources().getInteger(R.integer.ReplantingLaborY2Nov)));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.ReplantingLaborY2Dec)));
                     }else if(labor =="season") {
-                        jan = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Jan));
+                        jan = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jan)+getResources().getInteger(R.integer.ReplantingLaborY2Jan)));
                         feb = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Feb));
                         mar = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Mar));
                         apr = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Apr));
-                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2May)+getResources().getInteger(R.integer.ReplantingLaborY2May)));
-                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jun)+getResources().getInteger(R.integer.ReplantingLaborY2Jun)));
-                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jul)+getResources().getInteger(R.integer.ReplantingLaborY2Jul)));
+                        may = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2May)));
+                        jun = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jun)));
+                        jul = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Jul)));
                         aug = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Aug));
-                        sep = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Sep));
-                        oct = (int) (area * getResources().getInteger(R.integer.ReplantingInputY2Oct));
+                        sep = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Sep)+getResources().getInteger(R.integer.ReplantingLaborY2Sep)));
+                        oct = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Oct)+getResources().getInteger(R.integer.ReplantingLaborY2Oct)));
                         nov = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Nov)+getResources().getInteger(R.integer.ReplantingLaborY2Nov)));
                         dec = (int) (area * (getResources().getInteger(R.integer.ReplantingInputY2Dec)+getResources().getInteger(R.integer.ReplantingLaborY2Dec)));
                     } else {
@@ -399,18 +419,19 @@ public class replantDetailFragment extends Fragment {
             }else if ((yearLaunch.equals("1")||yearStart.equals("-2"))||(yearLaunch.equals("2")&& yearStart.equals("-1"))||(yearLaunch.equals("3")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("4")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 5")||yearStart.equals("Tahun 5")||yearStart.equals("Année 5")))){
 
                 if (relat == "extra"){
-                    setText(jlb, p33);
-                    setText(fblb, p33);
-                    setText(mrlb, p58);
-                    setText(ablb, p54+", "+p27+", "+p39);
-                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                    setText(jnlb, p50);
-                    setText(jllb, p18);
-                    setText(aglb, p58+", "+p18);
-                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12);
-                    setText(oclb, p27+", "+p50+", "+p36+", "+p19);
-                    setText(nvlb, p27+", "+p50);
-                    setText(dclb, p39+", "+p54+", "+p52);
+                    setText(jlb, p45);
+                    setText(fblb, p45);
+                    setText(mrlb, p28+", "+p36);
+                    setText(ablb, p26+", "+p41);
+                    setText(mylb, p25+", "+p2+", "+p3+", "+p67);
+                    setText(jnlb, p45);
+                    setText(jllb, p45);
+                    setText(aglb, p25+", "+p78+", "+p36+", "+p9);
+                    setText(splb, p26+", "+p2+", "+p67);
+                    setText(oclb, p25+", "+p3+", "+p41);
+                    setText(nvlb, p25+", "+p57);
+                    setText(dclb, p26+", "+p68);
+                    setText(plt, plot);
                     if (labor == "labor"){
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan)))+getResources().getInteger(R.integer.difLaborY3Jan));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Feb)))+(area * (getResources().getInteger(R.integer.difInputY3Feb)))+getResources().getInteger(R.integer.difLaborY3Feb));
@@ -425,18 +446,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov)))+(area * (getResources().getInteger(R.integer.difInputY3Nov)))+getResources().getInteger(R.integer.difLaborY3Nov));
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec)))+(area * (getResources().getInteger(R.integer.difInputY3Dec)))+getResources().getInteger(R.integer.difLaborY3Dec));
                     }else if(labor =="season") {
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan))));
+                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan)))+getResources().getInteger(R.integer.difLaborY3Jan));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb)))+(area * (getResources().getInteger(R.integer.difInputY3Feb))));
                         mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Mar)))+(area * (getResources().getInteger(R.integer.difInputY3Mar))));
                         apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Apr)))+(area * (getResources().getInteger(R.integer.difInputY3Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3May)))+(area * (getResources().getInteger(R.integer.difInputY3May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Jun)))+(area * (getResources().getInteger(R.integer.difInputY3Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Jul)))+(area * (getResources().getInteger(R.integer.difInputY3Jul))));
+                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3May)))+(area * (getResources().getInteger(R.integer.difInputY3May))));
+                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jun)))+(area * (getResources().getInteger(R.integer.difInputY3Jun))));
+                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jul)))+(area * (getResources().getInteger(R.integer.difInputY3Jul))));
                         aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Aug)))+(area * (getResources().getInteger(R.integer.difInputY3Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Sep)))+(area * (getResources().getInteger(R.integer.difInputY3Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Oct)))+(area * (getResources().getInteger(R.integer.difInputY3Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov)))+(area * (getResources().getInteger(R.integer.difInputY3Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec)))+(area * (getResources().getInteger(R.integer.difInputY3Dec))));
+                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Sep)))+(area * (getResources().getInteger(R.integer.difInputY3Sep)))+getResources().getInteger(R.integer.difLaborY3Sep));
+                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Oct)))+(area * (getResources().getInteger(R.integer.difInputY3Oct)))+getResources().getInteger(R.integer.difLaborY3Oct));
+                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov)))+(area * (getResources().getInteger(R.integer.difInputY3Nov)))+getResources().getInteger(R.integer.difLaborY3Nov));
+                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec)))+(area * (getResources().getInteger(R.integer.difInputY3Dec)))+getResources().getInteger(R.integer.difLaborY3Dec));
                     }else{
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan)))+(area * (getResources().getInteger(R.integer.difInputY3Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb)))+(area * (getResources().getInteger(R.integer.difInputY3Feb))));
@@ -452,18 +473,18 @@ public class replantDetailFragment extends Fragment {
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec)))+(area * (getResources().getInteger(R.integer.difInputY3Dec))));
                     }
                 }else {
-                    setText(jlb, p33);
-                    setText(fblb, p33);
-                    setText(mrlb, p58);
-                    setText(ablb, p54+", "+p27+", "+p39);
-                    setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                    setText(jnlb, p50);
-                    setText(jllb, p18);
-                    setText(aglb, p58+", "+p18);
-                    setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12);
-                    setText(oclb, p27+", "+p50+", "+p36+", "+p19);
-                    setText(nvlb, p27+", "+p50);
-                    setText(dclb, p39+", "+p54+", "+p52);
+                    setText(jlb, p45);
+                    setText(fblb, p45);
+                    setText(mrlb, p28+", "+p36);
+                    setText(ablb, p26+", "+p41);
+                    setText(mylb, p25+", "+p21+", "+p47+", "+p67);
+                    setText(jnlb, p45);
+                    setText(jllb, p45);
+                    setText(aglb, p25+", "+p78+", "+p36+", "+p9);
+                    setText(splb, p26+", "+p21+", "+p67);
+                    setText(oclb, p25+", "+p47+", "+p41);
+                    setText(nvlb, p25+", "+p57);
+                    setText(dclb, p26+", "+p68);
                     setText(plt, plot);
                     if (labor == "labor") {
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan))));
@@ -479,18 +500,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov))));
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec))));
                     }else if(labor =="season") {
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))));
+                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb))));
                         mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Mar))));
                         apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Jul))));
+                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3May))));
+                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jun))));
+                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jul))));
                         aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec))));
+                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Sep))));
+                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Oct))));
+                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Nov))));
+                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY3Dec))));
                     }else {
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY3Feb))));
@@ -509,18 +530,18 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-3"))||(yearLaunch.equals("2")&&yearStart.equals("-2"))||(yearLaunch.equals("3")&& yearStart.equals("-1"))||(yearLaunch.equals("4")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("5")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 4")||yearStart.equals("Tahun 4")||yearStart.equals("Année 4")))){
 
-                setText(jlb, p33);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p54+", "+p27+", "+p39);
-                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
-                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
-                setText(nvlb, p27+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36+", "+p9);
+                setText(ablb, p26+", "+p41);
+                setText(mylb, p26+", "+p21+", "+p47+", "+p67);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25+", "+p41);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (relat == "extra"){
                     if (labor == "labor"){
@@ -537,18 +558,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
                     }else if(labor =="season") {
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
+                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
                         mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar)))+(area * (getResources().getInteger(R.integer.difInputY4Mar))));
                         apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr)))+(area * (getResources().getInteger(R.integer.difInputY4Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
+                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May)))+(area * (getResources().getInteger(R.integer.difInputY4May))));
+                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun)))+(area * (getResources().getInteger(R.integer.difInputY4Jun))));
+                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul)))+(area * (getResources().getInteger(R.integer.difInputY4Jul))));
                         aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug)))+(area * (getResources().getInteger(R.integer.difInputY4Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
+                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Sep)))+(area * (getResources().getInteger(R.integer.difInputY4Sep))));
+                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Oct)))+(area * (getResources().getInteger(R.integer.difInputY4Oct))));
+                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov)))+(area * (getResources().getInteger(R.integer.difInputY4Nov))));
+                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec)))+(area * (getResources().getInteger(R.integer.difInputY4Dec))));
                     }else{
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan)))+(area * (getResources().getInteger(R.integer.difInputY4Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb)))+(area * (getResources().getInteger(R.integer.difInputY4Feb))));
@@ -578,18 +599,18 @@ public class replantDetailFragment extends Fragment {
                         nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov))));
                         dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec))));
                     }else if(labor =="season") {
-                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))));
+                        jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb))));
                         mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Mar))));
                         apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Apr))));
-                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4May))));
-                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Jun))));
-                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Jul))));
+                        may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4May))));
+                        jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jun))));
+                        jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jul))));
                         aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Aug))));
-                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))));
-                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))));
-                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov))));
-                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec))));
+                        sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Sep))));
+                        oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Oct))));
+                        nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Nov))));
+                        dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY4Dec))));
                     }else {
                         jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Jan))));
                         feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY4Feb))));
@@ -608,18 +629,18 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-4"))||(yearLaunch.equals("2")&& yearStart.equals("-3"))||(yearLaunch.equals("3")&& yearStart.equals("-2"))||(yearLaunch.equals("4")&& yearStart.equals("-1"))||(yearLaunch.equals("5")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("6")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 3")||yearStart.equals("Tahun 3")||yearStart.equals("Année 3")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p54+", "+p27+", "+p39);
-                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
-                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
-                setText(nvlb, p27+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
                 if (labor == "labor") {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
@@ -635,18 +656,18 @@ public class replantDetailFragment extends Fragment {
                     nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
                     dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
                 }else if(labor =="season") {
-                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))));
+                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Feb))));
                     mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Mar))));
                     apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY5May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY5Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY5Jul))));
+                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5May))));
+                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jun))));
+                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jul))));
                     aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
+                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Sep))));
+                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Oct))));
+                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Nov))));
+                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY5Dec))));
                 }else {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY5Feb))));
@@ -664,18 +685,18 @@ public class replantDetailFragment extends Fragment {
 
             }else if ((yearLaunch.equals("1")&& yearStart.equals("-5"))||(yearLaunch.equals("2")&& yearStart.equals("-4"))||(yearLaunch.equals("3")&& yearStart.equals("-3"))||(yearLaunch.equals("4")&& yearStart.equals("-2"))||(yearLaunch.equals("5")&& yearStart.equals("-1"))||(yearLaunch.equals("6")&& (yearStart.equals("Year 1")||yearStart.equals("Tahun 1")||yearStart.equals("Année 1")))||(yearLaunch.equals("7")&& (yearStart.equals("Year 2")||yearStart.equals("Tahun 2")||yearStart.equals("Année 2")))){
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p54+", "+p27+", "+p39);
-                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
-                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
-                setText(nvlb, p27+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
 
                 if (labor == "labor") {
@@ -692,18 +713,18 @@ public class replantDetailFragment extends Fragment {
                     nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
                     dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
                 }else if(labor =="season") {
-                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jan))));
+                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Feb))));
                     mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Mar))));
                     apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY6May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY6Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY6Jul))));
+                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6May))));
+                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jun))));
+                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jul))));
                     aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
+                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Sep))));
+                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Oct))));
+                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Nov))));
+                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY6Dec))));
                 }else {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY6Feb))));
@@ -721,18 +742,18 @@ public class replantDetailFragment extends Fragment {
 
             }else {
 
-                setText(jlb, p17);
-                setText(fblb, p33);
-                setText(mrlb, p58);
-                setText(ablb, p54+", "+p27+", "+p39);
-                setText(mylb, p54+", "+p27+", "+p39+", "+p50+", "+p12+", "+p36+", "+p19);
-                setText(jnlb, p50+", "+p17);
-                setText(jllb, p33);
-                setText(aglb, p58);
-                setText(splb, p27+", "+p54+", "+p39+", "+p50+", "+p12+", "+p17);
-                setText(oclb, p27+", "+p50+", "+p36+", "+p17+", "+p19);
-                setText(nvlb, p27+", "+p50+", "+p17);
-                setText(dclb, p39+", "+p54+", "+p52+", "+p17);
+                setText(jlb, p45);
+                setText(fblb, p45);
+                setText(mrlb, p78+", "+p36);
+                setText(ablb, p30+", "+p68);
+                setText(mylb, p26+", "+p47+", "+p5+", "+p40);
+                setText(jnlb, p45);
+                setText(jllb, p45);
+                setText(aglb, p78+", "+p36);
+                setText(splb, p26+", "+p21+", "+p41);
+                setText(oclb, p25+", "+p47+", "+p41);
+                setText(nvlb, p25);
+                setText(dclb, p26);
                 setText(plt, plot);
 
                 if (labor == "labor") {
@@ -749,18 +770,18 @@ public class replantDetailFragment extends Fragment {
                     nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Nov))));
                     dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Dec))));
                 }else if(labor =="season") {
-                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jan))));
+                    jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jan))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Feb))));
                     mar = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Mar))));
                     apr = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Apr))));
-                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7May)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY7May))));
-                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jun)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY7Jun))));
-                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jul)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY7Jul))));
+                    may = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7May))));
+                    jun = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jun))));
+                    jul = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jul))));
                     aug = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Aug))));
-                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Sep))));
-                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Oct))));
-                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Nov)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY7Nov))));
-                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Dec)))+(area * (getResources().getInteger(R.integer.ReplantingLaborY7Dec))));
+                    sep = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Sep))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Sep))));
+                    oct = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Oct))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Oct))));
+                    nov = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Nov))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Nov))));
+                    dec = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Dec))) + (area * (getResources().getInteger(R.integer.ReplantingLaborY7Dec))));
                 }else {
                     jan = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Jan))));
                     feb = (int) ((area * (getResources().getInteger(R.integer.ReplantingInputY7Feb))));
