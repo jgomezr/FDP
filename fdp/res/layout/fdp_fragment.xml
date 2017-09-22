@@ -60,6 +60,24 @@
             android:clickable="true"
             android:visibility="gone"/>
 
+        <Button android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeT"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/changeThinning"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+        <Button android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeF"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/changeFilling"
+            android:clickable="true"
+            android:visibility="gone"/>
+
         <LinearLayout android:orientation="vertical"
             android:layout_width="155dp"
             android:layout_height="wrap_content">

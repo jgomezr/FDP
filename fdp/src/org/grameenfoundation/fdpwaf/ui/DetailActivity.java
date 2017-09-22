@@ -265,7 +265,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     if (weightFld.getSelectedItem().toString().equals("Kg")){
                         result1 = (int) (avg * prd);
                     }else if (weightFld.getSelectedItem().toString().equals("Bag")){
-                        result1 = (int) ((avg*60) * prd);
+                        result1 = (int) ((avg*62.5) * prd);
                     }else if (weightFld.getSelectedItem().toString().equals("Qq")){
                         result1 = (int) ((avg*100) * prd);
                     }
@@ -292,7 +292,7 @@ public class DetailActivity extends SalesforceActivity implements LoaderManager.
                     if (weightFld.getSelectedItem().toString().equals("Kg")){
                         result1 = (int) (avg * prd);
                     }else if (weightFld.getSelectedItem().toString().equals("Bag")){
-                        result1 = (int) ((avg*60) * prd);
+                        result1 = (int) ((avg*62.5) * prd);
                     }else if (weightFld.getSelectedItem().toString().equals("Qq")){
                         result1 = (int) ((avg*100) * prd);
                     }

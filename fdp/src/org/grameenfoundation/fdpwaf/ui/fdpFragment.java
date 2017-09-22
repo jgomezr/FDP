@@ -23,7 +23,7 @@ import java.text.DecimalFormat;
 public class fdpFragment extends Fragment {
     public String startYear;
     public Spinner start;
-    private Button changeR;
+    private Button changeR,changeThinning,changeFilling;
     private EditText comment;
     private TextView plotLB,gaplp,grflp,replp,exslp,limlp,dralp,fillp,thinninglp,lablp,lnp,lcp,lnpy0,lnpy1,lnpy2,lnpy3,lnpy4,lnpy5,lnpy6,lnpy7,lcpy0,lcpy1,lcpy2,lcpy3,lcpy4,lcpy5,lcpy6,lcpy7,plpy0,plpy1,plpy2,plpy3,plpy4,plpy5,plpy6,plpy7,incomeY0,incomeY1,incomeY2,incomeY3,incomeY4,incomeY5,incomeY6,incomeY7,costY0,costY1,costY2,costY3,costY4,costY5,costY6,costY7;
     int income0 = 0;
@@ -126,6 +126,8 @@ public class fdpFragment extends Fragment {
         plpy7= (TextView)view.findViewById(R.id.plY7P);
         comment = (EditText)view.findViewById(R.id.comments);
         changeR = (Button)view.findViewById(R.id.change);
+        changeThinning = (Button)view.findViewById(R.id.changeT);
+        changeFilling= (Button)view.findViewById(R.id.changeF);
         start =(Spinner)view.findViewById(R.id.startP_field);
 
         final fdpActivity activity = (fdpActivity) getActivity();
@@ -1063,7 +1065,7 @@ public class fdpFragment extends Fragment {
         startYear = sty;
     }
 
-    public void mainint(String main, final String relat, final String labor, final Double area, final Double avgCost, Integer age, final Double yield, final Double fCost){
+    public void mainint(String main, final String relat, final String labor, final Double area, final Double avgCost, Integer age, final Double yield, final Double fCost, final String changetf){
 
         changeR.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1079,11 +1081,43 @@ public class fdpFragment extends Fragment {
             }
         });
 
+        changeThinning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final fdpActivity activity2 = (fdpActivity) getActivity();
+
+                activity2.comt2(plotLB.getText().toString());
+                if (relat == "extra"){
+                    activity2.change(plotLB.getText().toString(),"thinning+extra");
+                }else{
+                    activity2.change(plotLB.getText().toString(),"thinning");
+                }
+            }
+        });
+        changeFilling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final fdpActivity activity2 = (fdpActivity) getActivity();
+
+                activity2.comt3(plotLB.getText().toString());
+                if (relat == "extra"){
+                    activity2.change(plotLB.getText().toString(),"filling+extra");
+                }else{
+                    activity2.change(plotLB.getText().toString(),"filling");
+                }
+            }
+        });
+
         DecimalFormat dec = new DecimalFormat("Ghs ###,###,###");
 
         if (main == "replant"){
             replp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
+            if(changetf == "t"){
+                changeThinning.setVisibility(View.VISIBLE);
+            }else if (changetf == "f"){
+                changeFilling.setVisibility(View.VISIBLE);
+            }
             if (relat == "extra"){
                 exslp.setVisibility(View.VISIBLE);
                 if (labor == "labor"){
@@ -1347,6 +1381,212 @@ public class fdpFragment extends Fragment {
             income5 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY5))*avgCost));
             income6 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY6))*avgCost));
             income7 =(int) ((area * (getResources().getInteger(R.integer.extraSoilY7))*avgCost));
+        }else if (main =="thinning"){
+            gaplp.setVisibility(View.VISIBLE);
+            if (relat == "extra"){
+                exslp.setVisibility(View.VISIBLE);
+                if (labor == "labor"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysTotal)));
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY1Total))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY2Total))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY3Total))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY4Total))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY5Total))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY6Total))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY7Total))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSLaborTotal)));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }else if(labor =="season"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysSeason)));
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.thinningDaysY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSeasonTotal)));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY1Season))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY2Season))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY3Season))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY4Season))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY5Season))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY6Season))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.thinningLaborCostY7Season))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }
+                cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
+                cost1 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
+                cost2 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
+                cost3 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
+                cost4 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY4Total)))+(area * (getResources().getInteger(R.integer.difInputY4Total))));
+                cost5 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY5Total)))+(area * (getResources().getInteger(R.integer.difInputY5Total))));
+                cost6 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY6Total)))+(area * (getResources().getInteger(R.integer.difInputY6Total))));
+                cost7 = (int) ((area * (getResources().getInteger(R.integer.thinningInputsY7Total)))+(area * (getResources().getInteger(R.integer.difInputY7Total))));
+            }else{
+                if (labor == "labor"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysTotal)));
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY1Total)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY2Total)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY3Total)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY4Total)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY5Total)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY6Total)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY7Total)));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSLaborTotal)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY1Total)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY2Total)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY3Total)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY4Total)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY5Total)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY6Total)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY7Total)));
+                }else if(labor =="season"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysSeason)));
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY1Season)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY2Season)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY3Season)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY4Season)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY5Season)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY6Season)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.thinningDaysY7Season)));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSeasonTotal)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY1Season)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY2Season)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY3Season)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY4Season)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY5Season)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY6Season)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.thinningLaborCostY7Season)));
+                }
+                cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
+                cost1 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY1Total)));
+                cost2 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY2Total)));
+                cost3 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY3Total)));
+                cost4 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY4Total)));
+                cost5 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY5Total)));
+                cost6 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY6Total)));
+                cost7 = (int) (area * (getResources().getInteger(R.integer.thinningInputsY7Total)));
+            }
+            income0 =(int) ((area * yield * avgCost));
+            income1 =(int) ((area * ((1500-yield)*0.3+yield)*avgCost));
+            income2 =(int) ((area * (((1500-yield)*0.3+income1)*avgCost)));
+            income3 =(int) ((area * (getResources().getInteger(R.integer.gapsY3))* avgCost));
+            income4 =(int) ((area * (getResources().getInteger(R.integer.gapsY4))* avgCost));
+            income5 =(int) ((area * (getResources().getInteger(R.integer.gapsY5))* avgCost));
+            income6 =(int) ((area * (getResources().getInteger(R.integer.gapsY6))* avgCost));
+            income7 =(int) ((area * (getResources().getInteger(R.integer.gapsY7))* avgCost));
+
+        }else if (main =="filling"){
+            gaplp.setVisibility(View.VISIBLE);
+            if (relat == "extra"){
+                exslp.setVisibility(View.VISIBLE);
+                if (labor == "labor"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysTotal)));
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY1Total))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY2Total))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY3Total))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY4Total))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY5Total))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY6Total))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY7Total))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSLaborTotal)));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY1Total))) + (area * (getResources().getInteger(R.integer.difLaborY1Total))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY2Total))) + (area * (getResources().getInteger(R.integer.difLaborY2Total))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY3Total))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY4Total))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY5Total))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY6Total))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY7Total))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }else if(labor =="season"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysSeason)));
+                    laborD1 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY1Season))) + (area * (getResources().getInteger(R.integer.difDaysY1Total))));
+                    laborD2 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY2Season))) + (area * (getResources().getInteger(R.integer.difDaysY2Total))));
+                    laborD3 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY3Season))) + (area * (getResources().getInteger(R.integer.difDaysY3Total))));
+                    laborD4 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY4Season))) + (area * (getResources().getInteger(R.integer.difDaysY4Total))));
+                    laborD5 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY5Season))) + (area * (getResources().getInteger(R.integer.difDaysY5Total))));
+                    laborD6 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY6Season))) + (area * (getResources().getInteger(R.integer.difDaysY6Total))));
+                    laborD7 = (int) ((area * (getResources().getInteger(R.integer.fillingDaysY7Season))) + (area * (getResources().getInteger(R.integer.difDaysY7Total))));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSeasonTotal)));
+                    labor1 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY1Season))) + (area * (getResources().getInteger(R.integer.difLaborY1Season))));
+                    labor2 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY2Season))) + (area * (getResources().getInteger(R.integer.difLaborY2Season))));
+                    labor3 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY3Season))) + (area * (getResources().getInteger(R.integer.difLaborY3Total))));
+                    labor4 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY4Season))) + (area * (getResources().getInteger(R.integer.difLaborY4Total))));
+                    labor5 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY5Season))) + (area * (getResources().getInteger(R.integer.difLaborY5Total))));
+                    labor6 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY6Season))) + (area * (getResources().getInteger(R.integer.difLaborY6Total))));
+                    labor7 = (int) ((area * (getResources().getInteger(R.integer.fillingLaborCostY7Season))) + (area * (getResources().getInteger(R.integer.difLaborY7Total))));
+                }
+                cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
+                cost1 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY1Total)))+(area * (getResources().getInteger(R.integer.difInputY1Total))));
+                cost2 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY2Total)))+(area * (getResources().getInteger(R.integer.difInputY2Total))));
+                cost3 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY3Total)))+(area * (getResources().getInteger(R.integer.difInputY3Total))));
+                cost4 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY4Total)))+(area * (getResources().getInteger(R.integer.difInputY4Total))));
+                cost5 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY5Total)))+(area * (getResources().getInteger(R.integer.difInputY5Total))));
+                cost6 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY6Total)))+(area * (getResources().getInteger(R.integer.difInputY6Total))));
+                cost7 = (int) ((area * (getResources().getInteger(R.integer.fillingInputsY7Total)))+(area * (getResources().getInteger(R.integer.difInputY7Total))));
+            }else{
+                if (labor == "labor"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysTotal)));
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY1Total)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY2Total)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY3Total)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY4Total)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY5Total)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY6Total)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY7Total)));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSLaborTotal)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY1Total)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY2Total)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY3Total)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY4Total)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY5Total)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY6Total)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY7Total)));
+                }else if(labor =="season"){
+                    laborD0 = (int) (area * (getResources().getInteger(R.integer.MGAPSDaysSeason)));
+                    laborD1 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY1Season)));
+                    laborD2 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY2Season)));
+                    laborD3 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY3Season)));
+                    laborD4 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY4Season)));
+                    laborD5 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY5Season)));
+                    laborD6 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY6Season)));
+                    laborD7 = (int) (area * (getResources().getInteger(R.integer.fillingDaysY7Season)));
+                    labor0 = (int) (area * (getResources().getInteger(R.integer.MGAPSeasonTotal)));
+                    labor1 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY1Season)));
+                    labor2 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY2Season)));
+                    labor3 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY3Season)));
+                    labor4 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY4Season)));
+                    labor5 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY5Season)));
+                    labor6 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY6Season)));
+                    labor7 = (int) (area * (getResources().getInteger(R.integer.fillingLaborCostY7Season)));
+                }
+                cost0 = (int) (area * fCost);
+                cost00 = (int) (area * (getResources().getInteger(R.integer.MGAPTotal)));
+                cost1 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY1Total)));
+                cost2 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY2Total)));
+                cost3 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY3Total)));
+                cost4 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY4Total)));
+                cost5 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY5Total)));
+                cost6 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY6Total)));
+                cost7 = (int) (area * (getResources().getInteger(R.integer.fillingInputsY7Total)));
+            }
+            income0 =(int) ((area * yield * avgCost));
+            income1 =(int) ((area * Math.round(1500 * 0.732)* avgCost));
+            income2 =(int) ((area * Math.round(1500 * 0.732)* avgCost));
+            income3 =(int) ((area * Math.round(1500 * 0.732)* avgCost));
+            income4 =(int) ((area * Math.round(1500 * 0.77533333)* avgCost));
+            income5 =(int) ((area * Math.round(1500 * 0.85)* avgCost));
+            income6 =(int) ((area * Math.round(1500 * 0.92533333)* avgCost));
+            income7 =(int) ((area * (getResources().getInteger(R.integer.gapsY7))* avgCost));
+
         }else{
             gaplp.setVisibility(View.VISIBLE);
             if (relat == "extra"){

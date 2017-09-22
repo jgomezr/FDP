@@ -287,7 +287,63 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra1.calc(getString(R.string.pt1), "", "", plot1Area, startY1, yearLaunch);
                         }
 
-                    } else {
+                    } else if (sObject.getRECO1().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment1);
+                        ft.hide(replant1);
+                        ft.hide(graft1);
+                        ft.hide(extra1);
+                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                            fragment1.calc2(getString(R.string.pt1), "extra", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            fragment1.calc2(getString(R.string.pt1), "extra", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc2(getString(R.string.pt1), "extra", "", plot1Area, startY1, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO1().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment1);
+                        ft.hide(replant1);
+                        ft.hide(graft1);
+                        ft.hide(extra1);
+                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                            fragment1.calc2(getString(R.string.pt1), "", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            fragment1.calc2(getString(R.string.pt1), "", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc2(getString(R.string.pt1), "", "", plot1Area, startY1, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO1().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment1);
+                        ft.hide(replant1);
+                        ft.hide(graft1);
+                        ft.hide(extra1);
+                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                            fragment1.calc3(getString(R.string.pt1), "extra", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            fragment1.calc3(getString(R.string.pt1), "extra", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc3(getString(R.string.pt1), "extra", "", plot1Area, startY1, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO1().equals("filling")) {
+                        //filling
+                        ft.show(fragment1);
+                        ft.hide(replant1);
+                        ft.hide(graft1);
+                        ft.hide(extra1);
+                        if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                            fragment1.calc3(getString(R.string.pt1), "", "labor", plot1Area, startY1, yearLaunch);
+                        } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                            fragment1.calc3(getString(R.string.pt1), "", "season", plot1Area, startY1, yearLaunch);
+                        } else {
+                            fragment1.calc3(getString(R.string.pt1), "", "", plot1Area, startY1, yearLaunch);
+                        }
+
+                    }else {
                         //GAP
                         ft.show(fragment1);
                         ft.hide(replant1);
@@ -402,6 +458,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra2.calc(getString(R.string.pt2),"","season",plot2Area,startY2,yearLaunch);
                         }else{
                             extra2.calc(getString(R.string.pt2),"","",plot2Area,startY2,yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO2().equals("thinning+extra")) {
+                        //Thinning
+                        ft.hide(replant2);
+                        ft.show(fragment2);
+                        ft.hide(graft2);
+                        ft.hide(extra2);
+                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                            fragment2.calc2(getString(R.string.pt2), "extra", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            fragment2.calc2(getString(R.string.pt2), "extra", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc2(getString(R.string.pt2), "extra", "", plot2Area, startY2, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO2().equals("thinning")) {
+                        //Thinning
+                        ft.hide(replant2);
+                        ft.show(fragment2);
+                        ft.hide(graft2);
+                        ft.hide(extra2);
+                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                            fragment2.calc2(getString(R.string.pt2), "", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            fragment2.calc2(getString(R.string.pt2), "", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc2(getString(R.string.pt2), "", "", plot2Area, startY2, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO2().equals("filling+extra")) {
+                        //filling
+                        ft.hide(replant2);
+                        ft.show(fragment2);
+                        ft.hide(graft2);
+                        ft.hide(extra2);
+                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                            fragment2.calc3(getString(R.string.pt2), "extra", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            fragment2.calc3(getString(R.string.pt2), "extra", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc3(getString(R.string.pt2), "extra", "", plot2Area, startY2, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO2().equals("filling")) {
+                        //filling
+                        ft.hide(replant2);
+                        ft.show(fragment2);
+                        ft.hide(graft2);
+                        ft.hide(extra2);
+                        if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                            fragment2.calc3(getString(R.string.pt2), "", "labor", plot2Area, startY2, yearLaunch);
+                        } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                            fragment2.calc3(getString(R.string.pt2), "", "season", plot2Area, startY2, yearLaunch);
+                        } else {
+                            fragment2.calc3(getString(R.string.pt2), "", "", plot2Area, startY2, yearLaunch);
                         }
 
                     }else{
@@ -521,6 +633,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra3.calc(getString(R.string.pt3),"","",plot3Area,startY3,yearLaunch);
                         }
 
+                    }else if (sObject.getRECO3().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment3);
+                        ft.hide(replant3);
+                        ft.hide(graft3);
+                        ft.hide(extra3);
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                            fragment3.calc2(getString(R.string.pt3), "extra", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            fragment3.calc2(getString(R.string.pt3), "extra", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc2(getString(R.string.pt3), "extra", "", plot3Area, startY3, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO3().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment3);
+                        ft.hide(replant3);
+                        ft.hide(graft3);
+                        ft.hide(extra3);
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                            fragment3.calc2(getString(R.string.pt3), "", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            fragment3.calc2(getString(R.string.pt3), "", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc2(getString(R.string.pt3), "", "", plot3Area, startY3, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO3().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment3);
+                        ft.hide(replant3);
+                        ft.hide(graft3);
+                        ft.hide(extra3);
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                            fragment3.calc3(getString(R.string.pt3), "extra", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            fragment3.calc3(getString(R.string.pt3), "extra", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc3(getString(R.string.pt3), "extra", "", plot3Area, startY3, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO3().equals("filling")) {
+                        //filling
+                        ft.show(fragment3);
+                        ft.hide(replant3);
+                        ft.hide(graft3);
+                        ft.hide(extra3);
+                        if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                            fragment3.calc3(getString(R.string.pt3), "", "labor", plot3Area, startY3, yearLaunch);
+                        } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                            fragment3.calc3(getString(R.string.pt3), "", "season", plot3Area, startY3, yearLaunch);
+                        } else {
+                            fragment3.calc3(getString(R.string.pt3), "", "", plot3Area, startY3, yearLaunch);
+                        }
+
                     }else{
                         //GAP
                         ft.show(fragment3);
@@ -634,6 +802,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra4.calc(getString(R.string.pt4),"","season",plot4Area,startY4,yearLaunch);
                         }else{
                             extra4.calc(getString(R.string.pt4),"","",plot4Area,startY4,yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO4().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment4);
+                        ft.hide(replant4);
+                        ft.hide(graft4);
+                        ft.hide(extra4);
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                            fragment4.calc2(getString(R.string.pt4), "extra", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            fragment4.calc2(getString(R.string.pt4), "extra", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc2(getString(R.string.pt4), "extra", "", plot4Area, startY4, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO4().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment4);
+                        ft.hide(replant4);
+                        ft.hide(graft4);
+                        ft.hide(extra4);
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                            fragment4.calc2(getString(R.string.pt4), "", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            fragment4.calc2(getString(R.string.pt4), "", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc2(getString(R.string.pt4), "", "", plot4Area, startY4, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO4().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment4);
+                        ft.hide(replant4);
+                        ft.hide(graft4);
+                        ft.hide(extra4);
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                            fragment4.calc3(getString(R.string.pt4), "extra", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            fragment4.calc3(getString(R.string.pt4), "extra", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc3(getString(R.string.pt4), "extra", "", plot4Area, startY4, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO4().equals("filling")) {
+                        //filling
+                        ft.show(fragment4);
+                        ft.hide(replant4);
+                        ft.hide(graft4);
+                        ft.hide(extra4);
+                        if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                            fragment4.calc3(getString(R.string.pt4), "", "labor", plot4Area, startY4, yearLaunch);
+                        } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                            fragment4.calc3(getString(R.string.pt4), "", "season", plot4Area, startY4, yearLaunch);
+                        } else {
+                            fragment4.calc3(getString(R.string.pt4), "", "", plot4Area, startY4, yearLaunch);
                         }
 
                     }else{
@@ -752,6 +976,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra5.calc(getString(R.string.pt5),"","",plot5Area,startY5,yearLaunch);
                         }
 
+                    }else if (sObject.getRECO5().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment5);
+                        ft.hide(replant5);
+                        ft.hide(graft5);
+                        ft.hide(extra5);
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                            fragment5.calc2(getString(R.string.pt5), "extra", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            fragment5.calc2(getString(R.string.pt5), "extra", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc2(getString(R.string.pt5), "extra", "", plot5Area, startY5, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO5().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment5);
+                        ft.hide(replant5);
+                        ft.hide(graft5);
+                        ft.hide(extra5);
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                            fragment5.calc2(getString(R.string.pt5), "", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            fragment5.calc2(getString(R.string.pt5), "", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc2(getString(R.string.pt5), "", "", plot5Area, startY5, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO5().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment5);
+                        ft.hide(replant5);
+                        ft.hide(graft5);
+                        ft.hide(extra5);
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                            fragment5.calc3(getString(R.string.pt5), "extra", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            fragment5.calc3(getString(R.string.pt5), "extra", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc3(getString(R.string.pt5), "extra", "", plot5Area, startY5, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO5().equals("filling")) {
+                        //filling
+                        ft.show(fragment5);
+                        ft.hide(replant5);
+                        ft.hide(graft5);
+                        ft.hide(extra5);
+                        if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                            fragment5.calc3(getString(R.string.pt5), "", "labor", plot5Area, startY5, yearLaunch);
+                        } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                            fragment5.calc3(getString(R.string.pt5), "", "season", plot5Area, startY5, yearLaunch);
+                        } else {
+                            fragment5.calc3(getString(R.string.pt5), "", "", plot5Area, startY5, yearLaunch);
+                        }
+
                     }else{
                         //GAP
                         ft.show(fragment5);
@@ -866,6 +1146,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra6.calc(getString(R.string.pt6),"","season",plot6Area,startY6,yearLaunch);
                         }else{
                             extra6.calc(getString(R.string.pt6),"","",plot6Area,startY6,yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO6().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment6);
+                        ft.hide(replant6);
+                        ft.hide(graft6);
+                        ft.hide(extra6);
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                            fragment6.calc2(getString(R.string.pt6), "extra", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            fragment6.calc2(getString(R.string.pt6), "extra", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc2(getString(R.string.pt6), "extra", "", plot6Area, startY6, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO6().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment6);
+                        ft.hide(replant6);
+                        ft.hide(graft6);
+                        ft.hide(extra6);
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                            fragment6.calc2(getString(R.string.pt6), "", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            fragment6.calc2(getString(R.string.pt6), "", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc2(getString(R.string.pt6), "", "", plot6Area, startY6, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO6().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment6);
+                        ft.hide(replant6);
+                        ft.hide(graft6);
+                        ft.hide(extra6);
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                            fragment6.calc3(getString(R.string.pt6), "extra", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            fragment6.calc3(getString(R.string.pt6), "extra", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc3(getString(R.string.pt6), "extra", "", plot6Area, startY6, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO6().equals("filling")) {
+                        //filling
+                        ft.show(fragment6);
+                        ft.hide(replant6);
+                        ft.hide(graft6);
+                        ft.hide(extra6);
+                        if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                            fragment6.calc3(getString(R.string.pt6), "", "labor", plot6Area, startY6, yearLaunch);
+                        } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                            fragment6.calc3(getString(R.string.pt6), "", "season", plot6Area, startY6, yearLaunch);
+                        } else {
+                            fragment6.calc3(getString(R.string.pt6), "", "", plot6Area, startY6, yearLaunch);
                         }
 
                     }else{
@@ -985,7 +1321,64 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra7.calc(getString(R.string.pt7),"","",plot7Area,startY7,yearLaunch);
                         }
 
+                    }else if (sObject.getRECO7().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment7);
+                        ft.hide(replant7);
+                        ft.hide(graft7);
+                        ft.hide(extra7);
+                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                            fragment7.calc2(getString(R.string.pt7), "extra", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            fragment7.calc2(getString(R.string.pt7), "extra", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc2(getString(R.string.pt7), "extra", "", plot7Area, startY7, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO7().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment7);
+                        ft.hide(replant7);
+                        ft.hide(graft7);
+                        ft.hide(extra7);
+                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                            fragment7.calc2(getString(R.string.pt7), "", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            fragment7.calc2(getString(R.string.pt7), "", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc2(getString(R.string.pt7), "", "", plot7Area, startY7, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO7().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment7);
+                        ft.hide(replant7);
+                        ft.hide(graft7);
+                        ft.hide(extra7);
+                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                            fragment7.calc3(getString(R.string.pt7), "extra", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            fragment7.calc3(getString(R.string.pt7), "extra", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc3(getString(R.string.pt7), "extra", "", plot7Area, startY7, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO7().equals("filling")) {
+                        //filling
+                        ft.show(fragment7);
+                        ft.hide(replant7);
+                        ft.hide(graft7);
+                        ft.hide(extra7);
+                        if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                            fragment7.calc3(getString(R.string.pt7), "", "labor", plot7Area, startY7, yearLaunch);
+                        } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                            fragment7.calc3(getString(R.string.pt7), "", "season", plot7Area, startY7, yearLaunch);
+                        } else {
+                            fragment7.calc3(getString(R.string.pt7), "", "", plot7Area, startY7, yearLaunch);
+                        }
+
                     }else{
+
                         //GAP
                         ft.show(fragment7);
                         ft.hide(replant7);
@@ -1100,6 +1493,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra8.calc(getString(R.string.pt8),"","season",plot8Area,startY8,yearLaunch);
                         }else{
                             extra8.calc(getString(R.string.pt8),"","",plot8Area,startY8,yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO8().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment8);
+                        ft.hide(replant8);
+                        ft.hide(graft8);
+                        ft.hide(extra8);
+                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                            fragment8.calc2(getString(R.string.pt8), "extra", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            fragment8.calc2(getString(R.string.pt8), "extra", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc2(getString(R.string.pt8), "extra", "", plot8Area, startY8, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO8().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment8);
+                        ft.hide(replant8);
+                        ft.hide(graft8);
+                        ft.hide(extra8);
+                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                            fragment8.calc2(getString(R.string.pt8), "", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            fragment8.calc2(getString(R.string.pt8), "", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc2(getString(R.string.pt8), "", "", plot8Area, startY8, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO8().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment8);
+                        ft.hide(replant8);
+                        ft.hide(graft8);
+                        ft.hide(extra8);
+                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                            fragment8.calc3(getString(R.string.pt8), "extra", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            fragment8.calc3(getString(R.string.pt8), "extra", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc3(getString(R.string.pt8), "extra", "", plot8Area, startY8, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO8().equals("filling")) {
+                        //filling
+                        ft.show(fragment8);
+                        ft.hide(replant8);
+                        ft.hide(graft8);
+                        ft.hide(extra8);
+                        if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                            fragment8.calc3(getString(R.string.pt8), "", "labor", plot8Area, startY8, yearLaunch);
+                        } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                            fragment8.calc3(getString(R.string.pt8), "", "season", plot8Area, startY8, yearLaunch);
+                        } else {
+                            fragment8.calc3(getString(R.string.pt8), "", "", plot8Area, startY8, yearLaunch);
                         }
 
                     }else{
@@ -1219,6 +1668,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra9.calc(getString(R.string.pt9),"","",plot9Area,startY9,yearLaunch);
                         }
 
+                    }else if (sObject.getRECO9().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment9);
+                        ft.hide(replant9);
+                        ft.hide(graft9);
+                        ft.hide(extra9);
+                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                            fragment9.calc2(getString(R.string.pt9), "extra", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            fragment9.calc2(getString(R.string.pt9), "extra", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc2(getString(R.string.pt9), "extra", "", plot9Area, startY9, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO9().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment9);
+                        ft.hide(replant9);
+                        ft.hide(graft9);
+                        ft.hide(extra9);
+                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                            fragment9.calc2(getString(R.string.pt9), "", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            fragment9.calc2(getString(R.string.pt9), "", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc2(getString(R.string.pt9), "", "", plot9Area, startY9, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO9().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment9);
+                        ft.hide(replant9);
+                        ft.hide(graft9);
+                        ft.hide(extra9);
+                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                            fragment9.calc3(getString(R.string.pt9), "extra", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            fragment9.calc3(getString(R.string.pt9), "extra", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc3(getString(R.string.pt9), "extra", "", plot9Area, startY9, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO9().equals("filling")) {
+                        //filling
+                        ft.show(fragment9);
+                        ft.hide(replant9);
+                        ft.hide(graft9);
+                        ft.hide(extra9);
+                        if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                            fragment9.calc3(getString(R.string.pt9), "", "labor", plot9Area, startY9, yearLaunch);
+                        } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                            fragment9.calc3(getString(R.string.pt9), "", "season", plot9Area, startY9, yearLaunch);
+                        } else {
+                            fragment9.calc3(getString(R.string.pt9), "", "", plot9Area, startY9, yearLaunch);
+                        }
+
                     }else{
                         //GAP
                         ft.show(fragment9);
@@ -1334,6 +1839,62 @@ public class YearDetailActivity extends SalesforceActivity implements LoaderMana
                             extra10.calc(getString(R.string.pt10),"","season",plot10Area,startY10,yearLaunch);
                         }else{
                             extra10.calc(getString(R.string.pt10),"","",plot10Area,startY10,yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO10().equals("thinning+extra")) {
+                        //Thinning
+                        ft.show(fragment10);
+                        ft.hide(replant10);
+                        ft.hide(graft10);
+                        ft.hide(extra10);
+                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                            fragment10.calc2(getString(R.string.pt10), "extra", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            fragment10.calc2(getString(R.string.pt10), "extra", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc2(getString(R.string.pt10), "extra", "", plot10Area, startY10, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO10().equals("thinning")) {
+                        //Thinning
+                        ft.show(fragment10);
+                        ft.hide(replant10);
+                        ft.hide(graft10);
+                        ft.hide(extra10);
+                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                            fragment10.calc2(getString(R.string.pt10), "", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            fragment10.calc2(getString(R.string.pt10), "", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc2(getString(R.string.pt10), "", "", plot10Area, startY10, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO10().equals("filling+extra")) {
+                        //filling
+                        ft.show(fragment10);
+                        ft.hide(replant10);
+                        ft.hide(graft10);
+                        ft.hide(extra10);
+                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                            fragment10.calc3(getString(R.string.pt10), "extra", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            fragment10.calc3(getString(R.string.pt10), "extra", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc3(getString(R.string.pt10), "extra", "", plot10Area, startY10, yearLaunch);
+                        }
+
+                    }else if (sObject.getRECO10().equals("filling")) {
+                        //filling
+                        ft.show(fragment10);
+                        ft.hide(replant10);
+                        ft.hide(graft10);
+                        ft.hide(extra10);
+                        if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                            fragment10.calc3(getString(R.string.pt10), "", "labor", plot10Area, startY10, yearLaunch);
+                        } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                            fragment10.calc3(getString(R.string.pt10), "", "season", plot10Area, startY10, yearLaunch);
+                        } else {
+                            fragment10.calc3(getString(R.string.pt10), "", "", plot10Area, startY10, yearLaunch);
                         }
 
                     }else{
