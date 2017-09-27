@@ -56,7 +56,7 @@
     <string name="farmCertifications">34. Labels de certifications</string>
     <string name="farmArea">35. Quelle est la superficie totale (Ha) que vous possédez?</string>
     <string name="farmCondition">Condition de la plantation</string>
-    <string name="farmerGroup">14. Coopérative du planteur.</string>
+    <string name="farmerGroup">14. groupement de producteurs</string>
     <string name="farmingProfile">PROFILE ÉCONOMIQUE DE LA PLANTATION</string>
     <string name="fdpActivityTitle">Plan de développement agricole</string>
     <string name="feb">Février</string>
@@ -180,8 +180,8 @@
     <string name="p67">Shape and maintenance pruning</string>
     <string name="p68">Shape pruning</string>
     <string name="p69">Shape pruning of grafts</string>
-    <string name="p70">Sharpening stone</string>
-    <string name="p71">Some maintence pruning</string>
+    <string name="p70">Shape pruning for grafting</string>
+    <string name="p71">Some maintenance pruning</string>
     <string name="p72">Take of plastic from grafts</string>
     <string name="p73">Take plastic of all grafts</string>
     <string name="p74">Thinning out</string>
@@ -206,7 +206,7 @@
     <string name="plotInformation">INFORMATION SUR LES PARCELLES</string>
     <string name="plotPL">Parcelle P ou P</string>
     <string name="postalAddress">8. Adresse postale</string>
-    <string name="productionCocoaLY">28. Quelle est votre production totale de fèves de cacao sèches (en Kg) dans l’année (Janvier - Decembre ou la grand traite et la petite traite ensemble)?</string>
+    <string name="productionCocoaLY">28. Quelle est votre production totale de fèves de cacao sèches dans l’année (Janvier - Decembre ou la grand traite et la petite traite ensemble)?</string>
     <string name="productionHiger">Votre production estimée est supérieure à celle de l\'année précédente</string>
     <string name="productionLess">Votre production estimée est inférieure à celle de l\'année précédente</string>
     <string name="productiveProfile">PROFIL DE PRODUCTION</string>
@@ -266,6 +266,7 @@
     <string name="yearDetailActivityTitle">Détail de l\'année</string>
     <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur travaille avec ou vends son cacao a la societé?</string>
     <string name="yes">Oui</string>
+    <string name="qqClarify">*Qq = 100kg</string>
 
     <string-array name = "creditOften">
         <item>Mensuel</item>

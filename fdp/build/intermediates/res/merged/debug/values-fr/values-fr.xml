@@ -337,7 +337,7 @@
     <string-array name="sourceLoan">
         <item>Famille</item>
         <item>Amis</item>
-        <item>Économies communautaires</item>
+        <item>Groups d’épargne communautaire</item>
         <item>Organisation de microcrédit</item>
         <item>Banque</item>
     </string-array>
@@ -345,11 +345,11 @@
         <item>Banque</item>
         <item>Famille</item>
         <item>Amis</item>
-        <item>Économies communautaires</item>
+        <item>Groups d’épargne communautaire</item>
         <item>Organisation de microcrédit</item>
     </string-array>
     <string-array name="sourceLoanCommunity">
-        <item>Économies communautaires</item>
+        <item>Groups d’épargne communautaire</item>
         <item>Famille</item>
         <item>Amis</item>
         <item>Organisation de microcrédit</item>
@@ -358,7 +358,7 @@
     <string-array name="sourceLoanFriend">
         <item>Amis</item>
         <item>Famille</item>
-        <item>Économies communautaires</item>
+        <item>Groups d’épargne communautaire</item>
         <item>Organisation de microcrédit</item>
         <item>Banque</item>
     </string-array>
@@ -366,7 +366,7 @@
         <item>Organisation de microcrédit</item>
         <item>Famille</item>
         <item>Amis</item>
-        <item>Économies communautaires</item>
+        <item>Groups d’épargne communautaire</item>
         <item>Banque</item>
     </string-array>
     <string-array name="treeDistance">
@@ -771,7 +771,7 @@
     <string name="averageCocoaPrice">29. Quel est le prix d’achat bord champ du kg de cacao l’année dernière ?</string>
     <string name="back">Arrière</string>
     <string name="bag">(Sac):</string>
-    <string name="bagClarify">*sac= 60Kg sac</string>
+    <string name="bagClarify">*sac= 62.5Kg sac</string>
     <string name="bankAccount">26. Le planteur a/possède-t-il un compte bancaire?</string>
     <string name="birthday">3. Date de naissance du planteur (Année):</string>
     <string name="calcAO">Calculer</string>
@@ -780,8 +780,8 @@
     <string name="changeFilling">Changement de remplissage</string>
     <string name="changeR">Changement de Replantation</string>
     <string name="changeThinning">Changer pour l\'éclaircissage</string>
-    <string name="childrenInSchool">C6. Nombre d’enfants ayant un âge compris entre 5 et 17 ans scolarisés/fréquentant une école</string>
-    <string name="childrenUnder">C5. Nombre d’enfants ayant un âge compris entre 5 et 17 ans</string>
+    <string name="childrenInSchool">C6. Nombre d’enfants ayant un âge compris entre 6 et 15 ans scolarisés/fréquentant une école</string>
+    <string name="childrenUnder">C5. Nombre d’enfants ayant un âge compris entre 6 et 15 ans</string>
     <string name="childrenVal">Les enfants de 5 à 17 ans ou les enfants inscrits à l\'école ne peuvent pas dépasser le nombre total d\'enfants</string>
     <string name="cocoaArea">37. Combien d’Ha sont plantées avec du cacao ?</string>
     <string name="cocoaTrees">45. Distance entre les pieds de cacaoyer/densité des arbres</string>
@@ -835,7 +835,7 @@
     <string name="farmArea">35. Quelle est la superficie totale (Ha) que vous possédez?</string>
     <string name="farmCertifications">34. Labels de certifications</string>
     <string name="farmCondition">Condition de la plantation</string>
-    <string name="farmerGroup">14. Coopérative du planteur.</string>
+    <string name="farmerGroup">14. groupement de producteurs</string>
     <string name="farmerProfile">PROFIL DE LA FAMILLE DU PLANTEUR</string>
     <string name="farmer_code">2. Code du planteur ou Code de la plantation:</string>
     <string name="farmingProfile">PROFILE ÉCONOMIQUE DE LA PLANTATION</string>
@@ -860,11 +860,11 @@
     <string name="grossCocoaLY">31. Quel montant/combien la culture du cacao vous a rapporté l’année dernière?  (Année signifie les deux périodes, la campagne principale et intermédiaire)</string>
     <string name="harvesting">52. Récolte</string>
     <string name="haveCredit">19. Le ménage a-t-il un prêt qui doit être remboursé?</string>
-    <string name="haveOtherCrops">32. Avez-vous d’autres cultures ?</string>
-    <string name="haveSpouse">11. Le planteur a-t-il une compagne/épouse ?</string>
+    <string name="haveOtherCrops">32. Quelles autres cultures avez vous?</string>
+    <string name="haveSpouse">11. Le planteur a-t-il une compagne/épouse?</string>
     <string name="householdSavings">21. Economies du ménage</string>
     <string name="howLong">Quand est-ce que l’activité de rénovation a-t-elle été faite?</string>
-    <string name="incomeOtherCrops">C20. Combien vous ont rapporté les autres cultures l’année dernière ?</string>
+    <string name="incomeOtherCrops">C20. Combien vous ont rapporté les autres cultures l’année dernière?</string>
     <string name="internalInspection">Inspection interne</string>
     <string name="investmentLabel">Investissements prévus</string>
     <string name="jan">Janvier</string>
@@ -894,65 +894,84 @@
     <string name="oct">Octobre</string>
     <string name="organicMatter">55. Matières organiques</string>
     <string name="otherExpenses">23. Combien sont les autres dépenses annuelles du ménage, dépenses scolaires non comprises?</string>
-    <string name="p1">All trees:</string>
-    <string name="p10">Cut back mother tree</string>
-    <string name="p11">Drainage</string>
-    <string name="p12">Fertilizer</string>
-    <string name="p13">Fertilizer Extra</string>
-    <string name="p14">Full P&amp;D control</string>
-    <string name="p15">Full sanitation</string>
-    <string name="p16">Graft</string>
-    <string name="p17">Harvest</string>
-    <string name="p18">Harvest OUT</string>
-    <string name="p19">Lime</string>
-    <string name="p2">New trees:</string>
-    <string name="p20">Lining and pegging for cocoa and shade trees</string>
-    <string name="p21">Lining and pegging for cocoa trees</string>
-    <string name="p22">Lining for coca </string>
-    <string name="p23">Low maint pruning</string>
-    <string name="p24">Low shape and maint pruning</string>
-    <string name="p25">Low shape and production  pruning</string>
-    <string name="p26">Low weeding</string>
-    <string name="p27">Maint pruning</string>
-    <string name="p28">Medium maint pruning</string>
-    <string name="p29">Medium shape and  maint</string>
-    <string name="p3">Old trees:</string>
-    <string name="p30">Medium shape and maint pruning</string>
-    <string name="p31">Medium shape and prod  pruning</string>
-    <string name="p32">Medium weeding</string>
-    <string name="p33">n/a</string>
-    <string name="p34">No Fertilizer</string>
-    <string name="p35">No organic</string>
-    <string name="p36">Organic</string>
-    <string name="p37">Organic Extra</string>
-    <string name="p38">Organic fertilizer</string>
-    <string name="p39">P&amp;D control</string>
-    <string name="p4">If needed: </string>
-    <string name="p40">P&amp;D control &amp; sanitation</string>
-    <string name="p41">Planting of shade trees</string>
-    <string name="p42">Pollarding</string>
-    <string name="p43">Production pruning</string>
-    <string name="p44">Pruning</string>
-    <string name="p45">Pruning for Maintenance</string>
-    <string name="p46">Pruning Shape and Maintenance</string>
-    <string name="p47">Reduce size of mother trees</string>
-    <string name="p48">Regrafting</string>
-    <string name="p49">Remove plastic</string>
-    <string name="p5">30% Fertilizer</string>
-    <string name="p50">Sanitation</string>
-    <string name="p51">Shade planting</string>
-    <string name="p52">Shade reduction</string>
-    <string name="p53">Shade replanting</string>
-    <string name="p54">Shape pruning</string>
-    <string name="p55">Take of plastic</string>
-    <string name="p56">Thinning out</string>
-    <string name="p57">Topping</string>
-    <string name="p58">Weeding</string>
-    <string name="p59">Lining for cocoa</string>
-    <string name="p6">50% organic</string>
-    <string name="p7">Clearing</string>
-    <string name="p8">Cocoa planting</string>
-    <string name="p9">Cocoa replanting</string>
+    <string name="p1">(re) plant shade trees</string>
+    <string name="p10">Clearing</string>
+    <string name="p11">Clearing for cocoa planting</string>
+    <string name="p12">Clearing for new planting</string>
+    <string name="p13">Clearing land</string>
+    <string name="p14">Cocoa re-planting</string>
+    <string name="p15">Continue graft</string>
+    <string name="p16">Continue pruning back or pollarding mother trees</string>
+    <string name="p17">Continue shade planting</string>
+    <string name="p18">Dig cocoa planting holes</string>
+    <string name="p19">Digging planting holes for cocoa and some shade trees</string>
+    <string name="p2">150% dose fertilizer</string>
+    <string name="p20">Drainage (if needed)</string>
+    <string name="p21">Fertilizer</string>
+    <string name="p22">Fertilizer and organic fertilizer whole farm</string>
+    <string name="p23">Full dose organic fertilizer</string>
+    <string name="p24">Full p&amp;d control</string>
+    <string name="p25">Gap</string>
+    <string name="p26">Gap focus p&amp;d control</string>
+    <string name="p27">Gap with focus on maintenance</string>
+    <string name="p28">Gap with focus on weeding</string>
+    <string name="p29">Gap with focus p&amp;d</string>
+    <string name="p3">200% dose organic fertilizer</string>
+    <string name="p30">Gap with focus p&amp;d and maintenance</string>
+    <string name="p31">Gap with focus p&amp;d and weeding</string>
+    <string name="p32">Graft shape</string>
+    <string name="p33">Grafting</string>
+    <string name="p34">Grafting if needed</string>
+    <string name="p35">Half dose fertilizer</string>
+    <string name="p36">Herbiciding</string>
+    <string name="p37">Ining and pegging of cocoa and shade trees</string>
+    <string name="p38">Light pruning</string>
+    <string name="p39">Light weeding/herbiciding</string>
+    <string name="p4">300% dose organic fertilizer</string>
+    <string name="p40">Maintenance and shape pruning</string>
+    <string name="p41">Maintenance pruning</string>
+    <string name="p42">Modest gap</string>
+    <string name="p43">Modest gap with full p&amp;d</string>
+    <string name="p44">Modest maintenance pruning</string>
+    <string name="p45">None</string>
+    <string name="p46">Npk fertilizer</string>
+    <string name="p47">Organic fertilizer</string>
+    <string name="p48">P&amp;d control</string>
+    <string name="p49">P&amp;d control on young trees</string>
+    <string name="p5">Anorganic fertilizer</string>
+    <string name="p50">P&amp;d drainage if needed</string>
+    <string name="p51">Plant cocoa</string>
+    <string name="p52">Plant shade trees</string>
+    <string name="p53">Planting cocoa trees</string>
+    <string name="p54">Planting cocoa trees with special fertilizer</string>
+    <string name="p55">Build shelter for cocoa trees</string>
+    <string name="p56">Planting of shade trees</string>
+    <string name="p57">Pruning</string>
+    <string name="p58">Pruning back or pollarding mother trees</string>
+    <string name="p59">Pruning knife</string>
+    <string name="p6">Build shelter for cocoa trees</string>
+    <string name="p60">Reduce shade</string>
+    <string name="p61">Regraft</string>
+    <string name="p62">Regraft dead grafts</string>
+    <string name="p63">Remove plastic from month old graphs</string>
+    <string name="p64">Removing unwanted shade trees</string>
+    <string name="p65">Replant dead cocoa trees</string>
+    <string name="p66">Shade reduction</string>
+    <string name="p67">Shape and maintenance pruning</string>
+    <string name="p68">Shape pruning</string>
+    <string name="p69">Shape pruning of grafts</string>
+    <string name="p7">Buy bud-wood</string>
+    <string name="p70">Shape pruning for grafting</string>
+    <string name="p71">Some maintenance pruning</string>
+    <string name="p72">Take of plastic from grafts</string>
+    <string name="p73">Take plastic of all grafts</string>
+    <string name="p74">Thinning out</string>
+    <string name="p75">Topping</string>
+    <string name="p76">Topping and general maintenance pruning</string>
+    <string name="p77">Very light gap</string>
+    <string name="p78">Weeding</string>
+    <string name="p8">Circle and general weeding</string>
+    <string name="p9">Circle weeding</string>
     <string name="payForCredit">C14. Quel montant remboursez-vous/combien payez-vous chaque Paiement ?</string>
     <string name="payOftenForCredit">C13 Quel est l’échéancier/la période de remboursement?</string>
     <string name="pestDiseaseSanitation">50. Insectes, maladies et état sanitaire</string>
@@ -970,7 +989,7 @@
     <string name="plotInformation">INFORMATION SUR LES PARCELLES</string>
     <string name="plotPL">Parcelle P ou P</string>
     <string name="postalAddress">8. Adresse postale</string>
-    <string name="productionCocoaLY">28. Quel est le prix d’achat bord champ du kg de cacao l’année dernière ?</string>
+    <string name="productionCocoaLY">28. Quelle est votre production totale de fèves de cacao sèches dans l’année (Janvier - Decembre ou la grand traite et la petite traite ensemble)?</string>
     <string name="productionHiger">Votre production estimée est supérieure à celle de l\'année précédente</string>
     <string name="productionLess">Votre production estimée est inférieure à celle de l\'année précédente</string>
     <string name="productiveProfile">PROFIL DE PRODUCTION</string>
@@ -986,12 +1005,13 @@
     <string name="pt7">PARCELLE 7</string>
     <string name="pt8">PARCELLE 8</string>
     <string name="pt9">PARCELLE 9</string>
+    <string name="qqClarify">*Qq = 100kg</string>
     <string name="reason">Quelle activité de rénovation a été faite?</string>
     <string name="reasonNotAgree">Commentaires:</string>
-    <string name="receivesFarmPayment">17. Est-ce que quelqu’un dans le ménage a une source de revenus provenant d’autres activités ?</string>
+    <string name="receivesFarmPayment">17. Est-ce que quelqu’un dans le ménage a une source de revenus?</string>
     <string name="renovated">La parcelle a-t-elle été récemment rénovée?</string>
     <string name="renovatedAreaHiger">Votre taille de parcelle rénovée ne peut pas être supérieure à votre taille de rénovation</string>
-    <string name="renovationArea">38. Sur la parcelle dédiée au cacao, combien ont été déjà réhabilité/rénové ?</string>
+    <string name="renovationArea">38. Sur la parcelle dédiée au cacao, combien ont été déjà réhabilité/rénové?</string>
     <string name="renovationHigh">Votre zone de rénovation ne peut pas être supérieure à celle de votre zone de cacao</string>
     <string name="replant">Replanter</string>
     <string name="save">sauvegarder</string>
@@ -1040,6 +1060,6 @@
     <string name="year6">Année 6</string>
     <string name="year7">Année 7</string>
     <string name="yearDetailActivityTitle">Détail de l\'année</string>
-    <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur est-il membre de la coopérative ou vend-il son cacao à la coopérative ?</string>
+    <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur travaille avec ou vends son cacao a la societé?</string>
     <string name="yes">Oui</string>
 </resources>

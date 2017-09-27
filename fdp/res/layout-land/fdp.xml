@@ -453,6 +453,8 @@
                         android:text="@string/netOther"
                         android:layout_gravity="center_vertical"
                         android:gravity="center_vertical"
+                        android:lines="2"
+                        android:maxLines="2"
                         android:layout_column="0"
                         android:layout_row="3"
                         style="@style/FarmerDetail.ParentView.TextView" />
@@ -1011,7 +1013,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/button"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="20dp"
                     android:textColor="@color/white"
                     android:layout_margin="25dp"
                     android:layout_gravity="center"

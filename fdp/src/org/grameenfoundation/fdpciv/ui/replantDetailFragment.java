@@ -312,7 +312,7 @@ public class replantDetailFragment extends Fragment {
                     setText(mrlb, p10);
                     setText(ablb, p10+", "+p54+", "+p6);
                     setText(mylb, p10+", "+p54+", "+p6+", "+p1+", "+p2+", "+p4+", "+p22);
-                    setText(jnlb, p10+", "+p54+", "+p6);
+                    setText(jnlb, p10+", "+p53+", "+p6);
                     setText(jllb, p78+", "+p49);
                     setText(aglb, p45);
                     setText(splb, p48+", "+p65+", "+p2+", "+p4+", "+p68+", "+p75);
@@ -366,7 +366,7 @@ public class replantDetailFragment extends Fragment {
                     setText(mrlb, p10);
                     setText(ablb, p10+", "+p54+", "+p6);
                     setText(mylb, p10+", "+p54+", "+p6+", "+p1+", "+p22);
-                    setText(jnlb, p10+", "+p54+", "+p6);
+                    setText(jnlb, p10+", "+p53+", "+p6);
                     setText(jllb, p78+", "+p49);
                     setText(aglb, p45);
                     setText(splb, p48+", "+p65+", "+p21+", "+p68+", "+p75);
