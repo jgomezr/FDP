@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="account_type" translatable="false">org.grameenfoundation.fdpwaf.login</string>
-	<string name="app_name"><b>FDP WAf</b></string>
+	<string name="app_name"><b>FDP GHA</b></string>
 	<string name="app_package" translatable="false">org.grameenfoundation.fdpwaf</string>
     <string name="switch_user_button">Switch User</string>
     <string name="internalInspection">Internal Inspection</string>
@@ -52,11 +52,11 @@
 	<string name="childrenUnder">C5. Children between 4 to 14 years old:</string>
 	<string name="childrenInSchool">C6. Children between 4 to 14 years old enrolled in school:</string>
 	<string name="familyMembers">13. Number of household members including the farmer:</string>
-	<string name="farmerGroup">14. Farmer group</string>
+	<string name="farmerGroup">14. Member of Farmer Group</string>
 	<string name="familyPhoto">Click to take a family photo</string>
 	<string name="fmWorkFarm">15. How many household members (excluding the farmer) work on the farm without paid wages?</string>
 	<string name="dependEconomically">16. How many household members (including the farmer) depend on the total household income?</string>
-	<string name="receivesFarmPayment">17. Does any member of the household earn income for other work?</string>
+	<string name="receivesFarmPayment">17. Does any member of the HH from earn income for any work, including farming?</string>
     <string name="totalIncomeLabor">C7. Apart from farming cocoa and other crops, how much income does the farmer earn from other sources in a year?</string>
 	<string name="spousePaidWork">C8. Apart from farming cocoa and other crops, does the spouse earn income from other sources?</string>
     <string name="totalSpouseIncome">C9. How much income does the spouse earn from other sources in a year?</string>
@@ -83,7 +83,8 @@
     <string name="area">Area</string>
     <string name="weight">Weight</string>
     <string name="bagClarify">*bag = 62.5kg bag</string>
-    <string name="productionCocoaLY">28. What is your total kg production of dry cocoa beans in a crop year or calendar year?</string>
+	<string name="qqClarify">*bag = 100kg</string>
+    <string name="productionCocoaLY">28. What is your total production of dry cocoa beans in a crop year or calendar year?</string>
     <string name="averageCocoaPrice">29. What is the average farm gate dry bean cocoa price per kg for last year?</string>
 	<string name="expensesCocoaLY">30. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string>
 	<string name="grossCocoaLY">31. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string>
@@ -233,9 +234,9 @@
 	<string name="p45">None</string>
 	<string name="p46">Npk fertilizer</string>
 	<string name="p47">Organic fertilizer</string>
-	<string name="p48">P&amp;d control</string>
-	<string name="p49">P&amp;d control on young trees</string>
-	<string name="p50">P&amp;d drainage if needed</string>
+	<string name="p48">P&amp;D control</string>
+	<string name="p49">P&amp;D control on young trees</string>
+	<string name="p50">P&amp;D drainage if needed</string>
 	<string name="p51">Plant cocoa</string>
 	<string name="p52">Plant shade trees</string>
 	<string name="p53">Planting cocoa trees</string>

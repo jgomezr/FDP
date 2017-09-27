@@ -357,7 +357,7 @@ public class yearDelayFragment extends Fragment {
                     setText(jnlb, p74);
                     setText(jllb, p45);
                     setText(aglb, p78+", "+p36);
-                    setText(splb, p26+", "+p47+", "+p41);
+                    setText(splb, p26+", "+p21+", "+p41);
                     setText(oclb, p25+", "+p47);
                     setText(nvlb, p25+", "+p41);
                     setText(dclb, p26+", "+p60);
@@ -1217,7 +1217,7 @@ public class yearDelayFragment extends Fragment {
                 setText(jllb, p45);
                 setText(aglb, p78+", "+p36+", "+p9);
                 setText(splb, p26+", "+p21+", "+p67);
-                setText(oclb, p25+", "+p47+", "+p41);
+                setText(oclb, p26+", "+p47+", "+p41);
                 setText(nvlb, p25+", "+p41);
                 setText(dclb, p26+", "+p68);
                 setText(plt, plot);

@@ -25,7 +25,7 @@
                 android:gravity="center_horizontal"
                 android:text="@string/farmerProfile"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:typeface="normal" />
 
@@ -573,7 +573,7 @@
                 android:padding="6dp"
                 android:text="@string/familyPhoto"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -584,7 +584,7 @@
                 android:gravity="center_horizontal"
                 android:text="@string/socioeconomicProfile"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:typeface="normal" />
 
@@ -1317,7 +1317,7 @@
                 android:gravity="center_horizontal"
                 android:text="@string/farmingProfile"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:typeface="normal" />
 
@@ -1333,7 +1333,7 @@
                     android:gravity="center_horizontal"
                     android:text="@string/measure"
                     android:textAlignment="center"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     android:typeface="normal" />
 
@@ -1390,7 +1390,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/bagClarify"
-                            android:textSize="12sp"/>
+                            android:textSize="12dp"/>
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/qqClarify"
+                            android:textSize="12dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -1625,7 +1632,7 @@
                 android:gravity="center_horizontal"
                 android:text="@string/productiveProfile"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:typeface="normal" />
 
@@ -1642,7 +1649,7 @@
                 android:padding="6dp"
                 android:text="@string/mapPhoto"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -1842,7 +1849,7 @@
                 android:padding="6dp"
                 android:text="@string/saveContinue"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

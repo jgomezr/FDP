@@ -1221,9 +1221,9 @@ public class fdpFragment extends Fragment {
         }else if (main =="graft"){
             grflp.setVisibility(View.VISIBLE);
             gaplp.setVisibility(View.VISIBLE);
-            if(age>25 && age<31){
+            //if(age>25 && age<31){
                 changeR.setVisibility(View.VISIBLE);
-            }
+            //}
             if (relat == "extra"){
                 exslp.setVisibility(View.VISIBLE);
                 if (labor == "labor"){
@@ -1477,7 +1477,7 @@ public class fdpFragment extends Fragment {
             }
             income0 =(int) ((area * yield * avgCost));
             income1 =(int) ((area * ((1500-yield)*0.3+yield)*avgCost));
-            income2 =(int) ((area * (((1500-yield)*0.3+income1)*avgCost)));
+            income2 =(int) ((area * (((1500-yield)*0.3+((1500-yield)*0.3+yield))*avgCost)));
             income3 =(int) ((area * (getResources().getInteger(R.integer.gapsY3))* avgCost));
             income4 =(int) ((area * (getResources().getInteger(R.integer.gapsY4))* avgCost));
             income5 =(int) ((area * (getResources().getInteger(R.integer.gapsY5))* avgCost));

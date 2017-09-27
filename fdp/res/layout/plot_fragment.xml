@@ -12,7 +12,7 @@
         android:gravity="left"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:background="@color/ptn1" />
 
     <EditText android:id="@+id/gpsp_field"
@@ -23,7 +23,7 @@
         android:clickable="true"
         android:focusable="false"
         android:hint="click to get GPS"
-        android:textSize="16sp"/>
+        android:textSize="16dp"/>
 
     <EditText android:id="@+id/plotArea_field"
         android:layout_width="145dp"
@@ -31,7 +31,7 @@
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
         android:text="0"
-        android:textSize="16sp"/>
+        android:textSize="16dp"/>
 
     <EditText android:id="@+id/estimatedP_field"
         android:layout_width="145dp"
@@ -39,30 +39,33 @@
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
         android:text="0"
-        android:textSize="16sp"/>
+        android:textSize="16dp"/>
 
     <EditText android:id="@+id/ph_field"
         android:layout_width="145dp"
         android:layout_height="35dp"
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
-        android:textSize="16sp"/>
+        android:textSize="16dp"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="40dp"
+        android:textSize="16dp"
         android:id="@+id/renovated_field"
         android:entries="@array/yesNo"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/reason_field"
         android:entries="@array/reason"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="40dp"
+        android:textSize="16dp"
         android:id="@+id/howLong_field"
         android:entries="@array/howLong"/>
 
@@ -74,18 +77,20 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:background="@color/ptn1" />
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/plantingP_field"
         android:entries="@array/gmb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="40dp"
+        android:textSize="16dp"
         android:id="@+id/cocoaTreesP_field"
         android:entries="@array/treeDistance" />
 
@@ -95,71 +100,82 @@
         android:text="0"
         android:layout_gravity="center_vertical"
         android:inputType="numberDecimal"
-        android:textSize="16sp"/>
+        android:textSize="16dp"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/treeHealthP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/debilitationP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/pruningP_field"
         android:entries="@array/gmb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/pestDiseaseP_field"
         android:entries="@array/gmb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/weedingP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/harvestingP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/shadeManagementP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/soilConditionP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/organicMatterP_field"
         android:entries="@array/gb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/fertFormP_field"
         android:entries="@array/gmb"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/fertApplicationP_field"
         android:entries="@array/gmb"/>
 
@@ -170,30 +186,34 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:background="@color/ptn1" />
 
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/limeP_field"
         android:focusable="false"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/drainageP_field"
         android:entries="@array/yesNo"/>
 
     <EditText
         android:layout_width="155dp"
         android:layout_height="40dp"
+        android:textSize="16dp"
         android:id="@+id/fillingP_field"
         android:focusable="false"/>
 
     <Spinner
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/hireP_field"
         android:entries="@array/yesNoHire"/>
 
@@ -204,12 +224,13 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:background="@color/ptn1" />
 
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/geneticP_field"
         android:clickable="true"
         android:focusable="false"/>
@@ -217,6 +238,7 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/farmConditionP_field"
         android:clickable="true"
         android:focusable="false"/>
@@ -224,6 +246,7 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/gapP_field"
         android:clickable="true"
         android:focusable="false"/>
@@ -231,6 +254,7 @@
     <EditText
         android:layout_width="155dp"
         android:layout_height="35dp"
+        android:textSize="16dp"
         android:id="@+id/soilFertMng_field"
         android:clickable="true"
         android:focusable="false"/>
@@ -249,10 +273,10 @@
         android:id="@+id/calculateP"
         android:background="@color/button"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textColor="@color/white"
         android:layout_gravity="center"
-        android:layout_margin="25dp"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:padding="6dp"
         android:text="@string/calcAO"
