@@ -83,7 +83,7 @@
     <string name="area">Area</string>
     <string name="weight">Weight</string>
     <string name="bagClarify">*bag = 62.5kg bag</string>
-	<string name="qqClarify">*bag = 100kg</string>
+	<string name="qqClarify">*Qq = 100kg</string>
     <string name="productionCocoaLY">28. What is your total production of dry cocoa beans in a crop year or calendar year?</string>
     <string name="averageCocoaPrice">29. What is the average farm gate dry bean cocoa price per kg for last year?</string>
 	<string name="expensesCocoaLY">30. How much did you spend on cocoa farm INPUTS in the past year i.e. fertilizer, pesticides etc. (year means past two seasons, mid and main crop)?</string>
@@ -149,7 +149,7 @@
 	<string name="changeFilling">Change for Filling in</string>
 	<string name="changeThinning">Change for Thinning out</string>
 
-	<string name="netPlotIncome">Net income from Cocoa:</string>
+	<string name="netPlotIncome">Gross income from Cocoa:</string>
     <string name="netOtherCrops">Net income from Other Crops:</string>
 	<string name="netFarming">Total farming income:</string>
     <string name="netOther">Net income from all other sources:</string>

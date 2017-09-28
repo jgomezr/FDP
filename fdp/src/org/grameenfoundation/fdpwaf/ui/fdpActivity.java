@@ -1477,7 +1477,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getRECO1().equals("replanting")) {
                         //Replant
                         if (Double.parseDouble(sObject.getPlot1Age())<30 && sObject.getTreeHealth1().equals("G")&&sObject.getDebilitatingDisease1().equals("G")){
-                            if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui")) {
                                     fragment1.mainint("replant", "", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost, "t");
                                     fragment1.other("labor");
@@ -1487,7 +1487,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment1.mainint("replant", "", "", plot1Area, avgCost, age1, estPrd1,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot1CocoaTrees().contentEquals("3.5x4")||sObject.getPlot1CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor1().equals("Yes") || sObject.getHireLabor1().equals("Oui")) {
                                     fragment1.mainint("replant", "", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost, "f");
                                     fragment1.other("labor");
@@ -1496,6 +1496,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment1.other("labor");
                                 } else {
                                     fragment1.mainint("replant", "", "", plot1Area, avgCost, age1, estPrd1,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                                    fragment1.mainint("replant", "", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
+                                    fragment1.other("labor");
+                                } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                                    fragment1.mainint("replant", "", "season", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
+                                    fragment1.other("labor");
+                                } else {
+                                    fragment1.mainint("replant", "", "", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
                                 }
                             }
 
@@ -1513,7 +1523,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     }else if(sObject.getRECO1().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot1Age())<30 && sObject.getTreeHealth1().equals("G")&&sObject.getDebilitatingDisease1().equals("G")){
-                            if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
                                     fragment1.mainint("replant", "extra", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost, "t");
                                     fragment1.other("labor");
@@ -1523,7 +1533,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment1.mainint("replant", "extra", "", plot1Area, avgCost, age1, estPrd1,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot1CocoaTrees().contentEquals("3.5x4")||sObject.getPlot1CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
                                     fragment1.mainint("replant", "extra", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost, "f");
                                     fragment1.other("labor");
@@ -1532,6 +1542,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment1.other("labor");
                                 } else {
                                     fragment1.mainint("replant", "extra", "", plot1Area, avgCost, age1, estPrd1,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor1().equals("Yes")||sObject.getHireLabor1().equals("Oui") ) {
+                                    fragment1.mainint("replant", "extra", "labor", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
+                                    fragment1.other("labor");
+                                } else if (sObject.getHireLabor1().equals("Seasonal")||sObject.getHireLabor1().equals("Saisonnier") ) {
+                                    fragment1.mainint("replant", "extra", "season", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
+                                    fragment1.other("labor");
+                                } else {
+                                    fragment1.mainint("replant", "extra", "", plot1Area, avgCost, age1, estPrd1,farmerCost,"");
                                 }
                             }
 
@@ -1650,7 +1670,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption1().equals("Yes")||sObject.getFillingOption1().equals("Non")) {
-                    if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot1CocoaTrees().contentEquals("2x2")||sObject.getPlot1CocoaTrees().contentEquals("2x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3")||sObject.getPlot1CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot1CocoaTrees().contentEquals("2x3.5")) {
                         fragment1.other("thinning");
                     }else{
                         fragment1.other("filling");
@@ -1697,7 +1717,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot2Age())<30 && sObject.getTreeHealth2().equals("G")&&sObject.getDebilitatingDisease2().equals("G")){
 
-                            if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
                                     fragment2.mainint("replant", "", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost, "t");
                                     fragment2.other("labor");
@@ -1707,7 +1727,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment2.mainint("replant", "", "", plot2Area, avgCost, age2, estPrd2,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot2CocoaTrees().contentEquals("3.5x4")||sObject.getPlot2CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
                                     fragment2.mainint("replant", "", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost, "f");
                                     fragment2.other("labor");
@@ -1716,6 +1736,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment2.other("labor");
                                 } else {
                                     fragment2.mainint("replant", "", "", plot2Area, avgCost, age2, estPrd2,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                                    fragment2.mainint("replant", "", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
+                                    fragment2.other("labor");
+                                } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                                    fragment2.mainint("replant", "", "season", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
+                                    fragment2.other("labor");
+                                } else {
+                                    fragment2.mainint("replant", "", "", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
                                 }
                             }
 
@@ -1734,7 +1764,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if(sObject.getRECO2().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot2Age())<30 && sObject.getTreeHealth2().equals("G")&&sObject.getDebilitatingDisease2().equals("G")){
 
-                            if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
                                     fragment2.mainint("replant", "extra", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost, "t");
                                     fragment2.other("labor");
@@ -1744,7 +1774,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment2.mainint("replant", "extra", "", plot2Area, avgCost, age2, estPrd2,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot2CocoaTrees().contentEquals("3.5x4")||sObject.getPlot2CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
                                     fragment2.mainint("replant", "extra", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost, "f");
                                     fragment2.other("labor");
@@ -1753,6 +1783,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment2.other("labor");
                                 } else {
                                     fragment2.mainint("replant", "extra", "", plot2Area, avgCost, age2, estPrd2,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor2().equals("Yes")||sObject.getHireLabor2().equals("Oui") ) {
+                                    fragment2.mainint("replant", "extra", "labor", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
+                                    fragment2.other("labor");
+                                } else if (sObject.getHireLabor2().equals("Seasonal")||sObject.getHireLabor2().equals("Saisonnier") ) {
+                                    fragment2.mainint("replant", "extra", "season", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
+                                    fragment2.other("labor");
+                                } else {
+                                    fragment2.mainint("replant", "extra", "", plot2Area, avgCost, age2, estPrd2,farmerCost,"");
                                 }
                             }
 
@@ -1871,7 +1911,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption2().equals("Yes")||sObject.getFillingOption2().equals("Oui")) {
-                    if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot2CocoaTrees().contentEquals("2x2")||sObject.getPlot2CocoaTrees().contentEquals("2x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3")||sObject.getPlot2CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                         fragment2.other("thinning");
                     }else{
                         fragment2.other("filling");
@@ -1918,7 +1958,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot3Age())<30 && sObject.getTreeHealth3().equals("G")&&sObject.getDebilitatingDisease3().equals("G")){
 
-                            if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
                                     fragment3.mainint("replant", "", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost, "t");
                                     fragment3.other("labor");
@@ -1928,7 +1968,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment3.mainint("replant", "", "", plot3Area, avgCost, age3, estPrd3,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot3CocoaTrees().contentEquals("3.5x4")||sObject.getPlot3CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
                                     fragment3.mainint("replant", "", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost, "f");
                                     fragment3.other("labor");
@@ -1937,6 +1977,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment3.other("labor");
                                 } else {
                                     fragment3.mainint("replant", "", "", plot3Area, avgCost, age3, estPrd3,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                                    fragment3.mainint("replant", "", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
+                                    fragment3.other("labor");
+                                } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                                    fragment3.mainint("replant", "", "season", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
+                                    fragment3.other("labor");
+                                } else {
+                                    fragment3.mainint("replant", "", "", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
                                 }
                             }
 
@@ -1956,7 +2006,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if(sObject.getRECO3().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot3Age())<30 && sObject.getTreeHealth3().equals("G")&&sObject.getDebilitatingDisease3().equals("G")){
 
-                            if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
                                     fragment3.mainint("replant", "extra", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost, "t");
                                     fragment3.other("labor");
@@ -1966,7 +2016,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment3.mainint("replant", "extra", "", plot3Area, avgCost, age3, estPrd3,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot3CocoaTrees().contentEquals("3.5x4")||sObject.getPlot3CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
                                     fragment3.mainint("replant", "extra", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost, "f");
                                     fragment3.other("labor");
@@ -1976,8 +2026,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment3.mainint("replant", "extra", "", plot3Area, avgCost, age3, estPrd3,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
+                                    fragment3.mainint("replant", "extra", "labor", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
+                                    fragment3.other("labor");
+                                } else if (sObject.getHireLabor3().equals("Seasonal")||sObject.getHireLabor3().equals("Saisonnier") ) {
+                                    fragment3.mainint("replant", "extra", "season", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
+                                    fragment3.other("labor");
+                                } else {
+                                    fragment3.mainint("replant", "extra", "", plot3Area, avgCost, age3, estPrd3,farmerCost,"");
+                                }
                             }
-
 
                         }else{
                             if (sObject.getHireLabor3().equals("Yes")||sObject.getHireLabor3().equals("Oui") ) {
@@ -2095,7 +2154,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption3().equals("Yes")||sObject.getFillingOption3().equals("Oui")) {
-                    if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot3CocoaTrees().contentEquals("2x2")||sObject.getPlot3CocoaTrees().contentEquals("2x2.5")||sObject.getPlot3CocoaTrees().contentEquals("2x3")||sObject.getPlot3CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot2CocoaTrees().contentEquals("2x3.5")) {
                         fragment3.other("thinning");
                     }else{
                         fragment3.other("filling");
@@ -2141,7 +2200,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot4Age())<30 && sObject.getTreeHealth4().equals("G")&&sObject.getDebilitatingDisease4().equals("G")){
 
-                            if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
                                     fragment4.mainint("replant", "", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost, "t");
                                     fragment4.other("labor");
@@ -2151,7 +2210,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment4.mainint("replant", "", "", plot4Area, avgCost, age4, estPrd4,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot4CocoaTrees().contentEquals("3.5x4")||sObject.getPlot4CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
                                     fragment4.mainint("replant", "", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost, "f");
                                     fragment4.other("labor");
@@ -2161,8 +2220,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment4.mainint("replant", "", "", plot4Area, avgCost, age4, estPrd4,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                                    fragment4.mainint("replant", "", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                    fragment4.other("labor");
+                                } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                                    fragment4.mainint("replant", "", "season", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                    fragment4.other("labor");
+                                } else {
+                                    fragment4.mainint("replant", "", "", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                }
                             }
-
 
                         }else{
                             if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
@@ -2179,7 +2247,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if(sObject.getRECO4().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot4Age())<30 && sObject.getTreeHealth4().equals("G")&&sObject.getDebilitatingDisease4().equals("G")){
 
-                            if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
                                     fragment4.mainint("replant", "extra", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost, "t");
                                     fragment4.other("labor");
@@ -2189,7 +2257,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment4.mainint("replant", "extra", "", plot4Area, avgCost, age4, estPrd4,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot4CocoaTrees().contentEquals("3.5x4")||sObject.getPlot4CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
                                     fragment4.mainint("replant", "extra", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost, "f");
                                     fragment4.other("labor");
@@ -2199,8 +2267,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment4.mainint("replant", "extra", "", plot4Area, avgCost, age4, estPrd4,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
+                                    fragment4.mainint("replant", "extra", "labor", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                    fragment4.other("labor");
+                                } else if (sObject.getHireLabor4().equals("Seasonal")||sObject.getHireLabor4().equals("Saisonnier") ) {
+                                    fragment4.mainint("replant", "extra", "season", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                    fragment4.other("labor");
+                                } else {
+                                    fragment4.mainint("replant", "extra", "", plot4Area, avgCost, age4, estPrd4,farmerCost,"");
+                                }
                             }
-
 
                         }else{
                             if (sObject.getHireLabor4().equals("Yes")||sObject.getHireLabor4().equals("Oui") ) {
@@ -2316,7 +2393,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption4().equals("Yes")||sObject.getFillingOption4().equals("Oui")) {
-                    if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot4CocoaTrees().contentEquals("2x2")||sObject.getPlot4CocoaTrees().contentEquals("2x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3")||sObject.getPlot4CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot4CocoaTrees().contentEquals("2x3.5")) {
                         fragment4.other("thinning");
                     }else{
                         fragment4.other("filling");
@@ -2362,7 +2439,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot5Age())<30 && sObject.getTreeHealth5().equals("G")&&sObject.getDebilitatingDisease5().equals("G")){
 
-                            if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
                                     fragment5.mainint("replant", "", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost, "t");
                                     fragment5.other("labor");
@@ -2372,7 +2449,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment5.mainint("replant", "", "", plot5Area, avgCost, age5, estPrd5,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot5CocoaTrees().contentEquals("3.5x4")||sObject.getPlot5CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
                                     fragment5.mainint("replant", "", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost, "f");
                                     fragment5.other("labor");
@@ -2382,10 +2459,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment5.mainint("replant", "", "", plot5Area, avgCost, age5, estPrd5,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                                    fragment5.mainint("replant", "", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                    fragment5.other("labor");
+                                } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                                    fragment5.mainint("replant", "", "season", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                    fragment5.other("labor");
+                                } else {
+                                    fragment5.mainint("replant", "", "", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                }
                             }
-
-
-
                         }else{
                             if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
                                 fragment5.mainint("replant", "", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
@@ -2400,7 +2484,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if (sObject.getRECO5().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot5Age())<30 && sObject.getTreeHealth5().equals("G")&&sObject.getDebilitatingDisease5().equals("G")){
 
-                            if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
                                     fragment5.mainint("replant", "extra", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost, "t");
                                     fragment5.other("labor");
@@ -2410,7 +2494,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment5.mainint("replant", "extra", "", plot5Area, avgCost, age5, estPrd5,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot5CocoaTrees().contentEquals("3.5x4")||sObject.getPlot5CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
                                     fragment5.mainint("replant", "extra", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost, "f");
                                     fragment5.other("labor");
@@ -2420,8 +2504,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment5.mainint("replant", "extra", "", plot5Area, avgCost, age5, estPrd5,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
+                                    fragment5.mainint("replant", "extra", "labor", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                    fragment5.other("labor");
+                                } else if (sObject.getHireLabor5().equals("Seasonal")||sObject.getHireLabor5().equals("Saisonnier") ) {
+                                    fragment5.mainint("replant", "extra", "season", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                    fragment5.other("labor");
+                                } else {
+                                    fragment5.mainint("replant", "extra", "", plot5Area, avgCost, age5, estPrd5,farmerCost,"");
+                                }
                             }
-
 
                         }else{
                             if (sObject.getHireLabor5().equals("Yes")||sObject.getHireLabor5().equals("Oui") ) {
@@ -2537,7 +2630,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption5().equals("Yes")||sObject.getFillingOption5().equals("Oui")) {
-                    if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot5CocoaTrees().contentEquals("2x2")||sObject.getPlot5CocoaTrees().contentEquals("2x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3")||sObject.getPlot5CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot5CocoaTrees().contentEquals("2x3.5")) {
                         fragment5.other("thinning");
                     }else{
                         fragment5.other("filling");
@@ -2582,7 +2675,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot6Age())<30 && sObject.getTreeHealth6().equals("G")&&sObject.getDebilitatingDisease6().equals("G")){
 
-                            if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                     fragment6.mainint("replant", "", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost, "t");
                                     fragment6.other("labor");
@@ -2592,7 +2685,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment6.mainint("replant", "", "", plot6Area, avgCost, age6, estPrd6,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot6CocoaTrees().contentEquals("3.5x4")||sObject.getPlot6CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                     fragment6.mainint("replant", "", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost, "f");
                                     fragment6.other("labor");
@@ -2602,10 +2695,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment6.mainint("replant", "", "", plot6Area, avgCost, age6, estPrd6,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                                    fragment6.mainint("replant", "", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                    fragment6.other("labor");
+                                } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                                    fragment6.mainint("replant", "", "season", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                    fragment6.other("labor");
+                                } else {
+                                    fragment6.mainint("replant", "", "", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                }
                             }
-
-
-
+                            
                         }else{
                             if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                 fragment6.mainint("replant", "", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
@@ -2619,7 +2720,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         }
                     }else if (sObject.getRECO6().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot6Age())<30 && sObject.getTreeHealth6().equals("G")&&sObject.getDebilitatingDisease6().equals("G")){
-                            if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                     fragment6.mainint("replant", "extra", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost, "t");
                                     fragment6.other("labor");
@@ -2629,7 +2730,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment6.mainint("replant", "extra", "", plot6Area, avgCost, age6, estPrd6,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot6CocoaTrees().contentEquals("3.5x4")||sObject.getPlot6CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                     fragment6.mainint("replant", "extra", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost, "f");
                                     fragment6.other("labor");
@@ -2639,10 +2740,18 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment6.mainint("replant", "extra", "", plot6Area, avgCost, age6, estPrd6,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
+                                    fragment6.mainint("replant", "extra", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                    fragment6.other("labor");
+                                } else if (sObject.getHireLabor6().equals("Seasonal")||sObject.getHireLabor6().equals("Saisonnier") ) {
+                                    fragment6.mainint("replant", "extra", "season", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                    fragment6.other("labor");
+                                } else {
+                                    fragment6.mainint("replant", "extra", "", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
+                                }
                             }
-
-
-
+                            
                         }else{
                             if (sObject.getHireLabor6().equals("Yes")||sObject.getHireLabor6().equals("Oui") ) {
                                 fragment6.mainint("replant", "extra", "labor", plot6Area, avgCost, age6, estPrd6,farmerCost,"");
@@ -2757,7 +2866,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption6().equals("Yes")||sObject.getFillingOption6().equals("Oui")) {
-                    if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot6CocoaTrees().contentEquals("2x2")||sObject.getPlot6CocoaTrees().contentEquals("2x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3")||sObject.getPlot6CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot6CocoaTrees().contentEquals("2x3.5")) {
                         fragment6.other("thinning");
                     }else{
                         fragment6.other("filling");
@@ -2803,7 +2912,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot7Age())<30 && sObject.getTreeHealth7().equals("G")&&sObject.getDebilitatingDisease7().equals("G")){
 
-                            if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
                                     fragment7.mainint("replant", "", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost, "t");
                                     fragment7.other("labor");
@@ -2813,7 +2922,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment7.mainint("replant", "", "", plot7Area, avgCost, age7, estPrd7,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot7CocoaTrees().contentEquals("3.5x4")||sObject.getPlot7CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
                                     fragment7.mainint("replant", "", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost, "f");
                                     fragment7.other("labor");
@@ -2822,6 +2931,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment7.other("labor");
                                 } else {
                                     fragment7.mainint("replant", "", "", plot7Area, avgCost, age7, estPrd7,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                                    fragment7.mainint("replant", "", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
+                                    fragment7.other("labor");
+                                } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                                    fragment7.mainint("replant", "", "season", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
+                                    fragment7.other("labor");
+                                } else {
+                                    fragment7.mainint("replant", "", "", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
                                 }
                             }
 
@@ -2840,7 +2959,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if(sObject.getRECO7().equals("replanting+extra")) {
 
                         if (Double.parseDouble(sObject.getPlot7Age())<30 && sObject.getTreeHealth7().equals("G")&&sObject.getDebilitatingDisease7().equals("G")){
-                            if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
                                     fragment7.mainint("replant", "extra", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost, "t");
                                     fragment7.other("labor");
@@ -2850,7 +2969,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment7.mainint("replant", "extra", "", plot7Area, avgCost, age7, estPrd7,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot7CocoaTrees().contentEquals("3.5x4")||sObject.getPlot7CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
                                     fragment7.mainint("replant", "extra", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost, "f");
                                     fragment7.other("labor");
@@ -2859,6 +2978,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment7.other("labor");
                                 } else {
                                     fragment7.mainint("replant", "extra", "", plot7Area, avgCost, age7, estPrd7,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor7().equals("Yes")||sObject.getHireLabor7().equals("Oui") ) {
+                                    fragment7.mainint("replant", "extra", "labor", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
+                                    fragment7.other("labor");
+                                } else if (sObject.getHireLabor7().equals("Seasonal")||sObject.getHireLabor7().equals("Saisonnier") ) {
+                                    fragment7.mainint("replant", "extra", "season", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
+                                    fragment7.other("labor");
+                                } else {
+                                    fragment7.mainint("replant", "extra", "", plot7Area, avgCost, age7, estPrd7,farmerCost,"");
                                 }
                             }
                         }else{
@@ -2975,7 +3104,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption7().equals("Yes")||sObject.getFillingOption7().equals("Oui")) {
-                    if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot7CocoaTrees().contentEquals("2x2")||sObject.getPlot7CocoaTrees().contentEquals("2x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3")||sObject.getPlot7CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot7CocoaTrees().contentEquals("2x3.5")) {
                         fragment7.other("thinning");
                     }else{
                         fragment7.other("filling");
@@ -3019,7 +3148,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     if (sObject.getRECO8().equals("replanting")) {
                         //Replant
                         if (Double.parseDouble(sObject.getPlot8Age())<30 && sObject.getTreeHealth8().equals("G")&&sObject.getDebilitatingDisease8().equals("G")){
-                            if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
                                     fragment8.mainint("replant", "", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost, "t");
                                     fragment8.other("labor");
@@ -3029,7 +3158,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment8.mainint("replant", "", "", plot8Area, avgCost, age8, estPrd8,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot8CocoaTrees().contentEquals("3.5x4")||sObject.getPlot8CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
                                     fragment8.mainint("replant", "", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost, "f");
                                     fragment8.other("labor");
@@ -3038,6 +3167,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment8.other("labor");
                                 } else {
                                     fragment8.mainint("replant", "", "", plot8Area, avgCost, age8, estPrd8,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                                    fragment8.mainint("replant", "", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
+                                    fragment8.other("labor");
+                                } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                                    fragment8.mainint("replant", "", "season", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
+                                    fragment8.other("labor");
+                                } else {
+                                    fragment8.mainint("replant", "", "", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
                                 }
                             }
 
@@ -3055,7 +3194,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     }else if (sObject.getRECO8().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot8Age())<30 && sObject.getTreeHealth8().equals("G")&&sObject.getDebilitatingDisease8().equals("G")){
-                            if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
                                     fragment8.mainint("replant", "extra", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost, "t");
                                     fragment8.other("labor");
@@ -3065,7 +3204,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment8.mainint("replant", "extra", "", plot8Area, avgCost, age8, estPrd8,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot8CocoaTrees().contentEquals("3.5x4")||sObject.getPlot8CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
                                     fragment8.mainint("replant", "extra", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost, "f");
                                     fragment8.other("labor");
@@ -3075,8 +3214,17 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment8.mainint("replant", "extra", "", plot8Area, avgCost, age8, estPrd8,farmerCost, "f");
                                 }
+                            }else{
+                                if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
+                                    fragment8.mainint("replant", "extra", "labor", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
+                                    fragment8.other("labor");
+                                } else if (sObject.getHireLabor8().equals("Seasonal")||sObject.getHireLabor8().equals("Saisonnier") ) {
+                                    fragment8.mainint("replant", "extra", "season", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
+                                    fragment8.other("labor");
+                                } else {
+                                    fragment8.mainint("replant", "extra", "", plot8Area, avgCost, age8, estPrd8,farmerCost,"");
+                                }
                             }
-
 
                         }else{
                             if (sObject.getHireLabor8().equals("Yes")||sObject.getHireLabor8().equals("Oui") ) {
@@ -3192,7 +3340,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption8().equals("Yes")||sObject.getFillingOption8().equals("Oui")) {
-                    if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot8CocoaTrees().contentEquals("2x2")||sObject.getPlot8CocoaTrees().contentEquals("2x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3")||sObject.getPlot8CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot8CocoaTrees().contentEquals("2x3.5")) {
                         fragment8.other("thinning");
                     }else{
                         fragment8.other("filling");
@@ -3238,7 +3386,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot9Age())<30 && sObject.getTreeHealth9().equals("G")&&sObject.getDebilitatingDisease9().equals("G")){
 
-                            if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
                                     fragment9.mainint("replant", "", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost, "t");
                                     fragment9.other("labor");
@@ -3248,7 +3396,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment9.mainint("replant", "", "", plot9Area, avgCost, age9, estPrd9,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot9CocoaTrees().contentEquals("3.5x4")||sObject.getPlot9CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
                                     fragment9.mainint("replant", "", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost, "f");
                                     fragment9.other("labor");
@@ -3257,6 +3405,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment9.other("labor");
                                 } else {
                                     fragment9.mainint("replant", "", "", plot9Area, avgCost, age9, estPrd9,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                                    fragment9.mainint("replant", "", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
+                                    fragment9.other("labor");
+                                } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                                    fragment9.mainint("replant", "", "season", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
+                                    fragment9.other("labor");
+                                } else {
+                                    fragment9.mainint("replant", "", "", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
                                 }
                             }
 
@@ -3274,7 +3432,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
 
                     }else if(sObject.getRECO9().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot9Age())<30 && sObject.getTreeHealth9().equals("G")&&sObject.getDebilitatingDisease9().equals("G")){
-                            if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
                                     fragment9.mainint("replant", "extra", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost, "t");
                                     fragment9.other("labor");
@@ -3284,7 +3442,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment9.mainint("replant", "extra", "", plot9Area, avgCost, age9, estPrd9,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot9CocoaTrees().contentEquals("3.5x4")||sObject.getPlot9CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
                                     fragment9.mainint("replant", "extra", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost, "f");
                                     fragment9.other("labor");
@@ -3293,6 +3451,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment9.other("labor");
                                 } else {
                                     fragment9.mainint("replant", "extra", "", plot9Area, avgCost, age9, estPrd9,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor9().equals("Yes")||sObject.getHireLabor9().equals("Oui") ) {
+                                    fragment9.mainint("replant", "extra", "labor", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
+                                    fragment9.other("labor");
+                                } else if (sObject.getHireLabor9().equals("Seasonal")||sObject.getHireLabor9().equals("Saisonnier") ) {
+                                    fragment9.mainint("replant", "extra", "season", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
+                                    fragment9.other("labor");
+                                } else {
+                                    fragment9.mainint("replant", "extra", "", plot9Area, avgCost, age9, estPrd9,farmerCost,"");
                                 }
                             }
 
@@ -3410,7 +3578,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption9().equals("Yes")||sObject.getFillingOption9().equals("Oui")) {
-                    if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot9CocoaTrees().contentEquals("2x2")||sObject.getPlot9CocoaTrees().contentEquals("2x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3")||sObject.getPlot9CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot9CocoaTrees().contentEquals("2x3.5")) {
                         fragment9.other("thinning");
                     }else{
                         fragment9.other("filling");
@@ -3455,7 +3623,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                         //Replant
                         if (Double.parseDouble(sObject.getPlot10Age())<30 && sObject.getTreeHealth10().equals("G")&&sObject.getDebilitatingDisease10().equals("G")){
 
-                            if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
                                     fragment10.mainint("replant", "", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost, "t");
                                     fragment10.other("labor");
@@ -3465,7 +3633,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment10.mainint("replant", "", "", plot10Area, avgCost, age10, estPrd10,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot10CocoaTrees().contentEquals("3.5x4")||sObject.getPlot10CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
                                     fragment10.mainint("replant", "", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost, "f");
                                     fragment10.other("labor");
@@ -3474,6 +3642,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment10.other("labor");
                                 } else {
                                     fragment10.mainint("replant", "", "", plot10Area, avgCost, age10, estPrd10,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                                    fragment10.mainint("replant", "", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
+                                    fragment10.other("labor");
+                                } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                                    fragment10.mainint("replant", "", "season", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
+                                    fragment10.other("labor");
+                                } else {
+                                    fragment10.mainint("replant", "", "", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
                                 }
                             }
 
@@ -3492,7 +3670,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                     }else if (sObject.getRECO10().equals("replanting+extra")) {
                         if (Double.parseDouble(sObject.getPlot10Age())<30 && sObject.getTreeHealth10().equals("G")&&sObject.getDebilitatingDisease10().equals("G")){
 
-                            if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")) {
+                            if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3.5")) {
                                 if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
                                     fragment10.mainint("replant", "extra", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost, "t");
                                     fragment10.other("labor");
@@ -3502,7 +3680,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                 } else {
                                     fragment10.mainint("replant", "extra", "", plot10Area, avgCost, age10, estPrd10,farmerCost, "t");
                                 }
-                            }else{
+                            }else if(sObject.getPlot10CocoaTrees().contentEquals("3.5x4")||sObject.getPlot10CocoaTrees().contentEquals("4x4")){
                                 if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
                                     fragment10.mainint("replant", "extra", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost, "f");
                                     fragment10.other("labor");
@@ -3511,6 +3689,16 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                                     fragment10.other("labor");
                                 } else {
                                     fragment10.mainint("replant", "extra", "", plot10Area, avgCost, age10, estPrd10,farmerCost, "f");
+                                }
+                            }else{
+                                if (sObject.getHireLabor10().equals("Yes")||sObject.getHireLabor10().equals("Oui") ) {
+                                    fragment10.mainint("replant", "extra", "labor", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
+                                    fragment10.other("labor");
+                                } else if (sObject.getHireLabor10().equals("Seasonal")||sObject.getHireLabor10().equals("Saisonnier") ) {
+                                    fragment10.mainint("replant", "extra", "season", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
+                                    fragment10.other("labor");
+                                } else {
+                                    fragment10.mainint("replant", "extra", "", plot10Area, avgCost, age10, estPrd10,farmerCost,"");
                                 }
                             }
 
@@ -3628,7 +3816,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
                 }
 
                 if (sObject.getFillingOption10().equals("Yes")||sObject.getFillingOption10().equals("Oui")) {
-                    if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")) {
+                    if (sObject.getPlot10CocoaTrees().contentEquals("2x2")||sObject.getPlot10CocoaTrees().contentEquals("2x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3")||sObject.getPlot10CocoaTrees().contentEquals("2.5x2.5")||sObject.getPlot10CocoaTrees().contentEquals("2x3.5")) {
                         fragment10.other("thinning");
                     }else{
                         fragment10.other("filling");
