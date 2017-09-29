@@ -267,6 +267,7 @@
     <string name="yearsRelationshipWithMars">10. Depuis quelle année le planteur travaille avec ou vends son cacao a la societé?</string>
     <string name="yes">Oui</string>
     <string name="qqClarify">*Qq = 100kg</string>
+    <string name="acClarify">*ha = 2.47105 ac</string>
 
     <string-array name = "creditOften">
         <item>Mensuel</item>
