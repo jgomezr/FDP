@@ -1361,6 +1361,13 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/area_Field"
                             android:entries="@array/area1"/>
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/acClarify"
+                            android:textSize="12dp"/>
 
                     </LinearLayout>
 

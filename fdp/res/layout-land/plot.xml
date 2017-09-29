@@ -28,7 +28,7 @@
                         android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/plotGPS"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -37,7 +37,7 @@
                     <TextView
                         android:id="@+id/q41"
                         android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/plotArea"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -46,42 +46,42 @@
                     <TextView
                         android:id="@+id/q42"
                         android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/estimatedProduction"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/ph"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="40dp"
+                        android:layout_height="45dp"
                         android:text="@string/renovated"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/reason"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="40dp"
+                        android:layout_height="45dp"
                         android:text="@string/howLong"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_vertical"
                         android:text="@string/ao"
                         android:textAlignment="center"
@@ -92,98 +92,98 @@
                         android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/plantingMaterial"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="40dp"
+                        android:layout_height="45dp"
                         android:text="@string/cocoaTrees"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/plotAge"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/treeHealth"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/debilitationDisease"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/pruning"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/pestDiseaseSanitation"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/weeding"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/harvesting"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/shadeManagement"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/soilCondition"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/organicMatter"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/fertilizerFormulation"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/fertilizerApplication"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -191,7 +191,7 @@
 
 
                     <TextView android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_vertical"
                         android:text="@string/additionalIntervention"
                         android:textAlignment="center"
@@ -202,28 +202,28 @@
                         android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/limeNeed"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/drainageNeed"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="40dp"
+                        android:layout_height="45dp"
                         android:text="@string/fillingOption"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/plotHireLabor"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
@@ -241,35 +241,35 @@
                         android:background="@color/ptn1" />
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/geneticLb"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/farmCondition"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/gapLb"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:text="@string/soilFertMngLb"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>
 
                     <TextView android:layout_width="300dp"
-                        android:layout_height="35dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="16dp"/>

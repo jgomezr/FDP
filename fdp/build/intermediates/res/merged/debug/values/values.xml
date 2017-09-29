@@ -2379,7 +2379,7 @@
     <string name="netFarming">Total farming income:</string>
     <string name="netOther">Net income from all other sources:</string>
     <string name="netOtherCrops">Net income from Other Crops:</string>
-    <string name="netPlotIncome">Net income from Cocoa:</string>
+    <string name="netPlotIncome">Gross income from Cocoa:</string>
     <string name="no_results_found">No results found</string>
     <string name="nov">November</string>
     <string name="numberChildren">12. Total number of children:</string>
@@ -2502,7 +2502,7 @@
     <string name="pt8">PLOT 8</string>
     <string name="pt9">PLOT 9</string>
     <string name="qq">(Qq):</string>
-    <string name="qqClarify">*bag = 100kg</string>
+    <string name="qqClarify">*Qq = 100kg</string>
     <string name="reason">Reason for renovation:</string>
     <string name="reasonNotAgree">Comments:</string>
     <string name="receivesFarmPayment">17. Does any member of the HH from earn income for any work, including farming?</string>

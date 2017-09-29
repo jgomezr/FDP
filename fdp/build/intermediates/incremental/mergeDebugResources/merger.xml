@@ -142,7 +142,7 @@
         <item>Community Savings</item>
         <item>Microcredit Organization</item>
         <item>Bank</item>
-	</string-array><string name="p3">200% dose organic fertilizer</string><string name="p2">150% dose fertilizer</string><string name="netPlotIncome">Net income from Cocoa:</string><string name="p56">Planting of shade trees</string><string name="p55">Build shelter for cocoa trees</string><string name="p54">Planting cocoa trees with special fertilizer</string><string name="p53">Planting cocoa trees</string><string name="spouseBirthday">C3. Spouse date of birth (year):</string><string name="p59">Pruning knife</string><string name="p58">Pruning back or pollarding mother trees</string><string name="amountOfLoan">C15. How much does the lender have to pay back?</string><string name="grossCocoaLY">31. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string><string name="p57">Pruning</string><string name="lime">Lime</string><string name="saved">Save successful!</string><string name="wantAccount">C19. Want a bank account?</string><string name="mar">March</string><string name="may">May</string><string name="logout_title">Log out?</string><string name="sourceCredit">C12. Where did you get the loan?</string><string-array name="creditOftenQuarter">
+	</string-array><string name="p3">200% dose organic fertilizer</string><string name="p2">150% dose fertilizer</string><string name="netPlotIncome">Gross income from Cocoa:</string><string name="p56">Planting of shade trees</string><string name="p55">Build shelter for cocoa trees</string><string name="p54">Planting cocoa trees with special fertilizer</string><string name="p53">Planting cocoa trees</string><string name="spouseBirthday">C3. Spouse date of birth (year):</string><string name="p59">Pruning knife</string><string name="p58">Pruning back or pollarding mother trees</string><string name="amountOfLoan">C15. How much does the lender have to pay back?</string><string name="grossCocoaLY">31. How much income did you earn from cocoa in the past year (year means past two seasons, mid and main crop)?</string><string name="p57">Pruning</string><string name="lime">Lime</string><string name="saved">Save successful!</string><string name="wantAccount">C19. Want a bank account?</string><string name="mar">March</string><string name="may">May</string><string name="logout_title">Log out?</string><string name="sourceCredit">C12. Where did you get the loan?</string><string-array name="creditOftenQuarter">
 		<item>Quarterly</item>
 		<item>Monthly</item>
 		<item>Bi annually</item>
@@ -679,7 +679,7 @@
         <item>3x4</item>
         <item>3.5x4</item>
         <item>4x4</item>
-    </string-array><string name="qqClarify">*bag = 100kg</string><string name="weight">Weight</string><string name="farmer_code">2. Farmer or farm code:</string><string-array name="sourceLoanFriend">
+    </string-array><string name="qqClarify">*Qq = 100kg</string><string name="weight">Weight</string><string name="farmer_code">2. Farmer or farm code:</string><string-array name="sourceLoanFriend">
 		<item>Friends</item>
 		<item>Family</item>
 		<item>Community Savings</item>
