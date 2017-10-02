@@ -751,6 +751,7 @@
         <item>Saisonnier</item>
         <item>Non</item>
     </string-array>
+    <string name="acClarify">*ha = 2.47105 ac</string>
     <string name="accountType">C17. Quel type de compte?</string>
     <string name="action_add">Ajouter planteur</string>
     <string name="action_refresh">Synchroniser</string>
