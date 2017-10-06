@@ -114,7 +114,7 @@
     <string name="p1">(re) planter des arbres d\'ombrage</string>
     <string name="p2">Dose de 150% d\'engrais chimique</string>
     <string name="p3">Dose de 200%  d\'engrais organique</string>
-    <string name="p4">" Dose de 300%  d'engrais organique"</string>
+    <string name="p4">Dose de 300%  d\'engrais organique</string>
     <string name="p5">engrais chimique</string>
     <string name="p6">Construire des abris pour les cacaoyers</string>
     <string name="p7">Achat de bourgeons</string>
@@ -132,7 +132,7 @@
     <string name="p19">Préparer les trous pour planter les cacaoyers et planter les arbres d\'ombrage</string>
     <string name="p20">Drainage (si nécessaire)</string>
     <string name="p21">Engrais chimique</string>
-    <string name="p22">" Engrais organique et chimique"</string>
+    <string name="p22">Engrais organique et chimique</string>
     <string name="p23">Avec dose complète  d\'engrais organique</string>
     <string name="p24">Gestion recommandée de maladies et parasites</string>
     <string name="p25">BPA</string>
@@ -156,7 +156,7 @@
     <string name="p43">BPA modestes avec gestion entière des maladies et parasites</string>
     <string name="p44">Élagage d\'entretien allégé (simple)</string>
     <string name="p45">Rien</string>
-    <string name="p46">"Dose de 150% d'engrais "</string>
+    <string name="p46">Dose de 150% d\'engrais</string>
     <string name="p47">Engrais organique</string>
     <string name="p48">BPA seulement aux maladies et parasites</string>
     <string name="p49">BPA  spécifiques sur les jeunes plants</string>
@@ -185,7 +185,7 @@
     <string name="p72">Retirer le plastique de toutes les greffes</string>
     <string name="p73">Retirer le plastique de toutes les greffes</string>
     <string name="p74">Désengorgement</string>
-    <string name="p75">"Élagage architectural (topping) "</string>
+    <string name="p75">Élagage architectural (topping)</string>
     <string name="p76">Élagage architectural des greffes (topping) et élagage d\'entretien</string>
     <string name="p77">BPA très légères</string>
     <string name="p78">Désherbage</string>
