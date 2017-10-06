@@ -203,7 +203,7 @@ public class plotFragment extends Fragment  {
                 setText(reco,"replanting");
             }
 
-        } else if ((fcondP.getText().toString().equals("G") && (geneticP.getText().toString().equals("B")||geneticP.getText().toString().equals("M"))) || ((Integer.parseInt(ageP.getText().toString()) > 25) && (Integer.parseInt(ageP.getText().toString()) < 31))) {
+        } else if ((fcondP.getText().toString().equals("G") && (geneticP.getText().toString().equals("B")||geneticP.getText().toString().equals("M"))) || ((Integer.parseInt(ageP.getText().toString()) > 20) && (Integer.parseInt(ageP.getText().toString()) < 31))) {
             //Graft
             if (soilFertMng.getText().toString().equals("B")||soilFertMng.getText().toString().equals("M")) {
                 setText(reco,"grafting+extra");

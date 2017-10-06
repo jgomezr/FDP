@@ -357,7 +357,7 @@
         <item>Micro finance</item>
         <item>Village loan</item>
         <item>Other</item>
-    </string-array><string name="ha">(Ha):</string><string name="totalIncomeLabor">C7. Apart from farming cocoa and other crops, how much income does the farmer earn from other sources in a year?</string><string name="netOther">Net income from all other sources:</string><string name="apr">April</string><string-array name="sourceLoanCommunity">
+    </string-array><string name="ha">(Ha):</string><string name="totalIncomeLabor">C7. Apart from farming cocoa and other crops, how much income does the farmer earn from other sources in a year?</string><string name="acClarify">*ha = 2.47105 ac</string><string name="netOther">Net income from all other sources:</string><string name="apr">April</string><string-array name="sourceLoanCommunity">
 		<item>Community Savings</item>
 		<item>Family</item>
 		<item>Friends</item>

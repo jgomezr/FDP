@@ -124,7 +124,7 @@ public class fdpActivity  extends SalesforceActivity implements LoaderManager.Lo
         labor16 =(TextView) fragment1.getView().findViewById(R.id.laborY6P);
         labor17 =(TextView) fragment1.getView().findViewById(R.id.laborY7P);
 
-        income20 =(TextView) fragment2.getView().findViewById(R.id.incomeY2P);
+        income20 =(TextView) fragment2.getView().findViewById(R.id.incomeY0P);
         income21 =(TextView) fragment2.getView().findViewById(R.id.incomeY1P);
         income22 =(TextView) fragment2.getView().findViewById(R.id.incomeY2P);
         income23 =(TextView) fragment2.getView().findViewById(R.id.incomeY3P);

@@ -2232,6 +2232,7 @@
     <integer name="tooltip_default_arrow_alignment">3</integer>
     <integer name="tooltip_default_arrow_location">1</integer>
     <string name="ac">(Ac):</string>
+    <string name="acClarify">*ha = 2.47105 ac</string>
     <string name="accountType">C17. Account type</string>
     <string name="account_type" translatable="false">org.grameenfoundation.fdpwaf.login</string>
     <string name="action_add">Add Farmer</string>
