@@ -1,0 +1,70 @@
+[
+    {
+        "outputFile": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 12,
+                    "endColumn": 12,
+                    "endOffset": 594
+                },
+                "from": {
+                    "file": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/values-v19/styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 595
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 599,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1925
+                },
+                "from": {
+                    "file": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/values-v19/styles.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 602,
+                        "endLine": 36,
+                        "endColumn": 12,
+                        "endOffset": 1928
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1930,
+                    "endLine": 40,
+                    "endColumn": 12,
+                    "endOffset": 2162
+                },
+                "from": {
+                    "file": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/values-v19/styles.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1935,
+                        "endLine": 45,
+                        "endColumn": 12,
+                        "endOffset": 2167
+                    }
+                }
+            }
+        ]
+    }
+]

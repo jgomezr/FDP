@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/dashboard_menu.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/menu/dashboard_menu.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/activity_bottom_navigation.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/menu/activity_bottom_navigation.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/sf__login.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/menu/sf__login.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/sf__clear_custom_url.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/menu/sf__clear_custom_url.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/farmer_details.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/menu/farmer_details.xml"
+    }
+]

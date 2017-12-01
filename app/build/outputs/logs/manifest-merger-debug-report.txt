@@ -1,0 +1,535 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-93:12
+	package
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:4:2-27
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:11-69
+	android:versionCode
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+	android:installLocation
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:5:2-40
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:10:2-75
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:10:19-73
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:11:2-77
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:11:19-75
+uses-permission#android.permission.CAMERA
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:2-61
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:19-59
+uses-permission#android.permission.INTERNET
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:2-63
+MERGED from [FDP.libs:SalesforceAnalytics:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.android/build-cache/4457233f6712ec5131df33ea539e88077f78f9e9/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.android/build-cache/ec0a2151c6643a60dfbd3bd73ff4add7c1dc8d2b/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/aangjnr/.android/build-cache/00652b5d916e54e8a9532c382b7b9ca2f9c9f27a/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:19-61
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:2-75
+MERGED from [FDP.libs:SalesforceAnalytics:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/aangjnr/.android/build-cache/00652b5d916e54e8a9532c382b7b9ca2f9c9f27a/output/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:19-73
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:2-94
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:19-92
+uses-permission#com.grameen.fdp.C2D_MESSAGE
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:2-64
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:19-61
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:2-67
+MERGED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:12:5-71
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:19-65
+uses-permission#android.permission.MANAGE_ACCOUNTS
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:2-70
+MERGED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:13:5-74
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:19-68
+uses-feature#0x00020000
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:22:2-24:28
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/aangjnr/.android/build-cache/00652b5d916e54e8a9532c382b7b9ca2f9c9f27a/output/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:23:3-35
+	android:required
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:24:3-26
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:26:2-28:44
+	android:value
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:28:3-42
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:27:3-48
+application
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:35:2-83:16
+MERGED from [FDP.libs:SmartSync:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/bundles/default/AndroidManifest.xml:11:5-20
+MERGED from [FDP.libs:SmartStore:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/AndroidManifest.xml:11:5-15:19
+MERGED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:21:5-115:19
+MERGED from [FDP.libs:SalesforceAnalytics:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/AndroidManifest.xml:14:5-20
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.android/build-cache/4457233f6712ec5131df33ea539e88077f78f9e9/output/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.android/build-cache/ec0a2151c6643a60dfbd3bd73ff4add7c1dc8d2b/output/AndroidManifest.xml:23:5-19
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.android/build-cache/ff5c62702e731a613d13054e270aee7775a68509/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.android/build-cache/5e0730b92df49ea5b691fd03e30b3f558e02c23a/output/AndroidManifest.xml:22:5-26:19
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.android/build-cache/2137ab56545954230357762b3ee38bed192601dc/output/AndroidManifest.xml:23:5-25:38
+MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.android/build-cache/961f85d7ae88aa61b37596585fe5f46bc963eb10/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/d9cab536eca946bb3082bbe7e16e3e0a5978ea4a/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/ef3a34f12cb20100c90924787bc9ea4316c830da/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.android/build-cache/832715fe883ba7b79170ed85b8f68c1819d8ea7c/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.android/build-cache/93c5e9f12d10982fcd732056a27bd9c1fd7b0869/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/aangjnr/.android/build-cache/00652b5d916e54e8a9532c382b7b9ca2f9c9f27a/output/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.1] /Users/aangjnr/.android/build-cache/5592ec65a39d73d63418065bb667e5c0f6aba6bf/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.android/build-cache/4416d357dc75eff084318d7e1092174f1d2e7211/output/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-core:11.0.1] /Users/aangjnr/.android/build-cache/6d30e9b6aeb85e4ac607cde8f1b0bcb5d134f8dd/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/aangjnr/.android/build-cache/f6df033ddcfed9d8d92cf1f1d49df337d654f03f/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/aangjnr/.android/build-cache/e51cab3c581537479fbd07ae9def0a4f662b29ee/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.android/build-cache/88704192c3bf7b972e92ae4c2a0c3ccedd93ad3f/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.android/build-cache/84a3b3e0c4b82001e75e7cb3ecbac05341ad7588/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.android/build-cache/df367ee2a81db8d99f7798719bdf01863a413e78/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.android/build-cache/626af9ad8601db7585e7a495b73d8e2a8f357608/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/AndroidManifest.xml:25:5-29:19
+	android:label
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:38:3-35
+	android:supportsRtl
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:41:3-29
+	android:manageSpaceActivity
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:43:3-81
+	android:roundIcon
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:40:3-48
+	android:allowBackup
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:36:3-29
+	android:icon
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:37:3-37
+	android:theme
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:42:3-34
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:39:3-45
+activity#com.grameen.fdp.MainActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:48:3-50:64
+	android:label
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:49:7-39
+	android:theme
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:50:4-62
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:48:13-41
+activity#com.grameen.fdp.activity.SplashActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:54:3-62:14
+	android:theme
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:56:4-35
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:55:4-43
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:57:4-61:20
+action#android.intent.action.MAIN
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:58:5-56
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:58:13-54
+category#android.intent.category.LAUNCHER
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:60:5-64
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:60:15-62
+activity#com.grameen.fdp.activity.BaseActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:3-52
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:13-50
+activity#com.grameen.fdp.activity.MainActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:65:3-66:46
+	android:screenOrientation
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:66:7-43
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:65:13-50
+activity#com.grameen.fdp.activity.FarmerDetailsActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:67:3-61
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:67:13-59
+activity#com.grameen.fdp.activity.EditFarmerDetailsActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:3-65
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:13-63
+activity#com.grameen.fdp.activity.PlotDetailsActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:69:3-59
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:69:13-57
+activity#com.grameen.fdp.activity.AddNewPlotActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:3-58
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:13-56
+activity#com.grameen.fdp.activity.MapActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:3-51
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:13-49
+activity#com.grameen.fdp.activity.LoginActivity
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:3-53
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:13-51
+provider#br.com.mauker.materialsearchview.db.HistoryProvider
+ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:77:3-82:29
+	android:authorities
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:79:4-80
+	android:protectionLevel
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:4-39
+	android:syncable
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:4-27
+	android:exported
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:4-28
+	android:name
+		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:78:4-70
+uses-sdk
+INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [FDP.libs:SmartSync:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [FDP.libs:SmartStore:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [FDP.libs:SalesforceAnalytics:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.android/build-cache/4457233f6712ec5131df33ea539e88077f78f9e9/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.android/build-cache/ec0a2151c6643a60dfbd3bd73ff4add7c1dc8d2b/output/AndroidManifest.xml:17:5-43
+MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.android/build-cache/92d7728ff40bfbd77a628484c8e6613ac1b5b519/output/AndroidManifest.xml:3:3-40
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.android/build-cache/ff5c62702e731a613d13054e270aee7775a68509/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/AndroidManifest.xml:20:5-44
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.android/build-cache/5e0730b92df49ea5b691fd03e30b3f558e02c23a/output/AndroidManifest.xml:20:5-44
+MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.android/build-cache/09c2742ed33247584081624c6d29e15ac65c1dba/output/AndroidManifest.xml:6:5-8:41
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.android/build-cache/2137ab56545954230357762b3ee38bed192601dc/output/AndroidManifest.xml:19:5-21:41
+MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.android/build-cache/961f85d7ae88aa61b37596585fe5f46bc963eb10/output/AndroidManifest.xml:20:5-44
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/d9cab536eca946bb3082bbe7e16e3e0a5978ea4a/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/ef3a34f12cb20100c90924787bc9ea4316c830da/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.android/build-cache/832715fe883ba7b79170ed85b8f68c1819d8ea7c/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.android/build-cache/93c5e9f12d10982fcd732056a27bd9c1fd7b0869/output/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:11.0.1] /Users/aangjnr/.android/build-cache/00652b5d916e54e8a9532c382b7b9ca2f9c9f27a/output/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.1] /Users/aangjnr/.android/build-cache/5592ec65a39d73d63418065bb667e5c0f6aba6bf/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:17:5-43
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.android/build-cache/4416d357dc75eff084318d7e1092174f1d2e7211/output/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-core:11.0.1] /Users/aangjnr/.android/build-cache/6d30e9b6aeb85e4ac607cde8f1b0bcb5d134f8dd/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.1] /Users/aangjnr/.android/build-cache/f6df033ddcfed9d8d92cf1f1d49df337d654f03f/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.1] /Users/aangjnr/.android/build-cache/e51cab3c581537479fbd07ae9def0a4f662b29ee/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.android/build-cache/88704192c3bf7b972e92ae4c2a0c3ccedd93ad3f/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.android/build-cache/84a3b3e0c4b82001e75e7cb3ecbac05341ad7588/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.android/build-cache/df367ee2a81db8d99f7798719bdf01863a413e78/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.android/build-cache/626af9ad8601db7585e7a495b73d8e2a8f357608/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.1] /Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
+ADDED from [FDP.libs:SmartStore:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/AndroidManifest.xml:14:9-104
+	android:name
+		ADDED from [FDP.libs:SmartStore:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/AndroidManifest.xml:14:19-101
+uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:11:22-77
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:14:5-74
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:14:22-71
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:15:5-68
+MERGED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:15:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:16:5-82
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.android/build-cache/4457233f6712ec5131df33ea539e88077f78f9e9/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.android/build-cache/ec0a2151c6643a60dfbd3bd73ff4add7c1dc8d2b/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:16:22-79
+uses-permission-sdk-23
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:19:29-78
+meta-data#android.content.APP_RESTRICTIONS
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:24:9-26:56
+	android:resource
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:26:13-53
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:25:13-60
+service#com.salesforce.androidsdk.auth.AuthenticatorService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:29:9-39:19
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:30:13-79
+intent-filter#android.accounts.AccountAuthenticator
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:32:13-34:29
+action#android.accounts.AccountAuthenticator
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:33:17-80
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:33:25-77
+meta-data#android.accounts.AccountAuthenticator
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:36:13-38:57
+	android:resource
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:38:17-54
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:37:17-69
+activity#com.salesforce.androidsdk.ui.LoginActivity
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:42:9-44:67
+	android:theme
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:44:13-64
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:43:13-70
+activity#com.salesforce.androidsdk.ui.PasscodeActivity
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:47:9-50:67
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:49:13-37
+	android:theme
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:50:13-64
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:48:13-73
+activity#com.salesforce.androidsdk.ui.ManageSpaceActivity
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:53:9-56:67
+	android:excludeFromRecents
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:55:13-46
+	android:theme
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:56:13-64
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:54:13-76
+activity#com.salesforce.androidsdk.ui.ServerPickerActivity
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:59:9-62:67
+	android:excludeFromRecents
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:61:13-46
+	android:theme
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:62:13-64
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:60:13-77
+activity#com.salesforce.androidsdk.ui.AccountSwitcherActivity
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:65:9-68:67
+	android:excludeFromRecents
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:67:13-46
+	android:theme
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:68:13-64
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:66:13-80
+receiver#com.google.android.gms.gcm.GcmReceiver
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:75:9-84:20
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:77:13-36
+	android:permission
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:78:13-73
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:76:13-66
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:79:13-83:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:80:17-81
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:80:25-78
+category#${applicationId}
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:82:17-61
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:82:27-58
+service#com.salesforce.androidsdk.push.SFDCGcmListenerService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:86:9-92:19
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:88:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:87:13-81
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:89:13-91:29
+service#com.salesforce.androidsdk.push.SFDCInstanceIDListenerService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:93:9-99:19
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:95:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:94:13-88
+intent-filter#com.google.android.gms.iid.InstanceID
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:96:13-98:29
+action#com.google.android.gms.iid.InstanceID
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:97:17-80
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:97:25-77
+service#com.salesforce.androidsdk.push.SFDCRegistrationIntentService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:100:9-103:19
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:102:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:101:13-88
+receiver#com.salesforce.androidsdk.push.PushService$SFDCRegistrationRetryAlarmReceiver
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:105:9-107:40
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:107:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:106:13-105
+service#com.salesforce.androidsdk.push.PushService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:109:9-111:40
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:111:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:110:13-70
+service#com.salesforce.androidsdk.analytics.AnalyticsPublisherService
+ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:112:9-114:40
+	android:exported
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:114:13-37
+	android:name
+		ADDED from [FDP.libs:SalesforceSDK:unspecified] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/AndroidManifest.xml:113:13-89
+meta-data#android.support.VERSION
+ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.android/build-cache/5e0730b92df49ea5b691fd03e30b3f558e02c23a/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.android/build-cache/961f85d7ae88aa61b37596585fe5f46bc963eb10/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/d9cab536eca946bb3082bbe7e16e3e0a5978ea4a/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.android/build-cache/ef3a34f12cb20100c90924787bc9ea4316c830da/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.android/build-cache/832715fe883ba7b79170ed85b8f68c1819d8ea7c/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.android/build-cache/93c5e9f12d10982fcd732056a27bd9c1fd7b0869/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.android/build-cache/88704192c3bf7b972e92ae4c2a0c3ccedd93ad3f/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.android/build-cache/84a3b3e0c4b82001e75e7cb3ecbac05341ad7588/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.android/build-cache/df367ee2a81db8d99f7798719bdf01863a413e78/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.android/build-cache/626af9ad8601db7585e7a495b73d8e2a8f357608/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/AndroidManifest.xml:25:13-35
+	android:name
+		ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/AndroidManifest.xml:24:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.1] /Users/aangjnr/.android/build-cache/417efd936bda81d6393705207bd5a2da6e362712/output/AndroidManifest.xml:19:19-85
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.1] /Users/aangjnr/.android/build-cache/a6d29495930ec5ce9e73e1a8dd71c20b439b59bd/output/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.1] /Users/aangjnr/.android/build-cache/be0687e9b627043056203491a50f080410563100/output/AndroidManifest.xml:33:16-90
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:30:19-84
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:43:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:44:13-46:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:44:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:45:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.1] /Users/aangjnr/.android/build-cache/dbd3dfd4313908c5735572d2c5ff7a76d0d86715/output/AndroidManifest.xml:45:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.0.1] /Users/aangjnr/.android/build-cache/4cee943f333202af1c16211e1e33de19dba7c3ed/output/AndroidManifest.xml:6:79-143
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.0.1] /Users/aangjnr/.android/build-cache/e51cab3c581537479fbd07ae9def0a4f662b29ee/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.0.1] /Users/aangjnr/.android/build-cache/e51cab3c581537479fbd07ae9def0a4f662b29ee/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.0.1] /Users/aangjnr/.android/build-cache/e51cab3c581537479fbd07ae9def0a4f662b29ee/output/AndroidManifest.xml:20:20-65

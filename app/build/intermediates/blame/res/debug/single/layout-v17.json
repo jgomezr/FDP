@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout-v17/preference_information_material.xml",
+        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout-v17/preference_information_material.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout-v17/preference_dropdown_material.xml",
+        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout-v17/preference_dropdown_material.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout-v17/preference_category_material.xml",
+        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout-v17/preference_category_material.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout-v17/preference_material.xml",
+        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout-v17/preference_material.xml"
+    }
+]

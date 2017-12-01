@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ms__menu_down.png",
+        "source": "/Users/aangjnr/.android/build-cache/09c2742ed33247584081624c6d29e15ac65c1dba/output/res/drawable-ldpi-v4/ms__menu_down.png"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/sf__icon.png",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-ldpi-v4/sf__icon.png"
+    }
+]

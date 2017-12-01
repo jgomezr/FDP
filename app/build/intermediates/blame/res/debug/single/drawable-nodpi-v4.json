@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/border_button_background_green.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/drawable-nodpi/border_button_background_green.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/circle_border_accent.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/drawable-nodpi/circle_border_accent.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/qr.jpeg",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/drawable-nodpi/qr.jpeg"
+    }
+]

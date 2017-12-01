@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.grameen.fdp"
+	android:installLocation="internalOnly">
+
+
+
+
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+	<uses-permission android:name="com.grameen.fdp.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+
+
+
+	<uses-feature
+		android:glEsVersion="0x00020000"
+		android:required="true"/>
+
+	<meta-data
+		android:name="com.google.android.geo.API_KEY"
+		android:value="@string/google_maps_key"/>
+
+
+
+
+
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:name=".application.FdpApplication"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme"
+		android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity">
+
+
+
+		<!-- Launcher screen -->
+		<activity android:name=".MainActivity"
+		    android:label="@string/app_name"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+
+
+		<activity
+			android:name=".activity.SplashActivity"
+			android:theme="@style/AppTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.BaseActivity"/>
+
+		<activity android:name=".activity.MainActivity"
+				  android:screenOrientation="portrait" />
+		<activity android:name=".activity.FarmerDetailsActivity"/>
+		<activity android:name=".activity.EditFarmerDetailsActivity"/>
+		<activity android:name=".activity.PlotDetailsActivity"/>
+		<activity android:name=".activity.AddNewPlotActivity"/>
+		<activity android:name=".activity.MapActivity"/>
+		<activity android:name=".activity.LoginActivity"/>
+
+
+
+
+		<provider
+			android:name="br.com.mauker.materialsearchview.db.HistoryProvider"
+			android:authorities="br.com.mauker.materialsearchview.searchhistorydatabase"
+			android:exported="false"
+			android:protectionLevel="signature"
+			android:syncable="true"/>
+	</application>
+
+
+    <!--
+        GCM permission to ensure that only this application can
+        receive the messages and registration result. This must be of
+        the format <app-package-name>.C2D_MESSAGE for it to work.
+    -->
+
+
+</manifest>

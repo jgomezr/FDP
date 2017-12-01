@@ -1,0 +1,7 @@
+#Fri Dec 01 19:42:31 GMT 2017
+base.0=/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9217836adab51df4f9c15a489c29f5428ab6af7a
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7a534b86b45f56ef7be6c65e2b115d6f91544062/classes.dex
+base.1=/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7a534b86b45f56ef7be6c65e2b115d6f91544062
+file.0=/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9217836adab51df4f9c15a489c29f5428ab6af7a/classes.dex

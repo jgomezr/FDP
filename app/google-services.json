@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "611301447040",
+    "project_id": "grameen-fdp"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611301447040:android:1dd3f698231e392c",
+        "android_client_info": {
+          "package_name": "org.grameen.fdp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611301447040-8jl2l7c8pds988cqscp5dcfq6idg4cei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag"
+        }
+      ],
+      "services": {
+
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

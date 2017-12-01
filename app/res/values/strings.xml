@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">FDP</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="start_by_swiping_left">Start by swiping left.</string>
+
+    <string name="loading">Loading&#8230;</string>
+
+
+
+    <string name="account_type">com.grameen.fdp.login</string>
+<!--
+    <string name="app_name"><b>FDP</b></string>
+-->
+    <string name="app_package">com.grameen.fdp</string>
+    <string name="welcome">Welcome %s</string>
+    <string name="logout_button">Logout</string>
+    <string name="fetch_contacts_button">Fetch Contacts</string>
+    <string name="fetch_accounts_button">Fetch Accounts</string>
+    <string name="clear_button">Clear</string>
+
+
+    <string-array name="years">
+        <item name="1">2017</item>
+        <item name="2">2018</item>
+        <item name="3">2019</item>
+
+        <item name="4">2020</item>
+        <item name="5">2021</item>
+        <item name="6">2022</item>
+
+        <item name="7">2023</item>
+        <item name="8">2024</item>
+        <item name="9">2025</item>
+
+        <item name="10">2026</item>
+        <item name="11">2027</item>
+        <item name="12">2028</item>
+
+        <item name="13">2029</item>
+        <item name="14">2030</item>
+        <item name="15">2031</item>
+    </string-array>
+
+
+    <string-array name="months">
+        <item name="1">January</item>
+        <item name="2">February</item>
+        <item name="3">March</item>
+
+        <item name="4">April</item>
+        <item name="5">May</item>
+        <item name="6">June</item>
+
+        <item name="7">July</item>
+        <item name="8">August</item>
+        <item name="9">September</item>
+
+        <item name="10">October</item>
+        <item name="11">November</item>
+        <item name="12">December</item>
+
+    </string-array>
+
+
+
+    <string-array name="educationLevel">
+        <item name="1">Primary</item>
+        <item name="2">Secondary</item>
+        <item name="3">Tertiary</item>
+
+    </string-array>
+
+
+    <string-array name="gender">
+        <item name="1">Male</item>
+        <item name="2">Female</item>
+        <item name="3">Other</item>
+    </string-array>
+
+
+
+    <string-array name="answer">
+        <item name="1">Yes</item>
+        <item name="2">No</item>
+     </string-array>
+
+
+
+
+
+    <string name="phone_hint">Phone Number</string>
+    <string name="submit">Submit</string>
+    <string name="invalid_phone_number">Please enter a valid phone number</string>
+    <string name="valid_phone_number">Valid phone numbers!</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="sign_in_with_email">Sign In with Email</string>
+    <string name="sign_up_with_email">Sign Up with Email</string>
+    <string name="sign_in_with_account">Sign In with an Account</string>
+    <string name="google_sign_in">Google Sign in</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone number</string>
+    <string name="dob">Select Date of Birth</string>
+    <string name="select_picture">Select a profile picture</string>
+    <string name="next">Next</string>
+    <string name="games">Arcade</string>
+    <string name="settings">Settings</string>
+    <string name="login">Log In</string>
+    <string name="home">Home</string>
+    <string name="dont_have_account_text">Don\'t have an account?</string>
+    <string name="have_account_text">Have an account?</string>
+    <string name="log_in_facebook">Log in with facebook</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title">Close</string>
+    <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
+</resources>
