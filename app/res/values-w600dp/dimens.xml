@@ -27,11 +27,11 @@
 
     <dimen name="login_logo_background_size">170dp</dimen>
 
-    <dimen name="text_size_tiny">14sp</dimen>
-    <dimen name="text_size_small">16sp</dimen>
-    <dimen name="text_size_normal">18sp</dimen>
-    <dimen name="text_size_medium">22sp</dimen>
-    <dimen name="text_size_large">32sp</dimen>
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
     <dimen name="sections_image_size">70dp</dimen>
     <dimen name="sub_sections_image_size">40dp</dimen>
     <dimen name="topics_image_size">20dp</dimen>
@@ -55,7 +55,7 @@
 
     <dimen name="imageview_one_height">130dp</dimen>
     <dimen name="imageview_one_width">130dp</dimen>
-    <dimen name="imageview_two_height">90dp</dimen>
+    <dimen name="imageview_two_height">150dp</dimen>
     <dimen name="splash_imageview_spacing">50dp</dimen>
     <dimen name="po_caed_imageview_height">130dp</dimen>
 

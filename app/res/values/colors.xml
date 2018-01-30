@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+   <!-- <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#1976D2</color>
+-->
+
+    <color name="colorPrimary">#1b8f63</color>
+    <color name="colorPrimaryDark">#1b7653</color>
+
+    <!--<color name="colorPrimary">#0eb065</color>
+     <color name="colorPrimaryDark">#0b9957</color>
+     -->
+
+    <color name="colorAccent">#4CAF50</color>
+
+ <color name="colorAccent50Alpha">#8f4caf50</color>
 
 
 
-
-
-
-    <color name="background_1">#3949AB</color>
+ <color name="background_1">#3949AB</color>
     <color name="background_2">#3F51B5</color>
     <color name="background_3">#5C6BC0</color>
 
@@ -65,6 +74,7 @@
     <color name="statusPending">@color/fab_color</color>
     <color name="statusCaution">#ea3838</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_50">#c8ffffff</color>
     <color name="tab_text_selected">@color/colorAccent</color>
     <color name="fab_pressed">#00E676</color>
     <color name="fab_color">@color/colorAccent</color>

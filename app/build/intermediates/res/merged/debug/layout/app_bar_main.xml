@@ -14,22 +14,80 @@
         android:orientation="vertical"
         >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_below="@+id/toolbarLayout"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:layout_above="@+id/bottom_buttons"
+             >
+
+
+                <LinearLayout
+                     android:id="@+id/placeHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/empty_view_image"
+                        android:layout_width="@dimen/image_size_small"
+                        android:layout_height="@dimen/image_size_small"
+                        android:layout_marginBottom="@dimen/spacing_normal"
+                        android:src="@drawable/purchase_order"
+                        android:alpha="0.5"
+
+                        />
 
 
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view"
+                    <TextView
+                        android:id="@+id/empty_view_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No data added yet"
+                        android:textColor="@color/text_black_87"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_normal"
+                        android:layout_marginBottom="@dimen/spacing_quarter"
+                        />
+
+                    <TextView
+                        android:id="@+id/empty_view_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Add new farmer data by clicking on the green button below"
+
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
 
-        </LinearLayout>
+
+
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/toolbarLayout"
@@ -39,6 +97,50 @@
             <include layout="@layout/custom_toolbar"/>
 
         </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_buttons"
+             android:padding="@dimen/spacing_normal"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            >
+
+
+
+            <Button
+                android:id="@+id/sync"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButtonGrey"
+                android:text="Sync"
+                android:padding="@dimen/spacing_normal"
+                 />
+
+
+            <Button
+                android:id="@+id/add_farmer"
+                android:layout_toRightOf="@id/sync"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButtonAccent"
+                 android:text="add farmer"
+                android:padding="@dimen/spacing_normal"
+                android:layout_marginLeft="@dimen/spacing_normal"
+
+                />
+
+        </LinearLayout>
+
+
     </RelativeLayout>
 
 
@@ -46,6 +148,7 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -57,6 +160,8 @@
         android:hapticFeedbackEnabled="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
          />
+
+
 
     <!-- bottom sheet layout -->
 </android.support.design.widget.CoordinatorLayout>

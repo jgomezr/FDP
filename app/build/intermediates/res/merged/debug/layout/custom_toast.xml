@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/custom_toast_layout"
-              android:layout_width="match_parent"
+              android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:background="@drawable/custom_toast_background"
               android:padding="@dimen/spacing_half"
@@ -11,11 +11,11 @@
 
     <ImageView
         android:id="@+id/toast_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginLeft="@dimen/spacing_quarter"
         android:layout_marginRight="@dimen/spacing_half"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@mipmap/ic_launcher"
         />
 
 
@@ -26,8 +26,7 @@
         android:layout_centerInParent="true"
         android:layout_gravity="center_vertical"
         android:text="toast"
-        android:textColor="#fff"
-        android:textSize="@dimen/text_size_normal"/>
+         android:textSize="@dimen/text_size_normal"/>
 
 
 </LinearLayout>

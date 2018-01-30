@@ -1,0 +1,218 @@
+package org.grameen.fdp.object;
+
+import com.google.gson.annotations.SerializedName;
+
+/**
+ * Created by aangjnr on 08/01/2018.
+ */
+
+public class Recommendation {
+
+
+    @SerializedName("Id")
+    String id = "";
+
+    @SerializedName("Name")
+    String name = "";
+
+    @SerializedName("Condition__c")
+    String condition = "";
+
+    @SerializedName("description__c")
+    String description = "";
+
+    @SerializedName("Hierarchy__c")
+    String hierarchy = "";
+
+    @SerializedName("Income_Year_0__c")
+    String income0 = "";
+
+    @SerializedName("Income_Year_1__c")
+    String income1 = "";
+
+    @SerializedName("Income_Year_2__c")
+    String income2 = "";
+
+    @SerializedName("Income_Year_3__c")
+    String income3 = "";
+
+    @SerializedName("Income_Year_4__c")
+    String income4 = "";
+
+    @SerializedName("Income_Year_5__c")
+    String income5 = "";
+
+    @SerializedName("Income_Year_6__c")
+    String income6 = "";
+
+    @SerializedName("Income_Year_7__c")
+    String income7 = "";
+
+    @SerializedName("Logic__c")
+    String logicId = "";
+
+    @SerializedName("Related_1__c")
+    String relatedOne = "";
+
+    @SerializedName("Related_2__c")
+    String relatedTwo = "";
+
+    @SerializedName("Year_back_to_Gaps__c")
+    String yearBackToGAPs = "";
+
+
+    @SerializedName("Income_questions__c")
+    String questionsInvolved = "";
+
+
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setHierarchy(String hierarchy) {
+        this.hierarchy = hierarchy;
+    }
+
+    public void setRelatedOne(String relatedOne) {
+        this.relatedOne = relatedOne;
+    }
+
+    public void setRelatedTwo(String relatedTwo) {
+        this.relatedTwo = relatedTwo;
+    }
+
+    public void setYearBackToGAPs(String yearBackToGAPs) {
+        this.yearBackToGAPs = yearBackToGAPs;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getHierarchy() {
+        return hierarchy;
+    }
+
+
+    public String getRelatedOne() {
+        return relatedOne;
+    }
+
+    public String getRelatedTwo() {
+        return relatedTwo;
+    }
+
+    public String getYearBackToGAPs() {
+        return yearBackToGAPs;
+    }
+
+
+    public void setLogicId(String logicId) {
+        this.logicId = logicId;
+    }
+
+    public String getLogicId() {
+        return logicId;
+    }
+
+
+    public void setIncome0(String income0) {
+        this.income0 = income0;
+    }
+
+    public void setIncome1(String income1) {
+        this.income1 = income1;
+    }
+
+    public void setIncome2(String income2) {
+        this.income2 = income2;
+    }
+
+    public void setIncome3(String income3) {
+        this.income3 = income3;
+    }
+
+    public void setIncome4(String income4) {
+        this.income4 = income4;
+    }
+
+    public void setIncome5(String income5) {
+        this.income5 = income5;
+    }
+
+    public void setIncome6(String income6) {
+        this.income6 = income6;
+    }
+
+    public void setIncome7(String income7) {
+        this.income7 = income7;
+    }
+
+    public String getIncome0() {
+        return income0;
+    }
+
+    public String getIncome1() {
+        return income1;
+    }
+
+    public String getIncome2() {
+        return income2;
+    }
+
+    public String getIncome3() {
+        return income3;
+    }
+
+    public String getIncome4() {
+        return income4;
+    }
+
+    public String getIncome5() {
+        return income5;
+    }
+
+    public String getIncome6() {
+        return income6;
+    }
+
+    public String getIncome7() {
+        return income7;
+    }
+
+
+    public String getQuestionsInvolved() {
+        return questionsInvolved;
+    }
+
+    public void setQuestionsInvolved(String questionsInvolved) {
+        this.questionsInvolved = questionsInvolved;
+    }
+}

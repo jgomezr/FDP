@@ -1,39 +1,43 @@
 [
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/ms__list_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/09c2742ed33247584081624c6d29e15ac65c1dba/output/res/layout/ms__list_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/3f2553157e6a22f77270e1f3c74685d0/res/layout/ms__list_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_widget_switch_compat.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_widget_switch_compat.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_widget_switch_compat.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_layout_tab_icon.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/form_checkbox_container.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/form_checkbox_container.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/form_checkbox_container.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_list_menu_item_checkbox.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_recyclerview.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_recyclerview.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_recyclerview.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_dialog_edittext.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_dialog_edittext.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_add_a_plot_v2.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_add_a_plot_v2.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_media.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_widget_seekbar.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_widget_seekbar.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_widget_seekbar.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/plot_item_view.xml",
@@ -41,7 +45,7 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_list_menu_item_radio.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_farmer_details.xml",
@@ -49,163 +53,187 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_layout_snackbar_include.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_layout_snackbar_include.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_bottom_sheet_dialog.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/separator.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/separator.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__server_picker_list.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__server_picker_list.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__server_picker_list.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/separator.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/separator.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_expanded_menu_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_expanded_menu_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/list_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/2137ab56545954230357762b3ee38bed192601dc/output/res/layout/list_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/res/layout/list_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/search_view.xml",
-        "source": "/Users/aangjnr/.android/build-cache/2137ab56545954230357762b3ee38bed192601dc/output/res/layout/search_view.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/res/layout/search_view.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__inspector.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/res/layout/sf__inspector.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/debug/res/layout/sf__inspector.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/fragment_farmer_list.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/fragment_farmer_list.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_widget_checkbox.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_widget_checkbox.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_widget_checkbox.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_list_fragment.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_list_fragment.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_list_fragment.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_big_media_custom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_select_dialog_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_select_dialog_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/form_section.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/form_section.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/form_section.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_search_view.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_mode_bar.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_mode_bar.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_information.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_information.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_information.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/searchable_listview.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/searchable_listview.xml"
-    },
-    {
-        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/content_main.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/content_main.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/searchable_listview.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/content_main.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/content_main.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sortable_header.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/res/layout/sortable_header.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/res/layout/notification_template_part_time.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/divider_view_vertical.xml",
         "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/divider_view_vertical.xml"
     },
     {
-        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_layout_tab_text.xml"
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/dynamic_button.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/dynamic_button.xml"
     },
     {
-        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_big_media.xml"
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_layout_tab_text.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/header.xml",
         "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/header.xml"
     },
     {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/amu_info_window.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/res/layout/amu_info_window.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/tooltip.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/tooltip.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/tooltip.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_screen_content_include.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__passcode.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__passcode.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__passcode.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_activity_chooser_view.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_activity_chooser_view_list_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_menu_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__account_switcher.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__account_switcher.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__account_switcher.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/app_bar_main.xml",
         "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/app_bar_main.xml"
     },
     {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_p_and_l.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_p_and_l.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_item_subheader.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/form_labeled_element.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/form_labeled_element.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/form_labeled_element.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/amu_text_bubble.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/res/layout/amu_text_bubble.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/res/layout/notification_action_tombstone.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/res/layout/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/item_last_request.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/layout/item_last_request.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/layout/item_last_request.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_text_input_password_icon.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_text_input_password_icon.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_popup_menu_header_item_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_map.xml",
@@ -213,35 +241,39 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__login.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__login.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__login.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/select_dialog_multichoice_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_screen_toolbar.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_detailed_year.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_detailed_year.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_lines_media.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_big_media_narrow.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_item_separator.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_item_separator.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/res/layout/notification_template_icon_group.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_layout_snackbar.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_layout_snackbar.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/custom_toolbar.xml",
@@ -249,43 +281,47 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/value_field.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/value_field.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/value_field.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__manage_space.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__manage_space.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__manage_space.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__fingerprint_dialog.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__fingerprint_dialog.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__fingerprint_dialog.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_dialog_title_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_list_menu_item_icon.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_item_header.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/amu_webview.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/res/layout/amu_webview.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/select_dialog_item_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_big_media_narrow_custom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_list_menu_item_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/toolbar.xml",
@@ -293,15 +329,15 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_menu_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_media_action.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_media_cancel_action.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
@@ -313,47 +349,51 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_widget_seekbar_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout/preference_widget_seekbar_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/res/layout/preference_widget_seekbar_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_popup_menu_item_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__inspector_result_cell.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/res/layout/sf__inspector_result_cell.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/debug/res/layout/sf__inspector_result_cell.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/select_dialog_singlechoice_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_menu.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_edit_plot_v2.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_edit_plot_v2.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/form_activity.xml",
-        "source": "/Users/aangjnr/.android/build-cache/4ddb60367152cae006b5f9f61fff2a680f61d983/output/res/layout/form_activity.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/res/layout/form_activity.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/support_simple_spinner_dropdown_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
-        "source": "/Users/aangjnr/.android/build-cache/0eff46ddcbf0b2db8408e2e2d06e5b5dfb9170e0/output/res/layout/notification_template_media_custom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/res/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_menu_item_action_area.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__custom_server_url.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__custom_server_url.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__custom_server_url.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/main.xml",
@@ -369,11 +409,11 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_category.xml",
-        "source": "/Users/aangjnr/.android/build-cache/21dc691a8211de6539cc8f889c514bc2785c76a3/output/res/layout/preference_category.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/res/layout/preference_category.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_menu_item_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_menu_item_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_edit_farmer_details.xml",
@@ -381,7 +421,7 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_edit_plot.xml",
@@ -389,15 +429,15 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_screen_simple.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_screen_simple.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_bottom_navigation_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_bottom_navigation_item.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_bar_up_container.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/nav_header_main.xml",
@@ -405,15 +445,23 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/searchbar.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/layout/searchbar.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/layout/searchbar.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_bar_title_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_landing_page.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/activity_landing_page.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ec4542b9325118ece179f6e85a9c675ef518456e/output/res/layout/design_navigation_item.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/my_form_section.xml",
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/res/layout/my_form_section.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/custom_toast.xml",
@@ -421,26 +469,26 @@
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_action_mode_close_item_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_action.xml",
-        "source": "/Users/aangjnr/.android/build-cache/ffc79a92ed7ac693ec2fb1e5e8f7a699c7ac77ef/output/res/layout/notification_action.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/res/layout/notification_action.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_alert_dialog_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/preference_widget_switch.xml",
-        "source": "/Users/aangjnr/.android/build-cache/5022810dcbefb9525353504fdcf7e57a3b5563be/output/res/layout/preference_widget_switch.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/res/layout/preference_widget_switch.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
-        "source": "/Users/aangjnr/.android/build-cache/832a37f550b164865f68643735a98ac32f9f1e36/output/res/layout/abc_alert_dialog_title_material.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/sf__server_picker.xml",
-        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/layout/sf__server_picker.xml"
+        "source": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/layout/sf__server_picker.xml"
     }
 ]

@@ -1,0 +1,94 @@
+package org.grameen.fdp.utility;
+
+
+/**
+ * Created by aangjnr on 11/06/2017.
+ */
+
+public class Constants {
+
+    public static final String TYPE_TEXT = "text";
+    public static final String TYPE_NUMBER = "number";
+    public static final String TYPE_NUMBER_DECIMAL = "decimal";
+
+
+    public static final String TYPE_LOCATION = "geolocation";
+    public static final String TYPE_SELECTABLE = "single select";
+    public static final String TYPE_MULTI_SELECTABLE = "multi select";
+
+    public static final String TYPE_CHECKBOX = "checkbox";
+    public static final String TYPE_TIMEPICKER = "timePicker";
+    public static final String TYPE_DATEPICKER = "date";
+
+    public static final String TYPE_MATH_FORMULA = "math formula";
+    public static final String TYPE_LOGIC_FORMULA = "logic formula";
+
+
+
+    public static final String SHOW = "false";
+    public static final String HIDE = "true";
+
+
+
+
+    public static final String FARMER_PROFILE = "farmer profile";
+    public static final String ADOPTION_OBSERVATION_RESULTS = "adoption observation results";
+    public static final String AGGREGATE_ECONOMIC_RESULTS = "agregate economic results";
+    public static final String OTHER = "other";
+    public static final String ADDITIONAL_INTERVENTION = "additional intervention";
+    public static final String ADOPTION_OBSERVATIONS = "adoption observations";
+    public static final String PRODUCTIVE_PROFILE = "productive profile";
+    public static final String FARMING_ECONOMIC_PROFILE = "farming economic profile";
+    public static final String SOCIO_ECONOMIC_PROFILE = "socioeconomic profile";
+    public static final String FAMILY_MEMBERS = "family members";
+    public static final String PLOT_RESULTS = "plot results";
+    public static final String PLOT_INFORMATION = "plot information";
+
+
+    public static final String REGISTER = " register";
+    public static final String MONITORING = "monitoring";
+
+
+
+
+    public static String IS_USER_SIGNED_IN = "isUserSignedIn";
+    public static String IS_RETAILER_SIGNED_IN = "isUserSignedIn";
+    public static String IS_GAME_CENTER_SIGNED_IN = "isUserSignedIn";
+    public static String USERS_PHONE = "phoneNo";
+    public static String USER_NAME = "userName";
+    public static String USER_AGE = "userAge";
+    public static String USER_EMAIL = "userEmail";
+    public static String USER_UID = "userUid";
+    public static String USER_TOKEN = "userToken";
+    public static String USER_PHOTO_LOCAL_URL = "userProfilePhotoLocal";
+    public static String USER_PHOTO_CLOUD_URL = "userProfilePhotoCloud";
+    public static String IS_NIGHT_MODE = "isNightMode";
+    public static int LAST_SELECTED_FRAGMENT = 1;
+
+
+    public static int SYNC_OK = 1;
+    public static int SYNC_NOT_OK = 0;
+
+    public static final int PLACE_PICKER_REQUEST = 101;
+    public static final int PERMISSION_FINE_LOCATION = 102;
+    public static final int PERMISSION_CALL = 222;
+
+
+
+
+    public static final String TAG_TITLE_TEXT_VIEW = "titleTag";
+    public static final String TAG_OTHER_TEXT_VIEW = "textTag";
+
+    public static final String TAG_CALCULATION = "calculationTag";
+    public static final String TAG_VIEW = "viewTag";
+
+
+    public static final String TAG_RESULTS = "resultsTag";
+
+
+
+
+
+
+
+}

@@ -1,18 +1,22 @@
 [
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/menu_to_back_rotation.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/animator/menu_to_back_rotation.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/animator/menu_to_back_rotation.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/back_to_menu_morph.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/animator/back_to_menu_morph.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/animator/back_to_menu_morph.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/arc_animator.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/res/animator/arc_animator.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/menu_to_back_morph.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/animator/menu_to_back_morph.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/animator/menu_to_back_morph.xml"
     },
     {
         "merged": "/Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/back_to_menu_rotation.xml",
-        "source": "/Users/aangjnr/.android/build-cache/e2d3fae6c03532e6df62375f8c6b17e5546480d2/output/res/animator/back_to_menu_rotation.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/res/animator/back_to_menu_rotation.xml"
     }
 ]

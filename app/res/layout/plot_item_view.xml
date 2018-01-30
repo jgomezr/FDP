@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="3dp"
     app:cardElevation="3dp"
+    android:layout_marginRight="@dimen/spacing_quarter"
     app:cardBackgroundColor="@color/colorAccent"
     >
 
@@ -14,6 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mainLayout"
+        android:focusableInTouchMode="true"
+        android:hapticFeedbackEnabled="true"
+        android:focusable="true"
+        android:longClickable="true"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
 
         >
 

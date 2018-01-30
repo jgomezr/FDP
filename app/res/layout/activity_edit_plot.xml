@@ -259,15 +259,13 @@
         android:layout_below="@id/content"
         android:layout_above="@+id/conditionsLayout"
         android:layout_marginTop="@dimen/spacing_normal"
-        android:clipToPadding="false"
-        android:clipChildren="false"
-        >
+         >
 
         <TextView
             android:id="@+id/aos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AOs"
+            android:text="Adoption Observations (AO)"
             android:padding="@dimen/spacing_normal"
             android:textAllCaps="true"
             android:textColor="@color/colorAccent"
@@ -280,6 +278,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             >
 
 
@@ -460,6 +459,7 @@
 
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -482,7 +482,6 @@
                 android:text="Good: "
                 android:textColor="@color/green_indicator"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_size_normal"
 
 
                 />
@@ -492,8 +491,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Genetics of plant Material, GAP's ESM"
-                android:textSize="@dimen/text_size_normal"
-                android:textColor="@android:color/primary_text_light"
+                 android:textColor="@android:color/primary_text_light"
                 />
 
 
@@ -515,7 +513,6 @@
                 android:text="Bad: "
                 android:textColor="@color/cpb_red"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_size_normal"
 
 
                 />
@@ -525,8 +522,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Farm Condition"
-                android:textSize="@dimen/text_size_normal"
-                android:textColor="@android:color/primary_text_light"
+                 android:textColor="@android:color/primary_text_light"
                 />
 
 
@@ -543,9 +539,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/buttonsLayout"
-        android:layout_marginTop="@dimen/spacing_normal"
-        android:padding="@dimen/spacing_normal"
-        >
+         android:padding="@dimen/spacing_normal"
+         >
 
 
 

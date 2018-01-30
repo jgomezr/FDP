@@ -14,22 +14,20 @@
         android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <uses-permission android:name="com.grameen.fdp.C2D_MESSAGE" />
+    <uses-permission android:name="org.grameen.fdp.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
-
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="@string/google_maps_key" />
 
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
@@ -44,22 +42,25 @@
     <uses-permission android:name="org.grameen.fdp.permission.C2D_MESSAGE" />
 
     <application
-        android:name="com.grameen.fdp.application.FdpApplication"
+        android:name="org.grameen.fdp.application.FdpApplication"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
 
         <!-- Launcher screen -->
         <activity
-            android:name="com.grameen.fdp.MainActivity"
+            android:name="org.grameen.fdp.MainActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name="com.grameen.fdp.activity.SplashActivity"
+            android:name="org.grameen.fdp.activity.SplashActivity"
             android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,16 +68,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.grameen.fdp.activity.BaseActivity" />
+        <activity android:name="org.grameen.fdp.activity.BaseActivity" />
+        <activity android:name="org.grameen.fdp.activity.MainActivity" />
+        <activity android:name="org.grameen.fdp.activity.FarmerDetailsActivity" />
+        <activity android:name="org.grameen.fdp.activity.Add_EditFarmerDetailsActivity" />
+        <activity android:name="org.grameen.fdp.activity.PlotDetailsActivity" />
+        <activity android:name="org.grameen.fdp.activity.AddNewPlotActivity" />
+        <activity android:name="org.grameen.fdp.activity.MapActivity" />
+        <activity android:name="org.grameen.fdp.activity.LoginActivity" />
+        <activity android:name="org.grameen.fdp.activity.LandingPageActivity" />
         <activity
-            android:name="com.grameen.fdp.activity.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.grameen.fdp.activity.FarmerDetailsActivity" />
-        <activity android:name="com.grameen.fdp.activity.EditFarmerDetailsActivity" />
-        <activity android:name="com.grameen.fdp.activity.PlotDetailsActivity" />
-        <activity android:name="com.grameen.fdp.activity.AddNewPlotActivity" />
-        <activity android:name="com.grameen.fdp.activity.MapActivity" />
-        <activity android:name="com.grameen.fdp.activity.LoginActivity" />
+            android:name="org.grameen.fdp.activity.SyncActivity"
+            android:theme="@style/Theme.Translucent" />
+        <activity
+            android:name="org.grameen.fdp.activity.PandLActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="org.grameen.fdp.activity.DetailedYearActivity"
+            android:screenOrientation="landscape" />
 
         <provider
             android:name="br.com.mauker.materialsearchview.db.HistoryProvider"
@@ -84,7 +93,16 @@
             android:exported="false"
             android:protectionLevel="signature"
             android:syncable="true" />
-        <!-- SmartStore Inspector screen -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.1" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- SmartStore Inspector screen -->
         <activity android:name="com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity" /> <!-- Metadata for supported app restrictions -->
         <meta-data
             android:name="android.content.APP_RESTRICTIONS"
@@ -164,10 +182,6 @@
             android:name="com.salesforce.androidsdk.analytics.AnalyticsPublisherService"
             android:exported="false" />
 
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.0.1" />
-
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -181,7 +195,6 @@
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
-            android:exported="true"
             android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -192,11 +205,6 @@
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
@@ -204,6 +212,7 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="org.grameen.fdp" />
             </intent-filter>
@@ -232,10 +241,6 @@
             android:authorities="org.grameen.fdp.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
