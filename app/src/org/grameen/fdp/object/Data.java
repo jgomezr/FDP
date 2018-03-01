@@ -17,50 +17,50 @@ public class Data {
     List<String> yearsDataFormula;
     String singleValue;
 
-
-     public Data(String label, @Nullable  List<String> yearsDataFormula, String tag){this.label = label; this.yearsDataFormula = yearsDataFormula; this.tag = tag;}
-
-     public Data(String label, String s) {
-         this.label = label;
-         this.singleValue = s;
-      }
-
-    public Data() {
-
-    }
+    String v1;
+    String v2;
 
 
-
-    public void setLabel(String name) {
-        this.label = name;
-    }
-
-    public void setTag(String tag) {
+    public Data(String label, @Nullable List<String> yearsDataFormula, String tag) {
+        this.label = label;
+        this.yearsDataFormula = yearsDataFormula;
         this.tag = tag;
+    }
+
+    public Data(String label, String s) {
+        this.label = label;
+        this.singleValue = s;
     }
 
     public String getLabel() {
         return label;
     }
 
+    public void setLabel(String name) {
+        this.label = name;
+    }
+
     public String getTag() {
         return tag;
     }
 
-    public void setYearsDataFormula(List<String> yearsDataFormula) {
-        this.yearsDataFormula = yearsDataFormula;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public List<String> getYearsDataFormula() {
         return yearsDataFormula;
     }
 
-
-    public void setSingleValue(String singleValue) {
-        this.singleValue = singleValue;
+    public void setYearsDataFormula(List<String> yearsDataFormula) {
+        this.yearsDataFormula = yearsDataFormula;
     }
 
     public String getSingleValue() {
         return singleValue;
+    }
+
+    public void setSingleValue(String singleValue) {
+        this.singleValue = singleValue;
     }
 }

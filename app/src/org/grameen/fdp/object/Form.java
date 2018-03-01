@@ -10,26 +10,33 @@ public class Form {
 
 
     String Name;
-    @SerializedName("Country__c")
+    @SerializedName("Type__c")
+    String type;
+
     String Id;
 
-    public Form(){}
-    Form(String name, String countryId){this.Name = name; this.Id = countryId;}
+    public Form() {
+    }
+
+    Form(String name, String type) {
+        this.Name = name;
+        this.type = type;
+    }
 
 
     public String getName() {
         return Name;
     }
 
-    public String getId() {
-        return Id;
-    }
-
     public void setName(String name) {
         Name = name;
     }
 
-    public void setId(String countryId) {
-        Id = countryId;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

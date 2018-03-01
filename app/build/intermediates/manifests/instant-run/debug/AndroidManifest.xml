@@ -11,7 +11,7 @@
     -->
     <uses-sdk
         android:minSdkVersion="19"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -84,8 +84,24 @@
             android:name="org.grameen.fdp.activity.PandLActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name="org.grameen.fdp.activity.DetailedYearActivity"
+            android:name="org.grameen.fdp.activity.DetailedYearMonthlyActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name="org.grameen.fdp.activity.FamilyMembersActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="org.grameen.fdp.activity.MonitoringYearSelectionActivity" />
+        <activity
+            android:name="org.grameen.fdp.activity.PlotMonitoringActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="org.grameen.fdp.activity.AddNewPlotMonitoringActivity" />
+        <activity android:name="org.grameen.fdp.activity.FarmAssessmentActivity" />
+        <activity
+            android:name="org.grameen.fdp.activity.FamilyMembersActivity_v2"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name="org.grameen.fdp.activity.FDPStatusActivity" />
 
         <provider
             android:name="br.com.mauker.materialsearchview.db.HistoryProvider"
@@ -97,9 +113,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-        <meta-data
-            android:name="android.support.VERSION"
-            android:value="26.0.1" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" /> <!-- SmartStore Inspector screen -->

@@ -4,26 +4,30 @@ import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.object.Country;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by aangjnr on 11/12/2017.
  */
-
 
 
 public class LandingPageActivity extends BaseActivity {
@@ -43,11 +47,12 @@ public class LandingPageActivity extends BaseActivity {
 
 
         //Check for permission
-        if(launchMultiplePermissions(PERMISSIONS))
-            showAlertDialog();
+        if (launchMultiplePermissions(PERMISSIONS)) {
+            // showAlertDialog();
+            //syncInitialData();
 
 
-
+        }
 
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
@@ -56,12 +61,11 @@ public class LandingPageActivity extends BaseActivity {
 
 
                 prefs.edit().putBoolean("isFirstSignIn", false).apply();
-                prefs.edit().putString("flag", Constants.REGISTER ).apply();
+                prefs.edit().putString("flag", Constants.REGISTER).apply();
                 startActivity(new Intent(LandingPageActivity.this, MainActivity.class));
 
             }
         });
-
 
 
         findViewById(R.id.monitoring).setOnClickListener(new View.OnClickListener() {
@@ -69,7 +73,7 @@ public class LandingPageActivity extends BaseActivity {
             public void onClick(View view) {
 
                 prefs.edit().putBoolean("isFirstSignIn", false).apply();
-                prefs.edit().putString("flag", Constants.MONITORING ).apply();
+                prefs.edit().putString("flag", Constants.MONITORING).apply();
                 startActivity(new Intent(LandingPageActivity.this, MainActivity.class));
 
 
@@ -78,11 +82,6 @@ public class LandingPageActivity extends BaseActivity {
 
 
     }
-
-
-
-
-
 
 
     boolean hasPermission(Context context, String permission) {
@@ -100,7 +99,6 @@ public class LandingPageActivity extends BaseActivity {
         }
         return true;
     }
-
 
 
     public boolean launchMultiplePermissions(String[] PERMISSIONS) {
@@ -128,35 +126,32 @@ public class LandingPageActivity extends BaseActivity {
     }
 
 
-
-
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permission, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permission, grantResults);
 
 
-        for(Integer results : grantResults)
+        for (Integer results : grantResults)
             permissionGranted = results == PackageManager.PERMISSION_GRANTED;
 
         Log.i("LANDING PAGE ACTIVITY ", permissionGranted + "");
 
 
-
-
-
-
         if (permissionGranted) {
             // Toast.makeText(this, permission[0], Toast.LENGTH_SHORT).show();
 
-            if(launchMultiplePermissions(PERMISSIONS))
-            showAlertDialog();
+            if (launchMultiplePermissions(PERMISSIONS))
+                //showAlertDialog();
+                if (prefs.getBoolean("initialData", true)) {
+                    syncInitialData();
+                } else {
+                    showAlertDialog();
+                }
 
         } else {
 
 
-            showAlertDialog(false, "Provide Permissions", "All permissions are needed for FDP to work properly", new DialogInterface.OnClickListener() {
+            showAlertDialog(false, getResources(R.string.provide_all_permissions), getResources(R.string.provide_all_permissions_rationale), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -165,7 +160,7 @@ public class LandingPageActivity extends BaseActivity {
 
 
                 }
-            }, "OK", new DialogInterface.OnClickListener() {
+            }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -173,7 +168,7 @@ public class LandingPageActivity extends BaseActivity {
                     finish();
 
                 }
-            }, "Quit", 0);
+            }, getResources(R.string.quit), 0);
 
 
         }
@@ -181,43 +176,116 @@ public class LandingPageActivity extends BaseActivity {
     }
 
 
+    void showAlertDialog() {
+        if (prefs.getBoolean("isFirstSignIn", true))
+            if (Utils.checkInternetConnection(LandingPageActivity.this)) {
 
 
+                final List<Country> countriesList = databaseHelper.getAllCountries();
 
-    void showAlertDialog(){
-        if(prefs.getBoolean("isFirstSignIn", true))
-            if(Utils.checkInternetConnection(LandingPageActivity.this))
 
-                showAlertDialog(false, "Hey there!", "Looks like this is your first sign in.\n" +
-                        "Since you have internet connection it's recommended you sync data from the server.", new DialogInterface.OnClickListener() {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogTheme);
+
+                final ArrayList<String> displayValues = new ArrayList<>();
+                for (Country c : countriesList) {
+                    displayValues.add(c.getName());
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, displayValues);
+                builder.setTitle(getResources(R.string.select_country_region));
+                builder.setCancelable(false);
+                builder.setNegativeButton(getResources(R.string.quit), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        LandingPageActivity.this.supportFinishAfterTransition();
+
+                    }
+                });
+                builder.setSingleChoiceItems(adapter, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+                        String ISO = countriesList.get(which).getIsoCode();
+                        String CURRENCY = countriesList.get(which).getCurrency();
+
                         dialog.dismiss();
 
-                        startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+                        // CustomToast.makeToast(LandingPageActivity.this, "ISO CODE & CURRENCY SELECTED ARE " + ISO + " " + CURRENCY, Toast.LENGTH_SHORT).show();
 
-                        prefs.edit().putBoolean("isFirstSignIn", false).apply();
+                        Log.i(TAG, "ISO CODE & CURRENCY SELECTED ARE " + ISO + " " + CURRENCY);
+
+                        final SharedPreferences.Editor editor = prefs.edit();
+
+                        editor.putString("ISO", ISO);
+                        editor.putString("currency", CURRENCY);
+                        editor.apply();
+
+
+                        showAlertDialog(false, getResources(R.string.hey_there), getResources(R.string.first_sign_in_rationale), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+
+                                startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+
+                                editor.putBoolean("isFirstSignIn", false).apply();
+
+
+                            }
+                        }, getResources(R.string.sync_anyway), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+
+                                startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+
+                                editor.putBoolean("isFirstSignIn", false).apply();
+
+
+                            }
+                        }, getResources(R.string.sync), 0);
 
 
                     }
-                }, "Sync anyway", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+                });
 
-                        startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+                builder.show();
 
 
-                    }
-                }, "Sync", 0);
+            }
+
+
     }
 
 
+    void syncInitialData() {
 
 
+        Intent intent = new Intent(this, SyncActivity.class);
+        intent.putExtra("initialData", true);
+        startActivity(intent);
+
+    }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
 
 
+        Log.i(TAG, "ON RESUME");
 
+        if (prefs.getBoolean("initialData", true)) {
+
+
+            syncInitialData();
+
+
+        } else {
+
+            showAlertDialog();
+
+        }
+    }
 }

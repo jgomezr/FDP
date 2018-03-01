@@ -12,28 +12,23 @@ public class LaborDaysLaborCostSupplies {
     String suppliesCost;
 
 
-
-    public LaborDaysLaborCostSupplies(){}
-
-
-    public void setLaborCost(String laborCost) {
-        this.laborCost = laborCost;
-    }
-
-    public void setLaborDays(String laborDays) {
-        this.laborDays = laborDays;
-    }
-
-    public void setSuppliesCost(String supplies) {
-        this.suppliesCost = supplies;
+    public LaborDaysLaborCostSupplies() {
     }
 
     public String getLaborCost() {
         return laborCost;
     }
 
+    public void setLaborCost(String laborCost) {
+        this.laborCost = laborCost;
+    }
+
     public String getLaborDays() {
         return laborDays;
+    }
+
+    public void setLaborDays(String laborDays) {
+        this.laborDays = laborDays;
     }
 
     public String getSuppliesCost() {
@@ -41,7 +36,9 @@ public class LaborDaysLaborCostSupplies {
 
     }
 
-
+    public void setSuppliesCost(String supplies) {
+        this.suppliesCost = supplies;
+    }
 
 
 }

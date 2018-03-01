@@ -58,6 +58,22 @@ public abstract class PermissionsUtils {
         return false;
     }
 
+    public static boolean hasPermissions(AppCompatActivity context, String permission) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
+
+            if (ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+
+                if (ActivityCompat.shouldShowRequestPermissionRationale(context, permission)) {
+
+
+                }
+                return false;
+            }
+
+        }
+        return true;
+    }
+
     /**
      * A dialog that displays a permission denied message.
      */
@@ -172,22 +188,5 @@ public abstract class PermissionsUtils {
                 getActivity().finish();
             }
         }
-    }
-
-
-    public static boolean hasPermissions(AppCompatActivity context, String permission) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
-
-            if (ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-
-                if (ActivityCompat.shouldShowRequestPermissionRationale(context, permission)) {
-
-
-                }
-                return false;
-            }
-
-        }
-        return true;
     }
 }

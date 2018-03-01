@@ -14,7 +14,7 @@ import org.grameen.fdp.R;
  */
 
 
-public class CustomToast extends Toast{
+public class CustomToast extends Toast {
 
     static Toast toast;
     Context context;
@@ -24,7 +24,7 @@ public class CustomToast extends Toast{
     }
 
 
-    public static Toast makeToast(Context c, String message, int duration){
+    public static Toast makeToast(Context c, String message, int duration) {
 
         LayoutInflater inflater = LayoutInflater.from(c);
         View layout = inflater.inflate(R.layout.custom_toast, null, false);

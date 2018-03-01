@@ -18,8 +18,8 @@ public abstract class MyFormElementController {
     /**
      * Constructs a new instance with the specified name.
      *
-     * @param ctx   the Android context
-     * @param name  the name of this instance
+     * @param ctx  the Android context
+     * @param name the name of this instance
      */
     protected MyFormElementController(Context ctx, String name) {
         this.context = ctx;
@@ -38,14 +38,10 @@ public abstract class MyFormElementController {
     /**
      * Returns the name of this form element.
      *
-     * @return  the name of the element
+     * @return the name of the element
      */
     public String getName() {
         return name;
-    }
-
-    void setModel(FormModel model) {
-        this.model = model;
     }
 
     /**
@@ -57,10 +53,14 @@ public abstract class MyFormElementController {
         return model;
     }
 
+    void setModel(FormModel model) {
+        this.model = model;
+    }
+
     /**
      * Returns the associated view for this element.
      *
-     * @return          the view for this element
+     * @return the view for this element
      */
     public View getView() {
         if (view == null) {
@@ -81,7 +81,7 @@ public abstract class MyFormElementController {
     /**
      * Constructs the view for this element.
      *
-     * @return          a newly created view for this element
+     * @return a newly created view for this element
      */
     protected abstract View createView();
 

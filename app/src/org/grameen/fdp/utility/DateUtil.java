@@ -1,7 +1,6 @@
 package org.grameen.fdp.utility;
 
 
-
 import org.ocpsoft.prettytime.PrettyTime;
 
 import java.text.DateFormat;

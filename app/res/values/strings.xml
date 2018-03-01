@@ -11,12 +11,10 @@
 
     <string name="loading">Loading&#8230;</string>
 
-
+    <string name="full_name_error">Please enter full name</string>
 
     <string name="account_type">org.grameen.fdp.login</string>
-<!--
-    <string name="app_name"><b>FDP</b></string>
--->
+
     <string name="app_package">org.grameen.fdp</string>
     <string name="welcome">Welcome %s</string>
     <string name="logout_button">Logout</string>
@@ -24,28 +22,111 @@
     <string name="fetch_accounts_button">Fetch Accounts</string>
     <string name="clear_button">Clear</string>
 
+    <string name="edit_farmer_details">Edit Farmer Details</string>
+    <string name="add_farmer_details">Add Farmer Details</string>
+    <string name="save_data">Save data</string>
+    <string name="save_data_explanation">Do you want to save your current data before exit?</string>
 
-    <string-array name="years">
-        <item name="1">2017</item>
-        <item name="2">2018</item>
-        <item name="3">2019</item>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
 
-        <item name="4">2020</item>
-        <item name="5">2021</item>
-        <item name="6">2022</item>
+    <string name="new_farmer_added">New Farmer added!</string>
+    <string name="new_farmer_not_added">Could not add farmer info. Please try again.</string>
+    <string name="farmer_updated">Farmer data updated successfully!</string>
+    <string name="could_not_save">Could not save farmer</string>
+    <string name="try_again_suffix">. Please try again</string>
+    <string name="permission_required">Permission required</string>
+    <string name="camera_permission_rationale">Please provide camera permission to be able to take pictures</string>
+    <string name="enter_valid_plot_name">Please enter a valid plot name</string>
+    <string name="edit_plot">Edit plot details</string>
+    <string name="add_new_plot">Add a new plot.</string>
+    <string name="provide_plot_name">Please provide the plot name</string>
+    <string name="new_plot_added">New plot added</string>
+    <string name="data_saved">Data saved</string>
+    <string name="data_not_saved">Could not save data!</string>
 
-        <item name="7">2023</item>
-        <item name="8">2024</item>
-        <item name="9">2025</item>
+    <string name="could_not_add_plot">Could not add plot info. Please try again</string>
+    <string name="new_data_updated">New data updated</string>
+    <string name="add_plot_monitoring">Add new plot monitoring</string>
+    <string name="edit_plot_monitoring">Edit plot monitoring</string>
+    <string name="error_total_plot_estimated_production">Total Plots estimated production is more than total farm production!</string>
+    <string name="error_invalid_units">Invalid units provided for plot production sizes!</string>
+    <string name="error_missing_estimated_production">Total Farm Production or Plot production was not provided!</string>
+    <string name="year">Year</string>
+    <string name="jan">Jan</string>
+    <string name="feb">Feb</string>
+    <string name="mar">Mar</string>
+    <string name="apr">Apr</string>
+    <string name="may">May</string>
+    <string name="jun">Jun</string>
+    <string name="jul">Jul</string>
+    <string name="aug">Aug</string>
+    <string name="sep">Sep</string>
+    <string name="oct">Oct</string>
+    <string name="nov">Nov</string>
+    <string name="dec">Dev</string>
+    <string name="activities">Activities</string>
+    <string name="supplies">Supplies Cost</string>
+    <string name="labour">Labour Cost</string>
+    <string name="family_members">Family Members</string>
+    <string name="farmer_details">Farmer Details</string>
+    <string name="error_getting_farmer_info">There was an error attempting to retrieve farmer info</string>
+    <string name="fill_data">Enter data</string>
+    <string name="enter_data_rationale">"Please enter number of family members in Farmer Profile form for "</string>
+    <string name="before_proceed_suffux"> before proceeding.</string>
+    <string name="no_access_to_pl">No access to P &amp; L</string>
+    <string name="and"> and </string>
+    <string name="enter_all_ao_data">Please enter all Adoption Observation and Plot Info values for </string>
+    <string name="missing_data">Missing data</string>
+    <string name="no_plots">No Plots Added!</string>
+    <string name="add_plot">Please add a plot to access P &amp; L.</string>
+    <string name="farm_result">Farm Result</string>
+    <string name="incomplete_ao_monitoring">Incomplete AO monitoring</string>
+    <string name="different_no_monitoring">Different number of monitoring for plots</string>
+    <string name="ensure_farm_acre_equal">Please ensure that total farm acreage is equal to total acreage of all plots!</string>
+    <string name="fill_in_plot_size_values">Please fill in values for farm size and all plot sizes!</string>
+    <string name="monitoring_for_year">Monitoring for Year</string>
+    <string name="for_"> for </string>
+    <string name="incorrect_no_plots_suffix">\'s plots are not equal.\\nPlease make sure all plots have the same number of monitoring!</string>
+    <string name="farmer">Farmer </string>
+    <string name="no_monitoring_added"> has no monitoring added for Year </string>
+    <string name="please_add_monitoring_suffix">!\\nPlease add at least 1 monitoring for each plot before proceeding.</string>
+    <string name="no_plots_added_suffix">has no plots added! Please add at least 1 plot before proceeding</string>
+    <string name="incomplete_monitoring_prefix">Some plots have incomplete AO Monitoring results for Year</string>
+    <string name="incomplete_monitoring_suffix">.
+        Please make sure all plot monitoring are complete for the specified year</string>
+    <string name="back">Back</string>
+    <string name="fdp_status">FDP status</string>
+    <string name="provide_all_permissions">Provide Permissions</string>
+    <string name="provide_all_permissions_rationale">All permissions are needed for FDP to work properly</string>
+    <string name="quit">Quit</string>
+    <string name="select_country_region">Please Select a Country/Region</string>
+    <string name="hey_there">Hey there!</string>
+    <string name="sync">Sync</string>
+    <string name="sync_anyway">Sync anyway</string>
+    <string name="first_sign_in_rationale">Looks like this is your first sign in.
+        "Since you have internet connection it's recommended you sync data from the server.</string>
+    <string name="incomplete_ao_rational">Please complete Diagnostic Adoption Observation for Plot </string>
 
-        <item name="10">2026</item>
-        <item name="11">2027</item>
-        <item name="12">2028</item>
+    <string name="plot_info">Plot Info</string>
 
-        <item name="13">2029</item>
-        <item name="14">2030</item>
-        <item name="15">2031</item>
-    </string-array>
+    <string name="getting_data">Getting data</string>
+    <string name="please_wait">Please wait a moment…</string>
+    <string name="connection_error">"An error has occurred. Please check your connection and try again :("</string>
+    <string name="update_questions_data">Updating questions data</string>
+    <string name="could_not_connect">Could not connect</string>
+    <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
+    <string name="all_data_downloaded">All data downloaded successfully!</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="getting_skip_logic">Obtaining Skip Logic data</string>
+    <string name="getting_recommendations">Obtaining Recommendations data</string>
+    <string name="getting_more">Getting more data</string>
+    <string name="getting_even_more">Getting even more data</string>
+    <string name="getting_final_data">Getting the last bit of other data</string>
+    <string name="getting_logic">Obtaining Logic data</string>
+    <string name="getting_cc">Syncing all Complex calculations data</string>
+    <string name="getting_c">Syncing all Calculations data</string>
 
 
     <string-array name="months">
@@ -130,6 +211,29 @@
     <string name="close">Close</string>
     <string name="title">Close</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-    <string name="pandl"><![CDATA[P & L]]></string>
+    <string name="pandl" translatable="false"><![CDATA[P & L]]></string>
 
+
+    //Ignore
+    <string-array name="years">
+        <item name="1">2017</item>
+        <item name="2">2018</item>
+        <item name="3">2019</item>
+
+        <item name="4">2020</item>
+        <item name="5">2021</item>
+        <item name="6">2022</item>
+
+        <item name="7">2023</item>
+        <item name="8">2024</item>
+        <item name="9">2025</item>
+
+        <item name="10">2026</item>
+        <item name="11">2027</item>
+        <item name="12">2028</item>
+
+        <item name="13">2029</item>
+        <item name="14">2030</item>
+        <item name="15">2031</item>
+    </string-array>
 </resources>

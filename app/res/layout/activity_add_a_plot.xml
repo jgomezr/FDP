@@ -130,18 +130,17 @@
 
 
 
-                        <com.jaredrummler.materialspinner.MaterialSpinner
+                        <TextView
                             android:id="@+id/plotSizeUnitSpinner"
                             android:layout_toRightOf="@id/plotSizeEdittext"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="@dimen/spacing_half"
-                            android:background="@drawable/border_background"
                             android:ellipsize="end"
                             android:maxLines="1"
+                            android:gravity="center_vertical"
                             app:layout_widthPercent="50%"
-                            app:ms_arrow_tint="@color/colorPrimary"
-                            app:ms_background_color="@color/background"
+
                             />
 
 
@@ -213,18 +212,16 @@
 
 
 
-                        <com.jaredrummler.materialspinner.MaterialSpinner
+                        <TextView
                             android:id="@+id/productionSizeUnitSpinner"
                             android:layout_toRightOf="@id/estimatedProductionEdittext"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="@dimen/spacing_half"
-                            android:background="@drawable/border_background"
                             android:ellipsize="end"
+                             android:gravity="center_vertical"
                             android:maxLines="1"
                             app:layout_widthPercent="50%"
-                            app:ms_arrow_tint="@color/colorPrimary"
-                            app:ms_background_color="@color/background"
                             />
 
 

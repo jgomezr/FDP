@@ -16,28 +16,30 @@ public class Village {
     String district;
 
 
-    public void setName(String name) {
-        Name = name;
-    }
-
-
-    public void setId(String id) {
-        Id = id;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
+    public Village() {
     }
 
     public String getName() {
         return Name;
     }
 
+    public void setName(String name) {
+        Name = name;
+    }
+
     public String getId() {
         return Id;
     }
 
+    public void setId(String id) {
+        Id = id;
+    }
+
     public String getDistrict() {
         return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
     }
 }

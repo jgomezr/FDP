@@ -5,18 +5,22 @@ package org.grameen.fdp.utility;
  */
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.github.dkharrat.nexusdialog.FormController;
-import com.github.dkharrat.nexusdialog.controllers.LabeledFieldController;
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -31,6 +35,8 @@ public class CheckBoxController extends MyLabeledFieldController {
     private final List<String> items;
     private final List<?> values;
     boolean IS_ENABLED = true;
+
+    String oldValues;
 
     /**
      * Constructs a new instance of a checkboxes field.
@@ -67,7 +73,7 @@ public class CheckBoxController extends MyLabeledFieldController {
         this.IS_ENABLED = isEnabled;
 
 
-        if(values != null && items.size() != values.size()) {
+        if (values != null && items.size() != values.size()) {
             throw new IllegalArgumentException("Size of Values and Items must be equal.");
         }
     }
@@ -86,8 +92,21 @@ public class CheckBoxController extends MyLabeledFieldController {
      *                         {@code CheckBoxController} expects the form model to use index (as an Integer) to
      *                         represent the selected item
      */
+    /*public CheckBoxController(Context ctx, String name, String labelText, boolean isRequired, List<String> items, boolean useItemsAsValues, boolean isEnabled, String oldValues) {
+        this(ctx, name, labelText, isRequired, items, useItemsAsValues ? items : null, isEnabled);
+
+        this.oldValues = oldValues;
+
+        Log.i("CHECK BOX CONTROLLER", oldValues);
+
+    }*/
+
     public CheckBoxController(Context ctx, String name, String labelText, boolean isRequired, List<String> items, boolean useItemsAsValues, boolean isEnabled) {
         this(ctx, name, labelText, isRequired, items, useItemsAsValues ? items : null, isEnabled);
+
+
+       // Log.i("CHECK BOX CONTROLLER", oldValues);
+
     }
 
     /**
@@ -107,7 +126,7 @@ public class CheckBoxController extends MyLabeledFieldController {
         this.values = values;
         this.IS_ENABLED = isEnabled;
 
-        if(values != null && items.size() != values.size()) {
+        if (values != null && items.size() != values.size()) {
             throw new IllegalArgumentException("Size of Values and Items must be equal.");
         }
     }
@@ -127,7 +146,7 @@ public class CheckBoxController extends MyLabeledFieldController {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     int position = buttonView.getId() - CHECKBOX_ID;
-                    Object value = areValuesDefined() ? values.get(position): position;
+                    Object value = areValuesDefined() ? values.get(position) : position;
                     Set<Object> modelValues = new HashSet<>(retrieveModelValues());
                     if (isChecked) {
                         modelValues.add(value);
@@ -184,10 +203,45 @@ public class CheckBoxController extends MyLabeledFieldController {
      * @return The values from the model.
      */
     private Set<Object> retrieveModelValues() {
-        Set<Object> modelValues = (Set<Object>) getModel().getValue(getName());
+
+
+        String value;
+        try {
+
+            value = getModel().getValue(getName()).toString();
+
+        }catch(NullPointerException e){
+
+            e.printStackTrace();
+            value = "";
+        }
+
+        JSONArray jsonArray = new JSONArray();
+        try {
+            jsonArray = new JSONArray(value);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        /*Set<Object> modelValues = new HashSet<Object>(Arrays.asList(jsonArray));
         if (modelValues == null) {
             modelValues = new HashSet<>();
+        }*/
+        Set<Object> modelValues = new HashSet<Object>();
+        for(int i = 0; i < items.size(); i++){
+
+            if(value.contains(items.get(i))){
+                modelValues.add(items.get(i));
+            }
+
+
+
+
         }
+
+
+
+
         return modelValues;
     }
 

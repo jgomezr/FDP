@@ -24,8 +24,7 @@ public class NetworkBroadcastReceiver extends BroadcastReceiver {
             Log.d("NetworkReceiver", "connectivity change");
 
 
-
-            if(!status ){
+            if (!status) {
 
                 View rootView = ((AppCompatActivity) context).getWindow().getDecorView().findViewById(android.R.id.content);
 
@@ -33,16 +32,15 @@ public class NetworkBroadcastReceiver extends BroadcastReceiver {
                 snackbar.show();
 
 
-            }else{
+            } else {
 
-                if(snackbar != null) snackbar.dismiss();
+                if (snackbar != null) snackbar.dismiss();
 
             }
 
-        }else  Log.d("NetworkReceiver", "NOT Connectivity change");
+        } else Log.d("NetworkReceiver", "NOT Connectivity change");
 
     }
-
 
 
 }

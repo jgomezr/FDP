@@ -66,6 +66,10 @@
     <color name="bottom_sheet_light">#ebeef0</color>
     <color name="bottom_sheet_dark">#2e2e2e</color>
 
+    <color name="fail">#e65252</color>
+    <color name="pass">#52e668</color>
+    <color name="non_critical_fail">#fcdc7e</color>
+
 
     <color name="colorAccentLighter">@color/background_1</color>
     <color name="colorAccentDark">#060606</color>
@@ -134,6 +138,31 @@
     </array>
 
 
+
+
+
+
+
+
+    <color name="bg_line">#E7E7E7</color>
+    <color name="bg_color">#FF99DCD7</color>
+
+    <color name="cell_background_color">#ffffff</color>
+    <color name="cell_text_color">#1f1f1f</color>
+    <color name="header_line_color">@color/colorAccent</color>
+
+
+    <!-- Material Design TableView Colors -->
+    <color name="md_cell_text_color">#1f1f1f</color>
+    <color name="md_column_header_text_color">#696969</color>
+    <color name="md_highlight_row_background_color">#EEEEEE</color>
+    <color name="md_selected_background_color">#F5F5F5</color>
+    <color name="md_cell_line_color">#dbdbdb</color>
+
+    <!-- Overriding the default values of the tableView -->
+    <!-- <color name="cell_line_color">#dbdbdb</color> -->
+    <!-- <color name="table_view_selected_background_color">@color/md_selected_background_color</color> -->
+    <color name="default_background_color">@color/cell_background_color</color>
 
 
 

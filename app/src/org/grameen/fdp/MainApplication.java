@@ -38,29 +38,29 @@ import com.salesforce.androidsdk.smartsync.app.SmartSyncSDKManager;
  */
 public class MainApplication extends Application {
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		SmartSyncSDKManager.initNative(getApplicationContext(), new NativeKeyImpl(), MainActivity.class);
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        SmartSyncSDKManager.initNative(getApplicationContext(), new NativeKeyImpl(), MainActivity.class);
 
 		/*
-		 * Un-comment the line below to enable push notifications in this app.
+         * Un-comment the line below to enable push notifications in this app.
 		 * Replace 'pnInterface' with your implementation of 'PushNotificationInterface'.
 		 * Add your Google package ID in 'bootonfig.xml', as the value
 		 * for the key 'androidPushNotificationClientId'.
 		 */
-		// SalesforceSDKManager.getInstance().setPushNotificationReceiver(pnInterface);
+        // SalesforceSDKManager.getInstance().setPushNotificationReceiver(pnInterface);
 
 
-		StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-		StrictMode.setVmPolicy(builder.build());
-	}
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+    }
 }
 
 class NativeKeyImpl implements KeyInterface {
 
-	@Override
-	public String getKey(String name) {
-		return Encryptor.hash(name + "12s9adpahk;n12-97sdainkasd=012", name + "12kl0dsakj4-cxh1qewkjasdol8");
-	}
+    @Override
+    public String getKey(String name) {
+        return Encryptor.hash(name + "12s9adpahk;n12-97sdainkasd=012", name + "12kl0dsakj4-cxh1qewkjasdol8");
+    }
 }

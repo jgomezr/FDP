@@ -28,7 +28,6 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.Toast;
 
-
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
@@ -67,28 +66,22 @@ import io.codetail.animation.ViewAnimationUtils;
 public class MapActivity extends BaseActivity implements
         OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, LocationListener, GoogleMap.OnMarkerDragListener {
 
+    public static Float DEFAULT_ZOOM = 17.0f;
     ProgressDialog progressDialog;
     String TAG = getClass().getSimpleName();
+    Button addPoint;
+    Button calculateArea;
+    List<Marker> markers = new ArrayList<>();
+    List<LatLng> latLngs = new ArrayList<>();
+    Plot plot;
+    LocationManager manager;
+    boolean hasCalculated = false;
     private GoogleMap mMap;
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private Location mLastLocation;
-    public static Float DEFAULT_ZOOM = 17.0f;
     private CameraPosition mCameraPosition;
     private boolean mPermissionDenied = false;
-
-    Button addPoint;
-    Button calculateArea;
-
-    List<Marker> markers = new ArrayList<>();
-
-    List<LatLng> latLngs = new ArrayList<>();
-
-    Plot plot;
-    LocationManager manager;
-
-
-    boolean hasCalculated = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -120,11 +113,11 @@ public class MapActivity extends BaseActivity implements
                 calculateArea.setEnabled(false);
 
 
-                if(!hasCalculated){
+                if (!hasCalculated) {
 
                     drawPolygon();
 
-                }else{
+                } else {
                     clearMap(null);
                 }
 
@@ -295,7 +288,7 @@ public class MapActivity extends BaseActivity implements
 
                             if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 
-                                if(progressDialog != null)
+                                if (progressDialog != null)
                                     progressDialog.dismiss();
 
                                 showAlertDialog(false, "GPS is disabled", "Would you like to enable it?", new DialogInterface.OnClickListener() {
@@ -332,8 +325,8 @@ public class MapActivity extends BaseActivity implements
 
                             if (mMap != null) {
 
-                                if ( ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
-                                        != PackageManager.PERMISSION_GRANTED &&  ActivityCompat.checkSelfPermission(this,
+                                if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                                        != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                                         android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
                                     return;
@@ -371,23 +364,23 @@ public class MapActivity extends BaseActivity implements
         if (mPermissionDenied) {
             // Permission was not granted, display error dialog.
             showAlertDialog(true, "Location permission", "Please grant location permission for the map to work properly", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
 
-                        }
-                    }, "OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                }
+            }, "OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
 
-                        }
-                    }, "CANCEL", 0);
-                    mPermissionDenied = false;
+                }
+            }, "CANCEL", 0);
+            mPermissionDenied = false;
         } else {
 
             if (mGoogleApiClient != null)
                 mGoogleApiClient.connect();
 
-            else if(mMap != null){
+            else if (mMap != null) {
                 mGoogleApiClient = buildGoogleApiClient(this);
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     return;
@@ -398,10 +391,6 @@ public class MapActivity extends BaseActivity implements
 
         }
     }
-
-
-
-
 
 
     void startRevealAnimation(View myView) {
@@ -422,7 +411,7 @@ public class MapActivity extends BaseActivity implements
         animator.setInterpolator(new AccelerateDecelerateInterpolator());
         animator.setDuration(1500);
         animator.start();
-     }
+    }
 
     void requestLocation() {
         if (ContextCompat.checkSelfPermission(this,
@@ -432,13 +421,8 @@ public class MapActivity extends BaseActivity implements
             Log.d(TAG, "Permission not granted");
 
 
-
-
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION,
                     android.Manifest.permission.ACCESS_FINE_LOCATION}, Constants.PERMISSION_FINE_LOCATION);
-
-
-
 
 
         } else {
@@ -446,8 +430,8 @@ public class MapActivity extends BaseActivity implements
 
             if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 
-                if(progressDialog != null)
-                progressDialog.dismiss();
+                if (progressDialog != null)
+                    progressDialog.dismiss();
 
                 showAlertDialog(false, "GPS is disabled", "Would you like to enable it?", new DialogInterface.OnClickListener() {
                     @Override
@@ -455,7 +439,6 @@ public class MapActivity extends BaseActivity implements
                         dialog.dismiss();
 
                         startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 600);
-
 
 
                     }
@@ -468,7 +451,7 @@ public class MapActivity extends BaseActivity implements
                 }, "CANCEL", 0);
 
 
-            }else {
+            } else {
 
 
                 Log.d(TAG, "Permission Granted, no need for checking");
@@ -593,10 +576,7 @@ public class MapActivity extends BaseActivity implements
     }
 
 
-
-    void addMarker(){
-
-
+    void addMarker() {
 
 
         markers.add(mMap.addMarker(new MarkerOptions()
@@ -605,17 +585,15 @@ public class MapActivity extends BaseActivity implements
                 .draggable(true).visible(true)));
 
 
-
-        if(markers.size() >= 3)
+        if (markers.size() >= 3)
             calculateArea.setEnabled(true);
-        else  calculateArea.setEnabled(false);
+        else calculateArea.setEnabled(false);
 
 
     }
 
 
-
-    void clearMap(View v){
+    void clearMap(View v) {
 
         mMap.clear();
 
@@ -625,68 +603,67 @@ public class MapActivity extends BaseActivity implements
     }
 
 
-      void computeAreaInSquareMeters() {
+    void computeAreaInSquareMeters() {
 
-          if(latLngs != null && latLngs.size() > 2) {
-
-
-              final Double value = SphericalUtil.computeArea(latLngs);
-              Log.d(TAG, "computeAreaInSquareMeters " + value);
+        if (latLngs != null && latLngs.size() > 2) {
 
 
-              showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + "in square meters is " + value, new DialogInterface.OnClickListener() {
-                  @Override
-                  public void onClick(DialogInterface dialogInterface, int i) {
-
-                      dialogInterface.dismiss();
-
-                      plot.setArea(value.toString());
+            final Double value = SphericalUtil.computeArea(latLngs);
+            Log.d(TAG, "computeAreaInSquareMeters " + value);
 
 
-                  }
-              }, "SAVE", new DialogInterface.OnClickListener() {
-                  @Override
-                  public void onClick(DialogInterface dialogInterface, int i) {
+            showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + "in square meters is " + value, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-                      dialogInterface.dismiss();
+                    dialogInterface.dismiss();
 
-                  }
-              }, "CANCEL", 0);
+                    plot.setArea(value.toString());
 
 
-              calculateArea.setEnabled(true);
-              calculateArea.setText("Clear Map");
+                }
+            }, "SAVE", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-              hasCalculated = true;
+                    dialogInterface.dismiss();
+
+                }
+            }, "CANCEL", 0);
 
 
+            calculateArea.setEnabled(true);
+            calculateArea.setText("Clear Map");
 
-          }else CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG);
-      }
+            hasCalculated = true;
 
 
+        } else
+            CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG);
+    }
 
-      double convertToHectres(Double valueInSquareMetres){
 
-        return valueInSquareMetres/10000;
+    double convertToHectres(Double valueInSquareMetres) {
 
-      }
+        return valueInSquareMetres / 10000;
 
-    double convertToAcres(Double valueInSquareMetres){
+    }
 
-          return valueInSquareMetres/4040.856;
+    double convertToAcres(Double valueInSquareMetres) {
+
+        return valueInSquareMetres / 4040.856;
 
     }
 
 
-    void drawPolygon(){
+    void drawPolygon() {
 
 
         PolygonOptions polygonOptions = new PolygonOptions();
-        for(Marker ll: markers){
+        for (Marker ll : markers) {
 
             //latLngs.add(ll.getPosition());
-             polygonOptions.add(ll.getPosition());
+            polygonOptions.add(ll.getPosition());
 
 
         }
@@ -705,10 +682,8 @@ public class MapActivity extends BaseActivity implements
             Log.d(TAG, "POINTS SIZE IS  " + points.size());
 
 
-
-            Log.i("Poly lines","Successfully added polyline on map");
+            Log.i("Poly lines", "Successfully added polyline on map");
         }
-
 
 
         new Handler().postDelayed(new Runnable() {
@@ -733,7 +708,6 @@ public class MapActivity extends BaseActivity implements
         Log.d(TAG, "LONGITUDE " + marker.getPosition().latitude);
 
 
-
         markers.remove(marker);
 
     }
@@ -753,7 +727,6 @@ public class MapActivity extends BaseActivity implements
 
 
         markers.add(marker);
-
 
 
     }

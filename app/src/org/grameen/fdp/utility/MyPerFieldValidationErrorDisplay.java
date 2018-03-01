@@ -7,9 +7,6 @@ package org.grameen.fdp.utility;
 import android.content.Context;
 import android.content.res.Resources;
 
-import com.github.dkharrat.nexusdialog.FormController;
-import com.github.dkharrat.nexusdialog.FormElementController;
-import com.github.dkharrat.nexusdialog.controllers.FormSectionController;
 import com.github.dkharrat.nexusdialog.validations.ValidationError;
 import com.github.dkharrat.nexusdialog.validations.ValidationErrorDisplay;
 
@@ -26,8 +23,8 @@ public class MyPerFieldValidationErrorDisplay implements ValidationErrorDisplay 
 
     @Override
     public void resetErrors() {
-        for (MyFormSectionController section: controller.getSections()) {
-            for (MyFormElementController elementController: section.getElements()) {
+        for (MyFormSectionController section : controller.getSections()) {
+            for (MyFormElementController elementController : section.getElements()) {
                 elementController.setError(null);
             }
         }

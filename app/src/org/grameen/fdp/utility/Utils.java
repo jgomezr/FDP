@@ -40,7 +40,6 @@ public class Utils {
     }
 
 
-
     public static int getScreenWidth(Context c) {
         if (screenWidth == 0) {
             WindowManager wm = (WindowManager) c.getSystemService(Context.WINDOW_SERVICE);
@@ -54,7 +53,7 @@ public class Utils {
     }
 
 
-     public static boolean checkInternetConnection(Context context) {
+    public static boolean checkInternetConnection(Context context) {
 
 
         ConnectivityManager conMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -72,16 +71,14 @@ public class Utils {
     }
 
 
-
-
-    public static boolean isTablet(AppCompatActivity context){
+    public static boolean isTablet(AppCompatActivity context) {
 
         DisplayMetrics metrics = new DisplayMetrics();
         context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-        float yInches= metrics.heightPixels/metrics.ydpi;
-        float xInches= metrics.widthPixels/metrics.xdpi;
-        double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
+        float yInches = metrics.heightPixels / metrics.ydpi;
+        float xInches = metrics.widthPixels / metrics.xdpi;
+        double diagonalInches = Math.sqrt(xInches * xInches + yInches * yInches);
 
         return diagonalInches >= 7;
     }

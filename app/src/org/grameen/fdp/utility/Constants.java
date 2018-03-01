@@ -10,6 +10,7 @@ public class Constants {
     public static final String TYPE_TEXT = "text";
     public static final String TYPE_NUMBER = "number";
     public static final String TYPE_NUMBER_DECIMAL = "decimal";
+    public static final String TYPE_COMPLEX_CALCULATION = "complex calculation";
 
 
     public static final String TYPE_LOCATION = "geolocation";
@@ -24,11 +25,8 @@ public class Constants {
     public static final String TYPE_LOGIC_FORMULA = "logic formula";
 
 
-
     public static final String SHOW = "false";
     public static final String HIDE = "true";
-
-
 
 
     public static final String FARMER_PROFILE = "farmer profile";
@@ -44,13 +42,30 @@ public class Constants {
     public static final String PLOT_RESULTS = "plot results";
     public static final String PLOT_INFORMATION = "plot information";
 
+    public static final String AO_MONITORING = "ao monitoring";
+    public static final String AO_MONITORING_RESULT = "ao monitoring result";
+    public static final String MONITORING_PLOT_INFORMATION = "monitoring plot information";
+
+    public static final String COMPETENCE_MONITORING = "competence monitoring";
+    public static final String FAILURE_MONITORING = "failure monitoring";
+
+    public static final String FDP_STATUS = "fdp status";
+
+
+
+
 
     public static final String REGISTER = " register";
     public static final String MONITORING = "monitoring";
-
-
-
-
+    public static final int PLACE_PICKER_REQUEST = 101;
+    public static final int PERMISSION_FINE_LOCATION = 102;
+    public static final int PERMISSION_CALL = 222;
+    public static final String TAG_TITLE_TEXT_VIEW = "titleTag";
+    public static final String BUTTON_VIEW = "buttonTag";
+    public static final String TAG_OTHER_TEXT_VIEW = "textTag";
+    public static final String TAG_CALCULATION = "calculationTag";
+    public static final String TAG_VIEW = "viewTag";
+    public static final String TAG_RESULTS = "resultsTag";
     public static String IS_USER_SIGNED_IN = "isUserSignedIn";
     public static String IS_RETAILER_SIGNED_IN = "isUserSignedIn";
     public static String IS_GAME_CENTER_SIGNED_IN = "isUserSignedIn";
@@ -64,31 +79,10 @@ public class Constants {
     public static String USER_PHOTO_CLOUD_URL = "userProfilePhotoCloud";
     public static String IS_NIGHT_MODE = "isNightMode";
     public static int LAST_SELECTED_FRAGMENT = 1;
-
-
     public static int SYNC_OK = 1;
     public static int SYNC_NOT_OK = 0;
 
-    public static final int PLACE_PICKER_REQUEST = 101;
-    public static final int PERMISSION_FINE_LOCATION = 102;
-    public static final int PERMISSION_CALL = 222;
-
-
-
-
-    public static final String TAG_TITLE_TEXT_VIEW = "titleTag";
-    public static final String TAG_OTHER_TEXT_VIEW = "textTag";
-
-    public static final String TAG_CALCULATION = "calculationTag";
-    public static final String TAG_VIEW = "viewTag";
-
-
-    public static final String TAG_RESULTS = "resultsTag";
-
-
-
-
-
+    public static final String NO_MONITORING_PLACE_HOLDER = "N/A - Please complete monitoring A0";
 
 
 }

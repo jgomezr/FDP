@@ -9,12 +9,8 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.dkharrat.nexusdialog.FormElementController;
 import com.github.dkharrat.nexusdialog.FormModel;
 import com.github.dkharrat.nexusdialog.MapFormModel;
-
-import com.github.dkharrat.nexusdialog.controllers.LabeledFieldController;
-import com.github.dkharrat.nexusdialog.validations.PerFieldValidationErrorDisplay;
 import com.github.dkharrat.nexusdialog.validations.ValidationError;
 import com.github.dkharrat.nexusdialog.validations.ValidationErrorDisplay;
 
@@ -32,21 +28,44 @@ import java.util.concurrent.atomic.AtomicInteger;
  * the data. Form elements use the model to retrieve current field values and set them upon user input.
  */
 public class MyFormController {
+    private static final AtomicInteger nextGeneratedViewId = new AtomicInteger(1);
     private final List<MyFormSectionController> sectionControllers = new ArrayList<MyFormSectionController>();
-
     private FormModel model;
     private ValidationErrorDisplay validationErrorDisplay;
-    private static final AtomicInteger nextGeneratedViewId = new AtomicInteger(1);
+    private PropertyChangeListener modelListener = new PropertyChangeListener() {
+        @Override
+        public void propertyChange(PropertyChangeEvent event) {
+            getElement(event.getPropertyName()).refresh();
+        }
+    };
 
     /**
      * Constructs a new FormController.
      *
-     * @param context       the Activity's context
-     * @param formModel     the backing model that stores the fields values. A map-based implementation is provided by {@link MapFormModel}.
+     * @param context   the Activity's context
+     * @param formModel the backing model that stores the fields values. A map-based implementation is provided by {@link MapFormModel}.
      */
     public MyFormController(Context context, FormModel formModel) {
         this.model = formModel;
         setValidationErrorsDisplayMethod(new MyPerFieldValidationErrorDisplay(context, this));
+    }
+
+    /**
+     * Generate an available ID for the view.
+     * Uses the same implementation as {@link View#generateViewId}
+     *
+     * @return the next available view identifier.
+     */
+    public static int generateViewId() {
+        for (; ; ) {
+            final int result = nextGeneratedViewId.get();
+            // aapt-generated IDs have the high byte nonzero; clamp to the range under that.
+            int newValue = result + 1;
+            if (newValue > 0x00FFFFFF) newValue = 1; // Roll over to 1, not 0.
+            if (nextGeneratedViewId.compareAndSet(result, newValue)) {
+                return result;
+            }
+        }
     }
 
     /**
@@ -75,24 +94,6 @@ public class MyFormController {
     }
 
     /**
-     * Generate an available ID for the view.
-     * Uses the same implementation as {@link View#generateViewId}
-     *
-     * @return the next available view identifier.
-     */
-    public static int generateViewId(){
-        for (;;) {
-            final int result = nextGeneratedViewId.get();
-            // aapt-generated IDs have the high byte nonzero; clamp to the range under that.
-            int newValue = result + 1;
-            if (newValue > 0x00FFFFFF) newValue = 1; // Roll over to 1, not 0.
-            if (nextGeneratedViewId.compareAndSet(result, newValue)) {
-                return result;
-            }
-        }
-    }
-
-    /**
      * Returns a list of the sections of this form.
      *
      * @return a list containing all the <code>MyFormSectionController</code>'s of this form
@@ -104,9 +105,9 @@ public class MyFormController {
     /**
      * Returns the corresponding <code>MyFormSectionController</code> from the specified name.
      *
-     * @param name  the name of the section
-     * @return      the instance of <code>MyFormSectionController</code> with the specified name, or null if no such
-     *              section exists
+     * @param name the name of the section
+     * @return the instance of <code>MyFormSectionController</code> with the specified name, or null if no such
+     * section exists
      */
     public MyFormSectionController getSection(String name) {
         for (MyFormSectionController section : getSections()) {
@@ -120,8 +121,8 @@ public class MyFormController {
     /**
      * Adds the specified section to the form.
      *
-     * @param section   the form section to add
-     * @param position  the position at which to insert the section
+     * @param section  the form section to add
+     * @param position the position at which to insert the section
      */
     public void addSection(MyFormSectionController section, int position) {
         sectionControllers.add(position, section);
@@ -130,7 +131,7 @@ public class MyFormController {
     /**
      * Adds the specified section to the form to the end.
      *
-     * @param section   the form section to add
+     * @param section the form section to add
      */
     public void addSection(MyFormSectionController section) {
         addSection(section, sectionControllers.size());
@@ -139,9 +140,9 @@ public class MyFormController {
     /**
      * Returns the corresponding <code>FormElementController</code> from the specified name.
      *
-     * @param name  the name of the form element
-     * @return      the instance of <code>FormElementController</code> with the specified name, or null if no such
-     *              element exists
+     * @param name the name of the form element
+     * @return the instance of <code>FormElementController</code> with the specified name, or null if no such
+     * element exists
      */
     public MyFormElementController getElement(String name) {
         for (MyFormSectionController section : getSections()) {
@@ -156,7 +157,7 @@ public class MyFormController {
     /**
      * Returns the total number of elements in this form, not including sections.
      *
-     * @return  the total number of elements in this form, not including sections
+     * @return the total number of elements in this form, not including sections
      */
     public int getNumberOfElements() {
         int count = 0;
@@ -187,7 +188,7 @@ public class MyFormController {
         for (MyFormSectionController section : getSections()) {
             for (MyFormElementController element : section.getElements()) {
                 if (element instanceof MyLabeledFieldController) {
-                    MyLabeledFieldController field = (MyLabeledFieldController)element;
+                    MyLabeledFieldController field = (MyLabeledFieldController) element;
                     errors.addAll(field.validateInput());
                 }
             }
@@ -199,7 +200,7 @@ public class MyFormController {
     /**
      * Indicates if the current user input is valid.
      *
-     * @return  true if the current user input is valid, otherwise false
+     * @return true if the current user input is valid, otherwise false
      */
     public boolean isValidInput() {
         return validateInput().isEmpty();
@@ -239,7 +240,7 @@ public class MyFormController {
         containerView.removeAllViews();
 
         for (MyFormSectionController section : getSections()) {
-            ((MyFormElementController)section).setModel(getModel());
+            ((MyFormElementController) section).setModel(getModel());
             containerView.addView(section.getView());
 
             for (MyFormElementController element : section.getElements()) {
@@ -251,10 +252,4 @@ public class MyFormController {
         // now that the view is setup, register a listener of the model to update the view on changes
         registerFormModelListener();
     }
-
-    private PropertyChangeListener modelListener = new PropertyChangeListener() {
-        @Override public void propertyChange(PropertyChangeEvent event) {
-            getElement(event.getPropertyName()).refresh();
-        }
-    };
 }

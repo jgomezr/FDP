@@ -2,7 +2,6 @@ package org.grameen.fdp.activity;
 
 import android.animation.Animator;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,8 +28,7 @@ public class SplashActivity extends AppCompatActivity {
     TextView text;
     ImageView image1;
     LinearLayout textLayout;
-     String TAG = SplashActivity.class.getSimpleName();
-
+    String TAG = SplashActivity.class.getSimpleName();
 
 
     public void onAttachedToWindow() {
@@ -54,12 +52,12 @@ public class SplashActivity extends AppCompatActivity {
         textLayout = (LinearLayout) findViewById(R.id.ll1);
 
         image1 = (ImageView) findViewById(R.id.image_view1);
-         text = (TextView) findViewById(R.id.text_1);
+        text = (TextView) findViewById(R.id.text_1);
 
        /* image1.setTranslationY(Utils.getScreenHeight(this));
         image2.setTranslationY(image1.getHeight());*/
 
-       image1.setAlpha(0f);
+        image1.setAlpha(0f);
         textLayout.setTranslationY(-100f);
         textLayout.setAlpha(0f);
 
@@ -150,25 +148,13 @@ public class SplashActivity extends AppCompatActivity {
     private void moveToNextActivity() {
 
 
-        if(!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(Constants.IS_USER_SIGNED_IN, false))
+        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(Constants.IS_USER_SIGNED_IN, false))
             startActivity(new Intent(this, LoginActivity.class));
         else
             startActivity(new Intent(this, LandingPageActivity.class));
 
 
-
-
-
-
-
-
-
-
-
-
-
-        }
-
+    }
 
 
 }

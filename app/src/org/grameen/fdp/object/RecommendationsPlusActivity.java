@@ -18,7 +18,8 @@ public class RecommendationsPlusActivity {
     @SerializedName("Activity__c")
     String activityId;
 
-    @SerializedName("Activity__r.Name")
+
+    @SerializedName("Activity_Name__c")
     String activityName;
 
     @SerializedName("Labor_cost__c")
@@ -40,89 +41,86 @@ public class RecommendationsPlusActivity {
     String year;
 
 
-
-
-
-    public RecommendationsPlusActivity(){}
-
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setActivityId(String activityId) {
-        this.activityId = activityId;
-    }
-
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
-    }
-
-    public void setLaborCost(String laborCost) {
-        this.laborCost = laborCost;
-    }
-
-    public void setLaborDaysNeeded(String laborDaysNeeded) {
-        this.laborDaysNeeded = laborDaysNeeded;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
-
-    public void setRecommendationId(String recommendationId) {
-        this.recommendationId = recommendationId;
-    }
-
-    public void setSuppliesCost(String suppliesCost) {
-        this.suppliesCost = suppliesCost;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
+    public RecommendationsPlusActivity() {
     }
 
     public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getActivityId() {
         return activityId;
     }
 
-    public String getActivityName() {
-        return activityName;
+    public void setActivityId(String activityId) {
+        this.activityId = activityId;
     }
 
     public String getLaborCost() {
         return laborCost;
     }
 
+    public void setLaborCost(String laborCost) {
+        this.laborCost = laborCost;
+    }
+
     public String getLaborDaysNeeded() {
         return laborDaysNeeded;
+    }
+
+    public void setLaborDaysNeeded(String laborDaysNeeded) {
+        this.laborDaysNeeded = laborDaysNeeded;
     }
 
     public String getMonth() {
         return month;
     }
 
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
     public String getRecommendationId() {
         return recommendationId;
+    }
+
+    public void setRecommendationId(String recommendationId) {
+        this.recommendationId = recommendationId;
     }
 
     public String getSuppliesCost() {
         return suppliesCost;
     }
 
+    public void setSuppliesCost(String suppliesCost) {
+        this.suppliesCost = suppliesCost;
+    }
+
     public String getYear() {
         return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public void setActivityName(String activityName) {
+        this.activityName = activityName;
+    }
+
+    public String getActivityName() {
+        return activityName;
     }
 }

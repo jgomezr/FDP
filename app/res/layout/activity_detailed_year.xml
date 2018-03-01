@@ -24,95 +24,140 @@
 
 
 
-
-    <LinearLayout
-        android:id="@+id/nameLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/spacing_normal"
-        android:paddingTop="@dimen/spacing_normal"
-        android:paddingRight="@dimen/spacing_normal"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/spacing_normal"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Farmer Name:"
-                android:layout_marginRight="@dimen/spacing_half"
-                android:textColor="@color/text_black_87"
-                />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Aang Junior"
-                android:textStyle="bold"
-                android:textColor="@color/text_black_87"
-                />
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_quarter"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Farmer Code:"
-                android:layout_marginRight="@dimen/spacing_half"
-
-                />
-
-            <TextView
-                android:id="@+id/code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23445"
-                android:textStyle="bold"
-                />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/nameLayout"
-        android:padding="@dimen/spacing_normal"
-        >
-
-        <de.codecrafters.tableview.TableView
-            xmlns:table="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/tableView"
+        <RelativeLayout
+            android:id="@+id/currencyLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            table:tableView_headerElevation="2"
-            android:background="@drawable/table_view_border_background"
-            android:dividerHeight="0.5dip"
-            table:tableView_headerColor="@color/divider"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/spacing_normal"
+            android:layout_marginBottom="@dimen/spacing_half"
+            >
 
-            />
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/spacing_normal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farmer Name:"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:textColor="@color/text_black_87"
+                        />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aang Junior"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_black_87"
+                        />
+
+                </LinearLayout>
 
 
 
-    </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_quarter"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farmer Code:"
+                        android:layout_marginRight="@dimen/spacing_half"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23445"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/spacing_normal"
+                android:layout_alignParentRight="true"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency:"
+                    android:layout_marginRight="@dimen/spacing_half"
+                    android:textColor="@color/text_black_87"
+                    />
+
+                <TextView
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GHS"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/horizontalView"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal|vertical"
+                    android:layout_width="wrap_content"
+                    android:isScrollContainer="true"
+                    >
+
+
+
+                        <de.codecrafters.tableview.TableView
+                            xmlns:table="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/tableView"
+                            android:orientation="horizontal"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            table:tableView_headerElevation="2"
+                            android:background="@drawable/table_view_border_background"
+                            android:dividerHeight="0.5dip"
+                            table:tableView_headerColor="@color/divider"
+
+                            />
+
+
+
+                </FrameLayout>
 
     </LinearLayout>
 
@@ -155,27 +200,15 @@
                 />
 
 
+
+
             <Button
                 android:id="@+id/save"
-                android:layout_width="0dp"
-                android:visibility="gone"
-                android:layout_weight="2"
-                android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButtonGrey"
-                android:text="Save"
-                android:layout_marginLeft="@dimen/spacing_normal"
-                android:padding="@dimen/spacing_normal"
-                />
-
-
-            <Button
-                android:visibility="gone"
-                android:id="@+id/submitAgreement"
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButtonAccent"
-                android:text="Submit agreement"
+                android:text="Save"
                 android:padding="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
 

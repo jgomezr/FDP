@@ -7,14 +7,22 @@ package org.grameen.fdp.object;
 public class Activity {
 
 
-    String name;
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    String Name;
+    String Id;
 
     public String getName() {
-        return name;
+        return Name;
+    }
+
+    public void setName(String name) {
+        this.Name = name;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
     }
 }

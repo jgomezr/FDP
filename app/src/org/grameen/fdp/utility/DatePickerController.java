@@ -1,12 +1,5 @@
 package org.grameen.fdp.utility;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Set;
-import java.util.TimeZone;
-
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
@@ -19,8 +12,14 @@ import android.view.View.OnFocusChangeListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
-import com.github.dkharrat.nexusdialog.FormController;
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Set;
+import java.util.TimeZone;
 
 /**
  * Represents a field that allows selecting a specific date via a date picker.
@@ -30,19 +29,18 @@ import com.github.dkharrat.nexusdialog.validations.InputValidator;
  */
 public class DatePickerController extends MyLabeledFieldController {
     private final int editTextId = MyFormController.generateViewId();
-
-    private DatePickerDialog datePickerDialog = null;
     private final SimpleDateFormat displayFormat;
     private final TimeZone timeZone;
+    private DatePickerDialog datePickerDialog = null;
 
     /**
      * Constructs a new instance of a date picker field.
      *
-     * @param ctx               the Android context
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field. Set to {@code null} to not show a label.
-     * @param validators        contains the validations to process on the field
-     * @param displayFormat     the format of the date to show in the text box when a date is set
+     * @param ctx           the Android context
+     * @param name          the name of the field
+     * @param labelText     the label to display beside the field. Set to {@code null} to not show a label.
+     * @param validators    contains the validations to process on the field
+     * @param displayFormat the format of the date to show in the text box when a date is set
      */
     public DatePickerController(Context ctx, String name, String labelText, Set<InputValidator> validators, SimpleDateFormat displayFormat) {
         super(ctx, name, labelText, validators);
@@ -53,11 +51,11 @@ public class DatePickerController extends MyLabeledFieldController {
     /**
      * Constructs a new instance of a date picker field.
      *
-     * @param ctx               the Android context
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field. Set to {@code null} to not show a label.
-     * @param isRequired        indicates if the field is required or not
-     * @param displayFormat     the format of the date to show in the text box when a date is set
+     * @param ctx           the Android context
+     * @param name          the name of the field
+     * @param labelText     the label to display beside the field. Set to {@code null} to not show a label.
+     * @param isRequired    indicates if the field is required or not
+     * @param displayFormat the format of the date to show in the text box when a date is set
      */
     public DatePickerController(Context ctx, String name, String labelText, boolean isRequired, SimpleDateFormat displayFormat) {
         super(ctx, name, labelText, isRequired);
@@ -68,8 +66,8 @@ public class DatePickerController extends MyLabeledFieldController {
     /**
      * Constructs a new instance of a date picker field, with the selected date displayed in "MMM d, yyyy" format.
      *
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field
+     * @param name      the name of the field
+     * @param labelText the label to display beside the field
      */
     public DatePickerController(Context context, String name, String labelText) {
         this(context, name, labelText, false, new SimpleDateFormat("MMM d, yyyy", Locale.getDefault()));
@@ -106,10 +104,8 @@ public class DatePickerController extends MyLabeledFieldController {
     private void showDatePickerDialog(final Context context, final EditText editText) {
         // don't show dialog again if it's already being shown
         if (datePickerDialog == null) {
-            Date date = (Date)getModel().getValue(getName());
-            if (date == null) {
-                date = new Date();
-            }
+            Date date = new Date();
+
             Calendar calendar = Calendar.getInstance(Locale.getDefault());
             calendar.setTimeZone(timeZone);
             calendar.setTime(date);
@@ -138,12 +134,18 @@ public class DatePickerController extends MyLabeledFieldController {
     }
 
     private EditText getEditText() {
-        return (EditText)getView().findViewById(editTextId);
+        return (EditText) getView().findViewById(editTextId);
     }
 
     private void refresh(EditText editText) {
-        Date value = (Date)getModel().getValue(getName());
-        editText.setText(value != null ? displayFormat.format(value) : "");
+        String value = null;
+
+        if(getModel().getValue(getName()) != null) {
+              value = getModel().getValue(getName()).toString();
+        }
+        editText.setHint(value != null ? value.substring(0, 19) : "Click to add date");
+
+
     }
 
     public void refresh() {

@@ -112,6 +112,8 @@
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="background_snackbar">#323232</color>
+    <color name="bg_color">#FF99DCD7</color>
+    <color name="bg_line">#E7E7E7</color>
     <color name="black">#ff000000</color>
     <color name="black_50">#88000000</color>
     <color name="bottom_sheet_dark">#2e2e2e</color>
@@ -128,6 +130,8 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="cell_background_color">#ffffff</color>
+    <color name="cell_text_color">#1f1f1f</color>
     <color name="colorAccent">#4CAF50</color>
     <color name="colorAccent50Alpha">#8f4caf50</color>
     <color name="colorAccentDark">#060606</color>
@@ -151,6 +155,7 @@
     <color name="customButtonFocused">#3ea1a1a1</color>
     <color name="customButtonNormal">#00ececec</color>
     <color name="customButtonPressed">#5acacaca</color>
+    <color name="default_background_color">@color/cell_background_color</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -178,6 +183,7 @@
     <color name="fab_label_background_color_light">#d1d1d1</color>
     <color name="fab_mini_buttons">#898989</color>
     <color name="fab_pressed">#00E676</color>
+    <color name="fail">#e65252</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="gradient_color_1">#73314A</color>
@@ -187,6 +193,7 @@
     <color name="gray_50">#88888888</color>
     <color name="green_indicator">#9bc53d</color>
     <color name="grey">#d9d9d9</color>
+    <color name="header_line_color">@color/colorAccent</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="leftTextSelectorColor">#00a1ff</color>
@@ -206,12 +213,19 @@
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
     <color name="material_icon_colors">#9E9E9E</color>
+    <color name="md_cell_line_color">#dbdbdb</color>
+    <color name="md_cell_text_color">#1f1f1f</color>
+    <color name="md_column_header_text_color">#696969</color>
+    <color name="md_highlight_row_background_color">#EEEEEE</color>
+    <color name="md_selected_background_color">#F5F5F5</color>
     <color name="middleTextSelectorColor">#00a1ff</color>
     <color name="middleTextSelectorColorDark">@color/searchBarIconColorDark</color>
+    <color name="non_critical_fail">#fcdc7e</color>
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="orange_indicator">#f4a261</color>
+    <color name="pass">#52e668</color>
     <color name="preference_fallback_accent_color">#ff80cbc4</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
@@ -289,6 +303,11 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tab_text">#c2ededed</color>
     <color name="tab_text_selected">@color/colorAccent</color>
+    <color name="table_view_default_selected_background_color">#fada65</color>
+    <color name="table_view_default_separator_color">#E7E7E7</color>
+    <color name="table_view_default_shadow_background_color">#f2f2f2</color>
+    <color name="table_view_default_text_color">#0a0a0a</color>
+    <color name="table_view_default_unselected_background_color">#ffffff</color>
     <color name="textColorPrimaryLight">#000</color>
     <color name="textColorPrimaryLightInverted">#fff</color>
     <color name="textColorSecondaryLight">#363636</color>
@@ -362,6 +381,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
             
@@ -460,6 +481,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout_Layout"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity">
@@ -548,7 +571,7 @@
     <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
-        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/></declare-styleable>
+        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/><attr name="android:fontStyle"/><attr name="android:font"/><attr name="android:fontWeight"/></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
             <flag name="none" value="0"/>
@@ -579,6 +602,7 @@
 <enum name="hybrid" value="4"/>
 
 </attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/><attr format="float" name="cameraMinZoomPreference"/><attr format="float" name="cameraMaxZoomPreference"/><attr format="float" name="latLngBoundsSouthWestLatitude"/><attr format="float" name="latLngBoundsSouthWestLongitude"/><attr format="float" name="latLngBoundsNorthEastLatitude"/><attr format="float" name="latLngBoundsNorthEastLongitude"/></declare-styleable>
+    <declare-styleable name="MaterialEditText"><attr format="color" name="met_baseColor"/><attr format="color" name="met_primaryColor"/><attr name="met_floatingLabel"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="highlight" value="2"/></attr><attr format="color" name="met_errorColor"/><attr format="integer" name="met_minCharacters"/><attr format="integer" name="met_maxCharacters"/><attr format="boolean" name="met_singleLineEllipsis"/><attr format="integer" name="met_minBottomTextLines"/><attr format="string" name="met_helperText"/><attr format="color" name="met_helperTextColor"/><attr format="string" name="met_accentTypeface"/><attr format="string" name="met_typeface"/><attr format="string" name="met_floatingLabelText"/><attr format="dimension" name="met_floatingLabelPadding"/><attr format="boolean" name="met_hideUnderline"/><attr format="color" name="met_underlineColor"/><attr format="boolean" name="met_autoValidate"/><attr format="reference" name="met_iconLeft"/><attr format="reference" name="met_iconRight"/><attr format="dimension" name="met_iconPadding"/><attr format="boolean" name="met_clearButton"/><attr format="dimension" name="met_floatingLabelTextSize"/><attr format="color" name="met_floatingLabelTextColor"/><attr format="dimension" name="met_bottomTextSize"/><attr format="boolean" name="met_floatingLabelAlwaysShown"/><attr format="boolean" name="met_helperTextAlwaysShown"/><attr format="boolean" name="met_floatingLabelAnimating"/><attr format="color" name="met_textColor"/><attr format="color" name="met_textColorHint"/><attr format="boolean" name="met_validateOnFocusLost"/><attr format="boolean" name="met_checkCharactersCountAtBeginning"/></declare-styleable>
     <declare-styleable name="MaterialSearchBar"><attr format="boolean" name="mt_speechMode"/><attr format="integer" name="mt_maxSuggestionsCount"/><attr format="boolean" name="mt_navIconEnabled"/><attr format="boolean" name="mt_roundedSearchBarEnabled"/><attr format="boolean" name="mt_menuDividerEnabled"/><attr format="color" name="mt_dividerColor"/><attr format="color" name="mt_searchBarColor"/><attr format="reference" name="mt_menuIconDrawable"/><attr format="reference" name="mt_searchIconDrawable"/><attr format="reference" name="mt_speechIconDrawable"/><attr format="reference" name="mt_backIconDrawable"/><attr format="reference" name="mt_clearIconDrawable"/><attr format="color" name="mt_navIconTint"/><attr format="color" name="mt_menuIconTint"/><attr format="color" name="mt_searchIconTint"/><attr format="color" name="mt_backIconTint"/><attr format="color" name="mt_clearIconTint"/><attr format="boolean" name="mt_navIconUseTint"/><attr format="boolean" name="mt_menuIconUseTint"/><attr format="boolean" name="mt_searchIconUseTint"/><attr format="boolean" name="mt_backIconUseTint"/><attr format="boolean" name="mt_clearIconUseTint"/><attr format="boolean" name="mt_borderlessRippleEnabled"/><attr format="string" name="mt_hint"/><attr format="string" name="mt_placeholder"/><attr format="color" name="mt_textColor"/><attr format="color" name="mt_hintColor"/><attr format="color" name="mt_placeholderColor"/><attr format="color" name="mt_textCursorTint"/><attr format="reference" name="mt_leftTextSelectorDrawable"/><attr format="reference" name="mt_middleTextSelectorDrawable"/><attr format="reference" name="mt_rightTextSelectorDrawable"/><attr format="color" name="mt_leftTextSelectorTint"/><attr format="color" name="mt_middleTextSelectorTint"/><attr format="color" name="mt_rightTextSelectorTint"/><attr format="boolean" name="mt_handlesTintEnabled"/><attr format="color" name="mt_highlightedTextColor"/></declare-styleable>
     <declare-styleable name="MaterialSearchView"><attr format="integer" name="searchBackground"/><attr format="integer" name="searchVoiceIcon"/><attr format="integer" name="searchCloseIcon"/><attr format="integer" name="searchBackIcon"/><attr format="integer" name="searchSuggestionBackground"/><attr format="dimension" name="searchBarHeight"/><attr format="string" name="voiceHintPrompt"/><attr name="android:fitsSystemWindows"/><attr name="android:hint"/><attr name="android:textColor"/><attr name="android:textColorHint"/><attr name="android:inputType"/></declare-styleable>
     <declare-styleable name="MaterialSpinner"><attr format="color" name="ms_arrow_tint"/><attr format="boolean" name="ms_hide_arrow"/><attr format="color" name="ms_background_color"/><attr format="color" name="ms_text_color"/><attr format="dimension" name="ms_dropdown_max_height"/><attr format="dimension" name="ms_dropdown_height">
@@ -698,7 +722,7 @@
             <enum name="fill" value="0"/>
             <enum name="center" value="1"/>
         </attr><attr format="dimension" name="tabMinWidth"/><attr format="dimension" name="tabMaxWidth"/><attr format="reference" name="tabTextAppearance"/><attr format="color" name="tabTextColor"/><attr format="color" name="tabSelectedTextColor"/><attr format="dimension" name="tabPaddingStart"/><attr format="dimension" name="tabPaddingTop"/><attr format="dimension" name="tabPaddingEnd"/><attr format="dimension" name="tabPaddingBottom"/><attr format="dimension" name="tabPadding"/></declare-styleable>
-    <declare-styleable name="TableView"><attr format="integer" name="tableView_columnCount"/><attr format="integer" name="tableView_headerElevation"/><attr format="color" name="tableView_headerColor"/></declare-styleable>
+    <declare-styleable name="TableView"><attr format="dimension" name="row_header_width"/><attr format="dimension" name="column_header_height"/><attr format="color" name="selected_color"/><attr format="color" name="unselected_color"/><attr format="color" name="shadow_color"/><attr format="color" name="separator_color"/><attr format="boolean" name="show_vertical_separator"/><attr format="boolean" name="show_horizontal_separator"/><attr format="integer" name="tableView_columnCount"/><attr format="integer" name="tableView_headerElevation"/><attr format="color" name="tableView_headerColor"/></declare-styleable>
     <declare-styleable name="TextAppearance"><attr name="android:textSize"/><attr name="android:textColor"/><attr name="android:textColorHint"/><attr name="android:textColorLink"/><attr name="android:textStyle"/><attr name="android:typeface"/><attr name="android:fontFamily"/><attr name="fontFamily"/><attr name="textAllCaps"/><attr name="android:shadowColor"/><attr name="android:shadowDy"/><attr name="android:shadowDx"/><attr name="android:shadowRadius"/></declare-styleable>
     <declare-styleable name="TextInputLayout"><attr format="reference" name="hintTextAppearance"/><attr name="android:hint"/><attr format="boolean" name="hintEnabled"/><attr format="boolean" name="errorEnabled"/><attr format="reference" name="errorTextAppearance"/><attr format="boolean" name="counterEnabled"/><attr format="integer" name="counterMaxLength"/><attr format="reference" name="counterTextAppearance"/><attr format="reference" name="counterOverflowTextAppearance"/><attr name="android:textColorHint"/><attr format="boolean" name="hintAnimationEnabled"/><attr format="boolean" name="passwordToggleEnabled"/><attr format="reference" name="passwordToggleDrawable"/><attr format="string" name="passwordToggleContentDescription"/><attr format="color" name="passwordToggleTint"/><attr name="passwordToggleTintMode">
             
@@ -730,6 +754,8 @@
             <enum name="multiply" value="14"/>
             
             <enum name="screen" value="15"/>
+            
+            <enum name="add" value="16"/>
         </attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
@@ -809,12 +835,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
     <dimen name="button_elevation">2dp</dimen>
     <dimen name="button_press_elevation">4dp</dimen>
     <dimen name="card_view_width">250dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="cell_height">40dp</dimen>
     <dimen name="civ_height">70dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
@@ -825,6 +854,10 @@
     <dimen name="corner_radius_rounded">25dp</dimen>
     <dimen name="custom_tab_layout_height">72dp</dimen>
     <dimen name="cylinder_image_size">140dp</dimen>
+    <dimen name="default_column_header_height">40dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_row_header_width">55dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_text_size">14sp</dimen>
@@ -875,6 +908,7 @@
     <dimen name="fastscroll_default_thickness">8dp</dimen>
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
     <dimen name="genre">13dip</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -889,6 +923,9 @@
     <dimen name="imageview_one_height">170dp</dimen>
     <dimen name="imageview_one_width">110dp</dimen>
     <dimen name="imageview_two_height">90dp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
@@ -900,6 +937,10 @@
     <dimen name="login_logo_background_size">100dp</dimen>
     <dimen name="login_logo_size">120dp</dimen>
     <dimen name="main_kente_background_height">220dp</dimen>
+    <dimen name="md_cell_height">40dp</dimen>
+    <dimen name="md_cell_text_size">13sp</dimen>
+    <dimen name="md_column_header_gap_size">28dp</dimen>
+    <dimen name="md_column_header_text_size">13sp</dimen>
     <dimen name="mini_image_height">@dimen/layout_bounds_height</dimen>
     <dimen name="mini_image_size">32dp</dimen>
     <dimen name="mini_image_width">80dp</dimen>
@@ -935,6 +976,7 @@
     <dimen name="preference_seekbar_value_width">36dp</dimen>
     <dimen name="profile_pic_setup_logo_size">80dp</dimen>
     <dimen name="rating">15dip</dimen>
+    <dimen name="row_header_width">55dp</dimen>
     <dimen name="search_icon_padding">12dp</dimen>
     <dimen name="search_view_text_padding">8dp</dimen>
     <dimen name="selectors_icon_size">50dp</dimen>
@@ -979,6 +1021,7 @@
     <dimen name="tab_label">14sp</dimen>
     <dimen name="tab_max_width">264dp</dimen>
     <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="text_size">12sp</dimen>
     <dimen name="text_size_19sp">19sp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
@@ -1025,6 +1068,7 @@
     <item name="split_action_bar" type="id"/>
     <item name="table_data_view" type="id"/>
     <item name="table_header_view" type="id"/>
+    <item name="tag_transition_group" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
     <item name="textinput_counter" type="id"/>
@@ -1053,8 +1097,6 @@
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
-    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
     <string name="abc_action_mode_done">Done</string>
@@ -1081,7 +1123,7 @@
     <string name="abc_searchview_description_submit">Submit query</string>
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
-    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="account_type">org.grameen.fdp.login</string>
     <string name="action_placeholder">Your App Name</string>
@@ -1162,7 +1204,7 @@
     <string name="permission_required_toast">Location permission is required for this demo.</string>
     <string name="phone">Phone number</string>
     <string name="phone_hint">Phone Number</string>
-    <string name="remoteAccessConsumerKey">3MVG9g9rbsTkKnAWB5_GN7e1AAkWCWHnmTxX8zvsFWOStcPp03L4.Edox1QD3H6n_UV907Mo2FORKx6znEkDr</string>
+    <string name="remoteAccessConsumerKey">3MVG99S6MzYiT5k9Zi_aoc.dquUrIsBVCWFFY0QYxg_Zj7uhJ3SnhwnH4lh3MYFkaQwGeS_DfuRWe5cI3Flf7</string>
     <string name="required_field_error_msg">%s is a required field</string>
     <string name="search_hint">Search…</string>
     <string name="search_menu_title">Search</string>
@@ -3122,22 +3164,6 @@
     <style name="TextAppearance.AppCompat.Medium" parent="Base.TextAppearance.AppCompat.Medium"/>
     <style name="TextAppearance.AppCompat.Medium.Inverse" parent="Base.TextAppearance.AppCompat.Medium.Inverse"/>
     <style name="TextAppearance.AppCompat.Menu" parent="Base.TextAppearance.AppCompat.Menu"/>
-    <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent"/>
-    <style name="TextAppearance.AppCompat.Notification.Info">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Info.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Line2" parent="TextAppearance.AppCompat.Notification.Info"/>
-    <style name="TextAppearance.AppCompat.Notification.Line2.Media" parent="TextAppearance.AppCompat.Notification.Info.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Time">
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
-    </style>
-    <style name="TextAppearance.AppCompat.Notification.Time.Media"/>
-    <style name="TextAppearance.AppCompat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
-    <style name="TextAppearance.AppCompat.Notification.Title.Media"/>
     <style name="TextAppearance.AppCompat.SearchResult.Subtitle" parent="Base.TextAppearance.AppCompat.SearchResult.Subtitle">
     </style>
     <style name="TextAppearance.AppCompat.SearchResult.Title" parent="Base.TextAppearance.AppCompat.SearchResult.Title">

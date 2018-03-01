@@ -7,12 +7,13 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import org.grameen.fdp.utility.Constants;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 import com.salesforce.androidsdk.rest.ClientManager;
 import com.salesforce.androidsdk.rest.RestClient;
 import com.salesforce.androidsdk.security.PasscodeManager;
 import com.salesforce.androidsdk.ui.SalesforceActivity;
+
+import org.grameen.fdp.utility.Constants;
 
 
 /**
@@ -23,26 +24,17 @@ public class LoginActivity extends SalesforceActivity {
 
     String TAG = "LoginActivity";
     RestClient restClient;
-     private PasscodeManager passcodeManager;
-     SharedPreferences prefs;
-
+    SharedPreferences prefs;
+    private PasscodeManager passcodeManager;
     private RestClient client;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         passcodeManager = SalesforceSDKManager.getInstance().getPasscodeManager();
+        passcodeManager = SalesforceSDKManager.getInstance().getPasscodeManager();
 
-         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
-
-
-
-
-
-
-
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
 
     }
@@ -78,7 +70,7 @@ public class LoginActivity extends SalesforceActivity {
                     Log.d(TAG, "CLIENT IS OK");
 
                     // Shows everything.
-                   // findViewById(R.id.root).setVisibility(View.VISIBLE);
+                    // findViewById(R.id.root).setVisibility(View.VISIBLE);
 
 
                     prefs.edit().putBoolean(Constants.IS_USER_SIGNED_IN, true).apply();
@@ -86,10 +78,9 @@ public class LoginActivity extends SalesforceActivity {
                     finish();
 
 
-
                 }
             });
-        }else{
+        } else {
 
             Log.d(TAG, "NO LOGIN NEEEDED. CLIENT IS OK");
 
@@ -105,15 +96,11 @@ public class LoginActivity extends SalesforceActivity {
     }
 
 
-
-
     @Override
     public void onPause() {
         passcodeManager.onPause(this);
-         super.onPause();
+        super.onPause();
     }
-
-
 
 
 }

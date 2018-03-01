@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.grameen.fdp.R;
-
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.utility.Constants;
 
@@ -28,12 +27,10 @@ import java.util.List;
 
 public class PlotsListAdapter extends RecyclerView.Adapter<PlotsListAdapter.ViewHolder> {
 
+    OnItemClickListener mItemClickListener;
+    OnLongClickListener longClickListener;
     private List<RealPlot> plots;
     private Context context;
-    OnItemClickListener mItemClickListener;
-
-    OnLongClickListener longClickListener;
-
 
 
     /**
@@ -47,8 +44,6 @@ public class PlotsListAdapter extends RecyclerView.Adapter<PlotsListAdapter.View
         this.context = context;
 
     }
-
-
 
 
     @Override
@@ -72,33 +67,44 @@ public class PlotsListAdapter extends RecyclerView.Adapter<PlotsListAdapter.View
     }
 
 
-
-
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
-
-
-
-
 
 
         RealPlot plot = plots.get(position);
         viewHolder.name.setText(plot.getName());
 
 
+    }
 
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
+    }
+
+    public void setOnItemClickListener(final PlotsListAdapter.OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
+    }
+
+    public void OnLongClickListener(final PlotsListAdapter.OnLongClickListener mLongClickListener) {
+        this.longClickListener = mLongClickListener;
     }
 
 
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+
+    public interface OnLongClickListener {
+        void onLongClick(View view, int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
 
         RelativeLayout mainLayout;
         TextView name;
-
-
 
 
         ViewHolder(final View itemView) {
@@ -122,50 +128,22 @@ public class PlotsListAdapter extends RecyclerView.Adapter<PlotsListAdapter.View
             });
 
 
-            if(!PreferenceManager.getDefaultSharedPreferences(context).getString("flag", "").equals(Constants.MONITORING))
+            if (!PreferenceManager.getDefaultSharedPreferences(context).getString("flag", "").equals(Constants.MONITORING))
 
                 mainLayout.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
+                    @Override
+                    public boolean onLongClick(View view) {
 
-                    longClickListener.onLongClick(view, getAdapterPosition());
+                        longClickListener.onLongClick(view, getAdapterPosition());
 
-                    return true;
-                }
-            });
-
-
-        }
+                        return true;
+                    }
+                });
 
 
         }
 
 
-    @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
-    }
-
-    public void setOnItemClickListener(final PlotsListAdapter.OnItemClickListener mItemClickListener) {
-        this.mItemClickListener = mItemClickListener;
-    }
-
-
-    public interface OnItemClickListener {
-        void onItemClick(View view, int position);
-    }
-
-
-
-
-
-    public void OnLongClickListener(final PlotsListAdapter.OnLongClickListener mLongClickListener) {
-        this.longClickListener = mLongClickListener;
-    }
-
-
-    public interface OnLongClickListener {
-        void onLongClick(View view, int position);
     }
 
 }

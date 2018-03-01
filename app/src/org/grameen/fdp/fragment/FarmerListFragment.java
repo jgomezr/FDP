@@ -1,68 +1,64 @@
 package org.grameen.fdp.fragment;
 
- import android.content.Context;
- import android.content.DialogInterface;
- import android.content.Intent;
- import android.content.SharedPreferences;
- import android.graphics.Color;
- import android.os.Bundle;
- import android.os.Handler;
- import android.os.Looper;
- import android.preference.PreferenceManager;
- import android.support.annotation.NonNull;
- import android.support.annotation.Nullable;
- import android.support.v4.app.Fragment;
- import android.support.v4.content.ContextCompat;
- import android.support.v7.app.AlertDialog;
- import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
- import android.widget.ImageView;
- import android.widget.TextView;
- import android.widget.Toast;
+import android.widget.Toast;
 
- import com.google.gson.Gson;
- import com.wooplr.spotlight.SpotlightConfig;
- import com.wooplr.spotlight.utils.SpotlightSequence;
+import com.google.gson.Gson;
+import com.wooplr.spotlight.SpotlightConfig;
+import com.wooplr.spotlight.utils.SpotlightSequence;
 
- import org.grameen.fdp.R;
+import org.grameen.fdp.R;
 import org.grameen.fdp.activity.BaseActivity;
 import org.grameen.fdp.activity.FarmerDetailsActivity;
- import org.grameen.fdp.adapter.FarmerListAdapter;
- import org.grameen.fdp.object.RealFarmer;
- import org.grameen.fdp.utility.Constants;
- import org.grameen.fdp.utility.CustomToast;
- import org.grameen.fdp.utility.DatabaseHelper;
+import org.grameen.fdp.adapter.FarmerListAdapter;
+import org.grameen.fdp.object.RealFarmer;
+import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DatabaseHelper;
 import org.grameen.fdp.utility.Utils;
 
- import java.util.List;
+import java.util.List;
 
 /**
  * Created by aangjnr on 11/12/2017.
  */
 
-public class FarmerListFragment  extends Fragment {
+public class FarmerListFragment extends Fragment {
 
 
     RecyclerView recyclerView;
     View rootView;
-    private DatabaseHelper databaseHelper;
     FarmerListAdapter mAdapter;
     List<RealFarmer> farmers;
+    private DatabaseHelper databaseHelper;
 
 
-    public FarmerListFragment(){
+    public FarmerListFragment() {
 
         super();
     }
 
 
-
-    public static FarmerListFragment newInstance(String filter){
+    public static FarmerListFragment newInstance(String filter) {
 
         FarmerListFragment farmerListFragment = new FarmerListFragment();
 
@@ -82,16 +78,13 @@ public class FarmerListFragment  extends Fragment {
     }
 
 
-
-
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
 
         rootView = inflater.inflate(R.layout.fragment_farmer_list, container, false);
-        recyclerView =  rootView.findViewById(R.id.recycler_view);
+        recyclerView = rootView.findViewById(R.id.recycler_view);
 
         return rootView;
 
@@ -100,7 +93,6 @@ public class FarmerListFragment  extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
 
     }
@@ -117,7 +109,6 @@ public class FarmerListFragment  extends Fragment {
     }
 
 
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -126,18 +117,10 @@ public class FarmerListFragment  extends Fragment {
         setUpAdapter();
 
 
-
-
-
-
-
-
-
-
     }
 
 
-    void setUpAdapter(){
+    void setUpAdapter() {
 
       /*  String array =  getArguments().getString("farmers");
         Type listType = new TypeToken<List<RealFarmer>>() {}.getType();
@@ -151,11 +134,10 @@ public class FarmerListFragment  extends Fragment {
 
         GridLayoutManager productsGridLayoutManager;
 
-        if(Utils.isTablet((AppCompatActivity)getActivity()))
+        if (Utils.isTablet((AppCompatActivity) getActivity()))
             productsGridLayoutManager = new GridLayoutManager(getActivity(), 6);
         else
             productsGridLayoutManager = new GridLayoutManager(getActivity(), 4);
-
 
 
         recyclerView.setLayoutManager(productsGridLayoutManager);
@@ -182,48 +164,42 @@ public class FarmerListFragment  extends Fragment {
         });
 
 
+        if (!PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("flag", "").equals(Constants.MONITORING))
+            mAdapter.OnLongClickListener(new FarmerListAdapter.OnLongClickListener() {
+                @Override
+                public void onLongClick(View view, final int position) {
+
+                    final RealFarmer farmer = farmers.get(position);
 
 
+                    showAlertDialog(true, "Delete Farmer", "Do you want to delete data for " + farmer.getFarmerName() + "?", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
-        if(!PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("flag", "").equals(Constants.MONITORING))
-        mAdapter.OnLongClickListener(new FarmerListAdapter.OnLongClickListener() {
-            @Override
-            public void onLongClick(View view, final int position) {
+                            dialogInterface.dismiss();
 
-                final RealFarmer farmer = farmers.get(position);
+                            if (databaseHelper.deleteFarmer(farmer.getCode())) {
+                                CustomToast.makeToast(getActivity(), "Data deleted!", Toast.LENGTH_LONG).show();
+                                farmers.remove(position);
+                                mAdapter.notifyItemRemoved(position);
 
+                            }
 
-
-
-                showAlertDialog(true, "Delete Farmer", "Do you want to delete data for " + farmer.getFarmerName() + "?", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        dialogInterface.dismiss();
-
-                        if(databaseHelper.deleteFarmer(farmer.getCode())){
-                            CustomToast.makeToast(getActivity(), "Data deleted!", Toast.LENGTH_LONG).show();
-                            farmers.remove(position);
-                            mAdapter.notifyItemRemoved(position);
 
                         }
+                    }, "YES", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                            dialogInterface.dismiss();
+
+                        }
+                    }, "No", 0);
 
 
-                    }
-                }, "YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                }
 
-                        dialogInterface.dismiss();
-
-                    }
-                }, "No", 0);
-
-
-
-            }
-
-        });
+            });
 
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
@@ -233,7 +209,9 @@ public class FarmerListFragment  extends Fragment {
 
                 try {
                     startIntro();
-                }catch(Exception e){e.printStackTrace();}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             }
         }, 1000);
@@ -258,7 +236,6 @@ public class FarmerListFragment  extends Fragment {
 */
 
 
-
     public void showAlertDialog(Boolean cancelable, @Nullable String title, @Nullable String message,
                                 @Nullable DialogInterface.OnClickListener onPositiveButtonClickListener,
                                 @NonNull String positiveText,
@@ -281,8 +258,7 @@ public class FarmerListFragment  extends Fragment {
     }
 
 
-
-    void startIntro(){
+    void startIntro() {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
@@ -330,14 +306,7 @@ public class FarmerListFragment  extends Fragment {
         }
 
 
-
-
-
-
-
     }
-
-
 
 
 }

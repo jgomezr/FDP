@@ -11,11 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import com.github.dkharrat.nexusdialog.FormController;
 import com.github.dkharrat.nexusdialog.FormModel;
 import com.github.dkharrat.nexusdialog.FormModelFragment;
 import com.github.dkharrat.nexusdialog.FragmentActivityHelper;
-import com.salesforce.androidsdk.security.PasscodeManager;
 
 import org.grameen.fdp.utility.MyFormController;
 
@@ -24,10 +22,9 @@ import org.grameen.fdp.utility.MyFormController;
  */
 
 public abstract class FormFragment extends Fragment {
+    SharedPreferences preferences;
     private FormModelFragment formModelFragment;
     private MyFormController formController;
-
-    SharedPreferences preferences;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

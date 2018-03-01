@@ -31,12 +31,12 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Creates a labeled field.
      *
-     * @param ctx           the Android context
-     * @param name          the name of the field
-     * @param labelText     the label to display beside the field. If null, no label is displayed and the field will
-     *                      occupy the entire length of the row.
-     * @param isRequired    indicates whether this field is required. If true, this field checks for a non-empty or
-     *                      non-null value upon validation. Otherwise, this field can be empty.
+     * @param ctx        the Android context
+     * @param name       the name of the field
+     * @param labelText  the label to display beside the field. If null, no label is displayed and the field will
+     *                   occupy the entire length of the row.
+     * @param isRequired indicates whether this field is required. If true, this field checks for a non-empty or
+     *                   non-null value upon validation. Otherwise, this field can be empty.
      */
     public MyLabeledFieldController(Context ctx, String name, String labelText, boolean isRequired, boolean isEnabled) {
         this(ctx, name, labelText, new HashSet<InputValidator>(), isEnabled);
@@ -46,19 +46,18 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Creates a labeled field.
      *
-     * @param ctx           the Android context
-     * @param name          the name of the field
-     * @param labelText     the label to display beside the field. If null, no label is displayed and the field will
-     *                      occupy the entire length of the row.
-     * @param validators    The list of input validations to add to the field.
+     * @param ctx        the Android context
+     * @param name       the name of the field
+     * @param labelText  the label to display beside the field. If null, no label is displayed and the field will
+     *                   occupy the entire length of the row.
+     * @param validators The list of input validations to add to the field.
      */
-    public MyLabeledFieldController(Context ctx, String name, String labelText, Set<InputValidator> validators,  boolean isEnabled) {
+    public MyLabeledFieldController(Context ctx, String name, String labelText, Set<InputValidator> validators, boolean isEnabled) {
         super(ctx, name);
         this.labelText = labelText;
         this.validators = validators;
 
     }
-
 
 
     public MyLabeledFieldController(Context ctx, String name, String labelText, boolean isRequired) {
@@ -69,11 +68,11 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Creates a labeled field.
      *
-     * @param ctx           the Android context
-     * @param name          the name of the field
-     * @param labelText     the label to display beside the field. If null, no label is displayed and the field will
-     *                      occupy the entire length of the row.
-     * @param validators    The list of input validations to add to the field.
+     * @param ctx        the Android context
+     * @param name       the name of the field
+     * @param labelText  the label to display beside the field. If null, no label is displayed and the field will
+     *                   occupy the entire length of the row.
+     * @param validators The list of input validations to add to the field.
      */
     public MyLabeledFieldController(Context ctx, String name, String labelText, Set<InputValidator> validators) {
         super(ctx, name);
@@ -94,13 +93,13 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Sets whether this field is required to have user input.
      *
-     * @param required  if true, this field checks for a non-empty or non-null value upon validation. Otherwise, this
-     *                  field can be empty.
+     * @param required if true, this field checks for a non-empty or non-null value upon validation. Otherwise, this
+     *                 field can be empty.
      */
     public void setIsRequired(boolean required) {
-        if (! required) {
+        if (!required) {
             validators.remove(REQUIRED_FIELD_VALIDATOR);
-        } else if (! isRequired()) {
+        } else if (!isRequired()) {
             validators.add(REQUIRED_FIELD_VALIDATOR);
         }
     }
@@ -117,7 +116,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Indicates whether this field requires an input value.
      *
-     * @return  true if this field is required to have input, otherwise false
+     * @return true if this field is required to have input, otherwise false
      */
     public boolean isRequired() {
         return validators.contains(REQUIRED_FIELD_VALIDATOR);
@@ -126,7 +125,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Indicates whether the input of this field has any validation errors.
      *
-     * @return  true if there are some validation errors, otherwise false
+     * @return true if there are some validation errors, otherwise false
      */
     public boolean isValidInput() {
         return validateInput().isEmpty();
@@ -136,7 +135,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
      * Runs a validation on the user input and returns all the validation errors of this field.
      * Previous error messages are removed when calling {@code validateInput()}.
      *
-     * @return  a list containing all the validation errors
+     * @return a list containing all the validation errors
      */
     public List<ValidationError> validateInput() {
         List<ValidationError> errors = new ArrayList<>();
@@ -144,7 +143,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
         ValidationError error;
         for (InputValidator validator : validators) {
             error = validator.validate(value, getName(), getLabel());
-            if (error != null){
+            if (error != null) {
                 errors.add(error);
             }
         }
@@ -154,7 +153,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Returns the associated view for the field (without the label view) of this element.
      *
-     * @return          the view for this element
+     * @return the view for this element
      */
     public View getFieldView() {
         if (fieldView == null) {
@@ -166,24 +165,24 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
     /**
      * Constructs the view associated with this field without the label. It will be used to combine with the label.
      *
-     * @return          the newly created view for this field
+     * @return the newly created view for this field
      */
     protected abstract View createFieldView();
 
     @Override
     protected View createView() {
-        LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.form_labeled_element, null);
         errorView = (TextView) view.findViewById(R.id.field_error);
 
-        TextView label = (TextView)view.findViewById(R.id.field_label);
+        TextView label = (TextView) view.findViewById(R.id.field_label);
         if (labelText == null) {
             label.setVisibility(View.GONE);
         } else {
             label.setText(labelText);
         }
 
-        FrameLayout container = (FrameLayout)view.findViewById(R.id.field_container);
+        FrameLayout container = (FrameLayout) view.findViewById(R.id.field_container);
         container.addView(getFieldView());
 
         return view;

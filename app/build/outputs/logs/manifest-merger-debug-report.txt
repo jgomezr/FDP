@@ -1,764 +1,745 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-MERGED from [:libs:SmartSync] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-13:12
-MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:17:1-28:12
-MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/AndroidManifest.xml:2:1-11:12
-MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/AndroidManifest.xml:2:1-27:12
-MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/AndroidManifest.xml:2:1-17:12
-MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:17:1-28:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/3eaf69fa15b557433cc8046e587306a8/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:17:1-28:12
-MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/3f2553157e6a22f77270e1f3c74685d0/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:16:1-25:12
-MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/17060341b27f0747630311b5c95865df/AndroidManifest.xml:2:1-5:12
-MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/2aec398b91e6f73ded9d4328dff2c3cf/AndroidManifest.xml:2:1-12:12
-MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/64b97184c1018a6850a4d972280fc12e/AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15b2e6026182a12c432df611fd266c8f/AndroidManifest.xml:17:1-22:12
-MERGED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:17:1-28:12
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-117:12
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:16:1-21:12
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:16:1-34:12
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:16:1-29:12
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:16:1-51:12
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/62f17f4416592c4a4d77079cfe94916d/AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:16:1-23:12
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:17:1-31:12
-MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/d7025e6d073054856f5dc76b5c409902/AndroidManifest.xml:2:1-4:12
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-16:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-117:12
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [com.android.support:preference-v14:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/d438429cd685df380def4d509f5f0b21/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/eb38bcc8905d300cf0cac42bb818f214/AndroidManifest.xml:2:1-11:12
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/5497a4c5c5edd4394fbcb8d96a21e120/AndroidManifest.xml:2:1-27:12
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/AndroidManifest.xml:2:1-17:12
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/1a703149bbd6b5d637bbae49883ec9ae/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/AndroidManifest.xml:2:1-17:12
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a3b9487069793526485bc218ad11e952/AndroidManifest.xml:2:1-10:12
+MERGED from [com.evrencoskun.library:tableview:0.8.6] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-0.8.6.aar/3d64ccd33663b030a3def885f5176b1c/AndroidManifest.xml:18:1-33:12
+MERGED from [com.android.support:preference-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/4aae8b8d341c48b4cbb6b163058bd5f3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/bdcf46f89d18ac400f65b219d1b4cece/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:percent:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/bf6620954cba4c61cd6a3552bba9cd8f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/faf17674acc33ac9dd30f77e796eed4d/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:2:1-5:12
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/b5af1a505590382e097c6dd6d62b4f20/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/93b5d2c2dad77bf6bd395a7d24bcaf75/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:16:1-51:12
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/49e7f909abb4e0097bc1a13633a64a95/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/a065cf5df48d87b25aee0ecee8421471/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/21ea52a6d4ca804035924a9af7aa2e8e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f1e958711129c97c0a9fa788dff1321d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/e3e1e1614bc7e0da1b2d0d88bfb10a93/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/336cd57b1e63867926385fa08c840c66/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/3c6828e7fffa97f231d8113875d455a8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/d36f74eed23b54720d48148129d6c70d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/269f14bac2b4e8e0199808ae9d656342/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/d78333897219f35ca2817f1681172062/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/47b1b99f176a9b2f3a684b2f3caae9c1/AndroidManifest.xml:17:1-22:12
+MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/f95d656a506f6c77bd9409f2eaeafdd8/AndroidManifest.xml:2:1-4:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6730158d8f4b959dd5cdc13f6becf88f/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
 	package
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:4:2-27
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:4:2-27
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-109:12
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:11-69
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:11-69
 	android:installLocation
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:5:2-40
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:5:2-40
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:2-75
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:2-75
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:19-73
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:12:19-73
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:2-77
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:2-77
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:19-75
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:13:19-75
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:2-77
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:2-77
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:19-75
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:14:19-75
 uses-permission#android.permission.CAMERA
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:2-61
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:2-61
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:19-59
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:15:19-59
 uses-permission#android.permission.INTERNET
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:2-63
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:20:5-66
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:21:5-66
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:21:5-66
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:21:5-66
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:21:5-66
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:20:5-66
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-67
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-67
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:2-63
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-67
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:21:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:19-61
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:16:19-61
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:2-75
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:19:5-78
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:19:5-78
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:19:5-78
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:19:5-78
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-79
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-79
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:2-75
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-79
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:19-73
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:17:19-73
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:2-94
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:2-94
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:19-92
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:18:19-92
 uses-permission#org.grameen.fdp.C2D_MESSAGE
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:19:2-64
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:19:2-64
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:19:19-61
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:19:19-61
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:20:2-67
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-71
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-71
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:20:2-67
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-71
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:20:19-65
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:20:19-65
 uses-permission#android.permission.MANAGE_ACCOUNTS
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:21:2-70
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:5-74
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:5-74
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:21:2-70
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:5-74
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:13:5-74
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:21:19-68
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:21:19-68
 uses-permission#android.permission.VIBRATE
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:22:2-62
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:22:2-62
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:22:19-60
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:22:19-60
 uses-feature#0x00020000
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:27:2-29:28
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:21:5-77
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:21:5-77
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:27:2-29:28
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:21:5-77
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:28:3-35
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:28:3-35
 	android:required
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:29:3-26
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:29:3-26
 application
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:37:2-99:16
-MERGED from [:libs:SmartSync] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
-MERGED from [:libs:SmartSync] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:22:5-26:19
-MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/AndroidManifest.xml:9:5-20
-MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/AndroidManifest.xml:9:5-20
-MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/AndroidManifest.xml:23:5-25:38
-MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/AndroidManifest.xml:23:5-25:38
-MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/AndroidManifest.xml:11:5-15:19
-MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/AndroidManifest.xml:11:5-53
-MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/AndroidManifest.xml:11:5-53
-MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:22:5-26:19
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/3eaf69fa15b557433cc8046e587306a8/AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/3eaf69fa15b557433cc8046e587306a8/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/17060341b27f0747630311b5c95865df/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/17060341b27f0747630311b5c95865df/AndroidManifest.xml:4:5-19
-MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/2aec398b91e6f73ded9d4328dff2c3cf/AndroidManifest.xml:10:5-20
-MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/2aec398b91e6f73ded9d4328dff2c3cf/AndroidManifest.xml:10:5-20
-MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/64b97184c1018a6850a4d972280fc12e/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/64b97184c1018a6850a4d972280fc12e/AndroidManifest.xml:5:5-20
-MERGED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:22:5-26:19
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:21:5-115:19
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:21:5-115:19
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:23:5-19
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:23:5-19
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:23:5-19
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:23:5-19
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:28:5-50:19
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:28:5-50:19
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/62f17f4416592c4a4d77079cfe94916d/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/62f17f4416592c4a4d77079cfe94916d/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:19:5-21:19
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:25:5-29:19
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-20
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-20
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:37:2-114:16
+MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
+MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
+MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:21:5-115:19
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:21:5-115:19
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-20
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-20
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/eb38bcc8905d300cf0cac42bb818f214/AndroidManifest.xml:9:5-20
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/eb38bcc8905d300cf0cac42bb818f214/AndroidManifest.xml:9:5-20
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/5497a4c5c5edd4394fbcb8d96a21e120/AndroidManifest.xml:23:5-25:38
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/5497a4c5c5edd4394fbcb8d96a21e120/AndroidManifest.xml:23:5-25:38
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/AndroidManifest.xml:11:5-15:19
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/1a703149bbd6b5d637bbae49883ec9ae/AndroidManifest.xml:11:5-53
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/1a703149bbd6b5d637bbae49883ec9ae/AndroidManifest.xml:11:5-53
+MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/AndroidManifest.xml:11:5-15:19
+MERGED from [com.evrencoskun.library:tableview:0.8.6] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-0.8.6.aar/3d64ccd33663b030a3def885f5176b1c/AndroidManifest.xml:27:5-31:19
+MERGED from [com.evrencoskun.library:tableview:0.8.6] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-0.8.6.aar/3d64ccd33663b030a3def885f5176b1c/AndroidManifest.xml:27:5-31:19
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:9:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:4:5-19
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:10:5-20
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/b5af1a505590382e097c6dd6d62b4f20/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/b5af1a505590382e097c6dd6d62b4f20/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/49e7f909abb4e0097bc1a13633a64a95/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/49e7f909abb4e0097bc1a13633a64a95/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:19:5-21:19
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:45:3-39
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:45:3-39
 	android:supportsRtl
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:43:3-29
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:43:3-29
 	android:label
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:40:3-35
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:40:3-35
 	android:manageSpaceActivity
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:46:2-80
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:46:2-80
 	android:roundIcon
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:42:3-42
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:42:3-42
 	android:icon
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:39:3-37
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:39:3-37
 	android:allowBackup
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:38:3-29
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:38:3-29
 	android:theme
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:44:3-34
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:44:3-34
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:41:3-45
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:41:3-45
 activity#org.grameen.fdp.MainActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:51:3-53:64
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:51:3-53:64
 	android:label
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:52:7-39
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:52:7-39
 	android:theme
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:53:4-62
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:53:4-62
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:51:13-41
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:51:13-41
 activity#org.grameen.fdp.activity.SplashActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:57:3-65:14
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:57:3-65:14
 	android:theme
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:59:4-35
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:59:4-35
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:58:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:58:4-43
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:60:4-64:20
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:60:4-64:20
 action#android.intent.action.MAIN
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:61:5-56
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:61:5-56
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:61:13-54
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:61:13-54
 category#android.intent.category.LAUNCHER
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:5-64
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:5-64
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:15-62
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:63:15-62
 activity#org.grameen.fdp.activity.BaseActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:66:3-52
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:66:3-52
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:66:13-50
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:66:13-50
 activity#org.grameen.fdp.activity.MainActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:3-69:11
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:3-69:11
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:13-50
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:68:13-50
 activity#org.grameen.fdp.activity.FarmerDetailsActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:3-61
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:3-61
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:13-59
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:70:13-59
 activity#org.grameen.fdp.activity.Add_EditFarmerDetailsActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:3-69
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:3-69
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:13-67
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:71:13-67
 activity#org.grameen.fdp.activity.PlotDetailsActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:3-59
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:3-59
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:13-57
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:72:13-57
 activity#org.grameen.fdp.activity.AddNewPlotActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:73:3-58
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:73:3-58
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:73:13-56
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:73:13-56
 activity#org.grameen.fdp.activity.MapActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:74:3-51
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:74:3-51
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:74:13-49
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:74:13-49
 activity#org.grameen.fdp.activity.LoginActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:75:3-53
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:75:3-53
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:75:13-51
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:75:13-51
 activity#org.grameen.fdp.activity.LandingPageActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:76:3-59
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:76:3-59
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:76:13-57
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:76:13-57
 activity#org.grameen.fdp.activity.SyncActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:77:3-79:6
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:77:3-79:6
 	android:theme
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:78:4-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:78:4-44
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:77:13-50
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:77:13-50
 activity#org.grameen.fdp.activity.PandLActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:3-81:47
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:3-81:47
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:7-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:7-44
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:13-51
-activity#org.grameen.fdp.activity.DetailedYearActivity
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:9-83:47
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:13-51
+activity#org.grameen.fdp.activity.DetailedYearMonthlyActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:9-83:47
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:83:7-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:83:7-44
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:19-64
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:19-71
+activity#org.grameen.fdp.activity.FamilyMembersActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:84:9-86:49
+	android:screenOrientation
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:85:4-41
+	android:windowSoftInputMode
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:86:4-47
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:84:19-65
+activity#org.grameen.fdp.activity.MonitoringYearSelectionActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:3-72
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:13-69
+activity#org.grameen.fdp.activity.PlotMonitoringActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:3-90:49
+	android:screenOrientation
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:89:4-41
+	android:windowSoftInputMode
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:90:4-47
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:13-60
+activity#org.grameen.fdp.activity.AddNewPlotMonitoringActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:91:9-75
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:91:19-72
+activity#org.grameen.fdp.activity.FarmAssessmentActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:92:9-69
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:92:19-66
+activity#org.grameen.fdp.activity.FamilyMembersActivity_v2
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:93:9-97:6
+	android:screenOrientation
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:94:4-41
+	android:windowSoftInputMode
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:95:13-56
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:93:19-68
+activity#org.grameen.fdp.activity.FDPStatusActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:9-64
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:19-61
 provider#br.com.mauker.materialsearchview.db.HistoryProvider
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:86:9-91:29
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:101:9-106:29
 	android:authorities
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:4-80
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:103:4-80
 	android:protectionLevel
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:90:4-39
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:105:4-39
 	android:syncable
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:91:4-27
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:106:4-27
 	android:exported
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:89:4-28
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:104:4-28
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:4-70
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:102:4-70
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:94:3-96:45
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:109:3-111:45
 	android:value
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:96:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:111:4-43
 	android:name
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml:95:4-49
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:110:4-49
 uses-sdk
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-MERGED from [:libs:SmartSync] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:libs:SmartSync] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:20:5-44
-MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/cfbea911cf99d24fef9a670db9219d78/AndroidManifest.xml:5:5-7:41
-MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/AndroidManifest.xml:19:5-21:41
-MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/9fc04be2538bf83c272363966f72f646/AndroidManifest.xml:19:5-21:41
-MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/f64b400a3050e72b07388d3a790a28df/AndroidManifest.xml:7:5-9:41
-MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/AndroidManifest.xml:7:5-9:41
-MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/c1d763e04be82021de371e340d8a3df8/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/c49b6083b9caaa46ee1f06a37886051b/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/3eaf69fa15b557433cc8046e587306a8/AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/3eaf69fa15b557433cc8046e587306a8/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:20:5-44
-MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/3f2553157e6a22f77270e1f3c74685d0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/3f2553157e6a22f77270e1f3c74685d0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:5:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:5:5-43
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/5edb98b65ed883c6b0075f59a2ae2ea8/AndroidManifest.xml:23:5-43
-MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/17060341b27f0747630311b5c95865df/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/17060341b27f0747630311b5c95865df/AndroidManifest.xml:3:5-43
-MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/2aec398b91e6f73ded9d4328dff2c3cf/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/2aec398b91e6f73ded9d4328dff2c3cf/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/64b97184c1018a6850a4d972280fc12e/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/64b97184c1018a6850a4d972280fc12e/AndroidManifest.xml:4:5-43
-MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15b2e6026182a12c432df611fd266c8f/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/15b2e6026182a12c432df611fd266c8f/AndroidManifest.xml:20:5-43
-MERGED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:20:5-44
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/62f17f4416592c4a4d77079cfe94916d/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/62f17f4416592c4a4d77079cfe94916d/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:21:5-23:58
-MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/d7025e6d073054856f5dc76b5c409902/AndroidManifest.xml:3:3-40
-MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/d7025e6d073054856f5dc76b5c409902/AndroidManifest.xml:3:3-40
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:23:9-59
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:libs:SalesforceAnalytics] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:preference-v14:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/d438429cd685df380def4d509f5f0b21/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/d438429cd685df380def4d509f5f0b21/AndroidManifest.xml:20:5-44
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/eb38bcc8905d300cf0cac42bb818f214/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.dkharrat.nexusdialog:nexusdialog:0.4.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/nexusdialog-0.4.2.aar/eb38bcc8905d300cf0cac42bb818f214/AndroidManifest.xml:5:5-7:41
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/5497a4c5c5edd4394fbcb8d96a21e120/AndroidManifest.xml:19:5-21:41
+MERGED from [br.com.mauker.materialsearchview:materialsearchview:1.2.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.2.aar/5497a4c5c5edd4394fbcb8d96a21e120/AndroidManifest.xml:19:5-21:41
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.mancj:MaterialSearchBar:0.7.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/AndroidManifest.xml:7:5-9:41
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/1a703149bbd6b5d637bbae49883ec9ae/AndroidManifest.xml:7:5-9:41
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-2.8.0.aar/1a703149bbd6b5d637bbae49883ec9ae/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.wooplr:Spotlight:1.2.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/AndroidManifest.xml:7:5-9:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a3b9487069793526485bc218ad11e952/AndroidManifest.xml:6:5-8:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/library-2.1.4.aar/a3b9487069793526485bc218ad11e952/AndroidManifest.xml:6:5-8:41
+MERGED from [com.evrencoskun.library:tableview:0.8.6] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-0.8.6.aar/3d64ccd33663b030a3def885f5176b1c/AndroidManifest.xml:23:5-25:41
+MERGED from [com.evrencoskun.library:tableview:0.8.6] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/tableview-0.8.6.aar/3d64ccd33663b030a3def885f5176b1c/AndroidManifest.xml:23:5-25:41
+MERGED from [com.android.support:preference-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/4aae8b8d341c48b4cbb6b163058bd5f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/4aae8b8d341c48b4cbb6b163058bd5f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/bdcf46f89d18ac400f65b219d1b4cece/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/bdcf46f89d18ac400f65b219d1b4cece/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:percent:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/bf6620954cba4c61cd6a3552bba9cd8f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/bf6620954cba4c61cd6a3552bba9cd8f/AndroidManifest.xml:20:5-44
+MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/faf17674acc33ac9dd30f77e796eed4d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/faf17674acc33ac9dd30f77e796eed4d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:3:5-43
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/b5af1a505590382e097c6dd6d62b4f20/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.0.aar/b5af1a505590382e097c6dd6d62b4f20/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/93b5d2c2dad77bf6bd395a7d24bcaf75/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/93b5d2c2dad77bf6bd395a7d24bcaf75/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/49e7f909abb4e0097bc1a13633a64a95/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.0.aar/49e7f909abb4e0097bc1a13633a64a95/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/a065cf5df48d87b25aee0ecee8421471/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/a065cf5df48d87b25aee0ecee8421471/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/21ea52a6d4ca804035924a9af7aa2e8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/21ea52a6d4ca804035924a9af7aa2e8e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f1e958711129c97c0a9fa788dff1321d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/f1e958711129c97c0a9fa788dff1321d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/e3e1e1614bc7e0da1b2d0d88bfb10a93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/e3e1e1614bc7e0da1b2d0d88bfb10a93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/336cd57b1e63867926385fa08c840c66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/336cd57b1e63867926385fa08c840c66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/3c6828e7fffa97f231d8113875d455a8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/3c6828e7fffa97f231d8113875d455a8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/d36f74eed23b54720d48148129d6c70d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/d36f74eed23b54720d48148129d6c70d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/269f14bac2b4e8e0199808ae9d656342/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/269f14bac2b4e8e0199808ae9d656342/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/d78333897219f35ca2817f1681172062/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/d78333897219f35ca2817f1681172062/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/47b1b99f176a9b2f3a684b2f3caae9c1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/47b1b99f176a9b2f3a684b2f3caae9c1/AndroidManifest.xml:20:5-44
+MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/f95d656a506f6c77bd9409f2eaeafdd8/AndroidManifest.xml:3:3-40
+MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/f95d656a506f6c77bd9409f2eaeafdd8/AndroidManifest.xml:3:3-40
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6730158d8f4b959dd5cdc13f6becf88f/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6730158d8f4b959dd5cdc13f6becf88f/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		INJECTED from /Users/aangjnr/Desktop/AppsDev/grameen/FDP/app/AndroidManifest.xml
-meta-data#android.support.VERSION
-ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:preference-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-26.0.1.aar/977afc2318da4d290eba29fae403dadc/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:design:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-26.0.1.aar/983204ed2338e8661087ef569bc7b125/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.1.aar/a9ec9fc5a54d75e28ba974cfbf35078a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:cardview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.1.aar/900b9b206f069c7c5b7fc145ed5b21fa/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:percent:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-26.0.1.aar/182d8524806aab37d0511af1d00ec65c/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.1.aar/56f0106af2e383266fc14ad05909fbbd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.1.aar/6ca3dfaf87dba1520ec30984cf10b829/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.1.aar/f76884262c176a65a21ee77923d58164/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/transition-26.0.1.aar/d865a33773317e314c5458c8340517fd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.1.aar/4b5624458780395cd1bbed90b69e9fb5/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.1.aar/80664e12706e1bc548fe884135e0eafc/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.1.aar/ed690c5d4e6d63a1bce34fa77e402dcf/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.1.aar/0ae7dadfaaca8452967905facf1e7d05/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.1.aar/1e3fa8a944e310d36e547fe71115a533/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.1.aar/f9b17e0a354a87fd003be5f065ca98df/AndroidManifest.xml:26:9-28:38
-	android:value
-		ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:25:13-35
-	android:name
-		ADDED from [com.android.support:preference-v14:26.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v14-26.0.1.aar/591ab74a09ee830603b69ea5f0239fea/AndroidManifest.xml:24:13-51
-meta-data#com.google.android.gms.version
-ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:20:9-121
-MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/63b361eaf9c8bb4aaa8e3e8a680163f0/AndroidManifest.xml:20:9-121
-	android:value
-		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:10:13-66
-	android:name
-		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3dff071944a06c212d984fd2a35b8712/AndroidManifest.xml:9:13-58
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
+		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
-ADDED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:9-104
+ADDED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:9-104
 	android:name
-		ADDED from [:libs:SmartStore] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:19-101
+		ADDED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:19-101
 uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-80
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-80
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:22-77
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:22-77
 uses-permission#android.permission.USE_CREDENTIALS
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-74
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:5-74
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:22-71
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:14:22-71
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:5-68
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:21:5-67
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:21:5-67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:5-68
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:22-65
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:15:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:5-82
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:20:5-81
-MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/750b780f9affce124832b9f7c799dfdc/AndroidManifest.xml:20:5-81
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:20:5-81
-MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/ca2b8beb7e697b825de71e32b4d822be/AndroidManifest.xml:20:5-81
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:22:5-81
-MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:22:5-81
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:5-82
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-gcm:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.0.aar/0cf64776c611c6a166d2ee25048cf12d/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.0.aar/b5449fa2564d66c2561d7aa5b9bf1a0a/AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:22:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:22:5-81
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:22-79
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:16:22-79
 uses-permission-sdk-23#android.permission.USE_FINGERPRINT
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:19:5-81
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:19:5-81
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:19:29-78
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:19:29-78
 meta-data#android.content.APP_RESTRICTIONS
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:24:9-26:56
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:24:9-26:56
 	android:resource
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:26:13-53
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:26:13-53
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:13-60
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:13-60
 service#com.salesforce.androidsdk.auth.AuthenticatorService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:29:9-39:19
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:29:9-39:19
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:31:13-36
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:31:13-36
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:30:13-79
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:30:13-79
 intent-filter#android.accounts.AccountAuthenticator
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:32:13-34:29
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:32:13-34:29
 action#android.accounts.AccountAuthenticator
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:33:17-80
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:33:17-80
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:33:25-77
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:33:25-77
 meta-data#android.accounts.AccountAuthenticator
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:36:13-38:57
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:36:13-38:57
 	android:resource
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:38:17-54
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:38:17-54
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:37:17-69
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:37:17-69
 activity#com.salesforce.androidsdk.ui.LoginActivity
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:42:9-44:67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:42:9-44:67
 	android:theme
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:44:13-64
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:44:13-64
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:43:13-70
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:43:13-70
 activity#com.salesforce.androidsdk.ui.PasscodeActivity
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:47:9-50:67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:47:9-50:67
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:49:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:49:13-37
 	android:theme
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:50:13-64
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:50:13-64
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:48:13-73
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:48:13-73
 activity#com.salesforce.androidsdk.ui.ManageSpaceActivity
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:53:9-56:67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:53:9-56:67
 	android:excludeFromRecents
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:55:13-46
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:55:13-46
 	android:theme
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:56:13-64
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:56:13-64
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:54:13-76
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:54:13-76
 activity#com.salesforce.androidsdk.ui.ServerPickerActivity
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:59:9-62:67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:59:9-62:67
 	android:excludeFromRecents
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:61:13-46
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:61:13-46
 	android:theme
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:62:13-64
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:62:13-64
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:60:13-77
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:60:13-77
 activity#com.salesforce.androidsdk.ui.AccountSwitcherActivity
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:65:9-68:67
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:65:9-68:67
 	android:excludeFromRecents
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:67:13-46
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:67:13-46
 	android:theme
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:68:13-64
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:68:13-64
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:66:13-80
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:66:13-80
 receiver#com.google.android.gms.gcm.GcmReceiver
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:75:9-84:20
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:75:9-84:20
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:77:13-36
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:77:13-36
 	android:permission
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:78:13-73
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:78:13-73
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:76:13-66
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:76:13-66
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:79:13-83:29
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:79:13-83:29
 intent-filter#com.google.android.c2dm.intent.RECEIVE+org.grameen.fdp
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:79:13-83:29
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:79:13-83:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:80:17-81
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:80:17-81
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:80:25-78
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:80:25-78
 category#${applicationId}
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:17-61
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:17-61
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:27-58
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:27-58
 category#org.grameen.fdp
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:17-61
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:17-61
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:27-58
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:82:27-58
 service#com.salesforce.androidsdk.push.SFDCGcmListenerService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:86:9-92:19
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:86:9-92:19
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:88:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:87:13-81
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:87:13-81
 intent-filter#com.google.android.c2dm.intent.RECEIVE
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:89:13-91:29
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:89:13-91:29
 service#com.salesforce.androidsdk.push.SFDCInstanceIDListenerService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:93:9-99:19
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:93:9-99:19
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:95:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:94:13-88
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:94:13-88
 intent-filter#com.google.android.gms.iid.InstanceID
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:96:13-98:29
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:96:13-98:29
 action#com.google.android.gms.iid.InstanceID
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:97:17-80
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:97:17-80
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:97:25-77
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:97:25-77
 service#com.salesforce.androidsdk.push.SFDCRegistrationIntentService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:100:9-103:19
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:100:9-103:19
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:102:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:101:13-88
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:101:13-88
 receiver#com.salesforce.androidsdk.push.PushService$SFDCRegistrationRetryAlarmReceiver
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:105:9-107:40
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:105:9-107:40
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:107:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:107:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:106:13-105
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:106:13-105
 service#com.salesforce.androidsdk.push.PushService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:109:9-111:40
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:109:9-111:40
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:111:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:111:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:110:13-70
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:110:13-70
 service#com.salesforce.androidsdk.analytics.AnalyticsPublisherService
-ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:112:9-114:40
+ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:112:9-114:40
 	android:exported
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:114:13-37
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:114:13-37
 	android:name
-		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Desktop/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:113:13-89
+		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:113:13-89
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.0.aar/9478e69bd0a8c1c1a636ec8145bf4b8b/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:9:13-58
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/83036bcfc06310223c5c0bbc96d3076c/AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.0.aar/9fd78d0f6c502f05a4118a9c4171d11b/AndroidManifest.xml:19:19-85
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:27:162-184
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:27:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/4852befe2bab9b08d44af764701a72fe/AndroidManifest.xml:27:7-137
+ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.0.aar/174a71184761303601e904df83cbaa44/AndroidManifest.xml:27:7-137
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:32:88-110
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:32:88-110
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:32:111-135
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:32:111-135
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/ae151132ac190cd2aec6d22a82317d87/AndroidManifest.xml:32:16-87
+		ADDED from [com.google.firebase:firebase-analytics:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.0.aar/dde15bcf4b257a03102f66445b37e367/AndroidManifest.xml:32:16-87
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:17-71
 permission#org.grameen.fdp.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:24:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:26:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:26:22-76
 uses-permission#org.grameen.fdp.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:26:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:26:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:30:9-36:20
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:30:9-36:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:30:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:30:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:30:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:31:13-35:29
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:31:13-35:29
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+org.grameen.fdp
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:31:13-35:29
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:31:13-35:29
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:33:17-85
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:33:17-85
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:33:25-83
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:33:25-83
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:40:9-119
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:40:9-119
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:40:93-117
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:40:93-117
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:40:19-92
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:40:19-92
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:44:9-48:19
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:44:9-48:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:44:83-106
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:44:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:44:18-82
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:44:18-82
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:45:13-47:29
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:45:13-47:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:45:28-51
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:45:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:46:17-79
+ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:46:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/2b167d4742b09130d3e0a0376c90fe86/AndroidManifest.xml:46:25-77
+		ADDED from [com.google.firebase:firebase-iid:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.0.aar/47bf51cd8b2ee521c42297d04f66935a/AndroidManifest.xml:46:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:6:9-194
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:6:144-168
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:6:169-192
 	android:name
-		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/5e8f2f8988cffb5643fc6a578e3492a2/AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.0.aar/e18378d994d54dbb93a340189940981e/AndroidManifest.xml:6:79-143

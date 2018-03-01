@@ -15,16 +15,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.grameen.fdp.object.RealFarmer;
 import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
 
 import java.util.List;
 import java.util.Random;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 
 /**
@@ -34,12 +32,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.ViewHolder> {
 
-    private List<RealFarmer> farmers;
-    private Context context;
     OnItemClickListener mItemClickListener;
     OnLongClickListener longClickListener;
-
-
+    private List<RealFarmer> farmers;
+    private Context context;
 
 
     /**
@@ -53,8 +49,6 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         this.context = context;
 
     }
-
-
 
 
     @Override
@@ -76,27 +70,24 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
     }
 
 
-
-
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         RealFarmer farmer = farmers.get(position);
 
 
-
-        if(farmer.getImageUrl() != null && !farmer.getImageUrl().equals(""))
-        Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
-        else  {
+        if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals(""))
+            Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
+        else {
 
             try {
                 String[] valueArray = farmer.getFarmerName().split(" ");
                 String value = valueArray[0].substring(0, 1) + valueArray[1].substring(0, 1);
                 viewHolder.initials.setText(value);
 
-            }catch(Exception e){
+            } catch (Exception e) {
 
-                if(!farmer.getFarmerName().trim().isEmpty())
-                viewHolder.initials.setText(farmer.getFarmerName().substring(0, 1));
+                if (!farmer.getFarmerName().trim().isEmpty())
+                    viewHolder.initials.setText(farmer.getFarmerName().substring(0, 1));
 
 
             }
@@ -120,12 +111,34 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         viewHolder.code.setText(farmer.getCode());
 
 
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
+
 
     }
 
+    public void setOnItemClickListener(final FarmerListAdapter.OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
+    }
+
+    public void OnLongClickListener(final FarmerListAdapter.OnLongClickListener mLongClickListener) {
+        this.longClickListener = mLongClickListener;
+    }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+
+    public interface OnLongClickListener {
+        void onLongClick(View view, int position);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
 
         RelativeLayout mainLayout;
@@ -141,9 +154,6 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         RelativeLayout initialsBackground;
 
 
-
-
-
         ViewHolder(final View itemView) {
             super(itemView);
 
@@ -153,12 +163,10 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
             name = (TextView) itemView.findViewById(R.id.name);
             code = (TextView) itemView.findViewById(R.id.code);
             initials = (TextView) itemView.findViewById(R.id.initials);
-            photo =    itemView.findViewById(R.id.photo);
-            imageView =   itemView.findViewById(R.id.image_view1);
+            photo = itemView.findViewById(R.id.photo);
+            imageView = itemView.findViewById(R.id.image_view1);
 
             initialsBackground = (RelativeLayout) itemView.findViewById(R.id.rl1);
-
-
 
 
             mainLayout.setOnClickListener(new View.OnClickListener() {
@@ -175,50 +183,21 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
                 }
             });
 
-            if(!PreferenceManager.getDefaultSharedPreferences(context).getString("flag", "").equals(Constants.MONITORING))
+            if (!PreferenceManager.getDefaultSharedPreferences(context).getString("flag", "").equals(Constants.MONITORING))
 
-            mainLayout.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
+                mainLayout.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View view) {
 
-                    longClickListener.onLongClick(view, getAdapterPosition());
+                        longClickListener.onLongClick(view, getAdapterPosition());
 
-                    return true;
-                }
-            });
-
-        }
-
+                        return true;
+                    }
+                });
 
         }
 
 
-    @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
-
-
-    }
-
-    public void setOnItemClickListener(final FarmerListAdapter.OnItemClickListener mItemClickListener) {
-        this.mItemClickListener = mItemClickListener;
-    }
-
-
-    public interface OnItemClickListener {
-        void onItemClick(View view, int position);
-    }
-
-
-
-
-    public void OnLongClickListener(final FarmerListAdapter.OnLongClickListener mLongClickListener) {
-        this.longClickListener = mLongClickListener;
-    }
-
-
-    public interface OnLongClickListener {
-        void onLongClick(View view, int position);
     }
 
 }

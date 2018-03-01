@@ -14,9 +14,13 @@ import com.google.gson.Gson;
 
 import org.grameen.fdp.object.ActivitiesPlusInputs;
 import org.grameen.fdp.object.Calculation;
+import org.grameen.fdp.object.ComplexCalculation;
+import org.grameen.fdp.object.Country;
 import org.grameen.fdp.object.Form;
+import org.grameen.fdp.object.Input;
 import org.grameen.fdp.object.LaborDaysLaborCostSupplies;
 import org.grameen.fdp.object.Logic;
+import org.grameen.fdp.object.Monitoring;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
@@ -24,6 +28,7 @@ import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.object.RecommendationsPlusActivity;
 import org.grameen.fdp.object.SkipLogic;
 import org.grameen.fdp.object.Village;
+import org.json.JSONObject;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -34,7 +39,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.ToIntFunction;
 
 import static org.grameen.fdp.utility.DatabaseDataClass.*;
 
@@ -48,7 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final String TAG = DatabaseHelper.class.getSimpleName();
     static final String DB_NAME = "fdp.db";
-    static final int DB_VERSION = 19;
+    static final int DB_VERSION = 33;
 
     private static DatabaseHelper instance;
     Context _context;
@@ -86,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(CREATE_COUNTRIES_TABLE);
         db.execSQL(CREATE_QUESTIONS_TABLE);
         db.execSQL(CREATE_FARMER_TABLE);
         db.execSQL(CREATE_PLOTS_TABLE);
@@ -98,14 +102,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_LOGIC_TABLE);
         db.execSQL(CREATE_RECOMMENDATION_PLUS_ACTIVITIES_TABLE);
         db.execSQL(CREATE_ACTIVITIES_PLUS_INPUTS_TABLE);
-
-
+        db.execSQL(CREATE_INPUTS_TABLE);
+        db.execSQL(CREATE_MONITORING_TABLE);
+        db.execSQL(CREATE_COMPLEX_CALCULATIONS_TABLE);
 
 
 
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(DROP_COUNTRIES_TABLE);
+        db.execSQL(DROP_QUESTIONS_TABLE);
+        db.execSQL(DROP_FARMER_TABLE);
+        db.execSQL(DROP_FORMS_TABLE);
+        db.execSQL(DROP_PLOTS_TABLE);
+        db.execSQL(DROP_VILLAGES_TABLE);
+        db.execSQL(DROP_SKIP_LOGIC_TABLE);
+        db.execSQL(DROP_CALCULATIONS_TABLE);
+        db.execSQL(DROP_RECOMMENDATIONS_TABLE);
+        db.execSQL(DROP_LOGIC_TABLE);
+        db.execSQL(DROP_RECOMMENDATION_PLUS_ACTIVITIES_TABLE);
+        db.execSQL(DROP_ACTIVITIES_PLUS_INPUTS_TABLE);
+        db.execSQL(DROP_INPUTS_TABLE);
+        db.execSQL(DROP_MONITORING_TABLE);
+        db.execSQL(DROP_COMPLEX_CALCULATIONS_TABLE);
+
+
+
+
+        onCreate(db);
+    }
+
+
+    public void deleteAllTables() {
 
         db.execSQL(DROP_QUESTIONS_TABLE);
         db.execSQL(DROP_FARMER_TABLE);
@@ -118,43 +147,128 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(DROP_LOGIC_TABLE);
         db.execSQL(DROP_RECOMMENDATION_PLUS_ACTIVITIES_TABLE);
         db.execSQL(DROP_ACTIVITIES_PLUS_INPUTS_TABLE);
-
+        db.execSQL(DROP_COUNTRIES_TABLE);
 
         onCreate(db);
+
     }
 
 
-
-
-    public boolean addAQuestion(Question question){
-        try{
+    public boolean addAQuestion(Question question) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(QUESTION_ID ,question.getId());
-            contentValues.put(QUESTION_NAME ,question.getName());
+            contentValues.put(QUESTION_ID, question.getId());
+            contentValues.put(QUESTION_NAME, question.getName());
 
-            contentValues.put(QUESTION_CAPTION ,question.getCaption__c());
-            contentValues.put(QUESTION_ERROR_TEXT ,question.getError_text__c());
-            contentValues.put(QUESTION_HELPER_TEXT ,question.getHelp_Text__c());
-            contentValues.put(QUESTION_MAXI_VALUE ,question.getMax_value__c());
-            contentValues.put(QUESTION_MINI_VALUE ,question.getMin_value__c());
-            contentValues.put(QUESTION_OPTIONS ,question.getOptions__c());
-            contentValues.put(QUESTION_TYPE ,question.getType__c());
-            contentValues.put(QUESTION_TRANSLATION ,question.getTranslation__c());
+            contentValues.put(QUESTION_CAPTION, question.getCaption__c());
+
+            if(question.getDefault_value__c() != null && !question.getDefault_value__c().equalsIgnoreCase("null") && !question.getDefault_value__c().equalsIgnoreCase(""))
+            contentValues.put(QUESTION_DEFAULT_VALUE, question.getDefault_value__c());
+            else{
+                if(question.getType__c().equalsIgnoreCase(Constants.TYPE_SELECTABLE))
+                    contentValues.put(QUESTION_DEFAULT_VALUE, "-select-");
+                else  if(question.getType__c().equalsIgnoreCase(Constants.TYPE_CHECKBOX))
+                    contentValues.put(QUESTION_DEFAULT_VALUE, "-choose-");
+                else  if(question.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER))
+                    contentValues.put(QUESTION_DEFAULT_VALUE, "0");
+                else  if(question.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER_DECIMAL))
+                    contentValues.put(QUESTION_DEFAULT_VALUE, "0.00");
+                else  if(question.getType__c().equalsIgnoreCase(Constants.TYPE_TEXT))
+                    contentValues.put(QUESTION_DEFAULT_VALUE, "--");
+            }
+            contentValues.put(QUESTION_DISPLAY_ORDER, question.getDisplay_Order__c());
+            contentValues.put(QUESTION_HIDE, question.getHide__c());
+
+            contentValues.put(QUESTION_ERROR_TEXT, question.getError_text__c());
+            contentValues.put(QUESTION_HELPER_TEXT, question.getHelp_Text__c());
+            contentValues.put(QUESTION_MAXI_VALUE, question.getMax_value__c());
+            contentValues.put(QUESTION_MINI_VALUE, question.getMin_value__c());
+            contentValues.put(QUESTION_OPTIONS, question.getOptions__c());
+            contentValues.put(QUESTION_TYPE, question.getType__c());
+            contentValues.put(QUESTION_RELATED_QUESTIONS, question.getRelated_Questions__c());
+
+            contentValues.put(QUESTION_TRANSLATION, question.getTranslation__c());
 
             contentValues.put(QUESTION_FORM_NAME, question.getForm__r().getName().toLowerCase());
-            contentValues.put(QUESTION_FORM_ID ,question.getForm__r().getId());
+            contentValues.put(QUESTION_FORM_TYPE, question.getForm__r().getType());
 
 
             db.insert(QUESTIONS_TABLE, null, contentValues);
 
-            Log.d(TAG, "QUESTION WITH ID " + question.getId() + " INSERTED" );
+            Log.d(TAG, "QUESTION WITH ID " + question.getId() + ", NAME " + question.getName() + " AND TRANSLATION " + question.getTranslation__c() + " DISPLAY ORDER "+  question.getDisplay_Order__c() + " SHOULD HIDE ?" + question.getHide__c() +" INSERTED");
 
+            if(question.getTranslation__c() != null) {
+
+                if (question.getTranslation__c().equalsIgnoreCase("Tree age")  && question.getName().startsWith("ao_tree_ age")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("tree age", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^   TREE AGE ID FOUND  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+
+                if (question.getTranslation__c().equalsIgnoreCase("Number of household members including the farmer")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("no_family_members_id", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  NO. FAMILY MEMBERS ID FOUND  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+
+
+                if (question.getTranslation__c().equalsIgnoreCase("Plot Assessment")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("plotResult", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  PLOT RESULT  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+
+
+                if (question.getTranslation__c().equalsIgnoreCase("Observation By")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("observationBy", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  Observation By  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+
+
+                if (question.getTranslation__c().equalsIgnoreCase("Soil PH") && question.getName().startsWith("monitoring_plot_ph_")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("monitoringPlotPh", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  monitoringPlotPh  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+
+                if (question.getTranslation__c().equalsIgnoreCase("Date of Monitoring")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("monitoringDate", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  Date of Monitoring  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }
+                else
+                if (question.getTranslation__c().equalsIgnoreCase("What is your total kg production of dry cocoa beans in a crop year or calendar year?")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("totalProduction", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  TOTAL PRODUCTION  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }
+                else
+                if (question.getTranslation__c().equalsIgnoreCase("Total land ownership or availability size?")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("totalLandSize", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  TOTAL LAND SIZE  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }
+                else
+                if (question.getTranslation__c().equalsIgnoreCase("Area units")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("totalAreaUnit", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  AREA UNIT  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }else
+                if (question.getTranslation__c().equalsIgnoreCase("Weight units")) {
+                    PreferenceManager.getDefaultSharedPreferences(_context).edit().putString("totalWeightUnit", question.getId()).apply();
+
+                    Log.d(TAG, "\n^^^^^^^^^^^^^^^^^^^^  WEIGHTS UNIT  ^^^^^^^^^^^^^^^^^^^^^^\n\n");
+                }
+
+
+
+            }
             addForm(question.getForm__r());
 
 
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -163,13 +277,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteQuestion(String id){
+    public boolean deleteQuestion(String id) {
 
-        return db.delete(QUESTIONS_TABLE, QUESTION_ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(QUESTIONS_TABLE, QUESTION_ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteQuestionsTable(){
+    public boolean deleteQuestionsTable() {
 
         try {
 
@@ -181,26 +295,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             deleteFormsTable();
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public Question getQuestion(String id){
+    public Question getQuestion(String id) {
 
         Question question = null;
         Cursor cursor = null;
         try {
-           question = new Question();
+            question = new Question();
 
 
             String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
                     QUESTION_ID + " ='" + id + "'";
             Log.i("QUERY", selectQuery);
-             cursor = db.rawQuery(selectQuery, null);
+            cursor = db.rawQuery(selectQuery, null);
 
             if (cursor != null && cursor.getCount() > 0) {
 
@@ -210,7 +323,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
                         Form form = new Form();
-                        form.setId(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_ID)));
+                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
 
 
@@ -218,29 +331,168 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
 
                         question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
+                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
+
+
                         question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
                         question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
                         question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
                         question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
                         question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
                         question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
+                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
+
                         question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
 
                         question.setForm__r(form);
-
 
 
                     } while (cursor.moveToNext());
             }
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
-        }finally {
+        } finally {
 
-        if (cursor != null)
-            cursor.close();
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return question;
+
+    }
+
+
+    public Question getQuestionByName(String id) {
+
+        Question question = null;
+        Cursor cursor = null;
+        try {
+            question = new Question();
+
+
+            String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
+                    QUESTION_NAME + " ='" + id + "'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
+
+
+                        question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
+                        question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
+
+                        question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
+                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
+                        question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
+                        question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
+                        question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
+                        question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
+                        question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
+                        question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
+                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
+
+                        question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
+
+                        question.setForm__r(form);
+
+
+                    } while (cursor.moveToNext());
+
+                Log.i("------ QUERY ------", "QUESTION ID FOR " + question.getName() + " IS " + question.getId());
+
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return question;
+
+    }
+
+
+
+    public Question getQuestionByTranslation(String id) {
+
+        Question question = null;
+        Cursor cursor = null;
+        try {
+            question = new Question();
+
+
+            String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
+                    QUESTION_TRANSLATION + " ='" + id + "'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
+
+
+                        question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
+                        question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
+
+                        question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
+                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
+                        question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
+                        question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
+                        question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
+                        question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
+                        question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
+                        question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
+                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
+
+                        question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
+
+                        question.setForm__r(form);
+
+
+                    } while (cursor.moveToNext());
+
+                Log.i("------ QUERY ------", "QUESTION ID FOR " + question.getName() + " IS " + question.getId());
+
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
         }
 
         return question;
@@ -250,7 +502,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public String getQuestionId(String name){
+    public String getQuestionId(String name) {
 
         String id = "null";
 
@@ -272,9 +524,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     } while (cursor.moveToNext());
             }
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-         }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -288,8 +540,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-    public String getQuestionIdByTranslationName(String name){
+    public String getQuestionIdByTranslationName(String name) {
 
         String id = "null";
 
@@ -311,9 +562,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     } while (cursor.moveToNext());
             }
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -328,7 +579,45 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public List<Question> getAllQuestions(){
+    public String getQuestionIdByTranslationNameAndFormType(String name, String formType) {
+
+        String id = "null";
+
+        Cursor cursor = null;
+        try {
+
+            String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
+                    QUESTION_TRANSLATION + " ='" + name + "' AND " + QUESTION_FORM_NAME + " = '" + formType + "'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        id = cursor.getString(cursor.getColumnIndex(QUESTION_ID));
+
+                    } while (cursor.moveToNext());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+
+        Log.i("------ QUERY ------", "QUESTION ID FOR " + name + " IS " + id);
+
+
+        return id;
+
+    }
+
+    public List<Question> getAllQuestions() {
 
         List<Question> questions = null;
         Cursor cursor = null;
@@ -349,37 +638,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
                         Question question = new Question();
-                    Form form = new Form();
-                    form.setId(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_ID)));
-                    form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
 
 
-                         question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
+                        question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
                         question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
+                        question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
                         question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
+                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
                         question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
                         question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
                         question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
                         question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
                         question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
                         question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
+                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
+
                         question.setForm__r(form);
 
 
-
-                        Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() +  " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Options " + question.getOptions__c()  + " Form label " + question.getForm__r().getName());
+                        Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() + " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Options " + question.getOptions__c() + " Form label " + question.getForm__r().getName());
 
                         questions.add(question);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -388,107 +681,141 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return questions;
 
 
-
     }
 
-    public List<Question> getSpecificSetOfQuestions(String questionFormName){
+    public List<Question> getSpecificSetOfQuestions(String questionFormName) {
 
 
-        List<Question> questions = null;
+        List<Question> questions = new ArrayList<>();
         Cursor cursor = null;
 
-            try {
-
-                questions = new ArrayList<>();
-
-                String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
-                        QUESTION_FORM_NAME + " ='" + questionFormName.toLowerCase() + "'";
-
-                Log.i("QUERY", selectQuery);
-                cursor = db.rawQuery(selectQuery, null);
+        try {
 
 
 
-                if (cursor != null && cursor.getCount() > 0) {
+            String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
+                    QUESTION_FORM_NAME + " ='" + questionFormName.toLowerCase() + "'";
 
-                    if (cursor.moveToFirst())
-
-                        do {
-
-
-                            Question question = new Question();
-                            Form form = new Form();
-                            form.setId(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_ID)));
-                            form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
 
 
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
 
 
-                            question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
-                            question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
-
-                            question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
-                            question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
-                            question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
-                            question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
-                            question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
-                            question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
-                            question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
-                            question.setForm__r(form);
+                        Question question = new Question();
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
 
 
+                        question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
+                        question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
 
-                            Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() +  " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Options " + question.getOptions__c()  + " Form label " + question.getForm__r().getName());
+                        question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
+
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
+                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
+
+                        question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
+                        question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
+                        question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
+                        question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
+                        question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
+                        question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
+                        question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
+                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
+
+                        question.setForm__r(form);
 
 
-                                    questions.add(question);
+                        Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() + " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Translation " + question.getTranslation__c() + " Related Questions " + question.getRelated_Questions__c() + " Options " + question.getOptions__c() + " Form label " + question.getForm__r().getName());
 
 
+                        questions.add(question);
 
 
-                        } while (cursor.moveToNext());
-                }
-            }catch(Exception e){
-                e.printStackTrace();
-                return null;
-
-            }finally {
-
-                if (cursor != null)
-                    cursor.close();
+                    } while (cursor.moveToNext());
             }
-
+        } catch (Exception e) {
+            e.printStackTrace();
             return questions;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+
+        //Sort out questions data by display order
+
+            Collections.sort(questions, new Comparator<Question>() {
+                @Override
+                public int compare(Question o, Question t1) {
+
+                    Double value1 = 0.00, value2 = 0.00;
+
+
+                    try {
+
+                        value1 = o.getDisplay_Order__c();
+                        value2 = t1.getDisplay_Order__c();
+
+                        Log.i(TAG, "V1 = " + value1 + " AND V2 " + value2);
+
+                        return value1.compareTo(value2);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+
+                        return 1;
+
+                    }
+
+
+                }
+            });
+
+
+        Log.i(TAG, "SORTED OUT WITH SIZE " + questions.size());
+
+        return questions;
 
     }
 
 
-    public boolean addNewFarmer(RealFarmer realFarmer){
-        try{
+    public boolean addNewFarmer(RealFarmer realFarmer) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMER_ID ,realFarmer.getId());
-            contentValues.put(FARMER_NAME ,realFarmer.getFarmerName());
-            contentValues.put(FARMER_CODE ,realFarmer.getCode());
-            contentValues.put(FARMER_VILLAGE ,realFarmer.getVillage());
-            contentValues.put(FARMER_GENDER ,realFarmer.getGender());
-            contentValues.put(FARMER_BIRTHYEAR ,realFarmer.getBirthYear());
-            contentValues.put(FARMER_IMAGE_URL ,realFarmer.getImageUrl());
+            contentValues.put(FARMER_ID, realFarmer.getId());
+            contentValues.put(FARMER_NAME, realFarmer.getFarmerName());
+            contentValues.put(FARMER_CODE, realFarmer.getCode());
+            contentValues.put(FARMER_VILLAGE, realFarmer.getVillage());
+            contentValues.put(FARMER_GENDER, realFarmer.getGender());
+            contentValues.put(FARMER_BIRTHYEAR, realFarmer.getBirthYear());
+            contentValues.put(FARMER_IMAGE_URL, realFarmer.getImageUrl());
 
 
-            contentValues.put(FARMER_EDUCATION ,realFarmer.getEducationLevel());
-            contentValues.put(FARMER_LAST_VISIT_DATE ,realFarmer.getLastVisitDate());
-            contentValues.put(FARMER_LAND_AREA ,realFarmer.getLandArea());
+            contentValues.put(FARMER_EDUCATION, realFarmer.getEducationLevel());
+            contentValues.put(FARMER_LAST_VISIT_DATE, realFarmer.getLastVisitDate());
+            contentValues.put(FARMER_LAND_AREA, realFarmer.getLandArea());
 
-            contentValues.put(FAMILY_MEMBERS_JSON ,realFarmer.getFamilyMembersJson());
+            contentValues.put(FAMILY_MEMBERS_JSON, realFarmer.getFamilyMembersJson());
 
-            contentValues.put(FARMER_PROFILE_JSON ,realFarmer.getFarmerProfileJson());
-            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON ,realFarmer.getAggregateEconomicResultsJson());
-            contentValues.put(PRODUCTIVE_PROFILE_JSON ,realFarmer.getProductiveProfileJson());
-            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON ,realFarmer.getFarmingEconomicProfileJson());
+            contentValues.put(FARMER_PROFILE_JSON, realFarmer.getFarmerProfileJson());
+            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON, realFarmer.getAggregateEconomicResultsJson());
+            contentValues.put(PRODUCTIVE_PROFILE_JSON, realFarmer.getProductiveProfileJson());
+            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON, realFarmer.getFarmingEconomicProfileJson());
 
             contentValues.put(SOCIO_ECONOMIC_PROFILE_JSON, realFarmer.getSocioEconomicProfileJson());
-            contentValues.put(OTHER_JSON ,realFarmer.getOtherJson());
+            contentValues.put(OTHER_JSON, realFarmer.getOtherJson());
 
             contentValues.put(FARMER_SYNC_STATUS, realFarmer.getSyncStatus());
             contentValues.put(HAS_REGISTERED, realFarmer.getHasRegistered());
@@ -507,7 +834,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -516,13 +843,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteFarmer(String code){
+    public boolean deleteFarmer(String code) {
 
-        return db.delete(FARMER_TABLE, FARMER_CODE + " = ? ", new String[]{code} ) > 0;
+        return db.delete(FARMER_TABLE, FARMER_CODE + " = ? ", new String[]{code}) > 0;
 
     }
 
-    public List<RealFarmer> getAllFarmersData(){
+    public List<RealFarmer> getAllFarmersData() {
 
         List<RealFarmer> realFarmers = null;
         Cursor cursor = null;
@@ -559,10 +886,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
 
 
-
                         realFarmer.setFarmerProfileJson(cursor.getString(cursor.getColumnIndex(FARMER_PROFILE_JSON)));
-                         realFarmer.setAggregateEconomicResultsJson(cursor.getString(cursor.getColumnIndex(AGGREGATE_ECONOMIC_RESULTS_JSON)));
-                         realFarmer.setProductiveProfileJson(cursor.getString(cursor.getColumnIndex(PRODUCTIVE_PROFILE_JSON)));
+                        realFarmer.setAggregateEconomicResultsJson(cursor.getString(cursor.getColumnIndex(AGGREGATE_ECONOMIC_RESULTS_JSON)));
+                        realFarmer.setProductiveProfileJson(cursor.getString(cursor.getColumnIndex(PRODUCTIVE_PROFILE_JSON)));
                         realFarmer.setFarmingEconomicProfileJson(cursor.getString(cursor.getColumnIndex(FARMING_ECONOMIC_PROFILE_JSON)));
                         realFarmer.setSocioEconomicProfileJson(cursor.getString(cursor.getColumnIndex(SOCIO_ECONOMIC_PROFILE_JSON)));
                         realFarmer.setOtherJson(cursor.getString(cursor.getColumnIndex(FAMILY_MEMBERS_JSON)));
@@ -574,20 +900,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
 
 
-
                         Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
 
                         realFarmers.add(realFarmer);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -596,10 +920,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return realFarmers;
 
 
-
     }
 
-    public List<RealFarmer> getAllFarmersBasicInfoAccordingToVillage(String villageName){
+    public List<RealFarmer> getAllFarmersBasicInfoAccordingToVillage(String villageName) {
 
         List<RealFarmer> realFarmers = null;
         Cursor cursor = null;
@@ -642,14 +965,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmers.add(realFarmer);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -658,13 +980,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return realFarmers;
 
 
-
     }
 
-    public  RealFarmer getFarmerBasicInfo(String code){
+    public RealFarmer getFarmerBasicInfo(String code) {
 
-         Cursor cursor = null;
-         RealFarmer realFarmer = null;
+        Cursor cursor = null;
+        RealFarmer realFarmer = null;
 
         try {
 
@@ -711,14 +1032,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -727,20 +1047,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return realFarmer;
 
 
-
     }
 
 
-
-
-
-
-
-
-
-    public String getFamilyMembersJson(String code){
+    public String getFamilyMembersJson(String code) {
         Cursor cursor = null;
-        String data = "";
+        String data = "{}";
 
         try {
             String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
@@ -760,11 +1072,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -774,9 +1085,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-
-    public String getAggregateEconomicResultsJson(String code){
+    public String getAggregateEconomicResultsJson(String code) {
         Cursor cursor = null;
         String data = "";
 
@@ -798,11 +1107,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -813,7 +1122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public String getProductiveProfileJson(String code){
+    public String getProductiveProfileJson(String code) {
         Cursor cursor = null;
         String data = "";
 
@@ -835,11 +1144,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -849,9 +1158,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getFarmingEconomicProfileJson(String code){
+    public String getFarmingEconomicProfileJson(String code) {
         Cursor cursor = null;
-        String data = "";
+        String data = "{}";
 
         try {
             String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
@@ -871,11 +1180,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -885,7 +1194,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getSocioEconomicProfileJson(String code){
+    public String getSocioEconomicProfileJson(String code) {
         Cursor cursor = null;
         String data = "";
 
@@ -907,11 +1216,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -921,7 +1230,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getOtherJson(String code){
+    public String getOtherJson(String formName, String code) {
         Cursor cursor = null;
         String data = "";
 
@@ -937,17 +1246,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
 
                     do {
-                        data = cursor.getString(cursor.getColumnIndex(OTHER_JSON));
+                        JSONObject jsonObject;
+
+                    String value = cursor.getString(cursor.getColumnIndex(OTHER_JSON));
+                    if(value != null) {
+                        jsonObject = new JSONObject(value);
+                        data = jsonObject.get(formName).toString();
+                    }
+                    else {
+                        jsonObject = new JSONObject();
+                        data = jsonObject.toString();
+
+                    }
+
+
 
                         Log.i(TAG, "DATA VALUE IS " + data);
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -957,7 +1279,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getFarmerProfileJson(String code){
+    public String getFarmerProfileJson(String code) {
         Cursor cursor = null;
         String data = "";
 
@@ -979,11 +1301,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -993,7 +1315,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getFarmerPlotInfoJson(String code_plotId){
+    public String getFarmerPlotInfoJson(String code_plotId) {
         Cursor cursor = null;
         String data = "";
 
@@ -1017,11 +1339,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1032,9 +1354,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-
-    public String getFarmerPlotAdditionalInterventionJson(String code_plotId){
+    public String getFarmerPlotAdditionalInterventionJson(String code_plotId) {
         Cursor cursor = null;
         String data = "";
 
@@ -1058,11 +1378,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1073,7 +1393,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public String getFarmerPlotAdoptionObservationJson(String code_plotId){
+    public String getFarmerPlotAdoptionObservationJson(String code_plotId) {
         Cursor cursor = null;
         String data = "";
 
@@ -1097,11 +1417,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1110,7 +1430,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return data;
 
     }
-    public String getFarmerPlotAdoptionObservationResultsJson(String code_plotId){
+
+    public String getFarmerPlotAdoptionObservationResultsJson(String code_plotId) {
         Cursor cursor = null;
         String data = "";
 
@@ -1134,11 +1455,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1149,19 +1470,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public boolean editFamilyMembersJson(String code, String json) {
 
-    public boolean editFamilyMembersJson(String code, String json){
-
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FAMILY_MEMBERS_JSON , json);
+            contentValues.put(FAMILY_MEMBERS_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1169,21 +1489,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editAggregateEconomicResultsJson(String code, String json){
 
-        try{
+    public boolean editAggregateEconomicResultsJson(String code, String json) {
+
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON , json);
+            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1191,21 +1511,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editProductiveProfileJson(String code, String json){
 
-        try{
+    public boolean editProductiveProfileJson(String code, String json) {
+
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(PRODUCTIVE_PROFILE_JSON , json);
+            contentValues.put(PRODUCTIVE_PROFILE_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1213,21 +1533,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editFarmingEconomicProfileJson(String code, String json){
 
-        try{
+    public boolean editFarmingEconomicProfileJson(String code, String json) {
+
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON , json);
+            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1235,21 +1555,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editSocioEconomicProfileJson(String code, String json){
 
-        try{
+    public boolean editSocioEconomicProfileJson(String code, String json) {
+
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(SOCIO_ECONOMIC_PROFILE_JSON , json);
+            contentValues.put(SOCIO_ECONOMIC_PROFILE_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1257,21 +1577,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editOtherJson(String code, String json){
 
-        try{
+    public boolean editOtherJson(String formName, String code, String json) {
+
+        try {
+            JSONObject jsonObject;
+
+            String jsonStringValue = getOtherJson(formName, code);
+            if(jsonStringValue != null) {
+
+                jsonObject = new JSONObject(jsonStringValue);
+
+            }else jsonObject = new JSONObject();
+
+
+            if(jsonObject.has(formName)) {
+                jsonObject.remove(formName);
+                jsonObject.put(formName, json);
+            }else{
+                jsonObject.put(formName, json);
+            }
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(OTHER_JSON , json);
+            contentValues.put(OTHER_JSON, jsonObject.toString());
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
-
-
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1279,21 +1613,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editFarmerProfileJson(String code, String json){
 
-        try{
+    public boolean editFarmerProfileJson(String code, String json) {
+
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMER_PROFILE_JSON , json);
+            contentValues.put(FARMER_PROFILE_JSON, json);
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1301,23 +1635,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
-    public boolean editFarmerPlotInfo(String code_plotId, String json){
+
+    public boolean editFarmerPlotInfo(String code_plotId, String json) {
 
         String[] values = code_plotId.split("_");
 
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(PLOT_INFORMATION_JSON , json);
+            contentValues.put(PLOT_INFORMATION_JSON, json);
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE +  " AND " + PLOT_ID + " = ?" , new String[] {values[0], values[1]});
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
 
 
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0]  + " AND ID " + values[1]);
+            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1325,26 +1659,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
 
 
-
-    public boolean editFarmerPlotAdoptionObservationJson(String code_plotId, String json){
+    public boolean editFarmerPlotAdoptionObservationJson(String code_plotId, String json) {
 
         String[] values = code_plotId.split("_");
 
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ADOPTION_OBSERVATIONS_JSON , json);
+            contentValues.put(ADOPTION_OBSERVATIONS_JSON, json);
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE +  " AND " + PLOT_ID + " = ?" , new String[] {values[0], values[1]});
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
 
 
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0]  + " AND ID " + values[1]);
+            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1352,24 +1684,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
 
-    public boolean editFarmerPlotAdoptionObservationResultsJson(String code_plotId, String json){
+    public boolean editFarmerPlotAdoptionObservationResultsJson(String code_plotId, String json) {
 
         String[] values = code_plotId.split("_");
 
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON , json);
+            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON, json);
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE +  " AND " + PLOT_ID + " = ?" , new String[] {values[0], values[1]});
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
 
 
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0]  + " AND ID " + values[1]);
+            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1377,23 +1708,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
 
 
-    public boolean editAdditionalInterventionJson(String code, String json){
+    public boolean editAdditionalInterventionJson(String code, String json) {
 
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ADDITIONAL_INTERVENTION_JSON , json);
+            contentValues.put(ADDITIONAL_INTERVENTION_JSON, json);
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {code});
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
 
 
             Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1401,32 +1731,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
 
 
+    public boolean editFarmerBasicInfo(RealFarmer realFarmer) {
 
-
-    public boolean editFarmerBasicInfo(RealFarmer realFarmer){
-
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMER_ID ,realFarmer.getId());
-            contentValues.put(FARMER_NAME ,realFarmer.getFarmerName());
-            contentValues.put(FARMER_CODE ,realFarmer.getCode());
-            contentValues.put(FARMER_VILLAGE ,realFarmer.getVillage());
-            contentValues.put(FARMER_GENDER ,realFarmer.getGender());
-            contentValues.put(FARMER_BIRTHYEAR ,realFarmer.getBirthYear());
-            contentValues.put(FARMER_IMAGE_URL ,realFarmer.getImageUrl());
+            contentValues.put(FARMER_ID, realFarmer.getId());
+            contentValues.put(FARMER_NAME, realFarmer.getFarmerName());
+            contentValues.put(FARMER_CODE, realFarmer.getCode());
+            contentValues.put(FARMER_VILLAGE, realFarmer.getVillage());
+            contentValues.put(FARMER_GENDER, realFarmer.getGender());
+            contentValues.put(FARMER_BIRTHYEAR, realFarmer.getBirthYear());
+            contentValues.put(FARMER_IMAGE_URL, realFarmer.getImageUrl());
 
 
-            contentValues.put(FARMER_EDUCATION ,realFarmer.getEducationLevel());
-            contentValues.put(FARMER_LAST_VISIT_DATE ,realFarmer.getLastVisitDate());
-            contentValues.put(FARMER_LAND_AREA ,realFarmer.getLandArea());
+            contentValues.put(FARMER_EDUCATION, realFarmer.getEducationLevel());
+            contentValues.put(FARMER_LAST_VISIT_DATE, realFarmer.getLastVisitDate());
+            contentValues.put(FARMER_LAND_AREA, realFarmer.getLandArea());
 
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[] {realFarmer.getCode()});
-
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{realFarmer.getCode()});
 
 
             Log.d(TAG, "************FARMER UPDATED WITH DATA");
@@ -1439,7 +1765,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1447,62 +1773,56 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
+    }
+
+
+    public Boolean editSpecificFarmerDetails(String formLabel, String farmerCode, String json) {
+
+        switch (formLabel.toLowerCase()) {
+
+            case Constants.ADDITIONAL_INTERVENTION:
+                return editAdditionalInterventionJson(farmerCode, json);
+
+
+            case Constants.AGGREGATE_ECONOMIC_RESULTS:
+                return editAggregateEconomicResultsJson(farmerCode, json);
+
+            case Constants.PLOT_INFORMATION:
+                return editFarmerPlotInfo(farmerCode, json);
+
+            case Constants.ADOPTION_OBSERVATIONS:
+                return editFarmerPlotAdoptionObservationJson(farmerCode, json);
+
+            case Constants.ADOPTION_OBSERVATION_RESULTS:
+                return editFarmerPlotAdoptionObservationResultsJson(farmerCode, json);
+
+            case Constants.FAMILY_MEMBERS:
+                return editFamilyMembersJson(farmerCode, json);
+
+            case Constants.FARMER_PROFILE:
+                return editFarmerProfileJson(farmerCode, json);
+
+            case Constants.FARMING_ECONOMIC_PROFILE:
+                return editFarmingEconomicProfileJson(farmerCode, json);
+
+            case Constants.PRODUCTIVE_PROFILE:
+                return editProductiveProfileJson(farmerCode, json);
+
+            case Constants.SOCIO_ECONOMIC_PROFILE:
+                return editSocioEconomicProfileJson(farmerCode, json);
+
+
+            default:
+                return editOtherJson(formLabel.toLowerCase(), farmerCode, json);
+        }
 
     }
 
 
+    public String getSpecificFarmerDetails(String formLabel, String farmerCode) {
 
 
-
-    public Boolean editSpecificFarmerDetails(String formLabel, String farmerCode, String json){
-
-      switch(formLabel.toLowerCase()){
-
-          case Constants.ADDITIONAL_INTERVENTION:
-              return editAdditionalInterventionJson(farmerCode, json);
-
-
-          case Constants.AGGREGATE_ECONOMIC_RESULTS:
-              return editAggregateEconomicResultsJson(farmerCode, json);
-
-          case Constants.PLOT_INFORMATION:
-              return editFarmerPlotInfo(farmerCode, json);
-
-          case Constants.ADOPTION_OBSERVATIONS:
-              return editFarmerPlotAdoptionObservationJson(farmerCode, json);
-
-          case Constants.ADOPTION_OBSERVATION_RESULTS:
-              return editFarmerPlotAdoptionObservationResultsJson(farmerCode, json);
-
-          case Constants.FAMILY_MEMBERS:
-              return editFamilyMembersJson(farmerCode, json);
-
-          case Constants.FARMER_PROFILE:
-              return editFarmerProfileJson(farmerCode, json);
-
-          case Constants.FARMING_ECONOMIC_PROFILE:
-              return editFarmingEconomicProfileJson(farmerCode, json);
-
-          case Constants.PRODUCTIVE_PROFILE:
-              return editProductiveProfileJson(farmerCode, json);
-
-          case Constants.OTHER:
-              return editOtherJson(farmerCode, json);
-
-          case Constants.SOCIO_ECONOMIC_PROFILE:
-              return editSocioEconomicProfileJson(farmerCode, json);
-
-
-          default : return null;
-      }
-
-    }
-
-
-    public String getSpecificFarmerDetails(String formLabel, String farmerCode){
-
-
-        switch(formLabel.toLowerCase()){
+        switch (formLabel.toLowerCase()) {
 
             case Constants.ADDITIONAL_INTERVENTION:
                 return getFarmerPlotAdditionalInterventionJson(farmerCode);
@@ -1531,42 +1851,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             case Constants.PRODUCTIVE_PROFILE:
                 return getProductiveProfileJson(farmerCode);
 
-            case Constants.OTHER:
-                return getOtherJson(farmerCode);
+
 
             case Constants.SOCIO_ECONOMIC_PROFILE:
                 return getSocioEconomicProfileJson(farmerCode);
 
 
-            default : return "empty";
+            default:
+                return getOtherJson(formLabel, farmerCode);
         }
 
     }
 
 
-    public boolean editFarmerPlotInfoAndAO(RealPlot plot){
+
+    public boolean editFarmerPlotInfoAndAO(RealPlot plot) {
 
 
-
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
 
 
-            contentValues.put(PLOT_NAME , plot.getName());
-            contentValues.put(PLOT_INFORMATION_JSON , plot.getPlotInformationJson());
-            contentValues.put(ADOPTION_OBSERVATIONS_JSON , plot.getAdoptionObservationsJson());
-            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON , plot.getAdoptionObservationResultsJson());
-            contentValues.put(ADDITIONAL_INTERVENTION_JSON , plot.getAdditionalInterventionJson());
+            contentValues.put(PLOT_NAME, plot.getName());
+            contentValues.put(PLOT_INFORMATION_JSON, plot.getPlotInformationJson());
+            contentValues.put(ADOPTION_OBSERVATIONS_JSON, plot.getAdoptionObservationsJson());
+            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON, plot.getAdoptionObservationResultsJson());
+            contentValues.put(ADDITIONAL_INTERVENTION_JSON, plot.getAdditionalInterventionJson());
 
 
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + "  = ? AND " + PLOT_ID + " = ?", new String[]{plot.getFarmerCode(), plot.getId()});
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE +  "  = ? AND " + PLOT_ID + " = ?" , new String[] {plot.getFarmerCode(), plot.getId()});
 
+            Log.d(TAG, "DATA\n" + plot.getPlotInformationJson() + " \n AND " + plot.getAdoptionObservationsJson() + plot.getAdoptionObservationResultsJson() + " \n AND " + plot.getAdditionalInterventionJson() + " \nADDED FOR FARMER WITH CODE " + plot.getFarmerCode() + " AND ID " + plot.getId());
 
-            Log.d(TAG, "DATA\n" + plot.getPlotInformationJson() + " \n AND " + plot.getAdoptionObservationsJson() + plot.getAdoptionObservationResultsJson() + " \n AND " + plot.getAdditionalInterventionJson() + " \nADDED FOR FARMER WITH CODE " + plot.getFarmerCode()  + " AND ID " + plot.getId());
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1574,32 +1893,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
 
-
     }
 
 
-    public boolean editFarmerPlotRecommendationId(String farmerCode, String plotId, String gapsRecId_plotRecId){
+    public boolean editFarmerPlotRecommendationId(String farmerCode, String plotId, String gapsRecId_plotRecId) {
 
-        try{
+        try {
 
             ContentValues contentValues = new ContentValues();
 
 
-            contentValues.put(RECOMMENDATION_ID , gapsRecId_plotRecId);
+            contentValues.put(RECOMMENDATION_ID, gapsRecId_plotRecId);
 
 
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE +  "  = ? AND " + PLOT_ID + " = ?" , new String[] {farmerCode, plotId});
+            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + "  = ? AND " + PLOT_ID + " = ?", new String[]{farmerCode, plotId});
 
 
-            Log.d(TAG, "DATA RECOMMENDATION ID " + gapsRecId_plotRecId +" APPLIED FOR " + farmerCode  + " AND ID " + plotId);
+            Log.d(TAG, "DATA RECOMMENDATION ID " + gapsRecId_plotRecId + " APPLIED FOR " + farmerCode + " AND ID " + plotId);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
 
         return true;
-
 
 
     }
@@ -1635,34 +1952,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean addForm(Form form){
 
-        try{
+      boolean addForm(Form form) {
 
-            if(! doesFormLabelExist(form.getName())) {
+        try {
 
-                if(!containsString(form.getName().toLowerCase())) {
+            if (!doesFormLabelExist(form.getName())) {
+
+                if (!containsString(form.getName().toLowerCase())) {
 
                     ContentValues contentValues = new ContentValues();
-                    contentValues.put(FORM_ID, form.getId());
+                    contentValues.put(FORM_TYPE, form.getType());
                     contentValues.put(FORM_NAME, form.getName().toLowerCase());
 
 
                     db.insert(FORMS_TABLE, null, contentValues);
 
-                    Log.d(TAG, "FORM LABEL WITH NAME " + form.getName() + " INSERTED");
+                    Log.d(TAG, "FORM LABEL WITH NAME " + form.getName() + "  AND TYPE " + form.getType() + " INSERTED");
 
 
                 }
 
 
-            }else{
+            } else {
                 Log.d(TAG, "FORM LABEL WITH NAME " + form.getName() + " ALREADY EXISTS!");
 
             }
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1671,8 +1989,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    private boolean containsString(String testString)
-    {
+    private boolean containsString(String testString) {
         List<String> formList = new ArrayList<>();
         formList.add(Constants.ADOPTION_OBSERVATION_RESULTS);
         formList.add(Constants.ADOPTION_OBSERVATIONS);
@@ -1681,22 +1998,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         formList.add(Constants.AGGREGATE_ECONOMIC_RESULTS);
         formList.add(Constants.AGGREGATE_ECONOMIC_RESULTS);
         formList.add(Constants.PLOT_INFORMATION);
-
-
-
-
-
+        formList.add(Constants.AO_MONITORING);
+        formList.add(Constants.AO_MONITORING_RESULT);
+        formList.add(Constants.MONITORING_PLOT_INFORMATION);
+        formList.add(Constants.COMPETENCE_MONITORING);
+        formList.add(Constants.FAILURE_MONITORING);
+        formList.add(Constants.OTHER);
+        formList.add(Constants.MONITORING);
 
         return formList.contains(testString);
     }
 
-    public boolean deleteForm(String id){
+    public boolean deleteForm(String id) {
 
-        return db.delete(FORMS_TABLE, FORM_ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(FORMS_TABLE, FORM_TYPE + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteFormsTable(){
+    public boolean deleteFormsTable() {
 
         try {
 
@@ -1706,15 +2025,106 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "FORMS TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public List<Form> getAllForms(){
+    public List<Form> getAllDiagnosticForms() {
+
+        List<Form> forms = null;
+        Cursor cursor = null;
+
+        try {
+
+            forms = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + FORM_TYPE + " = '" + "Diagnostic'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+
+                        Log.i(TAG, "Form found with value " + form.getName());
+
+                        forms.add(form);
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return forms;
+
+
+    }
+
+
+    public List<Form> getAllMonitoringForms() {
+
+        List<Form> forms = null;
+        Cursor cursor = null;
+
+        try {
+
+            forms = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + FORM_TYPE + " = '" + "Monitoring'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+                        Form form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+
+                        Log.i(TAG, "Form found with value " + form.getName());
+
+                        forms.add(form);
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return forms;
+
+
+    }
+
+
+    public List<Form> getAllForms() {
 
         List<Form> forms = null;
         Cursor cursor = null;
@@ -1733,9 +2143,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     do {
 
-
                         Form form = new Form();
-                        form.setId(cursor.getString(cursor.getColumnIndex(FORM_ID)));
+                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
 
                         Log.i(TAG, "Form found with value " + form.getName());
@@ -1743,14 +2152,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         forms.add(form);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1759,29 +2167,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return forms;
 
 
-
-    }
-
-    boolean doesFormLabelExist(String formLabel){
-
-            SQLiteDatabase db = this.getReadableDatabase();
-            return DatabaseUtils.queryNumEntries(db, FORMS_TABLE, FORM_NAME + " = ? ",
-                    new String[]{formLabel.toLowerCase()}) > 0;
-
     }
 
 
 
+    boolean doesFormLabelExist(String formLabel) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        return DatabaseUtils.queryNumEntries(db, FORMS_TABLE, FORM_NAME + " = ? ",
+                new String[]{formLabel.toLowerCase()}) > 0;
+
+    }
 
 
+    public boolean addVillage(Village village) {
 
+        try {
 
-
-    public boolean addVillage(Village village){
-
-        try{
-
-            if(! doesVillageExist(village.getId())) {
+            if (!doesVillageExist(village.getId())) {
 
                 ContentValues contentValues = new ContentValues();
                 contentValues.put(ID, village.getId());
@@ -1793,13 +2196,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 Log.d(TAG, "VILLAGE WITH NAME " + village.getName() + " INSERTED");
 
-            }else{
+            } else {
                 Log.d(TAG, "VILLAGE WITH NAME " + village.getName() + " ALREADY EXISTS!");
 
             }
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1808,13 +2211,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteVillage(String villageId){
+    public boolean deleteVillage(String villageId) {
 
-        return db.delete(VILLAGES_TABLE, VILLAGE_ID + " = ? ", new String[]{villageId} ) > 0;
+        return db.delete(VILLAGES_TABLE, VILLAGE_ID + " = ? ", new String[]{villageId}) > 0;
 
     }
 
-    public boolean deleteVillagesTable(){
+    public boolean deleteVillagesTable() {
 
         try {
 
@@ -1824,15 +2227,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "VILLAGES TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public List<Village> getAllVillages(){
+    public List<Village> getAllVillages() {
 
         List<Village> villages;
         Cursor cursor = null;
@@ -1866,11 +2268,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -1879,10 +2281,155 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return villages;
 
 
+    }
+
+    public List<String> getAllVillageNames() {
+
+        List<String> villages;
+        Cursor cursor = null;
+
+        try {
+
+            villages = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + VILLAGES_TABLE;
+            Log.i("QUERY", selectQuery);
+
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        villages.add(cursor.getString(cursor.getColumnIndex(VILLAGE_NAME)));
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+        Log.i("QUERY", "Village Table size is   " + villages.size());
+
+
+        return villages;
+
 
     }
 
-    boolean doesVillageExist(String id){
+
+    public boolean addCountry(Country country) {
+
+        try {
+
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ID, country.getId());
+            contentValues.put(COUNTRY_NAME, country.getName());
+            contentValues.put(COUNTRY_ISO_CODE, country.getIsoCode());
+            contentValues.put(COUNTRY_CURRENCY, country.getCurrency());
+
+            contentValues.put(COUNTRY_DRY_GATE_PRICE, country.getAverageGatePrice());
+
+            db.insert(COUNTRIES_TABLE, null, contentValues);
+
+            Log.d(TAG, "COUNTRY WITH NAME " + country.getName() + " INSERTED");
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public boolean deleteCountry(String id) {
+
+        return db.delete(COUNTRIES_TABLE, COUNTRY_ID + " = ? ", new String[]{id}) > 0;
+
+    }
+
+    public boolean deleteCountriesTable() {
+
+        try {
+
+
+            db.execSQL("DELETE FROM " + COUNTRIES_TABLE);
+
+            Log.i("DATABASE", "COUNTRIES TABLE DELETED");
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
+    public List<Country> getAllCountries() {
+
+        List<Country> countries;
+        Cursor cursor = null;
+
+        try {
+
+            countries = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + COUNTRIES_TABLE;
+            Log.i("QUERY", selectQuery);
+
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        Country country = new Country();
+                        country.setId(cursor.getString(cursor.getColumnIndex(COUNTRY_ID)));
+                        country.setName(cursor.getString(cursor.getColumnIndex(COUNTRY_NAME)));
+                        country.setIsoCode(cursor.getString(cursor.getColumnIndex(COUNTRY_ISO_CODE)));
+                        country.setCurrency(cursor.getString(cursor.getColumnIndex(COUNTRY_CURRENCY)));
+                        country.setAverageGatePrice(cursor.getString(cursor.getColumnIndex(COUNTRY_DRY_GATE_PRICE)));
+
+
+                        Log.i(TAG, "Country found with value " + country.getName());
+
+                        countries.add(country);
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return countries;
+
+
+    }
+
+
+    boolean doesVillageExist(String id) {
 
         SQLiteDatabase db = this.getReadableDatabase();
         return DatabaseUtils.queryNumEntries(db, VILLAGES_TABLE, VILLAGE_ID + " = ? ",
@@ -1891,34 +2438,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-
-
-    public boolean addNewPlot(RealPlot realPlot){
-        try{
+    public boolean addNewPlot(RealPlot realPlot) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMER_CODE ,realPlot.getFarmerCode());
-            contentValues.put(PLOT_ID ,realPlot.getId());
-            contentValues.put(PLOT_NAME ,realPlot.getName());
+            contentValues.put(FARMER_CODE, realPlot.getFarmerCode());
+            contentValues.put(PLOT_ID, realPlot.getId());
+            contentValues.put(PLOT_NAME, realPlot.getName());
 
-            contentValues.put(PLOT_INFORMATION_JSON ,realPlot.getPlotInformationJson());
-            contentValues.put(ADOPTION_OBSERVATIONS_JSON ,realPlot.getAdoptionObservationsJson());
-            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON ,realPlot.getAdoptionObservationResultsJson());
-            contentValues.put(ADDITIONAL_INTERVENTION_JSON ,realPlot.getAdditionalInterventionJson());
-            contentValues.put(RECOMMENDATION_ID ,realPlot.getRecommendationId());
-            contentValues.put(START_YEAR ,realPlot.getStartYear());
-
+            contentValues.put(PLOT_INFORMATION_JSON, realPlot.getPlotInformationJson());
+            contentValues.put(ADOPTION_OBSERVATIONS_JSON, realPlot.getAdoptionObservationsJson());
+            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON, realPlot.getAdoptionObservationResultsJson());
+            contentValues.put(ADDITIONAL_INTERVENTION_JSON, realPlot.getAdditionalInterventionJson());
+            contentValues.put(RECOMMENDATION_ID, realPlot.getRecommendationId());
+            contentValues.put(START_YEAR, realPlot.getStartYear());
 
 
             db.insert(PLOTS_TABLE, null, contentValues);
 
-            Log.d(TAG, "DATA\n" + realPlot.getPlotInformationJson() + " \n AND " + realPlot.getAdoptionObservationsJson() + realPlot.getAdoptionObservationResultsJson() + " \n AND " + realPlot.getAdditionalInterventionJson() + " \nADDED FOR FARMER WITH CODE " + realPlot.getFarmerCode()  + " AND ID " + realPlot.getId());
+            Log.d(TAG, "DATA\n" + realPlot.getPlotInformationJson() + " \n AND " + realPlot.getAdoptionObservationsJson() + realPlot.getAdoptionObservationResultsJson() + " \n AND " + realPlot.getAdditionalInterventionJson() + " \nADDED FOR FARMER WITH CODE " + realPlot.getFarmerCode() + " AND ID " + realPlot.getId());
 
 
-
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1928,18 +2469,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-    public boolean editPlotStartYear(String plotId, int newStartYearValue){
-        try{
+    public boolean editPlotStartYear(String plotId, int newStartYearValue) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(START_YEAR ,newStartYearValue);
+            contentValues.put(START_YEAR, newStartYearValue);
 
-            db.update(PLOTS_TABLE, contentValues, ID  + "= ?", new String[] {plotId});
+            db.update(PLOTS_TABLE, contentValues, ID + "= ?", new String[]{plotId});
             Log.i(TAG, "PLOT START YEAR UPDATED! " + "NEW VALUE IS " + newStartYearValue);
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -1949,16 +2489,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public boolean deletePlot(String id) {
 
-
-
-    public boolean deletePlot(String id){
-
-        return db.delete(PLOTS_TABLE, PLOT_ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(PLOTS_TABLE, PLOT_ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public List<RealPlot> getAllFarmerPlots(String farmerCode){
+    public List<RealPlot> getAllFarmerPlots(String farmerCode) {
 
         List<RealPlot> realPlots = null;
         Cursor cursor = null;
@@ -1994,20 +2531,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realPlot.setStartYear(cursor.getInt(cursor.getColumnIndex(START_YEAR)));
 
 
-
                         Log.i(TAG, "RealPlot found with ID  " + realPlot.getId());
 
                         realPlots.add(realPlot);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2016,11 +2551,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return realPlots;
 
 
-
     }
 
 
-    public RealPlot getFarmerPlot(String id, String farmerCode){
+    public RealPlot getFarmerPlot(String id, String farmerCode) {
 
         RealPlot realPlot = null;
         Cursor cursor = null;
@@ -2028,7 +2562,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             String selectQuery = "SELECT  * FROM " + PLOTS_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + farmerCode + "' AND " + PLOT_ID + " ='" + id + "'" ;
+                    FARMER_CODE + " ='" + farmerCode + "' AND " + PLOT_ID + " ='" + id + "'";
 
             Log.i("QUERY", selectQuery);
             cursor = db.rawQuery(selectQuery, null);
@@ -2059,11 +2593,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2072,30 +2606,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return realPlot;
 
 
-
     }
 
-    public boolean addSkipLogic(SkipLogic skipLogic){
-        try{
+    public boolean addSkipLogic(SkipLogic skipLogic) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID ,skipLogic.getId());
-            contentValues.put(SKIP_LOGIC_NAME ,skipLogic.getName());
-            contentValues.put(SKIP_LOGIC_QUESTION_ID ,skipLogic.getQuestionId());
-            contentValues.put(SKIP_LOGIC_ANSWER_VALUE ,skipLogic.getAnswerValue());
-            contentValues.put(SKIP_LOGIC_QUESTION_AFFECTED_ID ,skipLogic.getQuestionShowHide());
-            contentValues.put(SKIP_LOGIC_OPERATOR ,skipLogic.getLogicalOperator());
-            contentValues.put(SKIP_LOGIC_ACTION_TAKEN ,skipLogic.getActionToBeTaken());
+            contentValues.put(ID, skipLogic.getId());
+            contentValues.put(SKIP_LOGIC_NAME, skipLogic.getName());
+            contentValues.put(SKIP_LOGIC_QUESTION_ID, skipLogic.getQuestionId());
+            contentValues.put(SKIP_LOGIC_ANSWER_VALUE, skipLogic.getAnswerValue());
+            contentValues.put(SKIP_LOGIC_QUESTION_AFFECTED_ID, skipLogic.getQuestionShowHide());
+            contentValues.put(SKIP_LOGIC_OPERATOR, skipLogic.getLogicalOperator());
+            contentValues.put(SKIP_LOGIC_ACTION_TAKEN, skipLogic.getActionToBeTaken());
 
 
             db.insert(SKIP_LOGIC_TABLE, null, contentValues);
 
-            Log.d(TAG, "SKIP LOGIC WITH ID " + skipLogic.getId() + " INSERTED" );
+            Log.d(TAG, "SKIP LOGIC WITH ID " + skipLogic.getId() + " INSERTED");
 
 
-
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -2104,13 +2635,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteSkipLogic(String id){
+    public boolean deleteSkipLogic(String id) {
 
-        return db.delete(SKIP_LOGIC_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(SKIP_LOGIC_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteSkipLogicsTable(){
+    public boolean deleteSkipLogicsTable() {
 
         try {
 
@@ -2120,15 +2651,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "SKIP_LOGIC_TABLE TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public List<SkipLogic> doesQuestionHaveSkipLogics (String questionId){
+    public List<SkipLogic> doesQuestionHaveSkipLogics(String questionId) {
 
         List<SkipLogic> skipLogics = null;
 
@@ -2159,19 +2689,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         skipLogic.setActionToBeTaken(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ACTION_TAKEN)));
 
 
-                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName() );
+                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
 
                         skipLogics.add(skipLogic);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2180,36 +2709,85 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return skipLogics;
 
 
+    }
+
+
+
+    public SkipLogic  doesQuestionHaveSkipLogic(String questionId) {
+
+
+        SkipLogic skipLogic = null;
+        Cursor cursor = null;
+
+        try {
+
+
+            String selectQuery = "SELECT  * FROM " + SKIP_LOGIC_TABLE + " WHERE " +
+                    SKIP_LOGIC_QUESTION_AFFECTED_ID + " ='" + questionId + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {skipLogic = new SkipLogic();
+                        skipLogic.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        skipLogic.setName(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_NAME)));
+                        skipLogic.setQuestionId(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_QUESTION_ID)));
+                        skipLogic.setAnswerValue(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ANSWER_VALUE)));
+                        skipLogic.setQuestionShowHide(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_QUESTION_AFFECTED_ID)));
+                        skipLogic.setLogicalOperator(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_OPERATOR)));
+                        skipLogic.setActionToBeTaken(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ACTION_TAKEN)));
+
+
+                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return skipLogic;
+
 
     }
 
 
 
 
-    public boolean addCalculation(Calculation calculation){
-        try{
+
+    public boolean addCalculation(Calculation calculation) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID , calculation.getId());
-            contentValues.put(CALCULATIONS_NAME , calculation.getName());
-            contentValues.put(CALCULATIONS_Q1 , calculation.getQuestion1());
-            contentValues.put(CALCULATIONS_Q2 , calculation.getQuestion2());
-            contentValues.put(CALCULATIONS_Q3 , calculation.getQuestion3());
-            contentValues.put(CALCULATIONS_Q4 , calculation.getQuestion4());
-            contentValues.put(CALCULATIONS_OP1 , calculation.getOperator1());
-            contentValues.put(CALCULATIONS_OP2 , calculation.getOperator2());
-            contentValues.put(CALCULATIONS_OP3 , calculation.getOperator3());
-            contentValues.put(CALCULATIONS_RESULT_QUESTION , calculation.getResultQuestion());
+            contentValues.put(ID, calculation.getId());
+            contentValues.put(CALCULATIONS_NAME, calculation.getName());
+            contentValues.put(CALCULATIONS_Q1, calculation.getQuestion1());
+            contentValues.put(CALCULATIONS_Q2, calculation.getQuestion2());
+            contentValues.put(CALCULATIONS_Q3, calculation.getQuestion3());
+            contentValues.put(CALCULATIONS_Q4, calculation.getQuestion4());
+            contentValues.put(CALCULATIONS_OP1, calculation.getOperator1());
+            contentValues.put(CALCULATIONS_OP2, calculation.getOperator2());
+            contentValues.put(CALCULATIONS_OP3, calculation.getOperator3());
+            contentValues.put(HIERARCHY, calculation.getHierarchy());
+            contentValues.put(CALCULATIONS_RESULT_QUESTION, calculation.getResultQuestion());
 
 
             db.insert(CALCULATIONS_TABLE, null, contentValues);
 
-            Log.d(TAG, "CALCULATION WITH ID " + calculation.getId() + " INSERTED" );
+            Log.d(TAG, "CALCULATION WITH ID " + calculation.getId() + " INSERTED");
 
 
-
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -2219,16 +2797,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public boolean deleteCalculation(String id) {
 
-
-
-    public boolean deleteCalculation(String id){
-
-        return db.delete(CALCULATIONS_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(CALCULATIONS_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteCalculationsTable(){
+    public boolean deleteCalculationsTable() {
 
         try {
 
@@ -2238,20 +2813,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "CALCULATIONS TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public Calculation getCalculation(String id){
+    public Calculation getCalculation(String id) {
 
         Calculation calculation = null;
         Cursor cursor = null;
-
-
 
 
         try {
@@ -2267,7 +2839,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
 
                     do {
-                    calculation = new Calculation();
+                        calculation = new Calculation();
 
 
                         calculation.setId(cursor.getString(cursor.getColumnIndex(ID)));
@@ -2279,8 +2851,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setOperator1(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP1)));
                         calculation.setOperator2(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP2)));
                         calculation.setOperator3(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP3)));
+                        calculation.setHierarchy(cursor.getInt(cursor.getColumnIndex(HIERARCHY)));
                         calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
-
 
 
                         Log.i(TAG, "CALCULATION WITH ID " + id + " \nDATA IS \n\n");
@@ -2295,17 +2867,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RESULT QUESTION  =  " + calculation.getResultQuestion() + " \n");
 
 
-
-
-
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2314,20 +2882,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return calculation;
 
 
-
-
-
-
-
-
-
-
-
     }
 
 
-
-    public List<Calculation> getAllCalculations(){
+    public List<Calculation> getAllCalculations() {
 
         List<Calculation> calculationList = new ArrayList<>();
 
@@ -2359,8 +2917,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setOperator1(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP1)));
                         calculation.setOperator2(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP2)));
                         calculation.setOperator3(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP3)));
-                        calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
+                        calculation.setHierarchy(cursor.getInt(cursor.getColumnIndex(HIERARCHY)));
 
+                        calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
 
 
                         Log.i(TAG, "CALCULATION WITH ID " + calculation.getId() + " \nDATA IS \n\n");
@@ -2375,18 +2934,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RESULT QUESTION  =  " + calculation.getResultQuestion() + " \n");
 
 
-
                         calculationList.add(calculation);
-
 
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2397,62 +2954,76 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public List<Calculation> sortCalculations(List<Calculation> recommendations){
+    public List<Calculation> sortCalculations() {
 
-        if(recommendations != null)
+        List<Calculation> recommendations = getAllCalculations();
+
+        if (recommendations != null)
 
             Collections.sort(recommendations, new Comparator<Calculation>() {
                 @Override
                 public int compare(Calculation o, Calculation t1) {
 
-                    Integer value1 = 0,   value2 = 0;
+                    Integer value1;
+                    Integer value2;
 
 
-                    try{
+                    try {
 
-                        value1 = Integer.parseInt(o.getName().split("-")[1]);
-                        value2 = Integer.parseInt(t1.getName().split("-")[1]);
+                        value1 =  o.getHierarchy();
+                        value2 =  t1.getHierarchy();
+
+                        Log.i(TAG, "V1 = " + value1 + " AND V2 " + value2);
 
                         return value1.compareTo(value2);
 
-                    }catch(Exception e){e.printStackTrace();}
+                    } catch (Exception e) {
+                        e.printStackTrace();
 
-                    return -1;
+                        return 1;
+
+                    }
+
 
                 }
             });
+
+
+        Log.i(TAG, "SORTED OUT WITH SIZE " + recommendations.size());
+
 
         return recommendations;
 
     }
 
 
-
-
-    public boolean addRecommendation(Recommendation recommendation){
-        try{
+    public boolean addRecommendation(Recommendation recommendation) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID , recommendation.getId());
-            contentValues.put(RECOMMENDATIONS_NAME , recommendation.getName());
-            contentValues.put(RECOMMENDATIONS_CONDITION , recommendation.getCondition());
-            contentValues.put(RECOMMENDATIONS_DESCRIPTION , recommendation.getDescription());
-            contentValues.put(RECOMMENDATIONS_HIERARCHY , recommendation.getHierarchy());
-            contentValues.put(RECOMMENDATIONS_INCOME0 , recommendation.getIncome0());
-            contentValues.put(RECOMMENDATIONS_INCOME1 , recommendation.getIncome1());
-            contentValues.put(RECOMMENDATIONS_INCOME2 , recommendation.getIncome2());
-            contentValues.put(RECOMMENDATIONS_INCOME3 , recommendation.getIncome3());
-            contentValues.put(RECOMMENDATIONS_INCOME4 , recommendation.getIncome4());
-            contentValues.put(RECOMMENDATIONS_INCOME5 , recommendation.getIncome5());
-            contentValues.put(RECOMMENDATIONS_INCOME6 , recommendation.getIncome6());
-            contentValues.put(RECOMMENDATIONS_INCOME7 , recommendation.getIncome7());
+            contentValues.put(ID, recommendation.getId());
+            contentValues.put(RECOMMENDATIONS_NAME, recommendation.getName());
+            contentValues.put(RECOMMENDATIONS_CONDITION, recommendation.getCondition());
+            contentValues.put(RECOMMENDATIONS_DESCRIPTION, recommendation.getDescription());
+            contentValues.put(RECOMMENDATIONS_HIERARCHY, recommendation.getHierarchy());
+            contentValues.put(RECOMMENDATIONS_COST0, recommendation.getCost0());
+            contentValues.put(RECOMMENDATIONS_COST_QUESTIONS0, recommendation.getCostQuestions());
+
+            contentValues.put(RECOMMENDATIONS_INCOME0, recommendation.getIncome0());
+            contentValues.put(RECOMMENDATIONS_INCOME1, recommendation.getIncome1());
+            contentValues.put(RECOMMENDATIONS_INCOME2, recommendation.getIncome2());
+            contentValues.put(RECOMMENDATIONS_INCOME3, recommendation.getIncome3());
+            contentValues.put(RECOMMENDATIONS_INCOME4, recommendation.getIncome4());
+            contentValues.put(RECOMMENDATIONS_INCOME5, recommendation.getIncome5());
+            contentValues.put(RECOMMENDATIONS_INCOME6, recommendation.getIncome6());
+            contentValues.put(RECOMMENDATIONS_INCOME7, recommendation.getIncome7());
 
 
-            contentValues.put(RECOMMENDATIONS_LOGIC , recommendation.getLogicId());
-            contentValues.put(RECOMMENDATIONS_RELATED_1 , recommendation.getRelatedOne());
-            contentValues.put(RECOMMENDATIONS_RELATED_2 , recommendation.getRelatedTwo());
-            contentValues.put(RECOMMENDATIONS_YEAR_BACK_TO_GAPS , recommendation.getYearBackToGAPs());
-            contentValues.put(RECOMMENDATIONS_QUESTIONS_INVOLVED , recommendation.getQuestionsInvolved());
+            contentValues.put(RECOMMENDATIONS_LOGIC, recommendation.getLogicId());
+            contentValues.put(RECOMMENDATIONS_RELATED_1, recommendation.getRelatedOne());
+            contentValues.put(RECOMMENDATIONS_RELATED_2, recommendation.getRelatedTwo());
+            contentValues.put(RECOMMENDATIONS_YEAR_BACK_TO_GAPS, recommendation.getYearBackToGAPs());
+            contentValues.put(RECOMMENDATIONS_QUESTIONS_INVOLVED, recommendation.getQuestionsInvolved());
 
 
             db.insert(RECOMMENDATIONS_TABLE, null, contentValues);
@@ -2477,7 +3048,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i(TAG, "QUESTIONS INVOLVED  =  " + recommendation.getQuestionsInvolved() + " \n");
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -2486,13 +3057,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteRecommendation(String id){
+    public boolean deleteRecommendation(String id) {
 
-        return db.delete(RECOMMENDATIONS_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(RECOMMENDATIONS_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteRecommendationsTable(){
+    public boolean deleteRecommendationsTable() {
 
         try {
 
@@ -2502,15 +3073,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "RECOMMENDATIONS TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public Recommendation getRecommendation(String id){
+    public Recommendation getRecommendation(String id) {
 
         Recommendation recommendation = null;
         Cursor cursor = null;
@@ -2537,6 +3107,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setCondition(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_CONDITION)));
                         recommendation.setDescription(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_DESCRIPTION)));
                         recommendation.setHierarchy(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_HIERARCHY)));
+
+                        recommendation.setCost0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST0)));
+                        recommendation.setCostQuestions(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST_QUESTIONS0)));
+
+
                         recommendation.setIncome0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME0)));
                         recommendation.setIncome1(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME1)));
                         recommendation.setIncome2(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME2)));
@@ -2566,11 +3141,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2579,19 +3154,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return recommendation;
 
 
-
-
-
-
-
-
-
-
-
     }
 
-
-    public List<Recommendation> getAllRecommendations(){
+    public List<Recommendation> getAllRecommendations() {
 
         List<Recommendation> recommendations = new ArrayList<>();
 
@@ -2618,6 +3183,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setCondition(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_CONDITION)));
                         recommendation.setDescription(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_DESCRIPTION)));
                         recommendation.setHierarchy(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_HIERARCHY)));
+                        recommendation.setCost0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST0)));
+                        recommendation.setCostQuestions(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST_QUESTIONS0)));
+
                         recommendation.setIncome0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME0)));
                         recommendation.setIncome1(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME1)));
                         recommendation.setIncome2(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME2)));
@@ -2633,7 +3201,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setRelatedTwo(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_RELATED_2)));
                         recommendation.setYearBackToGAPs(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_YEAR_BACK_TO_GAPS)));
                         recommendation.setQuestionsInvolved(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_QUESTIONS_INVOLVED)));
-
 
 
                         Log.i(TAG, "RECOMMENDATION WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
@@ -2657,16 +3224,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "QUESTIONS INVOLVED  =  " + recommendation.getQuestionsInvolved() + " \n");
 
 
-
                         recommendations.add(recommendation);
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2676,7 +3242,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public Recommendation getRecommendationBasedOnName(String name){
+    public Recommendation getRecommendationBasedOnName(String name) {
 
         Recommendation recommendation = null;
         Cursor cursor = null;
@@ -2703,6 +3269,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setCondition(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_CONDITION)));
                         recommendation.setDescription(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_DESCRIPTION)));
                         recommendation.setHierarchy(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_HIERARCHY)));
+                        recommendation.setCost0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST0)));
+                        recommendation.setCostQuestions(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_COST_QUESTIONS0)));
+
                         recommendation.setIncome0(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME0)));
                         recommendation.setIncome1(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME1)));
                         recommendation.setIncome2(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_INCOME2)));
@@ -2740,77 +3309,75 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
         }
 
         return recommendation;
- }
+    }
 
 
+    public List<Recommendation> sortRecommendations(List<Recommendation> recommendations) {
+
+        if (recommendations != null)
+
+            Collections.sort(recommendations, new Comparator<Recommendation>() {
+                @Override
+                public int compare(Recommendation o, Recommendation t1) {
+
+                    Integer value1 = 0, value2 = 0;
 
 
-    public List<Recommendation> sortRecommendations(List<Recommendation> recommendations){
+                    try {
 
-        if(recommendations != null)
+                        value1 = Integer.parseInt(o.getHierarchy());
+                        value2 = Integer.parseInt(t1.getHierarchy());
 
-        Collections.sort(recommendations, new Comparator<Recommendation>() {
-            @Override
-            public int compare(Recommendation o, Recommendation t1) {
+                        return value1.compareTo(value2);
 
-                Integer value1 = 0,   value2 = 0;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
+                    return -1;
 
-                try{
-
-                    value1 = Integer.parseInt(o.getHierarchy());
-                    value2 = Integer.parseInt(t1.getHierarchy());
-
-                    return value1.compareTo(value2);
-
-                }catch(Exception e){e.printStackTrace();}
-
-                return -1;
-
-            }
-        });
+                }
+            });
 
         return recommendations;
 
     }
 
 
-
-
-
-
-    public boolean addRecommendationPlusAcivity(RecommendationsPlusActivity recommendation){
-        try{
+    public boolean addRecommendationPlusAcivity(RecommendationsPlusActivity recommendation) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID , recommendation.getId());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME , recommendation.getName());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID , recommendation.getActivityId());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME , recommendation.getActivityName());
+            contentValues.put(ID, recommendation.getId());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME, recommendation.getName());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID, recommendation.getActivityId());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME, recommendation.getActivityName());
 
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST , recommendation.getLaborCost());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED , recommendation.getLaborDaysNeeded());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_MONTH , recommendation.getMonth());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_YEAR , recommendation.getYear());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST , recommendation.getSuppliesCost());
-            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID , recommendation.getRecommendationId());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST, recommendation.getLaborCost());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED, recommendation.getLaborDaysNeeded());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_MONTH, recommendation.getMonth());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_YEAR, recommendation.getYear());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST, recommendation.getSuppliesCost());
+            contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID, recommendation.getRecommendationId());
 
             db.insert(RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE, null, contentValues);
 
+            Log.i(TAG, "NAME  =  " + recommendation.getName());
 
-            Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
-            Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
+
+            // Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
+            // Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
 /*
             Log.i(TAG, "AVTIVITY ID  =  " + recommendation.getActivityId() + " \n");
             Log.i(TAG, "AVTIVITY NAME  =  " + recommendation.getActivityName() + " \n");
@@ -2822,7 +3389,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i(TAG, "RECOMMENDATION ID  =  " + recommendation.getRecommendationId() + " \n\n");*/
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -2831,13 +3398,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteRecommendationPlusAcivity(String id){
+    public boolean deleteRecommendationPlusAcivity(String id) {
 
-        return db.delete(RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteRecommendationPlusAcivityTable(){
+    public boolean deleteRecommendationPlusAcivityTable() {
 
         try {
 
@@ -2848,15 +3415,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "RECOMMENDATIONS_PLUS_ACTIVITIES TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public RecommendationsPlusActivity getRecommendationPlusAcivity(String id){
+    public RecommendationsPlusActivity getRecommendationPlusAcivity(String id) {
 
         RecommendationsPlusActivity recommendation = null;
         Cursor cursor = null;
@@ -2880,7 +3446,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
-                        recommendation.setActivityName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME)));
+                        recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
 
                         recommendation.setLaborCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST)));
                         recommendation.setLaborDaysNeeded(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED)));
@@ -2890,12 +3456,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
 
-
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
 
                         Log.i(TAG, "AVTIVITY ID  =  " + recommendation.getActivityId() + " \n");
-                        Log.i(TAG, "AVTIVITY NAME  =  " + recommendation.getActivityName() + " \n");
                         Log.i(TAG, "LABOR COST  =  " + recommendation.getLaborCost() + " \n");
                         Log.i(TAG, "LABOUR DAYS NEEDED  =  " + recommendation.getLaborDaysNeeded() + " \n");
                         Log.i(TAG, "MONTH  =  " + recommendation.getMonth() + " \n");
@@ -2906,11 +3470,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2919,18 +3483,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return recommendation;
 
 
-
-
-
-
-
-
-
-
-
     }
 
-    public List<RecommendationsPlusActivity> getRecommendationPlusAcivityByRecommendationIdMonthAndYear(String recommendationId, String month, String year){
+    public List<RecommendationsPlusActivity> getRecommendationPlusAcivityByRecommendationIdMonthAndYear(String recommendationId, String month, String year) {
         List<RecommendationsPlusActivity> recommendationsPlusActivityList = new ArrayList<>();
         RecommendationsPlusActivity recommendation = null;
         Cursor cursor = null;
@@ -2955,8 +3510,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
+
                         recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
                         recommendation.setActivityName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME)));
+
                         recommendation.setLaborCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST)));
                         recommendation.setLaborDaysNeeded(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED)));
                         recommendation.setMonth(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_MONTH)));
@@ -2965,13 +3523,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
 
-
-
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
 
                         Log.i(TAG, "AVTIVITY ID  =  " + recommendation.getActivityId() + " \n");
                         Log.i(TAG, "AVTIVITY NAME  =  " + recommendation.getActivityName() + " \n");
+
                         Log.i(TAG, "LABOR COST  =  " + recommendation.getLaborCost() + " \n");
                         Log.i(TAG, "LABOUR DAYS NEEDED  =  " + recommendation.getLaborDaysNeeded() + " \n");
                         Log.i(TAG, "MONTH  =  " + recommendation.getMonth() + " \n");
@@ -2980,16 +3537,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RECOMMENDATION ID  =  " + recommendation.getRecommendationId() + " \n\n");
 
 
-
                         recommendationsPlusActivityList.add(recommendation);
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -2998,18 +3554,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return recommendationsPlusActivityList;
 
 
-
-
-
-
-
-
-
-
-
     }
 
-    public List<RecommendationsPlusActivity> getAllRecommendationPlusAcivityByYear(String year){
+    public List<RecommendationsPlusActivity> getAllRecommendationPlusAcivityByYear(String year) {
 
         List<RecommendationsPlusActivity> recommendationsPlusActivities = new ArrayList<>();
 
@@ -3029,20 +3576,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
 
                     do {
-                        RecommendationsPlusActivity recommendation  = new RecommendationsPlusActivity();
+                        RecommendationsPlusActivity recommendation = new RecommendationsPlusActivity();
 
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
-                        recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
+                        recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
                         recommendation.setActivityName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME)));
+
+                        recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
                         recommendation.setLaborCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST)));
                         recommendation.setLaborDaysNeeded(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED)));
                         recommendation.setMonth(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_MONTH)));
                         recommendation.setYear(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_YEAR)));
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
-
-
 
 
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
@@ -3054,15 +3601,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendationsPlusActivities.add(recommendation);
 
 
-
                     } while (cursor.moveToNext());
 
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3074,8 +3620,69 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public List<RecommendationsPlusActivity> getAllRecommendationPlusAcivity() {
 
-    private List<LaborDaysLaborCostSupplies> getAllLaborDaysLaborCostAndSuppliesByYear(String year, String recommendationId){
+        List<RecommendationsPlusActivity> recommendationsPlusActivities = new ArrayList<>();
+
+        Cursor cursor = null;
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE;
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        RecommendationsPlusActivity recommendation = new RecommendationsPlusActivity();
+
+
+                        recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
+                        recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
+                        recommendation.setActivityName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME)));
+                        recommendation.setLaborCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST)));
+                        recommendation.setLaborDaysNeeded(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED)));
+                        recommendation.setMonth(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_MONTH)));
+                        recommendation.setYear(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_YEAR)));
+                        recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
+                        recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
+
+
+                        Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
+                        Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
+
+                        Log.i(TAG, "YEAR  =  " + recommendation.getYear() + " \n");
+
+
+                        recommendationsPlusActivities.add(recommendation);
+
+
+                    } while (cursor.moveToNext());
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return recommendationsPlusActivities;
+
+
+    }
+
+
+    private List<LaborDaysLaborCostSupplies> getAllLaborDaysLaborCostAndSuppliesByYear(String year, String recommendationId) {
 
         List<LaborDaysLaborCostSupplies> laborDaysLaborCostSupplies = new ArrayList<>();
 
@@ -3095,7 +3702,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
 
                     do {
-                        LaborDaysLaborCostSupplies lls  = new LaborDaysLaborCostSupplies();
+                        LaborDaysLaborCostSupplies lls = new LaborDaysLaborCostSupplies();
 
                         lls.setLaborCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_COST)));
                         lls.setLaborDays(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_LABOR_DAYS_NEEDED)));
@@ -3106,11 +3713,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     } while (cursor.moveToNext());
 
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return laborDaysLaborCostSupplies;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3122,38 +3729,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public LaborDaysLaborCostSupplies getTotalLaborDaysLaborCostAndSuppliesByYear(String year, String recommendationId) {
 
+        LaborDaysLaborCostSupplies laborDaysLaborCostSupplies = new LaborDaysLaborCostSupplies();
+        List<LaborDaysLaborCostSupplies> laborDaysLaborCostSuppliesList = getAllLaborDaysLaborCostAndSuppliesByYear(year, recommendationId);
 
-
-
-
-
-
-
-
-
-
-    public LaborDaysLaborCostSupplies getTotalLaborDaysLaborCostAndSuppliesByYear(String year, String recommendationId){
-
-       LaborDaysLaborCostSupplies laborDaysLaborCostSupplies = new LaborDaysLaborCostSupplies();
-       List<LaborDaysLaborCostSupplies> laborDaysLaborCostSuppliesList = getAllLaborDaysLaborCostAndSuppliesByYear(year,  recommendationId);
-
-       StringBuilder totalLaborDays = new StringBuilder();
+        StringBuilder totalLaborDays = new StringBuilder();
         StringBuilder totalLaborCost = new StringBuilder();
         StringBuilder totalSuppliesCost = new StringBuilder();
 
         try {
 
 
-            for(LaborDaysLaborCostSupplies lls : laborDaysLaborCostSuppliesList){
+            for (LaborDaysLaborCostSupplies lls : laborDaysLaborCostSuppliesList) {
 
-                if(lls != laborDaysLaborCostSuppliesList.get(laborDaysLaborCostSuppliesList.size() - 1)){
+                if (lls != laborDaysLaborCostSuppliesList.get(laborDaysLaborCostSuppliesList.size() - 1)) {
 
                     totalLaborDays.append(lls.getLaborDays()).append("+");
                     totalLaborCost.append(lls.getLaborCost()).append("+");
                     totalSuppliesCost.append(lls.getSuppliesCost()).append("+");
 
-                }else{
+                } else {
 
                     totalLaborDays.append(lls.getLaborDays());
                     totalLaborCost.append(lls.getLaborCost());
@@ -3170,7 +3766,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
 
 
-            } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return laborDaysLaborCostSupplies;
 
@@ -3186,72 +3782,68 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-
-
-
-
-    public boolean addLogic(Logic logic){
-        try{
+    public boolean addLogic(Logic logic) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID , logic.getId());
-            contentValues.put(LOGIC_NAME , logic.getName());
-            contentValues.put(LOGIC_PARENT_LOGIC , logic.getParentLogic());
-            contentValues.put(LOGIC_PARENT_LOGICAL_OPERATOR , logic.getParentLogicalOperator());
-            contentValues.put(LOGIC_RESULT , logic.getResult());
-            contentValues.put(LOGIC_RESULT_QUESTIONS , logic.getResultQuestions());
+            contentValues.put(ID, logic.getId());
+            contentValues.put(LOGIC_NAME, logic.getName());
+            contentValues.put(LOGIC_PARENT_LOGIC, logic.getParentLogic());
+            contentValues.put(LOGIC_PARENT_LOGICAL_OPERATOR, logic.getParentLogicalOperator());
+            contentValues.put(LOGIC_RESULT, logic.getResult());
+            contentValues.put(LOGIC_RESULT_QUESTIONS, logic.getResultQuestions());
 
-            contentValues.put(LOGIC_LO1 , logic.getLogicalOperator1());
-            contentValues.put(LOGIC_LO2 , logic.getLogicalOperator2());
-            contentValues.put(LOGIC_LO3 , logic.getLogicalOperator3());
-            contentValues.put(LOGIC_LO4 , logic.getLogicalOperator4());
-            contentValues.put(LOGIC_LO5 , logic.getLogicalOperator5());
-            contentValues.put(LOGIC_LO6 , logic.getLogicalOperator6());
-            contentValues.put(LOGIC_LO7 , logic.getLogicalOperator7());
-            contentValues.put(LOGIC_LO8 , logic.getLogicalOperator8());
-            contentValues.put(LOGIC_LO9 , logic.getLogicalOperator9());
-            contentValues.put(LOGIC_LO10 , logic.getLogicalOperator10());
+            contentValues.put(LOGIC_LO1, logic.getLogicalOperator1());
+            contentValues.put(LOGIC_LO2, logic.getLogicalOperator2());
+            contentValues.put(LOGIC_LO3, logic.getLogicalOperator3());
+            contentValues.put(LOGIC_LO4, logic.getLogicalOperator4());
+            contentValues.put(LOGIC_LO5, logic.getLogicalOperator5());
+            contentValues.put(LOGIC_LO6, logic.getLogicalOperator6());
+            contentValues.put(LOGIC_LO7, logic.getLogicalOperator7());
+            contentValues.put(LOGIC_LO8, logic.getLogicalOperator8());
+            contentValues.put(LOGIC_LO9, logic.getLogicalOperator9());
+            contentValues.put(LOGIC_LO10, logic.getLogicalOperator10());
 
-            contentValues.put(LOGIC_Q1 , logic.getQuestion1());
-            contentValues.put(LOGIC_Q2 , logic.getQuestion2());
-            contentValues.put(LOGIC_Q3 , logic.getQuestion3());
-            contentValues.put(LOGIC_Q4 , logic.getQuestion4());
-            contentValues.put(LOGIC_Q5 , logic.getQuestion5());
-            contentValues.put(LOGIC_Q6 , logic.getQuestion6());
-            contentValues.put(LOGIC_Q7 , logic.getQuestion7());
-            contentValues.put(LOGIC_Q8 , logic.getQuestion8());
-            contentValues.put(LOGIC_Q9 , logic.getQuestion9());
-            contentValues.put(LOGIC_Q10 , logic.getQuestion10());
+            contentValues.put(LOGIC_Q1, logic.getQuestion1());
+            contentValues.put(LOGIC_Q2, logic.getQuestion2());
+            contentValues.put(LOGIC_Q3, logic.getQuestion3());
+            contentValues.put(LOGIC_Q4, logic.getQuestion4());
+            contentValues.put(LOGIC_Q5, logic.getQuestion5());
+            contentValues.put(LOGIC_Q6, logic.getQuestion6());
+            contentValues.put(LOGIC_Q7, logic.getQuestion7());
+            contentValues.put(LOGIC_Q8, logic.getQuestion8());
+            contentValues.put(LOGIC_Q9, logic.getQuestion9());
+            contentValues.put(LOGIC_Q10, logic.getQuestion10());
 
-            contentValues.put(LOGIC_QLO1 , logic.getQuestionLogicOperation1());
-            contentValues.put(LOGIC_QLO2 , logic.getQuestionLogicOperation2());
-            contentValues.put(LOGIC_QLO3 , logic.getQuestionLogicOperation3());
-            contentValues.put(LOGIC_QLO4 , logic.getQuestionLogicOperation4());
-            contentValues.put(LOGIC_QLO5 , logic.getQuestionLogicOperation5());
-            contentValues.put(LOGIC_QLO6 , logic.getQuestionLogicOperation6());
-            contentValues.put(LOGIC_QLO7 , logic.getQuestionLogicOperation7());
+            contentValues.put(LOGIC_QLO1, logic.getQuestionLogicOperation1());
+            contentValues.put(LOGIC_QLO2, logic.getQuestionLogicOperation2());
+            contentValues.put(LOGIC_QLO3, logic.getQuestionLogicOperation3());
+            contentValues.put(LOGIC_QLO4, logic.getQuestionLogicOperation4());
+            contentValues.put(LOGIC_QLO5, logic.getQuestionLogicOperation5());
+            contentValues.put(LOGIC_QLO6, logic.getQuestionLogicOperation6());
+            contentValues.put(LOGIC_QLO7, logic.getQuestionLogicOperation7());
             contentValues.put(LOGIC_QLO8, logic.getQuestionLogicOperation8());
-            contentValues.put(LOGIC_QLO9 , logic.getQuestionLogicOperation9());
-            contentValues.put(LOGIC_QLO10 , logic.getQuestionLogicOperation10());
+            contentValues.put(LOGIC_QLO9, logic.getQuestionLogicOperation9());
+            contentValues.put(LOGIC_QLO10, logic.getQuestionLogicOperation10());
 
 
-            contentValues.put(LOGIC_V1 , logic.getValue1());
-            contentValues.put(LOGIC_V2 , logic.getValue2());
-            contentValues.put(LOGIC_V3 , logic.getValue3());
-            contentValues.put(LOGIC_V4 , logic.getValue4());
-            contentValues.put(LOGIC_V5 , logic.getValue5());
-            contentValues.put(LOGIC_V6 , logic.getValue6());
-            contentValues.put(LOGIC_V7 , logic.getValue7());
-            contentValues.put(LOGIC_V8 , logic.getValue8());
-            contentValues.put(LOGIC_V9 , logic.getValue9());
-            contentValues.put(LOGIC_V10 , logic.getValue10());
-            contentValues.put(LOGIC_EVALUATED_VALUE , logic.getEvaluatedValue());
+            contentValues.put(LOGIC_V1, logic.getValue1());
+            contentValues.put(LOGIC_V2, logic.getValue2());
+            contentValues.put(LOGIC_V3, logic.getValue3());
+            contentValues.put(LOGIC_V4, logic.getValue4());
+            contentValues.put(LOGIC_V5, logic.getValue5());
+            contentValues.put(LOGIC_V6, logic.getValue6());
+            contentValues.put(LOGIC_V7, logic.getValue7());
+            contentValues.put(LOGIC_V8, logic.getValue8());
+            contentValues.put(LOGIC_V9, logic.getValue9());
+            contentValues.put(LOGIC_V10, logic.getValue10());
+            contentValues.put(LOGIC_EVALUATED_VALUE, logic.getEvaluatedValue());
 
 
             db.insert(LOGIC_TABLE, null, contentValues);
-            Log.d(TAG, "LOGIC WITH ID " + logic.getId() + " INSERTED" );
+            Log.d(TAG, "LOGIC WITH ID " + logic.getId() + " INSERTED");
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -3260,13 +3852,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteLogic(String id){
+    public boolean deleteLogic(String id) {
 
-        return db.delete(LOGIC_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(LOGIC_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteLogicsTable(){
+    public boolean deleteLogicsTable() {
 
         try {
 
@@ -3276,15 +3868,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "LOGICS TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
         }
     }
 
-    public Logic getLogic(String id){
+    public Logic getLogic(String id) {
 
         Logic logic = new Logic();
         Cursor cursor = null;
@@ -3360,15 +3951,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         logic.setEvaluatedValue(cursor.getString(cursor.getColumnIndex(LOGIC_EVALUATED_VALUE)));
 
 
-
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3376,22 +3965,114 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return logic;
 
- }
+    }
+
+    public List<Logic> getLogics(String id) {
+
+        List<Logic> logicList = new ArrayList<>();
+
+        Cursor cursor = null;
 
 
+        try {
 
-    public boolean editLogicEvaluatedValue(String logicId, String  newValue){
-        try{
+            String selectQuery = "SELECT  * FROM " + LOGIC_TABLE + " WHERE " +
+                    LOGIC_RESULT_QUESTIONS + " ='" + id + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        Logic logic = new Logic();
+
+                        logic.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        logic.setName(cursor.getString(cursor.getColumnIndex(LOGIC_NAME)));
+                        logic.setParentLogic(cursor.getString(cursor.getColumnIndex(LOGIC_PARENT_LOGIC)));
+                        logic.setParentLogicalOperator(cursor.getString(cursor.getColumnIndex(LOGIC_PARENT_LOGICAL_OPERATOR)));
+                        logic.setResult(cursor.getString(cursor.getColumnIndex(LOGIC_RESULT)));
+                        logic.setResultQuestions(cursor.getString(cursor.getColumnIndex(LOGIC_RESULT_QUESTIONS)));
+
+                        logic.setLogicalOperator1(cursor.getString(cursor.getColumnIndex(LOGIC_LO1)));
+                        logic.setLogicalOperator2(cursor.getString(cursor.getColumnIndex(LOGIC_LO2)));
+                        logic.setLogicalOperator3(cursor.getString(cursor.getColumnIndex(LOGIC_LO3)));
+                        logic.setLogicalOperator4(cursor.getString(cursor.getColumnIndex(LOGIC_LO4)));
+                        logic.setLogicalOperator5(cursor.getString(cursor.getColumnIndex(LOGIC_LO5)));
+                        logic.setLogicalOperator6(cursor.getString(cursor.getColumnIndex(LOGIC_LO6)));
+                        logic.setLogicalOperator7(cursor.getString(cursor.getColumnIndex(LOGIC_LO7)));
+                        logic.setLogicalOperator8(cursor.getString(cursor.getColumnIndex(LOGIC_LO8)));
+                        logic.setLogicalOperator9(cursor.getString(cursor.getColumnIndex(LOGIC_LO9)));
+                        logic.setLogicalOperator10(cursor.getString(cursor.getColumnIndex(LOGIC_LO10)));
+
+
+                        logic.setQuestion1(cursor.getString(cursor.getColumnIndex(LOGIC_Q1)));
+                        logic.setQuestion2(cursor.getString(cursor.getColumnIndex(LOGIC_Q2)));
+                        logic.setQuestion3(cursor.getString(cursor.getColumnIndex(LOGIC_Q3)));
+                        logic.setQuestion4(cursor.getString(cursor.getColumnIndex(LOGIC_Q4)));
+                        logic.setQuestion5(cursor.getString(cursor.getColumnIndex(LOGIC_Q5)));
+                        logic.setQuestion6(cursor.getString(cursor.getColumnIndex(LOGIC_Q6)));
+                        logic.setQuestion7(cursor.getString(cursor.getColumnIndex(LOGIC_Q7)));
+                        logic.setQuestion8(cursor.getString(cursor.getColumnIndex(LOGIC_Q8)));
+                        logic.setQuestion9(cursor.getString(cursor.getColumnIndex(LOGIC_Q9)));
+                        logic.setQuestion10(cursor.getString(cursor.getColumnIndex(LOGIC_Q10)));
+
+
+                        logic.setQuestionLogicOperation1(cursor.getString(cursor.getColumnIndex(LOGIC_QLO1)));
+                        logic.setQuestionLogicOperation2(cursor.getString(cursor.getColumnIndex(LOGIC_QLO2)));
+                        logic.setQuestionLogicOperation3(cursor.getString(cursor.getColumnIndex(LOGIC_QLO3)));
+                        logic.setQuestionLogicOperation4(cursor.getString(cursor.getColumnIndex(LOGIC_QLO4)));
+                        logic.setQuestionLogicOperation5(cursor.getString(cursor.getColumnIndex(LOGIC_QLO5)));
+                        logic.setQuestionLogicOperation6(cursor.getString(cursor.getColumnIndex(LOGIC_QLO6)));
+                        logic.setQuestionLogicOperation7(cursor.getString(cursor.getColumnIndex(LOGIC_QLO7)));
+                        logic.setQuestionLogicOperation8(cursor.getString(cursor.getColumnIndex(LOGIC_QLO8)));
+                        logic.setQuestionLogicOperation9(cursor.getString(cursor.getColumnIndex(LOGIC_QLO9)));
+                        logic.setQuestionLogicOperation10(cursor.getString(cursor.getColumnIndex(LOGIC_QLO10)));
+
+                        logic.setValue1(cursor.getString(cursor.getColumnIndex(LOGIC_V1)));
+                        logic.setValue2(cursor.getString(cursor.getColumnIndex(LOGIC_V2)));
+                        logic.setValue3(cursor.getString(cursor.getColumnIndex(LOGIC_V3)));
+                        logic.setValue4(cursor.getString(cursor.getColumnIndex(LOGIC_V4)));
+                        logic.setValue5(cursor.getString(cursor.getColumnIndex(LOGIC_V5)));
+                        logic.setValue6(cursor.getString(cursor.getColumnIndex(LOGIC_V6)));
+                        logic.setValue7(cursor.getString(cursor.getColumnIndex(LOGIC_V7)));
+                        logic.setValue8(cursor.getString(cursor.getColumnIndex(LOGIC_V8)));
+                        logic.setValue9(cursor.getString(cursor.getColumnIndex(LOGIC_V9)));
+                        logic.setValue10(cursor.getString(cursor.getColumnIndex(LOGIC_V10)));
+                        logic.setEvaluatedValue(cursor.getString(cursor.getColumnIndex(LOGIC_EVALUATED_VALUE)));
+
+                        logicList.add(logic);
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return logicList;
+
+    }
+
+    public boolean editLogicEvaluatedValue(String logicId, String newValue) {
+        try {
 
             ContentValues contentValues = new ContentValues();
 
-            contentValues.put(LOGIC_EVALUATED_VALUE , newValue);
+            contentValues.put(LOGIC_EVALUATED_VALUE, newValue);
 
 
-            db.update(LOGIC_TABLE, contentValues, ID  + "= ?", new String[] {logicId});
-            Log.d(TAG, "LOGIC WITH ID " + logicId + " EDITED WITH VALUE " + newValue );
+            db.update(LOGIC_TABLE, contentValues, ID + "= ?", new String[]{logicId});
+            Log.d(TAG, "LOGIC WITH ID " + logicId + " EDITED WITH VALUE " + newValue);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -3401,7 +4082,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public List<Logic> doesQuestionHaveLogics (String questionId){
+    public List<Logic> doesQuestionHaveLogics(String questionId) {
 
         List<Logic> logics = null;
 
@@ -3478,20 +4159,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         logic.setEvaluatedValue(cursor.getString(cursor.getColumnIndex(LOGIC_EVALUATED_VALUE)));
 
 
-
-                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A LOGIC WITH NAME " + logic.getName() );
+                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A LOGIC WITH NAME " + logic.getName());
 
                         logics.add(logic);
 
 
-
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3500,7 +4179,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return logics;
 
 
-
     }
 
 
@@ -3510,40 +4188,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-
-
-
-
-
-
-
-
-
-
-    public boolean addActivityPlusInput(ActivitiesPlusInputs activitiesPlusInputs){
-        try{
+    public boolean addActivityPlusInput(ActivitiesPlusInputs activitiesPlusInputs) {
+        try {
 
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ID , activitiesPlusInputs.getId());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_NAME , activitiesPlusInputs.getName());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_INPUT_TYPE , activitiesPlusInputs.getInputType());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_QUANTITY , activitiesPlusInputs.getQuantity());
+            contentValues.put(ID, activitiesPlusInputs.getId());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_NAME, activitiesPlusInputs.getName());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_INPUT_TYPE, activitiesPlusInputs.getInputType());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_QUANTITY, activitiesPlusInputs.getQuantity());
 
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_UNIT_COST , activitiesPlusInputs.getInputUnitCost());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_TOTAL_COST , activitiesPlusInputs.getTotalCost());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_SI_UNIT , activitiesPlusInputs.getInputSIUnit());
-             contentValues.put(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_ID , activitiesPlusInputs.getRecommendationId());
-            contentValues.put(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_NAME , activitiesPlusInputs.getRecommendationName());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_UNIT_COST, activitiesPlusInputs.getInputId());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_TOTAL_COST, activitiesPlusInputs.getTotalCost());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_ID, activitiesPlusInputs.getRecommendationId());
+            contentValues.put(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_NAME, activitiesPlusInputs.getRecommendationName());
 
             db.insert(ACTIVITIY_PLUS_INPUTS_TABLE, null, contentValues);
-            Log.d(TAG, "ACTIVITY PLUS INPUT WITH ID " + activitiesPlusInputs.getId() + " INSERTED" );
+            Log.d(TAG, "ACTIVITY PLUS INPUT WITH ID " + activitiesPlusInputs.getId() + " INSERTED");
+/*
 
-            Log.i(TAG, "UNIT COST  =  " + activitiesPlusInputs.getInputUnitCost() + " \n");
+            Log.i(TAG, "UNIT COST  =  " + activitiesPlusInputs.getInputId() + " \n");
             Log.i(TAG, "SI UNIT  =  " + activitiesPlusInputs.getInputSIUnit() + " \n");
+*/
 
 
-
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -3552,13 +4220,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteActivityPlusInput(String id){
+    public boolean deleteActivityPlusInput(String id) {
 
-        return db.delete(ACTIVITIY_PLUS_INPUTS_TABLE, ID + " = ? ", new String[]{id} ) > 0;
+        return db.delete(ACTIVITIY_PLUS_INPUTS_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
 
-    public boolean deleteActivityPlusInputTable(){
+    public boolean deleteActivityPlusInputTable() {
 
         try {
 
@@ -3568,8 +4236,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.i("DATABASE", "ACTIVITIY_PLUS_INPUTS TABLE DELETED");
 
             return true;
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
 
             return false;
@@ -3577,8 +4244,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-    public ActivitiesPlusInputs getActivityPlusInput(String id){
+    public ActivitiesPlusInputs getActivityPlusInput(String id) {
 
         ActivitiesPlusInputs activitiesPlusInputs = null;
         Cursor cursor = null;
@@ -3605,13 +4271,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         activitiesPlusInputs.setInputType(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_INPUT_TYPE)));
 
                         activitiesPlusInputs.setQuantity(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_QUANTITY)));
-                        activitiesPlusInputs.setInputUnitCost(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_UNIT_COST)));
+                        activitiesPlusInputs.setInputId(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_UNIT_COST)));
                         activitiesPlusInputs.setTotalCost(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_TOTAL_COST)));
-                        activitiesPlusInputs.setInputSIUnit(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_SI_UNIT)));
                         activitiesPlusInputs.setRecommendationId(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_ID)));
                         activitiesPlusInputs.setRecommendationName(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_NAME)));
-
-
 
 
                         Log.i(TAG, "ACTIVITY + INPUTS WITH ID " + id + " \nDATA IS \n\n");
@@ -3620,11 +4283,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3633,13 +4296,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return activitiesPlusInputs;
 
 
-
     }
 
 
-
-
-    public ActivitiesPlusInputs getActivityPlusInputByRecommendationId(String recommendationId){
+    public ActivitiesPlusInputs getActivityPlusInputByRecommendationId(String recommendationId) {
 
         ActivitiesPlusInputs activitiesPlusInputs = new ActivitiesPlusInputs();
 
@@ -3664,9 +4324,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         activitiesPlusInputs.setName(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_NAME)));
                         activitiesPlusInputs.setInputType(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_INPUT_TYPE)));
                         activitiesPlusInputs.setQuantity(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_QUANTITY)));
-                        activitiesPlusInputs.setInputUnitCost(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_UNIT_COST)));
+                        activitiesPlusInputs.setInputId(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_UNIT_COST)));
                         activitiesPlusInputs.setTotalCost(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_TOTAL_COST)));
-                        activitiesPlusInputs.setInputSIUnit(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_SI_UNIT)));
                         activitiesPlusInputs.setRecommendationId(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_ID)));
                         activitiesPlusInputs.setRecommendationName(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_NAME)));
 
@@ -3676,10 +4335,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     } while (cursor.moveToNext());
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
 
-        }finally {
+        } finally {
 
             if (cursor != null)
                 cursor.close();
@@ -3689,6 +4348,492 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+
+
+    public boolean addInput(Input activitiesPlusInputs) {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ID, activitiesPlusInputs.getId());
+            contentValues.put(INPUTS_NAME, activitiesPlusInputs.getName());
+            contentValues.put(INPUTS_COST, activitiesPlusInputs.getCost());
+            contentValues.put(INPUTS_REGION, activitiesPlusInputs.getRegion());
+            contentValues.put(INPUTS_INPUT_TYPE, activitiesPlusInputs.getType());
+            contentValues.put(INPUTS_SI_UNIT, activitiesPlusInputs.getUnit());
+
+            db.insert(INPUTS_TABLE, null, contentValues);
+            Log.d(TAG, "INPUT WITH ID " + activitiesPlusInputs.getId() + " INSERTED");
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+
+    }
+
+    public boolean deleteInput(String id) {
+
+        return db.delete(INPUTS_TABLE, ID + " = ? ", new String[]{id}) > 0;
+
+    }
+
+    public boolean deleteInputTable() {
+
+        try {
+
+            db.execSQL("DELETE FROM " + INPUTS_TABLE);
+
+
+            Log.i("DATABASE", "INPUTS TABLE DELETED");
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
+
+    public Input getInput(String id) {
+
+        Input activitiesPlusInputs = null;
+        Cursor cursor = null;
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + INPUTS_TABLE + " WHERE " +
+                    ID + " ='" + id + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        activitiesPlusInputs = new Input();
+
+
+                        activitiesPlusInputs.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        activitiesPlusInputs.setName(cursor.getString(cursor.getColumnIndex(INPUTS_NAME)));
+                        activitiesPlusInputs.setCost(cursor.getString(cursor.getColumnIndex(INPUTS_COST)));
+
+                        activitiesPlusInputs.setRegion(cursor.getString(cursor.getColumnIndex(INPUTS_REGION)));
+
+                        activitiesPlusInputs.setType(cursor.getString(cursor.getColumnIndex(INPUTS_INPUT_TYPE)));
+                        activitiesPlusInputs.setUnit(cursor.getString(cursor.getColumnIndex(INPUTS_SI_UNIT)));
+
+
+                        Log.i(TAG, "INPUTS WITH ID " + id + " \nDATA IS \n\n");
+                        Log.i(TAG, "NAME  =  " + activitiesPlusInputs.getName() + " \n");
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return activitiesPlusInputs;
+
+
+    }
+
+
+    public long queryNumberOfEntries(String tableName) {
+        return DatabaseUtils.queryNumEntries(db, tableName);
+    }
+
+
+
+
+    public boolean addPlotMonitoring(Monitoring monitoring, String year) {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ID, monitoring.getId());
+            contentValues.put(MONITORING_NAME, monitoring.getName());
+            contentValues.put(MONITORING_JSON, monitoring.getJson());
+            contentValues.put(MONITORING_PLOT_ID, monitoring.getPlotId());
+            contentValues.put(MONITORING_YEAR, year);
+
+
+            db.insert(MONITORING_TABLE, null, contentValues);
+            Log.d(TAG, "INPUT WITH ID " + monitoring.getId() + " INSERTED FOR YEAR " + year);
+            return true;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deletePlotMonitoring(int id, String plotId, String year) {
+
+        return db.delete(MONITORING_TABLE, ID + " = ? AND " + MONITORING_PLOT_ID + " = ? AND " + MONITORING_YEAR + " = ?", new String[]{String.valueOf(id), plotId, year}) > 0;
+
+    }
+
+    public boolean deletePlotMonitoring() {
+
+        try {
+
+            db.execSQL("DELETE FROM " + MONITORING_TABLE);
+
+
+            Log.i("DATABASE", "MONITORING TABLE DELETED");
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
+
+    public Monitoring getPlotMonitoring(int id, String plotId, String year) {
+
+        Monitoring monitoring = null;
+        Cursor cursor = null;
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + MONITORING_TABLE + " WHERE " +
+                    ID + " ='" + id + "' AND " + MONITORING_YEAR + " = '" + year + "' AND " + MONITORING_PLOT_ID + " = '" + plotId + "'";
+
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        monitoring = new Monitoring();
+
+
+                        monitoring.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        monitoring.setName(cursor.getString(cursor.getColumnIndex(MONITORING_NAME)));
+                        monitoring.setJson(cursor.getString(cursor.getColumnIndex(MONITORING_JSON)));
+                        monitoring.setPlotId(cursor.getString(cursor.getColumnIndex(MONITORING_PLOT_ID)));
+
+
+
+                        Log.i(TAG, "INPUTS WITH ID " + id + "\t");
+                        Log.i(TAG, "NAME  =  " + monitoring.getName() + " \n");
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return monitoring;
+
+
+    }
+
+
+    public String getPlotMonitoringJson(int id, String plotId, String year) {
+
+         Cursor cursor = null;
+         String value = "";
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + MONITORING_TABLE + " WHERE " +
+                    ID + " ='" + id + "' AND "  + MONITORING_PLOT_ID + " ='" + plotId
+                    + "' AND " + MONITORING_YEAR + " = '" + year + "'";
+
+
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+                        value = cursor.getString(cursor.getColumnIndex(MONITORING_JSON));
+
+
+                        Log.i(TAG, "Monitoring Json is " + value + "\t");
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return value;
+
+
+    }
+
+
+
+    public List<Monitoring> getAllPlotMonitoringForYear(String plotId, String year) {
+
+        List<Monitoring> monitoringList = new ArrayList<>();
+
+        Cursor cursor = null;
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + MONITORING_TABLE + " WHERE " +
+                    MONITORING_PLOT_ID + " ='" + plotId + "' AND " + MONITORING_YEAR + " ='" + year + "' ";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        Monitoring monitoring = new Monitoring();
+
+
+                        monitoring.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        monitoring.setName(cursor.getString(cursor.getColumnIndex(MONITORING_NAME)));
+                        monitoring.setJson(cursor.getString(cursor.getColumnIndex(MONITORING_JSON)));
+                        monitoring.setPlotId(cursor.getString(cursor.getColumnIndex(MONITORING_PLOT_ID)));
+
+
+
+                        Log.i(TAG, "MONITORING WITH ID " + monitoring.getId() + "\t");
+                        Log.i(TAG, "NAME  =  " + monitoring.getName() + " \n");
+
+                        monitoringList.add(monitoring);
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return monitoringList;
+
+
+    }
+
+
+
+
+    public boolean editPlotMonitoringJson(String id, String plotId, String year, String newValue) {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+
+            contentValues.put(MONITORING_JSON, newValue);
+
+
+            db.update(MONITORING_TABLE, contentValues, ID + "= ? AND " + MONITORING_PLOT_ID + "= ? AND " + MONITORING_YEAR + " = ?", new String[]{id, plotId, year});
+            Log.d(TAG, "MONITORING DATA EDITED WITH ID " + id + " EDITED WITH VALUE " + newValue);
+            return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+    public boolean addComplexCalculation(ComplexCalculation complexCalculation) {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ID, complexCalculation.getId());
+            contentValues.put(COMPLEX_CALCULATION_NAME, complexCalculation.getName());
+            contentValues.put(COMPLEX_CALCULATION_QUESTION_ID, complexCalculation.getQuestionId());
+            contentValues.put(COMPLEX_CALCULATION_CONDITION, complexCalculation.getCondition());
+
+
+            db.insert(COMPLEX_CALCULATIONS_TABLE, null, contentValues);
+            Log.d(TAG, "COM_CALC WITH QUESTION ID " + complexCalculation.getQuestionId() + " INSERTED WITH CONDITION " + complexCalculation.getCondition() );
+
+
+            if(prefs.getString("monitoringToUse", null) == null){
+
+                if(complexCalculation.getCondition().contains("First"))
+                    prefs.edit().putString("monitoringToUse", "first").apply();
+                else
+                    prefs.edit().putString("monitoringToUse", "last").apply();
+            }
+
+            return true;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deleteComplexCalculation(String id) {
+
+        return db.delete(COMPLEX_CALCULATIONS_TABLE, ID + " = ?", new String[]{id}) > 0;
+
+    }
+
+    public boolean deleteComplexCalculationTable() {
+
+        try {
+            prefs.edit().putString("monitoringToUse", null).apply();
+
+            db.execSQL("DELETE FROM " + COMPLEX_CALCULATIONS_TABLE);
+
+
+            Log.i("DATABASE", "ComplexCalculation TABLE DELETED");
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+
+
+    public List<ComplexCalculation> getAllComplexCalculation() {
+
+        List<ComplexCalculation> complexCalculationList = new ArrayList<>();
+        Cursor cursor = null;
+        try {
+
+            String selectQuery = "SELECT  * FROM " + COMPLEX_CALCULATIONS_TABLE;
+
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        ComplexCalculation complexCalculation = new ComplexCalculation();
+
+
+                        complexCalculation.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        complexCalculation.setName(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_NAME)));
+                        complexCalculation.setQuestionId(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_QUESTION_ID)));
+                        complexCalculation.setCondition(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_CONDITION)));
+
+
+                        complexCalculationList.add(complexCalculation);
+                        Log.d(TAG, "INPUT WITH ID " + complexCalculation.getId() + " FOUND WITH CONDITION " + complexCalculation.getCondition());
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return complexCalculationList;
+
+
+    }
+
+
+
+    public ComplexCalculation getComplexCalculation(String id) {
+
+       ComplexCalculation complexCalculation = null;
+        Cursor cursor = null;
+        try {
+
+            String selectQuery = "SELECT  * FROM " + COMPLEX_CALCULATIONS_TABLE + " WHERE " + COMPLEX_CALCULATION_QUESTION_ID + " = '" + id +"'";
+
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                         complexCalculation = new ComplexCalculation();
+
+
+                        complexCalculation.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        complexCalculation.setName(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_NAME)));
+                        complexCalculation.setQuestionId(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_QUESTION_ID)));
+                        complexCalculation.setCondition(cursor.getString(cursor.getColumnIndex(COMPLEX_CALCULATION_CONDITION)));
+
+
+                         Log.d(TAG, "INPUT WITH ID " + complexCalculation.getId() + " FOUND WITH CONDITION " + complexCalculation.getCondition());
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return complexCalculation;
+
+
+    }
+
 
 
 

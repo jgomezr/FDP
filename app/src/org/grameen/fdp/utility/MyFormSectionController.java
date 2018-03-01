@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.github.dkharrat.nexusdialog.FormElementController;
-import com.github.dkharrat.nexusdialog.controllers.FormSectionController;
 import org.grameen.fdp.R;
 
 import java.util.ArrayList;
@@ -68,9 +66,9 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Adds a form element to this section. Note that sub-sections are not supported.
      *
-     * @param element   the form element to add
-     * @param position  the position at which to insert the element
-     * @return          the same instance of the form element that was added to support method chaining
+     * @param element  the form element to add
+     * @param position the position at which to insert the element
+     * @return the same instance of the form element that was added to support method chaining
      */
     public MyFormElementController addElement(MyFormElementController element, int position) {
         if (element instanceof MyFormSectionController) {
@@ -89,8 +87,8 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Adds a form element to the end of this section. Note that sub-sections are not supported.
      *
-     * @param element   the form element to add
-     * @return          the same instance of the form element that was added to support method chaining
+     * @param element the form element to add
+     * @return the same instance of the form element that was added to support method chaining
      */
     public MyFormElementController addElement(MyFormElementController element) {
         return addElement(element, orderedElements.size());
@@ -99,8 +97,8 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Adds a collection of form elements to this section.
      *
-     * @param values    the form elements to add
-      */
+     * @param values the form elements to add
+     */
     public void addElements(Collection<MyFormElementController> values) {
         for (MyFormElementController element : values) {
             addElement(element);
@@ -110,8 +108,8 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Removes the form element with the specified name from this section.
      *
-     * @param name  the name of the form element to remove
-     * @return      the removed form element instance, or null of no such element was found.
+     * @param name the name of the form element to remove
+     * @return the removed form element instance, or null of no such element was found.
      */
     public MyFormElementController removeElement(String name) {
         MyFormElementController element = elements.remove(name);
@@ -122,8 +120,8 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Removes the specified form element from this section.
      *
-     * @param element   the form element to remove
-     * @return          the removed form element instance, or null of no such element was found.
+     * @param element the form element to remove
+     * @return the removed form element instance, or null of no such element was found.
      */
     public MyFormElementController removeElement(MyFormElementController element) {
         return removeElement(element.getName());
@@ -132,8 +130,8 @@ public class MyFormSectionController extends MyFormElementController {
     /**
      * Returns the form element with the specified name from this section.
      *
-     * @param name  the name of the form element to get
-     * @return      the form element with the specified name, or null if no such element was found
+     * @param name the name of the form element to get
+     * @return the form element with the specified name, or null if no such element was found
      */
     public MyFormElementController getElement(String name) {
         return elements.get(name);
@@ -143,7 +141,7 @@ public class MyFormSectionController extends MyFormElementController {
      * Returns the form element indexed at {@code i} in this section.
      *
      * @param i the index of the form element to return
-     * @return  the form element at the specified index
+     * @return the form element at the specified index
      */
     public MyFormElementController getElement(int i) {
         return orderedElements.get(i);

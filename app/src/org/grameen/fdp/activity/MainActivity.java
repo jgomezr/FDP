@@ -27,20 +27,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.wooplr.spotlight.SpotlightConfig;
+import com.wooplr.spotlight.utils.SpotlightSequence;
+
+import org.grameen.fdp.R;
 import org.grameen.fdp.fragment.FarmerListFragment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.Village;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DatabaseHelper;
-import com.mancj.materialsearchbar.MaterialSearchBar;
-import com.wooplr.spotlight.SpotlightConfig;
-import com.wooplr.spotlight.utils.SpotlightSequence;
-
-import org.grameen.fdp.R;
 import org.grameen.fdp.utility.Utils;
 
 import java.util.ArrayList;
@@ -51,43 +52,46 @@ import java.util.List;
  */
 
 
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener{
 
+    Switch toggleTranslation;
 
     ViewPager viewPager;
 
     String TAG = "MainActivity";
     MaterialSearchBar searchBar;
-    private DrawerLayout drawer;
     GridLayoutManager productsGridLayoutManager;
-    private boolean IS_FAB_VISIBLE = false;
     DatabaseHelper databaseHelper;
-
     TextView tabOIndicatorText;
-
     SharedPreferences prefs;
-    private LinearLayout pager_indicator;
     int dotsCount;
     ImageView[] dots;
-
     FarmerPagerAdapter viewPagerAdapter;
     List<Village> villages;
-
-
-
+    List<String> actualVillageList = new ArrayList<>();
+    private DrawerLayout drawer;
+    private boolean IS_FAB_VISIBLE = false;
+    private LinearLayout pager_indicator;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+
         databaseHelper = DatabaseHelper.getInstance(this);
         pager_indicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        toggleTranslation = findViewById(R.id.translation_switch);
+
+        if(prefs.getBoolean("toggleTranslation", false))
+            toggleTranslation.setChecked(true);
+
 
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
-        if(prefs.getString("flag", "").equals(Constants.MONITORING)){
+        if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
 
             //Todo add the rest of the views to hide
 
@@ -98,8 +102,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-
-
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -116,7 +118,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         Log.d("LOG_TAG", getClass().getSimpleName() + ": text " + searchBar.getText());
         searchBar.setCardViewElevation(10);
         searchBar.setRoundedSearchBarEnabled(false);
-
 
 
         searchBar.addTextChangeListener(new TextWatcher() {
@@ -151,10 +152,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "Sync", Toast.LENGTH_SHORT).show();
 
-                if(Utils.checkInternetConnection(MainActivity.this))
-                startActivity(new Intent(MainActivity.this, SyncActivity.class));
+                if (Utils.checkInternetConnection(MainActivity.this))
+                    startActivity(new Intent(MainActivity.this, SyncActivity.class));
 
-                else{
+                else {
                     CustomToast.makeToast(MainActivity.this, "You have no internet connection. Please connect to the internet and try again", Toast.LENGTH_LONG).show();
 
                 }
@@ -167,12 +168,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         tabOIndicatorText = (TextView) findViewById(R.id.tab_indicator_text);
 
 
-
-
-
         //Todo obtain categories/Groups according to a filter flag and populate the viewpager accordingly
 
-       setUpAdatper();
+        setUpAdatper();
 
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
@@ -185,45 +183,76 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
         }, 1000);
 
+
+
+
+
+        findViewById(R.id.translationLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                drawer.closeDrawers();
+                toggleTranslation.setChecked(!toggleTranslation.isChecked());
+                prefs.edit().putBoolean("toggleTranslation", toggleTranslation.isChecked()).apply();
+                Log.i(TAG, "Translation is " + toggleTranslation.isChecked());
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+                finish();
+
+                    }
+                }, 500);
+
+
+            }
+        });
+
     }
 
 
+    void setUpAdatper() {
 
 
+        villages = databaseHelper.getAllVillages();
+        viewPagerAdapter = new FarmerPagerAdapter(getSupportFragmentManager());
 
 
+        for (Village village : villages) {
 
-  void setUpAdatper(){
+            List<RealFarmer> farmerList = databaseHelper.getAllFarmersBasicInfoAccordingToVillage(village.getName());
 
+            if (farmerList != null && farmerList.size() != 0) {
+                viewPagerAdapter.addFrag(FarmerListFragment.newInstance(village.getName()));
 
-       villages = databaseHelper.getAllVillages();
-      viewPagerAdapter = new FarmerPagerAdapter(getSupportFragmentManager());
+                actualVillageList.add(village.getName());
+            }
+        }
 
+        viewPager.setAdapter(viewPagerAdapter);
+        if (viewPagerAdapter.getCount() != 0) {
+            findViewById(R.id.placeHolder).setVisibility(View.GONE);
+            setUiPageViewController();
 
-      for (Village village : villages) {
+        } else {
 
-          List<RealFarmer> farmerList = databaseHelper.getAllFarmersBasicInfoAccordingToVillage(village.getName());
-
-          if( farmerList != null &&
-                  farmerList.size() != 0)
-              viewPagerAdapter.addFrag(FarmerListFragment.newInstance(village.getName()));
-      }
-
-      viewPager.setAdapter(viewPagerAdapter);
-      if(viewPagerAdapter.getCount() != 0){
-          findViewById(R.id.placeHolder).setVisibility(View.GONE);
-          setUiPageViewController();
-
-      }else{
-
-          findViewById(R.id.placeHolder).setVisibility(View.VISIBLE);
+            findViewById(R.id.placeHolder).setVisibility(View.VISIBLE);
 
 
-      }
+        }
 
-      viewPager.setCurrentItem(0);
+        viewPager.setCurrentItem(0);
 
-  }
+    }
 
 
     @Override
@@ -252,15 +281,15 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         drawer.closeDrawer(GravityCompat.START);
 
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
 
 
             case R.id.sync:
 
-                if(Utils.checkInternetConnection(MainActivity.this))
+                if (Utils.checkInternetConnection(MainActivity.this))
                     startActivity(new Intent(MainActivity.this, SyncActivity.class));
 
-                else{
+                else {
                     CustomToast.makeToast(MainActivity.this, "You have no internet connection. Please connect to the internet and try again", Toast.LENGTH_LONG).show();
 
                 }
@@ -268,8 +297,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 break;
 
+            case R.id.logout:
 
-/*
+                logOut(this);
+
+                break;
+
+
+
+
+    /*
             case R.id.homepage:
 
 
@@ -305,7 +342,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         Toast.makeText(MainActivity.this, "Search confirmed " + text.toString(), Toast.LENGTH_SHORT).show();
 
-
         searchBar.clearSuggestions();
         searchBar.disableSearch();
 
@@ -318,11 +354,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         Log.i("MAIN ACTIVITY", "ON RESUME!");
 
 
-        if(prefs.getBoolean("shouldRestartActivity", false)) {
-
-            prefs.edit().putBoolean("shouldRestartActivity", false).apply();
+        if (prefs.getBoolean("shouldRestartMainActivity", false)) {
+            prefs.edit().putBoolean("shouldRestartMainActivity", false).apply();
             Intent intent = new Intent(this, MainActivity.class);
-            overridePendingTransition(0, 0);
+            overridePendingTransition(R.anim.fade_in, 0);
             startActivity(intent);
             finish();
 
@@ -330,9 +365,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     }
 
+
     @Override
     public void onButtonClicked(int buttonCode) {
-        switch (buttonCode){
+        switch (buttonCode) {
             case MaterialSearchBar.BUTTON_NAVIGATION:
                 drawer.openDrawer(Gravity.LEFT);
                 break;
@@ -347,12 +383,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
 
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else if (searchBar.isSearchEnabled()) {
+        } else if (searchBar.isSearchEnabled()) {
             searchBar.clearSuggestions();
             searchBar.disableSearch();
         } else {
@@ -361,18 +396,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
 
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
 
 
         return super.onOptionsItemSelected(item);
@@ -380,57 +411,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
 
-
-
-
-
 //////////////////////////////////////////////////////////////////////////
-
-
-    public class FarmerPagerAdapter extends FragmentPagerAdapter {
-
-        List<Fragment> tags = new ArrayList<>();
-
-        public FarmerPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        // Returns total number of pages
-        @Override
-        public int getCount() {
-            return  tags.size() ;
-        }
-
-        // Returns the fragment to display for that page
-        @Override
-        public Fragment getItem(int position) {
-
-            return tags.get(position);
-
-        }
-
-
-        public void addFrag(Fragment fragment) {
-            tags.add(fragment);
-         }
-
-        // Returns the page title for the top indicator
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return  tags.get(position).getArguments().getString("filterTag");
-        }
-
-    }
-
-
-
-
 
     private void setUiPageViewController() {
 
 
-      if(pager_indicator != null)
-      pager_indicator.removeAllViews();
+        if (pager_indicator != null)
+            pager_indicator.removeAllViews();
 
         dotsCount = viewPagerAdapter.getCount();
         dots = new ImageView[dotsCount];
@@ -451,7 +438,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         dots[0].setImageDrawable(ContextCompat.getDrawable(this, R.drawable.selected_item));
 
-        tabOIndicatorText.setText(villages.get(0).getName());
+        tabOIndicatorText.setText(actualVillageList.get(0));
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -464,7 +451,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 //Todo set tab text accordingly
 
-                tabOIndicatorText.setText(villages.get(position).getName());
+                tabOIndicatorText.setText(actualVillageList.get(0));
 
 
                 for (int i = 0; i < dotsCount; i++) {
@@ -483,15 +470,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         });
 
 
-
-
     }
 
-
-
-
-
-    void startIntro(){
+    void startIntro() {
 
 
         if (prefs.getBoolean("addFarmerSpotlight", true)) {
@@ -532,10 +513,40 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         }
 
 
+    }
+
+    public class FarmerPagerAdapter extends FragmentPagerAdapter {
+
+        List<Fragment> tags = new ArrayList<>();
+
+        public FarmerPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        // Returns total number of pages
+        @Override
+        public int getCount() {
+            return tags.size();
+        }
+
+        // Returns the fragment to display for that page
+        @Override
+        public Fragment getItem(int position) {
+
+            return tags.get(position);
+
+        }
 
 
+        public void addFrag(Fragment fragment) {
+            tags.add(fragment);
+        }
 
-
+        // Returns the page title for the top indicator
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tags.get(position).getArguments().getString("filterTag");
+        }
 
     }
 

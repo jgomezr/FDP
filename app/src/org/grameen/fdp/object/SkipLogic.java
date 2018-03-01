@@ -31,64 +31,62 @@ public class SkipLogic {
     String actionToBeTaken;
 
 
-
-
-    public SkipLogic(){}
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setQuestionId(String questionId) {
-        this.questionId = questionId;
-    }
-
-    public void setAnswerValue(String answerValue) {
-        this.answerValue = answerValue;
-    }
-
-    public void setLogicalOperator(String logicalOperator) {
-        this.logicalOperator = logicalOperator;
-    }
-
-    public void setQuestionShowHide(String questionShowHide) {
-        this.questionShowHide = questionShowHide;
-    }
-
-    public void setActionToBeTaken(String actionToBeTaken) {
-        this.actionToBeTaken = actionToBeTaken;
+    public SkipLogic() {
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getActionToBeTaken() {
         return actionToBeTaken;
     }
 
+    public void setActionToBeTaken(String actionToBeTaken) {
+        this.actionToBeTaken = actionToBeTaken;
+    }
+
     public String getQuestionId() {
         return questionId;
+    }
+
+    public void setQuestionId(String questionId) {
+        this.questionId = questionId;
     }
 
     public String getAnswerValue() {
         return answerValue;
     }
 
+    public void setAnswerValue(String answerValue) {
+        this.answerValue = answerValue;
+    }
+
     public String getLogicalOperator() {
         return logicalOperator;
     }
 
+    public void setLogicalOperator(String logicalOperator) {
+        this.logicalOperator = logicalOperator;
+    }
+
     public String getQuestionShowHide() {
         return questionShowHide;
+    }
+
+    public void setQuestionShowHide(String questionShowHide) {
+        this.questionShowHide = questionShowHide;
     }
 }

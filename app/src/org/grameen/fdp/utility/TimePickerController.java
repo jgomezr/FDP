@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
-import com.github.dkharrat.nexusdialog.FormController;
-import com.github.dkharrat.nexusdialog.controllers.LabeledFieldController;
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
 
 import java.text.SimpleDateFormat;
@@ -25,21 +23,20 @@ import java.util.TimeZone;
 
 public class TimePickerController extends MyLabeledFieldController {
     private final int editTextId = MyFormController.generateViewId();
-
-    private TimePickerDialog timePickerDialog = null;
     private final SimpleDateFormat displayFormat;
     private final TimeZone timeZone;
     private final boolean is24HourView;
+    private TimePickerDialog timePickerDialog = null;
 
     /**
      * Constructs a new instance of a time picker field.
      *
-     * @param ctx               the Android context
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field. Set to {@code null} to not show a label.
-     * @param validators        contains the validations to process on the field
-     * @param displayFormat     the format of the time to show in the text box when a time is set
-     * @param is24HourView      the format of time picker dialog should be 24 hour format or not
+     * @param ctx           the Android context
+     * @param name          the name of the field
+     * @param labelText     the label to display beside the field. Set to {@code null} to not show a label.
+     * @param validators    contains the validations to process on the field
+     * @param displayFormat the format of the time to show in the text box when a time is set
+     * @param is24HourView  the format of time picker dialog should be 24 hour format or not
      */
     public TimePickerController(Context ctx, String name, String labelText, Set<InputValidator> validators, SimpleDateFormat displayFormat, boolean is24HourView) {
         super(ctx, name, labelText, validators);
@@ -52,12 +49,12 @@ public class TimePickerController extends MyLabeledFieldController {
     /**
      * Constructs a new instance of a time picker field.
      *
-     * @param ctx               the Android context
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field. Set to {@code null} to not show a label.
-     * @param isRequired        indicates if the field is required or not
-     * @param displayFormat     the format of the time to show in the text box when a time is set
-     * @param is24HourView      the format of time picker dialog should be 24 hour format or not
+     * @param ctx           the Android context
+     * @param name          the name of the field
+     * @param labelText     the label to display beside the field. Set to {@code null} to not show a label.
+     * @param isRequired    indicates if the field is required or not
+     * @param displayFormat the format of the time to show in the text box when a time is set
+     * @param is24HourView  the format of time picker dialog should be 24 hour format or not
      */
     public TimePickerController(Context ctx, String name, String labelText, boolean isRequired, SimpleDateFormat displayFormat, boolean is24HourView) {
         super(ctx, name, labelText, isRequired);
@@ -69,8 +66,8 @@ public class TimePickerController extends MyLabeledFieldController {
     /**
      * Constructs a new instance of a time picker field, with the selected time displayed in "HH:mm" format.
      *
-     * @param name              the name of the field
-     * @param labelText         the label to display beside the field
+     * @param name      the name of the field
+     * @param labelText the label to display beside the field
      */
     public TimePickerController(Context context, String name, String labelText) {
         this(context, name, labelText, false, new SimpleDateFormat("hh:mm a", Locale.getDefault()), false);
@@ -107,7 +104,7 @@ public class TimePickerController extends MyLabeledFieldController {
     private void showTimePickerDialog(Context context, final EditText editText) {
         // don't show dialog again if it's already being shown
         if (timePickerDialog == null) {
-            Date date = (Date)getModel().getValue(getName());
+            Date date = (Date) getModel().getValue(getName());
             if (date == null) {
                 date = new Date();
             }
@@ -139,11 +136,11 @@ public class TimePickerController extends MyLabeledFieldController {
     }
 
     private EditText getEditText() {
-        return (EditText)getView().findViewById(editTextId);
+        return (EditText) getView().findViewById(editTextId);
     }
 
     private void refresh(EditText editText) {
-        Date value = (Date)getModel().getValue(getName());
+        Date value = (Date) getModel().getValue(getName());
         editText.setText(value != null ? displayFormat.format(value) : "");
     }
 

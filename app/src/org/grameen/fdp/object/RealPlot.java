@@ -1,7 +1,5 @@
 package org.grameen.fdp.object;
 
-import java.util.List;
-
 /**
  * Created by aangjnr on 08/11/2017.
  */
@@ -19,75 +17,69 @@ public class RealPlot {
 
     int startYear = 1;
 
-
-    public void setAdditionalInterventionJson(String additionalIntervention) {
-        this.additionalIntervention = additionalIntervention;
-    }
-
     public String getAdditionalInterventionJson() {
         return additionalIntervention;
     }
 
-
-
-
-
-    public void setAdoptionObservationsJson(String adoptionObservationsJson) {
-        this.adoptionObservationsJson = adoptionObservationsJson;
-    }
-
-    public void setAdoptionObservationResultsJson(String adoptionObservationResultsJson) {
-        this.adoptionObservationResultsJson = adoptionObservationResultsJson;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setFarmerCode(String farmerCode) {
-        this.farmerCode = farmerCode;
-    }
-
-    public void setPlotInformationJson(String plotInformationJson) {
-        this.plotInformationJson = plotInformationJson;
+    public void setAdditionalInterventionJson(String additionalIntervention) {
+        this.additionalIntervention = additionalIntervention;
     }
 
     public String getAdoptionObservationsJson() {
         return adoptionObservationsJson;
     }
 
+    public void setAdoptionObservationsJson(String adoptionObservationsJson) {
+        this.adoptionObservationsJson = adoptionObservationsJson;
+    }
+
     public String getAdoptionObservationResultsJson() {
         return adoptionObservationResultsJson;
+    }
+
+    public void setAdoptionObservationResultsJson(String adoptionObservationResultsJson) {
+        this.adoptionObservationResultsJson = adoptionObservationResultsJson;
     }
 
     public String getId() {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getFarmerCode() {
         return farmerCode;
+    }
+
+    public void setFarmerCode(String farmerCode) {
+        this.farmerCode = farmerCode;
     }
 
     public String getPlotInformationJson() {
         return plotInformationJson;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPlotInformationJson(String plotInformationJson) {
+        this.plotInformationJson = plotInformationJson;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setStartYear(int startYear) {
-        this.startYear = startYear;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getStartYear() {
         return startYear;
     }
 
+    public void setStartYear(int startYear) {
+        this.startYear = startYear;
+    }
 
     public String getRecommendationId() {
         return recommendationId;

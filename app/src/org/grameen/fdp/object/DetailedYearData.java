@@ -10,22 +10,21 @@ public class DetailedYearData {
 
     String name;
 
-    List<Data> dataList;
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDataList(List<Data> dataList) {
-        this.dataList = dataList;
-    }
+    List<Data2> dataList;
 
     public String getName() {
         return name;
     }
 
-    public List<Data> getDataList() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Data2> getDataList() {
         return dataList;
+    }
+
+    public void setDataList(List<Data2> dataList) {
+        this.dataList = dataList;
     }
 }

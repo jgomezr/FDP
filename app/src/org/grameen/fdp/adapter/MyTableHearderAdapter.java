@@ -1,7 +1,8 @@
 package org.grameen.fdp.adapter;
 
 import android.content.Context;
-import android.content.Intent;
+import android.graphics.Typeface;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -9,18 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.jaredrummler.materialspinner.MaterialSpinner;
-
-import org.grameen.fdp.activity.DetailedYearActivity;
+import org.grameen.fdp.R;
 
 import de.codecrafters.tableview.TableHeaderAdapter;
-import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
 
 /**
  * Created by aangjnr on 27/01/2018.
  */
 
 public class MyTableHearderAdapter extends TableHeaderAdapter {
+    static View.OnClickListener mHeaderClickListener;
     private final String[] headers;
     private int paddingLeft = 20;
     private int paddingTop = 20;
@@ -30,27 +29,25 @@ public class MyTableHearderAdapter extends TableHeaderAdapter {
     private int typeface = 1;
     private int textColor = -1728053248;
 
-    static View.OnClickListener mHeaderClickListener;
-
-
-    public void setHeaderClickListener(final View.OnClickListener mItemSelectedListener) {
-        this.mHeaderClickListener = mItemSelectedListener;
-    }
-
 
     public MyTableHearderAdapter(Context context, String... headers) {
         super(context);
         this.headers = headers;
     }
 
+
     public MyTableHearderAdapter(Context context, int... headerStringResources) {
         super(context);
         this.headers = new String[headerStringResources.length];
 
-        for(int i = 0; i < headerStringResources.length; ++i) {
+        for (int i = 0; i < headerStringResources.length; ++i) {
             this.headers[i] = context.getString(headerStringResources[i]);
         }
 
+    }
+
+    public void setHeaderClickListener(final View.OnClickListener mItemSelectedListener) {
+        this.mHeaderClickListener = mItemSelectedListener;
     }
 
     public void setPaddings(int left, int top, int right, int bottom) {
@@ -92,17 +89,17 @@ public class MyTableHearderAdapter extends TableHeaderAdapter {
         final TextView textView = new TextView(this.getContext());
         TypedValue outValue = new TypedValue();
 
-        if(columnIndex < this.headers.length)
+        if (columnIndex < this.headers.length)
             textView.setText(this.headers[columnIndex]);
 
         textView.setPadding(this.paddingLeft, this.paddingTop, this.paddingRight, this.paddingBottom);
         textView.setTypeface(textView.getTypeface(), this.typeface);
-        textView.setTextSize((float)this.textSize);
+        textView.setTextSize((float) this.textSize);
         textView.setTextColor(this.textColor);
         textView.setSingleLine();
         textView.setEllipsize(TextUtils.TruncateAt.END);
 
-        if(columnIndex > 1) {
+        if (columnIndex > 1) {
 
             getContext().getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
             textView.setBackgroundResource(outValue.resourceId);
@@ -123,7 +120,11 @@ public class MyTableHearderAdapter extends TableHeaderAdapter {
                 }
             });
 
+        } else if (columnIndex == 0) {
+            textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
+            textView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.transparent));
         }
+
         return textView;
     }
 }
