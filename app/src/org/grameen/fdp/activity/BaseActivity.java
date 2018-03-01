@@ -25,19 +25,26 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import org.grameen.fdp.fragment.LogoutDialogFragment;
-import org.grameen.fdp.fragment.MyFormFragment;
-import org.grameen.fdp.object.Logic;
-import org.grameen.fdp.object.Question;
-import org.grameen.fdp.object.SkipLogic;
-import org.grameen.fdp.utility.Constants;
-import org.grameen.fdp.utility.DatabaseHelper;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 import com.salesforce.androidsdk.rest.ApiVersionStrings;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.utility.MyFormController;
+import org.grameen.fdp.fragment.LogoutDialogFragment;
+import org.grameen.fdp.fragment.MonitoringFormFragment;
+import org.grameen.fdp.fragment.MyFormFragment;
+import org.grameen.fdp.object.Question;
+import org.grameen.fdp.object.RealPlot;
+import org.grameen.fdp.object.SkipLogic;
+import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DatabaseHelper;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.script.ScriptEngine;
@@ -48,21 +55,60 @@ import javax.script.ScriptException;
  * Created by aangjnr on 08/11/2017.
  */
 
-public class BaseActivity extends AppCompatActivity{
+public class BaseActivity extends AppCompatActivity {
 
     private static final String DOUBLE_LINE = "==============================================================================";
     private static final String SINGLE_LINE = "------------------------------------------------------------------------------";
 
 
-     SharedPreferences prefs;
-    private String apiVersion;
-
+    SharedPreferences prefs;
     DatabaseHelper databaseHelper;
     ScriptEngine engine;
+    static String TAG = "BASE ACTIVITY";
+    private String apiVersion;
 
-    String TAG = "BASE ACTIVITY";
+    public static void showError(Context context, Exception e) {
+        Toast toast = Toast.makeText(context,
+                context.getString(
+                        SalesforceSDKManager.getInstance().
+                                getSalesforceR().stringGenericError(),
+                        e.toString()),
+                Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    public static ProgressDialog showProgress(Context context, String title, String message, Boolean cancelable) {
+
+        ProgressDialog progressDialog = new ProgressDialog(context, R.style.DialogTheme);
+        progressDialog.setTitle(title);
+        progressDialog.setMessage(message);
+        progressDialog.setCancelable(cancelable);
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
+        return progressDialog;
 
 
+    }
+
+    public static void printRequestInfo(long nanoDuration, int characterLength, int statusCode) {
+        System.out.println(SINGLE_LINE);
+        System.out.println("Time (ms): " + nanoDuration / 1000000);
+        System.out.println("Size (chars): " + characterLength);
+        System.out.println("Status code: " + statusCode);
+    }
+
+    public static void printException(Exception e) {
+        System.out.println("Error: " + e.getClass().getSimpleName());
+        System.out.println(e.getMessage());
+        e.printStackTrace();
+
+    }
+
+    public static void printHeader(Object obj) {
+        System.out.println(DOUBLE_LINE);
+        System.out.println(obj.toString());
+        System.out.println(SINGLE_LINE);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -79,7 +125,7 @@ public class BaseActivity extends AppCompatActivity{
 
     }
 
-   Toolbar setToolbar(String title) {
+    Toolbar setToolbar(String title) {
 
         Toolbar toolbar = null;
         try {
@@ -97,9 +143,8 @@ public class BaseActivity extends AppCompatActivity{
                 @Override
                 public void onClick(View v) {
                     onBackPressed();
-                 }
+                }
             });
-
 
 
         } catch (Exception e) {
@@ -109,11 +154,6 @@ public class BaseActivity extends AppCompatActivity{
         return toolbar;
 
     }
-
-
-
-
-
 
     public void showAlertDialog(Boolean cancelable, @Nullable String title, @Nullable String message,
                                 @Nullable DialogInterface.OnClickListener onPositiveButtonClickListener,
@@ -136,45 +176,6 @@ public class BaseActivity extends AppCompatActivity{
         builder.show();
     }
 
-
-
-    public static class SpacesGridItemDecoration extends RecyclerView.ItemDecoration {
-        private final int mSpace;
-
-        public SpacesGridItemDecoration(int space) {
-            this.mSpace = space;
-        }
-
-        @Override
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-
-
-
-            outRect.bottom = mSpace;
-            // Add top margin only for the first item to avoid double space between items
-            if (parent.getChildAdapterPosition(view) == 0 || parent.getChildAdapterPosition(view) == 1 || parent.getChildAdapterPosition(view) == 2) {
-                outRect.top = mSpace * 2;
-            }else{
-
-                outRect.top = mSpace;
-
-            }
-
-            if(parent.getChildAdapterPosition(view) % 3 == 0){
-                outRect.right = mSpace * 2;
-                outRect.left = mSpace;
-
-            }else if(parent.getChildAdapterPosition(view) % 3 == 2){
-                outRect.left = mSpace * 2;
-                outRect.right = mSpace;
-
-            }
-
-        }
-
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
@@ -195,21 +196,6 @@ public class BaseActivity extends AppCompatActivity{
 
     }
 
-
-
-
-
-    public static void showError(Context context, Exception e) {
-        Toast toast = Toast.makeText(context,
-                context.getString(
-                        SalesforceSDKManager.getInstance().
-                                getSalesforceR().stringGenericError(),
-                        e.toString()),
-                Toast.LENGTH_LONG);
-        toast.show();
-    }
-
-
     void showSoftKeyboard() {
         InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(INPUT_METHOD_SERVICE);
         inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
@@ -224,90 +210,16 @@ public class BaseActivity extends AppCompatActivity{
         }
     }
 
-
-
-
-    public static ProgressDialog showProgress(Context context, String title, String message, Boolean cancelable){
-
-        ProgressDialog progressDialog = new ProgressDialog(context, R.style.DialogTheme);
-        progressDialog.setTitle(title);
-        progressDialog.setMessage(message);
-        progressDialog.setCancelable(cancelable);
-        progressDialog.setIndeterminate(true);
-        progressDialog.show();
-        return progressDialog;
-
-
-    }
-
-
-    public void logOut(final AppCompatActivity context){
-/*
-        String accountType = SalesforceSDKManager.getInstance().getAccountType();
-
-        // Gets a rest client.
-        new ClientManager(this, accountType, SalesforceSDKManager.getInstance().getLoginOptions(),
-                SalesforceSDKManager.getInstance().shouldLogoutWhenTokenRevoked()).getRestClient(this, new ClientManager.RestClientCallback() {
-
-            @Override
-            public void authenticatedRestClient(RestClient client) {
-                if (client == null) {
-                    SalesforceSDKManager.getInstance().logout(context);
-
-                    prefs.edit().putBoolean(Constants.IS_USER_SIGNED_IN, false).apply();
-
-                    Intent intent = new Intent(context, LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    context.finish();
-
-
-
-                }
-
-                // Shows everything.
-             }
-        });*/
+    public void logOut(final AppCompatActivity context) {
 
 
         LogoutDialogFragment logoutDialogFragment = new LogoutDialogFragment();
         logoutDialogFragment.show(getSupportFragmentManager(), "logoutDialog");
-     }
 
-
-
-
-
-
-
-
-
-    public static void printRequestInfo(long nanoDuration, int characterLength, int statusCode) {
-        System.out.println(SINGLE_LINE);
-        System.out.println("Time (ms): " + nanoDuration / 1000000);
-        System.out.println("Size (chars): " + characterLength);
-        System.out.println("Status code: " + statusCode);
-    }
-
-    public static void printException(Exception e) {
-        System.out.println("Error: " + e.getClass().getSimpleName());
-        System.out.println(e.getMessage());
-        e.printStackTrace();
 
     }
 
-    public static void printHeader(Object obj) {
-        System.out.println(DOUBLE_LINE);
-        System.out.println(obj.toString());
-        System.out.println(SINGLE_LINE);
-    }
-
-
-
-
-    void onBackClicked(){
+    void onBackClicked() {
 
         try {
 
@@ -318,11 +230,11 @@ public class BaseActivity extends AppCompatActivity{
                     onBackPressed();
                 }
             });
-        }catch(Exception e){e.printStackTrace();}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
-
-
 
     boolean hasPermissions(Context context, String permission) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
@@ -340,9 +252,6 @@ public class BaseActivity extends AppCompatActivity{
         return true;
     }
 
-
-
-
     void loadDynamicView(MyFormFragment formFragment1, int layout1) {
 
         //Todo add parameter to load data from the database, if is in editing mode else display default forms with their resp values
@@ -355,41 +264,48 @@ public class BaseActivity extends AppCompatActivity{
                 .commit();
 
 
-
-
     }
 
-
-    void loadDynamicView(MyFormFragment formFragment1) {
+    void loadDynamicView(MonitoringFormFragment formFragment1, int layout1) {
 
         //Todo add parameter to load data from the database, if is in editing mode else display default forms with their resp values
 
 
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
-                .add(R.id.dynamicLayout, formFragment1, formFragment1.getClass().getSimpleName())
+                .add(layout1, formFragment1, formFragment1.getClass().getSimpleName())
                 //.add(layout2, formFragment2, formFragment2.getClass().getSimpleName())
                 .commit();
 
 
     }
-
-
-
     String calculate(String equation) throws ScriptException {
         Double value = 0.0;
         try {
-             value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
-        }catch(Exception e){
+            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+        } catch (Exception e) {
             e.printStackTrace();
             value = 0.0;
         }
 
-        return (value.toString()) ;
+        return (new DecimalFormat("#.00").format(value));
     }
 
 
-    Boolean compareValues(SkipLogic sl, String  newValue){
+    Double calculateDouble(String equation){
+        Log.i(TAG, "Evaluating " + equation);
+        Double value = 0.0;
+        try {
+            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+        } catch (Exception e) {
+            e.printStackTrace();
+            value = null;
+        }
+
+        return value;
+    }
+
+    Boolean compareValues(SkipLogic sl, String newValue) {
 
         engine = new ScriptEngineManager().getEngineByName("rhino");
 
@@ -403,12 +319,14 @@ public class BaseActivity extends AppCompatActivity{
             value = (Boolean) engine.eval(equation);
 
         } catch (ScriptException | NumberFormatException e) {
-            System.out.println("******* EXCEPTION ****** " +   e.getMessage());
+            System.out.println("******* EXCEPTION ****** " + e.getMessage());
 
+            if(sl.getLogicalOperator().equalsIgnoreCase("=="))
             value = sl.getAnswerValue().equalsIgnoreCase(newValue);
+            else value = !sl.getAnswerValue().equalsIgnoreCase(newValue);
 
-        }finally{
-            System.out.println(equation + " = " +  value);
+        } finally {
+            System.out.println(equation + " = " + value);
         }
         return value;
     }
@@ -417,7 +335,7 @@ public class BaseActivity extends AppCompatActivity{
 
 
 
-    String  applyCalculation(String equation){
+    String applyCalculation(String equation) {
 
         System.out.println("EQUATION IS " + equation);
 
@@ -433,9 +351,256 @@ public class BaseActivity extends AppCompatActivity{
 
         System.out.println("####### NEW VALUE IS " + calculatedValue);
 
-        return  calculatedValue;
+        return calculatedValue;
 
     }
+
+    public static class SpacesGridItemDecoration extends RecyclerView.ItemDecoration {
+        private final int mSpace;
+
+        public SpacesGridItemDecoration(int space) {
+            this.mSpace = space;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+
+
+            outRect.bottom = mSpace;
+            // Add top margin only for the first item to avoid double space between items
+            if (parent.getChildAdapterPosition(view) == 0 || parent.getChildAdapterPosition(view) == 1 || parent.getChildAdapterPosition(view) == 2) {
+                outRect.top = mSpace * 2;
+            } else {
+
+                outRect.top = mSpace;
+
+            }
+
+            if (parent.getChildAdapterPosition(view) % 3 == 0) {
+                outRect.right = mSpace * 2;
+                outRect.left = mSpace;
+
+            } else if (parent.getChildAdapterPosition(view) % 3 == 2) {
+                outRect.left = mSpace * 2;
+                outRect.right = mSpace;
+
+            }
+
+        }
+
+    }
+
+
+    public String toCamelCase(String value){
+
+        if(value == null || value.equals("null")) return "";
+        else {
+
+            if(Character.isUpperCase(value.codePointAt(0)))
+            return value;
+
+            else
+            return (value.substring(0, 1).toUpperCase() + value.substring(1, value.length()).toLowerCase());
+
+        }
+    }
+
+
+    public void checkIfFarmProductionCorresponds(String farmerCode){
+
+        Double totalFarmProduction = null;
+        String totalUnit = "--";
+
+        try{
+
+            JSONObject farmingEconomicProfileJson = new JSONObject(databaseHelper.getFarmingEconomicProfileJson(farmerCode));
+            totalFarmProduction = Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString());
+
+            totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalWeightUnit", ""));
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringUnitBuilder = new StringBuilder();
+
+
+        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerCode);
+
+
+
+
+        for(RealPlot plot : plots){
+
+            try {
+                JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
+
+                String[] estimatedProductions = jsonObject.get("estimatedProduction").toString().split(" ");
+
+                stringBuilder.append(estimatedProductions[0]).append("+");
+
+                stringUnitBuilder.append(estimatedProductions[1]);
+
+
+            } catch (JSONException  | NullPointerException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+        stringBuilder.append("0");
+
+        Double totalPlotsProduction = calculateDouble(stringBuilder.toString());
+
+        Log.i(TAG, "$$$$$$$$$$$$$    TOTAL UNITS " + totalUnit + " AND TOTAL WEIGHTS " + stringUnitBuilder.toString());
+
+        Log.i(TAG, "$$$$$$$$$$$$$    TOTAL FARM PROD " + totalFarmProduction + " AND TOTAL PLOTS PROD " + totalPlotsProduction);
+
+        if(stringUnitBuilder.toString().toLowerCase().contains(totalUnit.toLowerCase())) {
+            if (totalPlotsProduction != null && totalFarmProduction != null) {
+                if (totalPlotsProduction > totalFarmProduction)
+
+                    CustomToast.makeToast(this, getResources(R.string.error_total_plot_estimated_production), Toast.LENGTH_LONG).show();
+            } else
+                CustomToast.makeToast(this, getResources(R.string.error_missing_estimated_production), Toast.LENGTH_LONG).show();
+        }else{
+            CustomToast.makeToast(this, getResources(R.string.error_invalid_units), Toast.LENGTH_LONG).show();
+        }
+
+
+
+
+    }
+
+
+
+    public String getResources(int resource){
+        return getString(resource);
+    }
+
+   public  String parseIfFormula(String formula, JSONObject jsonObject) {
+
+        String operator = "+";
+
+        if(formula.contains("+")) operator = "+";
+        else if (formula.contains("*")) operator = "*";
+        else if (formula.contains("-")) operator = "-";
+        else if (formula.contains("/")) operator = "/";
+
+       Log.i(TAG, "OPERATOR IS IS " + operator);
+
+
+
+
+       StringBuilder parsedFormula = new StringBuilder();
+
+        Double finalValue = -1.0;
+
+        try{
+
+            List<String> questionNames = new ArrayList<>();
+            List<String> valueToCompare = new ArrayList<>();
+            List<String> trueValues = new ArrayList<>();
+            List<String> falseValues = new ArrayList<>();
+
+
+            String[] sections = formula.split("[-+*/]");
+            Log.i(TAG, "FORMULA SECTIONS SIZE IS " + sections.length);
+
+            for (int i = 0; i < sections.length; i++) {
+
+                sections[i] = sections[i].replace("IF", "");
+                sections[i] = sections[i].replace("(", "");
+                sections[i] = sections[i].replace(")", "");
+                sections[i] = sections[i].replace(" ", "");
+
+
+                //Log.i(TAG, "AFTER CLEANSING " + sections[i]);
+
+                String[] discard = sections[i].split("==");
+                questionNames.add(discard[0]);
+                //Log.i(TAG, "QUESTION NAME " + discard[0]);
+
+
+                String[] values = discard[1].split(",");
+
+                valueToCompare.add(values[0]);
+                //Log.i(TAG, "VALUE TO COMPARE " + values[0]);
+
+                trueValues.add(values[1]);
+                //Log.i(TAG, "TRUE VALUE " + values[1]);
+
+                falseValues.add(values[2]);
+                // Log.i(TAG, "FALSE VALUE " + values[2]);
+
+
+
+
+            }
+
+            // Log.i(TAG, "QUESTION NAMES SIZE = " + questionNames.size());
+            // Log.i(TAG, "VALUES SIZE = " + valueToCompare.size());
+            //  Log.i(TAG, "TRUE VALUES SIZE = " + trueValues.size());
+            //  Log.i(TAG, "FALSE VALUES SIZE = " + falseValues.size());
+
+
+
+            for(int i=0; i < sections.length; i++) {
+
+                String value = getValue(databaseHelper.getQuestionByName(questionNames.get(i)).getId(), jsonObject);
+                if(!value.equals("--")) {
+
+                    if (value.equalsIgnoreCase(valueToCompare.get(i))) {
+
+                        parsedFormula.append(trueValues.get(i)).append(operator);
+
+                    } else
+                        parsedFormula.append(falseValues.get(i)).append(operator);
+
+                }else parsedFormula.append("-1").append(operator);
+            }
+
+            parsedFormula.append("0");
+
+
+
+            engine = new ScriptEngineManager().getEngineByName("rhino");
+            finalValue = (Double) engine.eval(parsedFormula.toString());
+
+            Log.i(TAG, "PARSED FORMULA IS " + parsedFormula.toString() + " = " + finalValue);
+
+        }catch(Exception e){e.printStackTrace();
+
+        }
+
+        return String.valueOf(finalValue.intValue());
+    }
+
+
+
+    String getValue(String id, JSONObject jsonObject){
+        String value = null;
+
+
+        try {
+
+            value = jsonObject.get(id).toString();
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            value = "--";
+        }
+
+
+        return value;
+    }
+
+
+
+
 
 
 
