@@ -2,6 +2,8 @@ package org.grameen.fdp.object;
 
 import android.util.Log;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +14,8 @@ import java.util.List;
 
 public class Question {
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
 
     String Id;
     String Name;
@@ -37,6 +41,14 @@ public class Question {
     String answerValue;
 
     public Question() {
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     public String getName() {

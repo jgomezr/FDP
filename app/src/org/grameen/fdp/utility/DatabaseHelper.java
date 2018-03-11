@@ -28,6 +28,7 @@ import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.object.RecommendationsPlusActivity;
 import org.grameen.fdp.object.SkipLogic;
 import org.grameen.fdp.object.Village;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.math.BigInteger;
@@ -37,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
@@ -52,7 +54,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final String TAG = DatabaseHelper.class.getSimpleName();
     static final String DB_NAME = "fdp.db";
-    static final int DB_VERSION = 33;
+    static final int DB_VERSION = 39;
 
     private static DatabaseHelper instance;
     Context _context;
@@ -158,6 +160,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, question.getLastModifiedDate());
+
             contentValues.put(QUESTION_ID, question.getId());
             contentValues.put(QUESTION_NAME, question.getName());
 
@@ -283,7 +287,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteQuestionsTable() {
+   /* public boolean deleteQuestionsTable() {
 
         try {
 
@@ -292,7 +296,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             Log.i("DATABASE", "QUESTIONS TABLE DELETED");
 
-            deleteFormsTable();
+        //    deleteFormsTable();
 
             return true;
         } catch (Exception e) {
@@ -300,7 +304,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public Question getQuestion(String id) {
 
@@ -434,24 +438,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public Question getQuestionByTranslation(String id) {
+    public Question getQuestionByTranslation(String s) {
 
         Question question = null;
         Cursor cursor = null;
         try {
-            question = new Question();
 
 
             String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE + " WHERE " +
-                    QUESTION_TRANSLATION + " ='" + id + "'";
+                    QUESTION_TRANSLATION + " ='" + s + "'";
             Log.i("QUERY", selectQuery);
             cursor = db.rawQuery(selectQuery, null);
 
             if (cursor != null && cursor.getCount() > 0) {
 
+                question = new Question();
+
                 if (cursor.moveToFirst())
 
                     do {
+
 
 
                         Form form = new Form();
@@ -617,71 +623,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public List<Question> getAllQuestions() {
-
-        List<Question> questions = null;
-        Cursor cursor = null;
-
-        try {
-
-            questions = new ArrayList<>();
-
-            String selectQuery = "SELECT  * FROM " + QUESTIONS_TABLE;
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-
-
-                        Question question = new Question();
-                        Form form = new Form();
-                        form.setType(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_TYPE)));
-                        form.setName(cursor.getString(cursor.getColumnIndex(QUESTION_FORM_NAME)));
-
-
-                        question.setId(cursor.getString(cursor.getColumnIndex(QUESTION_ID)));
-                        question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
-                        question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
-                        question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
-                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
-                        question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
-                        question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
-                        question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
-                        question.setHelp_Text__c(cursor.getString(cursor.getColumnIndex(QUESTION_HELPER_TEXT)));
-                        question.setMax_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MAXI_VALUE)));
-                        question.setMin_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_MINI_VALUE)));
-                        question.setOptions__c(cursor.getString(cursor.getColumnIndex(QUESTION_OPTIONS)));
-                        question.setType__c(cursor.getString(cursor.getColumnIndex(QUESTION_TYPE)));
-                        question.setRelated_Questions__c(cursor.getString(cursor.getColumnIndex(QUESTION_RELATED_QUESTIONS)));
-
-                        question.setForm__r(form);
-
-
-                        Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() + " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Options " + question.getOptions__c() + " Form label " + question.getForm__r().getName());
-
-                        questions.add(question);
-
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return questions;
-
-
-    }
 
     public List<Question> getSpecificSetOfQuestions(String questionFormName) {
 
@@ -793,6 +734,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean addNewFarmer(RealFarmer realFarmer) {
         try {
 
+            realFarmer.setAnswersJson(new JSONObject().toString());
+
             ContentValues contentValues = new ContentValues();
             contentValues.put(FARMER_ID, realFarmer.getId());
             contentValues.put(FARMER_NAME, realFarmer.getFarmerName());
@@ -801,22 +744,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(FARMER_GENDER, realFarmer.getGender());
             contentValues.put(FARMER_BIRTHYEAR, realFarmer.getBirthYear());
             contentValues.put(FARMER_IMAGE_URL, realFarmer.getImageUrl());
-
+            contentValues.put(ANSWERS_JSON, realFarmer.getAnswersJson());
 
             contentValues.put(FARMER_EDUCATION, realFarmer.getEducationLevel());
+
+            if(realFarmer.getFirstVisitDate() != null)
+            contentValues.put(FARMER_FIRST_VISIT_DATE, realFarmer.getFirstVisitDate());
+            contentValues.put(LAST_MODIFIED_DATE, realFarmer.getLastModifiedDate());
+
+
             contentValues.put(FARMER_LAST_VISIT_DATE, realFarmer.getLastVisitDate());
             contentValues.put(FARMER_LAND_AREA, realFarmer.getLandArea());
-
-            contentValues.put(FAMILY_MEMBERS_JSON, realFarmer.getFamilyMembersJson());
-
-            contentValues.put(FARMER_PROFILE_JSON, realFarmer.getFarmerProfileJson());
-            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON, realFarmer.getAggregateEconomicResultsJson());
-            contentValues.put(PRODUCTIVE_PROFILE_JSON, realFarmer.getProductiveProfileJson());
-            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON, realFarmer.getFarmingEconomicProfileJson());
-
-            contentValues.put(SOCIO_ECONOMIC_PROFILE_JSON, realFarmer.getSocioEconomicProfileJson());
-            contentValues.put(OTHER_JSON, realFarmer.getOtherJson());
-
             contentValues.put(FARMER_SYNC_STATUS, realFarmer.getSyncStatus());
             contentValues.put(HAS_REGISTERED, realFarmer.getHasRegistered());
 
@@ -832,6 +770,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(TAG, "EDUCATION LEVEL  " + realFarmer.getEducationLevel());
             Log.d(TAG, "BIRTH YEAR   " + realFarmer.getBirthYear());
             Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
+            Log.d(TAG, "ANSWERS JSON     " + realFarmer.getAnswersJson());
+
 
 
         } catch (Exception e) {
@@ -849,78 +789,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public List<RealFarmer> getAllFarmersData() {
 
-        List<RealFarmer> realFarmers = null;
-        Cursor cursor = null;
-
+    public boolean setFarmerAsSynced(String id) {
         try {
 
-            realFarmers = new ArrayList<>();
+            ContentValues contentValues = new ContentValues();
 
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE;
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
+            contentValues.put(FARMER_SYNC_STATUS, 1);
 
 
-                        RealFarmer realFarmer = new RealFarmer();
+            db.update(FARMER_TABLE, contentValues, ID + "= ?", new String[]{id});
+            Log.d(TAG, "FARMER WITH ID " + id + " SYNC STATUS UPDATED WITH VALUE " + 1);
 
-                        realFarmer.setId(cursor.getString(cursor.getColumnIndex(FARMER_ID)));
-                        realFarmer.setFarmerName(cursor.getString(cursor.getColumnIndex(FARMER_NAME)));
-                        realFarmer.setCode(cursor.getString(cursor.getColumnIndex(FARMER_CODE)));
-                        realFarmer.setVillage(cursor.getString(cursor.getColumnIndex(FARMER_VILLAGE)));
-                        realFarmer.setGender(cursor.getString(cursor.getColumnIndex(FARMER_GENDER)));
-                        realFarmer.setBirthYear(cursor.getString(cursor.getColumnIndex(FARMER_BIRTHYEAR)));
-                        realFarmer.setImageUrl(cursor.getString(cursor.getColumnIndex(FARMER_IMAGE_URL)));
-
-
-                        realFarmer.setEducationLevel(cursor.getString(cursor.getColumnIndex(FARMER_EDUCATION)));
-                        realFarmer.setLastVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_LAST_VISIT_DATE)));
-                        realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
-
-
-                        realFarmer.setFarmerProfileJson(cursor.getString(cursor.getColumnIndex(FARMER_PROFILE_JSON)));
-                        realFarmer.setAggregateEconomicResultsJson(cursor.getString(cursor.getColumnIndex(AGGREGATE_ECONOMIC_RESULTS_JSON)));
-                        realFarmer.setProductiveProfileJson(cursor.getString(cursor.getColumnIndex(PRODUCTIVE_PROFILE_JSON)));
-                        realFarmer.setFarmingEconomicProfileJson(cursor.getString(cursor.getColumnIndex(FARMING_ECONOMIC_PROFILE_JSON)));
-                        realFarmer.setSocioEconomicProfileJson(cursor.getString(cursor.getColumnIndex(SOCIO_ECONOMIC_PROFILE_JSON)));
-                        realFarmer.setOtherJson(cursor.getString(cursor.getColumnIndex(FAMILY_MEMBERS_JSON)));
-
-                        realFarmer.setPlotsInfoJson(new Gson().toJson(getAllFarmerPlots(realFarmer.getCode())));
-
-                        realFarmer.setOtherJson(cursor.getString(cursor.getColumnIndex(OTHER_JSON)));
-                        realFarmer.setHasRegistered(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
-                        realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
-
-
-                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
-
-                        realFarmers.add(realFarmer);
-
-
-                    } while (cursor.moveToNext());
-            }
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
+            return false;
         }
 
-        return realFarmers;
-
+        return true;
 
     }
+
+
+    public boolean setAllFarmersAsSynced() {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+
+            contentValues.put(FARMER_SYNC_STATUS, 1);
+
+            db.update(FARMER_TABLE, contentValues,null, null);
+            Log.d(TAG, "ALL FARMERS SYNC STATUS UPDATED WITH VALUE " + 1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+
+
+
+
+
 
     public List<RealFarmer> getAllFarmersBasicInfoAccordingToVillage(String villageName) {
 
@@ -953,10 +866,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setGender(cursor.getString(cursor.getColumnIndex(FARMER_GENDER)));
                         realFarmer.setBirthYear(cursor.getString(cursor.getColumnIndex(FARMER_BIRTHYEAR)));
                         realFarmer.setEducationLevel(cursor.getString(cursor.getColumnIndex(FARMER_EDUCATION)));
+                        realFarmer.setFirstVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_FIRST_VISIT_DATE)));
+                        realFarmer.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+
                         realFarmer.setLastVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_LAST_VISIT_DATE)));
                         realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
                         realFarmer.setImageUrl(cursor.getString(cursor.getColumnIndex(FARMER_IMAGE_URL)));
-
                         realFarmer.setHasRegistered(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
 
@@ -981,6 +896,132 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+
+    public List<RealFarmer> getAllFarmers() {
+
+        List<RealFarmer> realFarmers = null;
+        Cursor cursor = null;
+
+        try {
+
+            realFarmers = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + FARMER_TABLE;
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        RealFarmer realFarmer = new RealFarmer();
+
+                        realFarmer.setId(cursor.getString(cursor.getColumnIndex(FARMER_ID)));
+                        realFarmer.setFarmerName(cursor.getString(cursor.getColumnIndex(FARMER_NAME)));
+                        realFarmer.setCode(cursor.getString(cursor.getColumnIndex(FARMER_CODE)));
+                        realFarmer.setVillage(cursor.getString(cursor.getColumnIndex(FARMER_VILLAGE)));
+                        realFarmer.setGender(cursor.getString(cursor.getColumnIndex(FARMER_GENDER)));
+                        realFarmer.setBirthYear(cursor.getString(cursor.getColumnIndex(FARMER_BIRTHYEAR)));
+                        realFarmer.setEducationLevel(cursor.getString(cursor.getColumnIndex(FARMER_EDUCATION)));
+                        realFarmer.setFirstVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_FIRST_VISIT_DATE)));
+                        realFarmer.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+
+                        realFarmer.setAnswersJson(cursor.getString(cursor.getColumnIndex(ANSWERS_JSON)));
+                        realFarmer.setLastVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_LAST_VISIT_DATE)));
+                        realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
+                        realFarmer.setImageUrl(cursor.getString(cursor.getColumnIndex(FARMER_IMAGE_URL)));
+                        realFarmer.setHasRegistered(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
+                        realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
+
+                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
+
+                        realFarmers.add(realFarmer);
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return realFarmers;
+
+
+    }
+
+
+    public List<RealFarmer> getAllUnsyncedFarmers() {
+
+        List<RealFarmer> realFarmers = null;
+        Cursor cursor = null;
+
+        try {
+
+            realFarmers = new ArrayList<>();
+
+            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " + FARMER_SYNC_STATUS + " = '" + 0 + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+
+                        RealFarmer realFarmer = new RealFarmer();
+
+                        realFarmer.setId(cursor.getString(cursor.getColumnIndex(FARMER_ID)));
+                        realFarmer.setFarmerName(cursor.getString(cursor.getColumnIndex(FARMER_NAME)));
+                        realFarmer.setCode(cursor.getString(cursor.getColumnIndex(FARMER_CODE)));
+                        realFarmer.setVillage(cursor.getString(cursor.getColumnIndex(FARMER_VILLAGE)));
+                        realFarmer.setGender(cursor.getString(cursor.getColumnIndex(FARMER_GENDER)));
+                        realFarmer.setBirthYear(cursor.getString(cursor.getColumnIndex(FARMER_BIRTHYEAR)));
+                        realFarmer.setEducationLevel(cursor.getString(cursor.getColumnIndex(FARMER_EDUCATION)));
+                        realFarmer.setFirstVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_FIRST_VISIT_DATE)));
+                        realFarmer.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+
+                        realFarmer.setAnswersJson(cursor.getString(cursor.getColumnIndex(ANSWERS_JSON)));
+                        realFarmer.setLastVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_LAST_VISIT_DATE)));
+                        realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
+                        realFarmer.setImageUrl(cursor.getString(cursor.getColumnIndex(FARMER_IMAGE_URL)));
+                        realFarmer.setHasRegistered(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
+                        realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
+
+                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
+
+                        realFarmers.add(realFarmer);
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return realFarmers;
+
+
+    }
+
 
     public RealFarmer getFarmerBasicInfo(String code) {
 
@@ -1009,11 +1050,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setGender(cursor.getString(cursor.getColumnIndex(FARMER_GENDER)));
                         realFarmer.setBirthYear(cursor.getString(cursor.getColumnIndex(FARMER_BIRTHYEAR)));
                         realFarmer.setEducationLevel(cursor.getString(cursor.getColumnIndex(FARMER_EDUCATION)));
+                        realFarmer.setFirstVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_FIRST_VISIT_DATE)));
+                        realFarmer.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+
                         realFarmer.setLastVisitDate(cursor.getString(cursor.getColumnIndex(FARMER_LAST_VISIT_DATE)));
                         realFarmer.setLandArea(cursor.getString(cursor.getColumnIndex(FARMER_LAND_AREA)));
                         realFarmer.setImageUrl(cursor.getString(cursor.getColumnIndex(FARMER_IMAGE_URL)));
-
-                        realFarmer.setFarmerProfileJson(cursor.getString(cursor.getColumnIndex(FARMER_PROFILE_JSON)));
 
                         realFarmer.setHasRegistered(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
@@ -1050,690 +1092,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public String getFamilyMembersJson(String code) {
-        Cursor cursor = null;
-        String data = "{}";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(FAMILY_MEMBERS_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getAggregateEconomicResultsJson(String code) {
-        Cursor cursor = null;
-        String data = "";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(AGGREGATE_ECONOMIC_RESULTS_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-
-    public String getProductiveProfileJson(String code) {
-        Cursor cursor = null;
-        String data = "";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(PRODUCTIVE_PROFILE_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getFarmingEconomicProfileJson(String code) {
-        Cursor cursor = null;
-        String data = "{}";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(FARMING_ECONOMIC_PROFILE_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getSocioEconomicProfileJson(String code) {
-        Cursor cursor = null;
-        String data = "";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(SOCIO_ECONOMIC_PROFILE_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getOtherJson(String formName, String code) {
-        Cursor cursor = null;
-        String data = "";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        JSONObject jsonObject;
-
-                    String value = cursor.getString(cursor.getColumnIndex(OTHER_JSON));
-                    if(value != null) {
-                        jsonObject = new JSONObject(value);
-                        data = jsonObject.get(formName).toString();
-                    }
-                    else {
-                        jsonObject = new JSONObject();
-                        data = jsonObject.toString();
-
-                    }
-
-
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getFarmerProfileJson(String code) {
-        Cursor cursor = null;
-        String data = "";
-
-        try {
-            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + code + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(FARMER_PROFILE_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getFarmerPlotInfoJson(String code_plotId) {
-        Cursor cursor = null;
-        String data = "";
-
-        String values[] = code_plotId.split("_");
-
-        try {
-            String selectQuery = "SELECT  * FROM " + PLOTS_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + values[0] + "' AND " + PLOT_ID + " ='" + values[1] + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(PLOT_INFORMATION_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-
-    public String getFarmerPlotAdditionalInterventionJson(String code_plotId) {
-        Cursor cursor = null;
-        String data = "";
-
-        String values[] = code_plotId.split("_");
-
-        try {
-            String selectQuery = "SELECT  * FROM " + PLOTS_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + values[0] + "' AND " + PLOT_ID + " ='" + values[1] + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(ADDITIONAL_INTERVENTION_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-
-    public String getFarmerPlotAdoptionObservationJson(String code_plotId) {
-        Cursor cursor = null;
-        String data = "";
-
-        String values[] = code_plotId.split("_");
-
-        try {
-            String selectQuery = "SELECT  * FROM " + PLOTS_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + values[0] + "' AND " + PLOT_ID + " ='" + values[1] + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(ADOPTION_OBSERVATIONS_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-    public String getFarmerPlotAdoptionObservationResultsJson(String code_plotId) {
-        Cursor cursor = null;
-        String data = "";
-
-        String values[] = code_plotId.split("_");
-
-        try {
-            String selectQuery = "SELECT  * FROM " + PLOTS_TABLE + " WHERE " +
-                    FARMER_CODE + " ='" + values[0] + "' AND " + PLOT_ID + " ='" + values[1] + "'";
-
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-                        data = cursor.getString(cursor.getColumnIndex(ADOPTION_OBSERVATION_RESULTS_JSON));
-
-                        Log.i(TAG, "DATA VALUE IS " + data);
-
-                    } while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return data;
-
-    }
-
-
-    public boolean editFamilyMembersJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(FAMILY_MEMBERS_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editAggregateEconomicResultsJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(AGGREGATE_ECONOMIC_RESULTS_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editProductiveProfileJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(PRODUCTIVE_PROFILE_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editFarmingEconomicProfileJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMING_ECONOMIC_PROFILE_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editSocioEconomicProfileJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(SOCIO_ECONOMIC_PROFILE_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editOtherJson(String formName, String code, String json) {
-
-        try {
-            JSONObject jsonObject;
-
-            String jsonStringValue = getOtherJson(formName, code);
-            if(jsonStringValue != null) {
-
-                jsonObject = new JSONObject(jsonStringValue);
-
-            }else jsonObject = new JSONObject();
-
-
-            if(jsonObject.has(formName)) {
-                jsonObject.remove(formName);
-                jsonObject.put(formName, json);
-            }else{
-                jsonObject.put(formName, json);
-            }
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(OTHER_JSON, jsonObject.toString());
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editFarmerProfileJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(FARMER_PROFILE_JSON, json);
-
-            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editFarmerPlotInfo(String code_plotId, String json) {
-
-        String[] values = code_plotId.split("_");
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(PLOT_INFORMATION_JSON, json);
-
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-
-    public boolean editFarmerPlotAdoptionObservationJson(String code_plotId, String json) {
-
-        String[] values = code_plotId.split("_");
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(ADOPTION_OBSERVATIONS_JSON, json);
-
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-    public boolean editFarmerPlotAdoptionObservationResultsJson(String code_plotId, String json) {
-
-        String[] values = code_plotId.split("_");
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(ADOPTION_OBSERVATION_RESULTS_JSON, json);
-
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + " AND " + PLOT_ID + " = ?", new String[]{values[0], values[1]});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + values[0] + " AND ID " + values[1]);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-
-    public boolean editAdditionalInterventionJson(String code, String json) {
-
-        try {
-
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(ADDITIONAL_INTERVENTION_JSON, json);
-
-            db.update(PLOTS_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
-
-
-            Log.d(TAG, "DATA\t" + json + "ADDED\n FOR FARMER WITH CODE " + code);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-
-
-    }
-
-
     public boolean editFarmerBasicInfo(RealFarmer realFarmer) {
 
         try {
@@ -1750,7 +1108,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             contentValues.put(FARMER_EDUCATION, realFarmer.getEducationLevel());
             contentValues.put(FARMER_LAST_VISIT_DATE, realFarmer.getLastVisitDate());
+            contentValues.put(LAST_MODIFIED_DATE, realFarmer.getLastModifiedDate());
             contentValues.put(FARMER_LAND_AREA, realFarmer.getLandArea());
+            contentValues.put(FARMER_SYNC_STATUS, realFarmer.getSyncStatus());
+
 
             db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{realFarmer.getCode()});
 
@@ -1776,94 +1137,138 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Boolean editSpecificFarmerDetails(String formLabel, String farmerCode, String json) {
-
-        switch (formLabel.toLowerCase()) {
-
-            case Constants.ADDITIONAL_INTERVENTION:
-                return editAdditionalInterventionJson(farmerCode, json);
+    public Boolean editAllAnswersJson(String code, JSONObject newJson) {
 
 
-            case Constants.AGGREGATE_ECONOMIC_RESULTS:
-                return editAggregateEconomicResultsJson(farmerCode, json);
+        try {
+            JSONObject jsonObject;
 
-            case Constants.PLOT_INFORMATION:
-                return editFarmerPlotInfo(farmerCode, json);
+            String jsonStringValue = getAllAnswersJson(code);
+            if(jsonStringValue != null) {
 
-            case Constants.ADOPTION_OBSERVATIONS:
-                return editFarmerPlotAdoptionObservationJson(farmerCode, json);
+                jsonObject = new JSONObject(jsonStringValue);
 
-            case Constants.ADOPTION_OBSERVATION_RESULTS:
-                return editFarmerPlotAdoptionObservationResultsJson(farmerCode, json);
-
-            case Constants.FAMILY_MEMBERS:
-                return editFamilyMembersJson(farmerCode, json);
-
-            case Constants.FARMER_PROFILE:
-                return editFarmerProfileJson(farmerCode, json);
-
-            case Constants.FARMING_ECONOMIC_PROFILE:
-                return editFarmingEconomicProfileJson(farmerCode, json);
-
-            case Constants.PRODUCTIVE_PROFILE:
-                return editProductiveProfileJson(farmerCode, json);
-
-            case Constants.SOCIO_ECONOMIC_PROFILE:
-                return editSocioEconomicProfileJson(farmerCode, json);
+            }else jsonObject = new JSONObject();
 
 
-            default:
-                return editOtherJson(formLabel.toLowerCase(), farmerCode, json);
+            try {
+
+                Iterator i1 = newJson.keys();
+                while (i1.hasNext()) {
+                    String tmp_key = (String) i1.next();
+
+                    if(jsonObject.has(tmp_key)) {
+                        jsonObject.remove(tmp_key);
+                        jsonObject.put(tmp_key, newJson.getString(tmp_key));
+                    }else{
+                        jsonObject.put(tmp_key, newJson.getString(tmp_key));
+                    }
+
+                }
+                Log.d("P & L ACTIVITY", "ADDING TO MAIN JSON OBJECT");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.d("P & L ACTIVITY", "####### JSON ERROR" + e.getMessage());
+
+            }
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ANSWERS_JSON, jsonObject.toString());
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
+            Log.d(TAG, "DATA\t" + jsonObject.toString() + "ADDED\n FOR FARMER WITH CODE " + code);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
+
+        return true;
+
 
     }
 
 
-    public String getSpecificFarmerDetails(String formLabel, String farmerCode) {
+    public Boolean editAnswerToQuestion(String code, String id, String newValue){
 
+        try {
+            JSONObject jsonObject;
 
-        switch (formLabel.toLowerCase()) {
+            String jsonStringValue = getAllAnswersJson(code);
+            if(jsonStringValue != null) {
 
-            case Constants.ADDITIONAL_INTERVENTION:
-                return getFarmerPlotAdditionalInterventionJson(farmerCode);
+                jsonObject = new JSONObject(jsonStringValue);
 
-            case Constants.ADOPTION_OBSERVATION_RESULTS:
-                return getFarmerPlotAdoptionObservationResultsJson(farmerCode);
+            }else jsonObject = new JSONObject();
 
-            case Constants.AGGREGATE_ECONOMIC_RESULTS:
-                return getAggregateEconomicResultsJson(farmerCode);
+            try {
+                    if(jsonObject.has(id)) {
+                        jsonObject.remove(id);
+                        jsonObject.put(id, newValue);
+                    }else{
+                        jsonObject.put(id, newValue);
+                    }
+                Log.d("P & L ACTIVITY", "ADDING " + newValue + " TO MAIN JSON OBJECT");
 
-            case Constants.FAMILY_MEMBERS:
-                return getFamilyMembersJson(farmerCode);
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.d("P & L ACTIVITY", "####### JSON ERROR" + e.getMessage());
 
-            case Constants.PLOT_INFORMATION:
-                return getFarmerPlotInfoJson(farmerCode);
+            }
 
-            case Constants.ADOPTION_OBSERVATIONS:
-                return getFarmerPlotAdoptionObservationJson(farmerCode);
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ANSWERS_JSON, jsonObject.toString());
+            db.update(FARMER_TABLE, contentValues, FARMER_CODE + "= ?", new String[]{code});
+            Log.d(TAG, "DATA\t" + jsonObject.toString() + "ADDED\n FOR FARMER WITH CODE " + code);
 
-            case Constants.FARMER_PROFILE:
-                return getFarmerProfileJson(farmerCode);
-
-            case Constants.FARMING_ECONOMIC_PROFILE:
-                return getFarmingEconomicProfileJson(farmerCode);
-
-            case Constants.PRODUCTIVE_PROFILE:
-                return getProductiveProfileJson(farmerCode);
-
-
-
-            case Constants.SOCIO_ECONOMIC_PROFILE:
-                return getSocioEconomicProfileJson(farmerCode);
-
-
-            default:
-                return getOtherJson(formLabel, farmerCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
 
+        return true;
     }
 
 
+
+    public String getAllAnswersJson(String code) {
+
+        Cursor cursor = null;
+        String data = "";
+
+        try {
+            String selectQuery = "SELECT  * FROM " + FARMER_TABLE + " WHERE " +
+                    FARMER_CODE + " ='" + code + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+                        data = cursor.getString(cursor.getColumnIndex(ANSWERS_JSON));
+
+                        Log.i(TAG, "DATA VALUE IS " + data);
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return data;
+
+
+    }
 
     public boolean editFarmerPlotInfoAndAO(RealPlot plot) {
 
@@ -1895,8 +1300,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
     public boolean editFarmerPlotRecommendationId(String farmerCode, String plotId, String gapsRecId_plotRecId) {
+
+        //Todo plot recommedndation
+
+        Question plotRecommendation = getQuestionByTranslation("Plot recommendation");
+
+        editPlotAORJson(plotId, plotRecommendation.getId(), gapsRecId_plotRecId.split(",")[1]);
+
 
         try {
 
@@ -1920,7 +1331,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
 
     Boolean parseBoolean(String value) {
         if (value.equalsIgnoreCase("true"))
@@ -1963,6 +1373,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     ContentValues contentValues = new ContentValues();
                     contentValues.put(FORM_TYPE, form.getType());
+                    contentValues.put(LAST_MODIFIED_DATE, form.getLastModifiedDate());
                     contentValues.put(FORM_NAME, form.getName().toLowerCase());
 
 
@@ -2015,11 +1426,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteFormsTable() {
+     public boolean deleteFormsTable() {
 
         try {
-
-
             db.execSQL("DELETE FROM " + FORMS_TABLE);
 
             Log.i("DATABASE", "FORMS TABLE DELETED");
@@ -2054,7 +1463,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Form form = new Form();
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
-
+                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         Log.i(TAG, "Form found with value " + form.getName());
 
                         forms.add(form);
@@ -2076,7 +1485,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
 
     public List<Form> getAllMonitoringForms() {
 
@@ -2100,6 +1508,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Form form = new Form();
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         Log.i(TAG, "Form found with value " + form.getName());
 
@@ -2146,6 +1555,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Form form = new Form();
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         Log.i(TAG, "Form found with value " + form.getName());
 
@@ -2169,8 +1579,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-
     boolean doesFormLabelExist(String formLabel) {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -2187,6 +1595,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (!doesVillageExist(village.getId())) {
 
                 ContentValues contentValues = new ContentValues();
+                contentValues.put(LAST_MODIFIED_DATE, village.getLastModifiedDate());
                 contentValues.put(ID, village.getId());
                 contentValues.put(VILLAGE_NAME, village.getName());
                 contentValues.put(VILLAGE_DISTRICT, village.getDistrict());
@@ -2217,7 +1626,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteVillagesTable() {
+   /* public boolean deleteVillagesTable() {
 
         try {
 
@@ -2232,7 +1641,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public List<Village> getAllVillages() {
 
@@ -2253,13 +1662,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
 
                     do {
-
-
                         Village village = new Village();
+                        village.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         village.setId(cursor.getString(cursor.getColumnIndex(VILLAGE_ID)));
                         village.setName(cursor.getString(cursor.getColumnIndex(VILLAGE_NAME)));
                         village.setDistrict(cursor.getString(cursor.getColumnIndex(VILLAGE_DISTRICT)));
-
 
                         Log.i(TAG, "Village found with value " + village);
 
@@ -2438,6 +1845,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
+    public boolean hasUnsyncedFarmerData(int status) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        return DatabaseUtils.queryNumEntries(db, FARMER_TABLE, FARMER_SYNC_STATUS + " = ? ",
+                new String[]{String.valueOf(status)}) > 0;
+
+    }
+
+
     public boolean addNewPlot(RealPlot realPlot) {
         try {
 
@@ -2472,6 +1889,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean editPlotStartYear(String plotId, int newStartYearValue) {
         try {
 
+
+            //Todo plot_intervention_year
+
+            Question interventionStartYear = getQuestionByTranslation("Intervention start year");
+            editPlotAORJson(plotId, interventionStartYear.getId(), String.valueOf(newStartYearValue));
+
+
             ContentValues contentValues = new ContentValues();
             contentValues.put(START_YEAR, newStartYearValue);
 
@@ -2487,6 +1911,72 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return true;
 
     }
+
+
+
+
+     Boolean editPlotAORJson(String plotId, String questionId, String newValue){
+            Log.i(TAG, "PLOT INFO JSON");
+
+        String jsonStringValue = null;
+
+        Cursor cursor = null;
+        try{
+
+            String selectQuery = "SELECT  " + ADOPTION_OBSERVATIONS_JSON + " FROM " + PLOTS_TABLE + " WHERE " + PLOT_ID + " ='" + plotId + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+                if (cursor.moveToFirst())
+
+                    jsonStringValue = cursor.getString(cursor.getColumnIndex(ADOPTION_OBSERVATIONS_JSON));
+
+            }
+        }catch(Exception e){
+
+            e.printStackTrace();
+
+        }finally {
+            if(cursor != null)
+                cursor.close();
+        }
+
+
+        try {
+            JSONObject jsonObject ;
+            if(jsonStringValue != null) {
+
+                Log.d(TAG, "OLD AOR VALUE IS " + jsonStringValue);
+
+
+                jsonObject = new JSONObject(jsonStringValue);
+
+                    if (jsonObject.has(questionId)) {
+                        jsonObject.remove(questionId);
+                        jsonObject.put(questionId, newValue);
+                    } else {
+                        jsonObject.put(questionId, newValue);
+                    }
+                    Log.d(TAG, "ADDING " + newValue + " TO OLD AOR JSON OBJECT");
+
+
+                ContentValues contentValues = new ContentValues();
+
+                contentValues.put(PLOT_INFORMATION_JSON, jsonObject.toString());
+                db.update(PLOTS_TABLE, contentValues, ID + "= ?", new String[]{plotId});
+                Log.d(TAG, "DATA\t" + jsonObject.toString() + "ADDED\n FOR PLOT WITH ID " + plotId);
+
+            }else return false;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return false;
+            }
+
+        return true;
+    }
+
 
 
     public boolean deletePlot(String id) {
@@ -2619,6 +2109,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(SKIP_LOGIC_QUESTION_AFFECTED_ID, skipLogic.getQuestionShowHide());
             contentValues.put(SKIP_LOGIC_OPERATOR, skipLogic.getLogicalOperator());
             contentValues.put(SKIP_LOGIC_ACTION_TAKEN, skipLogic.getActionToBeTaken());
+            contentValues.put(LAST_MODIFIED_DATE, skipLogic.getLastModifiedDate());
 
 
             db.insert(SKIP_LOGIC_TABLE, null, contentValues);
@@ -2641,7 +2132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteSkipLogicsTable() {
+ /*   public boolean deleteSkipLogicsTable() {
 
         try {
 
@@ -2656,7 +2147,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public List<SkipLogic> doesQuestionHaveSkipLogics(String questionId) {
 
@@ -2687,6 +2178,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         skipLogic.setQuestionShowHide(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_QUESTION_AFFECTED_ID)));
                         skipLogic.setLogicalOperator(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_OPERATOR)));
                         skipLogic.setActionToBeTaken(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ACTION_TAKEN)));
+                        skipLogic.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
 
                         Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
@@ -2710,7 +2202,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
 
 
     public SkipLogic  doesQuestionHaveSkipLogic(String questionId) {
@@ -2740,6 +2231,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         skipLogic.setQuestionShowHide(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_QUESTION_AFFECTED_ID)));
                         skipLogic.setLogicalOperator(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_OPERATOR)));
                         skipLogic.setActionToBeTaken(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ACTION_TAKEN)));
+                        skipLogic.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
 
                         Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
@@ -2780,6 +2272,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(CALCULATIONS_OP3, calculation.getOperator3());
             contentValues.put(HIERARCHY, calculation.getHierarchy());
             contentValues.put(CALCULATIONS_RESULT_QUESTION, calculation.getResultQuestion());
+            contentValues.put(LAST_MODIFIED_DATE, calculation.getLastModifiedDate());
 
 
             db.insert(CALCULATIONS_TABLE, null, contentValues);
@@ -2803,7 +2296,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteCalculationsTable() {
+   /* public boolean deleteCalculationsTable() {
 
         try {
 
@@ -2818,7 +2311,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public Calculation getCalculation(String id) {
 
@@ -2853,6 +2346,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setOperator3(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP3)));
                         calculation.setHierarchy(cursor.getInt(cursor.getColumnIndex(HIERARCHY)));
                         calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
+                        calculation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
 
                         Log.i(TAG, "CALCULATION WITH ID " + id + " \nDATA IS \n\n");
@@ -2918,7 +2412,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setOperator2(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP2)));
                         calculation.setOperator3(cursor.getString(cursor.getColumnIndex(CALCULATIONS_OP3)));
                         calculation.setHierarchy(cursor.getInt(cursor.getColumnIndex(HIERARCHY)));
-
+                        calculation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
 
 
@@ -3001,6 +2495,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, recommendation.getLastModifiedDate());
+
             contentValues.put(ID, recommendation.getId());
             contentValues.put(RECOMMENDATIONS_NAME, recommendation.getName());
             contentValues.put(RECOMMENDATIONS_CONDITION, recommendation.getCondition());
@@ -3062,7 +2558,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete(RECOMMENDATIONS_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
-
+/*
     public boolean deleteRecommendationsTable() {
 
         try {
@@ -3078,7 +2574,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public Recommendation getRecommendation(String id) {
 
@@ -3101,6 +2597,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         recommendation = new Recommendation();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_NAME)));
@@ -3177,6 +2674,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         Recommendation recommendation = new Recommendation();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_NAME)));
@@ -3263,6 +2761,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         recommendation = new Recommendation();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_NAME)));
@@ -3359,6 +2858,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, recommendation.getLastModifiedDate());
+
             contentValues.put(ID, recommendation.getId());
             contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME, recommendation.getName());
             contentValues.put(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID, recommendation.getActivityId());
@@ -3404,7 +2905,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteRecommendationPlusAcivityTable() {
+ /*   public boolean deleteRecommendationPlusAcivityTable() {
 
         try {
 
@@ -3420,7 +2921,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public RecommendationsPlusActivity getRecommendationPlusAcivity(String id) {
 
@@ -3443,6 +2944,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         recommendation = new RecommendationsPlusActivity();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setActivityId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID)));
@@ -3508,7 +3010,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         recommendation = new RecommendationsPlusActivity();
 
-
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
 
@@ -3578,6 +3080,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         RecommendationsPlusActivity recommendation = new RecommendationsPlusActivity();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
@@ -3641,6 +3144,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
                         RecommendationsPlusActivity recommendation = new RecommendationsPlusActivity();
 
+                        recommendation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         recommendation.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         recommendation.setName(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_NAME)));
@@ -3786,6 +3290,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, logic.getLastModifiedDate());
+
             contentValues.put(ID, logic.getId());
             contentValues.put(LOGIC_NAME, logic.getName());
             contentValues.put(LOGIC_PARENT_LOGIC, logic.getParentLogic());
@@ -3858,7 +3364,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteLogicsTable() {
+    /*public boolean deleteLogicsTable() {
 
         try {
 
@@ -3873,7 +3379,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
     public Logic getLogic(String id) {
 
@@ -3895,6 +3401,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     do {
 
+                        logic.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
                         logic.setId(cursor.getString(cursor.getColumnIndex(ID)));
                         logic.setName(cursor.getString(cursor.getColumnIndex(LOGIC_NAME)));
@@ -4192,6 +3699,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, activitiesPlusInputs.getLastModifiedDate());
+
             contentValues.put(ID, activitiesPlusInputs.getId());
             contentValues.put(ACTIVITIY_PLUS_INPUTS_NAME, activitiesPlusInputs.getName());
             contentValues.put(ACTIVITIY_PLUS_INPUTS_INPUT_TYPE, activitiesPlusInputs.getInputType());
@@ -4226,7 +3735,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteActivityPlusInputTable() {
+   /* public boolean deleteActivityPlusInputTable() {
 
         try {
 
@@ -4241,7 +3750,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
 
     public ActivitiesPlusInputs getActivityPlusInput(String id) {
@@ -4354,6 +3863,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, activitiesPlusInputs.getLastModifiedDate());
+
             contentValues.put(ID, activitiesPlusInputs.getId());
             contentValues.put(INPUTS_NAME, activitiesPlusInputs.getName());
             contentValues.put(INPUTS_COST, activitiesPlusInputs.getCost());
@@ -4380,7 +3891,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteInputTable() {
+    /*public boolean deleteInputTable() {
 
         try {
 
@@ -4395,7 +3906,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
 
     public Input getInput(String id) {
@@ -4689,6 +4200,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
 
             ContentValues contentValues = new ContentValues();
+            contentValues.put(LAST_MODIFIED_DATE, complexCalculation.getLastModifiedDate());
+
             contentValues.put(ID, complexCalculation.getId());
             contentValues.put(COMPLEX_CALCULATION_NAME, complexCalculation.getName());
             contentValues.put(COMPLEX_CALCULATION_QUESTION_ID, complexCalculation.getQuestionId());
@@ -4722,7 +4235,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean deleteComplexCalculationTable() {
+  /*  public boolean deleteComplexCalculationTable() {
 
         try {
             prefs.edit().putString("monitoringToUse", null).apply();
@@ -4738,7 +4251,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             return false;
         }
-    }
+    }*/
 
 
     public List<ComplexCalculation> getAllComplexCalculation() {
@@ -4832,6 +4345,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return complexCalculation;
 
 
+    }
+
+
+
+
+
+
+    public Boolean isUpdated(String id, String lastUpdated, String TABLE_NAME){
+
+        Boolean value = false;
+        Cursor cursor = null;
+        try{
+
+            String selectQuery = "SELECT " + LAST_MODIFIED_DATE + " FROM " + TABLE_NAME + " WHERE " + ID + " ='" + id + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+                if (cursor.moveToFirst())
+
+                        value = !lastUpdated.equalsIgnoreCase(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+
+            }else
+                value = null;
+        }catch(Exception e){
+
+            value = false;
+            e.printStackTrace();
+
+        }finally {
+            if(cursor != null)
+                cursor.close();
+        }
+
+        Log.i("DATABASE" , "LAST UPDATED? " + value);
+
+        return value;
     }
 
 

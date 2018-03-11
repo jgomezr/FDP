@@ -1,22 +1,12 @@
 package org.grameen.fdp.activity;
 
-import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,17 +23,11 @@ import org.grameen.fdp.fragment.MyFormFragment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
+import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 
 /**
  * Created by aangjnr on 09/11/2017.
@@ -261,12 +245,12 @@ public class FDPStatusActivity extends BaseActivity {
     void saveOrUpdateData(boolean shouldLoadNextActivity) {
 
         save.setEnabled(false);
-        String newJsonValue = formFragment.getAllAnswersInJSON();
+        JSONObject newJsonValue = formFragment.getAllAnswersInJSONObject();
 
         Log.d(TAG, "JSON VALUE IS + \n" + newJsonValue + "\n");
 
 
-                if (databaseHelper.editSpecificFarmerDetails(formType, farmer.getCode(), newJsonValue)) {
+                if (databaseHelper.editAllAnswersJson(farmer.getCode(), newJsonValue)) {
 
                     newDataSaved = true;
 

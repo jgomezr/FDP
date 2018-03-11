@@ -13,6 +13,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -30,9 +31,13 @@ import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.fragment.MyFormFragment;
+import org.grameen.fdp.object.Form;
+import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DateUtil;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -49,7 +54,7 @@ import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
  * Created by aangjnr on 09/11/2017.
  */
 
-public class Add_EditFarmerDetailsActivity extends BaseActivity {
+public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
     public static int CAMERA_INTENT = 90;
     public static int PERMISSION_CAMERA = 11;
@@ -74,12 +79,13 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
     boolean newFarmer = false;
     Button cancel;
     Button save;
-    String formType = "";
+    String formLabel = "";
+    String type = Constants.FORM_DIAGNOSTIC;
     MyFormFragment formFragment;
     String[] educationLevels = {"Primary", "Secondary", "Tertiary", "Professional Course", "Other"};
     String[] genders = {"Male", "Female"};
     private boolean newDataSaved = false;
-
+    FragmentManager fm;
     public static void createNoMediaFile() {
         FileOutputStream out = null;
 
@@ -244,6 +250,52 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
         setContentView(R.layout.activity_edit_farmer_details);
 
 
+
+
+        fm = getSupportFragmentManager();
+
+
+        TextView farmer_name_text = findViewById(R.id.farmer_name_text);
+        Question temp = databaseHelper.getQuestionByTranslation("Farmer Name");
+        if(temp != null)
+            farmer_name_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+
+        TextView farmer_code_text = findViewById(R.id.farmer_code_text);
+        temp = databaseHelper.getQuestionByTranslation("Farmer Code");
+        if(temp != null)
+            farmer_code_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+
+
+        TextView village_text = findViewById(R.id.village_text);
+        temp = databaseHelper.getQuestionByTranslation("Village");
+        if(temp != null)
+            village_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+
+        TextView educational_level_text = findViewById(R.id.education_level_text);
+        temp = databaseHelper.getQuestionByTranslation("Education Level");
+        if(temp != null)
+            educational_level_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+
+        TextView birthyear_text = findViewById(R.id.birth_year_text);
+        temp = databaseHelper.getQuestionByTranslation("Birthday Year");
+        if(temp != null)
+            birthyear_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+        TextView gender_text = findViewById(R.id.gender_text);
+        temp = databaseHelper.getQuestionByTranslation("Gender");
+        if(temp != null)
+            gender_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+
+
+
+
+
+
+
         cancel = (Button) findViewById(R.id.back);
         save = (Button) findViewById(R.id.save);
 
@@ -362,15 +414,23 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
         circleImageView = (CircleImageView) findViewById(R.id.photo);
 
         farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
-        formType = intent.getStringExtra("formType");
+        formLabel = intent.getStringExtra("formLabel");
+        type = intent.getStringExtra("type");
+
 
 
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
-        if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
+        if (IS_MONITIRING_MODE) {
+
+
 
             //Todo hide views, load farmer details with tag
             Toolbar toolbar = setToolbar("View Farmer Details");
-            //save.setVisibility(View.GONE);
+
+            if(type.equalsIgnoreCase(Constants.FORM_DIAGNOSTIC))
+            save.setVisibility(View.GONE);
+
+
             cancel.setText("BACK");
             farmerName.setEnabled(false);
             farmerCode.setEnabled(false);
@@ -382,10 +442,12 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
 
             setUpViews();
 
-            formFragment = MyFormFragment.newInstance(formType, true, farmer.getCode(), true);
+            formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getCode(), true);
 
 
         } else {
+
+
 
             //Todo load farmer details with tag
 
@@ -396,7 +458,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
                 newFarmer = false;
 
                 setUpViews();
-                formFragment = MyFormFragment.newInstance(formType, true, farmer.getCode(), false);
+                formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getCode(), false);
 
 
             } else {
@@ -406,8 +468,8 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
 
                 //Todo load ui views with tag default socioeconomic
                 Toolbar toolbar = setToolbar(getResources(R.string.add_farmer_details));
-                formType = Constants.FARMER_PROFILE;
-                formFragment = MyFormFragment.newInstance(formType, false, null, false);
+                formLabel = Constants.FARMER_PROFILE;
+                formFragment = MyFormFragment.newInstance(formLabel, false, null, false);
 
 
                 farmerCode.setText(getRandomNumber() + "");
@@ -417,7 +479,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
         }
 
 
-        loadDynamicView(formType);
+        loadDynamicView(formLabel);
         onBackClicked();
     }
 
@@ -491,16 +553,37 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
 
     }
 
-    void loadDynamicView(final String formType) {
+    void loadDynamicView(String formName) {
 
         //Todo add parameter to load data from the database, if is in editing mode else display default forms with their resp values
 
 
-        FragmentManager fm = getSupportFragmentManager();
 
-        fm.beginTransaction()
-                .add(R.id.dynamicLayout, formFragment, formFragment.getClass().getSimpleName())
-                .commit();
+
+        try {
+           // if (fm.getFragments().contains(formFragment)) {
+
+                fm.beginTransaction()
+                        .replace(R.id.dynamicLayout, formFragment, formName)
+                        .addToBackStack(null)
+                        .commit();
+                //Log.i(TAG, "^^^^^^^^^   FRAGMENT FOUND! RECYCLING....  ^^^^^^^^^^^^^^^");
+
+//            }else{
+//
+//
+//                fm.beginTransaction()
+//                        .add(R.id.dynamicLayout, formFragment, formFragment.getClass().getSimpleName())
+//                        .commit();
+//
+//                Log.i(TAG, "^^^^^^^^^  NEW FRAGMENT ....  ^^^^^^^^^^^^^^^");
+//
+//            }
+
+        }catch(Exception e){e.printStackTrace();}
+
+
+
 
 
         save.setOnClickListener(new View.OnClickListener() {
@@ -520,13 +603,15 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
     void saveOrUpdateData(boolean shouldLoadNextActivity) {
 
         save.setEnabled(false);
-        String newJsonValue = formFragment.getAllAnswersInJSON();
+        JSONObject newJsonValue = formFragment.getAllAnswersInJSONObject();
 
         Log.d(TAG, "JSON VALUE IS + \n" + newJsonValue + "\n");
 
         prefs.edit().putBoolean("shouldRestartMainActivity", true).apply();
 
         if (newFarmer) {
+
+            String date = DateUtil.getFormattedDateMMDDYYYYhhmmaa();
             //Todo add new farmer, save details finish this activity and go back to farmer details activity
 
             RealFarmer _farmer = new RealFarmer();
@@ -538,24 +623,30 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
             _farmer.setBirthYear(birthYearEdittext.getText().toString());
             _farmer.setGender(gender);
             _farmer.setImageUrl(IMAGE_URL);
-            _farmer.setSocioEconomicProfileJson(newJsonValue);
+            _farmer.setFirstVisitDate(date);
+            _farmer.setLastVisitDate(date);
+            _farmer.setLastModifiedDate(date);
+            _farmer.setSyncStatus(0);
 
             if (databaseHelper.addNewFarmer(_farmer)) {
 
-                databaseHelper.editSpecificFarmerDetails(Constants.FARMER_PROFILE, _farmer.getCode(), newJsonValue);
+                databaseHelper.editAllAnswersJson(_farmer.getCode(), newJsonValue);
 
                 newDataSaved = true;
 
                 if (shouldLoadNextActivity) {
                     CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.new_farmer_added), Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
+                    /*Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
                     intent.putExtra("farmer", new Gson().toJson(_farmer));
                     intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
 
+                    finish();*/
 
-                    finish();
+
+                    loadNextForm();
+
 
 
                 }
@@ -574,35 +665,41 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
             farmer.setBirthYear(birthYearEdittext.getText().toString());
             farmer.setGender(gender);
             farmer.setImageUrl(IMAGE_URL);
+            farmer.setFirstVisitDate(null);
+            farmer.setLastVisitDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
+            farmer.setLastModifiedDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
+            farmer.setSyncStatus(0);
+
 
 
             if (databaseHelper.editFarmerBasicInfo(farmer)) {
-                //String value = databaseHelper.getSpecificFarmerDetails(formType, farmer.getCode());
+                //String value = databaseHelper.getAllAnswersJson(formType, farmer.getCode());
 
                 //if (value == null) value = "empty";
 
 
-                if (databaseHelper.editSpecificFarmerDetails(formType, farmer.getCode(), newJsonValue)) {
+                if (databaseHelper.editAllAnswersJson(farmer.getCode(), newJsonValue)) {
 
                     newDataSaved = true;
 
                     if (shouldLoadNextActivity) {
                         CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.farmer_updated), Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
+                       /* Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
                         intent.putExtra("farmer", new Gson().toJson(farmer));
                         intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        finish();
+                        finish();*/
 
+                       loadNextForm();
                     }
 
                 } else
-                    CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.could_not_save) + formType + getResources(R.string.try_again_suffix), Toast.LENGTH_SHORT).show();
+                    CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.could_not_save) + formLabel + getResources(R.string.try_again_suffix), Toast.LENGTH_SHORT).show();
 
 
             } else
-                CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.could_not_save) + formType + getResources(R.string.try_again_suffix), Toast.LENGTH_SHORT).show();
+                CustomToast.makeToast(Add_EditFarmerDetailsActivity.this, getResources(R.string.could_not_save) + formLabel + getResources(R.string.try_again_suffix), Toast.LENGTH_SHORT).show();
 
 
         }
@@ -800,5 +897,73 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity {
                 "temp" + ".jpg");
     }
 
+
+
+    void loadNextForm(){
+
+        if(SELECTED_FORM_INDEX < FORMS.size()) {
+            for (int i = 0; i < FORMS.size(); i++) {
+
+                if (FORMS.get(i).getName().equalsIgnoreCase(formLabel)) {
+                    SELECTED_FORM_INDEX += 1;
+                    break;
+                }
+            }
+
+
+            if (SELECTED_FORM_INDEX == FORMS.size()) {
+
+                SELECTED_FORM_INDEX = 0;
+
+                Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
+                intent.putExtra("farmer", new Gson().toJson(farmer));
+                intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+
+            } else {
+
+
+                if (FORMS.get(SELECTED_FORM_INDEX).getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS))
+                    SELECTED_FORM_INDEX += 1;
+
+                if (SELECTED_FORM_INDEX == FORMS.size()) {
+
+                    SELECTED_FORM_INDEX = 0;
+
+                    Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
+                    intent.putExtra("farmer", new Gson().toJson(farmer));
+                    intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+
+
+                }else {
+
+                    Log.i(TAG, "^^^^^^^^^^    SELECTED INDEX " + SELECTED_FORM_INDEX);
+
+
+                    Form form = FORMS.get(SELECTED_FORM_INDEX);
+
+
+                    Log.i(TAG, "^^^^^^^^^^    FORM NAME IS  " + form.getName());
+
+                    Intent intent = new Intent(this, Add_EditFarmerDetailsActivity.class);
+                    intent.putExtra("farmer", new Gson().toJson(farmer));
+                    intent.putExtra("flag", "edit");
+                    intent.putExtra("type", form.getType());
+                    intent.putExtra("formLabel", form.getName());
+
+                    intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    overridePendingTransition(0, 0);
+                    finish();
+
+                }
+
+            }
+        }
+    }
 
 }

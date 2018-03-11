@@ -1,6 +1,7 @@
 package org.grameen.fdp.activity;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -39,9 +41,12 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.fragment.FarmerListFragment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.Village;
+import org.grameen.fdp.task.SendFarmersToServer;
+import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DatabaseHelper;
+import org.grameen.fdp.utility.DateUtil;
 import org.grameen.fdp.utility.Utils;
 
 import java.util.ArrayList;
@@ -52,7 +57,7 @@ import java.util.List;
  */
 
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener, Callbacks.NetworkActivityCompleteListener {
 
 
     Switch toggleTranslation;
@@ -217,6 +222,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
         });
 
+
+        onBackPressed();
+
     }
 
 
@@ -277,11 +285,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        final int id = item.getItemId();
 
         drawer.closeDrawer(GravityCompat.START);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-        switch (item.getItemId()) {
+        switch (id) {
 
 
             case R.id.sync:
@@ -299,7 +310,24 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             case R.id.logout:
 
-                logOut(this);
+                logOut(MainActivity.this);
+
+                break;
+
+            case R.id.sync_farmer:
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        progressDialog = showProgress(MainActivity.this, "Syncing farmers data", "Please wait", false);
+
+                    }
+                });
+
+                SendFarmersToServer.onNetworkActivityComplete(MainActivity.this);
+
+                syncFarmerData(MainActivity.this);
 
                 break;
 
@@ -325,6 +353,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
 
         }
+
+            }
+        }, 700);
 
 
         return true;
@@ -511,6 +542,48 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 e.printStackTrace();
             }
         }
+
+
+    }
+
+    @Override
+    public void taskComplete(String response) {
+
+        try {
+            progressDialog.dismiss();
+            SendFarmersToServer.removeOnNetworkActivityComplete();
+
+        }catch(NullPointerException e){e.printStackTrace();}
+
+
+        if(response.contains(Constants.RESPONSE_SUCCESS)){
+
+
+            showAlertDialog(true, getResources(R.string.sync_complete), getResources(R.string.all_data_synced), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            }, getResources(R.string.ok), null, "", 0);
+
+            databaseHelper.setAllFarmersAsSynced();
+            prefs.edit().putString("lastSync", DateUtil.getFormattedDateMMDDYYYYhhmmaa()).apply();
+
+        }else if(response.contains(Constants.RESOPNSE_ERROR)) {
+
+            showAlertDialog(true, getResources(R.string.generic_error), getResources(R.string.connection_error), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            }, getResources(R.string.ok), null, "", 0);
+
+        }else{
+
+            CustomToast.makeToast(this, "Could not send farmers data to server. Please try again!", Toast.LENGTH_LONG).show();
+
+        }
+
 
 
     }

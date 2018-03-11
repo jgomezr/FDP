@@ -16,7 +16,6 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.FineTableViewAdapter;
 import org.grameen.fdp.object.Cell;
 import org.grameen.fdp.object.ColumnHeader;
-import org.grameen.fdp.object.Input;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RowHeader;
@@ -34,9 +33,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-
 
 /**
  * Created by aangjnr on 08/02/2018.
@@ -50,7 +46,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     private List<RowHeader> mRowHeaderList;
     private List<ColumnHeader> mColumnHeaderList;
     private List<List<Cell>> mCellList;
-
+    JSONObject ALL_ANSWERS_JSON_OBJECT;
     private List<List<Question>> mQuestionsList;
 
 
@@ -155,9 +151,14 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
             name.setText(farmer.getFarmerName());
             code.setText(farmer.getCode());
 
-            String familyMembersArray = databaseHelper.getSpecificFarmerDetails(Constants.FAMILY_MEMBERS, farmer.getCode());
+
+            String familyMembersArray = "[]";
 
 
+            try{
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
+                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString("familyMembers");
+            }catch(Exception e){ e.printStackTrace();}
 
             Log.i("FM ACTIVITY", "FAMILY MEMBERS OLD ARRAY IS " +  familyMembersArray );
 
@@ -168,8 +169,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                 else
                     oldValuesArray = new JSONArray();
-
-
 
             }catch(JSONException e){
                 e.printStackTrace();
@@ -246,7 +245,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                     Question q = databaseHelper.getQuestionByTranslation("Total Family Income");
 
-                    String socioJson = databaseHelper.getSpecificFarmerDetails(Constants.SOCIO_ECONOMIC_PROFILE, farmer.getCode());
+                    String socioJson = databaseHelper.getAllAnswersJson(farmer.getCode());
 
                     JSONObject socioJsonObject = new JSONObject();
                     try {
@@ -277,17 +276,27 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                     }
 
-                    databaseHelper.editSpecificFarmerDetails(Constants.SOCIO_ECONOMIC_PROFILE, farmer.getCode(), socioJsonObject.toString());
+                    databaseHelper.editAllAnswersJson(farmer.getCode(), socioJsonObject);
 
 
 
                     Log.i(TAG, "JSON ARRAY STRING IS " + jsonArray.toString());
 
-                    if (databaseHelper.editFamilyMembersJson(farmer.getCode(), jsonArray.toString())) {
+                    JSONObject newJson = new JSONObject();
+                    try {
+                        newJson.put("familyMembers", jsonArray.toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (databaseHelper.editAllAnswersJson(farmer.getCode(),newJson)) {
                         CustomToast.makeToast(FamilyMembersActivity_v2.this, "Data has been saved", Toast.LENGTH_SHORT).show();
                         finish();
                     } else
                         CustomToast.makeToast(FamilyMembersActivity_v2.this, "Uh oh! Data was not saved", Toast.LENGTH_SHORT).show();
+
+
+
 
                 }
             }
@@ -502,7 +511,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         Log.i(TAG, "GETTING OLD VALUE FOE INDEX " + index);
 
-        String value;
+        String value = null;
 
         try {
              JSONObject object = oldValuesArray.getJSONObject(index);

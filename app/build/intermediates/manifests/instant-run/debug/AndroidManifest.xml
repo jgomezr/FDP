@@ -102,6 +102,11 @@
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustNothing" />
         <activity android:name="org.grameen.fdp.activity.FDPStatusActivity" />
+        <activity
+            android:name="org.grameen.fdp.activity.ImageViewActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustNothing" />
 
         <provider
             android:name="br.com.mauker.materialsearchview.db.HistoryProvider"

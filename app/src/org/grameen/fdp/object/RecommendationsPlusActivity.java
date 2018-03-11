@@ -8,6 +8,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class RecommendationsPlusActivity {
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
 
     @SerializedName("Id")
     String id;
@@ -42,6 +44,14 @@ public class RecommendationsPlusActivity {
 
 
     public RecommendationsPlusActivity() {
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     public String getId() {

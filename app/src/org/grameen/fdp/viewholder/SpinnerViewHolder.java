@@ -107,6 +107,8 @@ public class SpinnerViewHolder extends AbstractViewHolder {
 
 
         Log.i("FMT ADAPTER", "TYPE SELECTABLE" );
+        Log.i("SPINNER", "DEFAULT VALUE IS " + defaultValue);
+
 
         if(!q.getOptions__c().contains("-select-"))
             q.setOptions__c(q.getOptions__c() + ", -select-");
@@ -114,7 +116,7 @@ public class SpinnerViewHolder extends AbstractViewHolder {
             final List<String> items = q.formatQuestionOptions();
 
 
-            //spinner.setPrompt(defaultValue);
+        //spinner.setPrompt(defaultValue);
         spinner.setPrompt("-select-");
         spinner.setTag(q.getId());
 
@@ -127,23 +129,13 @@ public class SpinnerViewHolder extends AbstractViewHolder {
                         TextView itemView = ((TextView) view.findViewById(android.R.id.text1));
                         itemView.setText("");
                         itemView.setHint(getItem(getCount()));
-
-
-                        for (int i = 0; i < items.size(); i++) {
-
-                            if (items.get(i).equals(defaultValue)) {
-                                spinner.setSelection(i);
-
-                                break;
-                            }
-                        }
                     }
                     return view;
                 }
 
                 @Override
                 public int getCount() {
-                    return super.getCount() - 1; // don't display last item (it's used for the prompt)
+                    return super.getCount(); // don't display last item (it's used for the prompt)
                 }
             };
             spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -153,14 +145,30 @@ public class SpinnerViewHolder extends AbstractViewHolder {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
-                    //if (itemSelectedListener != null)
-                    //   itemSelectedListener.onItemSelected(view, position, id, item);
-
                     Log.i("SPINNER VH", "SPINNER ITEM SELECTED " + items.get(pos));
-                      q.setDefault_value__c(items.get(pos));
+                    Log.i("SPINNER VH", "POSITION " + pos);
 
-                      if(updateJsonArrayListener != null)
-                          updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), items.get(pos));
+
+                    if (pos == 0) {
+
+
+                        if(defaultValue != null){
+                            q.setDefault_value__c(items.get(pos));
+                            if (updateJsonArrayListener != null)
+                                updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), items.get(pos));
+                        }
+
+                    } else {
+                        // if something is selected, set the value on the model
+                        q.setDefault_value__c(items.get(pos));
+                        if (updateJsonArrayListener != null)
+                            updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), items.get(pos));
+
+                    }
+
+
+
+
 
                 }
 
@@ -171,22 +179,14 @@ public class SpinnerViewHolder extends AbstractViewHolder {
                 }
             });
 
-            spinner.setSelection(items.size() - 1);
-        for (int i = 0; i < items.size(); i++) {
+           // spinner.setSelection(items.size() - 1);
 
-            if (items.get(i).equals(defaultValue)) {
-                 refresh(spinner, items.get(i), items);
-
-                break;
-            }
-        }
+        refresh(spinner, defaultValue, items);
 
 
 
 
-
-
-            textView.setText(q.getHelp_Text__c());
+        textView.setText(q.getHelp_Text__c());
 
 /*
             imageView.setOnClickListener(new View.OnClickListener() {
@@ -232,12 +232,12 @@ public class SpinnerViewHolder extends AbstractViewHolder {
 
     private void refresh(Spinner spinner, @Nullable String defValue, List<String>items ) {
 
-        Log.i("FMTV", "REFRESH");
-        int selectionIndex = items.size() -1;    // index of last item shows the 'prompt'
+        Log.i("FMTV", "REFRESH " + defValue);
+        int selectionIndex = 0;    // index of last item shows the 'prompt'
 
 
 
-        if(defValue != null && !defValue.equals("--") && !defValue.equals("Select"))
+        if(defValue != null && !defValue.equals("--") && !defValue.equals("-select-")) {
             for (int i = 0; i < items.size(); i++) {
                 if (items.get(i).equals(defValue)) {
                     selectionIndex = i;
@@ -246,7 +246,8 @@ public class SpinnerViewHolder extends AbstractViewHolder {
 
             }
 
-        spinner.setSelection(selectionIndex);
+            spinner.setSelection(selectionIndex);
+        }
     }
 
 

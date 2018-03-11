@@ -1,10 +1,16 @@
 package org.grameen.fdp.object;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by aangjnr on 13/12/2017.
  */
 
 public class RealFarmer {
+
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
 
     String farmerName;
     String code;
@@ -12,27 +18,43 @@ public class RealFarmer {
     String village;
     String gender;
     String birthYear;
-
     String educationLevel;
     String imageUrl;
+    String firstVisitDate;
+
     String lastVisitDate;
     String landArea;
 
+    String answersJson;
 
-    String farmerProfileJson;
-    String familyMembersJson;
 
-    String aggregateEconomicResultsJson;
-    String productiveProfileJson;
-    String farmingEconomicProfileJson;
-    String socioEconomicProfileJson;
-    String otherJson;
-
-    String plotsInfoJson;
-
-    int syncStatus;
+    Integer syncStatus;
     String hasRegistered;
 
+
+    public void setFirstVisitDate(String firstVisitDate) {
+        this.firstVisitDate = firstVisitDate;
+    }
+
+    public String getFirstVisitDate() {
+        return firstVisitDate;
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setAnswersJson(String answersJson) {
+        this.answersJson = answersJson;
+    }
+
+    public String getAnswersJson() {
+        return answersJson;
+    }
 
     public String getLandArea() {
 
@@ -67,15 +89,9 @@ public class RealFarmer {
         this.educationLevel = education;
     }
 
-    public String getFamilyMembersJson() {
-        return familyMembersJson;
-    }
 
-    public void setFamilyMembersJson(String familyMembersJson) {
-        this.familyMembersJson = familyMembersJson;
-    }
 
-    public int getSyncStatus() {
+    public Integer getSyncStatus() {
         return syncStatus;
     }
 
@@ -91,13 +107,6 @@ public class RealFarmer {
         this.hasRegistered = hasRegistered;
     }
 
-    public String getOtherJson() {
-        return otherJson;
-    }
-
-    public void setOtherJson(String otherJson) {
-        this.otherJson = otherJson;
-    }
 
     public String getId() {
         return id;
@@ -107,13 +116,7 @@ public class RealFarmer {
         this.id = id;
     }
 
-    public String getAggregateEconomicResultsJson() {
-        return aggregateEconomicResultsJson;
-    }
 
-    public void setAggregateEconomicResultsJson(String aggregateEconomicResultsJson) {
-        this.aggregateEconomicResultsJson = aggregateEconomicResultsJson;
-    }
 
     public String getBirthYear() {
         return birthYear;
@@ -139,21 +142,7 @@ public class RealFarmer {
         this.farmerName = farmerName;
     }
 
-    public String getFarmerProfileJson() {
-        return farmerProfileJson;
-    }
 
-    public void setFarmerProfileJson(String farmerProfile) {
-        this.farmerProfileJson = farmerProfile;
-    }
-
-    public String getFarmingEconomicProfileJson() {
-        return farmingEconomicProfileJson;
-    }
-
-    public void setFarmingEconomicProfileJson(String farmingEconomicProfileJson) {
-        this.farmingEconomicProfileJson = farmingEconomicProfileJson;
-    }
 
     public String getGender() {
         return gender;
@@ -163,21 +152,8 @@ public class RealFarmer {
         this.gender = gender;
     }
 
-    public String getProductiveProfileJson() {
-        return productiveProfileJson;
-    }
 
-    public void setProductiveProfileJson(String productiveProfileJson) {
-        this.productiveProfileJson = productiveProfileJson;
-    }
 
-    public String getSocioEconomicProfileJson() {
-        return socioEconomicProfileJson;
-    }
-
-    public void setSocioEconomicProfileJson(String socioEconomicProfileJson) {
-        this.socioEconomicProfileJson = socioEconomicProfileJson;
-    }
 
     public String getVillage() {
         return village;
@@ -187,11 +163,5 @@ public class RealFarmer {
         this.village = village;
     }
 
-    public String getPlotsInfoJson() {
-        return plotsInfoJson;
-    }
 
-    public void setPlotsInfoJson(String plotsInfoJson) {
-        this.plotsInfoJson = plotsInfoJson;
-    }
-}
+ }

@@ -15,6 +15,9 @@ import org.grameen.fdp.activity.MainActivity;
 public class FdpApplication extends MultiDexApplication {
 
 
+    public static final String END_POINT = "https://fdp-developer-edition.na73.force.com/syncData?data=";
+
+
     @Override
     public void onCreate() {
         super.onCreate();

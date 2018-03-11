@@ -821,7 +821,7 @@ public class PandLActivitybak extends BaseActivity {
             Log.d("\n\nP & L ACTIVITY", "GETTING DATA FOR FORM:" + form.getName());
 
 
-            String jsonString = databaseHelper.getSpecificFarmerDetails(form.getName(), farmer.getCode());
+            String jsonString = databaseHelper.getAllAnswersJson( farmer.getCode());
 
             Log.d("P & L ACTIVITY", "FOUND STRING " + jsonString);
 
@@ -837,6 +837,8 @@ public class PandLActivitybak extends BaseActivity {
                         String tmp_key = (String) i1.next();
                         VALUES_JSON_OBJECT.put(tmp_key, dispersableJsonObject.get(tmp_key));
                     }
+
+
                     Log.d("P & L ACTIVITY", "ADDING TO MAIN JSON OBJECT");
 
                 } catch (JSONException e) {

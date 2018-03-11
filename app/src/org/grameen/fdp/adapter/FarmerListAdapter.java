@@ -7,6 +7,7 @@ package org.grameen.fdp.adapter;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -111,6 +112,19 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         viewHolder.code.setText(farmer.getCode());
 
 
+
+        if(farmer.getSyncStatus() != null){
+            if(farmer.getSyncStatus() == 1) {
+                viewHolder.syncStatus.setImageResource(R.drawable.ic_check_circle_black_18dp);
+                viewHolder.syncStatus.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent));
+            }else if(farmer.getSyncStatus() == 0) {
+                viewHolder.syncStatus.setImageResource(R.drawable.ic_sync_problem_black_18dp);
+                viewHolder.syncStatus.setColorFilter(ContextCompat.getColor(context, R.color.cpb_red));
+            }
+
+        }
+
+
     }
 
     @Override
@@ -150,6 +164,9 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         ImageView photo;
         ImageView imageView;
 
+        ImageView syncStatus;
+
+
 
         RelativeLayout initialsBackground;
 
@@ -166,6 +183,7 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
             photo = itemView.findViewById(R.id.photo);
             imageView = itemView.findViewById(R.id.image_view1);
 
+            syncStatus = itemView.findViewById(R.id.sync_status);
             initialsBackground = (RelativeLayout) itemView.findViewById(R.id.rl1);
 
 

@@ -4,12 +4,16 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/nav_header_main.xml"
     },
     {
-        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/monitoring_form_section.xml",
-        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/monitoring_form_section.xml"
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/activity_image_fullscreen.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/activity_image_fullscreen.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/amu_text_bubble.xml",
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/res/layout/amu_text_bubble.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/monitoring_form_section.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/monitoring_form_section.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
@@ -244,6 +248,10 @@
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/layout/abc_action_menu_layout.xml"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/point_item_view.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/point_item_view.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/farmer_item_view.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/farmer_item_view.xml"
     },
@@ -356,16 +364,16 @@
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/res/layout/design_text_input_password_icon.xml"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/table_view_edittext.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/table_view_edittext.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/layout/abc_search_view.xml"
-    },
-    {
-        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/table_view_edittext.xml",
-        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/layout/table_view_edittext.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/layout/monitoring_form_labeled_element.xml",

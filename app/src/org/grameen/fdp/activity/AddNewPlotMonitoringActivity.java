@@ -594,9 +594,6 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
         return view;
     }
-
-
-
     View getReasonForFailureView(final Question q){
 
         View view;
@@ -794,6 +791,10 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
             monitoring.setJson(ALL_MONITORING_VALUES_JSON.toString());
 
             if(databaseHelper.addPlotMonitoring(monitoring, selectedYear)){
+
+                Question monitoringYearQuestion = databaseHelper.getQuestionByTranslation("Monitoring year");
+
+                databaseHelper.editAnswerToQuestion(plot.getFarmerCode(), monitoringYearQuestion.getId(), selectedYear);
                 value = true;
 
                 CustomToast.makeToast(this, getResources(R.string.data_saved), Toast.LENGTH_SHORT).show();
@@ -1023,6 +1024,10 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
         }
     }
+
+
+    /*
+
 
     Boolean getLogicValue(Logic logic) {
 
@@ -1752,6 +1757,10 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
     }
 
+    */
+
+
+
     Boolean compareAndEvaluateCascadedLogics(Logic logic) {
 
         StringBuilder equation = new StringBuilder();
@@ -1762,7 +1771,7 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
         //level 1
         Log.i(TAG, " ------  LEVEL 1  ------- ");
-        Boolean value1 = getLogicValue(logic);
+        Boolean value1 = getLogicValue(logic, ALL_MONITORING_VALUES_JSON);
         Log.i(TAG, "\n");
         Log.i(TAG, " Value  " + value1);
         Log.i(TAG, "\n");
@@ -1774,7 +1783,7 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
 
         Logic logic2 = databaseHelper.getLogic(logic.getParentLogic());
-        Boolean value2 = getLogicValue(logic2);
+        Boolean value2 = getLogicValue(logic2, ALL_MONITORING_VALUES_JSON);
         Log.i(TAG, "\n");
         Log.i(TAG, " Value  " + value2);
         Log.i(TAG, "\n");
@@ -1785,7 +1794,7 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
         Log.i(TAG, "\n");
 
         Logic logic3 = databaseHelper.getLogic(logic2.getParentLogic());
-        Boolean value3 = getLogicValue(logic3);
+        Boolean value3 = getLogicValue(logic3, ALL_MONITORING_VALUES_JSON);
 
         Log.i(TAG, "\n");
 
@@ -1799,7 +1808,7 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
 
         Logic logic4 = databaseHelper.getLogic(logic3.getParentLogic());
-        Boolean value4 = getLogicValue(logic4);
+        Boolean value4 = getLogicValue(logic4, ALL_MONITORING_VALUES_JSON);
         Log.i(TAG, "\n");
 
         Log.i(TAG, " Value  " + value4);
@@ -1812,7 +1821,7 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
 
 
         Logic logic5 = databaseHelper.getLogic(logic4.getParentLogic());
-        Boolean value5 = getLogicValue(logic5);
+        Boolean value5 = getLogicValue(logic5, ALL_MONITORING_VALUES_JSON);
         Log.i(TAG, "\n");
 
         Log.i(TAG, " Value  " + value5);

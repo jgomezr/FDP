@@ -1129,19 +1129,36 @@
     <string name="action_placeholder">Your App Name</string>
     <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
+    <string name="activities">Activities</string>
+    <string name="add_3_more_points">To calculate area, please add 3 or more points.</string>
+    <string name="add_farmer_details">Add Farmer Details</string>
+    <string name="add_new_plot">Add a new plot.</string>
+    <string name="add_plot">Please add a plot to access P &amp; L.</string>
+    <string name="add_plot_monitoring">Add new plot monitoring</string>
+    <string name="all_data_downloaded">All data downloaded successfully!</string>
+    <string name="all_data_synced">All data synced successfully!</string>
+    <string name="and"> and </string>
     <string name="androidPushNotificationClientId"/>
     <string name="api_version">v39.0</string>
     <string name="app_name">FDP</string>
     <string name="app_package">org.grameen.fdp</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="apr">Apr</string>
+    <string name="aug">Aug</string>
+    <string name="back">Back</string>
     <string name="back_vector_path" translatable="false">M50 25,L80 50,M20 50,L80 50,M50 75,L80 50</string>
+    <string name="before_proceed_suffux"> before proceeding.</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="calc_area">click to calculate plot area</string>
+    <string name="camera_permission_rationale">Please provide camera permission to be able to take pictures</string>
+    <string name="cancel">Cancel</string>
     <string name="cd_clear_button">Clear field</string>
     <string name="cd_suggestion_icon">List item icon</string>
     <string name="cd_up_button">Up navigation button</string>
     <string name="cd_voice_search">Voice search</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="clear_button">Clear</string>
+    <string name="click_photo_to_delete">You can click on photo to remove/delete</string>
     <string name="close">Close</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
@@ -1160,40 +1177,118 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="connection_error">"An error has occurred. Please try again :("</string>
+    <string name="could_not_add_plot">Could not add plot info. Please try again</string>
+    <string name="could_not_connect">Could not connect</string>
+    <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
+    <string name="could_not_save">Could not save farmer</string>
+    <string name="data_not_saved">Could not save data!</string>
+    <string name="data_saved">Data saved</string>
+    <string name="dec">Dev</string>
     <string name="default_cell">Data [%1$d:%2$d]</string>
     <string name="default_header">Header %1$d</string>
     <string name="default_web_client_id" translatable="false">611301447040-8jl2l7c8pds988cqscp5dcfq6idg4cei.apps.googleusercontent.com</string>
+    <string name="delete">Delete photo</string>
+    <string name="delete_photo_rationale">Are you sure you want to delete photo?</string>
+    <string name="different_no_monitoring">Different number of monitoring for plots</string>
     <string name="dob">Select Date of Birth</string>
     <string name="dont_have_account_text">Don\'t have an account?</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="edit_farmer_details">Edit Farmer Details</string>
+    <string name="edit_plot">Edit plot details</string>
+    <string name="edit_plot_monitoring">Edit plot monitoring</string>
     <string name="email">Email</string>
+    <string name="ensure_farm_acre_equal">Please ensure that total farm acreage is equal to total acreage of all plots!</string>
+    <string name="enter_all_ao_data">Please enter all Adoption Observation and Plot Info values for </string>
+    <string name="enter_data_rationale">"Please enter number of family members in Farmer Profile form for "</string>
+    <string name="enter_valid_plot_name">Please enter a valid plot name</string>
+    <string name="error_getting_farmer_info">There was an error attempting to retrieve farmer info</string>
+    <string name="error_invalid_units">Invalid units provided for plot production sizes!</string>
+    <string name="error_missing_estimated_production">Total Farm Production or Plot production was not provided!</string>
+    <string name="error_total_plot_estimated_production">Total Plots estimated production is more than total farm production!</string>
+    <string name="family_members">Family Members</string>
+    <string name="farm_result">Farm Result</string>
+    <string name="farmer">Farmer </string>
+    <string name="farmer_details">Farmer Details</string>
+    <string name="farmer_updated">Farmer data updated successfully!</string>
+    <string name="fdp_status">FDP status</string>
+    <string name="feb">Feb</string>
     <string name="fetch_accounts_button">Fetch Accounts</string>
     <string name="fetch_contacts_button">Fetch Contacts</string>
+    <string name="fill_data">Enter data</string>
+    <string name="fill_in_plot_size_values">Please fill in values for farm size and all plot sizes!</string>
+    <string name="first_sign_in_rationale">Looks like this is your first sign in.
+        "Since you have internet connection it's recommended you sync data from the server.</string>
+    <string name="for_"> for </string>
+    <string name="full_name_error">Please enter full name</string>
     <string name="games">Arcade</string>
     <string name="gcm_defaultSenderId" translatable="false">611301447040</string>
+    <string name="generic_error">Error</string>
+    <string name="getting_c">Syncing all Calculations data</string>
+    <string name="getting_cc">Syncing all Complex calculations data</string>
+    <string name="getting_data">Getting data</string>
+    <string name="getting_even_more">Getting even more data</string>
+    <string name="getting_final_data">Getting the last bit of other data</string>
+    <string name="getting_logic">Obtaining Logic data</string>
+    <string name="getting_more">Getting more data</string>
+    <string name="getting_recommendations">Obtaining Recommendations data</string>
+    <string name="getting_skip_logic">Obtaining Skip Logic data</string>
     <string name="google_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
     <string name="google_app_id" translatable="false">1:611301447040:android:1dd3f698231e392c</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAyMAONPNB7wlxaEwLVfbsFtRMSHN29K3k</string>
     <string name="google_sign_in">Google Sign in</string>
     <string name="have_account_text">Have an account?</string>
+    <string name="hey_there">Hey there!</string>
     <string name="hint_prompt">Speak an item name or a number</string>
     <string name="home">Home</string>
+    <string name="image_options">Please select an option</string>
+    <string name="incomplete_ao_monitoring">Incomplete AO monitoring</string>
+    <string name="incomplete_ao_rational">Please complete Diagnostic Adoption Observation for Plot </string>
+    <string name="incomplete_monitoring_prefix">Some plots have incomplete AO Monitoring results for Year</string>
+    <string name="incomplete_monitoring_suffix">.
+        Please make sure all plot monitoring are complete for the specified year</string>
+    <string name="incorrect_no_plots_suffix">\'s plots are not equal.\\nPlease make sure all plots have the same number of monitoring!</string>
     <string name="invalid_phone_number">Please enter a valid phone number</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="jan">Jan</string>
+    <string name="jul">Jul</string>
+    <string name="jun">Jun</string>
+    <string name="labour">Labour Cost</string>
     <string name="loading">Loading…</string>
     <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings > Apps > \'Google Maps API Demos\'.</string>
     <string name="log_in_facebook">Log in with facebook</string>
     <string name="login">Log In</string>
     <string name="logout_button">Logout</string>
+    <string name="mar">Mar</string>
+    <string name="may">May</string>
     <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
+    <string name="missing_data">Missing data</string>
+    <string name="monitoring_for_year">Monitoring for Year</string>
     <string name="name">Name</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="new_data_updated">New data updated</string>
+    <string name="new_farmer_added">New Farmer added!</string>
+    <string name="new_farmer_not_added">Could not add farmer info. Please try again.</string>
+    <string name="new_plot_added">New plot added</string>
     <string name="next">Next</string>
-    <string name="oauthRedirectURI">fdpapp://auth/success</string>
+    <string name="no">No</string>
+    <string name="no_access_to_pl">No access to P &amp; L</string>
+    <string name="no_farmers">No new farmer data to sync</string>
+    <string name="no_image_taken">No photo was selected.</string>
+    <string name="no_monitoring_added"> has no monitoring added for Year </string>
+    <string name="no_new_data">No new data</string>
+    <string name="no_plots">No Plots Added!</string>
+    <string name="no_plots_added_suffix">has no plots added! Please add at least 1 plot before proceeding</string>
+    <string name="no_points">No Points added yet</string>
+    <string name="nov">Nov</string>
+    <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
     <string name="oauth_display_type">touch</string>
+    <string name="oct">Oct</string>
+    <string name="ok">Ok</string>
     <string name="open">Open</string>
-    <string name="pandl"><![CDATA[P & L]]></string>
+    <string name="pandl" translatable="false"><![CDATA[P & L]]></string>
     <string name="password">Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -1201,14 +1296,28 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="permission_required">Permission required</string>
     <string name="permission_required_toast">Location permission is required for this demo.</string>
     <string name="phone">Phone number</string>
     <string name="phone_hint">Phone Number</string>
-    <string name="remoteAccessConsumerKey">3MVG99S6MzYiT5k9Zi_aoc.dquUrIsBVCWFFY0QYxg_Zj7uhJ3SnhwnH4lh3MYFkaQwGeS_DfuRWe5cI3Flf7</string>
+    <string name="please_add_monitoring_suffix">!\\nPlease add at least 1 monitoring for each plot before proceeding.</string>
+    <string name="please_wait">Please wait a moment…</string>
+    <string name="plot_info">Plot Info</string>
+    <string name="provide_all_permissions">Provide Permissions</string>
+    <string name="provide_all_permissions_rationale">All permissions are needed for FDP to work properly</string>
+    <string name="provide_plot_name">Please provide the plot name</string>
+    <string name="quit">Quit</string>
+    <string name="remoteAccessConsumerKey" translatable="false">3MVG99S6MzYiT5k9Zi_aoc.dquUrIsBVCWFFY0QYxg_Zj7uhJ3SnhwnH4lh3MYFkaQwGeS_DfuRWe5cI3Flf7</string>
     <string name="required_field_error_msg">%s is a required field</string>
+    <string name="save">Save</string>
+    <string name="save_and_continue">Save and continue</string>
+    <string name="save_data">Save data</string>
+    <string name="save_data_explanation">Do you want to save your current data before exit?</string>
     <string name="search_hint">Search…</string>
     <string name="search_menu_title">Search</string>
+    <string name="select_country_region">Please Select a Country/Region</string>
     <string name="select_picture">Select a profile picture</string>
+    <string name="sep">Sep</string>
     <string name="settings">Settings</string>
     <string name="sf__access_token_revoked">Your access token has been revoked by the administrator. You will now be logged out.</string>
     <string name="sf__add_new_account">Add New Account</string>
@@ -1291,18 +1400,30 @@
     <string name="sign_up">Sign Up</string>
     <string name="sign_up_with_email">Sign Up with Email</string>
     <string name="sign_up_with_google">Sign up with google</string>
+    <string name="something_went_wrong">Something went wrong :( </string>
     <string name="sortable_indicator_content_description">Sortable Indicator</string>
     <string name="start_by_swiping_left">Start by swiping left.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="submit">Submit</string>
+    <string name="supplies">Supplies Cost</string>
+    <string name="sync">Sync</string>
+    <string name="sync_anyway">Sync anyway</string>
+    <string name="sync_complete">Sync Complete</string>
+    <string name="take_picture">Take picture</string>
     <string name="title">Close</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_area_calc">area calculation</string>
+    <string name="try_again_suffix">. Please try again</string>
+    <string name="update_questions_data">Updating questions data</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="valid_phone_number">Valid phone numbers!</string>
     <string name="validation_error_title">Invalid Input</string>
+    <string name="view">View</string>
     <string name="welcome">Welcome %s</string>
+    <string name="year">Year</string>
+    <string name="yes">Yes</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -2889,7 +3010,8 @@
 
     </style>
     <style name="PrimaryButtonAccent" parent="Theme.AppCompat">
-        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
         <item name="backgroundTint">@color/colorAccent</item>
         <item name="android:textColor">@color/white</item>
@@ -2911,7 +3033,8 @@
 
     </style>
     <style name="PrimaryButtonGrey" parent="Theme.AppCompat">
-        <item name="colorButtonNormal">@color/divider_2</item>
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorAccent">@color/divider_2</item>
         <item name="colorControlHighlight">@color/divider_2</item>
         <item name="backgroundTint">@color/divider_2</item>
         <item name="android:textColor">@color/text_black_87</item>
@@ -2921,7 +3044,9 @@
 
     </style>
     <style name="PrimaryButtonRed" parent="Theme.AppCompat">
-        <item name="colorButtonNormal">@color/cpb_red</item>
+        <item name="colorButtonNormal">@color/divider</item>
+        <item name="colorAccent">@color/cpb_red</item>
+
         <item name="colorControlHighlight">@color/cpb_red</item>
         <item name="backgroundTint">@color/cpb_red</item>
         <item name="android:textColor">@color/white</item>
@@ -3312,6 +3437,13 @@
         <item name="android:textColorPrimary">@color/text_black_87</item>
         <item name="android:backgroundDimEnabled">true</item>
 
+    </style>
+    <style name="Theme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>

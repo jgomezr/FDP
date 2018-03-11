@@ -51,6 +51,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
 
         <!-- Launcher screen -->
@@ -101,6 +102,11 @@
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustNothing" />
         <activity android:name="org.grameen.fdp.activity.FDPStatusActivity" />
+        <activity
+            android:name="org.grameen.fdp.activity.ImageViewActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustNothing" />
 
         <provider
             android:name="br.com.mauker.materialsearchview.db.HistoryProvider"

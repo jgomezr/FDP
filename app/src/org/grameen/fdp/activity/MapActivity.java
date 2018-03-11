@@ -5,6 +5,7 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,13 +14,17 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -49,11 +54,13 @@ import com.google.gson.Gson;
 import com.google.maps.android.SphericalUtil;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.adapter.PointsListAdapter;
 import org.grameen.fdp.object.Plot;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.PermissionsUtils;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,25 +70,23 @@ import io.codetail.animation.ViewAnimationUtils;
  * Created by aangjnr on 09/11/2017.
  */
 
-public class MapActivity extends BaseActivity implements
-        OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, LocationListener, GoogleMap.OnMarkerDragListener {
+public class MapActivity extends BaseActivity {
 
     public static Float DEFAULT_ZOOM = 17.0f;
     ProgressDialog progressDialog;
     String TAG = getClass().getSimpleName();
     Button addPoint;
     Button calculateArea;
-    List<Marker> markers = new ArrayList<>();
     List<LatLng> latLngs = new ArrayList<>();
     Plot plot;
-    LocationManager manager;
+    RecyclerView recyclerView;
+    boolean GpsStatus = false;
+    LocationManager locationManager;
     boolean hasCalculated = false;
-    private GoogleMap mMap;
-    private GoogleApiClient mGoogleApiClient;
-    private LocationRequest mLocationRequest;
-    private Location mLastLocation;
-    private CameraPosition mCameraPosition;
-    private boolean mPermissionDenied = false;
+    PointsListAdapter mAdapter;
+    Double AREA_OF_PLOT;
+    android.location.LocationListener locationListener;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -89,13 +94,18 @@ public class MapActivity extends BaseActivity implements
         setContentView(R.layout.activity_map);
 
 
-        manager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Please wait");
+        progressDialog.setIndeterminate(true);
+
+        recyclerView = findViewById(R.id.recycler_view);
+
 
         plot = new Gson().fromJson(getIntent().getStringExtra("plot"), Plot.class);
 
         Toolbar toolbar;
         if (plot != null) {
-            toolbar = setToolbar(plot.getName() + " Area Mapping");
+            toolbar = setToolbar(plot.getName() +" " + getResources(R.string.title_area_calc));
 
         } else {
             toolbar = setToolbar("Plot Area Mapping");
@@ -104,22 +114,73 @@ public class MapActivity extends BaseActivity implements
         }
 
 
+        mAdapter = new PointsListAdapter(this, latLngs);
+        mAdapter.setHasStableIds(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnItemClickListener(new PointsListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
+                mAdapter.removePoint(position);
+                //latLngs.remove(position);
+
+                if(latLngs.size() > 2)
+                    calculateArea.setEnabled(true);
+                    else
+                        calculateArea.setEnabled(false);
+
+
+                if(latLngs.size() > 0) {
+                    if(findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
+                        findViewById(R.id.placeHolder).setVisibility(View.GONE);
+
+
+
+                }else{
+
+                    if(findViewById(R.id.placeHolder).getVisibility() == View.GONE)
+                        findViewById(R.id.placeHolder).setVisibility(View.VISIBLE);
+
+                }
+
+            }
+        });
+
+
         calculateArea = (Button) findViewById(R.id.calculate);
         calculateArea.setEnabled(false);
 
         calculateArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calculateArea.setEnabled(false);
 
+                if (latLngs != null && latLngs.size() > 2) {
 
                 if (!hasCalculated) {
+                    computeAreaInSquareMeters();
 
-                    drawPolygon();
+                }else{
+                        showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + " in square meters is " + AREA_OF_PLOT, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
-                } else {
-                    clearMap(null);
+                                dialogInterface.dismiss();
+
+                                plot.setArea(AREA_OF_PLOT.toString());
+
+                            }
+                        }, getResources(R.string.ok),null, "", 0);
+
+                        hasCalculated = true;
+
                 }
+
+                } else
+                    CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG);
+
+
 
 
             }
@@ -130,517 +191,97 @@ public class MapActivity extends BaseActivity implements
             @Override
             public void onClick(View v) {
 
-
-                addMarker();
-
+                progressDialog.show();
+                addPoint.setEnabled(false);
+                getCurrentLocation();
 
             }
         });
 
 
-        addPoint.setEnabled(false);
-
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Please wait");
-
-        progressDialog.setIndeterminate(true);
-
-        // Toolbar toolbar = setToolbar("Add a new plot");
 
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+
 
 
         onBackClicked();
 
 
-    }
-
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-
-
-        Log.d(TAG, "Map is ready");
-
-        mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-
-
-        findViewById(R.id.mainLayout).post(new Runnable() {
+        locationListener = new android.location.LocationListener() {
             @Override
-            public void run() {
-                startRevealAnimation(findViewById(R.id.mainLayout));
-
-            }
-        });
-
-
-        mMap.getUiSettings().setRotateGesturesEnabled(false);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
-        mMap.getUiSettings().setMapToolbarEnabled(false);
-
-
-        progressDialog.show();
-
-        requestLocation();
-
-
-        mMap.setOnMarkerDragListener(this);
-
-
-    }
-
-
-    @Override
-    public void onConnected(@Nullable Bundle bundle) {
-
-        Log.d(TAG, "OnConnected");
-
-        mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(10000);
-        mLocationRequest.setFastestInterval(5000);
-        if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
-
-            // Retrieve the user’s last known location//
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient,
-                    mLocationRequest, this);
-
-
-            addPoint.setEnabled(false);
-
-
-        }
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-        Log.d(TAG, "On connection suspended");
-
-
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-
-
-        Log.d(TAG, "On location changed");
-
-
-        if (progressDialog.isShowing())
-            progressDialog.hide();
-
-        if (!addPoint.isEnabled())
-            addPoint.setEnabled(true);
-
-
-        //Get new details from server, populate location of tow truck and tow location
-
-        mLastLocation = location;
-
-        addOverlay(mMap, new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
-
-        mCameraPosition = moveCameraToPosition(mMap, new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()), DEFAULT_ZOOM);
-
-
-        if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        }
-
-
-        if (mMap.isMyLocationEnabled()) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                return;
-            }
-            mMap.setMyLocationEnabled(true);
-
-        }
-
-
-    }
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           @Nullable String permissions[], @Nullable int[] grantResults) {
-
-
-        switch (requestCode) {
-            case Constants.PERMISSION_FINE_LOCATION: {
-                Log.d(TAG, "Permission Loc");
-
-
-                // If the request is cancelled, the result array will be empty (0)//
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.d(TAG, "Permission granted");
-
-
-                    // If the user has granted your permission request, then your app can now perform all its
-                    // location-related tasks, including displaying the user’s location on the map//
-                    if (PermissionsUtils.isPermissionGranted(permissions, grantResults,
-                            android.Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-                        if (mGoogleApiClient == null) {
-                            Log.d(TAG, "Google client is null, Building client");
-
-                            if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-
-                                if (progressDialog != null)
-                                    progressDialog.dismiss();
-
-                                showAlertDialog(false, "GPS is disabled", "Would you like to enable it?", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-
-                                        startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 600);
-
-
-                                    }
-                                }, "OK", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-
-                                    }
-                                }, "CANCEL", 0);
-
-
-                            } else {
-
-
-                                Log.d(TAG, "Permission Granted, no need for checking");
-                                mGoogleApiClient = buildGoogleApiClient(this);
-
-                                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                                    return;
-                                }
-
-                                mMap.setMyLocationEnabled(true);
-
-                            }
-
-                            if (mMap != null) {
-
-                                if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
-                                        != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
-                                        android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-                                    return;
-                                }
-                                mMap.setMyLocationEnabled(true);
-
-                            }
-                        }
-
-                    } else {
-                        // Display the missing permission error dialog when the fragments resume.
-                        mPermissionDenied = true;
-                    }
-                }
-            }
-        }
-    }
-
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        }
-
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        if (mPermissionDenied) {
-            // Permission was not granted, display error dialog.
-            showAlertDialog(true, "Location permission", "Please grant location permission for the map to work properly", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
+            public void onLocationChanged(Location location) {
+
+                Log.i(TAG, "^^^^^^^^^^ LOCATION CHANGED ^^^^^^^^^^^^");
+
+                LatLng newLL = new LatLng(location.getLatitude(), location.getLongitude());
+                mAdapter.addPoint(newLL);
+                addPoint.setEnabled(true);
+                progressDialog.dismiss();
+                hasCalculated = false;
+
+                if(latLngs.size() > 0) {
+                    if(findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
+                    findViewById(R.id.placeHolder).setVisibility(View.GONE);
 
                 }
-            }, "OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
+
+                if(latLngs.size() > 2) {
+                    calculateArea.setEnabled(true);
 
                 }
-            }, "CANCEL", 0);
-            mPermissionDenied = false;
-        } else {
+                else {
+                    calculateArea.setEnabled(false);
 
-            if (mGoogleApiClient != null)
-                mGoogleApiClient.connect();
-
-            else if (mMap != null) {
-                mGoogleApiClient = buildGoogleApiClient(this);
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    return;
                 }
-                mMap.setMyLocationEnabled(true);
-            }
 
-
-        }
-    }
-
-
-    void startRevealAnimation(View myView) {
-
-
-        // get the center for the clipping circle
-        int cx = (myView.getLeft() + myView.getRight()) / 2;
-        int cy = (myView.getTop() + myView.getBottom()) / 2;
-
-        // get the final radius for the clipping circle
-        int dx = Math.max(cx, myView.getWidth() - cx);
-        int dy = Math.max(cy, myView.getHeight() - cy);
-        float finalRadius = (float) Math.hypot(dx, dy);
-
-        // Android native animator
-        Animator animator =
-                ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
-        animator.setInterpolator(new AccelerateDecelerateInterpolator());
-        animator.setDuration(1500);
-        animator.start();
-    }
-
-    void requestLocation() {
-        if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            Log.d(TAG, "Permission not granted");
-
-
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION}, Constants.PERMISSION_FINE_LOCATION);
-
-
-        } else {
-
-
-            if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-
-                if (progressDialog != null)
-                    progressDialog.dismiss();
-
-                showAlertDialog(false, "GPS is disabled", "Would you like to enable it?", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-
-                        startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS), 600);
-
-
-                    }
-                }, "OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-
-                    }
-                }, "CANCEL", 0);
-
-
-            } else {
-
-
-                Log.d(TAG, "Permission Granted, no need for checking");
-                mGoogleApiClient = buildGoogleApiClient(this);
-                mMap.setMyLocationEnabled(true);
 
             }
 
-
-        }
-    }
-
-    protected synchronized GoogleApiClient buildGoogleApiClient(GoogleApiClient.ConnectionCallbacks callbacks) {
-
-        GoogleApiClient mGoogleApiClient;
-        // Use the GoogleApiClient.Builder class to create an instance of the
-        // Google Play Services API client//
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(callbacks)
-                .addApi(LocationServices.API)
-                .build();
-
-        // Connect to Google Play Services, by calling the connect() method//
-        mGoogleApiClient.connect();
-
-        return mGoogleApiClient;
-    }
-
-    GroundOverlay addOverlay(GoogleMap mMap, LatLng place) {
-
-        GroundOverlay groundOverlay = mMap.addGroundOverlay(new
-                GroundOverlayOptions()
-                .position(place, 100)
-                .transparency(0.5f)
-                .zIndex(3)
-                .image(BitmapDescriptorFactory.fromBitmap(drawableToBitmap(ContextCompat.getDrawable(this, R.drawable.map_overlay)))));
-
-        startOverlayAnimation(groundOverlay);
-
-        return groundOverlay;
-    }
-
-
-    Bitmap drawableToBitmap(Drawable drawable) {
-        Bitmap bitmap = null;
-
-        if (drawable instanceof BitmapDrawable) {
-            BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-            if (bitmapDrawable.getBitmap() != null) {
-                return bitmapDrawable.getBitmap();
-            }
-        }
-
-        if (drawable.getIntrinsicWidth() <= 0 || drawable.getIntrinsicHeight() <= 0) {
-            bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
-        } else {
-            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        }
-
-        Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        drawable.draw(canvas);
-        return bitmap;
-    }
-
-
-    void startOverlayAnimation(final GroundOverlay groundOverlay) {
-
-        AnimatorSet animatorSet = new AnimatorSet();
-
-        ValueAnimator vAnimator = ValueAnimator.ofInt(0, 100);
-        vAnimator.setRepeatCount(ValueAnimator.INFINITE);
-        vAnimator.setRepeatMode(ValueAnimator.RESTART);
-        vAnimator.setInterpolator(new LinearInterpolator());
-        vAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                final Integer val = (Integer) valueAnimator.getAnimatedValue();
-                groundOverlay.setDimensions(val);
-
+            public void onStatusChanged(String s, int i, Bundle bundle) {
 
             }
-        });
 
-        ValueAnimator tAnimator = ValueAnimator.ofFloat(0, 1);
-        tAnimator.setRepeatCount(ValueAnimator.INFINITE);
-        tAnimator.setRepeatMode(ValueAnimator.RESTART);
-        tAnimator.setInterpolator(new LinearInterpolator());
-        tAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                Float val = (Float) valueAnimator.getAnimatedValue();
-                groundOverlay.setTransparency(val);
+            public void onProviderEnabled(String s) {
+                Log.i(TAG, "^^^^^^^^^^ PROVIDER ENABLED ^^^^^^^^^^^^");
 
             }
-        });
 
-        animatorSet.setDuration(3000);
-        animatorSet.playTogether(vAnimator, tAnimator);
-        animatorSet.start();
-    }
-
-    CameraPosition moveCameraToPosition(GoogleMap mMap, LatLng latLng, Float ZOOM) {
-
-        CameraPosition mCameraPosition = new CameraPosition.Builder()
-                .target(latLng)
-                .zoom(ZOOM)
-                .build();
-
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(mCameraPosition));
-
-      /*
-        if (mLastLocation != null) {
-
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                    new LatLng(mLastLocation.getLatitude(),
-                            mLastLocation.getLongitude()), DEFAULT_ZOOM));
-        }*/
+            @Override
+            public void onProviderDisabled(String s) {
+                Log.i(TAG, "^^^^^^^^^^ PROVIDER DISABLED ^^^^^^^^^^^^");
 
 
-        return mCameraPosition;
-    }
+            }
+        };
 
-
-    void addMarker() {
-
-
-        markers.add(mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()))
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-                .draggable(true).visible(true)));
-
-
-        if (markers.size() >= 3)
-            calculateArea.setEnabled(true);
-        else calculateArea.setEnabled(false);
 
 
     }
 
-
-    void clearMap(View v) {
-
-        mMap.clear();
-
-        calculateArea.setText("calculate area");
-        hasCalculated = false;
-
-    }
 
 
     void computeAreaInSquareMeters() {
 
-        if (latLngs != null && latLngs.size() > 2) {
+            AREA_OF_PLOT = SphericalUtil.computeArea(latLngs);
+            Log.d(TAG, "computeAreaInSquareMeters " + AREA_OF_PLOT);
 
 
-            final Double value = SphericalUtil.computeArea(latLngs);
-            Log.d(TAG, "computeAreaInSquareMeters " + value);
-
-
-            showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + "in square meters is " + value, new DialogInterface.OnClickListener() {
+            showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + " in square meters is " + new DecimalFormat("0.00").format(AREA_OF_PLOT), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
                     dialogInterface.dismiss();
 
-                    plot.setArea(value.toString());
-
-
-                }
-            }, "SAVE", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-
-                    dialogInterface.dismiss();
+                    plot.setArea(AREA_OF_PLOT.toString());
 
                 }
-            }, "CANCEL", 0);
+            }, getResources(R.string.ok),null, "", 0);
 
-
-            calculateArea.setEnabled(true);
-            calculateArea.setText("Clear Map");
 
             hasCalculated = true;
-
-
-        } else
-            CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG);
-    }
+ }
 
 
     double convertToHectres(Double valueInSquareMetres) {
@@ -656,78 +297,45 @@ public class MapActivity extends BaseActivity implements
     }
 
 
-    void drawPolygon() {
+
+    private void getCurrentLocation() {
+
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        GpsStatus = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+        if (GpsStatus) {
+
+            Criteria criteria = new Criteria();
+            criteria.setAccuracy(Criteria.ACCURACY_COARSE);
+            criteria.setPowerRequirement(Criteria.POWER_LOW);
+            criteria.setAltitudeRequired(false);
+            criteria.setBearingRequired(false);
+            criteria.setSpeedRequired(false);
+            criteria.setCostAllowed(true);
+            criteria.setHorizontalAccuracy(Criteria.ACCURACY_HIGH);
+            criteria.setVerticalAccuracy(Criteria.ACCURACY_HIGH);
 
 
-        PolygonOptions polygonOptions = new PolygonOptions();
-        for (Marker ll : markers) {
+            LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-            //latLngs.add(ll.getPosition());
-            polygonOptions.add(ll.getPosition());
+            // This is the Best And IMPORTANT part
+            final Looper looper = null;
 
-
-        }
-
-        polygonOptions.strokeColor(Color.WHITE);
-        polygonOptions.strokeWidth(2);
-        polygonOptions.fillColor(ContextCompat.getColor(MapActivity.this, R.color.colorAccent50Alpha));
-        polygonOptions.visible(true);
-
-
-        List<LatLng> points = polygonOptions.getPoints();
-        latLngs = points;
-        if (!points.isEmpty()) {
-            Polygon polygon = mMap.addPolygon(polygonOptions);
-
-            Log.d(TAG, "POINTS SIZE IS  " + points.size());
-
-
-            Log.i("Poly lines", "Successfully added polyline on map");
-        }
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                computeAreaInSquareMeters();
-
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                if (locationManager != null) {
+                    locationManager.requestSingleUpdate(criteria, locationListener, looper);
+                }
             }
-        }, 500);
+        } else {
+
+            CustomToast.makeToast(this, "Please Enable GPS First", Toast.LENGTH_LONG).show();
+
+        }
 
 
     }
 
 
-    @Override
-    public void onMarkerDragStart(Marker marker) {
 
-        Log.d(TAG, "MARKER DRAG START ");
-
-        Log.d(TAG, "LATITUDE " + marker.getPosition().latitude);
-        Log.d(TAG, "LONGITUDE " + marker.getPosition().latitude);
-
-
-        markers.remove(marker);
-
-    }
-
-    @Override
-    public void onMarkerDrag(Marker marker) {
-
-    }
-
-    @Override
-    public void onMarkerDragEnd(Marker marker) {
-
-        Log.d(TAG, "MARKER DRAG END ");
-
-        Log.d(TAG, "LATITUDE " + marker.getPosition().latitude);
-        Log.d(TAG, "LONGITUDE " + marker.getPosition().latitude);
-
-
-        markers.add(marker);
-
-
-    }
 }

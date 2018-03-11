@@ -22,6 +22,7 @@ import org.grameen.fdp.utility.Constants;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.script.ScriptEngineManager;
@@ -154,7 +155,7 @@ public class PlotDetailsActivity extends BaseActivity {
                         loadRecommendation();
 
                     }
-                }, 3000);
+                }, 2000);
             } else {
                 Log.i(TAG, "GETTING RECOMMENDATION FROM DB");
 
@@ -232,7 +233,27 @@ public class PlotDetailsActivity extends BaseActivity {
                 Log.i(TAG, "AOR VALUES =  " + AOR_VALUES);
                 Log.i(TAG, "AI VALUES =  " + AI_VALUES);
 
-                if (PLOT_AO_JSON_OBJECT.length() >= databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATIONS).size() + 4) {
+
+                int sizeOfAO = databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATIONS).size();
+                boolean hasIncompleteData = false;
+
+                Iterator iterator = PLOT_AO_JSON_OBJECT.keys();
+                while (iterator.hasNext()){
+                    String tmp_key = (String) iterator.next();
+
+                    try {
+                        if(PLOT_AO_JSON_OBJECT.getString(tmp_key).equalsIgnoreCase("--")){
+                            hasIncompleteData = true;
+                            break;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+
+                if (PLOT_AO_JSON_OBJECT.length() >= sizeOfAO && !hasIncompleteData) {
 
                     Log.i(TAG, "START YEAR IS " + plot.getStartYear());
 
@@ -1071,10 +1092,6 @@ public class PlotDetailsActivity extends BaseActivity {
 
 
 
-
-
-
-
     Boolean compareAndEvaluateCascadedLogics(Logic logic) {
 
 
@@ -1184,16 +1201,16 @@ public class PlotDetailsActivity extends BaseActivity {
 
         String defVal = "--";
         try {
-            defVal = PLOT_AO_JSON_OBJECT.get(s).toString();
+            defVal = PLOT_AO_JSON_OBJECT.getString(s);
         } catch (JSONException e) {
             Log.i(TAG, e.getMessage());
             try {
-                defVal = AOR_VALUES.get(s).toString();
+                defVal = AOR_VALUES.getString(s);
 
             } catch (JSONException f) {
                 Log.i(TAG, f.getMessage());
                 try {
-                    defVal = AI_VALUES.get(s).toString();
+                    defVal = AI_VALUES.getString(s);
                 } catch (JSONException g) {
                     Log.i(TAG, g.getMessage());
                 }

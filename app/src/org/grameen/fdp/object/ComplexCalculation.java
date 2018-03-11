@@ -9,6 +9,8 @@ import com.google.gson.annotations.SerializedName;
 public class ComplexCalculation {
 
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
 
     String Id;
 
@@ -26,6 +28,13 @@ public class ComplexCalculation {
 
     public ComplexCalculation(){}
 
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
+    }
 
     public void setId(String id) {
         Id = id;

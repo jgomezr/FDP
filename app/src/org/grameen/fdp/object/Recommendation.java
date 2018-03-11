@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 public class Recommendation {
 
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
     @SerializedName("Id")
     String id = "";
 
@@ -70,6 +73,15 @@ public class Recommendation {
 
     @SerializedName("Income_questions__c")
     String questionsInvolved = "";
+
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
+    }
 
     public String getName() {
         return name;

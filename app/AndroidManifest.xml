@@ -96,6 +96,10 @@
 
 			/>
         <activity android:name=".activity.FDPStatusActivity" />
+        <activity android:name=".activity.ImageViewActivity"
+			android:excludeFromRecents="true"
+			android:windowSoftInputMode="adjustNothing"
+			android:theme="@style/Theme.Transparent"/>
 
 
         <provider

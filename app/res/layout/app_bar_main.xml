@@ -113,6 +113,18 @@
             >
 
 
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButtonGrey"
+                android:text="@string/back"
+                android:padding="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+
+                />
+
 
             <Button
                 android:id="@+id/sync"

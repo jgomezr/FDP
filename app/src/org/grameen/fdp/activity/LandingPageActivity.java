@@ -61,7 +61,7 @@ public class LandingPageActivity extends BaseActivity {
 
 
                 prefs.edit().putBoolean("isFirstSignIn", false).apply();
-                prefs.edit().putString("flag", Constants.REGISTER).apply();
+                prefs.edit().putString("flag", Constants.DIAGNOSTIC).apply();
                 startActivity(new Intent(LandingPageActivity.this, MainActivity.class));
 
             }

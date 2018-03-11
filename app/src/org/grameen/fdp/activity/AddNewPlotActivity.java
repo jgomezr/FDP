@@ -2,6 +2,7 @@ package org.grameen.fdp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -26,10 +27,10 @@ import org.grameen.fdp.utility.CustomToast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 
 /**
  * Created by aangjnr on 09/11/2017.
@@ -52,8 +53,13 @@ public class AddNewPlotActivity extends BaseActivity {
     EditText phEdittext;
 
 
-    JSONObject JSON_OBJECT = null;
+
+    JSONObject ALL_DATA_JSON = new JSONObject();
+
+    JSONObject AO_JSON_OBJECT = null;
     JSONObject PLOT_INFO_JSON;
+    JSONObject FARMING_ECONOMIC_PROFILE_JSON;
+
 
 
     Button save;
@@ -146,7 +152,7 @@ public class AddNewPlotActivity extends BaseActivity {
                 e.printStackTrace();
             }
 
-            String farmingEconomicProfileJson = databaseHelper.getSpecificFarmerDetails(Constants.FARMING_ECONOMIC_PROFILE, farmerCode);
+            String farmingEconomicProfileJson = databaseHelper.getAllAnswersJson(farmerCode);
 
             Log.i(TAG, "FARMING ECO PROFILE " + farmingEconomicProfileJson);
 
@@ -154,9 +160,9 @@ public class AddNewPlotActivity extends BaseActivity {
 
                 try {
 
-                JSONObject jsonObject = new JSONObject(farmingEconomicProfileJson);
-                plotSizeUnit.setText(jsonObject.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
-                estimatedProductionUnit.setText(jsonObject.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
+                FARMING_ECONOMIC_PROFILE_JSON = new JSONObject(farmingEconomicProfileJson);
+                plotSizeUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
+                estimatedProductionUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
 
             } catch (JSONException | ArrayIndexOutOfBoundsException | NullPointerException e ) {
                 e.printStackTrace();
@@ -173,13 +179,7 @@ public class AddNewPlotActivity extends BaseActivity {
             Log.i(TAG, "AREA " + plotSizeUnit.getText().toString());
 
 
-
-
-
             plotAOFragment = MyFormFragment.newInstance(Constants.ADOPTION_OBSERVATIONS, true, plot.getFarmerCode() + "_" + plot.getId(), false);
-
-
-
 
             loadDynamicView(plotAOFragment, R.id.aosLayout);
 
@@ -189,16 +189,16 @@ public class AddNewPlotActivity extends BaseActivity {
             setToolbar(getResources(R.string.add_new_plot));
             farmerCode = getIntent().getStringExtra("farmerCode");
 
-            String farmingEconomicProfileJson = databaseHelper.getSpecificFarmerDetails(Constants.FARMING_ECONOMIC_PROFILE, farmerCode);
+            String farmingEconomicProfileJson = databaseHelper.getAllAnswersJson(farmerCode);
 
             Log.i(TAG, "FARMING ECO PROFILE " + farmingEconomicProfileJson);
 
             if(farmingEconomicProfileJson != null)
             try {
 
-                JSONObject jsonObject = new JSONObject(farmingEconomicProfileJson);
-                plotSizeUnit.setText(jsonObject.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
-                estimatedProductionUnit.setText(jsonObject.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
+                FARMING_ECONOMIC_PROFILE_JSON = new JSONObject(farmingEconomicProfileJson);
+                plotSizeUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
+                estimatedProductionUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -219,8 +219,6 @@ public class AddNewPlotActivity extends BaseActivity {
             String value = "Plot " + noOfPlots;
             plotName.setText(value);
 
-
-
             //    plotInfoFragment = MyFormFragment.newInstance(Constants.PLOT_INFORMATION, false, null);
             plotAOFragment = MyFormFragment.newInstance(Constants.ADOPTION_OBSERVATIONS, false, null, false);
 
@@ -229,7 +227,7 @@ public class AddNewPlotActivity extends BaseActivity {
         }
 
 
-        findViewById(R.id.plot_mapping).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.plot_area_calculation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -237,19 +235,26 @@ public class AddNewPlotActivity extends BaseActivity {
                 //Todo go to Map Activity
                 if (!plotName.getText().toString().isEmpty() || !plotName.getText().toString().equals("")) {
 
-                    Intent intent = new Intent(AddNewPlotActivity.this, MapActivity.class);
+                    saveOrUpdateData(false);
+                    newDataSaved = true;
 
+                    final Intent intent = new Intent(AddNewPlotActivity.this, MapActivity.class);
 
                     if (!isEditMode) {
                         plot = new RealPlot();
                         plot.setId(databaseHelper.getSystemTime());
                         plot.setFarmerCode(farmerCode);
                         plot.setName(plotName.getText().toString());
-
                     }
 
                     intent.putExtra("plot", new Gson().toJson(plot));
-                    startActivity(intent);
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(intent);
+                        }
+                    }, 500);
 
 
                 } else
@@ -280,23 +285,31 @@ public class AddNewPlotActivity extends BaseActivity {
 
         if (!newDataSaved) {
 
+
+
             save.setEnabled(false);
 
             String plotRenovatedId = "plot_renovated", plotRenovationMadeId = "plot_renovationMade", plotInterventionAppliedId = "plotInterventionAppliedId";
 
-            JSON_OBJECT = plotAOFragment.getAllAnswersInJSONObject();
+            AO_JSON_OBJECT = plotAOFragment.getAOJSONObject();
+            PLOT_INFO_JSON = plotAOFragment.getPlotInfoJSONObject();
 
-            Log.d(TAG, "JSON OBJECT = " + JSON_OBJECT.toString());
+
 
 
             List<Question> plotInfoQues = databaseHelper.getSpecificSetOfQuestions(Constants.PLOT_INFORMATION);
             for (Question q : plotInfoQues) {
+
+               /* if(PLOT_INFO_JSON.has(q.getId()))
+                    PLOT_INFO_JSON.remove(q.getId());*/
+
                 if (q.getTranslation__c().equalsIgnoreCase("soil ph")) {
 
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR Soil PH NEEDED!!!!" + q.getId());
 
                     try {
-                        JSON_OBJECT.put(q.getId(), phEdittext.getText().toString());
+
+                        PLOT_INFO_JSON.put(q.getId(), phEdittext.getText().toString());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -306,7 +319,7 @@ public class AddNewPlotActivity extends BaseActivity {
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR  ESTIMATED PROD!!!!" + q.getId());
 
                     try {
-                        JSON_OBJECT.put(q.getId(), estimatedProductionEdittext.getText().toString().trim());
+                        PLOT_INFO_JSON.put(q.getId(), estimatedProductionEdittext.getText().toString().trim());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -316,7 +329,7 @@ public class AddNewPlotActivity extends BaseActivity {
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR PLOT SIZE!!!!" + q.getId());
 
                     try {
-                        JSON_OBJECT.put(q.getId(), plotSizeEdittext.getText().toString().trim());
+                        PLOT_INFO_JSON.put(q.getId(), plotSizeEdittext.getText().toString().trim());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -326,50 +339,33 @@ public class AddNewPlotActivity extends BaseActivity {
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR PLOT RENOVATED INTERVENTION!!!!" + q.getId());
                     plotInterventionAppliedId = q.getId();
 
-                    /*try {
-                        JSON_OBJECT.put(q.getId(), "");
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }*/
                 } else if (q.getTranslation__c().equalsIgnoreCase("How long ago was the renovation made?")) {
 
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR PLOT RENOVATED YEARS!!!!" + q.getId());
                     plotRenovationMadeId = q.getId();
-                   /* try {
-                        JSON_OBJECT.put(q.getId(), "");
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }*/
                 } else if (q.getTranslation__c().equalsIgnoreCase("Was this plot recently renovated?")) {
 
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR PLOT RENOVATED QUESTION!!!!" + q.getId());
                     plotRenovatedId = q.getId();
-                   /* try {
-                        JSON_OBJECT.put(q.getId(), "");
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }*/
                 }
 
 
             }
 
             String newPlotInfoJsonValue = "";
-
-            PLOT_INFO_JSON = new JSONObject();
-            try {
+             try {
 
                 PLOT_INFO_JSON.put("name", plotName.getText().toString());
                 PLOT_INFO_JSON.put("size", plotSizeEdittext.getText().toString() + " " +  plotSizeUnit.getText().toString());
                 PLOT_INFO_JSON.put("estimatedProduction", estimatedProductionEdittext.getText().toString() +
                         " " + estimatedProductionUnit.getText().toString());
                 PLOT_INFO_JSON.put("ph", phEdittext.getText().toString());
-                PLOT_INFO_JSON.put("plotRenovated", JSON_OBJECT.get(plotRenovatedId));
-                PLOT_INFO_JSON.put("plotRenovatedIntervention", JSON_OBJECT.get(plotInterventionAppliedId));
-                PLOT_INFO_JSON.put("plotRenovationMade", JSON_OBJECT.get(plotRenovationMadeId));
+                PLOT_INFO_JSON.put("plotRenovated", PLOT_INFO_JSON.get(plotRenovatedId));
+                PLOT_INFO_JSON.put("plotRenovatedIntervention", PLOT_INFO_JSON.get(plotInterventionAppliedId));
+                PLOT_INFO_JSON.put("plotRenovationMade", PLOT_INFO_JSON.get(plotRenovationMadeId));
                 newPlotInfoJsonValue = PLOT_INFO_JSON.toString();
 
 
@@ -379,10 +375,38 @@ public class AddNewPlotActivity extends BaseActivity {
             }
 
 
-            String jsonValue = JSON_OBJECT.toString();
+            String aoJsonValue = AO_JSON_OBJECT.toString();
 
             Log.d(TAG, "PLOT INFO VALUE IS + \n" + newPlotInfoJsonValue + "\n");
-            Log.d(TAG, "PLOT AO VALUE IS + \n" + jsonValue + "\n");
+            Log.d(TAG, "PLOT AO VALUE IS + \n" + aoJsonValue + "\n");
+
+
+            //Todo merged AO json and Plot info Json into one Json object
+
+            String tmp_key;
+            Iterator i1 = PLOT_INFO_JSON.keys();
+
+            while(i1.hasNext()) {
+                tmp_key = (String) i1.next();
+                try {
+                    ALL_DATA_JSON.put(tmp_key, PLOT_INFO_JSON.get(tmp_key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            Iterator i2 = AO_JSON_OBJECT.keys();
+
+            while(i2.hasNext()) {
+                tmp_key = (String) i2.next();
+                try {
+                    ALL_DATA_JSON.put(tmp_key, AO_JSON_OBJECT.get(tmp_key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
 
 
             String AORJson = applyLogicAndGetValue(databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATION_RESULTS));
@@ -396,6 +420,11 @@ public class AddNewPlotActivity extends BaseActivity {
             Log.d(TAG, "ADDITIONAL INTERVENTION VALUE IS + \n" + AIJson + "\n");
 
 
+
+
+
+
+
             if (!isEditMode) {
 
 
@@ -404,7 +433,7 @@ public class AddNewPlotActivity extends BaseActivity {
                 realPlot.setName(plotName.getText().toString());
                 realPlot.setFarmerCode(farmerCode);
                 realPlot.setPlotInformationJson(newPlotInfoJsonValue);
-                realPlot.setAdoptionObservationsJson(jsonValue);
+                realPlot.setAdoptionObservationsJson(aoJsonValue);
                 realPlot.setAdoptionObservationResultsJson(AORJson);
                 realPlot.setAdditionalInterventionJson(AIJson);
 
@@ -424,6 +453,7 @@ public class AddNewPlotActivity extends BaseActivity {
                         Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
                         intent.putExtra("plot", new Gson().toJson(realPlot));
                         intent.putExtra("farmerCode", farmerCode);
+                        prefs.edit().putString("currentPlotId", plot.getId()).apply();
 
                         startActivity(intent);
                         finish();
@@ -439,7 +469,7 @@ public class AddNewPlotActivity extends BaseActivity {
 
                 plot.setName(plotName.getText().toString());
                 plot.setPlotInformationJson(newPlotInfoJsonValue);
-                plot.setAdoptionObservationsJson(jsonValue);
+                plot.setAdoptionObservationsJson(aoJsonValue);
                 plot.setAdoptionObservationResultsJson(AORJson);
                 plot.setAdditionalInterventionJson(AIJson);
 
@@ -455,7 +485,7 @@ public class AddNewPlotActivity extends BaseActivity {
                     if (shouldMoveToNextActivity) {
                         Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
                         intent.putExtra("plot", new Gson().toJson(plot));
-
+                        prefs.edit().putString("currentPlotId", plot.getId()).apply();
                         startActivity(intent);
                         finish();
 
@@ -474,6 +504,7 @@ public class AddNewPlotActivity extends BaseActivity {
 
 
             Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
+            prefs.edit().putString("currentPlotId", plot.getId()).apply();
             intent.putExtra("plot", new Gson().toJson(plot));
 
             startActivity(intent);
@@ -516,7 +547,7 @@ public class AddNewPlotActivity extends BaseActivity {
                         logicId = logic.getId();
 
 
-                        result = getLogicValue(logic);
+                        result = getLogicValue(logic, ALL_DATA_JSON);
 
 
                         if (result != null) {
@@ -575,6 +606,12 @@ public class AddNewPlotActivity extends BaseActivity {
         return jsonObject.toString();
 
     }
+
+
+
+
+
+    /*
 
     Boolean getLogicValue(Logic logic) {
 
@@ -1213,6 +1250,12 @@ public class AddNewPlotActivity extends BaseActivity {
                 System.out.println("****  EXCEPTION  ****  " + e.getMessage());
 
                 value = inputValue.equalsIgnoreCase(logic.getVALUE());
+
+                if(logic.getLOGICAL_OPERATOR().equalsIgnoreCase("=="))
+                    value = inputValue.equalsIgnoreCase(logic.getVALUE());
+                else value = !inputValue.equalsIgnoreCase(logic.getVALUE());
+
+
                 return value;
             } finally {
                 System.out.println("*** LOGIC VALUE IS: " + value);
@@ -1223,19 +1266,32 @@ public class AddNewPlotActivity extends BaseActivity {
     }
 
 
+    */
+
+
+
+
+
+
     String getAnswerValue(String s) {
 
-        String defVal;
+        String defVal = "--";
         try {
-            defVal = JSON_OBJECT.get(s).toString();
-
-            return defVal;
+            defVal = AO_JSON_OBJECT.get(s).toString();
 
         } catch (JSONException e) {
-            System.out.println("\n ***** EXCEPTION ***** " + e.getMessage() + "\n");
+            System.out.println("\n ***** EXCEPTION e ***** " + e.getMessage() + "\n");
 
-            return null;
+            try {
+                defVal = PLOT_INFO_JSON.get(s).toString();
+
+            } catch (JSONException f) {
+                System.out.println("\n ***** EXCEPTION f ***** " + f.getMessage() + "\n");
+
+
+            }
         }
+        return defVal;
     }
 
 

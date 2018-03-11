@@ -136,6 +136,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-mdpi/ic_add_a_photo_white_24dp.png"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_refresh_black_24dp.png",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-mdpi/ic_refresh_black_24dp.png"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_microphone_black_48dp.png",
         "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/drawable-mdpi-v4/ic_microphone_black_48dp.png"
     },

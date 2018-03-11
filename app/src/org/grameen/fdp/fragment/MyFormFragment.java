@@ -11,13 +11,12 @@ import android.support.annotation.Nullable;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import org.grameen.fdp.activity.PlotDetailsActivity;
 import org.grameen.fdp.object.Calculation;
-import org.grameen.fdp.object.ComplexCalculation;
 import org.grameen.fdp.object.Question;
+import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.SkipLogic;
 import org.grameen.fdp.utility.ButtonController;
 import org.grameen.fdp.utility.CheckBoxController;
@@ -28,6 +27,7 @@ import org.grameen.fdp.utility.DatePickerController;
 import org.grameen.fdp.utility.EditTextController;
 import org.grameen.fdp.utility.MyFormController;
 import org.grameen.fdp.utility.MyFormSectionController;
+import org.grameen.fdp.utility.PhotoButtonController;
 import org.grameen.fdp.utility.SelectionController;
 import org.grameen.fdp.utility.TimePickerController;
 import org.json.JSONException;
@@ -67,6 +67,12 @@ public class MyFormFragment extends FormFragment {
     MyFormSectionController AO_RESULTS_SECTION_CONTROLLER;
     MyFormSectionController ADDITIONAL_INTERVENTION_CONTROLLER;
 
+    JSONObject ALL_ANSWERS_JSON_OBJECT;
+    JSONObject AO_JSON_OBJECT;
+    JSONObject AOR_JSON_OBJECT;
+    JSONObject AI_JSON_OBJECT;
+    JSONObject PLOT_INFO_JSON_OBJECT;
+
 
     List<Question> plotInfoQuestions = new ArrayList<>();
 
@@ -74,6 +80,8 @@ public class MyFormFragment extends FormFragment {
     List<Question> aoResultsQuestions;
     List<Question> additionalInterventionQuestions;
     ScriptEngine engine;
+    String CURRENT_PLOT_ID;
+    RealPlot PLOT;
 
 
     public MyFormFragment() {
@@ -106,10 +114,7 @@ public class MyFormFragment extends FormFragment {
         isEnabled = getArguments().getBoolean("disable");
 
         farmerCode = getArguments().getString("code");
-
         databaseHelper = DatabaseHelper.getInstance(context);
-
-
         super.onAttach(context);
     }
 
@@ -118,9 +123,11 @@ public class MyFormFragment extends FormFragment {
 
         Context context = getContext();
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        CURRENT_PLOT_ID = preferences.getString("currentPlotId", null);
 
-        JSONObject jsonObject = null;
-        String jsonString = "";
+
+
+
 
         // Add new Questions with data model of Question.class
         // The Question data model takes 2 or more parameters based on the type value
@@ -142,8 +149,7 @@ public class MyFormFragment extends FormFragment {
                 loadQuestions(context, aoQuestions, AO_SECTION_CONTROLLER);
 
 
-                questions.addAll(plotInfoQuestions);
-                questions.addAll(aoQuestions);
+                questions = aoQuestions;
 
 
                 if (getActivity() instanceof PlotDetailsActivity) {
@@ -166,41 +172,50 @@ public class MyFormFragment extends FormFragment {
 
 /////////////////////////////////////////
 
+                String[]ids  = farmerCode.split("_");
+                PLOT = databaseHelper.getFarmerPlot(ids[1], ids[0]);
 
-                plotInfoQuestions.addAll(databaseHelper.getSpecificSetOfQuestions(Constants.PLOT_INFORMATION));
+                Log.i(TAG, "PLOT INFO = " + PLOT.getPlotInformationJson());
+                Log.i(TAG, "PLOT AO = " + PLOT.getAdoptionObservationsJson());
+                Log.i(TAG, "PLOT AOR = " + PLOT.getAdoptionObservationResultsJson());
+                Log.i(TAG, "PLOT AI = " + PLOT.getAdditionalInterventionJson());
 
 
 
-                aoQuestions = databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATIONS);
+                try{
 
-                jsonString = databaseHelper.getSpecificFarmerDetails(formName, farmerCode);
-                if (jsonString != null && !jsonString.isEmpty()) {
+                    PLOT_INFO_JSON_OBJECT = new JSONObject(PLOT.getPlotInformationJson());
+                    AO_JSON_OBJECT = new JSONObject(PLOT.getAdoptionObservationsJson());
+                    AOR_JSON_OBJECT = new JSONObject(PLOT.getAdoptionObservationResultsJson());
+                    AI_JSON_OBJECT = new JSONObject(PLOT.getAdditionalInterventionJson());
 
-                    try {
-                        jsonObject = new JSONObject(jsonString);
-                        loadQuestionsWithValues(context, plotInfoQuestions, jsonObject, PLOT_INFORMATION_CONTROLLER);
 
-                        loadQuestionsWithValues(context, aoQuestions, jsonObject, AO_SECTION_CONTROLLER);
+                }catch(Exception e){
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        loadQuestions(context, plotInfoQuestions, PLOT_INFORMATION_CONTROLLER);
-                        loadQuestions(context, aoQuestions, AO_SECTION_CONTROLLER);
-
-                    }
-                } else {
-                    loadQuestions(context, plotInfoQuestions, PLOT_INFORMATION_CONTROLLER);
-                    loadQuestions(context, aoQuestions, AO_SECTION_CONTROLLER);
+                    e.printStackTrace();
                 }
 
 
-                questions.addAll(plotInfoQuestions);
-                questions.addAll(aoQuestions);
 
 
-////////////////////////////////////////////////////////////
+
+
+                plotInfoQuestions.addAll(databaseHelper.getSpecificSetOfQuestions(Constants.PLOT_INFORMATION));
+                aoQuestions = databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATIONS);
+                questions = aoQuestions;
+
+
+                loadPlotQuestionsWithValues(context, plotInfoQuestions, PLOT_INFO_JSON_OBJECT, PLOT_INFORMATION_CONTROLLER);
+
+                loadPlotQuestionsWithValues(context, aoQuestions, AO_JSON_OBJECT, AO_SECTION_CONTROLLER);
+
+
+                }
+
+ //////////////
 
                 if (getActivity() instanceof PlotDetailsActivity) {
+
 
 
                     Log.d("MYFORMFRAG", "LOAD DEFAULT VALUES");
@@ -209,39 +224,16 @@ public class MyFormFragment extends FormFragment {
                     AO_RESULTS_SECTION_CONTROLLER = new MyFormSectionController(context, Constants.ADOPTION_OBSERVATION_RESULTS);
                     aoResultsQuestions = databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATION_RESULTS);
 
-                    jsonString = databaseHelper.getSpecificFarmerDetails(Constants.ADOPTION_OBSERVATION_RESULTS, farmerCode);
-                    if (jsonString != null && !jsonString.isEmpty()) {
-
-                        try {
-                            jsonObject = new JSONObject(jsonString);
-                            loadQuestionsWithValues(context, aoResultsQuestions, jsonObject, AO_RESULTS_SECTION_CONTROLLER);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            loadQuestions(context, aoResultsQuestions, AO_RESULTS_SECTION_CONTROLLER);
-                        }
-                    } else {
-                        loadQuestions(context, aoResultsQuestions, AO_RESULTS_SECTION_CONTROLLER);
-
-                    }
+                    loadPlotQuestionsWithValues(context, aoResultsQuestions, AOR_JSON_OBJECT, AO_RESULTS_SECTION_CONTROLLER);
 
 
                     ADDITIONAL_INTERVENTION_CONTROLLER = new MyFormSectionController(context, Constants.ADDITIONAL_INTERVENTION);
                     additionalInterventionQuestions = databaseHelper.getSpecificSetOfQuestions(Constants.ADDITIONAL_INTERVENTION);
 
-                    jsonString = databaseHelper.getSpecificFarmerDetails(Constants.ADDITIONAL_INTERVENTION, farmerCode);
-                    if (jsonString != null && !jsonString.isEmpty()) {
 
-                        try {
-                            jsonObject = new JSONObject(jsonString);
-                            loadQuestionsWithValues(context, additionalInterventionQuestions, jsonObject, ADDITIONAL_INTERVENTION_CONTROLLER);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            loadQuestions(context, additionalInterventionQuestions, ADDITIONAL_INTERVENTION_CONTROLLER);
-                        }
-                    } else
-                        loadQuestions(context, additionalInterventionQuestions, ADDITIONAL_INTERVENTION_CONTROLLER);
+                    loadPlotQuestionsWithValues(context, additionalInterventionQuestions, AI_JSON_OBJECT, ADDITIONAL_INTERVENTION_CONTROLLER);
 
-                }
+
             }
 
 
@@ -261,6 +253,15 @@ public class MyFormFragment extends FormFragment {
 ////////////////////////////////////////
 
         } else {
+
+            try {
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmerCode));
+            } catch (JSONException e) {
+                e.printStackTrace();
+
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject();
+            }
+
 
             questions = databaseHelper.getSpecificSetOfQuestions(formName);
             if (questions != null) {
@@ -283,18 +284,7 @@ public class MyFormFragment extends FormFragment {
 
                 Log.d("MYFORMFRAG", "LOAD DEFAULT VALUES");
 
-                jsonString = databaseHelper.getSpecificFarmerDetails(formName, farmerCode);
-                if (jsonString != null && !jsonString.isEmpty()) {
-
-                    try {
-                        jsonObject = new JSONObject(jsonString);
-                        loadQuestionsWithValues(context, questions, jsonObject, formSectionController);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        loadQuestions(context, questions, formSectionController);
-                    }
-                } else loadQuestions(context, questions, formSectionController);
-
+                loadQuestionsWithValues(context, questions, formSectionController);
 
             }
 
@@ -303,14 +293,6 @@ public class MyFormFragment extends FormFragment {
 
         }
 
-
-/*
-
-        if(shouldLoadOldValues)
-            for(Question q : questions) {
-                initiateSkipLogicsAndHideViews(q,  getFormController());
-            }
-*/
 
 
     }
@@ -398,6 +380,67 @@ public class MyFormFragment extends FormFragment {
 
 
     }
+
+
+
+
+    public JSONObject getPlotInfoJSONObject() {
+
+
+        JSONObject jsonObject = new JSONObject();
+
+        for (Question q : plotInfoQuestions) {
+
+
+            try {
+                jsonObject.put(q.getId(), getModel().getValue(q.getId()));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return jsonObject;
+
+
+    }
+
+
+
+    public JSONObject getAOJSONObject() {
+
+
+        JSONObject jsonObject = new JSONObject();
+
+        for (Question q : aoQuestions) {
+
+
+            try {
+                jsonObject.put(q.getId(), getModel().getValue(q.getId()));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return jsonObject;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     void loadQuestions(Context context, List<Question> questions, MyFormSectionController formSectionController) {
 
@@ -492,6 +535,22 @@ public class MyFormFragment extends FormFragment {
                         }
                     }));
                     break;
+
+
+                case Constants.TYPE_PHOTO:
+                    formSectionController.addElement(new PhotoButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            try{
+
+                                startCameraIntent(q.getId());
+
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+                    }));
+                    break;
             }
             }
 
@@ -503,120 +562,140 @@ public class MyFormFragment extends FormFragment {
 
     }
 
-    void loadQuestionsWithValues(Context context, List<Question> questions, JSONObject jsonObject, MyFormSectionController formSectionController) {
+    void loadQuestionsWithValues(Context context, List<Question> questions, MyFormSectionController formSectionController) {
 
         for (final Question q : questions) {
 
-            if(q.getHide__c().equalsIgnoreCase("false")){
+            if(q.getHide__c().equalsIgnoreCase("false")) {
 
 
-            if (q.getForm__r().getType().equalsIgnoreCase("monitoring"))
-                isEnabled = false;
+                if (q.getForm__r().getType().equalsIgnoreCase("monitoring"))
+                    isEnabled = false;
 
-            Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
+                Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
 
                 String storedValue;
-                storedValue =  getValue(q, jsonObject);
-                if(storedValue.equalsIgnoreCase(""))
+                storedValue = getValue(q);
+                if (storedValue.equalsIgnoreCase(""))
                     storedValue = q.getDefault_value__c();
 
 
                 switch (q.getType__c().toLowerCase()) {
 
-                case Constants.TYPE_TEXT:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, !isEnabled, q.getHelp_Text__c()));
+                    case Constants.TYPE_TEXT:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, !isEnabled, q.getHelp_Text__c()));
+                        //getValue(q);
+
+                        break;
+                    case Constants.TYPE_NUMBER:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER, !isEnabled, q.getHelp_Text__c()));
+                        getValue(q);
+
+                        break;
+
+                    case Constants.TYPE_NUMBER_DECIMAL:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
+                        getValue(q);
+
+                        break;
+
+                    case Constants.TYPE_SELECTABLE:
+                        formSectionController.addElement(new SelectionController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, storedValue, q.formatQuestionOptions(), true, !isEnabled, q.getHelp_Text__c()));
+                        getValue(q);
+
+                        break;
+
+                    case Constants.TYPE_MULTI_SELECTABLE:
+                        formSectionController.addElement(new CheckBoxController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !isEnabled));
+                        //getValue(q, jsonObject);
+
+                        break;
+
+                    case Constants.TYPE_TIMEPICKER:
+                        formSectionController.addElement(new TimePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
+                        getValue(q);
+
+                        break;
+                    case Constants.TYPE_DATEPICKER:
+                        formSectionController.addElement(new DatePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
+                        getValue(q);
+
+                        break;
+
+                    case Constants.TYPE_MATH_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
+                        getValue(q);
+                        applyCalculation(databaseHelper.getCalculation(q.getId()));
+
+                        break;
+
+                    case Constants.TYPE_LOGIC_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
+                        getValue(q);
+                        break;
 
 
-                    break;
-                case Constants.TYPE_NUMBER:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER, !isEnabled, q.getHelp_Text__c()));
-                    getValue(q, jsonObject);
+                    case Constants.TYPE_LOCATION:
+                        formSectionController.addElement(new ButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), new LocationListener() {
+                            @Override
+                            public void onLocationChanged(Location location) {
 
-                    break;
+                                Log.i(TAG, "^^^^^^^^^^ LOCATION CHANGED ^^^^^^^^^^^^");
 
-                case Constants.TYPE_NUMBER_DECIMAL:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
-                    getValue(q, jsonObject);
+                                Log.i(TAG, "lat:" + location.getLatitude() + " lon:" + location.getLongitude());
 
-                    break;
-
-                case Constants.TYPE_SELECTABLE:
-                    formSectionController.addElement(new SelectionController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), true, storedValue, q.formatQuestionOptions(), true, !isEnabled, q.getHelp_Text__c()));
-                    getValue(q, jsonObject);
-
-                    break;
-
-                case Constants.TYPE_MULTI_SELECTABLE:
-                    formSectionController.addElement(new CheckBoxController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !isEnabled));
-                    //getValue(q, jsonObject);
-
-                    break;
-/*
-                case Constants.TYPE_CHECKBOX:
-                    formSectionController.addElement(new CheckBoxController(context, q.getId(), q.getCaption__c(), true, null, true, !isEnabled));
-                    getValue(q, jsonObject);
-
-                    break;*/
-                case Constants.TYPE_TIMEPICKER:
-                    formSectionController.addElement(new TimePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c()));
-                    getValue(q, jsonObject);
-
-                    break;
-                case Constants.TYPE_DATEPICKER:
-                    formSectionController.addElement(new DatePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c()));
-                    getValue(q, jsonObject);
-
-                    break;
-
-                case Constants.TYPE_MATH_FORMULA:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
-                    getValue(q, jsonObject);
-                    applyCalculation(databaseHelper.getCalculation(q.getId()));
-
-                    break;
-
-                case Constants.TYPE_LOGIC_FORMULA:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
-                    getValue(q, jsonObject);
-                    break;
+                                getModel().setValue(q.getId(), location.getLatitude() + ", " + location.getLongitude());
 
 
-                case Constants.TYPE_LOCATION:
-                    formSectionController.addElement(new ButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), new LocationListener() {
+                            }
+
+                            @Override
+                            public void onStatusChanged(String s, int i, Bundle bundle) {
+
+                            }
+
+                            @Override
+                            public void onProviderEnabled(String s) {
+                                Log.i(TAG, "^^^^^^^^^^ PROVIDER ENABLED ^^^^^^^^^^^^");
+
+                            }
+
+                            @Override
+                            public void onProviderDisabled(String s) {
+                                Log.i(TAG, "^^^^^^^^^^ PROVIDER DISABLED ^^^^^^^^^^^^");
+
+
+                            }
+                        }));
+                        getValue(q);
+                        break;
+
+
+
+                case Constants.TYPE_PHOTO:
+                    formSectionController.addElement(new PhotoButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), new View.OnClickListener() {
                         @Override
-                        public void onLocationChanged(Location location) {
+                        public void onClick(View v) {
 
-                            Log.i(TAG, "^^^^^^^^^^ LOCATION CHANGED ^^^^^^^^^^^^");
+                            try{
 
-                            Log.i(TAG, "lat:" + location.getLatitude() + " lon:" + location.getLongitude());
+                                startCameraIntent(q.getId());
 
-                            getModel().setValue(q.getId(), location.getLatitude() + ", " + location.getLongitude());
-
-
-                        }
-
-                        @Override
-                        public void onStatusChanged(String s, int i, Bundle bundle) {
-
-                        }
-
-                        @Override
-                        public void onProviderEnabled(String s) {
-                            Log.i(TAG, "^^^^^^^^^^ PROVIDER ENABLED ^^^^^^^^^^^^");
-
-                        }
-
-                        @Override
-                        public void onProviderDisabled(String s) {
-                            Log.i(TAG, "^^^^^^^^^^ PROVIDER DISABLED ^^^^^^^^^^^^");
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
 
 
                         }
                     }));
-                    getValue(q, jsonObject);
+                    getValue(q);
                     break;
 
-                }
+            }
+
+            }
+
+
 
 
             setUpSkipLogics(q);
@@ -626,16 +705,156 @@ public class MyFormFragment extends FormFragment {
         }
 
 
+
+
+    void loadPlotQuestionsWithValues(Context context, List<Question> questions, JSONObject jsonObject, MyFormSectionController formSectionController) {
+
+        for (final Question q : questions) {
+
+            if(q.getHide__c().equalsIgnoreCase("false")) {
+
+
+                if (q.getForm__r().getType().equalsIgnoreCase("monitoring"))
+                    isEnabled = false;
+
+                Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
+
+                String storedValue;
+                storedValue = getPlotDetailsValue(q.getId());
+                if (storedValue.equalsIgnoreCase(""))
+                    storedValue = q.getDefault_value__c();
+
+
+                switch (q.getType__c().toLowerCase()) {
+
+                    case Constants.TYPE_TEXT:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, !isEnabled, q.getHelp_Text__c()));
+                        //getValue(q);
+
+                        break;
+                    case Constants.TYPE_NUMBER:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER, !isEnabled, q.getHelp_Text__c()));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+                    case Constants.TYPE_NUMBER_DECIMAL:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+                    case Constants.TYPE_SELECTABLE:
+                        formSectionController.addElement(new SelectionController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, storedValue, q.formatQuestionOptions(), true, !isEnabled, q.getHelp_Text__c()));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+                    case Constants.TYPE_MULTI_SELECTABLE:
+                        formSectionController.addElement(new CheckBoxController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !isEnabled));
+                        //getPlotDetailsValue(q.getId());
+
+                        break;
+
+                    case Constants.TYPE_TIMEPICKER:
+                        formSectionController.addElement(new TimePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
+                        getPlotDetailsValue(q.getId());
+
+                        break;
+                    case Constants.TYPE_DATEPICKER:
+                        formSectionController.addElement(new DatePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+                    case Constants.TYPE_MATH_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
+                        getPlotDetailsValue(q.getId());
+                        applyCalculation(databaseHelper.getCalculation(q.getId()));
+
+                        break;
+
+                    case Constants.TYPE_LOGIC_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, false));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+
+                    case Constants.TYPE_LOCATION:
+                        formSectionController.addElement(new ButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), new LocationListener() {
+                            @Override
+                            public void onLocationChanged(Location location) {
+
+                                Log.i(TAG, "^^^^^^^^^^ LOCATION CHANGED ^^^^^^^^^^^^");
+
+                                Log.i(TAG, "lat:" + location.getLatitude() + " lon:" + location.getLongitude());
+
+                                getModel().setValue(q.getId(), location.getLatitude() + ", " + location.getLongitude());
+
+
+                            }
+
+                            @Override
+                            public void onStatusChanged(String s, int i, Bundle bundle) {
+
+                            }
+
+                            @Override
+                            public void onProviderEnabled(String s) {
+                                Log.i(TAG, "^^^^^^^^^^ PROVIDER ENABLED ^^^^^^^^^^^^");
+
+                            }
+
+                            @Override
+                            public void onProviderDisabled(String s) {
+                                Log.i(TAG, "^^^^^^^^^^ PROVIDER DISABLED ^^^^^^^^^^^^");
+
+
+                            }
+                        }));
+                        getPlotDetailsValue(q.getId());
+                        break;
+
+
+
+                    case Constants.TYPE_PHOTO:
+                        formSectionController.addElement(new PhotoButtonController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+
+                                try{
+
+                                    startCameraIntent(q.getId());
+
+                                }catch (Exception e){
+                                    e.printStackTrace();
+                                }
+
+
+                            }
+                        }));
+                        getValue(q);
+                        break;
+
+                }
+
+            }
+
+
+
+
+            setUpSkipLogics(q);
+
+        }
+
     }
 
-    String getValue(Question q, JSONObject jsonObject) {
+
+
+
+    String getValue(Question q) {
 
         String defVal = "";
         try {
-            defVal = jsonObject.get(q.getId()).toString();
+            defVal = ALL_ANSWERS_JSON_OBJECT.get(q.getId()).toString();
             getModel().setValue(q.getId(), defVal);
-            //EditText editText = (EditText) formSectionController.getElement("").getView();
-            //editText.setError(q.getHelp_Text__c());
             return defVal;
 
         } catch (JSONException e) {
@@ -644,7 +863,68 @@ public class MyFormFragment extends FormFragment {
 
             return defVal;
         }
+
     }
+
+
+
+    String getPlotDetailsValue(String s) {
+
+        String defVal = "0.0";
+        try {
+            defVal = PLOT_INFO_JSON_OBJECT.getString(s);
+
+            System.out.println("******* FIRST TRY PLOT INFO VALUES *******   " + s + " : " + defVal);
+
+
+        } catch (JSONException e) {
+            System.out.println("\n******* EXCEPTION *******   MESSAGE : " + e.getMessage() + "\n\n");
+
+            try {
+
+                defVal = AO_JSON_OBJECT.getString(s);
+                System.out.println("******* SECOND TRY ******* PLOT'S AO VALUES  " + s + " : " + defVal);
+
+
+            } catch (JSONException f) {
+                System.out.println("\n******* EXCEPTION *******   MESSAGE : " + f.getMessage() + "\n\n");
+
+                try {
+
+                    defVal = AOR_JSON_OBJECT.getString(s);
+                    System.out.println("******* THIRD TRY *******  PLOT'S AOR VALUES  " + s + " : " + defVal);
+
+                } catch (JSONException g) {
+                    System.out.println("\n******* EXCEPTION *******   MESSAGE : " + g.getMessage() + "\n\n");
+
+                    try {
+
+                        defVal = AI_JSON_OBJECT.getString(s);
+                        System.out.println("******* FOURTH TRY *******  PLOT'S AI VALUES  " + s + " : " + defVal);
+
+                    } catch (JSONException h) {
+                        System.out.println("\n******* EXCEPTION *******   MESSAGE : " + g.getMessage() + "\n\n");
+                    }
+                }
+
+            }
+        }
+
+        System.out.println("\n******* VALUE IS *******   : " + defVal + "\n\n");
+
+
+        return defVal;
+    }
+
+
+
+
+
+
+
+
+
+
 
     void setUpSkipLogics(Question q) {
 

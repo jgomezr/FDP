@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -29,8 +30,11 @@ import org.grameen.fdp.object.Monitoring;
 import org.grameen.fdp.object.PlotAssessment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
+import org.grameen.fdp.task.SendFarmersToServer;
+import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DateUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -41,7 +45,6 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.regex.Pattern;
 
-import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -50,7 +53,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by aangjnr on 08/11/2017.
  */
 
-public class FarmerDetailsActivity extends BaseActivity {
+public class FarmerDetailsActivity extends BaseActivity implements Callbacks.NetworkActivityCompleteListener {
 
     boolean itemsLoaded = false;
     RealFarmer farmer;
@@ -61,10 +64,12 @@ public class FarmerDetailsActivity extends BaseActivity {
     TextView villageName;
     TextView landArea;
     TextView lastVisitDate;
+    TextView lastSyncDate;
     TextView addPlot;
-    View syncIndicator;
+    ImageView syncIndicator;
     PlotsListAdapter plotsListAdapter;
 
+    JSONObject ALL_FARMER_ANSWERS_JSON;
     List<RealPlot> plots = new ArrayList<>();
     List<String> PLOT_ASSESSMENT_LIST = new ArrayList<>();
     List<Monitoring> MONITORING_LIST;
@@ -82,7 +87,7 @@ public class FarmerDetailsActivity extends BaseActivity {
 
 
     RecyclerView plotsRecyclerView;
-    boolean monitoringMode = false;
+    //boolean monitoringMode = false;
     private ImageView editFarmerDetails;
     private TextView noOfPlots;
 
@@ -101,8 +106,9 @@ public class FarmerDetailsActivity extends BaseActivity {
         initials = (TextView) findViewById(R.id.initials);
         villageName = (TextView) findViewById(R.id.villageName);
         landArea = (TextView) findViewById(R.id.landSize);
+        lastSyncDate = findViewById(R.id.lastSyncDate);
         lastVisitDate = (TextView) findViewById(R.id.lastVisitDate);
-        syncIndicator = findViewById(R.id.sync);
+        syncIndicator = findViewById(R.id.syncIndicator);
         editFarmerDetails = (ImageView) findViewById(R.id.edit);
         plotsRecyclerView = (RecyclerView) findViewById(R.id.plotsRecyclerView);
         addPlot = (TextView) findViewById(R.id.addPlot);
@@ -114,7 +120,7 @@ public class FarmerDetailsActivity extends BaseActivity {
         if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
 
             //Todo add the rest of the views to hide
-            monitoringMode = true;
+            //monitoringMode = true;
 
             findViewById(R.id.edit).setVisibility(View.GONE);
             findViewById(R.id.addPlot).setVisibility(View.GONE);
@@ -152,17 +158,71 @@ public class FarmerDetailsActivity extends BaseActivity {
         }
 
 
+        findViewById(R.id.sync_farmer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SendFarmersToServer.onNetworkActivityComplete(FarmerDetailsActivity.this);
+
+                syncFarmerData(FarmerDetailsActivity.this);
+
+
+
+            }
+        });
+
+
         onBackClicked();
     }
 
 
     void initializeViews(Boolean loadButtons) {
 
+
+        try {
+            ALL_FARMER_ANSWERS_JSON = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
         name.setText(farmer.getFarmerName());
         code.setText(farmer.getCode());
         villageName.setText(farmer.getVillage());
         landArea.setText(farmer.getLandArea());
-        lastVisitDate.setText(farmer.getLastVisitDate());
+        if(farmer.getSyncStatus() != null) {
+
+            if (farmer.getSyncStatus() == 0) {
+                syncIndicator.setImageResource(R.drawable.ic_sync_problem_black_24dp);
+                syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.cpb_red));
+
+            } else if (farmer.getSyncStatus() == 1) {
+                syncIndicator.setImageResource(R.drawable.ic_check_circle_black_24dp);
+                syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.colorAccent));
+            }
+        }
+
+
+        try{
+
+            String farmAcre = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalLandSize", ""));
+            String totalUnit = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalAreaUnit", ""));
+
+            landArea.setText(farmAcre + " " + totalUnit);
+
+        }catch(Exception e){
+            e.printStackTrace();
+
+            landArea.setVisibility(View.GONE);
+
+        }
+
+
+
+        lastSyncDate.setText(prefs.getString("lastSync", "--"));
+        lastVisitDate.setText(farmer.getLastModifiedDate());
+
+
+
 
 //        syncIndicator.setVisibility((farmer.getSyncStatus() == Constants.SYNC_OK) ? View.VISIBLE : View.GONE);
 
@@ -214,22 +274,21 @@ public class FarmerDetailsActivity extends BaseActivity {
 
 
         if (loadButtons) {
-            LinearLayout dynamicButtonsLayout = (LinearLayout) findViewById(R.id.dynamicButtons);
+            final LinearLayout dynamicButtonsLayout = (LinearLayout) findViewById(R.id.dynamicButtons);
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
 
-            List<Form> forms;
-            if(monitoringMode) forms = databaseHelper.getAllForms();
-            else forms = databaseHelper.getAllDiagnosticForms();
 
-            for (final Form f : forms) {
+
+            for (final Form f : FORMS) {
 
                 final Button btn = (Button) getLayoutInflater().inflate(R.layout.dynamic_button, null);
                 //btn.setId(f.getId());
 
                 btn.setText(f.getName());
+                btn.setTag(f.getType());
 
                  dynamicButtonsLayout.addView(btn, params);
 
@@ -241,16 +300,20 @@ public class FarmerDetailsActivity extends BaseActivity {
 
                         if(f.getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS)){
 
-                            String familyMembers = "1";
-
-                            String farmerProfileJsonString = databaseHelper.getSpecificFarmerDetails(Constants.FARMER_PROFILE, farmer.getCode());
-
-                            if(farmerProfileJsonString == null){
-                                Log.i(TAG, "FAMILY MEMBERS OF FARMER PROFILE IS NULL");
+                            String familyMemnersKey = prefs.getString("no_family_members_id", null);
+                            Log.i(TAG, "FAMILY MEMBERS KEY " + prefs.getString("no_family_members_id", "null"));
+                            String familyMembers;
 
 
+                            try {
+                                familyMembers = ALL_FARMER_ANSWERS_JSON.getString(familyMemnersKey);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                familyMembers = "1";
+                            }
 
-                                showAlertDialog(false, getResources(R.string.fill_data), getResources(R.string.enter_data_rationale) + farmer.getFarmerName() + getResources(R.string.before_proceed_suffux), new DialogInterface.OnClickListener() {
+
+                               /* showAlertDialog(false, getResources(R.string.fill_data), getResources(R.string.enter_data_rationale) + farmer.getFarmerName() + getResources(R.string.before_proceed_suffux), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
 
@@ -258,26 +321,11 @@ public class FarmerDetailsActivity extends BaseActivity {
 
                                     }
                                 }, getResources(R.string.ok), null, "", 0);
+*/
 
 
-
-
-                            }else{
 
                                 Log.i(TAG, "FAMILY MEMBERS KEY " + prefs.getString("no_family_members_id", "null"));
-
-                                try {
-                                    JSONObject jsonObject;
-                                    jsonObject = new JSONObject(farmerProfileJsonString);
-
-
-                                    familyMembers = jsonObject.get(prefs.getString("no_family_members_id", "null")).toString();
-                                    Log.i(TAG, "FAMILY MEMBERS OF FARMER " + farmer.getFarmerName() + " IS " + familyMembers);
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                    familyMembers = "1";
-                                }
 
                                 if(familyMembers.equalsIgnoreCase("null")){
                                     Log.i(TAG, "FAMILY MEMBERS OF FARMER NULL");
@@ -295,19 +343,6 @@ public class FarmerDetailsActivity extends BaseActivity {
 
                                 }else {
 
-                                    try {
-                                        JSONObject jsonObject;
-                                        jsonObject = new JSONObject(farmerProfileJsonString);
-
-
-                                        familyMembers = jsonObject.get(prefs.getString("no_family_members_id", "null")).toString();
-                                        Log.i(TAG, "FAMILY MEMBERS OF FARMER " + farmer.getFarmerName() + " IS " + familyMembers);
-
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
-
-
                                     Intent intent = new Intent(FarmerDetailsActivity.this, FamilyMembersActivity_v2.class);
                                     intent.putExtra("farmer", new Gson().toJson(farmer));
                                     intent.putExtra("familyMembers", familyMembers);
@@ -315,12 +350,6 @@ public class FarmerDetailsActivity extends BaseActivity {
 
 
                                 }
-
-
-                            }
-
-
-
 
                         }else {
 
@@ -330,8 +359,8 @@ public class FarmerDetailsActivity extends BaseActivity {
                             Intent intent = new Intent(FarmerDetailsActivity.this, Add_EditFarmerDetailsActivity.class);
                             intent.putExtra("farmer", new Gson().toJson(farmer));
                             intent.putExtra("flag", "edit");
-
-                            intent.putExtra("formType", btn.getText().toString().toLowerCase());
+                            intent.putExtra("type", btn.getTag().toString());
+                            intent.putExtra("formLabel", btn.getText().toString().toLowerCase());
                             startActivity(intent);
                             //finish();
 
@@ -668,7 +697,7 @@ public class FarmerDetailsActivity extends BaseActivity {
 
                     //Todo go to plot details
 
-                    if(!monitoringMode) {
+                    if(!IS_MONITIRING_MODE) {
 
 
                         Intent intent = new Intent(FarmerDetailsActivity.this, PlotDetailsActivity.class);
@@ -690,7 +719,7 @@ public class FarmerDetailsActivity extends BaseActivity {
             });
 
 
-            if (!monitoringMode)
+            if (!IS_MONITIRING_MODE)
                 plotsListAdapter.OnLongClickListener(new PlotsListAdapter.OnLongClickListener() {
                     @Override
                     public void onLongClick(View view, final int position) {
@@ -795,8 +824,7 @@ public class FarmerDetailsActivity extends BaseActivity {
 
         try{
 
-            JSONObject productiveProfile = new JSONObject(databaseHelper.getProductiveProfileJson(farmerCode));
-            farmAcre = Double.parseDouble(productiveProfile.get(prefs.getString("totalLandSize", "")).toString());
+             farmAcre = Double.parseDouble(ALL_FARMER_ANSWERS_JSON.get(prefs.getString("totalLandSize", "")).toString());
 
            // totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalAreaUnit", ""));
 
@@ -1033,9 +1061,6 @@ public class FarmerDetailsActivity extends BaseActivity {
     }
 
 
-
-
-
     String getValue(String questionId, JSONObject jsonObject){
 
         String answer = "--";
@@ -1048,9 +1073,6 @@ public class FarmerDetailsActivity extends BaseActivity {
 
         return answer;
     }
-
-
-
 
 
     Boolean getLogicValue(Logic logic) {
@@ -1767,5 +1789,69 @@ public class FarmerDetailsActivity extends BaseActivity {
 
 
     }
+
+
+
+
+    @Override
+    public void taskComplete(String response) {
+
+        try {
+            progressDialog.dismiss();
+            SendFarmersToServer.removeOnNetworkActivityComplete();
+
+        }catch(NullPointerException e){e.printStackTrace();}
+
+
+        if(response.contains(Constants.RESPONSE_SUCCESS)){
+
+            lastSyncDate.setText(prefs.getString("lastSync", "--"));
+
+            syncIndicator.setImageResource(R.drawable.ic_check_circle_black_24dp);
+            syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.colorAccent));
+
+
+
+
+            showAlertDialog(true, getResources(R.string.sync_complete), getResources(R.string.all_data_synced), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            }, getResources(R.string.ok), null, "", 0);
+
+            databaseHelper.setAllFarmersAsSynced();
+            prefs.edit().putString("lastSync", DateUtil.getFormattedDateMMDDYYYYhhmmaa()).apply();
+
+
+
+
+
+
+
+        }else if(response.contains(Constants.RESOPNSE_ERROR)) {
+
+            syncIndicator.setImageResource(R.drawable.ic_sync_problem_black_24dp);
+            syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.cpb_red));
+
+
+
+            showAlertDialog(true, getResources(R.string.generic_error), getResources(R.string.connection_error), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            }, getResources(R.string.ok), null, "", 0);
+
+        }else{
+
+            CustomToast.makeToast(this, "Could not send farmers data to server. Please try again!", Toast.LENGTH_LONG).show();
+
+        }
+
+
+
+    }
+
 
 }

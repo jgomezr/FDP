@@ -21,16 +21,51 @@
 
 
 
-        <fragment
 
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/bottom_buttons"
-            tools:context=".activity.PendingOrderMapDetails"/>
+            >
 
 
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/placeHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_normal"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_points"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/spacing_quarter"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_3_more_points"
+
+                />
+
+        </LinearLayout>
 
 
         <LinearLayout

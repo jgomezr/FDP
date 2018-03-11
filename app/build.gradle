@@ -91,6 +91,7 @@ android {
     compile 'com.google.maps.android:android-maps-utils:0.5+'
     compile 'io.apisense:rhino-android:1.0'
     compile 'com.github.wooplr:Spotlight:1.2.3'
+    compile 'com.android.volley:volley:1.1.0'
     compile 'com.google.android.gms:play-services-maps:10.2.0'
     compile 'com.google.android.gms:play-services-location:10.2.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'

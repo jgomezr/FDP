@@ -105,7 +105,6 @@ public class MonitoringFormFragment extends FormFragment {
             VALUES_JSON_STRING = getArguments().getString("json");
 
         }
-
         databaseHelper = DatabaseHelper.getInstance(context);
 
 

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-117:12
@@ -24,6 +24,7 @@ MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/t
 MERGED from [com.android.support:percent:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/bf6620954cba4c61cd6a3552bba9cd8f/AndroidManifest.xml:17:1-22:12
 MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/faf17674acc33ac9dd30f77e796eed4d/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.volley:volley:1.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/volley-1.1.0.aar/b3fd06454be06ce619714f8b1e42ebe7/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:16:1-25:12
 MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:2:1-5:12
 MERGED from [com.github.ozodrukh:CircularReveal:2.0.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/CircularReveal-2.0.1.aar/0689e7d01a873a95d7591d3081f57d0e/AndroidManifest.xml:2:1-12:12
@@ -50,20 +51,20 @@ MERGED from [com.android.support:support-media-compat:27.0.2] /Users/aangjnr/.gr
 MERGED from [com.android.support:support-compat:27.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/47b1b99f176a9b2f3a684b2f3caae9c1/AndroidManifest.xml:17:1-22:12
 MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/f95d656a506f6c77bd9409f2eaeafdd8/AndroidManifest.xml:2:1-4:12
 MERGED from [android.arch.lifecycle:runtime:1.0.3] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/6730158d8f4b959dd5cdc13f6becf88f/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
 	package
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:4:2-27
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-124:12
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:1-128:12
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:11-69
@@ -150,7 +151,7 @@ MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.g
 	android:required
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:29:3-26
 application
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:37:2-114:16
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:37:2-118:16
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-20
 MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
@@ -175,6 +176,8 @@ MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/t
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/circleimageview-2.1.0.aar/23a2278a321e3ca158a8020c3d3a756b/AndroidManifest.xml:9:5-20
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:7:5-11:19
+MERGED from [com.android.volley:volley:1.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/volley-1.1.0.aar/b3fd06454be06ce619714f8b1e42ebe7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/volley-1.1.0.aar/b3fd06454be06ce619714f8b1e42ebe7/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:4:5-19
@@ -337,24 +340,34 @@ activity#org.grameen.fdp.activity.FDPStatusActivity
 ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:9-64
 	android:name
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:19-61
+activity#org.grameen.fdp.activity.ImageViewActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:99:9-102:46
+	android:excludeFromRecents
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:100:4-37
+	android:windowSoftInputMode
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:101:4-47
+	android:theme
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:102:4-44
+	android:name
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:99:19-61
 provider#br.com.mauker.materialsearchview.db.HistoryProvider
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:101:9-106:29
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:105:9-110:29
 	android:authorities
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:103:4-80
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:107:4-80
 	android:protectionLevel
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:105:4-39
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:109:4-39
 	android:syncable
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:106:4-27
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:110:4-27
 	android:exported
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:104:4-28
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:108:4-28
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:102:4-70
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:106:4-70
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:109:3-111:45
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:113:3-115:45
 	android:value
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:111:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:115:4-43
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:110:4-49
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:114:4-49
 uses-sdk
 INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
@@ -399,6 +412,8 @@ MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/cac
 MERGED from [com.jaredrummler:material-spinner:1.2.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/material-spinner-1.2.1.aar/faf17674acc33ac9dd30f77e796eed4d/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:5:5-43
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/3be7a8e702f9eb5041da7f4c4ffdabf0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/volley-1.1.0.aar/b3fd06454be06ce619714f8b1e42ebe7/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/volley-1.1.0.aar/b3fd06454be06ce619714f8b1e42ebe7/AndroidManifest.xml:7:5-43
 MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:23:5-43
 MERGED from [com.google.android.gms:play-services-maps:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.0.aar/ec9ba857222c9451aaa327759ac65925/AndroidManifest.xml:23:5-43
 MERGED from [com.google.android.gms:play-services-location:10.2.0] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.0.aar/403253d9dc811a9f20b4034db4c7d7db/AndroidManifest.xml:3:5-43

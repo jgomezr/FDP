@@ -113,11 +113,14 @@
 
     <string name="getting_data">Getting data</string>
     <string name="please_wait">Please wait a moment…</string>
-    <string name="connection_error">"An error has occurred. Please check your connection and try again :("</string>
+    <string name="generic_error">Error</string>
+    <string name="connection_error">"An error has occurred. Please try again :("</string>
     <string name="update_questions_data">Updating questions data</string>
     <string name="could_not_connect">Could not connect</string>
     <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
     <string name="all_data_downloaded">All data downloaded successfully!</string>
+
+
     <string name="download_complete">Download Complete</string>
     <string name="getting_skip_logic">Obtaining Skip Logic data</string>
     <string name="getting_recommendations">Obtaining Recommendations data</string>
@@ -236,4 +239,38 @@
         <item name="14">2030</item>
         <item name="15">2031</item>
     </string-array>
+
+
+
+    <string name="all_data_synced">All data synced successfully!</string>
+    <string name="sync_complete">Sync Complete</string>
+
+    <string name="no_farmers">No new farmer data to sync</string>
+    <string name="no_new_data">No new data</string>
+
+    <string name="calc_area">click to calculate plot area</string>
+    <string name="title_area_calc">area calculation</string>
+    <string name="no_points">No Points added yet</string>
+    <string name="add_3_more_points">To calculate area, please add 3 or more points.</string>
+    <string name="delete">Delete photo</string>
+    <string name="delete_photo_rationale">Are you sure you want to delete photo?</string>
+    <string name="click_photo_to_delete">You can click on photo to remove/delete</string>
+    <string name="no_image_taken">No photo was selected.</string>
+    <string name="something_went_wrong">Something went wrong :( </string>
+
+
+    <string name="image_options">Please select an option</string>
+
+    <string name="view">View</string>
+
+
+    <string name="save">Save</string>
+    <string name="save_and_continue">Save and continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="take_picture">Take picture</string>
+
+
+
+
+
 </resources>

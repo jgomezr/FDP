@@ -368,6 +368,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-hdpi/ic_action_name.png"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_refresh_black_24dp.png",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-hdpi/ic_refresh_black_24dp.png"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_access_time_grey_500_18dp.png",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-hdpi/ic_access_time_grey_500_18dp.png"
     },

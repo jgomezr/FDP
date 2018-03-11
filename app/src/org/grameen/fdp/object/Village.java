@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 public class Village {
 
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
     String Name;
     String Id;
 
@@ -17,6 +20,14 @@ public class Village {
 
 
     public Village() {
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     public String getName() {

@@ -9,6 +9,9 @@ import com.google.gson.annotations.SerializedName;
 public class Form {
 
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
     String Name;
     @SerializedName("Type__c")
     String type;
@@ -23,6 +26,14 @@ public class Form {
         this.type = type;
     }
 
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
+    }
 
     public String getName() {
         return Name;

@@ -295,10 +295,10 @@
 
 
             <TextView
-                android:id="@+id/plot_mapping"
+                android:id="@+id/plot_area_calculation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="click to map plot"
+                android:text="@string/calc_area"
                 style="@style/TextAppearance.AppCompat.Button"
                 android:padding="@dimen/spacing_normal"
                 android:layout_gravity="right"

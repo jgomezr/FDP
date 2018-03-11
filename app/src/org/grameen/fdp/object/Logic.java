@@ -11,6 +11,10 @@ import org.json.JSONObject;
 public class Logic {
 
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
+
     @SerializedName("Id")
     String id;
 
@@ -165,6 +169,15 @@ public class Logic {
     String LOGICAL_OPERATOR;
 
     public Logic() {
+    }
+
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     public String getEvaluatedValue() {

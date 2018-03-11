@@ -7,13 +7,28 @@ package org.grameen.fdp.utility;
 
 public class Constants {
 
+
+    public static final String FORM_DIAGNOSTIC = "diagnostic";
+    public static final String FORM_MONITORING = "monitoring";
+
+
     public static final String TYPE_TEXT = "text";
     public static final String TYPE_NUMBER = "number";
     public static final String TYPE_NUMBER_DECIMAL = "decimal";
     public static final String TYPE_COMPLEX_CALCULATION = "complex calculation";
 
+    public static final String ANSWERS = "fpd_Answer__c";
 
+    public static final String EMPTY_STRING = "";
+    public static final String RESPONSE_SUCCESS = "'{   responseCode : 00 }'";
+    public static final String RESOPNSE_ERROR = "'{   responseCode : 10 }'";
+
+    public static final String ID = "Id";
+
+    public static final String NULL_STRING = "null";
     public static final String TYPE_LOCATION = "geolocation";
+    public static final String TYPE_PHOTO = "photo";
+
     public static final String TYPE_SELECTABLE = "single select";
     public static final String TYPE_MULTI_SELECTABLE = "multi select";
 
@@ -55,7 +70,7 @@ public class Constants {
 
 
 
-    public static final String REGISTER = " register";
+    public static final String DIAGNOSTIC = " register";
     public static final String MONITORING = "monitoring";
     public static final int PLACE_PICKER_REQUEST = 101;
     public static final int PERMISSION_FINE_LOCATION = 102;

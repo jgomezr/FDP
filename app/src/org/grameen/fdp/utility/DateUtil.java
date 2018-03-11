@@ -33,6 +33,26 @@ public class DateUtil {
 
     }
 
+    public static String getFormattedDateMMDDYYYY() {
+
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
+        return df.format(Calendar.getInstance().getTime());
+
+
+    }
+
+    public static String getFormattedDateMMDDYYYYhhmmaa() {
+
+
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
+        return df.format(Calendar.getInstance().getTime());
+
+
+    }
+
+    //3/1/2018 12:20 PM
+
 
     public static String getFormattedTime() {
 

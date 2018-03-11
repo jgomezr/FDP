@@ -46,8 +46,7 @@ public class FamilyMembersActivity extends BaseActivity {
     List<Question> questions;
     Button save;
     List<FamilyMembersData> familyMembersData = new ArrayList<>();
-
-
+    JSONObject ALL_ANSWERS_JSON_OBJECT;
     JSONArray jsonArray = null;
 
 
@@ -107,10 +106,16 @@ public class FamilyMembersActivity extends BaseActivity {
 
         if (farmer != null) {
 
+            String familyMembersArray = "[]";
+
             Toolbar toolbar = setToolbar("Name " + farmer.getFarmerName() + "\tCode " + farmer.getCode());
 
+            try{
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
+                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString("familyMembers");
+            }catch(Exception e){ e.printStackTrace();}
 
-            String familyMembersArray = databaseHelper.getFamilyMembersJson(farmer.getCode());
+
 
             Log.i("FM ACTIVITY", "ARRAY IS " +  familyMembersArray );
 
@@ -191,11 +196,22 @@ public class FamilyMembersActivity extends BaseActivity {
 
                     Log.i(TAG, "JSON ARRAY STRING IS " + jsonArray.toString());
 
-                    if (databaseHelper.editFamilyMembersJson(farmer.getCode(), jsonArray.toString())) {
+                    JSONObject newJson = new JSONObject();
+                    try {
+                        newJson.put("familyMembers", jsonArray.toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    if (databaseHelper.editAllAnswersJson(farmer.getCode(),newJson)) {
                         CustomToast.makeToast(FamilyMembersActivity.this, "Data has been saved", Toast.LENGTH_SHORT).show();
                         finish();
                     } else
                         CustomToast.makeToast(FamilyMembersActivity.this, "Uh oh! Data was not saved", Toast.LENGTH_SHORT).show();
+
+
+
+
 
                 }
             }

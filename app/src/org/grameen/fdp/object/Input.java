@@ -11,6 +11,10 @@ public class Input {
     String Id;
     String Name;
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
+
+
     @SerializedName("cost__c")
     String cost;
 
@@ -73,5 +77,13 @@ public class Input {
 
     public void setUnit(String unit) {
         this.unit = unit;
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 }

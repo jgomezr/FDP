@@ -8,6 +8,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class SkipLogic {
 
+    @SerializedName("LastModifiedDate")
+    String lastModifiedDate;
 
     @SerializedName("Id")
     String id;
@@ -32,6 +34,14 @@ public class SkipLogic {
 
 
     public SkipLogic() {
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
     }
 
     public String getName() {
