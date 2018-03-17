@@ -16,6 +16,7 @@ import org.grameen.fdp.object.Data2;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.RecommendationsPlusActivity;
+import org.grameen.fdp.utility.CustomToast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,8 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
     TableView tableView;
     DetailedYearTableViewAdapter myTableViewAdapter;
     TextView currency;
+    Boolean DID_LABOUR = false;
+    String LABOUR_TYPE;
 
 
     int year;
@@ -66,7 +69,12 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
         farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
         year = getIntent().getIntExtra("year", -1);
 
+        DID_LABOUR = getIntent().getBooleanExtra("labour", false);
+        LABOUR_TYPE = getIntent().getStringExtra("labourType");
+
         Toolbar toolbar = setToolbar(getResources(R.string.year) + year);
+
+        Log.i(TAG, "^^^^^^^^ LABOUR? " + DID_LABOUR + " TYPE = " + LABOUR_TYPE);
 
 
         if (farmer != null) {
@@ -118,7 +126,7 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
                     activities.add(data.getLabel());
                     suppliesCost.add(data.getV1());
 
-                    if(prefs.getBoolean("labour", false))
+                    if(DID_LABOUR)
                     labourCost.add(data.getV2());
 
 
@@ -132,7 +140,7 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
                 TABLE_DATA_LIST.add(new Data(getResources(R.string.activities), activities, TAG_OTHER_TEXT_VIEW));
                 TABLE_DATA_LIST.add(new Data(getResources(R.string.supplies), suppliesCost, TAG_OTHER_TEXT_VIEW));
 
-                if(prefs.getBoolean("labour", false))
+                if(DID_LABOUR)
                     TABLE_DATA_LIST.add(new Data(getResources(R.string.labour), labourCost, TAG_OTHER_TEXT_VIEW));
 
 
@@ -150,10 +158,21 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
 
     Data2 getMonthlyData(String id, String month) {
 
+        List<RecommendationsPlusActivity> recommendationsPlusActivities = new ArrayList<>();
         Data2 data = new Data2("", "", "");
         try {
 
-            List<RecommendationsPlusActivity> recommendationsPlusActivities = databaseHelper.getRecommendationPlusAcivityByRecommendationIdMonthAndYear(id, month, year + "");
+            if(DID_LABOUR)
+                if(LABOUR_TYPE.equalsIgnoreCase("seasonal"))
+                    recommendationsPlusActivities = databaseHelper.getSeasonalRecommendationPlusAcivityByRecommendationIdMonthAndYear(id, month, year + "", "true");
+                else
+                    recommendationsPlusActivities = databaseHelper.getRecommendationPlusAcivityByRecommendationIdMonthAndYear(id, month, year + "");
+
+                else
+                recommendationsPlusActivities = databaseHelper.getRecommendationPlusAcivityByRecommendationIdMonthAndYear(id, month, year + "");
+
+
+
 
             StringBuilder activities = new StringBuilder() ;
             StringBuilder labourCost = new StringBuilder() ;
@@ -163,30 +182,17 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
             for (RecommendationsPlusActivity ra : recommendationsPlusActivities) {
 
                 try {
-
-
-
-                    if (ra == recommendationsPlusActivities.get(recommendationsPlusActivities.size() - 1)) {
-
                         if(ra.getActivityName() != null && !ra.getActivityName().equals("null"))
                             if (!activities.toString().toLowerCase().contains(ra.getActivityName().toLowerCase()))
-                                activities.append(toCamelCase(ra.getActivityName()));
 
-                        suppliesCost.append(ra.getSuppliesCost());
-                        labourCost.append(ra.getLaborCost());
-
-
-                    }else{
-
-                        if(ra.getActivityName() != null && !ra.getActivityName().equals("null"))
-                            if (!activities.toString().toLowerCase().contains(ra.getActivityName().toLowerCase()))
                                 activities.append(toCamelCase(ra.getActivityName())).append(", ");
 
                         suppliesCost.append(ra.getSuppliesCost()).append("+");
+
                         labourCost.append(ra.getLaborCost()).append("+");
 
 
-                    }
+
 
                 } catch (Exception ignored) {
                     ignored.printStackTrace();
@@ -196,6 +202,11 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
 
 
             }
+
+
+
+            suppliesCost.append("0.0");
+            labourCost.append("0.0");
 
 
             Log.i(TAG, "Appended Activities are = " + activities.toString());
