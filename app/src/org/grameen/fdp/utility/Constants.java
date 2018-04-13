@@ -9,7 +9,15 @@ public class Constants {
 
 
     public static final String FORM_DIAGNOSTIC = "diagnostic";
+    public static final String FORM_DIAGNOSTIC_MONITORING = "diagnostic_monitoring";
+
     public static final String FORM_MONITORING = "monitoring";
+
+    public static final String YES = "Yes";
+    public static final String NO = "No";
+
+
+
 
 
     public static final String TYPE_TEXT = "text";
@@ -20,8 +28,18 @@ public class Constants {
     public static final String ANSWERS = "fpd_Answer__c";
 
     public static final String EMPTY_STRING = "";
-    public static final String RESPONSE_SUCCESS = "'{   responseCode : 00 }'";
-    public static final String RESOPNSE_ERROR = "'{   responseCode : 10 }'";
+    public static final String RESPONSE_SUCCESS = "0";
+    public static final String RESOPNSE_ERROR = "1";
+
+    public static final String SUBMISSION = "submission";
+    public static final String RESPONSE_CODE = "responseCode";
+    public static final String FARMER_ID = "farmerId";
+
+    public static final int SYNC_STATUS_COMPLETE = 0;
+    public static final int SYNC_STATUS_PARTIAL_SYNC = 1;
+    public static final int SYNC_STATUS_NO_SYNC = -1;
+
+
 
     public static final String ID = "Id";
 

@@ -56,6 +56,7 @@ import com.google.maps.android.SphericalUtil;
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.PointsListAdapter;
 import org.grameen.fdp.object.Plot;
+import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.PermissionsUtils;
@@ -63,6 +64,7 @@ import org.grameen.fdp.utility.PermissionsUtils;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import io.codetail.animation.ViewAnimationUtils;
 
@@ -78,7 +80,7 @@ public class MapActivity extends BaseActivity {
     Button addPoint;
     Button calculateArea;
     List<LatLng> latLngs = new ArrayList<>();
-    Plot plot;
+    RealPlot plot;
     RecyclerView recyclerView;
     boolean GpsStatus = false;
     LocationManager locationManager;
@@ -89,7 +91,7 @@ public class MapActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
@@ -101,17 +103,48 @@ public class MapActivity extends BaseActivity {
         recyclerView = findViewById(R.id.recycler_view);
 
 
-        plot = new Gson().fromJson(getIntent().getStringExtra("plot"), Plot.class);
+        plot = new Gson().fromJson(getIntent().getStringExtra("plot"), RealPlot.class);
 
         Toolbar toolbar;
         if (plot != null) {
             toolbar = setToolbar(plot.getName() +" " + getResources(R.string.title_area_calc));
 
         } else {
-            toolbar = setToolbar("Plot Area Mapping");
+            toolbar = setToolbar("Plot GPS Area Calculation");
 
 
         }
+
+        Log.i(TAG, "PLOT POINTS " + plot.getGpsPoints());
+
+        if (plot.getGpsPoints() != null && !plot.getGpsPoints().equalsIgnoreCase("")) {
+
+
+            try {
+                String llgs[] = plot.getGpsPoints().split("_");
+                for (String llg : llgs) {
+
+                    String values[] = llg.split(",");
+
+                    latLngs.add(new LatLng(Double.parseDouble(values[0]), Double.parseDouble(values[1])));
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+        if (latLngs.size() > 0)
+            findViewById(R.id.placeHolder).setVisibility(View.GONE);
+
+
+
+
+
+
 
 
         mAdapter = new PointsListAdapter(this, latLngs);
@@ -162,23 +195,65 @@ public class MapActivity extends BaseActivity {
                     computeAreaInSquareMeters();
 
                 }else{
-                        showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + " in square meters is " + AREA_OF_PLOT, new DialogInterface.OnClickListener() {
+
+                    Double inHectares = convertToHectres(AREA_OF_PLOT);
+                    Double inAcres = convertToAcres(AREA_OF_PLOT);
+
+
+                    String message = "Area in Hectares is " + new DecimalFormat("0.00").format(inHectares) +
+                            "\nArea in Acres is " + new DecimalFormat("0.00").format(inAcres) +
+                            "\nArea in Square Meters is " + new DecimalFormat("0.00").format(AREA_OF_PLOT);
+
+                    showAlertDialog(false, "Area of plot " + plot.getName(), message, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                                 dialogInterface.dismiss();
 
-                                plot.setArea(AREA_OF_PLOT.toString());
 
                             }
-                        }, getResources(R.string.ok),null, "", 0);
+                    }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            StringBuilder builder = new StringBuilder();
+
+                            //Todo save latLngs
+                            for (LatLng latLng : latLngs) {
+
+                                if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
+                                    builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
+                                else
+                                    builder.append(latLng.latitude).append(",").append(latLng.longitude);
+
+                            }
+
+
+                            Log.i(TAG, "STRING ARRAY OF LatLngs = " + builder);
+
+                            dialog.dismiss();
+
+                            if (databaseHelper.editPlotGPS(plot.getId(), builder.toString())) {
+
+                                CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
+
+                            } else {
+
+                                CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
+
+                            }
+
+
+                        }
+                    }, getResources(R.string.save), 0);
+
 
                         hasCalculated = true;
 
                 }
 
                 } else
-                    CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG);
+                    CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG).show();
 
 
 
@@ -267,17 +342,57 @@ public class MapActivity extends BaseActivity {
             AREA_OF_PLOT = SphericalUtil.computeArea(latLngs);
             Log.d(TAG, "computeAreaInSquareMeters " + AREA_OF_PLOT);
 
+        Double inHectares = convertToHectres(AREA_OF_PLOT);
+        Double inAcres = convertToAcres(AREA_OF_PLOT);
 
-            showAlertDialog(false, "Area of plot", "The area of " + plot.getName() + " in square meters is " + new DecimalFormat("0.00").format(AREA_OF_PLOT), new DialogInterface.OnClickListener() {
+
+        String message = "Area in Hectares is " + new DecimalFormat("0.00").format(inHectares) +
+                "\nArea in Acres is " + new DecimalFormat("0.00").format(inAcres) +
+                "\nArea in Square Meters is " + new DecimalFormat("0.00").format(AREA_OF_PLOT);
+
+
+        showAlertDialog(false, "Area of plot " + plot.getName(), message, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
                     dialogInterface.dismiss();
 
-                    plot.setArea(AREA_OF_PLOT.toString());
 
                 }
-            }, getResources(R.string.ok),null, "", 0);
+        }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                StringBuilder builder = new StringBuilder();
+
+                //Todo save latLngs
+                for (LatLng latLng : latLngs) {
+
+                    if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
+                        builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
+                    else
+                        builder.append(latLng.latitude).append(",").append(latLng.longitude);
+
+                }
+
+
+                Log.i(TAG, "STRING ARRAY OF LatLngs = " + builder);
+
+                dialog.dismiss();
+
+                if (databaseHelper.editPlotGPS(plot.getId(), builder.toString())) {
+
+                    CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
+
+                } else {
+
+                    CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
+
+                }
+
+
+            }
+        }, getResources(R.string.save), 0);
 
 
             hasCalculated = true;

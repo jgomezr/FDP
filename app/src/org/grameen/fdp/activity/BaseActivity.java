@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -24,7 +23,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -41,38 +39,29 @@ import org.grameen.fdp.fragment.MonitoringFormFragment;
 import org.grameen.fdp.fragment.MyFormFragment;
 import org.grameen.fdp.object.Form;
 import org.grameen.fdp.object.Logic;
+import org.grameen.fdp.object.Monitoring;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.SkipLogic;
-import org.grameen.fdp.task.SendFarmersToServer;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DatabaseHelper;
 import org.grameen.fdp.utility.DateUtil;
 import org.grameen.fdp.utility.MySingleton;
+import org.grameen.fdp.utility.Utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-import java.text.DecimalFormat;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -83,18 +72,32 @@ import javax.script.ScriptException;
 
 public class BaseActivity extends AppCompatActivity {
 
+
+    public static Callbacks.NetworkActivityCompleteListener networkActivityCompleteListener;
+
+    static String ISO_CODE;
+
+    int COUNT = 0;
+
+    static int SELECTED_FORM_INDEX;
+    int SYNC_STATUS = Constants.SYNC_STATUS_NO_SYNC;
+    String message = "";
+    String title = "";
+    private List<RealFarmer> UN_SYNCED_FARMERS;
     private static final String DOUBLE_LINE = "==============================================================================";
     private static final String SINGLE_LINE = "------------------------------------------------------------------------------";
     public List<Form> FORMS;
-    static int SELECTED_FORM_INDEX = 0;
-
+    String date;
     public static ProgressDialog progressDialog;
     SharedPreferences prefs;
-    DatabaseHelper databaseHelper;
+    public DatabaseHelper databaseHelper;
     ScriptEngine engine;
     static String TAG = "BASE ACTIVITY";
     private String apiVersion;
+    Boolean IS_TRANSLATION = false;
     public boolean IS_MONITIRING_MODE;
+    String type = Constants.FORM_DIAGNOSTIC;
+    public String correspondingMessage;
 
     public static void showError(Context context, Exception e) {
         Toast toast = Toast.makeText(context,
@@ -140,23 +143,34 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.right_slide, R.anim.slide_out_left);
-
-
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+        ISO_CODE = prefs.getString("ISO", "");
+
+        IS_MONITIRING_MODE = prefs.getString("flag", "").equalsIgnoreCase(Constants.MONITORING);
+        if (IS_MONITIRING_MODE)
+            setTheme(R.style.AppTheme_Monitoring);
+        else
+            setTheme(R.style.AppTheme);
+
+
+        IS_TRANSLATION = prefs.getBoolean("toggleTranslation", false);
+
+
 
         apiVersion = ApiVersionStrings.getVersionNumber(this);
 
         databaseHelper = DatabaseHelper.getInstance(this);
 
-        IS_MONITIRING_MODE = prefs.getString("flag", "").equalsIgnoreCase(Constants.MONITORING);
+
+        date = DateUtil.getFormattedDateMMDDYYYY();
 
 
-
-
-        if(IS_MONITIRING_MODE)
+        if (IS_MONITIRING_MODE)
             FORMS = databaseHelper.getAllForms();
         else
             FORMS = databaseHelper.getAllDiagnosticForms();
@@ -275,6 +289,17 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
+    public void onBackClicked(View v) {
+
+        try {
+            onBackPressed();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     boolean hasPermissions(Context context, String permission) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
 
@@ -318,24 +343,25 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
+
     String calculate(String equation) throws ScriptException {
         Double value = 0.0;
         try {
-            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim().replace(",", ""));
         } catch (Exception e) {
             e.printStackTrace();
             value = 0.0;
         }
 
-        return (new DecimalFormat("#,###,###").format(value));
+        return String.valueOf(value);
     }
 
 
-    Double calculateDouble(String equation){
+    Double calculateDouble(String equation) {
         Log.i(TAG, "Evaluating " + equation);
         Double value = 0.0;
         try {
-            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+            value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim().replace(",", ""));
         } catch (Exception e) {
             e.printStackTrace();
             value = null;
@@ -360,8 +386,8 @@ public class BaseActivity extends AppCompatActivity {
         } catch (ScriptException | NumberFormatException e) {
             System.out.println("******* EXCEPTION ****** " + e.getMessage());
 
-            if(sl.getLogicalOperator().equalsIgnoreCase("=="))
-            value = sl.getAnswerValue().equalsIgnoreCase(newValue);
+            if (sl.getLogicalOperator().equalsIgnoreCase("=="))
+                value = sl.getAnswerValue().equalsIgnoreCase(newValue);
             else value = !sl.getAnswerValue().equalsIgnoreCase(newValue);
 
         } finally {
@@ -395,12 +421,9 @@ public class BaseActivity extends AppCompatActivity {
                 System.out.println("**********  EXCEPTION ******************" + e.getMessage());
 
 
-
-
-                if(logic.getLOGICAL_OPERATOR().equalsIgnoreCase("=="))
+                if (logic.getLOGICAL_OPERATOR().equalsIgnoreCase("=="))
                     value = inputValue.equalsIgnoreCase(logic.getVALUE());
                 else value = !inputValue.equalsIgnoreCase(logic.getVALUE());
-
 
 
                 return value;
@@ -422,96 +445,727 @@ public class BaseActivity extends AppCompatActivity {
 
         else {
 
-            Log.i(TAG, "<<<<<<<<<<  LOGIC NAME IS = " + logic.getName() + ">>>>>>>>>>>>>>\n");
 
+            if (logic.getValue1() != null && !logic.getValue1().equalsIgnoreCase("null") && !logic.getValue1().isEmpty()) {
+
+
+                Log.i(TAG, "<<<<<<<<<<  LOGIC NAME IS = " + logic.getName() + ">>>>>>>>>>>>>>\n");
+
+
+                if (logic.getQuestion10() != null && !logic.getQuestion10().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 10 QUESTIONS WITH QUESTION VALUE = " + logic.getQuestion10() + "\n\n");
+
+                    if (logic.getQuestion10().equals(""))
+                        return null;
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Logic l6 = new Logic();
+                    l6.setQUESTION(logic.getQuestion6());
+                    l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
+                    l6.setVALUE(logic.getValue6());
+
+
+                    Logic l7 = new Logic();
+                    l7.setQUESTION(logic.getQuestion7());
+                    l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
+                    l7.setVALUE(logic.getValue7());
+
+
+                    Logic l8 = new Logic();
+                    l8.setQUESTION(logic.getQuestion8());
+                    l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
+                    l8.setVALUE(logic.getValue8());
+
+
+                    Logic l9 = new Logic();
+                    l9.setQUESTION(logic.getQuestion9());
+                    l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
+                    l9.setVALUE(logic.getValue9());
+
+
+                    Logic l10 = new Logic();
+                    l10.setQUESTION(logic.getQuestion10());
+                    l10.setLOGICAL_OPERATOR(logic.getLogicalOperator10());
+                    l10.setVALUE(logic.getValue10());
+
+
+                    Boolean value;
+
+                    try {
+
+                        String equation = ((((((((compareValues(l1, JSON_OBJECT)
+                                + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation8() + compareValues(l9, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation9() + compareValues(l10, JSON_OBJECT);
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+
+                        value = (Boolean) engine.eval(equation);
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value + "\n");
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion9() != null && !logic.getQuestion9().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 9 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Logic l6 = new Logic();
+                    l6.setQUESTION(logic.getQuestion6());
+                    l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
+                    l6.setVALUE(logic.getValue6());
+
+
+                    Logic l7 = new Logic();
+                    l7.setQUESTION(logic.getQuestion7());
+                    l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
+                    l7.setVALUE(logic.getValue7());
+
+
+                    Logic l8 = new Logic();
+                    l8.setQUESTION(logic.getQuestion8());
+                    l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
+                    l8.setVALUE(logic.getValue8());
+
+
+                    Logic l9 = new Logic();
+                    l9.setQUESTION(logic.getQuestion9());
+                    l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
+                    l9.setVALUE(logic.getValue9());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = ((((((((compareValues(l1, JSON_OBJECT)
+                                + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT))
+                                + logic.getQuestionLogicOperation8() + compareValues(l9, JSON_OBJECT));
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+
+                        value = (Boolean) engine.eval(equation);
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion8() != null && !logic.getQuestion8().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 8 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Logic l6 = new Logic();
+                    l6.setQUESTION(logic.getQuestion6());
+                    l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
+                    l6.setVALUE(logic.getValue6());
+
+
+                    Logic l7 = new Logic();
+                    l7.setQUESTION(logic.getQuestion7());
+                    l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
+                    l7.setVALUE(logic.getValue7());
+
+
+                    Logic l8 = new Logic();
+                    l8.setQUESTION(logic.getQuestion8());
+                    l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
+                    l8.setVALUE(logic.getValue8());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                ((((((compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+
+                        value = (Boolean) engine.eval(equation);
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+                } else if (logic.getQuestion7() != null && !logic.getQuestion7().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 7 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Logic l6 = new Logic();
+                    l6.setQUESTION(logic.getQuestion6());
+                    l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
+                    l6.setVALUE(logic.getValue6());
+
+
+                    Logic l7 = new Logic();
+                    l7.setQUESTION(logic.getQuestion7());
+                    l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
+                    l7.setVALUE(logic.getValue7());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                (((((compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+
+                        value = (Boolean) engine.eval(equation);
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion6() != null && !logic.getQuestion6().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 6 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Logic l6 = new Logic();
+                    l6.setQUESTION(logic.getQuestion6());
+                    l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
+                    l6.setVALUE(logic.getValue6());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                ((((compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+                        value = (Boolean) engine.eval(equation);
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion5() != null && !logic.getQuestion5().equals("null")) {
+
+                    Log.i(TAG, "LOGIC WITH 5 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Logic l5 = new Logic();
+                    l5.setQUESTION(logic.getQuestion5());
+                    l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
+                    l5.setVALUE(logic.getValue5());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                (((compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+                        value = (Boolean) engine.eval(equation);
+
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion4() != null && !logic.getQuestion4().equals("null")) {
+
+                    Log.i(TAG, "LOGIC WITH 4 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Logic l4 = new Logic();
+                    l4.setQUESTION(logic.getQuestion4());
+                    l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
+                    l4.setVALUE(logic.getValue4());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                ((compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+                        value = (Boolean) engine.eval(equation);
+
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion3() != null && !logic.getQuestion3().equals("null")) {
+
+
+                    Log.i(TAG, "LOGIC WITH 3 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Logic l3 = new Logic();
+                    l3.setQUESTION(logic.getQuestion3());
+                    l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
+                    l3.setVALUE(logic.getValue3());
+
+
+                    Boolean value;
+
+                    try {
+
+
+                        String equation = (
+                                (compareValues(l1, JSON_OBJECT)
+                                        + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
+                                        + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT)
+                        );
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+                        value = (Boolean) engine.eval(equation);
+
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion2() != null && !logic.getQuestion2().equals("null")) {
+
+                    Log.i(TAG, "LOGIC WITH 2 QUESTIONS!\n\n");
+
+
+                    Logic l1 = new Logic();
+                    l1.setQUESTION(logic.getQuestion1());
+                    l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l1.setVALUE(logic.getValue1());
+
+
+                    Logic l2 = new Logic();
+                    l2.setQUESTION(logic.getQuestion2());
+                    l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
+                    l2.setVALUE(logic.getValue2());
+
+
+                    Boolean value;
+
+                    try {
+
+                        String equation = (compareValues(l1, JSON_OBJECT)
+                                + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT));
+
+
+                        System.out.println("  EQUATION  =  " + equation);
+
+                        value = (Boolean) engine.eval(equation);
+
+
+                        System.out.println("COMPARE QUESTION VALUES Object value: " + value);
+
+                    } catch (ScriptException e) {
+                        e.printStackTrace();
+
+                        value = null;
+                    }
+
+
+                    return value;
+
+
+                } else if (logic.getQuestion1() != null && !logic.getQuestion1().equals("null")) {
+
+                    Log.i(TAG, "LOGIC WITH 1 QUESTIONS!\n\n");
+
+                    Logic l = new Logic();
+                    l.setQUESTION(logic.getQuestion1());
+                    l.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
+                    l.setVALUE(logic.getValue1());
+
+                    return compareValues(l, JSON_OBJECT);
+
+                } else
+                    return null;
+
+
+            } else
+                return getSpecialImplementationLogicValue(logic, JSON_OBJECT);
+
+        }
+    }
+
+
+    Boolean getSpecialImplementationLogicValue(Logic logic, JSONObject JSON_OBJECT) {
+
+
+        if (logic == null)
+            return null;
+
+        else {
+
+            Log.i(TAG, "<<<<<<<<<< SPECIAL LOGIC NAME IS = " + logic.getName() + ">>>>>>>>>>>>>>\n");
 
 
             if (logic.getQuestion10() != null && !logic.getQuestion10().equals("null")) {
 
 
-                Log.i(TAG, "LOGIC WITH 10 QUESTIONS WITH QUESTION VALUE = " + logic.getQuestion10() + "\n\n");
+                Log.i(TAG, "SPECIAL LOGIC WITH 10 QUESTIONS WITH QUESTION VALUE = " + logic.getQuestion10() + "\n\n");
 
                 if (logic.getQuestion10().equals(""))
                     return null;
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
-
-
-                Logic l6 = new Logic();
-                l6.setQUESTION(logic.getQuestion6());
-                l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-                l6.setVALUE(logic.getValue6());
-
-
-                Logic l7 = new Logic();
-                l7.setQUESTION(logic.getQuestion7());
-                l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-                l7.setVALUE(logic.getValue7());
-
-
-                Logic l8 = new Logic();
-                l8.setQUESTION(logic.getQuestion8());
-                l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-                l8.setVALUE(logic.getValue8());
-
-
-                Logic l9 = new Logic();
-                l9.setQUESTION(logic.getQuestion9());
-                l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
-                l9.setVALUE(logic.getValue9());
-
-
-                Logic l10 = new Logic();
-                l10.setQUESTION(logic.getQuestion10());
-                l10.setLOGICAL_OPERATOR(logic.getLogicalOperator10());
-                l10.setVALUE(logic.getValue10());
-
 
                 Boolean value;
 
                 try {
 
-                    String equation = ((((((((compareValues(l1, JSON_OBJECT)
-                            + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation8() + compareValues(l9, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation9() + compareValues(l10, JSON_OBJECT);
+                    String equation = ((((((((getValue(logic.getQuestion1(), JSON_OBJECT)
+                            + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation5() + getValue(logic.getQuestion6(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation6() + getValue(logic.getQuestion7(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation7() + getValue(logic.getQuestion8(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation8() + getValue(logic.getQuestion9(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation9() + getValue(logic.getQuestion10(), JSON_OBJECT);
 
 
-                    System.out.println("  EQUATION  =  " + equation);
+                    System.out.println(" EQUATION  =  " + equation);
 
 
                     value = (Boolean) engine.eval(equation);
@@ -531,61 +1185,7 @@ public class BaseActivity extends AppCompatActivity {
             } else if (logic.getQuestion9() != null && !logic.getQuestion9().equals("null")) {
 
 
-                Log.i(TAG, "LOGIC WITH 9 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
-
-
-                Logic l6 = new Logic();
-                l6.setQUESTION(logic.getQuestion6());
-                l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-                l6.setVALUE(logic.getValue6());
-
-
-                Logic l7 = new Logic();
-                l7.setQUESTION(logic.getQuestion7());
-                l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-                l7.setVALUE(logic.getValue7());
-
-
-                Logic l8 = new Logic();
-                l8.setQUESTION(logic.getQuestion8());
-                l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-                l8.setVALUE(logic.getValue8());
-
-
-                Logic l9 = new Logic();
-                l9.setQUESTION(logic.getQuestion9());
-                l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
-                l9.setVALUE(logic.getValue9());
+                Log.i(TAG, "SPECIAL LOGIC WITH 9 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -593,15 +1193,15 @@ public class BaseActivity extends AppCompatActivity {
                 try {
 
 
-                    String equation = ((((((((compareValues(l1, JSON_OBJECT)
-                            + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT))
-                            + logic.getQuestionLogicOperation8() + compareValues(l9, JSON_OBJECT));
+                    String equation = ((((((((getValue(logic.getQuestion1(), JSON_OBJECT)
+                            + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation5() + getValue(logic.getQuestion6(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation6() + getValue(logic.getQuestion7(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation7() + getValue(logic.getQuestion8(), JSON_OBJECT))
+                            + logic.getQuestionLogicOperation8() + getValue(logic.getQuestion9(), JSON_OBJECT));
 
 
                     System.out.println("  EQUATION  =  " + equation);
@@ -623,56 +1223,7 @@ public class BaseActivity extends AppCompatActivity {
 
             } else if (logic.getQuestion8() != null && !logic.getQuestion8().equals("null")) {
 
-
-                Log.i(TAG, "LOGIC WITH 8 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
-
-
-                Logic l6 = new Logic();
-                l6.setQUESTION(logic.getQuestion6());
-                l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-                l6.setVALUE(logic.getValue6());
-
-
-                Logic l7 = new Logic();
-                l7.setQUESTION(logic.getQuestion7());
-                l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-                l7.setVALUE(logic.getValue7());
-
-
-                Logic l8 = new Logic();
-                l8.setQUESTION(logic.getQuestion8());
-                l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-                l8.setVALUE(logic.getValue8());
+                Log.i(TAG, " SPECIAL LOGIC WITH 8 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -681,14 +1232,14 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            ((((((compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation7() + compareValues(l8, JSON_OBJECT)
+                            ((((((getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation5() + getValue(logic.getQuestion6(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation6() + getValue(logic.getQuestion7(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation7() + getValue(logic.getQuestion8(), JSON_OBJECT)
                     );
 
 
@@ -711,49 +1262,7 @@ public class BaseActivity extends AppCompatActivity {
             } else if (logic.getQuestion7() != null && !logic.getQuestion7().equals("null")) {
 
 
-                Log.i(TAG, "LOGIC WITH 7 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
-
-
-                Logic l6 = new Logic();
-                l6.setQUESTION(logic.getQuestion6());
-                l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-                l6.setVALUE(logic.getValue6());
-
-
-                Logic l7 = new Logic();
-                l7.setQUESTION(logic.getQuestion7());
-                l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-                l7.setVALUE(logic.getValue7());
+                Log.i(TAG, " SPECIAL LOGIC WITH 7 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -762,13 +1271,13 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            (((((compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation6() + compareValues(l7, JSON_OBJECT)
+                            (((((getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation5() + getValue(logic.getQuestion6(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation6() + getValue(logic.getQuestion7(), JSON_OBJECT)
                     );
 
 
@@ -792,43 +1301,7 @@ public class BaseActivity extends AppCompatActivity {
             } else if (logic.getQuestion6() != null && !logic.getQuestion6().equals("null")) {
 
 
-                Log.i(TAG, "LOGIC WITH 6 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
-
-
-                Logic l6 = new Logic();
-                l6.setQUESTION(logic.getQuestion6());
-                l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-                l6.setVALUE(logic.getValue6());
+                Log.i(TAG, "LOGIC SPECIAL WITH 6 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -837,12 +1310,12 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            ((((compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation5() + compareValues(l6, JSON_OBJECT)
+                            ((((getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation5() + getValue(logic.getQuestion6(), JSON_OBJECT)
                     );
 
 
@@ -864,37 +1337,7 @@ public class BaseActivity extends AppCompatActivity {
 
             } else if (logic.getQuestion5() != null && !logic.getQuestion5().equals("null")) {
 
-                Log.i(TAG, "LOGIC WITH 5 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
-
-
-                Logic l5 = new Logic();
-                l5.setQUESTION(logic.getQuestion5());
-                l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-                l5.setVALUE(logic.getValue5());
+                Log.i(TAG, "SPECIAL LOGIC WITH 5 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -903,11 +1346,11 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            (((compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation4() + compareValues(l5, JSON_OBJECT)
+                            (((getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation4() + getValue(logic.getQuestion5(), JSON_OBJECT)
                     );
 
 
@@ -930,31 +1373,7 @@ public class BaseActivity extends AppCompatActivity {
 
             } else if (logic.getQuestion4() != null && !logic.getQuestion4().equals("null")) {
 
-                Log.i(TAG, "LOGIC WITH 4 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
-
-
-                Logic l4 = new Logic();
-                l4.setQUESTION(logic.getQuestion4());
-                l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-                l4.setVALUE(logic.getValue4());
+                Log.i(TAG, "SPECIAL LOGIC WITH 4 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -963,10 +1382,10 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            ((compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation3() + compareValues(l4, JSON_OBJECT)
+                            ((getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation3() + getValue(logic.getQuestion4(), JSON_OBJECT)
                     );
 
 
@@ -990,25 +1409,7 @@ public class BaseActivity extends AppCompatActivity {
             } else if (logic.getQuestion3() != null && !logic.getQuestion3().equals("null")) {
 
 
-                Log.i(TAG, "LOGIC WITH 3 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
-
-
-                Logic l3 = new Logic();
-                l3.setQUESTION(logic.getQuestion3());
-                l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-                l3.setVALUE(logic.getValue3());
+                Log.i(TAG, " SPECIAL LOGIC WITH 3 QUESTIONS!\n\n");
 
 
                 Boolean value;
@@ -1017,9 +1418,9 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     String equation = (
-                            (compareValues(l1, JSON_OBJECT)
-                                    + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT))
-                                    + logic.getQuestionLogicOperation2() + compareValues(l3, JSON_OBJECT)
+                            (getValue(logic.getQuestion1(), JSON_OBJECT)
+                                    + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT))
+                                    + logic.getQuestionLogicOperation2() + getValue(logic.getQuestion3(), JSON_OBJECT)
                     );
 
 
@@ -1042,27 +1443,15 @@ public class BaseActivity extends AppCompatActivity {
 
             } else if (logic.getQuestion2() != null && !logic.getQuestion2().equals("null")) {
 
-                Log.i(TAG, "LOGIC WITH 2 QUESTIONS!\n\n");
-
-
-                Logic l1 = new Logic();
-                l1.setQUESTION(logic.getQuestion1());
-                l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l1.setVALUE(logic.getValue1());
-
-
-                Logic l2 = new Logic();
-                l2.setQUESTION(logic.getQuestion2());
-                l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-                l2.setVALUE(logic.getValue2());
+                Log.i(TAG, " SPECIAL LOGIC WITH 2 QUESTIONS!\n\n");
 
 
                 Boolean value;
 
                 try {
 
-                    String equation = (compareValues(l1, JSON_OBJECT)
-                            + logic.getQuestionLogicOperation1() + compareValues(l2, JSON_OBJECT));
+                    String equation = (getValue(logic.getQuestion1(), JSON_OBJECT)
+                            + logic.getQuestionLogicOperation1() + getValue(logic.getQuestion2(), JSON_OBJECT));
 
 
                     System.out.println("  EQUATION  =  " + equation);
@@ -1082,17 +1471,6 @@ public class BaseActivity extends AppCompatActivity {
                 return value;
 
 
-            } else if (logic.getQuestion1() != null && !logic.getQuestion1().equals("null")) {
-
-                Log.i(TAG, "LOGIC WITH 1 QUESTIONS!\n\n");
-
-                Logic l = new Logic();
-                l.setQUESTION(logic.getQuestion1());
-                l.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-                l.setVALUE(logic.getValue1());
-
-                return compareValues(l, JSON_OBJECT);
-
             } else
                 return null;
 
@@ -1101,8 +1479,110 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
+    Boolean compareAndEvaluateCascadedLogics(Logic logic, JSONObject ALL_DATA_JSON) {
 
 
+        StringBuilder equation = new StringBuilder();
+
+        String equationValue = "";
+
+
+        Log.i("\n" + TAG, "------ CASCADED LOGICS  ------- \n");
+
+        //level 1
+        Log.i(TAG, " ------  LEVEL 1  ------- ");
+        Boolean value1 = getLogicValue(logic, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+        Log.i(TAG, " Value  " + value1);
+        Log.i(TAG, "\n");
+
+
+        //level 2
+        Log.i(TAG, " ------  LEVEL 2  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic2 = databaseHelper.getLogic(logic.getParentLogic());
+        Boolean value2 = getLogicValue(logic2, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+        Log.i(TAG, " Value  " + value2);
+        Log.i(TAG, "\n");
+
+
+        //level 3
+        Log.i(TAG, " ------  LEVEL 3  ------- ");
+        Log.i(TAG, "\n");
+
+        Logic logic3 = databaseHelper.getLogic(logic2.getParentLogic());
+        Boolean value3 = getLogicValue(logic3, ALL_DATA_JSON);
+
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value3);
+        Log.i(TAG, "\n");
+
+
+        //level 4
+        Log.i(TAG, " ------  LEVEL 4  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic4 = databaseHelper.getLogic(logic3.getParentLogic());
+        Boolean value4 = getLogicValue(logic4, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value4);
+        Log.i(TAG, "\n");
+
+
+        //level 5
+        Log.i(TAG, " ------  LEVEL 5  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic5 = databaseHelper.getLogic(logic4.getParentLogic());
+        Boolean value5 = getLogicValue(logic5, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value5);
+        Log.i(TAG, "\n");
+
+
+        equation.append(value1)
+                .append(logic.getParentLogicalOperator())
+                .append(value2).append(logic2.getParentLogicalOperator())
+                .append(value3).append(logic3.getParentLogicalOperator())
+                .append(value4).append(logic4.getParentLogicalOperator())
+                .append(value5);
+
+
+        equationValue = equation.toString().replace("null", "");
+
+
+        Log.i(TAG, "STRING BUILDER EQUATION IS " + equation.toString());
+        Log.i(TAG, "FILTERED EQUATION IS " + equationValue);
+
+
+        Boolean value = null;
+
+
+        try {
+
+            value = (Boolean) engine.eval(equationValue);
+
+
+        } catch (ScriptException e) {
+            System.out.println("*****  Exception  *****   " + e.getMessage());
+
+
+        } finally {
+            System.out.println("************  LOGIC VALUE IS: " + value);
+
+        }
+        return value;
+
+
+    }
 
 
     String applyCalculation(String equation) {
@@ -1124,7 +1604,6 @@ public class BaseActivity extends AppCompatActivity {
         return calculatedValue;
 
     }
-
 
 
     public static class SpacesGridItemDecoration extends RecyclerView.ItemDecoration {
@@ -1163,58 +1642,59 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-    public String toCamelCase(String value){
+    public String toCamelCase(String value) {
 
-        if(value == null || value.equals("null")) return "";
+        if (value == null || value.equals("null")) return "";
         else {
 
-            if(Character.isUpperCase(value.codePointAt(0)))
-            return value;
+            if (Character.isUpperCase(value.codePointAt(0)))
+                return value;
 
             else
-            return (value.substring(0, 1).toUpperCase() + value.substring(1, value.length()).toLowerCase());
+                return (value.substring(0, 1).toUpperCase() + value.substring(1, value.length()).toLowerCase());
 
         }
     }
 
 
-    public void checkIfFarmProductionCorresponds(String farmerCode){
+    public boolean checkIfFarmProductionCorresponds(String farmerId) {
+
+        Question estProdQue = databaseHelper.getQuestionByTranslation("Estimated production size");
 
         Double totalFarmProduction = null;
+
         String totalUnit = "--";
 
-        try{
+        try {
 
-            JSONObject farmingEconomicProfileJson = new JSONObject(databaseHelper.getAllAnswersJson(farmerCode));
-            totalFarmProduction = Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString());
+            JSONObject farmingEconomicProfileJson = new JSONObject(databaseHelper.getAllAnswersJson(farmerId));
+            totalFarmProduction = Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString().replace(",", ""));
             totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalWeightUnit", ""));
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        StringBuilder stringUnitBuilder = new StringBuilder();
+        // StringBuilder stringUnitBuilder = new StringBuilder();
 
 
-        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerCode);
+        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerId);
 
 
-
-
-        for(RealPlot plot : plots){
+        for (RealPlot plot : plots) {
 
             try {
                 JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
 
-                String[] estimatedProductions = jsonObject.get("estimatedProduction").toString().split(" ");
+                String estimatedProductions = jsonObject.getString(estProdQue.getId());
 
-                stringBuilder.append(estimatedProductions[0]).append("+");
+                stringBuilder.append(estimatedProductions).append("+");
 
-                stringUnitBuilder.append(estimatedProductions[1]);
+                // stringUnitBuilder.append(estimatedProductions[1]);
 
 
-            } catch (JSONException  | NullPointerException e) {
+            } catch (JSONException | NullPointerException e) {
                 e.printStackTrace();
             }
 
@@ -1225,51 +1705,148 @@ public class BaseActivity extends AppCompatActivity {
 
         Double totalPlotsProduction = calculateDouble(stringBuilder.toString());
 
-        Log.i(TAG, "$$$$$$$$$$$$$    TOTAL UNITS " + totalUnit + " AND TOTAL WEIGHTS " + stringUnitBuilder.toString());
+        //Log.i(TAG, "$$$$$$$$$$$$$    TOTAL UNITS " + totalUnit + " AND TOTAL WEIGHTS " + stringUnitBuilder.toString());
 
         Log.i(TAG, "$$$$$$$$$$$$$    TOTAL FARM PROD " + totalFarmProduction + " AND TOTAL PLOTS PROD " + totalPlotsProduction);
 
-        if(stringUnitBuilder.toString().toLowerCase().contains(totalUnit.toLowerCase())) {
+        // if (stringUnitBuilder.toString().toLowerCase().contains(totalUnit.toLowerCase())) {
             if (totalPlotsProduction != null && totalFarmProduction != null) {
-                if (totalPlotsProduction > totalFarmProduction)
-
+                if (totalPlotsProduction > totalFarmProduction) {
                     CustomToast.makeToast(this, getResources(R.string.error_total_plot_estimated_production), Toast.LENGTH_LONG).show();
-            } else
+                    return false;
+
+                } else if (totalPlotsProduction < totalFarmProduction) {
+                    CustomToast.makeToast(this, getResources(R.string.error_total_plot_estimated_production), Toast.LENGTH_LONG).show();
+                    return false;
+
+                } else return true;
+
+            } else {
                 CustomToast.makeToast(this, getResources(R.string.error_missing_estimated_production), Toast.LENGTH_LONG).show();
-        }else{
+
+                return false;
+            }
+
+      /*  } else {
             CustomToast.makeToast(this, getResources(R.string.error_invalid_units), Toast.LENGTH_LONG).show();
+            return false;
+        }*/
+
+
+    }
+
+
+    public boolean checkIfFarmSizeCorresponds(String farmerCode, JSONObject ALL_FARMER_ANSWERS_JSON) {
+
+        Question farmSizeForCocoaQuestion = databaseHelper.getQuestionByTranslation("How many hectares/acres are used for cocoa?");
+        if (farmSizeForCocoaQuestion == null) {
+            CustomToast.makeToast(this, "Missing question \"How many hectares/acres are used for cocoa?\" in SF", Toast.LENGTH_LONG).show();
+            farmSizeForCocoaQuestion = new Question();
+            farmSizeForCocoaQuestion.setId(prefs.getString("totalLandSize", ""));
+
+        }
+        Question plotSizeQue = databaseHelper.getQuestionByTranslation("Plot Size");
+
+
+        Boolean booleanValue = true;
+
+        Double farmAcre = null;
+        //String totalUnit = "null";
+
+        try {
+
+
+            farmAcre = Double.parseDouble(ALL_FARMER_ANSWERS_JSON.get(farmSizeForCocoaQuestion.getId()).toString().replace(",", ""));
+
+            // totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalAreaUnit", ""));
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+        // StringBuilder stringUnitBuilder = new StringBuilder();
+
+
+        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerCode);
+
+        for (RealPlot plot : plots) {
+
+            try {
+                JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
+
+                String value = jsonObject.getString(plotSizeQue.getId());
+
+                stringBuilder.append(value).append("+");
+
+                // stringUnitBuilder.append(estimatedProductions[1]);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+        stringBuilder.append("0");
+
+        Double totalSizes = calculateDouble(stringBuilder.toString());
+
+
+        Log.i(TAG, "$$$$$$$$$$$$$    TOTAL SIZES " + farmAcre + " AND TOTAL PLOTS SIZES " + totalSizes);
+
+        if (farmAcre != null && totalSizes != null) {
+            if (totalSizes > farmAcre) {
+                booleanValue = false;
+
+                correspondingMessage = getResources(R.string.ensure_farm_acre_equal);
+                CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
+
+            } else if (totalSizes < farmAcre) {
+
+                booleanValue = false;
+
+                correspondingMessage = getResources(R.string.ensure_farm_acre_equal);
+                CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
+
+            }
+        } else {
+
+            correspondingMessage = getResources(R.string.fill_in_plot_size_values);
+
+            booleanValue = false;
+            CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
+
         }
 
 
+        return booleanValue;
 
 
     }
 
 
-
-    public String getResources(int resource){
+    public String getResources(int resource) {
         return getString(resource);
     }
 
-   public  String parseIfFormula(String formula, JSONObject jsonObject) {
+    public String parseIfFormula(String formula, JSONObject jsonObject) {
 
         String operator = "+";
 
-        if(formula.contains("+")) operator = "+";
+        if (formula.contains("+")) operator = "+";
         else if (formula.contains("*")) operator = "*";
         else if (formula.contains("-")) operator = "-";
         else if (formula.contains("/")) operator = "/";
 
-       Log.i(TAG, "OPERATOR IS IS " + operator);
+        Log.i(TAG, "OPERATOR IS IS " + operator);
 
 
-
-
-       StringBuilder parsedFormula = new StringBuilder();
+        StringBuilder parsedFormula = new StringBuilder();
 
         Double finalValue = -1.0;
 
-        try{
+        try {
 
             List<String> questionNames = new ArrayList<>();
             List<String> valueToCompare = new ArrayList<>();
@@ -1307,8 +1884,6 @@ public class BaseActivity extends AppCompatActivity {
                 // Log.i(TAG, "FALSE VALUE " + values[2]);
 
 
-
-
             }
 
             // Log.i(TAG, "QUESTION NAMES SIZE = " + questionNames.size());
@@ -1317,11 +1892,10 @@ public class BaseActivity extends AppCompatActivity {
             //  Log.i(TAG, "FALSE VALUES SIZE = " + falseValues.size());
 
 
-
-            for(int i=0; i < sections.length; i++) {
+            for (int i = 0; i < sections.length; i++) {
 
                 String value = getValue(databaseHelper.getQuestionByName(questionNames.get(i)).getId(), jsonObject);
-                if(!value.equals("--")) {
+                if (!value.equals("--")) {
 
                     if (value.equalsIgnoreCase(valueToCompare.get(i))) {
 
@@ -1330,11 +1904,10 @@ public class BaseActivity extends AppCompatActivity {
                     } else
                         parsedFormula.append(falseValues.get(i)).append(operator);
 
-                }else parsedFormula.append("-1").append(operator);
+                } else parsedFormula.append("-1").append(operator);
             }
 
             parsedFormula.append("0");
-
 
 
             engine = new ScriptEngineManager().getEngineByName("rhino");
@@ -1342,7 +1915,8 @@ public class BaseActivity extends AppCompatActivity {
 
             Log.i(TAG, "PARSED FORMULA IS " + parsedFormula.toString() + " = " + finalValue);
 
-        }catch(Exception e){e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
 
         }
 
@@ -1350,8 +1924,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-
-    String getValue(String id, JSONObject jsonObject){
+    String getValue(String id, JSONObject jsonObject) {
         String value = null;
 
 
@@ -1370,74 +1943,26 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-
-    public JSONObject buildAllFarmersJson(){
-        String date = DateUtil.getFormattedDateMMDDYYYY();
+    public void syncFarmerData(final Context context) {
 
 
-        String lastSyncDate = prefs.getString("lastSync", "");
+        if (Utils.checkInternetConnection(context)) {
 
-        JSONObject farmers = new JSONObject();
+            UN_SYNCED_FARMERS = databaseHelper.getAllUnsyncedFarmers();
 
-        JSONArray jsonArray = new JSONArray();
-
-        for(RealFarmer farmer : databaseHelper.getAllFarmers()) {
-
-            if(farmer.getSyncStatus() == 0)
-
-            try {
-            JSONObject answerJsonObject = new JSONObject();
-                answerJsonObject.put("birthday", "01/01/" + farmer.getBirthYear());
-                answerJsonObject.put("fullname", farmer.getFarmerName());
-                answerJsonObject.put("farmercode", farmer.getCode());
-                answerJsonObject.put("gender", farmer.getGender());
-                answerJsonObject.put("village", farmer.getVillage());
-                answerJsonObject.put("start", farmer.getFirstVisitDate());
-                answerJsonObject.put("endSurvey", farmer.getLastVisitDate());
-                answerJsonObject.put("answers", formatAnswersJsonStructure(farmer.getCode(), date, farmer.getAnswersJson()));
-
-                jsonArray.put(answerJsonObject);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-
-
-
-        }
-
-
-        try {
-            farmers.put("farmers", jsonArray);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("############### \n\n\n MAIN JSON OBJECT FOR ALL FARMER DATA IS " + farmers.toString() + "\n\n\n");
-
-        return farmers;
-    }
-
-
-
-    public void syncFarmerData(final Context context){
-
-        List<RealFarmer> UN_SYNCED_FARMERS = databaseHelper.getAllUnsyncedFarmers();
-
-        if (UN_SYNCED_FARMERS != null && UN_SYNCED_FARMERS.size() > 0)  {
+            if (UN_SYNCED_FARMERS != null && UN_SYNCED_FARMERS.size() > 0) {
 
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
 
-                    sendDataToServer();
+                    sendAllFarmersDataToServer2(context);
 
                 }
             });
             thread.start();
 
-        }else{
+            } else {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
             builder.setTitle(getResources(R.string.no_new_data));
@@ -1448,118 +1973,544 @@ public class BaseActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
 
+
                 }
             });
             builder.show();
         }
+
+
+        } else {
+
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
+            builder.setTitle(getResources(R.string.network_error));
+            builder.setCancelable(true);
+            builder.setMessage(getResources(R.string.network_error_rational));
+            builder.setPositiveButton(getResources(R.string.retry), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                    syncFarmerData(context);
+
+                }
+            });
+
+            builder.setNegativeButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+
+                }
+            });
+
+            builder.show();
+
+
+        }
+
+
+
+
     }
 
 
-     void sendDataToServer(){
+    void sendAllFarmersDataToServer2(final Context context) {
 
-        String body = buildAllFarmersJson().toString().replace("\\", "");
-        Log.i(TAG, "BODY IS " + body);
-         String url = FdpApplication.END_POINT + body;
-         Log.i(TAG, "URL IS " + url);
-
-         new SendFarmersToServer(url).execute();
-
-
-    }
-
-    void sendDataToServer2(final Context context){
 
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
 
-                progressDialog = showProgress(context, "Syncing farmer data", "PLease wait", false);
+                progressDialog = showProgress(context, "Syncing farmer data", "Please wait", false);
 
             }
         });
 
-        String body = buildAllFarmersJson().toString().replace("\\", "");
-        Log.i(TAG, "BODY IS " + body);
-        String url = FdpApplication.END_POINT + body;
-        Log.i(TAG, "URL IS " + url);
+
+        final RealFarmer farmer = UN_SYNCED_FARMERS.get(COUNT);
+
+
+        String body = buildAllFarmersJson2(farmer).toString().replace("\\", "");
+        largeLog("SEND FARMER ANSWERS DATA BASE ACT", body);
+
+        String url;
+
+        try {
+            url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_FARMER + URLEncoder.encode(body, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_FARMER + body;
+        }
+
+        largeLog("URL IS ", url);
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
-                        final String resp = response;
+                        System.out.println("**********************************\n");
+                        Log.i(TAG, "UNFILTERED RESPONSE " + response);
+                        System.out.println("\n**********************************\n");
 
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
+                        final String resp = filterResponseFromServer(response);
 
-
-
-                                Log.i(TAG, "RESPONSE AFTER SENDING FARMER DATA TO SALES FORCE " + resp);
-
-                                progressDialog.dismiss();
-
-                                AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
-                                builder.setTitle(getResources(R.string.sync_complete));
-                                builder.setCancelable(true);
-                                builder.setMessage(getResources(R.string.all_data_synced));
-                                builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        dialogInterface.dismiss();
+                        Log.i(TAG, "FILTERED RESPONSE " + resp);
+                        System.out.println("\n**********************************\n");
 
 
-                                    }
-                                });
+                        String submission, farmerId;
 
-                                builder.show();
+                        try {
+                            JSONObject jsonObject = new JSONObject(resp);
 
+                            submission = jsonObject.getString(Constants.SUBMISSION);
+                            farmerId = jsonObject.getString(Constants.FARMER_ID);
+
+                            System.out.println("**********************************\n");
+                            System.out.println("SECOND TRY ------ SENDING PLOTS INFO!");
+                            System.out.println("**********************************\n");
+
+
+                            String body = buildAllFarmerPlotsJson(farmer, submission, farmerId).toString().replace("\\", "");
+                            largeLog("SEND PLOTS DATA ", body);
+
+                            String url;
+
+                            try {
+                                url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_PLOT + URLEncoder.encode(body, "UTF-8");
+                            } catch (UnsupportedEncodingException e) {
+                                e.printStackTrace();
+                                url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_PLOT + body;
                             }
-                        });
 
+                            largeLog("PLOTS URL IS ", url);
+
+
+                            StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+
+
+                                    System.out.println("**********************************\n");
+                                    Log.i(TAG, "AFTER SENDING PLOTS UNFILTERED RESPONSE " + response);
+                                    System.out.println("\n**********************************\n");
+
+                                    final String resp = filterResponseFromServer(response);
+
+                                    Log.i(TAG, "FILTERED RESPONSE " + resp);
+                                    System.out.println("\n**********************************\n");
+
+                                    String responseCode;
+
+                                    JSONObject jsonObject;
+                                    try {
+                                        jsonObject = new JSONObject(resp);
+                                        responseCode = String.valueOf(jsonObject.get(Constants.RESPONSE_CODE));
+
+
+                                        Log.i(TAG, "RESPONSE CODE IS " + responseCode);
+
+
+                                        if (responseCode != null)
+                                            if (responseCode.equalsIgnoreCase(Constants.RESPONSE_SUCCESS))
+                                                databaseHelper.setFarmerAsSynced(farmer.getId());
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+
+                                    moveToNextFarmer(context);
+
+
+                                }
+                            }, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                    System.out.println(DOUBLE_LINE);
+                                    Log.i(TAG, error.getMessage() + "");
+                                    System.out.println(DOUBLE_LINE);
+
+
+                                    moveToNextFarmer(context);
+
+
+                                }
+                            });
+
+                            MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                System.out.println(DOUBLE_LINE);
                 Log.i(TAG, error.getMessage() + "");
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        progressDialog.dismiss();
-
-                        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
-                        builder.setTitle(getResources(R.string.generic_error));
-                        builder.setCancelable(true);
-                        builder.setMessage(getResources(R.string.connection_error));
-                        builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.dismiss();
+                System.out.println(DOUBLE_LINE);
 
 
-                            }
-                        });
-
-                        builder.show();
+                moveToNextFarmer(context);
 
 
-                    }
-                });
             }
         });
 
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
 
+
+    }
+
+    void moveToNextFarmer(Context context) {
+
+        COUNT++;
+
+        if (COUNT < UN_SYNCED_FARMERS.size())
+            sendAllFarmersDataToServer2(context);
+        else
+            showSyncCompleteDialog(context);
+
+    }
+
+    void showSyncCompleteDialog(final Context context) {
+        COUNT = 0;
+
+        title = getResources(R.string.sync_in_complete);
+        message = "Error syncing data! Please retry.";
+
+
+        UN_SYNCED_FARMERS = databaseHelper.getAllUnsyncedFarmers();
+
+        if (UN_SYNCED_FARMERS != null)
+            if (UN_SYNCED_FARMERS.size() > 0) {
+                SYNC_STATUS = Constants.SYNC_STATUS_PARTIAL_SYNC;
+
+                title = getResources(R.string.sync_in_complete);
+                message = "Some data did not sync. Please click on retry to sync remaining data.";
+
+            } else if (UN_SYNCED_FARMERS.size() == 0) {
+                SYNC_STATUS = Constants.SYNC_STATUS_COMPLETE;
+
+                title = getResources(R.string.sync_complete);
+                message = getResources(R.string.all_data_synced);
+
+            }
+
+
+        runOnUiThread(new Runnable() {
+
+
+            @Override
+            public void run() {
+
+
+                if (progressDialog != null)
+                    progressDialog.dismiss();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
+                builder.setTitle(title);
+                builder.setCancelable(true);
+                builder.setMessage(message);
+                builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+
+                        if (networkActivityCompleteListener != null)
+                            networkActivityCompleteListener.taskComplete(SYNC_STATUS);
+
+                    }
+                });
+
+                if (SYNC_STATUS == Constants.SYNC_STATUS_NO_SYNC || SYNC_STATUS == Constants.SYNC_STATUS_PARTIAL_SYNC)
+                    builder.setNeutralButton(getResources(R.string.retry), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+
+                            sendAllFarmersDataToServer2(context);
+
+                        }
+                    });
+
+                builder.show();
+
+            }
+
+
+        });
+
+
     }
 
 
+    void sendDataToServer2(final Context context, final RealFarmer farmer) {
 
-    JSONArray formatAnswersJsonStructure(String farmerCode, String date, String answersObjectString){
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                progressDialog = showProgress(context, "Syncing farmer " + farmer.getFarmerName() + "'s data", "Please wait", false);
+
+            }
+        });
+
+
+        String body = buildAllFarmersJson2(farmer).toString().replace("\\", "");
+        largeLog("SEND FARMER ANSWERS DATA BASE ACT", body);
+
+        String url;
+
+        try {
+            url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_FARMER + URLEncoder.encode(body, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_FARMER + body;
+        }
+
+        largeLog("URL IS ", url);
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        System.out.println("**********************************\n");
+                        Log.i(TAG, "UNFILTERED RESPONSE " + response);
+                        System.out.println("\n**********************************\n");
+
+                        final String resp = filterResponseFromServer(response);
+
+                        Log.i(TAG, "FILTERED RESPONSE " + resp);
+                        System.out.println("\n**********************************\n");
+
+
+                        String submission, farmerId;
+
+                        try {
+                            JSONObject jsonObject = new JSONObject(resp);
+
+                            submission = jsonObject.getString(Constants.SUBMISSION);
+                            farmerId = jsonObject.getString(Constants.FARMER_ID);
+
+                            System.out.println("**********************************\n");
+                            System.out.println("SECOND TRY ------ SENDING PLOTS INFO!");
+                            System.out.println("**********************************\n");
+
+
+                            String body = buildAllFarmerPlotsJson(farmer, submission, farmerId).toString().replace("\\", "");
+                            largeLog("SEND PLOTS DATA ", body);
+
+                            String url;
+
+                            try {
+                                url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_PLOT + URLEncoder.encode(body, "UTF-8");
+                            } catch (UnsupportedEncodingException e) {
+                                e.printStackTrace();
+                                url = FdpApplication.END_POINT + FdpApplication.REQUEST_TYPE_PLOT + body;
+                            }
+
+                            largeLog("PLOTS URL IS ", url);
+
+
+                            StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+
+
+                                    System.out.println("**********************************\n");
+                                    Log.i(TAG, "AFTER SENDING PLOTS UNFILTERED RESPONSE " + response);
+                                    System.out.println("\n**********************************\n");
+
+                                    final String resp = filterResponseFromServer(response);
+
+                                    Log.i(TAG, "FILTERED RESPONSE " + resp);
+                                    System.out.println("\n**********************************\n");
+
+                                    String responseCode;
+
+                                    JSONObject jsonObject;
+                                    try {
+                                        jsonObject = new JSONObject(resp);
+                                        responseCode = String.valueOf(jsonObject.get(Constants.RESPONSE_CODE));
+
+
+                                        Log.i(TAG, "RESPONSE CODE IS " + responseCode);
+
+
+                                        if (responseCode != null)
+                                            if (responseCode.equalsIgnoreCase(Constants.RESPONSE_SUCCESS))
+                                                databaseHelper.setFarmerAsSynced(farmer.getId());
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+
+                                    showSyncCompleteDialog(context, farmer.getId());
+
+
+                                }
+                            }, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                    System.out.println(DOUBLE_LINE);
+                                    Log.i(TAG, error.getMessage() + "");
+                                    System.out.println(DOUBLE_LINE);
+
+
+                                    showSyncCompleteDialog(context, farmer.getId());
+
+
+                                }
+                            });
+
+                            MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(DOUBLE_LINE);
+                Log.i(TAG, error.getMessage() + "");
+                System.out.println(DOUBLE_LINE);
+
+
+                showSyncCompleteDialog(context, farmer.getId());
+
+
+            }
+        });
+
+        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
+
+
+    }
+
+
+    void showSyncCompleteDialog(final Context context, String farmerId) {
+        final RealFarmer farmer = databaseHelper.getFarmerBasicInfo(farmerId);
+
+
+        title = getResources(R.string.sync_in_complete);
+        message = "Error syncing data! Please retry.";
+
+
+        if (farmer != null)
+            if (farmer.getSyncStatus() == 0) {
+
+                SYNC_STATUS = Constants.SYNC_STATUS_PARTIAL_SYNC;
+
+                title = getResources(R.string.sync_in_complete);
+                message = "Some data did not sync. Please click on retry to sync remaining data.";
+
+            } else if (farmer.getSyncStatus() == 1) {
+                SYNC_STATUS = Constants.SYNC_STATUS_COMPLETE;
+
+                title = getResources(R.string.sync_complete);
+                message = getResources(R.string.all_data_synced);
+
+            }
+
+
+        runOnUiThread(new Runnable() {
+
+
+            @Override
+            public void run() {
+
+
+                if (progressDialog != null)
+                    progressDialog.dismiss();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AppDialog);
+                builder.setTitle(title);
+                builder.setCancelable(true);
+                builder.setMessage(message);
+                builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+
+                        if (networkActivityCompleteListener != null)
+                            networkActivityCompleteListener.taskComplete(SYNC_STATUS);
+
+                    }
+                });
+
+                if (SYNC_STATUS == Constants.SYNC_STATUS_NO_SYNC || SYNC_STATUS == Constants.SYNC_STATUS_PARTIAL_SYNC)
+                    builder.setNeutralButton(getResources(R.string.retry), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+
+                            sendDataToServer2(context, farmer);
+
+                        }
+                    });
+
+                builder.show();
+
+            }
+
+
+        });
+
+
+    }
+
+
+    JSONArray formatFarmerPlotsJsonStructure(String farmerCode, String date) {
+
+        JSONArray plotsArray = new JSONArray();
+
+
+        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerCode);
+
+        if (plots != null && plots.size() > 0) {
+
+            for (RealPlot plot : plots) {
+
+                JSONObject plotObject = new JSONObject();
+                try {
+                    plotObject.put("plotName", plot.getName());
+                    plotObject.put("plotAge", 0.0);
+                    plotObject.put("plotArea", 0.0);
+                    plotObject.put("latitude", 0.0);
+                    plotObject.put("longitude", 0.0);
+                    plotObject.put("monitoring", formatPlotMonitoringJsonStructure(plot.getId()));
+                    plotObject.put("answers", formatAnswersJsonStructure(farmerCode, date, plot.getPlotInformationJson()));
+
+
+                    plotsArray.put(plotObject);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return plotsArray;
+    }
+
+
+    JSONArray formatAnswersJsonStructure(String farmerCode, String date, String answersObjectString) {
 
         JSONArray refinedArray = new JSONArray();
 
@@ -1581,19 +2532,339 @@ public class BaseActivity extends AppCompatActivity {
                 disposableObject.put("farmerid", farmerCode);
 
 
-
                 refinedArray.put(disposableObject);
 
             }
         } catch (JSONException e) {
             e.printStackTrace();
-         }
+        }
 
 
-         Log.i(TAG, "Refined array " + refinedArray);
-         return refinedArray;
+        return refinedArray;
 
     }
+
+
+    JSONArray formatPlotMonitoringJsonStructure(String plotId) {
+
+        JSONArray monitoringArray = new JSONArray();
+
+
+        List<Monitoring> monitoringList = databaseHelper.getAllPlotMonitoring(plotId);
+
+        if (monitoringList != null && monitoringList.size() > 0) {
+
+            for (Monitoring monitoring : monitoringList) {
+
+                JSONObject monitoringObject = new JSONObject();
+                try {
+                    monitoringObject.put("name", monitoring.getName());
+                    monitoringObject.put("year", " ");
+                    monitoringObject.put("result", " ");
+                    monitoringObject.put("answers", formatMonitoringAnswersJsonStructure(monitoring.getJson()));
+
+                    monitoringArray.put(monitoringObject);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return monitoringArray;
+    }
+
+
+    JSONArray formatMonitoringAnswersJsonStructure(String answersObjectString) {
+
+        JSONArray refinedArray = new JSONArray();
+        String placeHolderQuestionId = databaseHelper.getQuestionIdByTranslationName("Place holder question");
+
+        try {
+
+            JSONObject answersObject = new JSONObject(answersObjectString);
+
+            Iterator i1 = answersObject.keys();
+
+
+            while (i1.hasNext()) {
+
+                try {
+
+                    JSONObject disposableObject = new JSONObject();
+
+
+                    String competenceId;
+                    String reasonForFailureId;
+
+                    String tmp_key = (String) i1.next();
+                    Question q = databaseHelper.getQuestion(tmp_key);
+                    if (q != null) {
+
+                        if (q.getRelated_Questions__c() != null) {
+
+
+                            String values[] = q.getRelated_Questions__c().split(",");
+                            String competenceName = values[0];
+                            String reasonForFailureName = values[1];
+
+                            competenceId = databaseHelper.getQuestionByName(competenceName).getId();
+                            if (competenceId == null) competenceId = "";
+                            reasonForFailureId = databaseHelper.getQuestionByName(reasonForFailureName).getId();
+                            if (reasonForFailureId == null) reasonForFailureId = "";
+
+
+                            disposableObject.put("answer", answersObject.getString(tmp_key));
+                            disposableObject.put("question", tmp_key);
+
+                            if (answersObject.has(competenceId)) {
+                                disposableObject.put("competence", competenceId);
+                                disposableObject.put("competenceAnswer", answersObject.get(competenceId));
+                            } else {
+
+                                disposableObject.put("competence", competenceId);
+                                disposableObject.put("competenceAnswer", "-select-");
+
+                            }
+
+                            if (answersObject.has(reasonForFailureId)) {
+                                disposableObject.put("reasonForFailure", reasonForFailureId);
+                                disposableObject.put("reasonForFailureAnswer", answersObject.get(reasonForFailureId));
+                            } else {
+
+                                disposableObject.put("reasonForFailure", reasonForFailureId);
+                                disposableObject.put("reasonForFailureAnswer", "-select-");
+
+
+                            }
+                        } else {
+
+                            disposableObject.put("answer", answersObject.getString(tmp_key));
+                            disposableObject.put("question", tmp_key);
+                            disposableObject.put("competence", placeHolderQuestionId);
+                            disposableObject.put("competenceAnswer", "none");
+                            disposableObject.put("reasonForFailure", placeHolderQuestionId);
+                            disposableObject.put("reasonForFailureAnswer", "none");
+
+                        }
+
+                    }
+
+                    refinedArray.put(disposableObject);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return refinedArray;
+
+    }
+
+
+    public static void largeLog(String tag, String content) {
+
+        if (content.length() > 4000) {
+            Log.d(tag, content.substring(0, 4000));
+            largeLog(tag, content.substring(4000));
+        } else {
+            Log.d(tag, content);
+        }
+
+
+    }
+
+
+    String filterResponseFromServer(String response) {
+
+        response = response.replaceAll("\\s+", "").trim();
+        response = response.substring(response.indexOf("'") + 1, response.indexOf("');"));
+
+        return response;
+
+    }
+
+
+    public JSONObject buildAllFarmersJson2(RealFarmer farmer) {
+
+
+        String familyMembersId = prefs.getString("no_family_members_id", null);
+
+
+        String lastSyncDate = prefs.getString("lastSync", "");
+
+        JSONObject farmers = new JSONObject();
+
+        JSONArray jsonArray = new JSONArray();
+
+        Double noFamilyMembers = 0.0;
+
+        try {
+
+            JSONArray FARMER_ANSWERS_JSON_ARRAY = formatAnswersJsonStructure(farmer.getCode(), date, farmer.getAnswersJson());
+            //JSONArray PLOTS_JSON_ARRAY = formatFarmerPlotsJsonStructure(farmer.getCode(), date);
+
+            JSONObject answerJsonObject = new JSONObject();
+            answerJsonObject.put("birthday", "10/10/" + farmer.getBirthYear());
+            answerJsonObject.put("fullname", farmer.getFarmerName());
+            answerJsonObject.put("farmercode", farmer.getCode());
+            answerJsonObject.put("gender", farmer.getGender());
+            answerJsonObject.put("village", farmer.getVillage());
+            answerJsonObject.put("start", farmer.getFirstVisitDate());
+            answerJsonObject.put("endSurvey", "01/02/2018 12:23 PM");
+            answerJsonObject.put("educationalLevel", farmer.getEducationLevel());
+            answerJsonObject.put("familyMembers", 1.0);
+            answerJsonObject.put("latitude", 0.0);
+            answerJsonObject.put("longitude", 0.0);
+            answerJsonObject.put("houseAddress", "");
+            answerJsonObject.put("lengthOfRelationship", 1);
+            answerJsonObject.put("phoneNumber", 1234567890);
+            answerJsonObject.put("farmerGroup", "");
+            answerJsonObject.put("reasonForRetreat", "");
+            answerJsonObject.put("registrationDate", "01/02/2018");
+            answerJsonObject.put("status", "");
+            answerJsonObject.put("surveyor", prefs.getString(Constants.USER_UID, null));
+            answerJsonObject.put("answers", FARMER_ANSWERS_JSON_ARRAY);
+            answerJsonObject.put("plots", new JSONArray());
+
+            jsonArray.put(answerJsonObject);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            farmers.put("farmers", jsonArray);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        // largeLog("SEND DATA BASE ACTIVITY", farmers.toString());
+
+        return farmers;
+    }
+
+
+    public JSONObject buildAllFarmerPlotsJson(RealFarmer farmer, String submission, String farmerCode) {
+
+
+        String familyMembersId = prefs.getString("no_family_members_id", null);
+
+
+        String lastSyncDate = prefs.getString("lastSync", "");
+
+        JSONObject farmers = new JSONObject();
+
+        JSONArray jsonArray = new JSONArray();
+
+        Double noFamilyMembers = 0.0;
+
+        try {
+
+            //JSONArray FARMER_ANSWERS_JSON_ARRAY = formatAnswersJsonStructure(farmer.getCode(), date, farmer.getAnswersJson());
+            JSONArray PLOTS_JSON_ARRAY = formatFarmerPlotsJsonStructure(farmer.getCode(), date);
+
+            JSONObject answerJsonObject = new JSONObject();
+            answerJsonObject.put("birthday", "10/10/" + farmer.getBirthYear());
+            answerJsonObject.put("fullname", farmer.getFarmerName());
+            answerJsonObject.put("farmercode", farmerCode);
+            answerJsonObject.put("gender", farmer.getGender());
+            answerJsonObject.put("village", farmer.getVillage());
+            answerJsonObject.put("start", farmer.getFirstVisitDate());
+            answerJsonObject.put("endSurvey", "01/02/2018 12:23 PM");
+            answerJsonObject.put("educationalLevel", farmer.getEducationLevel());
+            answerJsonObject.put("familyMembers", 1.0);
+            answerJsonObject.put("latitude", 0.0);
+            answerJsonObject.put("longitude", 0.0);
+            answerJsonObject.put("houseAddress", "");
+            answerJsonObject.put("lengthOfRelationship", 1);
+            answerJsonObject.put("phoneNumber", 1234567890);
+            answerJsonObject.put("farmerGroup", "");
+            answerJsonObject.put("reasonForRetreat", "");
+            answerJsonObject.put("registrationDate", "01/02/2018");
+            answerJsonObject.put("status", submission);
+            answerJsonObject.put("surveyor", prefs.getString(Constants.USER_UID, null));
+//            answerJsonObject.put("answers", new JSONArray());
+            answerJsonObject.put("plots", PLOTS_JSON_ARRAY);
+
+            jsonArray.put(answerJsonObject);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            farmers.put("farmers", jsonArray);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        // largeLog("SEND DATA BASE ACTIVITY", farmers.toString());
+
+        return farmers;
+    }
+
+
+    boolean checkIfFarmerFdpStatusFormFilled(String farmerId) {
+
+        boolean value = false;
+        Question agreeWithPlanQuestion = databaseHelper.getQuestionByTranslation("Agree with plan");
+
+        if (agreeWithPlanQuestion != null) {
+
+
+            JSONObject answersJson;
+
+            String json = databaseHelper.getAllAnswersJson(farmerId);
+
+            try {
+                answersJson = new JSONObject(json);
+            } catch (JSONException e) {
+                e.printStackTrace();
+                answersJson = new JSONObject();
+            }
+
+
+            if (answersJson.has(agreeWithPlanQuestion.getId())) {
+
+                String answer;
+                try {
+                    answer = answersJson.getString(agreeWithPlanQuestion.getId());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    answer = null;
+                }
+
+
+                if (answer != null && !answer.equalsIgnoreCase("-select-"))
+                    value = true;
+
+            }
+
+
+        } else {
+            CustomToast.makeToast(this, "DEBUG: Agree with plan question is missing!", Toast.LENGTH_LONG).show();
+            return false;
+
+        }
+
+        return value;
+
+    }
+
+
+
+
+
 
 
 

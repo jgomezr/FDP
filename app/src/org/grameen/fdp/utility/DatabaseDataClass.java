@@ -16,6 +16,9 @@ public class DatabaseDataClass {
     public static final String LAST_SYNC_DATE = "last_sync_date";
 
 
+    public static final String DISPLAY_NAME = "display_name";
+    public static final String TRANSLATION = "translation";
+
 
     private static final String INT_TYPE = " integer";
     private static final String COMMA = ",";
@@ -24,6 +27,10 @@ public class DatabaseDataClass {
     public static final String ACTIVITIY_PLUS_INPUTS_TABLE = "activities_and_inputs";
     public static final String INPUTS_TABLE = "inputs_table";
     public static final String FARMER_TABLE = "farmer_table";
+
+
+    public static final String SEASONAL = "seasonal";
+
 
     public static final String QUESTIONS_TABLE = "questions_table";
     static final String QUESTION_ID = "id";
@@ -93,9 +100,11 @@ public class DatabaseDataClass {
     static final String PLOTS_TABLE = "Plot_Table";
     static final String PLOT_ID = "Id";
     static final String PLOT_NAME = "Name";
-    static final String PLOT_INFORMATION_JSON = "Plot_Info";
+    static final String PLOT_ANSWERS_JSON = "Plot_Info";
     static final String START_YEAR = "start_year";
     static final String RECOMMENDATION_ID = "recommendationId";
+    static final String PLOT_GPS_POINTS = "gps_points";
+
 
 
     static final String MONITORING_TABLE = "Monitoring_Table";
@@ -159,8 +168,6 @@ public class DatabaseDataClass {
     static final String RECOMMENDATIONS_RELATED_2 = "related2";
     static final String RECOMMENDATIONS_YEAR_BACK_TO_GAPS = "year_to_gaps";
     static final String RECOMMENDATIONS_QUESTIONS_INVOLVED = "questions_involved";
-
-
 
     static final String RECOMMENDATIONS_PLUS_ACTIVITIES_NAME = "name";
     static final String RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID = "activity_id";
@@ -271,11 +278,13 @@ public class DatabaseDataClass {
             + FARMER_CODE + TEXT_TYPE + COMMA
             + PLOT_ID + TEXT_TYPE + COMMA
             + PLOT_NAME + TEXT_TYPE + COMMA
-            + PLOT_INFORMATION_JSON + TEXT_TYPE + COMMA
+            + PLOT_ANSWERS_JSON + TEXT_TYPE + COMMA
             + ADDITIONAL_INTERVENTION_JSON + TEXT_TYPE + COMMA
             + ADOPTION_OBSERVATIONS_JSON + TEXT_TYPE + COMMA
             + ADOPTION_OBSERVATION_RESULTS_JSON + TEXT_TYPE + COMMA
             + RECOMMENDATION_ID + TEXT_TYPE + COMMA
+            + PLOT_GPS_POINTS + TEXT_TYPE + COMMA
+
             + START_YEAR + " integer" + ")";
 
 
@@ -324,7 +333,8 @@ public class DatabaseDataClass {
     static final String CREATE_FORMS_TABLE = "CREATE TABLE IF NOT EXISTS " + FORMS_TABLE + "("
             + BaseColumns._ID + " integer primary key autoincrement, "
             + LAST_MODIFIED_DATE + TEXT_TYPE + COMMA
-
+            + DISPLAY_NAME + TEXT_TYPE + COMMA
+            + TRANSLATION + TEXT_TYPE + COMMA
             + FORM_TYPE + TEXT_TYPE + COMMA
             + FORM_NAME + " TEXT " + ")";
 
@@ -379,7 +389,7 @@ public class DatabaseDataClass {
             + RECOMMENDATIONS_CONDITION + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_DESCRIPTION + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_HIERARCHY + TEXT_TYPE + COMMA
-
+            + TRANSLATION + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_COST0 + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_COST_QUESTIONS0 + TEXT_TYPE + COMMA
 
@@ -464,6 +474,7 @@ public class DatabaseDataClass {
             + LAST_MODIFIED_DATE + TEXT_TYPE + COMMA
 
             + ID + TEXT_TYPE + COMMA
+            + SEASONAL + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_PLUS_ACTIVITIES_NAME + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_ID + TEXT_TYPE + COMMA
             + RECOMMENDATIONS_PLUS_ACTIVITIES_ACTIVITY_NAME + TEXT_TYPE + COMMA

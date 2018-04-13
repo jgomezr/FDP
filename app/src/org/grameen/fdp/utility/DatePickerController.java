@@ -14,6 +14,8 @@ import android.widget.EditText;
 
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
 
+import org.grameen.fdp.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -110,7 +112,7 @@ public class DatePickerController extends MyLabeledFieldController {
             calendar.setTimeZone(timeZone);
             calendar.setTime(date);
 
-            datePickerDialog = new DatePickerDialog(context, new OnDateSetListener() {
+            datePickerDialog = new DatePickerDialog(context, R.style.DatePickerSpinner, new OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                     Calendar calendar = Calendar.getInstance(Locale.getDefault());

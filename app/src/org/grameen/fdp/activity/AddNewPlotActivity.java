@@ -27,10 +27,11 @@ import org.grameen.fdp.utility.CustomToast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 /**
  * Created by aangjnr on 09/11/2017.
@@ -51,14 +52,20 @@ public class AddNewPlotActivity extends BaseActivity {
     EditText estimatedProductionEdittext;
     TextView estimatedProductionUnit;
     EditText phEdittext;
+    Question plotNameQue;
+    Question plotSizeQue;
+    Question soilPhQue;
+    Question estProdQue;
 
+    String plotRenovatedId = "", plotRenovationMadeId = "", plotInterventionAppliedId = "";
 
 
     JSONObject ALL_DATA_JSON = new JSONObject();
 
-    JSONObject AO_JSON_OBJECT = null;
-    JSONObject PLOT_INFO_JSON;
-    JSONObject FARMING_ECONOMIC_PROFILE_JSON;
+
+    /* JSONObject AO_JSON_OBJECT = null;
+    JSONObject PLOT_INFO_JSON;*/
+    JSONObject ALL_FARMER_ANSWERS_JSON;
 
 
 
@@ -70,10 +77,11 @@ public class AddNewPlotActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_a_plot);
 
+        setUpUI();
 
         prefs.edit().putBoolean("isInPlotInfoActivity", false).apply();
 
@@ -114,8 +122,6 @@ public class AddNewPlotActivity extends BaseActivity {
 
                 } else save.setEnabled(true);
             }
-
-
         });
 
 
@@ -137,16 +143,13 @@ public class AddNewPlotActivity extends BaseActivity {
             try {
                 JSONObject jsonObject = new JSONObject(plotInfo);
 
-                String[] size = jsonObject.get("size").toString().split(" ");
-                plotSizeEdittext.setText(size[0]);
-                //plotSizeUnit.setText(size[1]);
+                String size = jsonObject.getString(plotSizeQue.getId());
+                plotSizeEdittext.setText(size.split(" ")[0]);
 
+                String estProd = jsonObject.getString(estProdQue.getId());
+                estimatedProductionEdittext.setText(estProd.split(" ")[0]);
 
-                String[] estProd = jsonObject.get("estimatedProduction").toString().split(" ");
-                estimatedProductionEdittext.setText(estProd[0]);
-                //estimatedProductionUnit.setText(estProd[1]);
-
-                phEdittext.setText(jsonObject.get("ph").toString());
+                phEdittext.setText(jsonObject.getString(soilPhQue.getId()));
 
             } catch (JSONException | ArrayIndexOutOfBoundsException | NullPointerException e ) {
                 e.printStackTrace();
@@ -160,9 +163,9 @@ public class AddNewPlotActivity extends BaseActivity {
 
                 try {
 
-                FARMING_ECONOMIC_PROFILE_JSON = new JSONObject(farmingEconomicProfileJson);
-                plotSizeUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
-                estimatedProductionUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
+                    ALL_FARMER_ANSWERS_JSON = new JSONObject(farmingEconomicProfileJson);
+                    plotSizeUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
+                    estimatedProductionUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
 
             } catch (JSONException | ArrayIndexOutOfBoundsException | NullPointerException e ) {
                 e.printStackTrace();
@@ -189,6 +192,9 @@ public class AddNewPlotActivity extends BaseActivity {
             setToolbar(getResources(R.string.add_new_plot));
             farmerCode = getIntent().getStringExtra("farmerCode");
 
+            Log.d(TAG, "FARMER CODE IS " + farmerCode);
+
+
             String farmingEconomicProfileJson = databaseHelper.getAllAnswersJson(farmerCode);
 
             Log.i(TAG, "FARMING ECO PROFILE " + farmingEconomicProfileJson);
@@ -196,9 +202,9 @@ public class AddNewPlotActivity extends BaseActivity {
             if(farmingEconomicProfileJson != null)
             try {
 
-                FARMING_ECONOMIC_PROFILE_JSON = new JSONObject(farmingEconomicProfileJson);
-                plotSizeUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
-                estimatedProductionUnit.setText(FARMING_ECONOMIC_PROFILE_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
+                ALL_FARMER_ANSWERS_JSON = new JSONObject(farmingEconomicProfileJson);
+                plotSizeUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
+                estimatedProductionUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -219,10 +225,10 @@ public class AddNewPlotActivity extends BaseActivity {
             String value = "Plot " + noOfPlots;
             plotName.setText(value);
 
-            //    plotInfoFragment = MyFormFragment.newInstance(Constants.PLOT_INFORMATION, false, null);
             plotAOFragment = MyFormFragment.newInstance(Constants.ADOPTION_OBSERVATIONS, false, null, false);
 
             loadDynamicView(plotAOFragment, R.id.aosLayout);
+
 
         }
 
@@ -279,6 +285,34 @@ public class AddNewPlotActivity extends BaseActivity {
 
     }
 
+    private void setUpUI() {
+
+        TextView plot_name_text = findViewById(R.id.plot_name_text);
+        plotNameQue = databaseHelper.getQuestionByTranslation("Plot Name");
+        if (plotNameQue != null)
+            plot_name_text.setText((prefs.getBoolean("toggleTranslation", false)) ? plotNameQue.getTranslation__c() : plotNameQue.getCaption__c());
+
+
+        TextView plot_size_text = findViewById(R.id.plot_size_text);
+        plotSizeQue = databaseHelper.getQuestionByTranslation("Plot Size");
+        if (plotSizeQue != null)
+            plot_size_text.setText((prefs.getBoolean("toggleTranslation", false)) ? plotSizeQue.getTranslation__c() : plotSizeQue.getCaption__c());
+
+
+        TextView plot_est_prod_text = findViewById(R.id.plot_est_prod_text);
+        estProdQue = databaseHelper.getQuestionByTranslation("Estimated production size");
+        if (estProdQue != null)
+            plot_est_prod_text.setText((prefs.getBoolean("toggleTranslation", false)) ? estProdQue.getTranslation__c() : estProdQue.getCaption__c());
+
+
+        TextView plot_soil_ph_text = findViewById(R.id.plot_ph_text);
+        soilPhQue = databaseHelper.getQuestionByTranslation("Soil PH");
+        if (soilPhQue != null)
+            plot_soil_ph_text.setText((prefs.getBoolean("toggleTranslation", false)) ? soilPhQue.getTranslation__c() : soilPhQue.getCaption__c());
+
+
+    }
+
 
     void saveOrUpdateData(boolean shouldMoveToNextActivity) {
         engine = new ScriptEngineManager().getEngineByName("rhino");
@@ -289,10 +323,9 @@ public class AddNewPlotActivity extends BaseActivity {
 
             save.setEnabled(false);
 
-            String plotRenovatedId = "plot_renovated", plotRenovationMadeId = "plot_renovationMade", plotInterventionAppliedId = "plotInterventionAppliedId";
 
-            AO_JSON_OBJECT = plotAOFragment.getAOJSONObject();
-            PLOT_INFO_JSON = plotAOFragment.getPlotInfoJSONObject();
+            ALL_DATA_JSON = plotAOFragment.getAllAnswersInJSONObject();
+
 
 
 
@@ -300,8 +333,6 @@ public class AddNewPlotActivity extends BaseActivity {
             List<Question> plotInfoQues = databaseHelper.getSpecificSetOfQuestions(Constants.PLOT_INFORMATION);
             for (Question q : plotInfoQues) {
 
-               /* if(PLOT_INFO_JSON.has(q.getId()))
-                    PLOT_INFO_JSON.remove(q.getId());*/
 
                 if (q.getTranslation__c().equalsIgnoreCase("soil ph")) {
 
@@ -309,17 +340,24 @@ public class AddNewPlotActivity extends BaseActivity {
 
                     try {
 
-                        PLOT_INFO_JSON.put(q.getId(), phEdittext.getText().toString());
+                        if (ALL_DATA_JSON.has(q.getId()))
+                            ALL_DATA_JSON.remove(q.getId());
+
+                        ALL_DATA_JSON.put(q.getId(), phEdittext.getText().toString());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                } else if (q.getTranslation__c().equalsIgnoreCase("estimated production size")) {
+                } else if (q.getTranslation__c().equalsIgnoreCase("Estimated production size")) {
 
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR  ESTIMATED PROD!!!!" + q.getId());
 
                     try {
-                        PLOT_INFO_JSON.put(q.getId(), estimatedProductionEdittext.getText().toString().trim());
+
+                        if (ALL_DATA_JSON.has(q.getId()))
+                            ALL_DATA_JSON.remove(q.getId());
+
+                        ALL_DATA_JSON.put(estProdQue.getId(), estimatedProductionEdittext.getText().toString());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -329,7 +367,9 @@ public class AddNewPlotActivity extends BaseActivity {
                     Log.d(TAG, "************************** FOUND THE QUESTION ID FOR PLOT SIZE!!!!" + q.getId());
 
                     try {
-                        PLOT_INFO_JSON.put(q.getId(), plotSizeEdittext.getText().toString().trim());
+                        if (ALL_DATA_JSON.has(q.getId()))
+                            ALL_DATA_JSON.remove(q.getId());
+                        ALL_DATA_JSON.put(plotSizeQue.getId(), plotSizeEdittext.getText().toString());
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -355,98 +395,62 @@ public class AddNewPlotActivity extends BaseActivity {
 
             }
 
-            String newPlotInfoJsonValue = "";
+            //String newPlotInfoJsonValue = "";
              try {
 
-                PLOT_INFO_JSON.put("name", plotName.getText().toString());
-                PLOT_INFO_JSON.put("size", plotSizeEdittext.getText().toString() + " " +  plotSizeUnit.getText().toString());
-                PLOT_INFO_JSON.put("estimatedProduction", estimatedProductionEdittext.getText().toString() +
-                        " " + estimatedProductionUnit.getText().toString());
-                PLOT_INFO_JSON.put("ph", phEdittext.getText().toString());
-                PLOT_INFO_JSON.put("plotRenovated", PLOT_INFO_JSON.get(plotRenovatedId));
-                PLOT_INFO_JSON.put("plotRenovatedIntervention", PLOT_INFO_JSON.get(plotInterventionAppliedId));
-                PLOT_INFO_JSON.put("plotRenovationMade", PLOT_INFO_JSON.get(plotRenovationMadeId));
-                newPlotInfoJsonValue = PLOT_INFO_JSON.toString();
-
+                 //ALL_DATA_JSON.put(plotNameQue.getId(), plotName.getText().toString());
+                 //ALL_DATA_JSON.put(plotSizeQue.getId(), plotSizeEdittext.getText().toString() + " " +  plotSizeUnit.getText().toString());
+                 //ALL_DATA_JSON.put(estProdQue.getId(), estimatedProductionEdittext.getText().toString() +" " + estimatedProductionUnit.getText().toString());
+                 ALL_DATA_JSON.put(soilPhQue.getId(), phEdittext.getText().toString());
 
             } catch (JSONException e) {
                 e.printStackTrace();
-                newPlotInfoJsonValue = PLOT_INFO_JSON.toString();
+                 //newPlotInfoJsonValue = ALL_DATA_JSON.toString();
             }
 
 
-            String aoJsonValue = AO_JSON_OBJECT.toString();
-
-            Log.d(TAG, "PLOT INFO VALUE IS + \n" + newPlotInfoJsonValue + "\n");
-            Log.d(TAG, "PLOT AO VALUE IS + \n" + aoJsonValue + "\n");
+            Log.d(TAG, "ALL PLOT ANSWERS JSON IS VALUE IS + \n" + ALL_DATA_JSON + "\n");
 
 
-            //Todo merged AO json and Plot info Json into one Json object
-
-            String tmp_key;
-            Iterator i1 = PLOT_INFO_JSON.keys();
-
-            while(i1.hasNext()) {
-                tmp_key = (String) i1.next();
-                try {
-                    ALL_DATA_JSON.put(tmp_key, PLOT_INFO_JSON.get(tmp_key));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            Iterator i2 = AO_JSON_OBJECT.keys();
-
-            while(i2.hasNext()) {
-                tmp_key = (String) i2.next();
-                try {
-                    ALL_DATA_JSON.put(tmp_key, AO_JSON_OBJECT.get(tmp_key));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
+            List<Question> questionList = new ArrayList<>();
+            questionList.addAll(databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATION_RESULTS));
+            questionList.addAll(databaseHelper.getSpecificSetOfQuestions(Constants.ADDITIONAL_INTERVENTION));
 
 
+            applyLogicAndGetValue(questionList);
 
 
-            String AORJson = applyLogicAndGetValue(databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATION_RESULTS));
-            String AIJson = applyLogicAndGetValue(databaseHelper.getSpecificSetOfQuestions(Constants.ADDITIONAL_INTERVENTION));
-
-
-            // Todo Here, calculate for the AOS and AI adding logic to it
-
-
-            Log.d(TAG, "ADOPTION OBSERVATION RESULTS VALUE IS + \n" + AORJson + "\n");
-            Log.d(TAG, "ADDITIONAL INTERVENTION VALUE IS + \n" + AIJson + "\n");
-
-
-
-
+            Log.d(TAG, "ALL PLOT VALUES ON UPDATE + \n" + ALL_DATA_JSON + "\n");
 
 
 
             if (!isEditMode) {
+
+                Log.d(TAG, "FARMER CODE FOR PLOT IS " + farmerCode);
 
 
                 RealPlot realPlot = new RealPlot();
                 realPlot.setId(databaseHelper.getSystemTime());
                 realPlot.setName(plotName.getText().toString());
                 realPlot.setFarmerCode(farmerCode);
-                realPlot.setPlotInformationJson(newPlotInfoJsonValue);
-                realPlot.setAdoptionObservationsJson(aoJsonValue);
-                realPlot.setAdoptionObservationResultsJson(AORJson);
-                realPlot.setAdditionalInterventionJson(AIJson);
+                realPlot.setPlotInformationJson(ALL_DATA_JSON.toString());
+
 
 
                 if (databaseHelper.addNewPlot(realPlot)) {
                     newDataSaved = true;
                     plot = realPlot;
 
+                    databaseHelper.setFarmerAsUnSynced(realPlot.getFarmerCode());
 
                     checkIfFarmProductionCorresponds(farmerCode);
 
                     checkIfPlotWasRenovatedRecently(plot);
+
+                    checkIfFarmSizeCorresponds(farmerCode, ALL_FARMER_ANSWERS_JSON);
+
                     CustomToast.makeToast(AddNewPlotActivity.this, getResources(R.string.new_plot_added), Toast.LENGTH_SHORT).show();
+
 
                     if (shouldMoveToNextActivity) {
 
@@ -457,7 +461,6 @@ public class AddNewPlotActivity extends BaseActivity {
 
                         startActivity(intent);
                         finish();
-
                     }
 
                 } else
@@ -466,21 +469,25 @@ public class AddNewPlotActivity extends BaseActivity {
 
             } else {  //Todo save details finish this activity and go back to farmer details activity
 
-
                 plot.setName(plotName.getText().toString());
-                plot.setPlotInformationJson(newPlotInfoJsonValue);
-                plot.setAdoptionObservationsJson(aoJsonValue);
+                plot.setPlotInformationJson(ALL_DATA_JSON.toString());
+                /*plot.setAdoptionObservationsJson(aoJsonValue);
                 plot.setAdoptionObservationResultsJson(AORJson);
-                plot.setAdditionalInterventionJson(AIJson);
+                plot.setAdditionalInterventionJson(AIJson);*/
 
 
-                if (databaseHelper.editFarmerPlotInfoAndAO(plot)) {
+                if (databaseHelper.editFarmerPlotAnswers(plot)) {
                     newDataSaved = true;
+                    databaseHelper.setFarmerAsUnSynced(plot.getFarmerCode());
+
 
                     checkIfPlotWasRenovatedRecently(plot);
                     CustomToast.makeToast(AddNewPlotActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_SHORT).show();
 
                     checkIfFarmProductionCorresponds(farmerCode);
+
+                    checkIfFarmSizeCorresponds(farmerCode, ALL_FARMER_ANSWERS_JSON);
+
 
                     if (shouldMoveToNextActivity) {
                         Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
@@ -517,19 +524,21 @@ public class AddNewPlotActivity extends BaseActivity {
     }
 
 
-    String applyLogicAndGetValue(List<Question> questions) {
+    void applyLogicAndGetValue(List<Question> questions) {
 
         String resultQuestionId = "", logicId = "";
         Boolean result = false;
 
 
-        JSONObject jsonObject = new JSONObject();
         try {
 
 
             for (Question question : questions) {
-                Log.i(TAG, "***************************************************************\n\n");
+                System.out.println("***************************************************************");
                 Log.i(question.getId(), question.getCaption__c());
+
+                System.out.println("***************************************************************\n");
+
 
                 List<Logic> logics = databaseHelper.doesQuestionHaveLogics(question.getId());
 
@@ -547,18 +556,31 @@ public class AddNewPlotActivity extends BaseActivity {
                         logicId = logic.getId();
 
 
-                        result = getLogicValue(logic, ALL_DATA_JSON);
+                        result = compareAndEvaluateCascadedLogics(logic, ALL_DATA_JSON);
+
+
+
 
 
                         if (result != null) {
 
 
                             if (result) {
-                                jsonObject.put(resultQuestionId, logic.getResult());
+
 
                                 Log.i(TAG, "LOGIC EVALUATED TO TRUE \n");
 
                                 Log.i(TAG, "BREAK OUT OF LOGIC LOOP");
+
+                                try {
+
+                                    if (ALL_DATA_JSON.has(resultQuestionId))
+                                        ALL_DATA_JSON.remove(resultQuestionId);
+
+                                    ALL_DATA_JSON.put(resultQuestionId, logic.getResult());
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
 
                                 databaseHelper.editLogicEvaluatedValue(logicId, result.toString());
 
@@ -573,726 +595,40 @@ public class AddNewPlotActivity extends BaseActivity {
 
 
                     if (result != null && !result) {
-                        if (question.getTranslation__c().equalsIgnoreCase("lime need")) {
-                            jsonObject.put(resultQuestionId, "No");
-                            Log.i(TAG, "ALL LOGIC FOR " + question.getName() + " EVALUATED TO FALSE DEFAULT VALUE IS G\n\n");
-                            // Log.i(TAG, "\nJSON VALUE IS " +  jsonObject.toString() +  "\n" );
-                            databaseHelper.editLogicEvaluatedValue(logicId, result.toString());
-
-                        } else {
-                            jsonObject.put(resultQuestionId, "G");
-                            Log.i(TAG, "ALL LOGIC FOR " + question.getName() + " EVALUATED TO FALSE DEFAULT VALUE IS G\n\n");
-                            // Log.i(TAG, "\nJSON VALUE IS " +  jsonObject.toString() +  "\n" );
-                            databaseHelper.editLogicEvaluatedValue(logicId, result.toString());
 
 
+                        String defValue = question.getDefault_value__c();
+
+                        Log.i(TAG, "ALL LOGIC FOR " + question.getName() + " EVALUATED TO FALSE DEFAULT VALUE IS " + defValue);
+
+                        try {
+                            if (ALL_DATA_JSON.has(resultQuestionId))
+                                ALL_DATA_JSON.remove(resultQuestionId);
+
+                            ALL_DATA_JSON.put(resultQuestionId, defValue);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
 
+
+                        // }
+
                     }
-
-
-                    Log.i(TAG, "\n");
-
 
                 } else Log.i(TAG, "DOES NOT HAVE LOGIC \n\n");
 
             }
 
-        } catch (JSONException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
 
-        return jsonObject.toString();
+        // return jsonObject.toString();
 
     }
 
 
-
-
-
-    /*
-
-    Boolean getLogicValue(Logic logic) {
-
-
-        if (logic.getQuestion10() != null && !logic.getQuestion10().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 10 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Logic l6 = new Logic();
-            l6.setQUESTION(logic.getQuestion6());
-            l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-            l6.setVALUE(logic.getValue6());
-
-
-            Logic l7 = new Logic();
-            l7.setQUESTION(logic.getQuestion7());
-            l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-            l7.setVALUE(logic.getValue7());
-
-
-            Logic l8 = new Logic();
-            l8.setQUESTION(logic.getQuestion8());
-            l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-            l8.setVALUE(logic.getValue8());
-
-
-            Logic l9 = new Logic();
-            l9.setQUESTION(logic.getQuestion9());
-            l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
-            l9.setVALUE(logic.getValue9());
-
-
-            Logic l10 = new Logic();
-            l10.setQUESTION(logic.getQuestion10());
-            l10.setLOGICAL_OPERATOR(logic.getLogicalOperator10());
-            l10.setVALUE(logic.getValue10());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        ((((((((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5))
-                                + logic.getQuestionLogicOperation5() + compareValues(l6))
-                                + logic.getQuestionLogicOperation6() + compareValues(l7))
-                                + logic.getQuestionLogicOperation7() + compareValues(l8))
-                                + logic.getQuestionLogicOperation8() + compareValues(l9))
-                                + logic.getQuestionLogicOperation9() + compareValues(l10)
-
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion9() != null && !logic.getQuestion9().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 9 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Logic l6 = new Logic();
-            l6.setQUESTION(logic.getQuestion6());
-            l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-            l6.setVALUE(logic.getValue6());
-
-
-            Logic l7 = new Logic();
-            l7.setQUESTION(logic.getQuestion7());
-            l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-            l7.setVALUE(logic.getValue7());
-
-
-            Logic l8 = new Logic();
-            l8.setQUESTION(logic.getQuestion8());
-            l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-            l8.setVALUE(logic.getValue8());
-
-
-            Logic l9 = new Logic();
-            l9.setQUESTION(logic.getQuestion9());
-            l9.setLOGICAL_OPERATOR(logic.getLogicalOperator9());
-            l9.setVALUE(logic.getValue9());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        (((((((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5))
-                                + logic.getQuestionLogicOperation5() + compareValues(l6))
-                                + logic.getQuestionLogicOperation6() + compareValues(l7))
-                                + logic.getQuestionLogicOperation7() + compareValues(l8))
-                                + logic.getQuestionLogicOperation8() + compareValues(l9)
-
-
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion8() != null && !logic.getQuestion8().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 8 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Logic l6 = new Logic();
-            l6.setQUESTION(logic.getQuestion6());
-            l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-            l6.setVALUE(logic.getValue6());
-
-
-            Logic l7 = new Logic();
-            l7.setQUESTION(logic.getQuestion7());
-            l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-            l7.setVALUE(logic.getValue7());
-
-
-            Logic l8 = new Logic();
-            l8.setQUESTION(logic.getQuestion8());
-            l8.setLOGICAL_OPERATOR(logic.getLogicalOperator8());
-            l8.setVALUE(logic.getValue8());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        ((((((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5))
-                                + logic.getQuestionLogicOperation5() + compareValues(l6))
-                                + logic.getQuestionLogicOperation6() + compareValues(l7))
-                                + logic.getQuestionLogicOperation7() + compareValues(l8)
-
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-        } else if (logic.getQuestion7() != null && !logic.getQuestion7().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 7 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Logic l6 = new Logic();
-            l6.setQUESTION(logic.getQuestion6());
-            l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-            l6.setVALUE(logic.getValue6());
-
-
-            Logic l7 = new Logic();
-            l7.setQUESTION(logic.getQuestion7());
-            l7.setLOGICAL_OPERATOR(logic.getLogicalOperator7());
-            l7.setVALUE(logic.getValue7());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        (((((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5))
-                                + logic.getQuestionLogicOperation5() + compareValues(l6))
-                                + logic.getQuestionLogicOperation6() + compareValues(l7)
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion6() != null && !logic.getQuestion6().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 6 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Logic l6 = new Logic();
-            l6.setQUESTION(logic.getQuestion6());
-            l6.setLOGICAL_OPERATOR(logic.getLogicalOperator6());
-            l6.setVALUE(logic.getValue6());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        ((((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5))
-                                + logic.getQuestionLogicOperation5() + compareValues(l6)
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion5() != null && !logic.getQuestion5().equals("null")) {
-
-            Log.i(TAG, "*************************************** LOGIC WITH 5 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Logic l5 = new Logic();
-            l5.setQUESTION(logic.getQuestion5());
-            l5.setLOGICAL_OPERATOR(logic.getLogicalOperator5());
-            l5.setVALUE(logic.getValue5());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        (((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4))
-                                + logic.getQuestionLogicOperation4() + compareValues(l5)
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion4() != null && !logic.getQuestion4().equals("null")) {
-
-            Log.i(TAG, "*************************************** LOGIC WITH 4 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Logic l4 = new Logic();
-            l4.setQUESTION(logic.getQuestion4());
-            l4.setLOGICAL_OPERATOR(logic.getLogicalOperator4());
-            l4.setVALUE(logic.getValue4());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        ((compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3))
-                                + logic.getQuestionLogicOperation3() + compareValues(l4)
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion3() != null && !logic.getQuestion3().equals("null")) {
-
-
-            Log.i(TAG, "*************************************** LOGIC WITH 3 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Logic l3 = new Logic();
-            l3.setQUESTION(logic.getQuestion3());
-            l3.setLOGICAL_OPERATOR(logic.getLogicalOperator3());
-            l3.setVALUE(logic.getValue3());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(
-                        (compareValues(l1)
-                                + logic.getQuestionLogicOperation1() + compareValues(l2))
-                                + logic.getQuestionLogicOperation2() + compareValues(l3)
-                );
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion2() != null && !logic.getQuestion2().equals("null")) {
-
-            Log.i(TAG, "*************************************** LOGIC WITH 2 QUESTIONS!");
-
-
-            Logic l1 = new Logic();
-            l1.setQUESTION(logic.getQuestion1());
-            l1.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l1.setVALUE(logic.getValue1());
-
-
-            Logic l2 = new Logic();
-            l2.setQUESTION(logic.getQuestion2());
-            l2.setLOGICAL_OPERATOR(logic.getLogicalOperator2());
-            l2.setVALUE(logic.getValue2());
-
-
-            Boolean value;
-
-            try {
-                value = (Boolean) engine.eval(compareValues(l1)
-                        + logic.getQuestionLogicOperation1() + compareValues(l2));
-
-                System.out.println("***************************** COMPARE QUESTION VALUES Object value: " + value);
-
-            } catch (ScriptException e) {
-                e.printStackTrace();
-
-                value = null;
-            }
-
-
-            return value;
-
-
-        } else if (logic.getQuestion1() != null && !logic.getQuestion1().equals("null")) {
-
-            Log.i(TAG, "*************************************** LOGIC WITH 1 QUESTIONS!");
-
-            Logic l = new Logic();
-            l.setQUESTION(logic.getQuestion1());
-            l.setLOGICAL_OPERATOR(logic.getLogicalOperator1());
-            l.setVALUE(logic.getValue1());
-
-            return compareValues(l);
-
-        } else
-            return null;
-
-
-    }
-
-
-    Boolean compareValues(Logic logic) {
-
-        Boolean value = null;
-        String inputValue = getAnswerValue(logic.getQUESTION());
-        Log.i(TAG, "EQUATION IS\n\n");
-
-
-        Log.i(TAG, inputValue + "  " + logic.getLOGICAL_OPERATOR() + "  " + logic.getVALUE() + "\n\n");
-
-
-        if (inputValue != null) {
-
-            try {
-                Double.parseDouble(inputValue.trim());
-
-                value = (Boolean) engine.eval(inputValue + logic.getLOGICAL_OPERATOR() + logic.getVALUE());
-
-                return value;
-
-            } catch (ScriptException | NumberFormatException e) {
-
-                System.out.println("****  EXCEPTION  ****  " + e.getMessage());
-
-                value = inputValue.equalsIgnoreCase(logic.getVALUE());
-
-                if(logic.getLOGICAL_OPERATOR().equalsIgnoreCase("=="))
-                    value = inputValue.equalsIgnoreCase(logic.getVALUE());
-                else value = !inputValue.equalsIgnoreCase(logic.getVALUE());
-
-
-                return value;
-            } finally {
-                System.out.println("*** LOGIC VALUE IS: " + value);
-
-            }
-        } else return null;
-
-    }
-
-
-    */
-
-
-
-
-
-
-    String getAnswerValue(String s) {
-
-        String defVal = "--";
-        try {
-            defVal = AO_JSON_OBJECT.get(s).toString();
-
-        } catch (JSONException e) {
-            System.out.println("\n ***** EXCEPTION e ***** " + e.getMessage() + "\n");
-
-            try {
-                defVal = PLOT_INFO_JSON.get(s).toString();
-
-            } catch (JSONException f) {
-                System.out.println("\n ***** EXCEPTION f ***** " + f.getMessage() + "\n");
-
-
-            }
-        }
-        return defVal;
-    }
 
 
     @Override
@@ -1311,53 +647,78 @@ public class AddNewPlotActivity extends BaseActivity {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (plot != null)
+            try {
+                plot = databaseHelper.getFarmerPlot(plot.getId(), plot.getFarmerCode());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+    }
 
     void checkIfPlotWasRenovatedRecently(RealPlot plot) {
 
         try {
-            Recommendation GAPS_RECOMENDATION_FOR_START_YEAR;
 
-            if (PLOT_INFO_JSON.get("plotRenovated").toString().equalsIgnoreCase("yes")) {
-                int year = 0;
-                String recommendationName = PLOT_INFO_JSON.get("plotRenovatedIntervention").toString();
-                try {
-                    year = Integer.parseInt(PLOT_INFO_JSON.get("plotRenovationMade").toString());
+            Question plotRenovatedCorrectlyQuestion = databaseHelper.getQuestionByTranslation("Plot Renovated Correctly?");
 
-                    if (!recommendationName.equalsIgnoreCase("") && !recommendationName.isEmpty() && !recommendationName.equals("null") && !recommendationName.equals("--")) {
+            if (plotRenovatedCorrectlyQuestion != null) {
 
-                        if (recommendationName.equalsIgnoreCase("replanting"))
-                            GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Replant");
+                Recommendation GAPS_RECOMENDATION_FOR_START_YEAR;
 
-                        else if (recommendationName.equalsIgnoreCase("grafting"))
-                            GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Grafting");
-                        else
-                            GAPS_RECOMENDATION_FOR_START_YEAR = null;
+                if (ALL_DATA_JSON.get(plotRenovatedCorrectlyQuestion.getId()).toString().equalsIgnoreCase("yes")) {
+                    int year = 0;
+                    String recommendationName = ALL_DATA_JSON.get(plotInterventionAppliedId).toString();
+                    try {
+                        year = Integer.parseInt(ALL_DATA_JSON.get(plotRenovationMadeId).toString());
+
+                        if (!recommendationName.equalsIgnoreCase("") && !recommendationName.isEmpty() && !recommendationName.equals("null") && !recommendationName.equals("--")) {
+
+                            if (recommendationName.equalsIgnoreCase("replanting"))
+                                GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Replant");
+
+                            else if (recommendationName.equalsIgnoreCase("grafting"))
+                                GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Grafting");
+                            else
+                                GAPS_RECOMENDATION_FOR_START_YEAR = null;
 
 
-                        if (GAPS_RECOMENDATION_FOR_START_YEAR != null) {
-                            if (databaseHelper.editFarmerPlotRecommendationId(plot.getFarmerCode(), plot.getId(), GAPS_RECOMENDATION_FOR_START_YEAR.getId() + "," + GAPS_RECOMENDATION_FOR_START_YEAR.getId()))
+                            if (GAPS_RECOMENDATION_FOR_START_YEAR != null) {
 
-                                databaseHelper.editPlotStartYear(plot.getId(), -year);
 
-                            this.plot.setStartYear(-year);
-                            this.plot.setRecommendationId(GAPS_RECOMENDATION_FOR_START_YEAR.getId() + "," + GAPS_RECOMENDATION_FOR_START_YEAR.getId());
+                                if (databaseHelper.editFarmerPlotRecommendationId(plot.getFarmerCode(), plot.getId(), GAPS_RECOMENDATION_FOR_START_YEAR.getId() + "," + GAPS_RECOMENDATION_FOR_START_YEAR.getId()))
 
-                            prefs.edit().putBoolean("shouldReapplyRecommendation", false).apply();
+                                    databaseHelper.editPlotStartYear(plot.getId(), -year);
 
-                        } else {
-                            prefs.edit().putBoolean("shouldReapplyRecommendation", true).apply();
+                                this.plot.setStartYear(-year);
+                                this.plot.setRecommendationId(GAPS_RECOMENDATION_FOR_START_YEAR.getId() + "," + GAPS_RECOMENDATION_FOR_START_YEAR.getId());
+
+                                prefs.edit().putBoolean("shouldReapplyRecommendation", false).apply();
+
+                            } else {
+                                prefs.edit().putBoolean("shouldReapplyRecommendation", true).apply();
+
+                            }
 
                         }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        prefs.edit().putBoolean("shouldReapplyRecommendation", false).apply();
 
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    prefs.edit().putBoolean("shouldReapplyRecommendation", false).apply();
 
-                }
+                } else
+                    prefs.edit().putBoolean("shouldReapplyRecommendation", true).apply();
+
 
             } else {
-                prefs.edit().putBoolean("shouldReapplyRecommendation", true).apply();
+
+                CustomToast.makeToast(this, "Missing question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
 
 
             }
@@ -1369,10 +730,110 @@ public class AddNewPlotActivity extends BaseActivity {
     }
 
 
+    Boolean compareAndEvaluateCascadedLogics(Logic logic, JSONObject ALL_DATA_JSON) {
 
 
+        StringBuilder equation = new StringBuilder();
+
+        String equationValue = "";
 
 
+        Log.i("\n" + TAG, "------ CASCADED LOGICS  ------- \n");
+
+        //level 1
+        Log.i(TAG, " ------  LEVEL 1  ------- ");
+        Boolean value1 = getLogicValue(logic, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+        Log.i(TAG, " Value  " + value1);
+        Log.i(TAG, "\n");
+
+
+        //level 2
+        Log.i(TAG, " ------  LEVEL 2  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic2 = databaseHelper.getLogic(logic.getParentLogic());
+        Boolean value2 = getLogicValue(logic2, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+        Log.i(TAG, " Value  " + value2);
+        Log.i(TAG, "\n");
+
+
+        //level 3
+        Log.i(TAG, " ------  LEVEL 3  ------- ");
+        Log.i(TAG, "\n");
+
+        Logic logic3 = databaseHelper.getLogic(logic2.getParentLogic());
+        Boolean value3 = getLogicValue(logic3, ALL_DATA_JSON);
+
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value3);
+        Log.i(TAG, "\n");
+
+
+        //level 4
+        Log.i(TAG, " ------  LEVEL 4  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic4 = databaseHelper.getLogic(logic3.getParentLogic());
+        Boolean value4 = getLogicValue(logic4, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value4);
+        Log.i(TAG, "\n");
+
+
+        //level 5
+        Log.i(TAG, " ------  LEVEL 5  ------- ");
+        Log.i(TAG, "\n");
+
+
+        Logic logic5 = databaseHelper.getLogic(logic4.getParentLogic());
+        Boolean value5 = getLogicValue(logic5, ALL_DATA_JSON);
+        Log.i(TAG, "\n");
+
+        Log.i(TAG, " Value  " + value5);
+        Log.i(TAG, "\n");
+
+
+        equation.append(value1)
+                .append(logic.getParentLogicalOperator())
+                .append(value2).append(logic2.getParentLogicalOperator())
+                .append(value3).append(logic3.getParentLogicalOperator())
+                .append(value4).append(logic4.getParentLogicalOperator())
+                .append(value5);
+
+
+        equationValue = equation.toString().replace("null", "");
+
+
+        Log.i(TAG, "STRING BUILDER EQUATION IS " + equation.toString());
+        Log.i(TAG, "FILTERED EQUATION IS " + equationValue);
+
+
+        Boolean value = null;
+
+
+        try {
+
+            value = (Boolean) engine.eval(equationValue);
+
+
+        } catch (ScriptException e) {
+            System.out.println("*****  Exception  *****   " + e.getMessage());
+
+
+        } finally {
+            System.out.println("************  LOGIC VALUE IS: " + value);
+
+        }
+        return value;
+
+
+    }
 
 
 

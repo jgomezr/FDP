@@ -110,7 +110,7 @@ public class PlotMonitoringTablePagerAdapter extends PagerAdapter {
 
         tableView.setColumnCount(3);
 
-        String [] TABLE_HEADERS = {"AO's", "Farmer Competence", "Reason for Fail"};
+        String[] TABLE_HEADERS = {mContext.getString(R.string.ao), mContext.getString(R.string.farmer_competence), mContext.getString(R.string.reason_for_failure)};
 
 
         TableColumnWeightModel columnModel = new TableColumnWeightModel(tableView.getColumnCount());

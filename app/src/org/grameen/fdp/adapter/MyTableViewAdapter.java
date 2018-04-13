@@ -19,7 +19,9 @@ import org.grameen.fdp.object.Question;
 import org.grameen.fdp.utility.DatabaseHelper;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import de.codecrafters.tableview.TableView;
 import de.codecrafters.tableview.toolkit.LongPressAwareTableDataAdapter;
@@ -76,42 +78,6 @@ public class MyTableViewAdapter extends LongPressAwareTableDataAdapter<Data> {
         } else renderedView = renderCalculatedValuesForYear(myTableData, i1 - 1);
 
 
-
-            /*if (i1 == 1) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 0);
-
-        } else if (i1 == 2) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 1);
-
-        } else if (i1 == 3) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 2);
-
-        } else if (i1 == 4) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 3);
-
-        } else if (i1 == 5) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 4);
-
-        } else if (i1 == 6) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 5);
-
-        } else if (i1 == 7) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 6);
-
-        } else if (i1 == 8) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, 7);
-
-        }*/
-
-
         return renderedView;
     }
 
@@ -136,7 +102,12 @@ public class MyTableViewAdapter extends LongPressAwareTableDataAdapter<Data> {
 
             try {
                 Double value = Double.parseDouble(calculationsForTheYears.get(year));
-                textView.setText(new DecimalFormat("#,###,###").format(value));
+
+                NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+                DecimalFormat formatter = (DecimalFormat) nf;
+                formatter.applyPattern("#,###,###.##");
+
+                textView.setText(formatter.format(value));
 
 
                 if (value < 0.0) {
@@ -197,11 +168,14 @@ public class MyTableViewAdapter extends LongPressAwareTableDataAdapter<Data> {
 
                 final Button button = new Button(newContext);
                 // button.setBackgroundResource(R.drawable.button_background_accent);
-                button.setText(data.getLabel().split("_")[1]);
+
+                String text = getResources().getString(R.string.change_to) + " " + data.getLabel().split("_")[1];
+
+                button.setText(text);
                 // button.setTextColor(ContextCompat.getColor(context, R.color.white));
                 button.setTag(data.getLabel());
                 button.setPadding(20, 10, 20, 10);
-                button.setTextSize(TEXT_SIZE);
+                button.setTextSize(9);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

@@ -2,6 +2,7 @@ package org.grameen.fdp.viewholder;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -86,55 +87,49 @@ public class CellViewHolder extends AbstractViewHolder {
     void bindEditTextView(MaterialEditText editText, final Question q, final int rowPosition){
 
         Log.i("Edittext Cell VH", "NOT NULL");
-       /* if(updateJsonArrayListener != null)
-            updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), q.getDefault_value__c());
-*/
-
-              if(q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER))
-                editText.setInputType(InputType.TYPE_CLASS_NUMBER);
-            else if(q.getType__c().equalsIgnoreCase(Constants.TYPE_TEXT))
-                editText.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
 
-            editText.setHint(FamilyMembersActivity_v2.getValue(rowPosition, q.getId()));
-            editText.setError(q.getHelp_Text__c());
-            editText.setErrorColor(R.color.divider_2);
-            //editText.setHelperTextAlwaysShown(true);
-            editText.setTextSize(12);
-
-            editText.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                }
-
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
+        if (q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER))
+            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        else if (q.getType__c().equalsIgnoreCase(Constants.TYPE_TEXT))
+            editText.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
 
-                    //q.setDefault_value__c(s.toString());
+        editText.setHint(FamilyMembersActivity_v2.getValue(rowPosition, q.getId()));
+        //editText.setError(q.getHelp_Text__c());
+        //editText.setErrorColor(R.color.divider_2);
+        //editText.setHelperTextAlwaysShown(true);
+        editText.setTextSize(12);
 
-                    if(updateJsonArrayListener != null)
-                        updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), s.toString());
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
 
 
+                //q.setDefault_value__c(s.toString());
+
+                if (updateJsonArrayListener != null)
+                    updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), s.toString());
 
 
-                }
-            });
+            }
+        });
 
 
-        cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        cell_container.getLayoutParams().height = 70;
+          /* cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
+           cell_container.getLayoutParams().height = 70;*/
 
         editText.requestLayout();
-
-
 
 
     }

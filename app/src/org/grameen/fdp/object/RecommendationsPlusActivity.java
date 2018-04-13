@@ -20,6 +20,9 @@ public class RecommendationsPlusActivity {
     @SerializedName("Activity__c")
     String activityId;
 
+    @SerializedName("Seasonal__c")
+    String seasonal;
+
 
     @SerializedName("Activity_Name__c")
     String activityName;
@@ -44,6 +47,15 @@ public class RecommendationsPlusActivity {
 
 
     public RecommendationsPlusActivity() {
+    }
+
+
+    public void setSeasonal(String seasonal) {
+        this.seasonal = seasonal;
+    }
+
+    public String getSeasonal() {
+        return seasonal;
     }
 
     public void setLastModifiedDate(String lastModifiedDate) {

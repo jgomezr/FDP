@@ -98,6 +98,10 @@ android {
     compile 'com.google.android.gms:play-services-location:10.2.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
     compile 'com.evrencoskun.library:tableview:0.8.6'
+/*
+    compile 'com.akexorcist:localizationactivity:1.2.2'
+*/
+
     dependencies {
       compile ('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
         transitive = true

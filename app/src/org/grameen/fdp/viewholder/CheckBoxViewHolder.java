@@ -132,8 +132,8 @@ public class CheckBoxViewHolder extends AbstractViewHolder {
             }
         });
 
-        cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        cell_container.getLayoutParams().height = 70;
+        //cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        //cell_container.getLayoutParams().height = 70;
 
         checkBox.requestLayout();
 

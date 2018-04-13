@@ -6,6 +6,7 @@ package org.grameen.fdp.object;
 
 public class Monitoring {
 
+    String year;
     String id;
     String name;
     String json;
@@ -15,6 +16,13 @@ public class Monitoring {
 
     public Monitoring(){}
 
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getYear() {
+        return year;
+    }
 
     public String getId() {
         return id;

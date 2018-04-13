@@ -23,7 +23,7 @@ public class Callbacks {
 
     public interface NetworkActivityCompleteListener {
 
-        void taskComplete(String response);
+        void taskComplete(int response);
 
     }
 

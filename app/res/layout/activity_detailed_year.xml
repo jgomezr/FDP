@@ -50,7 +50,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Farmer Name:"
+                        android:text="@string/farmer_name"
                         android:layout_marginRight="@dimen/spacing_half"
                         android:textColor="@color/text_black_87"
                         />
@@ -77,7 +77,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Farmer Code:"
+                        android:text="@string/farmer_code"
                         android:layout_marginRight="@dimen/spacing_half"
 
                         />
@@ -111,7 +111,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Currency:"
+                    android:text="@string/currency"
                     android:layout_marginRight="@dimen/spacing_half"
                     android:textColor="@color/text_black_87"
                     />
@@ -123,7 +123,7 @@
                     android:text="GHS"
                     android:textAllCaps="true"
                     android:textStyle="bold"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="?attr/colorAccent"
                     />
 
             </LinearLayout>
@@ -195,7 +195,7 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButtonGrey"
-                android:text="Back"
+                android:text="@string/back"
                 android:padding="@dimen/spacing_normal"
                 />
 
@@ -207,8 +207,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButtonAccent"
-                android:text="Save"
+                android:text="@string/save"
                 android:padding="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
 

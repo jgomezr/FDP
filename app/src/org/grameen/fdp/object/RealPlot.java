@@ -11,35 +11,10 @@ public class RealPlot {
     String farmerCode;
     String recommendationId;
     String plotInformationJson;
-    String adoptionObservationsJson;
-    String adoptionObservationResultsJson;
-    String additionalIntervention;
 
     int startYear = 1;
+    String gpsPoints;
 
-    public String getAdditionalInterventionJson() {
-        return additionalIntervention;
-    }
-
-    public void setAdditionalInterventionJson(String additionalIntervention) {
-        this.additionalIntervention = additionalIntervention;
-    }
-
-    public String getAdoptionObservationsJson() {
-        return adoptionObservationsJson;
-    }
-
-    public void setAdoptionObservationsJson(String adoptionObservationsJson) {
-        this.adoptionObservationsJson = adoptionObservationsJson;
-    }
-
-    public String getAdoptionObservationResultsJson() {
-        return adoptionObservationResultsJson;
-    }
-
-    public void setAdoptionObservationResultsJson(String adoptionObservationResultsJson) {
-        this.adoptionObservationResultsJson = adoptionObservationResultsJson;
-    }
 
     public String getId() {
         return id;
@@ -87,5 +62,13 @@ public class RealPlot {
 
     public void setRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
+    }
+
+    public String getGpsPoints() {
+        return gpsPoints;
+    }
+
+    public void setGpsPoints(String gpsPoints) {
+        this.gpsPoints = gpsPoints;
     }
 }

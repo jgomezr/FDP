@@ -63,16 +63,16 @@ public class DetailedYearTableViewAdapter extends LongPressAwareTableDataAdapter
     public View getDefaultCellView(int i, int i1, ViewGroup viewGroup) {
 
         final Data myTableData = getRowData(i);
-        View renderedView = new View(getContext());
+        View renderedView;
 
 
-        if (i1 == 0) {
+        //if (i1 == 0) {
             //Todo set questions here
 
             //renderedView = renderColumn0Values(myTableData);
             renderedView = renderCalculatedValuesForYear(myTableData, i1);
 
-
+/*
         } else if (i1 == 1) {
             //Todo set Answer Values here
             renderedView = renderCalculatedValuesForYear(myTableData, i1);
@@ -121,7 +121,7 @@ public class DetailedYearTableViewAdapter extends LongPressAwareTableDataAdapter
             //Todo set Answer Values here
             renderedView = renderCalculatedValuesForYear(myTableData, i1);
 
-        }
+        }*/
 
 
         return renderedView;
@@ -146,7 +146,21 @@ public class DetailedYearTableViewAdapter extends LongPressAwareTableDataAdapter
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
             textView.setTextSize(TEXT_SIZE);
 
-            textView.setText(calculationsForTheYears.get(year));
+
+            try {
+
+                Double value = Double.parseDouble(calculationsForTheYears.get(year));
+
+                textView.setText(new DecimalFormat("#,###,###").format(value));
+
+
+            } catch (Exception ignored) {
+
+                textView.setText(calculationsForTheYears.get(year));
+
+                // e.printStackTrace();
+
+            }
 
 
         } else {

@@ -16,11 +16,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import org.grameen.fdp.R;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.ImageUtil;
 
 import java.util.List;
 import java.util.Random;
@@ -77,7 +76,9 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
 
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals(""))
-            Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
+            viewHolder.photo.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
+            //Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
+
         else {
 
             try {
@@ -112,16 +113,25 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         viewHolder.code.setText(farmer.getCode());
 
 
-
         if(farmer.getSyncStatus() != null){
             if(farmer.getSyncStatus() == 1) {
-                viewHolder.syncStatus.setImageResource(R.drawable.ic_check_circle_black_18dp);
+                viewHolder.syncStatus.setImageResource(R.drawable.ic_sync_black_18dp);
                 viewHolder.syncStatus.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent));
             }else if(farmer.getSyncStatus() == 0) {
                 viewHolder.syncStatus.setImageResource(R.drawable.ic_sync_problem_black_18dp);
                 viewHolder.syncStatus.setColorFilter(ContextCompat.getColor(context, R.color.cpb_red));
             }
+        } else {
+            viewHolder.syncStatus.setImageResource(R.drawable.ic_sync_problem_black_18dp);
+            viewHolder.syncStatus.setColorFilter(ContextCompat.getColor(context, R.color.cpb_red));
+        }
 
+
+        if (farmer.getHasSubmitted() != null) {
+            if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES)) {
+                viewHolder.fdpStatus.setImageResource(R.drawable.ic_check_circle_black_18dp);
+                viewHolder.fdpStatus.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent));
+            }
         }
 
 
@@ -165,6 +175,8 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         ImageView imageView;
 
         ImageView syncStatus;
+        ImageView fdpStatus;
+
 
 
 
@@ -184,6 +196,8 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
             imageView = itemView.findViewById(R.id.image_view1);
 
             syncStatus = itemView.findViewById(R.id.sync_status);
+            fdpStatus = itemView.findViewById(R.id.fdp_status);
+
             initialsBackground = (RelativeLayout) itemView.findViewById(R.id.rl1);
 
 

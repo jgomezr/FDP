@@ -216,6 +216,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/airtel_mm.png"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/review.png",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/review.png"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/depot_96.png",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/depot_96.png"
     },

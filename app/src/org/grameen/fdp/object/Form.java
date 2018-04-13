@@ -16,6 +16,12 @@ public class Form {
     @SerializedName("Type__c")
     String type;
 
+    @SerializedName("Display_Name__c")
+    String diaplayName;
+
+    @SerializedName("Translation__c")
+    String translation;
+
     String Id;
 
     public Form() {
@@ -49,5 +55,29 @@ public class Form {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
+    public void setDiaplayName(String diaplayName) {
+        this.diaplayName = diaplayName;
+    }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public String getDiaplayName() {
+        return diaplayName;
+    }
+
+    public String getTranslation() {
+        return translation;
     }
 }

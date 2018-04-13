@@ -1,7 +1,6 @@
 package org.grameen.fdp.activity;
 
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -41,7 +39,6 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.fragment.FarmerListFragment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.Village;
-import org.grameen.fdp.task.SendFarmersToServer;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
@@ -57,7 +54,8 @@ import java.util.List;
  */
 
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener, Callbacks.NetworkActivityCompleteListener {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener,
+        Callbacks.NetworkActivityCompleteListener {
 
 
     Switch toggleTranslation;
@@ -80,7 +78,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private LinearLayout pager_indicator;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -107,6 +105,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
+
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
@@ -146,7 +145,24 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         findViewById(R.id.add_farmer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Add_EditFarmerDetailsActivity.class));
+
+                if (databaseHelper.getAllForms().size() > 0) {
+
+
+                    startActivity(new Intent(MainActivity.this, Add_EditFarmerDetailsActivity.class));
+                } else {
+
+                    if (Utils.checkInternetConnection(MainActivity.this)) {
+
+                        DataDownloadActivity.onNetworkActivityComplete(MainActivity.this);
+                        startActivity(new Intent(MainActivity.this, DataDownloadActivity.class));
+                    } else {
+                        CustomToast.makeToast(MainActivity.this, getResources(R.string.no_internet_connection_available), Toast.LENGTH_LONG).show();
+                    }
+
+
+                }
+
 
 
             }
@@ -157,11 +173,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             public void onClick(View v) {
                 //Toast.makeText(MainActivity.this, "Sync", Toast.LENGTH_SHORT).show();
 
-                if (Utils.checkInternetConnection(MainActivity.this))
-                    startActivity(new Intent(MainActivity.this, SyncActivity.class));
+                if (Utils.checkInternetConnection(MainActivity.this)) {
+                    DataDownloadActivity.onNetworkActivityComplete(MainActivity.this);
+                    startActivity(new Intent(MainActivity.this, DataDownloadActivity.class));
+                }
 
                 else {
-                    CustomToast.makeToast(MainActivity.this, "You have no internet connection. Please connect to the internet and try again", Toast.LENGTH_LONG).show();
+                    CustomToast.makeToast(MainActivity.this, getResources(R.string.no_internet_connection_available), Toast.LENGTH_LONG).show();
 
                 }
 
@@ -223,13 +241,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         });
 
 
-        onBackPressed();
+        onBackClicked();
 
     }
 
 
     void setUpAdatper() {
-
 
         villages = databaseHelper.getAllVillages();
         viewPagerAdapter = new FarmerPagerAdapter(getSupportFragmentManager());
@@ -297,12 +314,15 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             case R.id.sync:
 
-                if (Utils.checkInternetConnection(MainActivity.this))
-                    startActivity(new Intent(MainActivity.this, SyncActivity.class));
+                if (Utils.checkInternetConnection(MainActivity.this)) {
+
+                    DataDownloadActivity.onNetworkActivityComplete(MainActivity.this);
+                    startActivity(new Intent(MainActivity.this, DataDownloadActivity.class));
+
+                }
 
                 else {
-                    CustomToast.makeToast(MainActivity.this, "You have no internet connection. Please connect to the internet and try again", Toast.LENGTH_LONG).show();
-
+                    CustomToast.makeToast(MainActivity.this, getResources(R.string.no_internet_connection_available), Toast.LENGTH_LONG).show();
                 }
 
 
@@ -316,22 +336,19 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             case R.id.sync_farmer:
 
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                SyncUpActivity.onNetworkActivityComplete(MainActivity.this);
 
-                        progressDialog = showProgress(MainActivity.this, "Syncing farmers data", "Please wait", false);
-
-                    }
-                });
-
-                SendFarmersToServer.onNetworkActivityComplete(MainActivity.this);
-
-                syncFarmerData(MainActivity.this);
+                startActivity(new Intent(MainActivity.this, SyncUpActivity.class));
 
                 break;
 
+            case R.id.download_farmer_data:
 
+                SyncDownActivity.onNetworkActivityComplete(MainActivity.this);
+
+                startActivity(new Intent(MainActivity.this, SyncDownActivity.class));
+
+                break;
 
 
     /*
@@ -355,7 +372,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         }
 
             }
-        }, 700);
+        }, 500);
 
 
         return true;
@@ -380,10 +397,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         Log.i("MAIN ACTIVITY", "ON RESUME!");
-
 
         if (prefs.getBoolean("shouldRestartMainActivity", false)) {
             prefs.edit().putBoolean("shouldRestartMainActivity", false).apply();
@@ -392,6 +408,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             startActivity(intent);
             finish();
 
+        } else if (prefs.getBoolean("refreshMainActivity", false)) {
+            prefs.edit().putBoolean("refreshMainActivity", false).apply();
+            setUpAdatper();
         }
 
     }
@@ -482,8 +501,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 //Todo set tab text accordingly
 
-                tabOIndicatorText.setText(actualVillageList.get(0));
-
+                tabOIndicatorText.setText(actualVillageList.get(position));
 
                 for (int i = 0; i < dotsCount; i++) {
                     dots[i].setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.non_selected_item));
@@ -546,47 +564,28 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     }
 
+
     @Override
-    public void taskComplete(String response) {
+    public void taskComplete(int response) {
 
         try {
-            progressDialog.dismiss();
-            SendFarmersToServer.removeOnNetworkActivityComplete();
+            DataDownloadActivity.removeOnNetworkActivityComplete();
+            SyncUpActivity.removeOnNetworkActivityComplete();
+            SyncDownActivity.removeOnNetworkActivityComplete();
 
-        }catch(NullPointerException e){e.printStackTrace();}
-
-
-        if(response.contains(Constants.RESPONSE_SUCCESS)){
-
-
-            showAlertDialog(true, getResources(R.string.sync_complete), getResources(R.string.all_data_synced), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            }, getResources(R.string.ok), null, "", 0);
-
-            databaseHelper.setAllFarmersAsSynced();
-            prefs.edit().putString("lastSync", DateUtil.getFormattedDateMMDDYYYYhhmmaa()).apply();
-
-        }else if(response.contains(Constants.RESOPNSE_ERROR)) {
-
-            showAlertDialog(true, getResources(R.string.generic_error), getResources(R.string.connection_error), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            }, getResources(R.string.ok), null, "", 0);
-
-        }else{
-
-            CustomToast.makeToast(this, "Could not send farmers data to server. Please try again!", Toast.LENGTH_LONG).show();
-
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         }
 
-
+        setUpAdatper();
 
     }
+
+
+
+
+
+
 
     public class FarmerPagerAdapter extends FragmentPagerAdapter {
 

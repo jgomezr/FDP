@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.PlotsListAdapter;
@@ -28,13 +28,14 @@ import org.grameen.fdp.object.Form;
 import org.grameen.fdp.object.Logic;
 import org.grameen.fdp.object.Monitoring;
 import org.grameen.fdp.object.PlotAssessment;
+import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
-import org.grameen.fdp.task.SendFarmersToServer;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DateUtil;
+import org.grameen.fdp.utility.ImageUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -92,10 +93,9 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     private TextView noOfPlots;
 
 
-    String correspondingMessage = "";
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farmer_details);
         Toolbar toolbar = setToolbar(getResources(R.string.farmer_details));
@@ -115,9 +115,10 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         noOfPlots = (TextView) findViewById(R.id.noOfPlots);
         circleImageView = (CircleImageView) findViewById(R.id.photo);
 
+        IS_MONITIRING_MODE = prefs.getString("flag", "").equals(Constants.MONITORING);
 
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
-        if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
+        if (IS_MONITIRING_MODE) {
 
             //Todo add the rest of the views to hide
             //monitoringMode = true;
@@ -144,7 +145,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                     //Todo go to add plot activity
                     Intent intent = new Intent(FarmerDetailsActivity.this, AddNewPlotActivity.class);
-                    intent.putExtra("farmerCode", farmer.getCode());
+                    intent.putExtra("farmerCode", farmer.getId());
                     startActivity(intent);
 
 
@@ -161,10 +162,28 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         findViewById(R.id.sync_farmer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SendFarmersToServer.onNetworkActivityComplete(FarmerDetailsActivity.this);
 
-                syncFarmerData(FarmerDetailsActivity.this);
 
+                if (farmer.getSyncStatus() != Constants.SYNC_OK) {
+
+                    Intent intent = new Intent(FarmerDetailsActivity.this, SyncUpActivity.class);
+                    intent.putExtra("farmer", new Gson().toJson(farmer));
+                    startActivity(intent);
+                } else
+                    CustomToast.makeToast(FarmerDetailsActivity.this, getResources(R.string.farmer) + " " + farmer.getFarmerName() + getResources(R.string.apostrophe_s) + getResources(R.string.data_already_synced), Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
+
+        findViewById(R.id.review_page).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(FarmerDetailsActivity.this, PlotsReviewActivity.class);
+                intent.putExtra("farmerCode", farmer.getId());
+                startActivity(intent);
 
 
             }
@@ -175,11 +194,11 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     }
 
 
+
     void initializeViews(Boolean loadButtons) {
 
-
         try {
-            ALL_FARMER_ANSWERS_JSON = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
+            ALL_FARMER_ANSWERS_JSON = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getId()));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -209,44 +228,43 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
             landArea.setText(farmAcre + " " + totalUnit);
 
-        }catch(Exception e){
-            e.printStackTrace();
+        } catch (Exception ignored) {
+            //e.printStackTrace();
 
             landArea.setVisibility(View.GONE);
 
         }
 
 
-
-        lastSyncDate.setText(prefs.getString("lastSync", "--"));
+        lastSyncDate.setText(farmer.getLastVisitDate());
         lastVisitDate.setText(farmer.getLastModifiedDate());
 
 
 
 
-//        syncIndicator.setVisibility((farmer.getSyncStatus() == Constants.SYNC_OK) ? View.VISIBLE : View.GONE);
 
         setUpPlotsAdapter();
 
 
-
-       /* if(!itemsLoaded)
-         setUpPlotsAdapter();
-        else {
-            plotsListAdapter.notifyDataSetChanged();
-            Log.d(TAG, "PLOTS LIST ADAPTER NOT NULL");
-
-        }*/
-
-
-        Log.d(TAG, "IMAGE URL ###########   " + farmer.getImageUrl() + "");
+        //Log.d(TAG, "IMAGE URL ###########   " + farmer.getImageUrl() + "");
 
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
             Log.d(TAG, "IMAGE URL    " + farmer.getImageUrl() + "");
 
+            circleImageView.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(FarmerDetailsActivity.this, ImageViewActivity.class);
+                    intent.putExtra("image_string", farmer.getImageUrl());
+                    startActivity(intent);
 
-            Picasso.with(this).load(farmer.getImageUrl()).resize(200, 200).into(circleImageView);
+                }
+            });
+            initials.setText("");
+
+            //Picasso.with(this).load(farmer.getImageUrl()).resize(200, 200).into(circleImageView);
 
         } else {
 
@@ -270,6 +288,13 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             drawable.setCornerRadius(1000);
             drawable.setColor(randomColor);
             circleImageView.setBackground(drawable);
+
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CustomToast.makeToast(FarmerDetailsActivity.this, "No image to display!", Toast.LENGTH_LONG).show();
+                }
+            });
         }
 
 
@@ -282,12 +307,30 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
 
 
-            for (final Form f : FORMS) {
 
-                final Button btn = (Button) getLayoutInflater().inflate(R.layout.dynamic_button, null);
+            for (final Form f : FORMS) {
+                final Button btn;
+
+
+                if (IS_MONITIRING_MODE) {
+
+                    Log.i(TAG, "IS MONITORING MODE");
+
+                    Log.i(TAG, "FORM TYPE IS " + f.getType());
+
+                    if (f.getType().equalsIgnoreCase(Constants.DIAGNOSTIC))
+                        btn = new Button(new ContextThemeWrapper(this, R.style.PrimaryButton));
+                    else
+                        btn = new Button(new ContextThemeWrapper(this, R.style.PrimaryButton_Monitoring));
+
+
+                } else
+                    btn = new Button(new ContextThemeWrapper(this, R.style.PrimaryButton));
+
+
                 //btn.setId(f.getId());
 
-                btn.setText(f.getName());
+                btn.setText((prefs.getBoolean("toggleTranslation", false)) ? f.getTranslation() : f.getDiaplayName());
                 btn.setTag(f.getType());
 
                  dynamicButtonsLayout.addView(btn, params);
@@ -298,7 +341,14 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                     public void onClick(View view) {
 
 
-                        if(f.getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS)){
+                        Form form;
+                        if (prefs.getBoolean("toggleTranslation", false))
+                            form = databaseHelper.getFormBasedOnTranslation(btn.getText().toString());
+                        else
+                            form = databaseHelper.getFormBasedOnDisplayName(btn.getText().toString());
+
+
+                        if (form.getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS)) {
 
                             String familyMemnersKey = prefs.getString("no_family_members_id", null);
                             Log.i(TAG, "FAMILY MEMBERS KEY " + prefs.getString("no_family_members_id", "null"));
@@ -346,6 +396,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                                     Intent intent = new Intent(FarmerDetailsActivity.this, FamilyMembersActivity_v2.class);
                                     intent.putExtra("farmer", new Gson().toJson(farmer));
                                     intent.putExtra("familyMembers", familyMembers);
+                                    intent.putExtra("type", f.getType());
+
                                     startActivity(intent);
 
 
@@ -360,7 +412,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                             intent.putExtra("farmer", new Gson().toJson(farmer));
                             intent.putExtra("flag", "edit");
                             intent.putExtra("type", btn.getTag().toString());
-                            intent.putExtra("formLabel", btn.getText().toString().toLowerCase());
+                            intent.putExtra("formLabel", form.getName());
                             startActivity(intent);
                             //finish();
 
@@ -383,7 +435,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             public void onClick(View view) {
 
 
-                if(!checkIfFarmSizeCorresponds(farmer.getCode())){
+                if (!checkIfFarmSizeCorresponds(farmer.getId(), ALL_FARMER_ANSWERS_JSON)) {
 
                     showAlertDialog(true, getResources(R.string.no_access_to_pl), correspondingMessage, new DialogInterface.OnClickListener() {
                         @Override
@@ -395,9 +447,17 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                     }, getResources(R.string.ok), null, "", 0);
 
 
+                } else if (!checkIfFarmProductionCorresponds(farmer.getId())) {
 
 
+                    showAlertDialog(true, getResources(R.string.no_access_to_pl), "Farm production does not correspond with total plots production", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
+                            dialogInterface.dismiss();
+
+                        }
+                    }, getResources(R.string.ok), null, "", 0);
 
 
                 }else {
@@ -451,7 +511,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                         }
                     } else {
 
-                        showAlertDialog(true, getResources(R.string.no_plots), getResources(R.string.add_plot), new DialogInterface.OnClickListener() {
+                        showAlertDialog(true, getResources(R.string.no_plots), getResources(R.string.add_plot_to_access_pl), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -484,8 +544,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                 //Check if farmer has same number of monitoring on all plots
                 //Check if results of monitoring has been answered
 
-                if(checkIfAllFarmPlotsHaveSameNumberOfMonitoring()) {
-                    Log.d(TAG, "SAME NUMBER OF MONITORING? = true");
+                // if(checkIfAllFarmPlotsHaveSameNumberOfMonitoring()) {
+                //Log.d(TAG, "SAME NUMBER OF MONITORING? = true");
 
                     if(checkIfAllPlotsHaveBeenAssessed()){
 
@@ -639,7 +699,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                         }, getResources(R.string.ok), null, "", 0);
 
                     }
-                }else{
+             /*   }else{
                     Log.d(TAG, "SAME NUMBER OF MONITORING? = false");
 
 
@@ -654,13 +714,21 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                     }, getResources(R.string.ok), null, "", 0);
 
 
-                }
-
-
-
+                }*/
 
             }
         });
+
+        if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES) && farmer.getSyncStatus() == 1) {
+
+            addPlot.setVisibility(View.GONE);
+            findViewById(R.id.sync_farmer).setVisibility(View.GONE);
+
+
+        }
+
+
+
 
 
     }
@@ -669,12 +737,12 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     void setUpPlotsAdapter() {
 
         if (plots == null)
-            plots = databaseHelper.getAllFarmerPlots(farmer.getCode());
+            plots = databaseHelper.getAllFarmerPlots(farmer.getId());
 
         if (plots != null) {
             int plotsSize = plots.size();
 
-            noOfPlots.setText((plotsSize > 1) ? "Plot Adoption Observations " + "(" + plotsSize + ")" : "Plot Adoption Observation " + "(" + plotsSize + ")");
+            noOfPlots.setText((plotsSize > 1) ? getResources(R.string.plot_aos) + "(" + plotsSize + ")" : getResources(R.string.plot_ao) + "(" + plotsSize + ")");
 
 
             LinearLayoutManager horizontalLayoutManagaer
@@ -702,6 +770,9 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                         Intent intent = new Intent(FarmerDetailsActivity.this, PlotDetailsActivity.class);
                         intent.putExtra("plot", new Gson().toJson(plots.get(position)));
+                        intent.putExtra("hasSubmitted", farmer.getHasSubmitted());
+                        intent.putExtra("syncStatus", farmer.getSyncStatus());
+
                         startActivity(intent);
 
                     }else{
@@ -709,7 +780,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                         Intent intent = new Intent(FarmerDetailsActivity.this, MonitoringYearSelectionActivity.class);
                         intent.putExtra("farmer", new Gson().toJson(farmer));
-
+                        intent.putExtra("hasSubmitted", farmer.getHasSubmitted());
+                        intent.putExtra("syncStatus", farmer.getSyncStatus());
                         intent.putExtra("plot", new Gson().toJson(plots.get(position)));
                         startActivity(intent);
 
@@ -733,6 +805,9 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                                 dialogInterface.dismiss();
 
                                 if (databaseHelper.deletePlot(plot.getId())) {
+
+                                    databaseHelper.deleteAllPlotMonitoring(plot.getId());
+
                                     CustomToast.makeToast(FarmerDetailsActivity.this, "Data deleted!", Toast.LENGTH_LONG).show();
                                     plots.remove(position);
                                     plotsListAdapter.notifyItemRemoved(position);
@@ -766,14 +841,14 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         // setUpPlotsAdapter();
 
-        plots = databaseHelper.getAllFarmerPlots(farmer.getCode());
+        plots = databaseHelper.getAllFarmerPlots(farmer.getId());
 
         Log.i("FARMER DETAILS", "ON RESUME!");
 
-        farmer = databaseHelper.getFarmerBasicInfo(farmer.getCode());
+        farmer = databaseHelper.getFarmerBasicInfo(farmer.getId());
 
         initializeViews(false);
 
@@ -781,18 +856,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         super.onResume();
     }
 
-/*
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-
-        Log.i("FARMER DETAILS", "******    ON NEW INTENT!!!!! ******");
-
-
-        farmer = databaseHelper.getFarmerBasicInfo(farmer.getCode());
-        initializeViews(false);
-
-    }*/
 
     @Override
     public void onBackPressed() {
@@ -813,88 +876,14 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     }
 
 
-
-
-    public boolean checkIfFarmSizeCorresponds(String farmerCode){
-
-        Boolean booleanValue = true;
-
-        Double farmAcre = null;
-        //String totalUnit = "null";
-
-        try{
-
-             farmAcre = Double.parseDouble(ALL_FARMER_ANSWERS_JSON.get(prefs.getString("totalLandSize", "")).toString());
-
-           // totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalAreaUnit", ""));
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
-        StringBuilder stringBuilder = new StringBuilder();
-       // StringBuilder stringUnitBuilder = new StringBuilder();
-
-
-        List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerCode);
-
-        for(RealPlot plot : plots){
-
-            try {
-                JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
-
-                String[] value = jsonObject.get("size").toString().split(" ");
-
-                stringBuilder.append(value[0]).append("+");
-
-               // stringUnitBuilder.append(estimatedProductions[1]);
-
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-        }
-        stringBuilder.append("0");
-
-        Double totalSizes = calculateDouble(stringBuilder.toString());
-
-
-        Log.i(TAG, "$$$$$$$$$$$$$    TOTAL SIZES " + farmAcre + " AND TOTAL PLOTS SIZES " + totalSizes);
-
-             if (farmAcre != null && totalSizes != null) {
-                if (totalSizes > farmAcre){
-                    booleanValue = false;
-
-                    correspondingMessage = getResources(R.string.ensure_farm_acre_equal);
-                    CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
-
-                }
-             } else {
-
-                 correspondingMessage = getResources(R.string.fill_in_plot_size_values);
-
-                 booleanValue = false;
-                 CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
-
-             }
-
-
-             return booleanValue;
-
-
-    }
-
-
-
-    public boolean checkIfAllFarmPlotsHaveSameNumberOfMonitoring(){
+    public void checkIfAllFarmPlotsHaveSameNumberOfMonitoring() {
 
         List<Integer> noOfPlotMonitorings = new ArrayList<>();
         int noOfPlots = 0;
 
-        monitoringYear = prefs.getInt(farmer.getCode(), -1);
+        monitoringYear = prefs.getInt(farmer.getId(), -1);
 
-        plots = databaseHelper.getAllFarmerPlots(farmer.getCode());
+        plots = databaseHelper.getAllFarmerPlots(farmer.getId());
 
         if(plots != null && plots.size() > 0){
 
@@ -908,7 +897,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             }
 
             MAX_NO_OF_MONITORING = Collections.max(noOfPlotMonitorings);
-            Log.i(TAG, "MAX NO OF MONITORING FOR A PLOT = " + MAX_NO_OF_MONITORING);
+            Log.i(TAG, "BATCH NO OF MONITORING FOR A PLOT = " + MAX_NO_OF_MONITORING);
 
 
             int collections = Collections.frequency(noOfPlotMonitorings, MAX_NO_OF_MONITORING);
@@ -918,24 +907,24 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             if(!Objects.equals(collections, noOfPlots)) {
                 message =  getResources(R.string.monitoring_for_year)+ monitoringYear + getResources(R.string.for_) + farmer.getFarmerName() + getResources() + getResources(R.string.incorrect_no_plots_suffix);
 
-                return false;
+                //return false;
             }else {
 
                 if(noOfPlotMonitorings.contains(0))
                 {
                     message = getResources(R.string.farmer)+ farmer.getFarmerName() + getResources(R.string.no_monitoring_added) + monitoringYear + getResources(R.string.please_add_monitoring_suffix);
 
-                    return false;
+                    // return false;
 
                 }else {
-                    return true;
+                    // return true;
                 }
 
             }
 
         }else{
             message = getResources(R.string.farmer) + farmer.getFarmerName() + getResources(R.string.no_plots_added_suffix);
-            return false;
+            //return false;
 
         }
 
@@ -945,10 +934,11 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
     boolean checkIfAllPlotsHaveBeenAssessed(){
 
+        checkIfAllFarmPlotsHaveSameNumberOfMonitoring();
+
+
         MONITORING_LIST = null;
         PLOT_ASSESSMENT_LIST = new ArrayList<>();
-
-
         String plotAssessmentID = databaseHelper.getQuestionIdByTranslationName("Plot Assessment");
 
         for (RealPlot plot : plots) {
@@ -961,13 +951,13 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                 try {
 
-                    CURRENT_FARMER_MONITORING_JSON = MONITORING_LIST.get(MAX_NO_OF_MONITORING - 1).getJson();
+                    CURRENT_FARMER_MONITORING_JSON = MONITORING_LIST.get(MONITORING_LIST.size() - 1).getJson();
 
                     JSONObject discardableJson = new JSONObject(CURRENT_FARMER_MONITORING_JSON);
                     discardableString = discardableJson.get(plotAssessmentID).toString();
 
 
-                } catch (JSONException e) {
+                } catch (JSONException | IndexOutOfBoundsException e) {
                     e.printStackTrace();
 
                     discardableString = Constants.NO_MONITORING_PLACE_HOLDER;
@@ -1014,8 +1004,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             return  false;
 
 
-
-        }else return true;
+        } else
+            return true;
 
     }
 
@@ -1794,63 +1784,41 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
 
     @Override
-    public void taskComplete(String response) {
+    public void taskComplete(int response) {
 
         try {
-            progressDialog.dismiss();
-            SendFarmersToServer.removeOnNetworkActivityComplete();
 
-        }catch(NullPointerException e){e.printStackTrace();}
+            SyncUpActivity.removeOnNetworkActivityComplete();
+
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+
+        }
 
 
-        if(response.contains(Constants.RESPONSE_SUCCESS)){
+        if (response == Constants.SYNC_STATUS_COMPLETE) {
 
-            lastSyncDate.setText(prefs.getString("lastSync", "--"));
+            String lastSync = DateUtil.getFormattedDateMMDDYYYYhhmmaa();
+
+            //prefs.edit().putString("lastSync", DateUtil.getFormattedDateMMDDYYYYhhmmaa()).apply();
+
+
+            lastSyncDate.setText(lastSync);
 
             syncIndicator.setImageResource(R.drawable.ic_check_circle_black_24dp);
             syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.colorAccent));
 
 
-
-
-            showAlertDialog(true, getResources(R.string.sync_complete), getResources(R.string.all_data_synced), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            }, getResources(R.string.ok), null, "", 0);
-
-            databaseHelper.setAllFarmersAsSynced();
-            prefs.edit().putString("lastSync", DateUtil.getFormattedDateMMDDYYYYhhmmaa()).apply();
-
-
-
-
-
-
-
-        }else if(response.contains(Constants.RESOPNSE_ERROR)) {
+        } else if (response == Constants.SYNC_STATUS_NO_SYNC) {
 
             syncIndicator.setImageResource(R.drawable.ic_sync_problem_black_24dp);
             syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.cpb_red));
 
-
-
-            showAlertDialog(true, getResources(R.string.generic_error), getResources(R.string.connection_error), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            }, getResources(R.string.ok), null, "", 0);
-
-        }else{
+        } else {
 
             CustomToast.makeToast(this, "Could not send farmers data to server. Please try again!", Toast.LENGTH_LONG).show();
 
         }
-
-
-
     }
 
 

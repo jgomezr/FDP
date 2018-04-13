@@ -52,7 +52,7 @@ public class SpinnerViewHolder extends AbstractViewHolder {
 
 
     Spinner spinner = null;
-    TextView textView;
+    //TextView textView;
 
     public static void UpdateJsonArrayListener(Callbacks.UpdateJsonArray listener)
     {
@@ -69,9 +69,7 @@ public class SpinnerViewHolder extends AbstractViewHolder {
         cell_container = itemView.findViewById(R.id.cell_container);
 
 
-
-
-        textView = itemView.findViewById(R.id.info);
+        //textView = itemView.findViewById(R.id.info);
         spinner = itemView.findViewById(R.id.cell_data);
 
     }
@@ -184,9 +182,7 @@ public class SpinnerViewHolder extends AbstractViewHolder {
         refresh(spinner, defaultValue, items);
 
 
-
-
-        textView.setText(q.getHelp_Text__c());
+        //textView.setText(q.getHelp_Text__c());
 
 /*
             imageView.setOnClickListener(new View.OnClickListener() {
@@ -219,8 +215,7 @@ public class SpinnerViewHolder extends AbstractViewHolder {
             });*/
 
 
-
-        cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        //cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;
         //cell_container.getLayoutParams().height = 70;
         spinner.requestLayout();
 

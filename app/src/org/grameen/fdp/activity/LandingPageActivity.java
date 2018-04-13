@@ -41,8 +41,9 @@ public class LandingPageActivity extends BaseActivity {
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_landing_page);
 
 
@@ -192,7 +193,8 @@ public class LandingPageActivity extends BaseActivity {
                 }
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, displayValues);
-                builder.setTitle(getResources(R.string.select_country_region));
+                builder.setTitle(getResources(R.string.hello) + "\n" + getResources(R.string.select_country_region));
+                //builder.setMessage(getResources(R.string.select_country_region));
                 builder.setCancelable(false);
                 builder.setNegativeButton(getResources(R.string.quit), new DialogInterface.OnClickListener() {
                     @Override
@@ -227,7 +229,7 @@ public class LandingPageActivity extends BaseActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
 
-                                startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+                                startActivity(new Intent(LandingPageActivity.this, DataDownloadActivity.class));
 
                                 editor.putBoolean("isFirstSignIn", false).apply();
 
@@ -238,7 +240,7 @@ public class LandingPageActivity extends BaseActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
 
-                                startActivity(new Intent(LandingPageActivity.this, SyncActivity.class));
+                                startActivity(new Intent(LandingPageActivity.this, DataDownloadActivity.class));
 
                                 editor.putBoolean("isFirstSignIn", false).apply();
 
@@ -262,7 +264,7 @@ public class LandingPageActivity extends BaseActivity {
     void syncInitialData() {
 
 
-        Intent intent = new Intent(this, SyncActivity.class);
+        Intent intent = new Intent(this, DataDownloadActivity.class);
         intent.putExtra("initialData", true);
         startActivity(intent);
 
@@ -270,7 +272,7 @@ public class LandingPageActivity extends BaseActivity {
 
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
 

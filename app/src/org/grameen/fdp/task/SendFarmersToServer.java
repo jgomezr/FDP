@@ -1,18 +1,26 @@
 package org.grameen.fdp.task;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Callbacks;
+import org.grameen.fdp.utility.Constants;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -36,54 +44,35 @@ import javax.net.ssl.X509TrustManager;
 
 public class SendFarmersToServer extends AsyncTask<Void, Void, String> {
 
-     private String URL_STRING;
+    SharedPreferences prefs;
+    private String URL_STRING;
+    String REQUEST_TYPE;
     public static final String TAG = SendFarmersToServer.class.getSimpleName();
     public static Callbacks.NetworkActivityCompleteListener networkActivityCompleteListener;
 
     public SendFarmersToServer(String url){
 
         this.URL_STRING = url;
+        //this.REQUEST_TYPE = requestType;
 
     }
 
 
-    public static void onNetworkActivityComplete(Callbacks.NetworkActivityCompleteListener listener){
+   /* public static void onNetworkActivityComplete(Callbacks.NetworkActivityCompleteListener listener){
         networkActivityCompleteListener = listener;
     }
 
     public static void removeOnNetworkActivityComplete(){
         networkActivityCompleteListener = null;
     }
-
+*/
 
     @Override
     protected String doInBackground(Void... params) {
         // These two need to be declared outside the try/catch
         // so that they can be closed in the finally block.
-        HttpsURLConnection urlConnection = null;
+        HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
-
-
-
-        TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
-            public X509Certificate[] getAcceptedIssuers() {
-                return null;
-            }
-
-            @Override
-            public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
-                // Not implemented
-            }
-
-            @Override
-            public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
-                // Not implemented
-            }
-        } };
-
-
-
-
 
 
 
@@ -102,22 +91,10 @@ public class SendFarmersToServer extends AsyncTask<Void, Void, String> {
 
             URL URL = new URL(URL_STRING);
 
-            urlConnection = (HttpsURLConnection) URL.openConnection();
+            urlConnection = (HttpURLConnection) URL.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
 
-
-
-
-         /*   try {
-                SSLContext sc = SSLContext.getInstance("TLS");
-
-                sc.init(null, trustAllCerts, new java.security.SecureRandom());
-
-                HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-            } catch (KeyManagementException | NoSuchAlgorithmException e) {
-                e.printStackTrace();
-            }*/
 
 
             urlConnection.connect();
@@ -185,11 +162,13 @@ public class SendFarmersToServer extends AsyncTask<Void, Void, String> {
 
         Log.i(TAG, "RESPONSE AFTER SENDING FARMER DATA TO SALES FORCE " + s);
 
-        if(networkActivityCompleteListener != null)
-            networkActivityCompleteListener.taskComplete(s);
+        //if(networkActivityCompleteListener != null)
+        //networkActivityCompleteListener.taskComplete(s);
 
 
 
 
     }
+
+
 }

@@ -78,7 +78,7 @@
         <activity android:name="org.grameen.fdp.activity.LoginActivity" />
         <activity android:name="org.grameen.fdp.activity.LandingPageActivity" />
         <activity
-            android:name="org.grameen.fdp.activity.SyncActivity"
+            android:name="org.grameen.fdp.activity.DataDownloadActivity"
             android:theme="@style/Theme.Translucent" />
         <activity
             android:name="org.grameen.fdp.activity.PandLActivity"
@@ -107,6 +107,15 @@
             android:excludeFromRecents="true"
             android:theme="@style/Theme.Transparent"
             android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="org.grameen.fdp.activity.PlotsReviewActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="org.grameen.fdp.activity.SyncUpActivity"
+            android:theme="@style/Theme.Translucent" />
+        <activity
+            android:name="org.grameen.fdp.activity.SyncDownActivity"
+            android:theme="@style/Theme.Translucent" />
 
         <provider
             android:name="br.com.mauker.materialsearchview.db.HistoryProvider"
@@ -118,6 +127,17 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+        <provider
+            android:name="org.grameen.fdp.utility.GenericFileProvider"
+            android:authorities="org.grameen.fdp.org.grameen.fdp.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" /> <!-- SmartStore Inspector screen -->

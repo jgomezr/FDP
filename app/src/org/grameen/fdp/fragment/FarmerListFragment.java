@@ -156,10 +156,35 @@ public class FarmerListFragment extends Fragment {
 
                 RealFarmer farmer = farmers.get(position);
 
+/*
+                if(farmer.getHasSubmitted() != null)
+                if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES)) {
+
+                    showAlertDialog(true, "Read Only Data!", "You cannot make anymore modifications to " + farmer.getFarmerName() + "'s data", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+
+                        }
+                    }, getResources().getString(R.string.ok), null, "", 0);
+
+                } else{
+
+
+                    Intent intent = new Intent(getActivity(), FarmerDetailsActivity.class);
+                intent.putExtra("farmer", new Gson().toJson(farmer));
+                startActivity(intent);
+            }
+
+            else{*/
 
                 Intent intent = new Intent(getActivity(), FarmerDetailsActivity.class);
                 intent.putExtra("farmer", new Gson().toJson(farmer));
                 startActivity(intent);
+
+                //  }
+
+
             }
         });
 
@@ -178,7 +203,10 @@ public class FarmerListFragment extends Fragment {
 
                             dialogInterface.dismiss();
 
-                            if (databaseHelper.deleteFarmer(farmer.getCode())) {
+                            if (databaseHelper.deleteFarmer(farmer.getId())) {
+
+
+
                                 CustomToast.makeToast(getActivity(), "Data deleted!", Toast.LENGTH_LONG).show();
                                 farmers.remove(position);
                                 mAdapter.notifyItemRemoved(position);

@@ -9,11 +9,15 @@ import com.google.gson.annotations.SerializedName;
 public class Recommendation {
 
 
+    @SerializedName("Translation__c")
+    String translation;
+
     @SerializedName("LastModifiedDate")
     String lastModifiedDate;
 
     @SerializedName("Id")
     String id = "";
+
 
     @SerializedName("Name")
     String name = "";
@@ -227,6 +231,13 @@ public class Recommendation {
         this.questionsInvolved = questionsInvolved;
     }
 
+    public String getTranslation() {
+        return translation;
+    }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
 
     public void setCost0(String cost0) {
         this.cost0 = cost0;

@@ -1,5 +1,6 @@
 package org.grameen.fdp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -55,10 +56,13 @@ public class FamilyMembersActivity extends BaseActivity {
     private boolean monitoringMode = false;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_year);
 
+        Intent intent = getIntent();
+
+        type = intent.getStringExtra("type");
 
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
         if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
@@ -72,7 +76,10 @@ public class FamilyMembersActivity extends BaseActivity {
         save = findViewById(R.id.save);
 
         if(monitoringMode) {
-             save.setVisibility(View.GONE);
+            //In monitoring mode but have a diagnostic type form in monitoring, disable save button
+            if (type.equalsIgnoreCase(Constants.FORM_DIAGNOSTIC))
+                save.setVisibility(View.GONE);
+
         }
 
         findViewById(R.id.currencyLayout).setVisibility(View.GONE);
@@ -90,11 +97,9 @@ public class FamilyMembersActivity extends BaseActivity {
         }
 
 
-
-
-        farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
+        farmer = new Gson().fromJson(intent.getStringExtra("farmer"), RealFarmer.class);
         try {
-            noOfFamilyMembers = Integer.parseInt(getIntent().getStringExtra("familyMembers"));
+            noOfFamilyMembers = Integer.parseInt(intent.getStringExtra("familyMembers"));
         }catch(Exception e){
             e.printStackTrace();
             noOfFamilyMembers = 1;
@@ -111,8 +116,8 @@ public class FamilyMembersActivity extends BaseActivity {
             Toolbar toolbar = setToolbar("Name " + farmer.getFarmerName() + "\tCode " + farmer.getCode());
 
             try{
-                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
-                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString("familyMembers");
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getId()));
+                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString(prefs.getString("no_family_members_id", "null"));
             }catch(Exception e){ e.printStackTrace();}
 
 
@@ -203,7 +208,7 @@ public class FamilyMembersActivity extends BaseActivity {
                         e.printStackTrace();
                     }
 
-                    if (databaseHelper.editAllAnswersJson(farmer.getCode(),newJson)) {
+                    if (databaseHelper.editAllAnswersJson(farmer.getId(), newJson)) {
                         CustomToast.makeToast(FamilyMembersActivity.this, "Data has been saved", Toast.LENGTH_SHORT).show();
                         finish();
                     } else

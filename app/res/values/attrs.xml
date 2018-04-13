@@ -11,6 +11,9 @@
     </declare-styleable>
 
 
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorAccent" format="color" />
+
     <attr name="backgroundColor" format="color|reference"/>
     <attr name="bottomSheetBackgroundColor" format="color"/>
     <attr name="textColorPrimary" format="color|reference"/>

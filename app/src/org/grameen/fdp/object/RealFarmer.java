@@ -17,7 +17,7 @@ public class RealFarmer {
     String id;
     String village;
     String gender;
-    String birthYear;
+    String birthYear = "1970";
     String educationLevel;
     String imageUrl;
     String firstVisitDate;
@@ -29,7 +29,7 @@ public class RealFarmer {
 
 
     Integer syncStatus;
-    String hasRegistered;
+    String hasSubmitted;
 
 
     public void setFirstVisitDate(String firstVisitDate) {
@@ -89,8 +89,6 @@ public class RealFarmer {
         this.educationLevel = education;
     }
 
-
-
     public Integer getSyncStatus() {
         return syncStatus;
     }
@@ -99,12 +97,12 @@ public class RealFarmer {
         this.syncStatus = syncStatus;
     }
 
-    public String getHasRegistered() {
-        return hasRegistered;
+    public String getHasSubmitted() {
+        return hasSubmitted;
     }
 
-    public void setHasRegistered(String hasRegistered) {
-        this.hasRegistered = hasRegistered;
+    public void setHasSubmitted(String hasSubmitted) {
+        this.hasSubmitted = hasSubmitted;
     }
 
 
@@ -115,8 +113,6 @@ public class RealFarmer {
     public void setId(String id) {
         this.id = id;
     }
-
-
 
     public String getBirthYear() {
         return birthYear;

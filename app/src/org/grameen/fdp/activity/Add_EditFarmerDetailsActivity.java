@@ -1,20 +1,22 @@
 package org.grameen.fdp.activity;
 
 import android.Manifest;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.FileProvider;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -37,6 +39,8 @@ import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DateUtil;
+import org.grameen.fdp.utility.ImageUtil;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -49,6 +53,7 @@ import java.util.Random;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static org.grameen.fdp.application.FdpApplication.ROOT_DIR;
 
 /**
  * Created by aangjnr on 09/11/2017.
@@ -58,10 +63,11 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
     public static int CAMERA_INTENT = 90;
     public static int PERMISSION_CAMERA = 11;
-    public static String ROOT_DIR = Environment
-            .getExternalStorageDirectory() + File.separator + ".FDP";
+
     static String TAG = Add_EditFarmerDetailsActivity.class.getSimpleName();
     String IMAGE_URL = "";
+    Uri URI;
+
     EditText farmerName;
     EditText farmerCode;
     TextView takePhoto;
@@ -80,7 +86,11 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
     Button cancel;
     Button save;
     String formLabel = "";
-    String type = Constants.FORM_DIAGNOSTIC;
+    String BASE64_STRING = "";
+
+    Question educationLevelQuestion;
+    Question genderQuestion;
+
     MyFormFragment formFragment;
     String[] educationLevels = {"Primary", "Secondary", "Tertiary", "Professional Course", "Other"};
     String[] genders = {"Male", "Female"};
@@ -125,6 +135,8 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             e.printStackTrace();
         }
     }
+
+
 
 
    /* @Override
@@ -212,7 +224,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         try {
             fOut = new FileOutputStream(save_image);
-            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 70, fOut);
+            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fOut);
 
             Log.i(TAG, "Saving edited screenshot with name" + save_image);
 
@@ -241,7 +253,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         createNoMediaFile();
@@ -275,9 +287,9 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
 
         TextView educational_level_text = findViewById(R.id.education_level_text);
-        temp = databaseHelper.getQuestionByTranslation("Education Level");
-        if(temp != null)
-            educational_level_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+        educationLevelQuestion = databaseHelper.getQuestionByTranslation("Highest education level graduated");
+        if (educationLevelQuestion != null)
+            educational_level_text.setText((prefs.getBoolean("toggleTranslation", false)) ? educationLevelQuestion.getTranslation__c() : educationLevelQuestion.getCaption__c());
 
 
         TextView birthyear_text = findViewById(R.id.birth_year_text);
@@ -286,9 +298,9 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             birthyear_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
 
         TextView gender_text = findViewById(R.id.gender_text);
-        temp = databaseHelper.getQuestionByTranslation("Gender");
-        if(temp != null)
-            gender_text.setText((prefs.getBoolean("toggleTranslation", false)) ? temp.getTranslation__c() : temp.getCaption__c());
+        genderQuestion = databaseHelper.getQuestionByTranslation("Gender");
+        if (genderQuestion != null)
+            gender_text.setText((prefs.getBoolean("toggleTranslation", false)) ? genderQuestion.getTranslation__c() : genderQuestion.getCaption__c());
 
 
 
@@ -344,9 +356,15 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         villageSpinner = (MaterialSpinner) findViewById(R.id.villageSpinner);
         villageSpinner.setItems(databaseHelper.getAllVillageNames());
 
-        villageSpinner.setSelectedIndex(0);
+        try {
+            villageSpinner.setSelectedIndex(0);
+            village = villageSpinner.getItems().get(0).toString();
 
-        village = villageSpinner.getItems().get(0).toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            CustomToast.makeToast(this, "Missing villages data!", Toast.LENGTH_LONG).show();
+        }
 
 
         villageSpinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
@@ -363,7 +381,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         educationLevelSpinner = (MaterialSpinner) findViewById(R.id.educationLevelSpinner);
 
         try {
-            educationLevelSpinner.setItems(databaseHelper.getQuestionByTranslation("Highest education level graduated").formatQuestionOptions());
+            educationLevelSpinner.setItems(educationLevelQuestion.formatQuestionOptions());
 
 
         }catch(Exception e){e.printStackTrace();
@@ -389,7 +407,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         genderSpinner = (MaterialSpinner) findViewById(R.id.genderSpinner);
         try {
-            genderSpinner.setItems(databaseHelper.getQuestionByTranslation("Gender").formatQuestionOptions());
+            genderSpinner.setItems(genderQuestion.formatQuestionOptions());
 
 
         }catch(Exception e) {
@@ -422,8 +440,6 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
         if (IS_MONITIRING_MODE) {
 
-
-
             //Todo hide views, load farmer details with tag
             Toolbar toolbar = setToolbar("View Farmer Details");
 
@@ -442,12 +458,10 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
             setUpViews();
 
-            formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getCode(), true);
+            formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getId(), true);
 
 
         } else {
-
-
 
             //Todo load farmer details with tag
 
@@ -458,7 +472,20 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
                 newFarmer = false;
 
                 setUpViews();
-                formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getCode(), false);
+
+                if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES) && farmer.getSyncStatus() == 1) {
+                    save.setVisibility(View.GONE);
+                    cancel.setText("BACK");
+                    farmerName.setEnabled(false);
+                    farmerCode.setEnabled(false);
+                    villageSpinner.setEnabled(false);
+                    educationLevelSpinner.setEnabled(false);
+                    genderSpinner.setEnabled(false);
+                    birthYearEdittext.setEnabled(false);
+                    takePhoto.setVisibility(View.GONE);
+                    formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getId(), true);
+                } else
+                    formFragment = MyFormFragment.newInstance(formLabel, true, farmer.getId(), false);
 
 
             } else {
@@ -472,7 +499,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
                 formFragment = MyFormFragment.newInstance(formLabel, false, null, false);
 
 
-                farmerCode.setText(getRandomNumber() + "");
+                farmerCode.setText(getSaltString());
                 save.setEnabled(false);
 
             }
@@ -510,7 +537,9 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         Log.i(TAG, "ON BACK PRESSED");
 
-        if (!newDataSaved && isEditMode) {
+        if (farmer != null && farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES) && farmer.getSyncStatus() == 1)
+            finish();
+        else if (!newDataSaved && isEditMode) {
             Log.i(TAG, "NEW DATA NOT SAVED, SAVING NEW DATA NOW!!!");
 
 
@@ -624,13 +653,14 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             _farmer.setGender(gender);
             _farmer.setImageUrl(IMAGE_URL);
             _farmer.setFirstVisitDate(date);
-            _farmer.setLastVisitDate(date);
+            _farmer.setLastVisitDate("--");
             _farmer.setLastModifiedDate(date);
             _farmer.setSyncStatus(0);
+            _farmer.setImageUrl(BASE64_STRING);
 
             if (databaseHelper.addNewFarmer(_farmer)) {
 
-                databaseHelper.editAllAnswersJson(_farmer.getCode(), newJsonValue);
+                databaseHelper.editAllAnswersJson(_farmer.getId(), newJsonValue);
 
                 newDataSaved = true;
 
@@ -644,6 +674,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
                     finish();*/
 
+                    farmer = _farmer;
 
                     loadNextForm();
 
@@ -664,8 +695,8 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             farmer.setEducationLevel(education);
             farmer.setBirthYear(birthYearEdittext.getText().toString());
             farmer.setGender(gender);
-            farmer.setImageUrl(IMAGE_URL);
-            farmer.setFirstVisitDate(null);
+            farmer.setImageUrl(BASE64_STRING);
+            //farmer.setFirstVisitDate(null);
             farmer.setLastVisitDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
             farmer.setLastModifiedDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
             farmer.setSyncStatus(0);
@@ -678,7 +709,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
                 //if (value == null) value = "empty";
 
 
-                if (databaseHelper.editAllAnswersJson(farmer.getCode(), newJsonValue)) {
+                if (databaseHelper.editAllAnswersJson(farmer.getId(), newJsonValue)) {
 
                     newDataSaved = true;
 
@@ -715,7 +746,12 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         farmerName.setText(farmer.getFarmerName());
         farmerCode.setText(farmer.getCode());
-        birthYearEdittext.setText(farmer.getBirthYear());
+
+        if (farmer.getBirthYear() != null && !farmer.getBirthYear().isEmpty())
+            birthYearEdittext.setText(farmer.getBirthYear());
+        else
+            birthYearEdittext.setText("0000");
+
 
 
         village = farmer.getVillage();
@@ -728,11 +764,15 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         genderSpinner.setText(gender);
 
 
-        IMAGE_URL = farmer.getImageUrl();
+        BASE64_STRING = farmer.getImageUrl();
 
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
-            Picasso.with(this).load(farmer.getImageUrl()).resize(200, 200).into(circleImageView);
+            try {
+                circleImageView.setImageBitmap(ImageUtil.base64ToBitmap(BASE64_STRING));
+
+            } catch (Exception ignored) {
+            }
 
         } else {
 
@@ -766,7 +806,9 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
     void startCameraIntent() {
 
+        File photo;
 
+        Intent takePictureIntent;
         prefs.edit().putBoolean("shouldSave", false).apply();
 
         if (!hasPermissions(this, Manifest.permission.CAMERA)) {
@@ -774,7 +816,27 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         } else {
 
 
-            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+            try {
+                // place where to store camera taken picture
+                photo = this.createTemporaryFile("picture", ".jpg");
+                photo.delete();
+                //URI = Uri.fromFile(photo);
+                URI = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".org.grameen.fdp.provider", photo);
+
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, URI);
+                takePictureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+
+            } catch (Exception e) {
+                Log.v(TAG, "Can't create file to take picture!");
+                //Toast.makeText(activity, "Please check SD card! Image shot is impossible!", 10000);
+            }
+
+
+
+
             if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
 
                 Log.d(TAG, "Starting camera intent");
@@ -785,6 +847,16 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
 
         }
+    }
+
+    private File createTemporaryFile(String part, String ext) throws Exception {
+
+        File dir = new File(ROOT_DIR + File.separator + ".temp/");
+        if (!dir.exists()) Log.i(TAG, "Is DIR created?  " + dir.mkdirs());
+        Log.i(TAG, "Destination path is " + dir);
+
+
+        return File.createTempFile(part, ext, dir);
     }
 
     @Override
@@ -805,29 +877,48 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
                     Log.d(TAG, "CAMERA INTENT");
 
-
+/*
                     Bundle extras = data.getExtras();
                     Bitmap imageBitmap = (Bitmap) extras.get("data");
 
 
-                    String farmerImage = "file://" + saveImage(imageBitmap, farmerCode.getText().toString());
+                    //String farmerImage = "file://" + saveImage(imageBitmap, farmerCode.getText().toString());
 
 
-                    IMAGE_URL = farmerImage;
+                    //IMAGE_URL = farmerImage;
 
-                    Log.d(TAG, "FARMER IMAGE URL IS " + farmerImage);
+                    //Log.d(TAG, "FARMER IMAGE URL IS " + farmerImage);
 
+                    BASE64_STRING = ImageUtil.bitmapToBase64(imageBitmap);*/
 
-                    if (circleImageView != null) {
+                    /*this.getContentResolver().notifyChange(URI, null);
+                    ContentResolver cr = this.getContentResolver();*/
+                    Bitmap bitmap = null;
+                    try {
 
-                        Picasso.with(this).load(IMAGE_URL).resize(400, 300).into(circleImageView);
-                        initials.setVisibility(View.GONE);
+                        //bitmap =  android.provider.MediaStore.Images.Media.getBitmap(cr, URI);
+                        bitmap = ImageUtil.handleSamplingAndRotationBitmap(Add_EditFarmerDetailsActivity.this, URI);
+                        BASE64_STRING = ImageUtil.bitmapToBase64(bitmap);
 
-                    } else {
+                        if (circleImageView != null) {
 
-                        Log.d(TAG, "Image view is null");
+                            circleImageView.setImageBitmap(bitmap);
+                            //Picasso.with(this).load(URI).resize(400, 300).into(circleImageView);
+                            initials.setVisibility(View.GONE);
 
+                        } else {
+
+                            Log.d(TAG, "Image view is null");
+
+                        }
+
+                    } catch (Exception e) {
+                        Toast.makeText(this, "Failed to load", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "Failed to load", e);
                     }
+
+
+
 
 
                 }
@@ -879,8 +970,26 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
     }
 
     private int getRandomNumber() {
+
+
         Random r = new Random(System.currentTimeMillis());
         return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+
+
+    }
+
+
+    protected String getSaltString() {
+        String UUID = prefs.getString(Constants.USER_UID, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");
+        StringBuilder salt = new StringBuilder();
+        Random r = new Random(System.currentTimeMillis());
+        while (salt.length() < 8) { // length of the random string.
+            int index = (int) (r.nextFloat() * UUID.length());
+            salt.append(UUID.charAt(index));
+        }
+
+        return salt.toString().toUpperCase();
+
     }
 
     private File getOutputMediaFile() {
@@ -900,6 +1009,9 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
 
     void loadNextForm(){
+
+        if (IS_MONITIRING_MODE)
+            FORMS = databaseHelper.getAllMonitoringForms();
 
         if(SELECTED_FORM_INDEX < FORMS.size()) {
             for (int i = 0; i < FORMS.size(); i++) {
@@ -925,45 +1037,111 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             } else {
 
 
-                if (FORMS.get(SELECTED_FORM_INDEX).getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS))
-                    SELECTED_FORM_INDEX += 1;
-
-                if (SELECTED_FORM_INDEX == FORMS.size()) {
-
-                    SELECTED_FORM_INDEX = 0;
-
-                    Intent intent = new Intent(Add_EditFarmerDetailsActivity.this, FarmerDetailsActivity.class);
-                    intent.putExtra("farmer", new Gson().toJson(farmer));
-                    intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    finish();
+                JSONObject ALL_FARMER_ANSWERS_JSON;
+                try {
+                    ALL_FARMER_ANSWERS_JSON = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getId()));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    ALL_FARMER_ANSWERS_JSON = new JSONObject();
+                }
 
 
-                }else {
+                if (FORMS.get(SELECTED_FORM_INDEX).getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS)) {
+                    // SELECTED_FORM_INDEX += 1;
 
-                    Log.i(TAG, "^^^^^^^^^^    SELECTED INDEX " + SELECTED_FORM_INDEX);
+                    String familyMemnersKey = prefs.getString("no_family_members_id", null);
+                    Log.i(TAG, "FAMILY MEMBERS KEY " + prefs.getString("no_family_members_id", "null"));
+                    String familyMembers;
 
 
+                    try {
+                        familyMembers = ALL_FARMER_ANSWERS_JSON.getString(familyMemnersKey);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        familyMembers = "1";
+                    }
+
+
+                    Log.i(TAG, "FAMILY MEMBERS KEY " + prefs.getString("no_family_members_id", "null"));
+
+                    if (familyMembers.equalsIgnoreCase("null")) {
+                        Log.i(TAG, "FAMILY MEMBERS OF FARMER NULL");
+
+                        //Please fill out Socio-Economic data first
+
+                        showAlertDialog(false, getResources(R.string.fill_data), getResources(R.string.enter_data_rationale) + farmer.getFarmerName() + getResources(R.string.before_proceed_suffux), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                dialog.dismiss();
+
+                            }
+                        }, getResources(R.string.ok), null, "", 0);
+
+                    } else {
+
+                        Intent intent = new Intent(this, FamilyMembersActivity_v2.class);
+                        intent.putExtra("farmer", new Gson().toJson(farmer));
+                        intent.putExtra("familyMembers", familyMembers);
+                        startActivity(intent);
+
+                    }
+
+
+                } else {
                     Form form = FORMS.get(SELECTED_FORM_INDEX);
 
+                    if (IS_MONITIRING_MODE)
+                        if (form.getType().equalsIgnoreCase(Constants.DIAGNOSTIC)) {
+                            formLabel = form.getName();
 
-                    Log.i(TAG, "^^^^^^^^^^    FORM NAME IS  " + form.getName());
+                            loadNextForm();
 
-                    Intent intent = new Intent(this, Add_EditFarmerDetailsActivity.class);
-                    intent.putExtra("farmer", new Gson().toJson(farmer));
-                    intent.putExtra("flag", "edit");
-                    intent.putExtra("type", form.getType());
-                    intent.putExtra("formLabel", form.getName());
+                        } else
+                            goToNextForm(form);
 
-                    intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    overridePendingTransition(0, 0);
-                    finish();
+                    else
+                        goToNextForm(form);
+
 
                 }
 
             }
         }
     }
+
+
+    void goToFarmerDetails() {
+        SELECTED_FORM_INDEX = 0;
+
+        Intent intent = new Intent(this, FarmerDetailsActivity.class);
+        intent.putExtra("farmer", new Gson().toJson(farmer));
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+
+
+    }
+
+
+    void goToNextForm(Form form) {
+
+        Log.i(TAG, "^^^^^^^^^^    SELECTED INDEX " + SELECTED_FORM_INDEX);
+
+        Log.i(TAG, "^^^^^^^^^^    FORM NAME IS  " + form.getName());
+
+        Intent intent = new Intent(this, Add_EditFarmerDetailsActivity.class);
+        intent.putExtra("farmer", new Gson().toJson(farmer));
+        intent.putExtra("flag", "edit");
+        intent.putExtra("type", form.getType());
+        intent.putExtra("formLabel", form.getName());
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+        finish();
+
+    }
+
 
 }

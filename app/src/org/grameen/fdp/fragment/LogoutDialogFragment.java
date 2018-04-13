@@ -13,6 +13,7 @@ import android.util.Log;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.activity.BaseActivity;
 import org.grameen.fdp.activity.LoginActivity;
 import org.grameen.fdp.utility.DatabaseHelper;
 
@@ -34,8 +35,8 @@ public class LogoutDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         logoutConfirmationDialog = new AlertDialog.Builder(getActivity(), R.style.DialogTheme)
-                .setTitle("Log out?")
-                .setPositiveButton("YES",
+                .setTitle(getString(R.string.log_out))
+                .setPositiveButton(getString(R.string.yes),
                         new DialogInterface.OnClickListener() {
 
                             @Override
@@ -102,7 +103,7 @@ public class LogoutDialogFragment extends DialogFragment {
 
                             }
                         })
-                .setNegativeButton("NO", null)
+                .setNegativeButton(getString(R.string.no), null)
                 .create();
         return logoutConfirmationDialog;
     }

@@ -64,6 +64,7 @@ public class AddNewPlotMonitoringActivitybak extends BaseActivity {
     List<Question> aoMonitoringQuestions;
 
     Boolean IS_NEW_MONITORING;
+    String MONITORING_ID = "";
     String selectedYear = "";
     int SELECTED_MONITORING_ID;
     private Toolbar toolbar;
@@ -74,7 +75,7 @@ public class AddNewPlotMonitoringActivitybak extends BaseActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_plot_monitoring);
 
@@ -158,13 +159,13 @@ public class AddNewPlotMonitoringActivitybak extends BaseActivity {
 
 
             }else {
-                SELECTED_MONITORING_ID = getIntent().getIntExtra("monitoringId", -1);
-                toolbar = setToolbar("Edit plot Monitoring " + SELECTED_MONITORING_ID);
+                MONITORING_ID = getIntent().getStringExtra("monitoringId");
+                toolbar = setToolbar("Edit plot Monitoring " + MONITORING_ID);
 
 
 
                 //Todo get ALL MONITORING JSON OBJECT FROM DB, send to fragment
-                Monitoring monitoring = databaseHelper.getPlotMonitoring(SELECTED_MONITORING_ID, plot.getId(), selectedYear);
+                Monitoring monitoring = databaseHelper.getPlotMonitoring(MONITORING_ID, plot.getId(), selectedYear);
 
 
                 try {
@@ -1528,7 +1529,7 @@ public class AddNewPlotMonitoringActivitybak extends BaseActivity {
         if(IS_NEW_MONITORING){
 
             Monitoring monitoring = new Monitoring();
-            monitoring.setId(String.valueOf(SELECTED_MONITORING_ID));
+            monitoring.setId(String.valueOf(System.currentTimeMillis()));
             monitoring.setName("Monitoring " + SELECTED_MONITORING_ID);
             monitoring.setPlotId(plot.getId());
             monitoring.setJson(ALL_MONITORING_VALUES_JSON.toString());
@@ -1546,7 +1547,7 @@ public class AddNewPlotMonitoringActivitybak extends BaseActivity {
         }else{
 
 
-            if(databaseHelper.editPlotMonitoringJson(String.valueOf(SELECTED_MONITORING_ID), plot.getId(), selectedYear, ALL_MONITORING_VALUES_JSON.toString())){
+            if (databaseHelper.editPlotMonitoringJson(MONITORING_ID, plot.getId(), selectedYear, ALL_MONITORING_VALUES_JSON.toString())) {
                 value = true;
 
                 CustomToast.makeToast(this, "Data saved!", Toast.LENGTH_SHORT).show();

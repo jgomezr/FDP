@@ -3,18 +3,13 @@ package org.grameen.fdp.activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.salesforce.androidsdk.rest.ApiVersionStrings;
@@ -24,7 +19,6 @@ import com.salesforce.androidsdk.rest.RestResponse;
 import com.salesforce.androidsdk.ui.SalesforceActivity;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.object.ActivitiesPlusInputs;
 import org.grameen.fdp.object.Calculation;
 import org.grameen.fdp.object.ComplexCalculation;
@@ -37,11 +31,12 @@ import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.object.RecommendationsPlusActivity;
 import org.grameen.fdp.object.SkipLogic;
 import org.grameen.fdp.object.Village;
+import org.grameen.fdp.utility.Callbacks;
+import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.DatabaseDataClass;
 import org.grameen.fdp.utility.DatabaseHelper;
 import org.grameen.fdp.utility.DateUtil;
-import org.grameen.fdp.utility.MySingleton;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,7 +53,7 @@ import static java.sql.DriverManager.println;
  * Created by aangjnr on 11/12/2017.
  */
 
-public class SyncActivity extends SalesforceActivity {
+public class DataDownloadActivity extends SalesforceActivity {
 
     String nextRecordsUrl = "";
     RestRequest queryMore;
@@ -68,7 +63,7 @@ public class SyncActivity extends SalesforceActivity {
 
     RestClient restClient = null;
     ProgressDialog progressDialog;
-    String TAG = "SyncActivity";
+    String TAG = "DataDownloadActivity";
 
     DatabaseHelper databaseHelper;
     long start = 0;
@@ -81,6 +76,18 @@ public class SyncActivity extends SalesforceActivity {
     Boolean exception = false;
     int totalSize = 0;
     int batchSize = 0;
+
+
+    public static Callbacks.NetworkActivityCompleteListener networkActivityCompleteListener;
+    private String message = "";
+
+    public static void onNetworkActivityComplete(Callbacks.NetworkActivityCompleteListener listener) {
+        networkActivityCompleteListener = listener;
+    }
+
+    public static void removeOnNetworkActivityComplete() {
+        networkActivityCompleteListener = null;
+    }
 
 
     @Override
@@ -105,6 +112,23 @@ public class SyncActivity extends SalesforceActivity {
 
 
         restClient = client;
+
+        try {
+            RestClient.ClientInfo ci = restClient.getClientInfo();
+            String userId = ci.userId;
+
+            System.out.println("*****************************************************************");
+            System.out.println();
+            Log.i(TAG, "USER ID IS " + userId);
+            System.out.println();
+            System.out.println("*****************************************************************");
+
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putString(Constants.USER_UID, userId).apply();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         if (syncInitialData) {
@@ -186,7 +210,7 @@ public class SyncActivity extends SalesforceActivity {
 
 
         String soql =
-                "select LastModifiedDate, id, Name, Caption__c, Default_value__c, Display_Order__c, Error_text__c, Hide__c, Help_Text__c, Max_value__c, Min_value__c, Options__c, Type__c, Translation__c, Related_questions__c, Form__r.Name,  Form__r.Id, Form__r.Type__c from fpd_question__c where form__r.Country__r.ISO_code__c = '" + ISO_CODE + "'";
+                "select LastModifiedDate, id, Name, Caption__c, Default_value__c, Display_Order__c, Error_text__c, Hide__c, Help_Text__c, Max_value__c, Min_value__c, Options__c, Type__c, Translation__c, Related_questions__c, Form__r.Name, Form__r.Display_Name__c, Form__r.Translation__c, Form__r.Id, Form__r.Type__c from fpd_question__c where form__r.Country__r.ISO_code__c = '" + ISO_CODE + "'";
 
         RestRequest restRequest = null;
         try {
@@ -228,28 +252,24 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF QUESTIONS ARRAY IS " + questions.size());
 
 
-                                for (Question q : questions) {
-                                    Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.QUESTIONS_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteQuestion(q.getId()))
-                                                databaseHelper.addAQuestion(q);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addAQuestion(q);
+                            for (Question q : questions) {
+                                Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.QUESTIONS_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteQuestion(q.getId()))
+                                            databaseHelper.addAQuestion(q);
                                     }
 
+                                } else {
+                                    databaseHelper.addAQuestion(q);
                                 }
 
-                                Log.d(TAG, "QUESTIONS HAVE BEEN UPDATED! TOTAL SIZE IS " + databaseHelper.queryNumberOfEntries(DatabaseDataClass.QUESTIONS_TABLE));
-                                Log.d(TAG, "FORMS HAVE BEEN UPDATED! TOTAL SIZE IS " + databaseHelper.queryNumberOfEntries(DatabaseDataClass.FORMS_TABLE));
+                            }
 
-                                // CustomToast.makeToast(getApplicationContext(), "All data has been downloaded successfully!", Toast.LENGTH_LONG).show();
+                            Log.d(TAG, "QUESTIONS HAVE BEEN UPDATED! TOTAL SIZE IS " + databaseHelper.queryNumberOfEntries(DatabaseDataClass.QUESTIONS_TABLE));
+                            Log.d(TAG, "FORMS HAVE BEEN UPDATED! TOTAL SIZE IS " + databaseHelper.queryNumberOfEntries(DatabaseDataClass.FORMS_TABLE));
 
-
-
-
+                            // CustomToast.makeToast(getApplicationContext(), "All data has been downloaded successfully!", Toast.LENGTH_LONG).show();
 
 
                             refreshCountriesDataFromServer();
@@ -267,7 +287,7 @@ public class SyncActivity extends SalesforceActivity {
 
                         Log.d(TAG, "THE RESULT IS A FAILURE");
 
-                        AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this, R.style.AppDialog);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(DataDownloadActivity.this, R.style.AppDialog);
                         builder.setTitle(getResources(R.string.could_not_connect));
                         builder.setCancelable(false);
                         builder.setMessage(getResources(R.string.could_not_connect_rationale));
@@ -303,7 +323,7 @@ public class SyncActivity extends SalesforceActivity {
                             BaseActivity.printException(exception);
 
 
-                            AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this, R.style.AppDialog);
+                            AlertDialog.Builder builder = new AlertDialog.Builder(DataDownloadActivity.this, R.style.AppDialog);
                             builder.setTitle(getResources(R.string.could_not_connect));
                             builder.setCancelable(false);
                             builder.setMessage(getResources(R.string.could_not_connect_rationale));
@@ -411,7 +431,7 @@ public class SyncActivity extends SalesforceActivity {
 
                             if (syncInitialData) {
 
-                                PreferenceManager.getDefaultSharedPreferences(SyncActivity.this).edit().putBoolean("initialData", false).apply();
+                                PreferenceManager.getDefaultSharedPreferences(DataDownloadActivity.this).edit().putBoolean("initialData", false).apply();
 
                                 progressDialog.dismiss();
                                 finish();
@@ -515,20 +535,20 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF VILLAGES ARRAY IS " + villages.size());
 
 
-                                for (Village v : villages) {
+                            for (Village v : villages) {
 
-                                    Boolean isUpdated = databaseHelper.isUpdated(v.getId(), v.getLastModifiedDate(), DatabaseDataClass.VILLAGES_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteVillage(v.getId()))
-                                                databaseHelper.addVillage(v);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addVillage(v);
+                                Boolean isUpdated = databaseHelper.isUpdated(v.getId(), v.getLastModifiedDate(), DatabaseDataClass.VILLAGES_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteVillage(v.getId()))
+                                            databaseHelper.addVillage(v);
                                     }
+
+                                } else {
+                                    databaseHelper.addVillage(v);
                                 }
-                                Log.d(TAG, "VILLAGES HAVE BEEN UPDATED! TOTAL SIZE IS " + villages.size());
+                            }
+                            Log.d(TAG, "VILLAGES HAVE BEEN UPDATED! TOTAL SIZE IS " + villages.size());
 
                             refreshSkipLogicDataFromServer();
 
@@ -632,25 +652,22 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF SKIP LOGIC ARRAY IS " + skipLogics.size());
 
 
-                                for (SkipLogic q : skipLogics) {
+                            for (SkipLogic q : skipLogics) {
 
-                                    Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.SKIP_LOGIC_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteSkipLogic(q.getId()))
-                                                databaseHelper.addSkipLogic(q);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addSkipLogic(q);
+                                Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.SKIP_LOGIC_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteSkipLogic(q.getId()))
+                                            databaseHelper.addSkipLogic(q);
                                     }
 
+                                } else {
+                                    databaseHelper.addSkipLogic(q);
                                 }
 
-                                Log.d(TAG, "SKIP LOGICS HAVE BEEN UPDATED! TOTAL SIZE IS " + skipLogics.size());
+                            }
 
-
-
+                            Log.d(TAG, "SKIP LOGICS HAVE BEEN UPDATED! TOTAL SIZE IS " + skipLogics.size());
 
 
                             refreshRecommendationsDataFromServer();
@@ -717,7 +734,7 @@ public class SyncActivity extends SalesforceActivity {
             }
         });
 
-        String soql = "select LastModifiedDate, Id, Name, Condition__c, description__c, Hierarchy__c, Cost_Year_0__c, Cost_questions__c, Income_Year_0__c, Income_Year_1__c, Income_Year_2__c, Income_Year_3__c, Income_Year_4__c, Income_Year_5__c, Income_Year_6__c, " +
+        String soql = "select LastModifiedDate, Id, Name, Condition__c, description__c, Hierarchy__c, Cost_Year_0__c, Translation__c, Cost_questions__c, Income_Year_0__c, Income_Year_1__c, Income_Year_2__c, Income_Year_3__c, Income_Year_4__c, Income_Year_5__c, Income_Year_6__c, " +
                 "Income_Year_7__c, Logic__c, Related_1__c, Related_2__c, Income_questions__c, Year_back_to_Gaps__c from fpd_recommendation__c where Contry_code__c ='" + ISO_CODE + "'";
 
         RestRequest restRequest = null;
@@ -761,23 +778,22 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF RECOMMENDATIONS ARRAY IS " + recommendations.size());
 
 
-                                for (Recommendation q : recommendations) {
+                            for (Recommendation q : recommendations) {
 
-                                    Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.RECOMMENDATIONS_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteRecommendation(q.getId()))
-                                                databaseHelper.addRecommendation(q);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addRecommendation(q);
+                                Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.RECOMMENDATIONS_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteRecommendation(q.getId()))
+                                            databaseHelper.addRecommendation(q);
                                     }
 
+                                } else {
+                                    databaseHelper.addRecommendation(q);
                                 }
 
-                                Log.d(TAG, "RECOMMENDATIONS HAVE BEEN UPDATED! TOTAL SIZE IS " + recommendations.size());
+                            }
 
+                            Log.d(TAG, "RECOMMENDATIONS HAVE BEEN UPDATED! TOTAL SIZE IS " + recommendations.size());
 
 
                             refreshRecommendationsPlusActivitiesDataFromServer();
@@ -847,7 +863,7 @@ public class SyncActivity extends SalesforceActivity {
             }
         });
 
-        String soql = "select LastModifiedDate, Id, Name, Activity__c, Activity_name__c, Labor_cost__c, Labor_days_need__c, Month__c, Year__c, Supplies_cost__c, Recommendation__c from fpd_Recomendation_Activity__c where Recommendation__r.Contry_code__c ='" + ISO_CODE + "'";
+        String soql = "select LastModifiedDate, Id, Seasonal__c, Name, Activity__c, Activity_name__c, Labor_cost__c, Labor_days_need__c, Month__c, Year__c, Supplies_cost__c, Recommendation__c from fpd_Recomendation_Activity__c where Recommendation__r.Contry_code__c ='" + ISO_CODE + "'";
 
         restRequest = null;
 
@@ -880,7 +896,6 @@ public class SyncActivity extends SalesforceActivity {
                     try {
                         done = Boolean.valueOf(result.asJSONObject().getString("done"));
                         totalSize = Integer.parseInt(result.asJSONObject().getString("totalSize"));
-                        done = Boolean.valueOf(result.asJSONObject().getString("done"));
 
 
                         int size = 0;
@@ -912,13 +927,13 @@ public class SyncActivity extends SalesforceActivity {
                         for (RecommendationsPlusActivity q : recommendations) {
 
                             Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE);
-                            if(isUpdated != null){
-                                if(isUpdated){
-                                    if(databaseHelper.deleteRecommendationPlusAcivity(q.getId()))
+                            if (isUpdated != null) {
+                                if (isUpdated) {
+                                    if (databaseHelper.deleteRecommendationPlusAcivity(q.getId()))
                                         databaseHelper.addRecommendationPlusAcivity(q);
                                 }
 
-                            }else {
+                            } else {
                                 databaseHelper.addRecommendationPlusAcivity(q);
                             }
 
@@ -1059,16 +1074,15 @@ public class SyncActivity extends SalesforceActivity {
                         for (ActivitiesPlusInputs q : activitiesPlusInputs) {
 
                             Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.ACTIVITIY_PLUS_INPUTS_TABLE);
-                            if(isUpdated != null){
-                                if(isUpdated){
-                                    if(databaseHelper.deleteActivityPlusInput(q.getId()))
+                            if (isUpdated != null) {
+                                if (isUpdated) {
+                                    if (databaseHelper.deleteActivityPlusInput(q.getId()))
                                         databaseHelper.addActivityPlusInput(q);
                                 }
 
-                            }else {
+                            } else {
                                 databaseHelper.addActivityPlusInput(q);
                             }
-
 
 
                         }
@@ -1210,13 +1224,13 @@ public class SyncActivity extends SalesforceActivity {
                         for (Input q : activitiesPlusInputs) {
 
                             Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.INPUTS_TABLE);
-                            if(isUpdated != null){
-                                if(isUpdated){
-                                    if(databaseHelper.deleteInput(q.getId()))
+                            if (isUpdated != null) {
+                                if (isUpdated) {
+                                    if (databaseHelper.deleteInput(q.getId()))
                                         databaseHelper.addInput(q);
                                 }
 
-                            }else {
+                            } else {
                                 databaseHelper.addInput(q);
                             }
 
@@ -1334,28 +1348,24 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF LOGIC ARRAY IS " + logics.size());
 
 
+                            for (Logic q : logics) {
 
-                                for (Logic q : logics) {
-
-                                    Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.LOGIC_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteLogic(q.getId()))
-                                                databaseHelper.addLogic(q);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addLogic(q);
+                                Boolean isUpdated = databaseHelper.isUpdated(q.getId(), q.getLastModifiedDate(), DatabaseDataClass.LOGIC_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteLogic(q.getId()))
+                                            databaseHelper.addLogic(q);
                                     }
 
-
-
+                                } else {
+                                    databaseHelper.addLogic(q);
                                 }
 
 
-                                Log.d(TAG, "LOGICS HAVE BEEN UPDATED! TOTAL SIZE IS " + logics.size());
+                            }
 
 
+                            Log.d(TAG, "LOGICS HAVE BEEN UPDATED! TOTAL SIZE IS " + logics.size());
 
 
                             refreshComplexCalculationsDataFromServer();
@@ -1473,29 +1483,24 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF CALCULATIONS ARRAY IS " + calculations.size());
 
 
+                            for (ComplexCalculation calc : calculations) {
 
-                                for (ComplexCalculation calc : calculations) {
-
-                                    Boolean isUpdated = databaseHelper.isUpdated(calc.getId(), calc.getLastModifiedDate(), DatabaseDataClass.COMPLEX_CALCULATIONS_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteComplexCalculation(calc.getId()))
-                                                databaseHelper.addComplexCalculation(calc);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addComplexCalculation(calc);
+                                Boolean isUpdated = databaseHelper.isUpdated(calc.getId(), calc.getLastModifiedDate(), DatabaseDataClass.COMPLEX_CALCULATIONS_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteComplexCalculation(calc.getId()))
+                                            databaseHelper.addComplexCalculation(calc);
                                     }
 
-
-
+                                } else {
+                                    databaseHelper.addComplexCalculation(calc);
                                 }
 
 
-                                Log.d(TAG, "COMPLEX CALCULATIONS TABLE HAVE BEEN UPDATED! TOTAL SIZE IS " + calculations.size());
+                            }
 
 
-
+                            Log.d(TAG, "COMPLEX CALCULATIONS TABLE HAVE BEEN UPDATED! TOTAL SIZE IS " + calculations.size());
 
 
                             refreshCalculationsDataFromServer();
@@ -1609,34 +1614,34 @@ public class SyncActivity extends SalesforceActivity {
                             Log.d(TAG, "SIZE OF CALCULATIONS ARRAY IS " + calculations.size());
 
 
-                                for (Calculation calc : calculations) {
+                            for (Calculation calc : calculations) {
 
-                                    Boolean isUpdated = databaseHelper.isUpdated(calc.getId(), calc.getLastModifiedDate(), DatabaseDataClass.CALCULATIONS_TABLE);
-                                    if(isUpdated != null){
-                                        if(isUpdated){
-                                            if(databaseHelper.deleteCalculation(calc.getId()))
-                                                databaseHelper.addCalculation(calc);
-                                        }
-
-                                    }else {
-                                        databaseHelper.addCalculation(calc);
+                                Boolean isUpdated = databaseHelper.isUpdated(calc.getId(), calc.getLastModifiedDate(), DatabaseDataClass.CALCULATIONS_TABLE);
+                                if (isUpdated != null) {
+                                    if (isUpdated) {
+                                        if (databaseHelper.deleteCalculation(calc.getId()))
+                                            databaseHelper.addCalculation(calc);
                                     }
 
-
+                                } else {
+                                    databaseHelper.addCalculation(calc);
                                 }
 
 
-                                Log.d(TAG, "CALCULATIONS TABLE HAVE BEEN UPDATED! TOTAL SIZE IS " + calculations.size());
+                            }
 
 
-                                runOnUiThread(new Runnable() {
+                            Log.d(TAG, "CALCULATIONS TABLE HAVE BEEN UPDATED! TOTAL SIZE IS " + calculations.size());
+
+
+                               /* runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         CustomToast.makeToast(getApplicationContext(), "All data has been downloaded successfully!", Toast.LENGTH_LONG).show();
 
                                     }
                                 });
-
+*/
 
 
                         } catch (IOException | JSONException e) {
@@ -1652,92 +1657,41 @@ public class SyncActivity extends SalesforceActivity {
                                 @Override
                                 public void run() {
 
+                                    progressDialog.dismiss();
 
-                                   /* if (databaseHelper.getAllFarmers() != null && databaseHelper.getAllFarmers().size() > 0) {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(DataDownloadActivity.this, R.style.AppDialog);
+                                    builder.setTitle(getResources(R.string.download_complete));
+                                    builder.setCancelable(false);
+                                    builder.setMessage(getResources(R.string.all_data_downloaded) + "\n" + getResources(R.string.download_all_farmer_data));
+                                    builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            dialogInterface.dismiss();
 
+                                            if (networkActivityCompleteListener != null)
+                                                networkActivityCompleteListener.taskComplete(0);
+                                            finish();
 
-                                        String url = FdpApplication.END_POINT + buildAllFarmersJson();
+                                        }
+                                    });
 
+                                    builder.setNeutralButton(getResources(R.string.download_farmer_data), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            dialogInterface.dismiss();
+                                            startActivity(new Intent(DataDownloadActivity.this, SyncDownActivity.class));
+                                            finish();
 
-                                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                                                new Response.Listener<String>() {
-                                                    @Override
-                                                    public void onResponse(String response) {
-                                                        // Display the first 500 characters of the response string.
-                                                        Log.i(TAG, "RESPONSE AFTER SENDING FARMER DATA TO SALES FORCE " + response);
+                                        }
+                                    });
 
-                                                        progressDialog.dismiss();
+                                    builder.show();
 
-                                                        AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this, R.style.AppDialog);
-                                                        builder.setTitle(getResources(R.string.download_complete));
-                                                        builder.setCancelable(true);
-                                                        builder.setMessage(getResources(R.string.all_data_downloaded));
-                                                        builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialogInterface, int i) {
-                                                                dialogInterface.dismiss();
-                                                                finish();
-
-                                                            }
-                                                        });
-
-                                                        builder.show();
-
-
-                                                    }
-                                                }, new Response.ErrorListener() {
-                                            @Override
-                                            public void onErrorResponse(VolleyError error) {
-
-                                                Log.i(TAG, error.getMessage());
-
-                                                progressDialog.dismiss();
-                                                AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this, R.style.AppDialog);
-                                                builder.setTitle(getResources(R.string.download_complete));
-                                                builder.setCancelable(true);
-                                                builder.setMessage(getResources(R.string.all_data_downloaded));
-                                                builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                                        dialogInterface.dismiss();
-                                                        finish();
-
-                                                    }
-                                                });
-
-                                                builder.show();
-
-                                            }
-                                        });
-
-                                        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(stringRequest);
-
-                                    }else{*/
-
-                                        progressDialog.dismiss();
-
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(SyncActivity.this, R.style.AppDialog);
-                                        builder.setTitle(getResources(R.string.download_complete));
-                                        builder.setCancelable(true);
-                                        builder.setMessage(getResources(R.string.all_data_downloaded));
-                                        builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialogInterface, int i) {
-                                                dialogInterface.dismiss();
-                                                finish();
-
-                                            }
-                                        });
-
-                                        builder.show();
-
-                                    //}
 
                                 }
 
 
                             });
-
 
 
                         }
@@ -1783,27 +1737,26 @@ public class SyncActivity extends SalesforceActivity {
     }
 
 
-    public String getResources(int resource){
+    public String getResources(int resource) {
         return getString(resource);
     }
 
 
-
-    public JSONObject buildAllFarmersJson(){
+    public JSONObject buildAllFarmersJson() {
 
         String date = DateUtil.getFormattedDateMMDDYYYY();
 
 
-        String lastSyncDate = PreferenceManager.getDefaultSharedPreferences(SyncActivity.this).getString("lastSync", "");
+        String lastSyncDate = PreferenceManager.getDefaultSharedPreferences(DataDownloadActivity.this).getString("lastSync", "");
 
 
         JSONObject farmers = new JSONObject();
 
         JSONArray jsonArray = new JSONArray();
 
-        for(RealFarmer farmer : databaseHelper.getAllFarmers()) {
+        for (RealFarmer farmer : databaseHelper.getAllFarmers()) {
 
-            if(farmer.getSyncStatus() == 0)
+            if (farmer.getSyncStatus() == 0)
 
                 try {
                     JSONObject answerJsonObject = new JSONObject();
@@ -1823,8 +1776,6 @@ public class SyncActivity extends SalesforceActivity {
                 }
 
 
-
-
         }
 
 
@@ -1840,7 +1791,7 @@ public class SyncActivity extends SalesforceActivity {
     }
 
 
-    JSONArray formatAnswersJsonStructure(String farmerCode, String date, String answersObjectString){
+    JSONArray formatAnswersJsonStructure(String farmerCode, String date, String answersObjectString) {
 
         JSONArray refinedArray = new JSONArray();
 
@@ -1860,7 +1811,6 @@ public class SyncActivity extends SalesforceActivity {
                 disposableObject.put("question", tmp_key);
                 disposableObject.put("qdate", date);
                 disposableObject.put("farmerid", farmerCode);
-
 
 
                 refinedArray.put(disposableObject);

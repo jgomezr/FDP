@@ -24,21 +24,21 @@ public final class R {
         public static final int ms__popup_padding_top = 0x7f0b00df;
     }
     public static final class drawable {
-        public static final int ms__arrow = 0x7f02012a;
-        public static final int ms__drawable = 0x7f02012b;
-        public static final int ms__drop_down_shadow = 0x7f02012c;
-        public static final int ms__menu_down = 0x7f02012d;
-        public static final int ms__selector = 0x7f02012e;
-        public static final int ms__shadow_background = 0x7f02012f;
+        public static final int ms__arrow = 0x7f02012d;
+        public static final int ms__drawable = 0x7f02012e;
+        public static final int ms__drop_down_shadow = 0x7f02012f;
+        public static final int ms__menu_down = 0x7f020130;
+        public static final int ms__selector = 0x7f020131;
+        public static final int ms__shadow_background = 0x7f020132;
     }
     public static final class id {
         public static final int fill_parent = 0x7f100056;
         public static final int match_parent = 0x7f100057;
-        public static final int tv_tinted_spinner = 0x7f100143;
+        public static final int tv_tinted_spinner = 0x7f10014f;
         public static final int wrap_content = 0x7f100036;
     }
     public static final class layout {
-        public static final int ms__list_item = 0x7f04004f;
+        public static final int ms__list_item = 0x7f040051;
     }
     public static final class styleable {
         public static final int[] MaterialSpinner = { 0x7f010179, 0x7f01017a, 0x7f01017b, 0x7f01017c, 0x7f01017d, 0x7f01017e, 0x7f01017f };

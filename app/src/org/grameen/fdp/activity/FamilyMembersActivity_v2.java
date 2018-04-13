@@ -1,5 +1,6 @@
 package org.grameen.fdp.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -16,6 +17,7 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.FineTableViewAdapter;
 import org.grameen.fdp.object.Cell;
 import org.grameen.fdp.object.ColumnHeader;
+import org.grameen.fdp.object.Form;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RowHeader;
@@ -30,8 +32,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.interfaces.RSAKey;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 
 
 /**
@@ -48,6 +53,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     private List<List<Cell>> mCellList;
     JSONObject ALL_ANSWERS_JSON_OBJECT;
     private List<List<Question>> mQuestionsList;
+    String formLabel = Constants.FAMILY_MEMBERS;
 
 
     // Columns indexes
@@ -61,7 +67,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     public static final int GIRL = 1;
 
     TableView tableView;
-
+    Question familyMembersQuestion;
 
 
     RealFarmer farmer;
@@ -83,10 +89,13 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     private FineTableViewAdapter mTableViewAdapter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family_members);
 
+        Intent intent = getIntent();
+
+        type = intent.getStringExtra("type");
 
         tableView = findViewById(R.id.table_view);
 
@@ -100,9 +109,13 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
         }
 
         save = findViewById(R.id.save);
+        farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
 
         if(monitoringMode) {
-             save.setVisibility(View.GONE);
+            //In monitoring mode but have a diagnostic type form in monitoring, disable save button
+            if (type.equalsIgnoreCase(Constants.FORM_DIAGNOSTIC))
+                save.setVisibility(View.GONE);
+
         }
 
         nameIdInFamilyMembersTable = databaseHelper.getQuestionIdByTranslationName("Name");
@@ -111,13 +124,15 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         COLUMN_SIZE = INITIALIZED_QUESTIONS.size();
 
-        farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
         try {
             ROW_SIZE = Integer.parseInt(getIntent().getStringExtra("familyMembers"));
         }catch(Exception e){
             e.printStackTrace();
             ROW_SIZE = 1;
         }
+
+
+        //ROW_SIZE += 1;
 
         initData();
 
@@ -139,8 +154,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
         Log.i("FM ACTIVITY", "NO QUESTIONS " +  COLUMN_SIZE );
 
 
-
-
         if (farmer != null) {
 
             Toolbar toolbar = setToolbar(getResources(R.string.family_members));
@@ -155,30 +168,38 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
             String familyMembersArray = "[]";
 
 
-            try{
-                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getCode()));
-                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString("familyMembers");
-            }catch(Exception e){ e.printStackTrace();}
+            try {
 
-            Log.i("FM ACTIVITY", "FAMILY MEMBERS OLD ARRAY IS " +  familyMembersArray );
+                familyMembersQuestion = databaseHelper.getQuestionByTranslation("Family members");
 
-            try{
+                ALL_ANSWERS_JSON_OBJECT = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getId()));
 
-                if(familyMembersArray != null && !familyMembersArray.equalsIgnoreCase("null") && !familyMembersArray.equalsIgnoreCase(""))
-                 oldValuesArray = new JSONArray(familyMembersArray);
+                familyMembersArray = ALL_ANSWERS_JSON_OBJECT.getString(familyMembersQuestion.getId());
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            Log.i("FM ACTIVITY", "FAMILY MEMBERS OLD ARRAY IS " + familyMembersArray);
+
+            try {
+
+                if (familyMembersArray != null && !familyMembersArray.equalsIgnoreCase("null") && !familyMembersArray.equalsIgnoreCase(""))
+                    oldValuesArray = new JSONArray(familyMembersArray);
 
                 else
                     oldValuesArray = new JSONArray();
 
-            }catch(JSONException e){
+            } catch (JSONException e) {
                 e.printStackTrace();
                 oldValuesArray = new JSONArray();
 
             }
 
-            Log.i("FM ACTIVITY", "FAMILY MEMBERS OLD ARRAY IS " +  oldValuesArray.toString() );
+            Log.i("FM ACTIVITY", "FAMILY MEMBERS OLD ARRAY IS " + oldValuesArray.toString());
 
-            if(oldValuesArray != null && oldValuesArray.length() == ROW_SIZE) {
+            if (oldValuesArray != null && oldValuesArray.length() == ROW_SIZE) {
                 jsonArray = oldValuesArray;
 
                 Log.i("FM ACTIVITY", "ASSIGNED OLD ARRAY TO NEW ARRAY ");
@@ -193,10 +214,13 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
             loadData();
 
 
-
+            if (!monitoringMode) {
+                if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES) && farmer.getSyncStatus() == 1) {
+                    save.setVisibility(View.GONE);
+                }
+            }
 
         }
-
 
         onBackClicked();
 
@@ -205,9 +229,9 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
             public void onClick(View v) {
 
 
-                if(monitoringMode)
+              /*  if(monitoringMode)
                     onBackClicked();
-                else {
+                else {*/
 
                     String idForIncome = databaseHelper.getQuestionIdByTranslationName("How much income contribute in a year");
                     if (idForIncome == null || idForIncome.equalsIgnoreCase("null"))
@@ -245,23 +269,19 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                     Question q = databaseHelper.getQuestionByTranslation("Total Family Income");
 
-                    String socioJson = databaseHelper.getAllAnswersJson(farmer.getCode());
+                String socioJson = databaseHelper.getAllAnswersJson(farmer.getId());
 
                     JSONObject socioJsonObject = new JSONObject();
                     try {
 
                         if(socioJson != null && !socioJson.equalsIgnoreCase("null") && !socioJson.equalsIgnoreCase("")) {
                             socioJsonObject = new JSONObject(socioJson);
-                            if (socioJsonObject.has(q.getId())) {
+                            if (socioJsonObject.has(q.getId()))
 
                                 socioJsonObject.remove(q.getId());
                                 socioJsonObject.put(q.getId(), applyCalculation(stringBuilder.toString()));
 
 
-                            } else {
-
-                                socioJsonObject.put(q.getId(), applyCalculation(stringBuilder.toString()));
-                            }
 
                         }else{
 
@@ -276,7 +296,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                     }
 
-                    databaseHelper.editAllAnswersJson(farmer.getCode(), socioJsonObject);
+                databaseHelper.editAllAnswersJson(farmer.getId(), socioJsonObject);
 
 
 
@@ -284,21 +304,22 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                     JSONObject newJson = new JSONObject();
                     try {
-                        newJson.put("familyMembers", jsonArray.toString());
-                    } catch (JSONException e) {
+                        newJson.put(familyMembersQuestion.getId(), jsonArray);
+                    } catch (JSONException | NullPointerException e) {
                         e.printStackTrace();
+
+                        CustomToast.makeToast(FamilyMembersActivity_v2.this, "Family members id supposed to be in Farmer Profile not found!", Toast.LENGTH_LONG).show();
                     }
 
-                    if (databaseHelper.editAllAnswersJson(farmer.getCode(),newJson)) {
-                        CustomToast.makeToast(FamilyMembersActivity_v2.this, "Data has been saved", Toast.LENGTH_SHORT).show();
-                        finish();
+                if (databaseHelper.editAllAnswersJson(farmer.getId(), newJson)) {
+                    CustomToast.makeToast(FamilyMembersActivity_v2.this, getResources(R.string.data_saved), Toast.LENGTH_SHORT).show();
+
+                    loadNextForm();
                     } else
-                        CustomToast.makeToast(FamilyMembersActivity_v2.this, "Uh oh! Data was not saved", Toast.LENGTH_SHORT).show();
+                    CustomToast.makeToast(FamilyMembersActivity_v2.this, getResources(R.string.data_saved), Toast.LENGTH_SHORT).show();
 
 
-
-
-                }
+                //}
             }
         });
 
@@ -375,23 +396,23 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
                 Log.i(TAG, "COLUMN INDEX " + j);
 
-
                 Question q = mQuestionsList.get(i).get(j);
 
-               /* if(i == 0){
-                    if(q.getTranslation__c().equalsIgnoreCase("name"))
-                        q.setDefault_value__c(farmer.getFarmerName());
-                }*/
+                //q.setMax_value__c(i + "");
 
                 String value = getValue(i, q.getId());
 
-                if(value != null)
+                if (value != null)
                     q.setDefault_value__c(value);
+
 
                 Cell cell = new Cell(q.getId(), q);
                 cellList.add(cell);
             }
             list.add(cellList);
+
+
+
         }
 
         Log.i(TAG, "########  CELL LIST SIZE IS " + list.size());
@@ -425,13 +446,26 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
             if(prefs.getBoolean("toggleTranslation", false)) {
                 String title = INITIALIZED_QUESTIONS.get(i).getTranslation__c();
-                ColumnHeader header = new ColumnHeader(String.valueOf(i), title);
+                String helperText;
+                if (INITIALIZED_QUESTIONS.get(i).getHelp_Text__c() == null)
+                    helperText = "";
+                else
+                    helperText = INITIALIZED_QUESTIONS.get(i).getHelp_Text__c();
+
+
+                ColumnHeader header = new ColumnHeader(String.valueOf(i), title, helperText);
                 list.add(header);
 
             }else{
 
+                String helperText;
+                if (INITIALIZED_QUESTIONS.get(i).getHelp_Text__c() == null)
+                    helperText = "--";
+                else
+                    helperText = INITIALIZED_QUESTIONS.get(i).getHelp_Text__c();
+
                      String title = INITIALIZED_QUESTIONS.get(i).getCaption__c();
-                    ColumnHeader header = new ColumnHeader(String.valueOf(i), title);
+                ColumnHeader header = new ColumnHeader(String.valueOf(i), title, helperText);
                     list.add(header);
 
 
@@ -534,4 +568,83 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         return value;
     }
+
+
+    void loadNextForm() {
+
+        if (IS_MONITIRING_MODE)
+            FORMS = databaseHelper.getAllMonitoringForms();
+
+        if (SELECTED_FORM_INDEX < FORMS.size()) {
+            for (int i = 0; i < FORMS.size(); i++) {
+
+                if (FORMS.get(i).getName().equalsIgnoreCase(formLabel)) {
+                    SELECTED_FORM_INDEX += 1;
+                    break;
+                }
+            }
+
+
+            if (SELECTED_FORM_INDEX == FORMS.size())
+
+                goToFarmerDetails();
+
+            else {
+                Form form = FORMS.get(SELECTED_FORM_INDEX);
+
+                if (IS_MONITIRING_MODE) {
+
+                    if (form.getType().equalsIgnoreCase(Constants.DIAGNOSTIC))
+                        goToFarmerDetails();
+                    else
+                        goToNextForm(form);
+                } else
+                    formLabel = form.getName();
+                goToNextForm(form);
+
+
+            }
+        } else goToFarmerDetails();
+
+
+    }
+
+
+    void goToFarmerDetails() {
+        SELECTED_FORM_INDEX = 0;
+
+        Intent intent = new Intent(this, FarmerDetailsActivity.class);
+        intent.putExtra("farmer", new Gson().toJson(farmer));
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+
+
+    }
+
+
+    void goToNextForm(Form form) {
+
+        Log.i(TAG, "^^^^^^^^^^    SELECTED INDEX " + SELECTED_FORM_INDEX);
+
+
+        Log.i(TAG, "^^^^^^^^^^    FORM NAME IS  " + form.getName());
+
+        Intent intent = new Intent(this, Add_EditFarmerDetailsActivity.class);
+        intent.putExtra("farmer", new Gson().toJson(farmer));
+        intent.putExtra("flag", "edit");
+        intent.putExtra("type", form.getType());
+        intent.putExtra("formLabel", form.getName());
+
+        intent.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+        finish();
+    }
+
+
+
+
+
+
 }

@@ -3,34 +3,27 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="start_by_swiping_left">Start by swiping left.</string>
-
     <string name="loading">Loading&#8230;</string>
-
     <string name="full_name_error">Please enter full name</string>
-
     <string name="account_type">org.grameen.fdp.login</string>
-
     <string name="app_package">org.grameen.fdp</string>
     <string name="welcome">Welcome %s</string>
     <string name="logout_button">Logout</string>
     <string name="fetch_contacts_button">Fetch Contacts</string>
     <string name="fetch_accounts_button">Fetch Accounts</string>
     <string name="clear_button">Clear</string>
-
     <string name="edit_farmer_details">Edit Farmer Details</string>
     <string name="add_farmer_details">Add Farmer Details</string>
     <string name="save_data">Save data</string>
     <string name="save_data_explanation">Do you want to save your current data before exit?</string>
-
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="ok">Ok</string>
-
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
     <string name="new_farmer_added">New Farmer added!</string>
     <string name="new_farmer_not_added">Could not add farmer info. Please try again.</string>
     <string name="farmer_updated">Farmer data updated successfully!</string>
@@ -40,11 +33,13 @@
     <string name="camera_permission_rationale">Please provide camera permission to be able to take pictures</string>
     <string name="enter_valid_plot_name">Please enter a valid plot name</string>
     <string name="edit_plot">Edit plot details</string>
-    <string name="add_new_plot">Add a new plot.</string>
+    <string name="add_new_plot">Add a new plot</string>
     <string name="provide_plot_name">Please provide the plot name</string>
     <string name="new_plot_added">New plot added</string>
     <string name="data_saved">Data saved</string>
     <string name="data_not_saved">Could not save data!</string>
+    <string name="generic_error">Could not save data!</string>
+
 
     <string name="could_not_add_plot">Could not add plot info. Please try again</string>
     <string name="new_data_updated">New data updated</string>
@@ -65,7 +60,7 @@
     <string name="sep">Sep</string>
     <string name="oct">Oct</string>
     <string name="nov">Nov</string>
-    <string name="dec">Dev</string>
+    <string name="dec">Dec</string>
     <string name="activities">Activities</string>
     <string name="supplies">Supplies Cost</string>
     <string name="labour">Labour Cost</string>
@@ -80,7 +75,7 @@
     <string name="enter_all_ao_data">Please enter all Adoption Observation and Plot Info values for </string>
     <string name="missing_data">Missing data</string>
     <string name="no_plots">No Plots Added!</string>
-    <string name="add_plot">Please add a plot to access P &amp; L.</string>
+    <string name="add_plot_to_access_pl">Please add a plot to access P &amp; L.</string>
     <string name="farm_result">Farm Result</string>
     <string name="incomplete_ao_monitoring">Incomplete AO monitoring</string>
     <string name="different_no_monitoring">Different number of monitoring for plots</string>
@@ -97,12 +92,11 @@
     <string name="incomplete_monitoring_suffix">.
         Please make sure all plot monitoring are complete for the specified year</string>
     <string name="back">Back</string>
-    <string name="fdp_status">FDP status</string>
     <string name="provide_all_permissions">Provide Permissions</string>
     <string name="provide_all_permissions_rationale">All permissions are needed for FDP to work properly</string>
     <string name="quit">Quit</string>
     <string name="select_country_region">Please Select a Country/Region</string>
-    <string name="hey_there">Hey there!</string>
+    <string name="hey_there">Hi there!</string>
     <string name="sync">Sync</string>
     <string name="sync_anyway">Sync anyway</string>
     <string name="first_sign_in_rationale">Looks like this is your first sign in.
@@ -112,16 +106,25 @@
     <string name="plot_info">Plot Info</string>
 
     <string name="getting_data">Getting data</string>
+    <string name="sending_data">Uploading records</string>
+
+
     <string name="please_wait">Please wait a moment…</string>
-    <string name="generic_error">Error</string>
+    <string name="network_error">No internet!</string>
+    <string name="network_error_rational">You have no internet access! Please connect to a network and try again.</string>
+
     <string name="connection_error">"An error has occurred. Please try again :("</string>
     <string name="update_questions_data">Updating questions data</string>
     <string name="could_not_connect">Could not connect</string>
     <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
+    <string name="all_resources_downloaded">All resources downloaded successfully!</string>
     <string name="all_data_downloaded">All data downloaded successfully!</string>
 
+    <string name="download_all_farmer_data">Do you want to download farmer data?</string>
+    <string name="download_farmer_data">Download farmer data</string>
 
-    <string name="download_complete">Download Complete</string>
+
+    <string name="download_complete">Data download Complete</string>
     <string name="getting_skip_logic">Obtaining Skip Logic data</string>
     <string name="getting_recommendations">Obtaining Recommendations data</string>
     <string name="getting_more">Getting more data</string>
@@ -176,10 +179,8 @@
 
 
 
-
-
     <string name="phone_hint">Phone Number</string>
-    <string name="submit">Submit</string>
+    <string name="submit">Submit Agreement</string>
     <string name="invalid_phone_number">Please enter a valid phone number</string>
     <string name="valid_phone_number">Valid phone numbers!</string>
 
@@ -214,7 +215,7 @@
     <string name="close">Close</string>
     <string name="title">Close</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-    <string name="pandl" translatable="false"><![CDATA[P & L]]></string>
+    <string name="pandl" translatable="false"><![CDATA[Review Page and P & L]]></string>
 
 
     //Ignore
@@ -241,15 +242,41 @@
     </string-array>
 
 
+    <string-array name="seven_years">
+        <item name="1"> </item>
+        <item name="2">Year 0</item>
+        <item name="3">Year 1</item>
+        <item name="4">Year 2</item>
+
+        <item name="5">Year 3</item>
+        <item name="6">Year 4</item>
+        <item name="7">Year 5</item>
+
+        <item name="8">Year 6</item>
+        <item name="9">Year 7</item>
+    </string-array>
+
+
+    <string name="year_1">Year 1</string>
+    <string name="year_2">Year 2</string>
+    <string name="year_3">Year 3</string>
+
+    <string name="year_4">Year 4</string>
+    <string name="year_5">Year 5</string>
+    <string name="year_6">Year 6</string>
+
+    <string name="year_7">Year 7</string>
+
 
     <string name="all_data_synced">All data synced successfully!</string>
     <string name="sync_complete">Sync Complete</string>
-
+    <string name="sync_in_complete">Sync Incomplete</string>
     <string name="no_farmers">No new farmer data to sync</string>
     <string name="no_new_data">No new data</string>
-
+    <string name="no_old_data">No data to download</string>
+    <string name="no_data">No data</string>
     <string name="calc_area">click to calculate plot area</string>
-    <string name="title_area_calc">area calculation</string>
+    <string name="title_area_calc">GPS Area Calculation</string>
     <string name="no_points">No Points added yet</string>
     <string name="add_3_more_points">To calculate area, please add 3 or more points.</string>
     <string name="delete">Delete photo</string>
@@ -257,20 +284,95 @@
     <string name="click_photo_to_delete">You can click on photo to remove/delete</string>
     <string name="no_image_taken">No photo was selected.</string>
     <string name="something_went_wrong">Something went wrong :( </string>
-
-
     <string name="image_options">Please select an option</string>
-
     <string name="view">View</string>
-
-
     <string name="save">Save</string>
     <string name="save_and_continue">Save and continue</string>
     <string name="cancel">Cancel</string>
     <string name="take_picture">Take picture</string>
+    <string name="hello">Hello, Welcome!</string>
+    <string name="change_to">Change to</string>
+    <string name="status_submitted">Agreement Submitted!</string>
+    <string name="status_incomplete">You can still make edits</string>
+    <string name="caution">Caution!</string>
+    <string name="read_only_rational">Once submitted and synced, you cannot make any more modifications.\n\nProceed?</string>
+    <string name="agreement_submitted_and_data_synced">Agreement submitted and data synced successfully!</string>
+
+    <string name="plot_aos">"Plot Adoption Observations "</string>
+    <string name="plot_ao">"Plot Adoption Observation "</string>
+    <string name="add_plot">Add a new plot</string>
+
+    <string name="farm_assessment">Farm Assessment</string>
+    <string name="last_visit">Last visit: </string>
+    <string name="last_sync">Last sync: </string>
+
+    <string name="sync_farmer">Sync Farmer</string>
+
+    <string name="no_plots_added">No plots added.</string>
+    <string name="no_plots_added_rationale">Click the button below to add a new plot.</string>
+
+    <string name="est_production_size">Estimated Production Size</string>
+    <string name="plot_name">Plot Name</string>
+    <string name="soil_ph">Soil ph</string>
+
+    <string name="farmer_name">Farmer Name:</string>
+    <string name="farmer_code">Farmer Code:</string>
+    <string name="hire_labour">Did the farmer hire labour?</string>
+    <string name="hire_labour_type">Labour type</string>
+    <string name="monitoring_ao">Monitoring Adoption Observations</string>
+    <string name="ao">AO</string>
+    <string name="farmer_competence">Farmer Competence</string>
+    <string name="reason_for_failure">Reason for Failure</string>
+
+    <string name="log_out">Log Out?</string>
+
+    <string name="info_plot_monitoring">Info Plot Monitoring</string>
+    <string name="add_new_monitoring">"Add new monitoring</string>
+
+    <string name="edit">Edit</string>
+    <string name="plot_assessment">"Plot Assessment</string>
+    <string name="date">Date</string>
+
+    <string name="data_already_synced">data has already been synced!</string>
+    <string name="apostrophe_s">\'s </string>
+    <string name="currency">Currency:</string>
+    <string name="fdp_status">FDP status</string>
 
 
+    <string name="no_internet_connection_available">No internet connection available.</string>
 
+    <string name="you_can_still_make_edits">You can still make edits to </string>
+    <string name="data_before_sync">data before syncing.</string>
+    <string name="fdp_status_incomplete">FDP Status incomplete</string>
+    <string name="fill_out_fdp_status">"Please fill out FDP status Form for "</string>
+    <string name="go_to_fdp_status_form">Go to FDP status form</string>
+    <string name="no_more_mods">You cannot make any more modifications to </string>
+    <string name="data">data.</string>
+
+    <string name="populating_data">Populating Data</string>
+
+
+    <string name="total_maintenance_cost">Total Maintenance Cost</string>
+    <string name="total_labour_days">Total Labour Days</string>
+    <string name="total_labour_cost">Total Labour Cost</string>
+    <string name="planned_investment">Planned Investments</string>
+    <string name="updating_table_data">Updating table data!</string>
+
+    <string name="recommended_intervention">Recommended Intervention:</string>
+
+    <string name="fill_out_ao_data">Please fill out all Adoption Observations data!</string>
+    <string name="add_farmer">Add farmer</string>
+    <string name="add_farmer_rational">Add new farmer data by clicking on the green button below</string>
+
+
+    <string name="monitoring">Monitoring</string>
+    <string name="diagnostic">Diagnostics</string>
+
+    <string name="fdp">Farm Development Plan</string>
+    <string name="download_resources">Download Resources</string>
+    <string name="upload_farmer_data">Upload farmer data</string>
+    <string name="share">Share</string>
+    <string name="toggle_translation">Toggle Translation</string>
 
 
 </resources>

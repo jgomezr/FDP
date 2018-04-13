@@ -34,6 +34,7 @@ import org.grameen.fdp.viewholder.CheckBoxViewHolder;
 import org.grameen.fdp.viewholder.ColumnHeaderViewHolder;
 import org.grameen.fdp.viewholder.RowHeaderViewHolder;
 import org.grameen.fdp.viewholder.SpinnerViewHolder;
+import org.grameen.fdp.viewholder.TextViewHolder;
 import org.json.JSONException;
 
 import java.util.List;
@@ -90,11 +91,10 @@ public class FineTableViewAdapter extends AbstractTableAdapter<ColumnHeader, Row
     public RecyclerView.ViewHolder onCreateCellViewHolder(ViewGroup parent, int viewType) {
 
 
-
         String TYPE = questions.get(viewType).getType__c().toLowerCase();
         Log.i("FINE TABLE ADAPTER", "TYPE = " + TYPE);
 
-        if(TYPE.equalsIgnoreCase(Constants.TYPE_TEXT))
+        if (TYPE.equalsIgnoreCase(Constants.TYPE_TEXT))
                 return new CellViewHolder(getLayoutView(parent, Constants.TYPE_TEXT), Constants.TYPE_TEXT);
 
         else if (TYPE.equalsIgnoreCase(Constants.TYPE_SELECTABLE))
@@ -133,27 +133,21 @@ public class FineTableViewAdapter extends AbstractTableAdapter<ColumnHeader, Row
         Log.i("FINE TABLE ADAPTER", "COLUMN POSITION = " + columnPosition);
         Log.i("FINE TABLE ADAPTER", "ROW POSITION = " + rowPosition);
 
-        if(holder instanceof CellViewHolder) {
 
+        if (holder instanceof CellViewHolder) {
             CellViewHolder viewHolder = (CellViewHolder) holder;
             viewHolder.setData(rowPosition, (Question) cell.getData());
-        }else if (holder instanceof CheckBoxViewHolder)
-        {
+
+        } else if (holder instanceof CheckBoxViewHolder) {
             CheckBoxViewHolder viewHolder = (CheckBoxViewHolder) holder;
             viewHolder.setData(rowPosition, (Question) cell.getData());
 
-        }else if (holder instanceof  SpinnerViewHolder){
+        } else if (holder instanceof SpinnerViewHolder) {
 
             SpinnerViewHolder viewHolder = (SpinnerViewHolder) holder;
             viewHolder.setData(rowPosition, (Question) cell.getData());
 
         }
-
-
-
-
-
-
 
     }
 
@@ -247,6 +241,9 @@ public class FineTableViewAdapter extends AbstractTableAdapter<ColumnHeader, Row
         // Get the holder to update row header item text
         RowHeaderViewHolder rowHeaderViewHolder = (RowHeaderViewHolder) holder;
         rowHeaderViewHolder.row_header_textview.setText(String.valueOf(rowHeader.getData()));
+
+
+        //rowHeaderViewHolder.row_header_textview.
     }
 
 
@@ -336,8 +333,6 @@ public class FineTableViewAdapter extends AbstractTableAdapter<ColumnHeader, Row
                 layout = LayoutInflater.from(mContext).inflate(R.layout
                         .table_view_cell_layout, parent, false);
                 layout.setTag(TYPE);
-
-
 
         }
 

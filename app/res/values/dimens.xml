@@ -86,8 +86,7 @@
     <dimen name="image_size_small">70dp</dimen>
 
 
-
-    <dimen name="cell_height">40dp</dimen>
+    <dimen name="cell_height">50dp</dimen>
     <dimen name="row_header_width">55dp</dimen>
     <dimen name="text_size">12sp</dimen>
 

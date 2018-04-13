@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:clickable="true"
         android:focusable="true"
-        android:textColor="@color/colorAccent"
+        android:textColor="?attr/colorAccent"
         android:background="?attr/selectableItemBackground"
 
         />
@@ -31,7 +31,6 @@
         table:tableView_columnCount="3"
         android:background="@drawable/table_view_border_background"
         android:dividerHeight="0.5dip"
-        table:tableView_headerColor="@color/divider"
 
         />
 

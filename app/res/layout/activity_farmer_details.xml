@@ -145,7 +145,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Last visit: "
+                        android:text="@string/last_visit"
                         android:layout_marginBottom="@dimen/spacing_half"
 
                         />
@@ -156,6 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Jan 12, 2017"
+                        android:layout_marginLeft="@dimen/spacing_quarter"
                         android:layout_marginBottom="@dimen/spacing_half"
 
                         />
@@ -175,7 +176,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Last Sync: "
+                        android:text="@string/last_sync"
 
                         />
 
@@ -184,6 +185,7 @@
                         android:id="@+id/lastSyncDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_quarter"
                         android:text="Jan 12, 2017"
 
                         />
@@ -358,7 +360,7 @@
                             android:layout_height="wrap_content"
                             android:text="(2)"
                             android:textAllCaps="true"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="?attr/colorAccent"
                             android:textSize="@dimen/text_size_tiny"
                             android:textStyle="bold"
                             />
@@ -386,7 +388,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="No plots added"
+                            android:text="@string/no_plots_added"
                             android:textColor="@android:color/primary_text_light"
                             android:layout_marginBottom="@dimen/spacing_half"
                              />
@@ -395,7 +397,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Click the button below to add a new plot."
+                            android:text="@string/no_plots_added_rationale"
                              />
 
                         </LinearLayout>
@@ -427,12 +429,12 @@
                         android:id="@+id/addPlot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Add a new plot"
+                        android:text="@string/add_plot"
                         android:paddingLeft="@dimen/spacing_normal"
                         android:paddingRight="@dimen/spacing_normal"
                         android:paddingBottom="@dimen/spacing_normal"
                         android:paddingTop="@dimen/spacing_half"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="?attr/colorAccent"
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/plotsRl"
                         style="@style/TextAppearance.AppCompat.Button"
@@ -473,12 +475,22 @@
                             android:text="@string/pandl"
                             android:textAllCaps="true"
                             android:layout_marginBottom="@dimen/spacing_normal"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="?attr/colorAccent"
                             android:textSize="@dimen/text_size_tiny"
                             android:textStyle="bold"
 
                             />
 
+
+                    <ImageView
+                        android:id="@+id/review_page"
+                        android:layout_below="@id/text1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/review"
+                        android:clickable="true"
+                        android:focusable="true" />
 
 
                     <ImageView
@@ -486,6 +498,8 @@
                         android:layout_below="@id/text1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:layout_toRightOf="@id/review_page"
+                        android:layout_marginLeft="@dimen/spacing_2"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/bars_chart"
                           android:clickable="true"
@@ -524,10 +538,10 @@
                         android:id="@+id/text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Farm Assessment"
+                        android:text="@string/farm_assessment"
                         android:textAllCaps="true"
                         android:layout_marginBottom="@dimen/spacing_normal"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="?attr/colorAccent"
                         android:textSize="@dimen/text_size_tiny"
                         android:textStyle="bold"
 
@@ -582,7 +596,7 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:theme="@style/PrimaryButtonGrey"
-            android:text="Back"
+            android:text="@string/back"
             android:padding="@dimen/spacing_normal"
             />
 
@@ -592,8 +606,7 @@
              android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
-            android:theme="@style/PrimaryButtonAccent"
-            android:text="sync farmer"
+            android:text="@string/sync_farmer"
             android:padding="@dimen/spacing_normal"
             android:layout_marginLeft="@dimen/spacing_normal"
 

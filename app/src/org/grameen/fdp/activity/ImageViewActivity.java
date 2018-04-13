@@ -7,12 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
-import com.google.gson.Gson;
-import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.utility.CustomToast;
@@ -32,7 +28,7 @@ public class ImageViewActivity extends BaseActivity {
     TouchImageView touchImageView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -63,7 +59,7 @@ public class ImageViewActivity extends BaseActivity {
             touchImageView = (TouchImageView) findViewById(R.id.touch_image_view);
 
             try {
-                touchImageView.setImageBitmap(ImageUtil.convert(decodableString));
+                touchImageView.setImageBitmap(ImageUtil.base64ToBitmap(decodableString));
 
             } catch (Exception e) {
                 e.printStackTrace();

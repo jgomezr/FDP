@@ -57,6 +57,19 @@
         <item name="21" type="color">#603eb1</item>
 
     </array>
+    <string-array name="seven_years">
+        <item name="1"> </item>
+        <item name="2">Year 0</item>
+        <item name="3">Year 1</item>
+        <item name="4">Year 2</item>
+
+        <item name="5">Year 3</item>
+        <item name="6">Year 4</item>
+        <item name="7">Year 5</item>
+
+        <item name="8">Year 6</item>
+        <item name="9">Year 7</item>
+    </string-array>
     <string-array name="years">
         <item name="1">2017</item>
         <item name="2">2018</item>
@@ -80,6 +93,8 @@
     </string-array>
     <attr format="color|reference" name="backgroundColor"/>
     <attr format="color" name="bottomSheetBackgroundColor"/>
+    <attr format="color" name="colorAccent"/>
+    <attr format="color" name="colorPrimary"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="color" name="fab_label_background_color"/>
     <attr format="dimension" name="height"/>
@@ -103,8 +118,8 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="actionbar_opacity">#00000000</color>
     <color name="background">#fafafa</color>
-    <color name="background_1">#3949AB</color>
-    <color name="background_2">#3F51B5</color>
+    <color name="background_1">#0b68c4</color>
+    <color name="background_2">#247ad1</color>
     <color name="background_3">#5C6BC0</color>
     <color name="background_card">#fff</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
@@ -136,10 +151,13 @@
     <color name="colorAccent50Alpha">#8f4caf50</color>
     <color name="colorAccentDark">#060606</color>
     <color name="colorAccentLighter">@color/background_1</color>
+    <color name="colorAccentMonitoring">#4db6ac</color>
     <color name="colorPrimary">#1b8f63</color>
     <color name="colorPrimaryDark">#1b7653</color>
     <color name="colorPrimaryDarkInverted">@color/background_1</color>
+    <color name="colorPrimaryDarkMonitoring">#13917a</color>
     <color name="colorPrimaryInverted">@color/background_1</color>
+    <color name="colorPrimaryMonitoring">#26a790</color>
     <color name="color_dark_slide_intro">#ebeef0</color>
     <color name="color_slide_intro">#fdfdfd</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
@@ -843,7 +861,7 @@
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
-    <dimen name="cell_height">40dp</dimen>
+    <dimen name="cell_height">50dp</dimen>
     <dimen name="civ_height">70dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
@@ -1131,15 +1149,23 @@
     <string name="action_settings">Settings</string>
     <string name="activities">Activities</string>
     <string name="add_3_more_points">To calculate area, please add 3 or more points.</string>
+    <string name="add_farmer">Add farmer</string>
     <string name="add_farmer_details">Add Farmer Details</string>
-    <string name="add_new_plot">Add a new plot.</string>
-    <string name="add_plot">Please add a plot to access P &amp; L.</string>
+    <string name="add_farmer_rational">Add new farmer data by clicking on the green button below</string>
+    <string name="add_new_monitoring">"Add new monitoring</string>
+    <string name="add_new_plot">Add a new plot</string>
+    <string name="add_plot">Add a new plot</string>
     <string name="add_plot_monitoring">Add new plot monitoring</string>
+    <string name="add_plot_to_access_pl">Please add a plot to access P &amp; L.</string>
+    <string name="agreement_submitted_and_data_synced">Agreement submitted and data synced successfully!</string>
     <string name="all_data_downloaded">All data downloaded successfully!</string>
     <string name="all_data_synced">All data synced successfully!</string>
+    <string name="all_resources_downloaded">All resources downloaded successfully!</string>
     <string name="and"> and </string>
     <string name="androidPushNotificationClientId"/>
+    <string name="ao">AO</string>
     <string name="api_version">v39.0</string>
+    <string name="apostrophe_s">\'s </string>
     <string name="app_name">FDP</string>
     <string name="app_package">org.grameen.fdp</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
@@ -1152,10 +1178,12 @@
     <string name="calc_area">click to calculate plot area</string>
     <string name="camera_permission_rationale">Please provide camera permission to be able to take pictures</string>
     <string name="cancel">Cancel</string>
+    <string name="caution">Caution!</string>
     <string name="cd_clear_button">Clear field</string>
     <string name="cd_suggestion_icon">List item icon</string>
     <string name="cd_up_button">Up navigation button</string>
     <string name="cd_voice_search">Voice search</string>
+    <string name="change_to">Change to</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="clear_button">Clear</string>
     <string name="click_photo_to_delete">You can click on photo to remove/delete</string>
@@ -1182,18 +1210,28 @@
     <string name="could_not_connect">Could not connect</string>
     <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
     <string name="could_not_save">Could not save farmer</string>
+    <string name="currency">Currency:</string>
+    <string name="data">data.</string>
+    <string name="data_already_synced">data has already been synced!</string>
+    <string name="data_before_sync">data before syncing.</string>
     <string name="data_not_saved">Could not save data!</string>
     <string name="data_saved">Data saved</string>
-    <string name="dec">Dev</string>
+    <string name="date">Date</string>
+    <string name="dec">Dec</string>
     <string name="default_cell">Data [%1$d:%2$d]</string>
     <string name="default_header">Header %1$d</string>
     <string name="default_web_client_id" translatable="false">611301447040-8jl2l7c8pds988cqscp5dcfq6idg4cei.apps.googleusercontent.com</string>
     <string name="delete">Delete photo</string>
     <string name="delete_photo_rationale">Are you sure you want to delete photo?</string>
+    <string name="diagnostic">Diagnostics</string>
     <string name="different_no_monitoring">Different number of monitoring for plots</string>
     <string name="dob">Select Date of Birth</string>
     <string name="dont_have_account_text">Don\'t have an account?</string>
-    <string name="download_complete">Download Complete</string>
+    <string name="download_all_farmer_data">Do you want to download farmer data?</string>
+    <string name="download_complete">Data download Complete</string>
+    <string name="download_farmer_data">Download farmer data</string>
+    <string name="download_resources">Download Resources</string>
+    <string name="edit">Edit</string>
     <string name="edit_farmer_details">Edit Farmer Details</string>
     <string name="edit_plot">Edit plot details</string>
     <string name="edit_plot_monitoring">Edit plot monitoring</string>
@@ -1206,24 +1244,33 @@
     <string name="error_invalid_units">Invalid units provided for plot production sizes!</string>
     <string name="error_missing_estimated_production">Total Farm Production or Plot production was not provided!</string>
     <string name="error_total_plot_estimated_production">Total Plots estimated production is more than total farm production!</string>
+    <string name="est_production_size">Estimated Production Size</string>
     <string name="family_members">Family Members</string>
+    <string name="farm_assessment">Farm Assessment</string>
     <string name="farm_result">Farm Result</string>
     <string name="farmer">Farmer </string>
+    <string name="farmer_code">Farmer Code:</string>
+    <string name="farmer_competence">Farmer Competence</string>
     <string name="farmer_details">Farmer Details</string>
+    <string name="farmer_name">Farmer Name:</string>
     <string name="farmer_updated">Farmer data updated successfully!</string>
+    <string name="fdp">Farm Development Plan</string>
     <string name="fdp_status">FDP status</string>
+    <string name="fdp_status_incomplete">FDP Status incomplete</string>
     <string name="feb">Feb</string>
     <string name="fetch_accounts_button">Fetch Accounts</string>
     <string name="fetch_contacts_button">Fetch Contacts</string>
     <string name="fill_data">Enter data</string>
     <string name="fill_in_plot_size_values">Please fill in values for farm size and all plot sizes!</string>
+    <string name="fill_out_ao_data">Please fill out all Adoption Observations data!</string>
+    <string name="fill_out_fdp_status">"Please fill out FDP status Form for "</string>
     <string name="first_sign_in_rationale">Looks like this is your first sign in.
         "Since you have internet connection it's recommended you sync data from the server.</string>
     <string name="for_"> for </string>
     <string name="full_name_error">Please enter full name</string>
     <string name="games">Arcade</string>
     <string name="gcm_defaultSenderId" translatable="false">611301447040</string>
-    <string name="generic_error">Error</string>
+    <string name="generic_error">Could not save data!</string>
     <string name="getting_c">Syncing all Calculations data</string>
     <string name="getting_cc">Syncing all Complex calculations data</string>
     <string name="getting_data">Getting data</string>
@@ -1233,14 +1280,18 @@
     <string name="getting_more">Getting more data</string>
     <string name="getting_recommendations">Obtaining Recommendations data</string>
     <string name="getting_skip_logic">Obtaining Skip Logic data</string>
+    <string name="go_to_fdp_status_form">Go to FDP status form</string>
     <string name="google_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
     <string name="google_app_id" translatable="false">1:611301447040:android:1dd3f698231e392c</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAyMAONPNB7wlxaEwLVfbsFtRMSHN29K3k</string>
     <string name="google_sign_in">Google Sign in</string>
     <string name="have_account_text">Have an account?</string>
-    <string name="hey_there">Hey there!</string>
+    <string name="hello">Hello, Welcome!</string>
+    <string name="hey_there">Hi there!</string>
     <string name="hint_prompt">Speak an item name or a number</string>
+    <string name="hire_labour">Did the farmer hire labour?</string>
+    <string name="hire_labour_type">Labour type</string>
     <string name="home">Home</string>
     <string name="image_options">Please select an option</string>
     <string name="incomplete_ao_monitoring">Incomplete AO monitoring</string>
@@ -1249,25 +1300,33 @@
     <string name="incomplete_monitoring_suffix">.
         Please make sure all plot monitoring are complete for the specified year</string>
     <string name="incorrect_no_plots_suffix">\'s plots are not equal.\\nPlease make sure all plots have the same number of monitoring!</string>
+    <string name="info_plot_monitoring">Info Plot Monitoring</string>
     <string name="invalid_phone_number">Please enter a valid phone number</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
     <string name="jan">Jan</string>
     <string name="jul">Jul</string>
     <string name="jun">Jun</string>
     <string name="labour">Labour Cost</string>
+    <string name="last_sync">Last sync: </string>
+    <string name="last_visit">Last visit: </string>
     <string name="loading">Loading…</string>
     <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings > Apps > \'Google Maps API Demos\'.</string>
     <string name="log_in_facebook">Log in with facebook</string>
+    <string name="log_out">Log Out?</string>
     <string name="login">Log In</string>
     <string name="logout_button">Logout</string>
     <string name="mar">Mar</string>
     <string name="may">May</string>
     <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
     <string name="missing_data">Missing data</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="monitoring_ao">Monitoring Adoption Observations</string>
     <string name="monitoring_for_year">Monitoring for Year</string>
     <string name="name">Name</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="network_error">No internet!</string>
+    <string name="network_error_rational">You have no internet access! Please connect to a network and try again.</string>
     <string name="new_data_updated">New data updated</string>
     <string name="new_farmer_added">New Farmer added!</string>
     <string name="new_farmer_not_added">Could not add farmer info. Please try again.</string>
@@ -1275,20 +1334,26 @@
     <string name="next">Next</string>
     <string name="no">No</string>
     <string name="no_access_to_pl">No access to P &amp; L</string>
+    <string name="no_data">No data</string>
     <string name="no_farmers">No new farmer data to sync</string>
     <string name="no_image_taken">No photo was selected.</string>
+    <string name="no_internet_connection_available">No internet connection available.</string>
     <string name="no_monitoring_added"> has no monitoring added for Year </string>
+    <string name="no_more_mods">You cannot make any more modifications to </string>
     <string name="no_new_data">No new data</string>
+    <string name="no_old_data">No data to download</string>
     <string name="no_plots">No Plots Added!</string>
+    <string name="no_plots_added">No plots added.</string>
+    <string name="no_plots_added_rationale">Click the button below to add a new plot.</string>
     <string name="no_plots_added_suffix">has no plots added! Please add at least 1 plot before proceeding</string>
     <string name="no_points">No Points added yet</string>
     <string name="nov">Nov</string>
     <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
     <string name="oauth_display_type">touch</string>
     <string name="oct">Oct</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="open">Open</string>
-    <string name="pandl" translatable="false"><![CDATA[P & L]]></string>
+    <string name="pandl" translatable="false"><![CDATA[Review Page and P & L]]></string>
     <string name="password">Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -1300,15 +1365,25 @@
     <string name="permission_required_toast">Location permission is required for this demo.</string>
     <string name="phone">Phone number</string>
     <string name="phone_hint">Phone Number</string>
+    <string name="planned_investment">Planned Investments</string>
     <string name="please_add_monitoring_suffix">!\\nPlease add at least 1 monitoring for each plot before proceeding.</string>
     <string name="please_wait">Please wait a moment…</string>
+    <string name="plot_ao">"Plot Adoption Observation "</string>
+    <string name="plot_aos">"Plot Adoption Observations "</string>
+    <string name="plot_assessment">"Plot Assessment</string>
     <string name="plot_info">Plot Info</string>
+    <string name="plot_name">Plot Name</string>
+    <string name="populating_data">Populating Data</string>
     <string name="provide_all_permissions">Provide Permissions</string>
     <string name="provide_all_permissions_rationale">All permissions are needed for FDP to work properly</string>
     <string name="provide_plot_name">Please provide the plot name</string>
     <string name="quit">Quit</string>
+    <string name="read_only_rational">Once submitted and synced, you cannot make any more modifications.\n\nProceed?</string>
+    <string name="reason_for_failure">Reason for Failure</string>
+    <string name="recommended_intervention">Recommended Intervention:</string>
     <string name="remoteAccessConsumerKey" translatable="false">3MVG99S6MzYiT5k9Zi_aoc.dquUrIsBVCWFFY0QYxg_Zj7uhJ3SnhwnH4lh3MYFkaQwGeS_DfuRWe5cI3Flf7</string>
     <string name="required_field_error_msg">%s is a required field</string>
+    <string name="retry">Retry</string>
     <string name="save">Save</string>
     <string name="save_and_continue">Save and continue</string>
     <string name="save_data">Save data</string>
@@ -1317,6 +1392,7 @@
     <string name="search_menu_title">Search</string>
     <string name="select_country_region">Please Select a Country/Region</string>
     <string name="select_picture">Select a profile picture</string>
+    <string name="sending_data">Uploading records</string>
     <string name="sep">Sep</string>
     <string name="settings">Settings</string>
     <string name="sf__access_token_revoked">Your access token has been revoked by the administrator. You will now be logged out.</string>
@@ -1394,28 +1470,40 @@
     <string name="sf__ssl_unknown_error">Unknown Error</string>
     <string name="sf__ssl_untrusted">Untrusted Certificate Authority</string>
     <string name="sf__switch_account">Switch Account</string>
+    <string name="share">Share</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_in_with_account">Sign In with an Account</string>
     <string name="sign_in_with_email">Sign In with Email</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_up_with_email">Sign Up with Email</string>
     <string name="sign_up_with_google">Sign up with google</string>
+    <string name="soil_ph">Soil ph</string>
     <string name="something_went_wrong">Something went wrong :( </string>
     <string name="sortable_indicator_content_description">Sortable Indicator</string>
     <string name="start_by_swiping_left">Start by swiping left.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="submit">Submit</string>
+    <string name="status_incomplete">You can still make edits</string>
+    <string name="status_submitted">Agreement Submitted!</string>
+    <string name="submit">Submit Agreement</string>
     <string name="supplies">Supplies Cost</string>
     <string name="sync">Sync</string>
     <string name="sync_anyway">Sync anyway</string>
     <string name="sync_complete">Sync Complete</string>
+    <string name="sync_farmer">Sync Farmer</string>
+    <string name="sync_in_complete">Sync Incomplete</string>
     <string name="take_picture">Take picture</string>
     <string name="title">Close</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_area_calc">area calculation</string>
+    <string name="title_area_calc">GPS Area Calculation</string>
+    <string name="toggle_translation">Toggle Translation</string>
+    <string name="total_labour_cost">Total Labour Cost</string>
+    <string name="total_labour_days">Total Labour Days</string>
+    <string name="total_maintenance_cost">Total Maintenance Cost</string>
     <string name="try_again_suffix">. Please try again</string>
     <string name="update_questions_data">Updating questions data</string>
+    <string name="updating_table_data">Updating table data!</string>
+    <string name="upload_farmer_data">Upload farmer data</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
     <string name="valid_phone_number">Valid phone numbers!</string>
@@ -1423,7 +1511,15 @@
     <string name="view">View</string>
     <string name="welcome">Welcome %s</string>
     <string name="year">Year</string>
+    <string name="year_1">Year 1</string>
+    <string name="year_2">Year 2</string>
+    <string name="year_3">Year 3</string>
+    <string name="year_4">Year 4</string>
+    <string name="year_5">Year 5</string>
+    <string name="year_6">Year 6</string>
+    <string name="year_7">Year 7</string>
     <string name="yes">Yes</string>
+    <string name="you_can_still_make_edits">You can still make edits to </string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1434,7 +1530,7 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
-        <!-- To tint the buttons -->
+        
         <item name="android:background">@color/white</item>
         <item name="android:textColorPrimary">@color/text_black_87</item>
         <item name="android:textColorSecondary">@android:color/secondary_text_light</item>
@@ -1446,7 +1542,7 @@
 
     </style>
     <style name="AppAlertDialogDark" parent="Theme.AppCompat.Dialog.Alert">
-        <!-- To tint the buttons -->
+        
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:background">@color/cardview_dark_background</item>
         <item name="android:itemPadding">@dimen/alert_def_padding</item>
@@ -1458,7 +1554,7 @@
         <item name="android:textColorSecondary">@color/white</item>
     </style>
     <style name="AppDialog" parent="Theme.AppCompat.Light.Dialog">
-        <!-- To tint the buttons -->
+        
         <item name="android:background">@color/white</item>
         <item name="android:textColorPrimary">@color/text_black_87</item>
         <item name="android:textColorSecondary">@android:color/secondary_text_light</item>
@@ -1473,22 +1569,21 @@
         <item name="android:textColorTertiary">?attr/textColorTertiary</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/background_1</item>
-        <item name="colorPrimaryDark">@color/background_1</item>
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <!-- <item name="spinnerStyle">@style/SpinnerStyle</item>-->
-        <item name="android:buttonStyle">@style/PrimaryButton</item>
+         <item name="android:buttonStyle">@style/PrimaryButton</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimaryInverted</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkInverted</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        
+        <item name="colorPrimary">@color/background_1</item>
+        <item name="colorPrimaryDark">@color/background_2</item>
+        <item name="colorAccent">#1976d2</item>
         <item name="textColorPrimary">@color/textColorPrimaryLightInverted</item>
         <item name="textColorSecondary">@color/textColorSecondaryLightInverted</item>
         <item name="textColorTertiary">@color/textColorTertiaryLightInverted</item>
@@ -1505,7 +1600,7 @@
 
     </style>
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -1524,6 +1619,17 @@
 
 
     </style>
+    <style name="AppTheme.Monitoring" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimaryMonitoring</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMonitoring</item>
+        <item name="colorAccent">@color/colorAccentMonitoring</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+         <item name="android:buttonStyle">@style/PrimaryButton.Monitoring</item>
+
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">true</item>
@@ -1531,7 +1637,7 @@
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="AppThemeSplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -1763,7 +1869,7 @@
         <item name="actionBarWidgetTheme">@null</item>
         <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
 
-        <!-- Panel attributes -->
+        
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
 
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
@@ -1814,7 +1920,7 @@
         <item name="colorButtonNormal">@color/button_material_dark</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">false</item>
     </style>
     <style name="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -1851,7 +1957,7 @@
         <item name="colorButtonNormal">@color/button_material_light</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">true</item>
     </style>
     <style name="Base.V14.Widget.Design.AppBarLayout" parent="android:Widget">
@@ -1866,7 +1972,7 @@
 
         <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">false</item>
 
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
@@ -1877,7 +1983,7 @@
         <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
         <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
 
-        <!-- Action Bar Styles -->
+        
         <item name="actionBarTabStyle">@style/Widget.AppCompat.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.ActionBar.TabText</item>
@@ -1894,10 +2000,10 @@
         <item name="actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
 
-        <!-- Dropdown Spinner Attributes -->
+        
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
 
-        <!-- Action Mode -->
+        
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
@@ -1910,14 +2016,14 @@
         <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
 
-        <!-- Panel attributes -->
+        
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="android:panelBackground">@android:color/transparent</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>
 
-        <!-- List attributes -->
+        
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
@@ -1927,16 +2033,16 @@
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
 
-        <!-- Spinner styles -->
+        
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
         <item name="android:spinnerItemStyle">@style/Widget.AppCompat.TextView.SpinnerItem</item>
         <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
 
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
+        
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
 
-        <!-- Popup Menu styles -->
+        
         <item name="popupMenuStyle">@style/Widget.AppCompat.PopupMenu</item>
         <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
         <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Widget.PopupMenu.Small</item>
@@ -1945,17 +2051,17 @@
         <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
         <item name="listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="searchViewStyle">@style/Widget.AppCompat.SearchView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="textColorSearchUrl">@color/abc_search_url_text</item>
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.AppCompat.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.AppCompat.SearchResult.Subtitle</item>
 
-        <!-- ShareActionProvider attributes -->
+        
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
 
-        <!-- Toolbar styles -->
+        
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.AppCompat.Toolbar.Button.Navigation</item>
 
@@ -1964,7 +2070,7 @@
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
 
-        <!-- Color palette -->
+        
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorAccent">@color/accent_material_dark</item>
@@ -1987,7 +2093,7 @@
         <item name="ratingBarStyleSmall">@style/Widget.AppCompat.RatingBar.Small</item>
         <item name="seekBarStyle">@style/Widget.AppCompat.SeekBar</item>
 
-        <!-- Button styles -->
+        
         <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
         <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Widget.Button</item>
@@ -2000,7 +2106,7 @@
         <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
 
-        <!-- Dialog attributes -->
+        
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
 
@@ -2010,14 +2116,13 @@
         <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_dark</item>
         <item name="listDividerAlertDialog">@null</item>
 
-        <!-- Define these here; ContextThemeWrappers around themes that define them should
-             always clear these values. -->
+        
         <item name="windowFixedWidthMajor">@null</item>
         <item name="windowFixedWidthMinor">@null</item>
         <item name="windowFixedHeightMajor">@null</item>
         <item name="windowFixedHeightMinor">@null</item>
 
-        <!-- Tooltip attributes -->
+        
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_light</item>
         <item name="tooltipForegroundColor">@color/foreground_material_light</item>
 
@@ -2054,7 +2159,7 @@
 
         <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
 
-        <!-- Used by MediaRouter -->
+        
         <item name="isLightTheme">true</item>
 
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
@@ -2065,7 +2170,7 @@
         <item name="dividerVertical">@drawable/abc_list_divider_mtrl_alpha</item>
         <item name="dividerHorizontal">@drawable/abc_list_divider_mtrl_alpha</item>
 
-        <!-- Action Bar Styles -->
+        
         <item name="actionBarTabStyle">@style/Widget.AppCompat.Light.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.Light.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.Light.ActionBar.TabText</item>
@@ -2082,7 +2187,7 @@
         <item name="actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
         <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
 
-        <!-- Action Mode -->
+        
         <item name="actionModeStyle">@style/Widget.AppCompat.ActionMode</item>
         <item name="actionModeBackground">@drawable/abc_cab_background_top_material</item>
         <item name="actionModeSplitBackground">?attr/colorPrimaryDark</item>
@@ -2095,17 +2200,17 @@
         <item name="actionModeSelectAllDrawable">@drawable/abc_ic_menu_selectall_mtrl_alpha</item>
         <item name="actionModeShareDrawable">@drawable/abc_ic_menu_share_mtrl_alpha</item>
 
-        <!-- Dropdown Spinner Attributes -->
+        
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
 
-        <!-- Panel attributes -->
+        
         <item name="panelMenuListWidth">@dimen/abc_panel_menu_list_width</item>
         <item name="panelMenuListTheme">@style/Theme.AppCompat.CompactMenu</item>
         <item name="panelBackground">@drawable/abc_menu_hardkey_panel_mtrl_mult</item>
         <item name="android:panelBackground">@android:color/transparent</item>
         <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_light</item>
 
-        <!-- List attributes -->
+        
         <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSmall">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="textAppearanceListItemSecondary">@style/TextAppearance.AppCompat.Body1</item>
@@ -2115,16 +2220,16 @@
         <item name="listPreferredItemPaddingLeft">@dimen/abc_list_item_padding_horizontal_material</item>
         <item name="listPreferredItemPaddingRight">@dimen/abc_list_item_padding_horizontal_material</item>
 
-        <!-- Spinner styles -->
+        
         <item name="spinnerStyle">@style/Widget.AppCompat.Spinner</item>
         <item name="android:spinnerItemStyle">@style/Widget.AppCompat.TextView.SpinnerItem</item>
         <item name="android:dropDownListViewStyle">@style/Widget.AppCompat.ListView.DropDown</item>
 
-        <!-- Required for use of support_simple_spinner_dropdown_item.xml -->
+        
         <item name="spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="dropdownListPreferredItemHeight">?attr/listPreferredItemHeightSmall</item>
 
-        <!-- Popup Menu styles -->
+        
         <item name="popupMenuStyle">@style/Widget.AppCompat.Light.PopupMenu</item>
         <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
         <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
@@ -2133,17 +2238,17 @@
         <item name="dropDownListViewStyle">?android:attr/dropDownListViewStyle</item>
         <item name="listMenuViewStyle">@style/Widget.AppCompat.ListMenuView</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="searchViewStyle">@style/Widget.AppCompat.Light.SearchView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="textColorSearchUrl">@color/abc_search_url_text</item>
         <item name="textAppearanceSearchResultTitle">@style/TextAppearance.AppCompat.SearchResult.Title</item>
         <item name="textAppearanceSearchResultSubtitle">@style/TextAppearance.AppCompat.SearchResult.Subtitle</item>
 
-        <!-- ShareActionProvider attributes -->
+        
         <item name="activityChooserViewStyle">@style/Widget.AppCompat.ActivityChooserView</item>
 
-        <!-- Toolbar styles -->
+        
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.AppCompat.Toolbar.Button.Navigation</item>
 
@@ -2152,7 +2257,7 @@
         <item name="editTextColor">?android:attr/textColorPrimary</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
 
-        <!-- Color palette -->
+        
         <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
         <item name="colorPrimary">@color/primary_material_light</item>
         <item name="colorAccent">@color/accent_material_light</item>
@@ -2175,7 +2280,7 @@
         <item name="ratingBarStyleSmall">@style/Widget.AppCompat.RatingBar.Small</item>
         <item name="seekBarStyle">@style/Widget.AppCompat.SeekBar</item>
 
-        <!-- Button styles -->
+        
         <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
         <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Widget.Button</item>
@@ -2188,7 +2293,7 @@
         <item name="buttonBarNegativeButtonStyle">?attr/buttonBarButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">?attr/buttonBarButtonStyle</item>
 
-        <!-- Dialog attributes -->
+        
         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
         <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
 
@@ -2198,14 +2303,13 @@
         <item name="textColorAlertDialogListItem">@color/abc_primary_text_material_light</item>
         <item name="listDividerAlertDialog">@null</item>
 
-        <!-- Define these here; ContextThemeWrappers around themes that define them should
-             always clear these values. -->
+        
         <item name="windowFixedWidthMajor">@null</item>
         <item name="windowFixedWidthMinor">@null</item>
         <item name="windowFixedHeightMajor">@null</item>
         <item name="windowFixedHeightMinor">@null</item>
 
-        <!-- Tooltip attributes -->
+        
         <item name="tooltipFrameBackground">@drawable/tooltip_frame_dark</item>
         <item name="tooltipForegroundColor">@color/foreground_material_dark</item>
 
@@ -2593,7 +2697,7 @@
     </style>
     <style name="BubbleTheme" parent="TextAppearance.AppCompat">
 
-        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+        
         <item name="colorControlNormal">#dadada</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
@@ -2620,9 +2724,10 @@
         <item name="textAllCaps">false</item>
         <item name="android:textSize">15sp</item>
     </style>
-    <style name="DatePickerSpinner">
+    <style name="DatePickerSpinner" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:textSize">@dimen/text_size_normal</item>
         <item name="android:textColorPrimary">@android:color/primary_text_light</item>
+
 
     </style>
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
@@ -2641,7 +2746,7 @@
         <item name="android:textColor">@color/edittext_error_color</item>
     </style>
     <style name="LoginTheme" parent="AppTheme">
-        <!-- Customize your theme here. -->
+        
     </style>
     <style name="MapTheme" parent="AppTheme">
         <item name="windowActionBar">false</item>
@@ -2691,14 +2796,12 @@
     </style>
     <style name="MaterialSearchViewStyle">
         <item name="searchBackground">@color/white_ish</item>
-        <!--<item name="searchVoiceIcon">@drawable/ic_action_voice_search</item>-->
+        
         <item name="searchCloseIcon">@drawable/ic_action_navigation_close</item>
         <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back</item>
         <item name="searchSuggestionBackground">@color/transparent</item>
         <item name="searchBarHeight">?attr/actionBarSize</item>
-<!--
-        <item name="voiceHintPrompt">@string/hint_prompt</item>
--->
+
         <item name="android:textColor">@color/black</item>
         <item name="android:textColorHint">@color/gray_50</item>
         <item name="android:hint">@string/search_hint</item>
@@ -2757,7 +2860,7 @@
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
 
-        <!-- Window colors -->
+        
         <item name="android:colorForeground">@color/foreground_material_dark</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
         <item name="android:colorBackground">@color/background_material_dark</item>
@@ -2766,7 +2869,7 @@
         <item name="android:backgroundDimAmount">0.6</item>
         <item name="android:windowBackground">@color/background_material_dark</item>
 
-        <!-- Text colors -->
+        
         <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
         <item name="android:textColorPrimaryDisableOnly">@color/abc_primary_text_disable_only_material_dark</item>
@@ -2779,7 +2882,7 @@
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
         <item name="android:textColorLink">?attr/colorAccent</item>
 
-        <!-- Text styles -->
+        
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
         <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
@@ -2799,7 +2902,7 @@
     <style name="Platform.AppCompat.Light" parent="android:Theme.Light">
         <item name="android:windowNoTitle">true</item>
 
-        <!-- Window colors -->
+        
         <item name="android:colorForeground">@color/foreground_material_light</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
         <item name="android:colorBackground">@color/background_material_light</item>
@@ -2808,7 +2911,7 @@
         <item name="android:backgroundDimAmount">0.6</item>
         <item name="android:windowBackground">@color/background_material_light</item>
 
-        <!-- Text colors -->
+        
         <item name="android:textColorPrimary">@color/abc_primary_text_material_light</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
@@ -2822,7 +2925,7 @@
         <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
         <item name="android:textColorLink">?attr/colorAccent</item>
 
-        <!-- Text styles -->
+        
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
         <item name="android:textAppearanceInverse">@style/TextAppearance.AppCompat.Inverse</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
@@ -2841,12 +2944,12 @@
     </style>
     <style name="Platform.ThemeOverlay.AppCompat" parent=""/>
     <style name="Platform.ThemeOverlay.AppCompat.Dark">
-        <!-- Action Bar styles -->
+        
         <item name="actionBarItemBackground">@drawable/abc_item_background_holo_dark</item>
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_dark</item>
 
-        <!-- SearchView styles -->
+        
         <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
@@ -2855,7 +2958,7 @@
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
 
-        <!-- SearchView attributes -->
+        
         <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.Light.AutoCompleteTextView</item>
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
@@ -2865,7 +2968,7 @@
     </style>
     <style name="Preference.Category">
         <item name="android:layout">@layout/preference_category</item>
-        <!-- The title should not dim if the category is disabled, instead only the preference children should dim. -->
+        
         <item name="android:shouldDisableView">false</item>
         <item name="android:selectable">false</item>
     </style>
@@ -3003,11 +3106,22 @@
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textStyle">normal</item>
     </style>
-    <style name="PrimaryButton" parent="Theme.AppCompat">
+    <style name="PrimaryButton" parent="Widget.AppCompat.Button">
         <item name="colorButtonNormal">@color/colorAccent</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
         <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
 
+    </style>
+    <style name="PrimaryButton.Monitoring" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/colorAccentMonitoring</item>
+        <item name="colorControlHighlight">@color/colorAccentMonitoring</item>
+        <item name="backgroundTint">@color/colorAccentMonitoring</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
     </style>
     <style name="PrimaryButtonAccent" parent="Theme.AppCompat">
         <item name="colorButtonNormal">@color/divider</item>

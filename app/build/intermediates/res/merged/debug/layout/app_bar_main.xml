@@ -6,8 +6,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +48,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="No data added yet"
+                        android:text="@string/no_data"
                         android:textColor="@color/text_black_87"
                         android:textStyle="bold"
                         android:textSize="@dimen/text_size_normal"
@@ -63,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Add new farmer data by clicking on the green button below"
+                        android:text="@string/add_farmer_rational"
 
 
                         />
@@ -113,14 +111,25 @@
             >
 
 
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButtonGrey"
+                android:text="@string/back"
+                android:padding="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+
+                />
+
 
             <Button
                 android:id="@+id/sync"
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButtonGrey"
-                android:text="Sync"
+                android:text="@string/sync"
                 android:padding="@dimen/spacing_normal"
                  />
 
@@ -131,8 +140,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButtonAccent"
-                 android:text="add farmer"
+                android:text="@string/add_farmer"
                 android:padding="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
 

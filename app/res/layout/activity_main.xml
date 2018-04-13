@@ -15,7 +15,7 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Toggle Translation"
+                android:text="@string/toggle_translation"
                 android:textSize="@dimen/text_size_normal"
                 android:layout_centerVertical="true"
                 />

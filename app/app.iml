@@ -116,12 +116,14 @@
     <orderEntry type="library" scope="TEST" name="com.android.support.test:exposed-instrumentation-api-publish-0.5" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-location-10.2.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-impl-10.2.0" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.2.3@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-iid-10.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.nineoldandroids:library:2.4.0@jar" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-gcm-10.2.0" level="project" />
     <orderEntry type="library" name="com.squareup.okio:okio:1.11.0@jar" level="project" />
     <orderEntry type="library" name="com.android.volley:volley-1.1.0" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-core:2.2.3@jar" level="project" />
     <orderEntry type="library" name="com.github.dkharrat.nexusdialog:nexusdialog-0.4.2" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.3" level="project" />
     <orderEntry type="library" name="com.android.support:support-vector-drawable-27.0.2" level="project" />
@@ -180,6 +182,7 @@
     <orderEntry type="library" name="com.android.support:preference-v14-27.0.2" level="project" />
     <orderEntry type="library" name="com.google.maps.android:android-maps-utils-0.5" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-maps-10.2.0" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-annotations:2.2.3@jar" level="project" />
     <orderEntry type="module" module-name="SalesforceSDK" />
     <orderEntry type="module" module-name="SmartSync" />
     <orderEntry type="module" module-name="SalesforceAnalytics" />

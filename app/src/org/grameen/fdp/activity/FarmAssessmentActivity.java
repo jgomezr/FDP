@@ -46,7 +46,7 @@ public class FarmAssessmentActivity extends BaseActivity {
     TextView farmStatus;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farm_assessment);
         farmStatus = findViewById(R.id.farm_status);
@@ -90,14 +90,6 @@ public class FarmAssessmentActivity extends BaseActivity {
 
 
             tableView.setDataAdapter(new FarmAssessmentTableViewAdapter(FarmAssessmentActivity.this, dataList, tableView));
-
-
-
-
-
-
-
-
 
 
         }

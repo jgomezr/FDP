@@ -4,15 +4,14 @@ package org.grameen.fdp.object;
  * Created by aangjnr on 22/01/2018.
  */
 
-public class LaborDaysLaborCostSupplies {
+public class LaborDaysLaborCost {
 
 
     String laborDays;
     String laborCost;
-    String suppliesCost;
 
 
-    public LaborDaysLaborCostSupplies() {
+    public LaborDaysLaborCost() {
     }
 
     public String getLaborCost() {
@@ -29,15 +28,6 @@ public class LaborDaysLaborCostSupplies {
 
     public void setLaborDays(String laborDays) {
         this.laborDays = laborDays;
-    }
-
-    public String getSuppliesCost() {
-        return suppliesCost;
-
-    }
-
-    public void setSuppliesCost(String supplies) {
-        this.suppliesCost = supplies;
     }
 
 

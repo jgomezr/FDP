@@ -28,7 +28,6 @@
         android:id="@+id/cell_image"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/blue_plane_icon_2"/>
+        android:contentDescription="@string/app_name" />
 
 </LinearLayout>

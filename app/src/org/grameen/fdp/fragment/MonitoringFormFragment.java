@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import org.grameen.fdp.R;
 import org.grameen.fdp.activity.PlotDetailsActivity;
 import org.grameen.fdp.object.Calculation;
 import org.grameen.fdp.object.Question;
@@ -37,6 +38,7 @@ import org.json.JSONObject;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -124,7 +126,7 @@ public class MonitoringFormFragment extends FormFragment {
         // Add new Questions with data model of Question.class
         // The Question data model takes 2 or more parameters based on the type value
 
-        monitoringPlotInfoQuestions = databaseHelper.getSpecificSetOfQuestions(Constants.MONITORING_PLOT_INFORMATION);
+        monitoringPlotInfoQuestions = databaseHelper.getSpecificSetOfQuestions(getString(R.string.info_plot_monitoring));
 
             if (!shouldLoadOldValues) {
                 Log.d("MYFORMFRAG", "NO DEFAULT VALUES TO LOAD");
@@ -278,62 +280,61 @@ public class MonitoringFormFragment extends FormFragment {
 
         for (final Question q : questions) {
 
-            Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
-            switch (q.getType__c().toLowerCase()) {
+            if (!q.getHide__c().equalsIgnoreCase("true")) {
 
-                case Constants.TYPE_TEXT:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, !isEnabled));
+                Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
+                switch (q.getType__c().toLowerCase()) {
 
-                    break;
-                case Constants.TYPE_NUMBER:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER, !isEnabled));
+                    case Constants.TYPE_TEXT:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, !isEnabled));
 
-                    break;
+                        break;
+                    case Constants.TYPE_NUMBER:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER, !isEnabled));
 
-                case Constants.TYPE_NUMBER_DECIMAL:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
+                        break;
 
-                    break;
+                    case Constants.TYPE_NUMBER_DECIMAL:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
 
-                case Constants.TYPE_SELECTABLE:
-                    formSectionController.addElement(new SelectionController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), true, q.getDefault_value__c(), q.formatQuestionOptions(), true, !isEnabled, q.getHelp_Text__c()));
-                    addPropertyChange(q);
-                    break;
-                case Constants.TYPE_MULTI_SELECTABLE:
-                    formSectionController.addElement(new CheckBoxController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !isEnabled));
+                        break;
 
-                    break;
+                    case Constants.TYPE_SELECTABLE:
+                        formSectionController.addElement(new SelectionController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.getDefault_value__c(), q.formatQuestionOptions(), true, !isEnabled, q.getHelp_Text__c()));
+                        addPropertyChange(q);
+                        break;
+                    case Constants.TYPE_MULTI_SELECTABLE:
+                        formSectionController.addElement(new CheckBoxController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !isEnabled));
+
+                        break;
 
                /* case Constants.TYPE_CHECKBOX:
                     formSectionController.addElement(new CheckBoxController(context, q.getId(), q.getCaption__c(), true, null, true, !isEnabled));
 
                     break;*/
-                case Constants.TYPE_TIMEPICKER:
-                    formSectionController.addElement(new TimePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c()));
+                    case Constants.TYPE_TIMEPICKER:
+                        formSectionController.addElement(new TimePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
 
-                    break;
-                case Constants.TYPE_DATEPICKER:
-                    formSectionController.addElement(new DatePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c()));
-                    break;
+                        break;
+                    case Constants.TYPE_DATEPICKER:
+                        formSectionController.addElement(new DatePickerController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
+                        break;
 
-                case Constants.TYPE_MATH_FORMULA:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, false));
-                    applyCalculation(databaseHelper.getCalculation(q.getId()));
+                    case Constants.TYPE_MATH_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, false));
+                        applyCalculation(databaseHelper.getCalculation(q.getId()));
 
-                    break;
+                        break;
 
-                case Constants.TYPE_LOGIC_FORMULA:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, false));
-                    break;
+                    case Constants.TYPE_LOGIC_FORMULA:
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_TEXT, false));
+                        break;
 
 
+                }
             }
-
-
             //setUpSkipLogics(q);
-
         }
-
 
     }
 
@@ -381,7 +382,6 @@ public class MonitoringFormFragment extends FormFragment {
             if(!q.getHide__c().equalsIgnoreCase("true")){
 
                 Log.d("MYFORMFRAG ", "TYPE IS " + q.getType__c());
-
 
                 String storedValue;
                 storedValue =  getValue(q, jsonObject);
@@ -443,8 +443,6 @@ public class MonitoringFormFragment extends FormFragment {
             }
         }
     }
-
-
 
 
 
@@ -747,7 +745,7 @@ public class MonitoringFormFragment extends FormFragment {
                         + getModel().getValue(calculation.getQuestion3()) + calculation.getOperator3()
                         + getModel().getValue(calculation.getQuestion4());
 
-                equation = equation.replace("null", "");
+                equation = equation.replace("null", "").replace(",", "");
 
                 System.out.println("####### PROPERTY CHANGE LISTENER FIRED");
                 System.out.println("EQUATION IS " + equation);
@@ -777,7 +775,7 @@ public class MonitoringFormFragment extends FormFragment {
 
         Double value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
 
-        return (value.toString());
+        return (new DecimalFormat("#,###,###.##").format(value));
     }
 
 

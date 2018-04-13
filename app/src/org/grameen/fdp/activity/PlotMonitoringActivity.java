@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -28,6 +29,7 @@ import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.CustomToast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,6 +50,7 @@ public class PlotMonitoringActivity extends BaseActivity {
     Boolean hasFamilyMembersData = false;
     RealFarmer farmer;
     Button sync;
+    Button editMonitoring;
     Button addMonitoring;
     TextView farmerName;
     TextView farmerCode;
@@ -74,11 +77,12 @@ public class PlotMonitoringActivity extends BaseActivity {
     Integer SELECTED_MONITORING_ID;
 
     ViewPager viewPager;
-
+    private List<Monitoring> monitoringList;
+    Boolean loadTranslation;
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow(); // in Activity's onCreate() for instance
@@ -91,6 +95,7 @@ public class PlotMonitoringActivity extends BaseActivity {
         addMonitoring = findViewById(R.id.add_monitoring);
         titleTextView = findViewById(R.id.title_view);
 
+        editMonitoring = findViewById(R.id.edit_monitoring);
         prefs.edit().putBoolean("refreshViewPager", false).apply();
 
 
@@ -102,6 +107,10 @@ public class PlotMonitoringActivity extends BaseActivity {
 
 
         if (farmer != null) {
+
+
+            loadTranslation = prefs.getBoolean("toggleTranslation", false);
+
 
             viewPager = findViewById(R.id.view_pager);
             viewPager.setClipToPadding(false);
@@ -125,7 +134,7 @@ public class PlotMonitoringActivity extends BaseActivity {
             if(PLOT.getRecommendationId() != null) {
 
                 try {
-                    AO_JSON_OBJECT = new JSONObject(PLOT.getAdoptionObservationsJson());
+                    AO_JSON_OBJECT = new JSONObject(PLOT.getPlotInformationJson());
                 } catch (JSONException e) {
                     e.printStackTrace();
                     AO_JSON_OBJECT = new JSONObject();
@@ -137,9 +146,6 @@ public class PlotMonitoringActivity extends BaseActivity {
                 MONITORING_AO_QUESTIONS = databaseHelper.getSpecificSetOfQuestions(Constants.AO_MONITORING);
 
                 setGeneralAOTableViewData();
-
-                        setUpViewPager();
-
 
 
 
@@ -161,7 +167,7 @@ public class PlotMonitoringActivity extends BaseActivity {
                 });
 
 
-                titleTextView.setOnClickListener(new View.OnClickListener() {
+                editMonitoring.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
@@ -170,12 +176,13 @@ public class PlotMonitoringActivity extends BaseActivity {
                         intent.putExtra("isNewMonitoring", false);
                         intent.putExtra("plot", new Gson().toJson(PLOT));
                         intent.putExtra("year", selectedYear);
-                        intent.putExtra("monitoringId", SELECTED_MONITORING_ID);
+                        intent.putExtra("selectedMonitoring", SELECTED_MONITORING_ID + 1);
+
+                        intent.putExtra("monitoringId", monitoringList.get(SELECTED_MONITORING_ID).getId());
                         startActivity(intent);
 
                     }
                 });
-
 
 
             }else {
@@ -183,7 +190,6 @@ public class PlotMonitoringActivity extends BaseActivity {
                 findViewById(R.id.noData).setVisibility(View.VISIBLE);
                 sync.setEnabled(false);
                 addMonitoring.setEnabled(false);
-
 
 
                 addMonitoring.setOnClickListener(new View.OnClickListener() {
@@ -208,21 +214,25 @@ public class PlotMonitoringActivity extends BaseActivity {
             }
 
 
+            findViewById(R.id.sync).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
 
+                    if (farmer.getSyncStatus() != Constants.SYNC_OK) {
 
+                        Intent intent = new Intent(PlotMonitoringActivity.this, SyncUpActivity.class);
+                        intent.putExtra("farmer", new Gson().toJson(farmer));
+                        startActivity(intent);
+                    } else
+                        CustomToast.makeToast(PlotMonitoringActivity.this, getResources(R.string.farmer) + " " + farmer.getFarmerName() + getResources(R.string.apostrophe_s) + getResources(R.string.data_already_synced), Toast.LENGTH_LONG).show();
+
+
+                }
+            });
 
 
         }
-
-
-
-
-
-
-
-
-
 
         onBackClicked();
 
@@ -243,10 +253,11 @@ public class PlotMonitoringActivity extends BaseActivity {
         Recommendation PLOT_RECOMMENDATION = databaseHelper.getRecommendation(GAPS_PLOT_RECOMMENDATION_IDS[1]);
 
 
-        String value = PLOT_RECOMMENDATION.getName() + " + " + GAPS_RECOMENDATION_FOR_START_YEAR.getName();
+        String value = (loadTranslation) ? PLOT_RECOMMENDATION.getName() : PLOT_RECOMMENDATION.getTranslation();
+        //+ " + " + GAPS_RECOMENDATION_FOR_START_YEAR.getName();
 
 
-        String [] TABLE_HEADERS = {value, "Diagnostic"};
+        String[] TABLE_HEADERS = {value, getResources(R.string.diagnostic)};
 
         generalAOTableView = findViewById(R.id.general_ao_tableView);
 
@@ -254,8 +265,8 @@ public class PlotMonitoringActivity extends BaseActivity {
         columnModel.setColumnWidth(0, 180);
         columnModel.setColumnWidth(1, 120);*/
         TableColumnWeightModel columnModel = new TableColumnWeightModel(generalAOTableView.getColumnCount());
-        columnModel.setColumnWeight(0, 3);
-        columnModel.setColumnWeight(1, 2);
+        columnModel.setColumnWeight(0, 4);
+        columnModel.setColumnWeight(1, 1);
         generalAOTableView.setColumnModel(columnModel);
 
 
@@ -277,10 +288,11 @@ public class PlotMonitoringActivity extends BaseActivity {
 
       List<Data2> ADOPTION_OBSERVATIONS = new ArrayList<>();
 
+
       for(Question q : AO_QUESTIONS){
 
           //Todo get results
-          ADOPTION_OBSERVATIONS.add(new Data2(q.getCaption__c(), getValue(q.getId(), AO_JSON_OBJECT), "--", "--", null));
+          ADOPTION_OBSERVATIONS.add(new Data2((loadTranslation) ? q.getTranslation__c() : q.getCaption__c(), getValue(q.getId(), AO_JSON_OBJECT), "--", "--", null));
 
       }
 
@@ -289,13 +301,7 @@ public class PlotMonitoringActivity extends BaseActivity {
         generalAOTableView.setDataAdapter(plotMonitoringTableViewAdapter);
 
 
-
-
-
-
-
-
-
+        setUpViewPager();
 
 
 
@@ -319,7 +325,7 @@ public class PlotMonitoringActivity extends BaseActivity {
             titleTextView.setText(plotMonitoringTableDataList.get(0).getTitle());
 
 
-            SELECTED_MONITORING_ID = 1;
+            SELECTED_MONITORING_ID = 0;
 
             viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
@@ -331,9 +337,10 @@ public class PlotMonitoringActivity extends BaseActivity {
                 public void onPageSelected(int position) {
 
 
+                    SELECTED_MONITORING_ID = position;
                     titleTextView.setText(plotMonitoringTableDataList.get(position).getTitle());
 
-                    SELECTED_MONITORING_ID = position + 1;
+
 
 
                 }
@@ -345,8 +352,12 @@ public class PlotMonitoringActivity extends BaseActivity {
             });
 
             findViewById(R.id.noData).setVisibility(View.GONE);
+            editMonitoring.setVisibility(View.VISIBLE);
 
-        }else  findViewById(R.id.noData).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.noData).setVisibility(View.VISIBLE);
+            editMonitoring.setVisibility(View.GONE);
+        }
 
 
     }
@@ -369,7 +380,7 @@ public class PlotMonitoringActivity extends BaseActivity {
 
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
 
@@ -390,17 +401,15 @@ public class PlotMonitoringActivity extends BaseActivity {
                 updateTableData();
 
 
-
-
-
             if(plotMonitoringTablePagerAdapter != null) {
                 plotMonitoringTablePagerAdapter.setData(plotMonitoringTableDataList);
                 plotMonitoringTablePagerAdapter.notifyDataSetChanged();
 
 
-                viewPager.setCurrentItem(SELECTED_MONITORING_ID - 1, true);
-            }
+                viewPager.setCurrentItem(SELECTED_MONITORING_ID, true);
 
+
+            }
 
         }
 
@@ -415,7 +424,7 @@ public class PlotMonitoringActivity extends BaseActivity {
 
         plotMonitoringTableDataList = new ArrayList<>();
 
-        List<Monitoring> monitoringList = databaseHelper.getAllPlotMonitoringForYear(PLOT.getId(), String.valueOf(selectedYear));
+        monitoringList = databaseHelper.getAllPlotMonitoringForYear(PLOT.getId(), String.valueOf(selectedYear));
 
         for(Monitoring monitoring : monitoringList) {
 
@@ -432,12 +441,14 @@ public class PlotMonitoringActivity extends BaseActivity {
 
             for (Question q : MONITORING_AO_QUESTIONS) {
 
-                String[] ids = q.getRelated_Questions__c().split(",");
+                if (q.getRelated_Questions__c() != null) {
+                    String[] ids = q.getRelated_Questions__c().split(",");
 
 
-                //Todo get results
-                data2List.add(new Data2("", getValue(q.getId(), jsonObject), getValue(databaseHelper.getQuestionId(ids[0]), jsonObject), getValue(databaseHelper.getQuestionId(ids[1]), jsonObject), null));
+                    //Todo get results
+                    data2List.add(new Data2("", getValue(q.getId(), jsonObject), getValue(databaseHelper.getQuestionId(ids[0]), jsonObject), getValue(databaseHelper.getQuestionId(ids[1]), jsonObject), null));
 
+                }
             }
 
             String date = "--";
@@ -447,17 +458,17 @@ public class PlotMonitoringActivity extends BaseActivity {
                 String dateValue = getValue(prefs.getString("monitoringDate", ""), jsonObject);
                 if(dateValue.length() > 20) {
                     date = dateValue.substring(0, 19);
-                    data2List.add(new Data2("", "", "Date", date, Constants.TAG_RESULTS));
+                    data2List.add(new Data2("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
 
                 }
                 else {
-                    data2List.add(new Data2("", "", "Date",  dateValue, Constants.TAG_RESULTS));
+                    data2List.add(new Data2("", "", getResources(R.string.date), dateValue, Constants.TAG_RESULTS));
                 }
 
             }catch(Exception e){
                 e.printStackTrace();
 
-                 data2List.add(new Data2("", "", "Date", date, Constants.TAG_RESULTS));
+                data2List.add(new Data2("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
 
             }
 

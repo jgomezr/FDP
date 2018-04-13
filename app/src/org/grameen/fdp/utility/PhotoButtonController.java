@@ -1,40 +1,26 @@
 package org.grameen.fdp.utility;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Criteria;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.Looper;
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.view.ContextThemeWrapper;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.activity.Add_EditFarmerDetailsActivity;
 import org.grameen.fdp.activity.ImageViewActivity;
-import org.grameen.fdp.object.Activity;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -55,6 +41,8 @@ public class PhotoButtonController extends MyLabeledFieldController {
     Context context;
     private DatePickerDialog datePickerDialog = null;
     ImageView IMAGE_VIEW;
+    boolean isEnabled = true;
+
 
 
     /**
@@ -94,9 +82,10 @@ public class PhotoButtonController extends MyLabeledFieldController {
      * @param name      the name of the field
      * @param labelText the label to display beside the field
      */
-    public PhotoButtonController(Context context, String name, String labelText, OnClickListener locationListener) {
+    public PhotoButtonController(Context context, String name, String labelText, OnClickListener locationListener, Boolean enabled) {
         this(context, name, labelText, false, locationListener);
         this.context = context;
+        this.isEnabled = enabled;
 
     }
 
@@ -135,7 +124,7 @@ public class PhotoButtonController extends MyLabeledFieldController {
 
                     imageView.setAdjustViewBounds(true);
                     imageView.setMaxHeight(200);
-                    imageView.setImageBitmap(ImageUtil.convert(evt.getNewValue().toString()));
+                    imageView.setImageBitmap(ImageUtil.base64ToBitmap(evt.getNewValue().toString()));
                     linearLayout.addView(imageView);
                     linearLayout.requestLayout();
 
@@ -178,6 +167,14 @@ public class PhotoButtonController extends MyLabeledFieldController {
             }
         });
 
+
+        try {
+            button.setEnabled(isEnabled);
+            imageView.setEnabled(isEnabled);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         refresh(imageView);
 
         linearLayout.addView(button);
@@ -207,7 +204,7 @@ public class PhotoButtonController extends MyLabeledFieldController {
         Object value = getModel().getValue(getName());
        if(value != null){
 
-           imageView.setImageBitmap(ImageUtil.convert(value.toString()));
+           imageView.setImageBitmap(ImageUtil.base64ToBitmap(value.toString()));
        }
 
 

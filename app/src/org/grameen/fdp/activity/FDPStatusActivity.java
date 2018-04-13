@@ -66,7 +66,7 @@ public class FDPStatusActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
@@ -123,7 +123,7 @@ public class FDPStatusActivity extends BaseActivity {
             cancel.setText(getResources(R.string.back));
             setUpViews();
 
-            formFragment = MyFormFragment.newInstance(formType, true, farmer.getCode(), true);
+            formFragment = MyFormFragment.newInstance(formType, true, farmer.getId(), true);
 
 
         } else {
@@ -136,7 +136,7 @@ public class FDPStatusActivity extends BaseActivity {
                 newFarmer = false;
 
                 setUpViews();
-                formFragment = MyFormFragment.newInstance(formType, true, farmer.getCode(), false);
+            formFragment = MyFormFragment.newInstance(formType, true, farmer.getId(), false);
 
 
         }
@@ -250,7 +250,7 @@ public class FDPStatusActivity extends BaseActivity {
         Log.d(TAG, "JSON VALUE IS + \n" + newJsonValue + "\n");
 
 
-                if (databaseHelper.editAllAnswersJson(farmer.getCode(), newJsonValue)) {
+        if (databaseHelper.editAllAnswersJson(farmer.getId(), newJsonValue)) {
 
                     newDataSaved = true;
 

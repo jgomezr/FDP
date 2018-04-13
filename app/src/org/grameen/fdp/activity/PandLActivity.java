@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jaredrummler.materialspinner.MaterialSpinner;
@@ -20,18 +21,23 @@ import org.grameen.fdp.adapter.MyTableViewAdapter;
 import org.grameen.fdp.object.Calculation;
 import org.grameen.fdp.object.ComplexCalculation;
 import org.grameen.fdp.object.Data;
-import org.grameen.fdp.object.LaborDaysLaborCostSupplies;
+import org.grameen.fdp.object.LaborDaysLaborCost;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.object.SkipLogic;
+import org.grameen.fdp.object.SuppliesCost;
+import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DateUtil;
+import org.grameen.fdp.utility.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.script.ScriptEngineManager;
@@ -51,12 +57,15 @@ import static org.grameen.fdp.utility.Constants.TYPE_TEXT;
  * Created by aangjnr on 20/12/2017.
  */
 
-public class PandLActivity extends BaseActivity {
+public class PandLActivity extends BaseActivity implements Callbacks.NetworkActivityCompleteListener {
 
     String startYearId = "nil";
     String CSSV_ID = "nil";
     String CSSV_VALUE = "--";
 
+
+    Boolean DID_LABOUR = false;
+    String LABOUR_TYPE;
 
     Boolean shouldHideStartYear = null;
 
@@ -64,10 +73,7 @@ public class PandLActivity extends BaseActivity {
     RealFarmer farmer;
     TextView farmerName;
     TextView farmerCode;
-    //TextInputLayout commentsTextInput;
-    //MaterialSpinner farmerAgreeSpinner;
 
-    String farmerAgree = "No";
     TableView tableView;
     Button save;
     Button submit;
@@ -89,7 +95,7 @@ public class PandLActivity extends BaseActivity {
     List<String> TOTAL_LABOR_COST;
     List<String> TOTAL_LABOR_DAYS ;
     List<String> TOTAL_MAINTENANCE_COST;
-    List<String> TOTAL_NET_INCOME_FROM_COCOA;
+    List<String> TOTAL_GROSS_INCOME_FROM_COCOA;
     List<String> TOTAL_NET_INCOME_FROM_OTHER_CROPS;
     List<String> TOTAL_FARMING_INCOME;
     List<String> TOTAL_NET_INCOME_FROM_OTHER_SOURCES;
@@ -103,17 +109,16 @@ public class PandLActivity extends BaseActivity {
     List<String> TOTAL_P_AND_L_LIST;
 
 
-    List<StringBuilder> NET_COCOA_STRING_BUILDERS = new ArrayList<>();
+    List<StringBuilder> GROSS_COCOA_STRING_BUILDERS = new ArrayList<>();
     List<StringBuilder> MAINTENANCE_COST_STRING_BUILDERS = new ArrayList<>();
     List<StringBuilder> LABOR_DAYS_STRING_BUILDERS = new ArrayList<>();
     List<StringBuilder> LABOR_COST_STRING_BUILDERS = new ArrayList<>();
 
 
     MyTableViewAdapter myTableViewAdapter;
-    private JSONObject PLOT_AO_JSON_OBJECT = new JSONObject();
-    private JSONObject PLOT_INFO_JSON_OBJECT = new JSONObject();
-    private JSONObject PLOT_ADDITIONAL_INTERVENTION_JSON_OBJECT = new JSONObject();
+    private JSONObject PLOT_ANSWERS_JSON_OBJECT = new JSONObject();
 
+    JSONObject PLOT_SIZES_IN_HA;
 
     boolean isTranslation;
 
@@ -121,7 +126,7 @@ public class PandLActivity extends BaseActivity {
 
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p_and_l);
 
@@ -131,7 +136,7 @@ public class PandLActivity extends BaseActivity {
         engine = new ScriptEngineManager().getEngineByName("rhino");
         save = findViewById(R.id.save);
         submit = findViewById(R.id.submitAgreement);
-        submit.setEnabled(false);
+
 
         startYearId = databaseHelper.getQuestionIdByTranslationName("Start year");
         CSSV_ID = databaseHelper.getQuestionIdByTranslationNameAndFormType("CSSV", Constants.ADOPTION_OBSERVATIONS);
@@ -181,12 +186,115 @@ public class PandLActivity extends BaseActivity {
             farmerCode.setText(farmer.getCode());
 
 
+            if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES) && farmer.getSyncStatus() == 1) {
+                submit.setVisibility(View.GONE);
+                findViewById(R.id.save).setVisibility(View.GONE);
+
+
+            }
+
             getAllFarmerDataValues();
+
+
+            submit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (farmer.getHasSubmitted() == null || farmer.getHasSubmitted().equalsIgnoreCase(Constants.NO)) {
+
+                        if (checkIfFarmerFdpStatusFormFilled(farmer.getId())) {
+
+
+                            if (Utils.checkInternetConnection(PandLActivity.this)) {
+
+                                showAlertDialog(true, getResources(R.string.caution), getResources(R.string.read_only_rational),
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+
+                                                // databaseHelper.setAgreementSubmitted(farmer.getId());
+
+                                                dialog.dismiss();
+                                                SyncUpActivity.onNetworkActivityComplete(PandLActivity.this);
+
+                                                Intent intent = new Intent(PandLActivity.this, SyncUpActivity.class);
+                                                intent.putExtra("farmer", new Gson().toJson(farmer));
+                                                intent.putExtra("submitAgreement", true);
+                                                startActivity(intent);
+
+
+                                            }
+                                        }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.dismiss();
+                                            }
+                                        }, getResources(R.string.cancel), 0);
+
+
+                            } else {
+
+                                showAlertDialog(false, getResources(R.string.status_submitted), getResources(R.string.no_internet_connection_available) + "\n" + getResources(R.string.you_can_still_make_edits) + farmer.getFarmerName() + getResources(R.string.apostrophe_s) + getResources(R.string.data_before_sync),
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.dismiss();
+                                                databaseHelper.setAgreementSubmitted(farmer.getId());
+
+                                            }
+                                        }, getResources(R.string.ok), null, "", 0);
+
+                            }
+
+
+                        } else {
+
+
+                            showAlertDialog(true, getResources(R.string.fdp_status_incomplete), getResources(R.string.fill_out_fdp_status) + farmer.getFarmerName(),
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();
+                                        }
+                                    }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                            Intent intent = new Intent(PandLActivity.this, FDPStatusActivity.class);
+                                            intent.putExtra("farmer", new Gson().toJson(farmer));
+                                            startActivity(intent);
+                                        }
+                                    }, getResources(R.string.go_to_fdp_status_form), 0);
+
+                        }
+
+
+                    } else if (farmer.getHasSubmitted().equalsIgnoreCase(Constants.YES)) {
+
+                        showAlertDialog(false, getResources(R.string.status_submitted), getResources(R.string.no_more_mods) + farmer.getFarmerName() + getResources(R.string.apostrophe_s) + getResources(R.string.data),
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                        submit.setVisibility(View.GONE);
+
+                                    }
+                                }, getResources(R.string.ok), null, "", 0);
+
+                    }
+
+
+                }
+            });
+
         }
 
         tableView = findViewById(R.id.tableView);
         tableView.setColumnCount(9);
-        String[] TABLE_HEADERS = {"", "Year 0", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7"};
+
+        String[] TABLE_HEADERS = getResources().getStringArray(R.array.seven_years);
+
         MyTableHearderAdapter tableHearderAdapter = new MyTableHearderAdapter(this, TABLE_HEADERS);
         tableView.setHeaderAdapter(tableHearderAdapter);
 
@@ -200,6 +308,10 @@ public class PandLActivity extends BaseActivity {
                 Intent intent = new Intent(PandLActivity.this, DetailedYearMonthlyActivity.class);
                 intent.putExtra("year", position - 1);
                 intent.putExtra("farmer", new Gson().toJson(farmer));
+                intent.putExtra("labour", DID_LABOUR);
+                intent.putExtra("labourType", LABOUR_TYPE);
+                intent.putExtra("multiplier", PLOT_SIZES_IN_HA.toString());
+
                 startActivity(intent);
 
             }
@@ -209,83 +321,18 @@ public class PandLActivity extends BaseActivity {
         tableView.setSaveEnabled(true);
 
 
-        progressDialog = showProgress(this, "Populating data", "Please wait a moment", false);
+        progressDialog = showProgress(this, getResources(R.string.populating_data), getResources(R.string.please_wait), false);
 
-
-        showAlertDialog(false, "Hire Labour", "Did the farmer hire labour?", new DialogInterface.OnClickListener() {
+        Thread thread = new Thread(new Runnable() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+            public void run() {
 
-                prefs.edit().putBoolean("labour", true).apply();
-                dialogInterface.dismiss();
-
-
-                showAlertDialog(false, "Labour Type", "Which type of labour did the farmer hire?", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        prefs.edit().putString("labourType", "Full").apply();
-                        dialogInterface.dismiss();
-
-
-                        Thread thread = new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                populateTableData();
-
-                            }
-                        });
-
-                        thread.start();
-
-                    }
-                }, "Full", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        prefs.edit().putString("labourType", "Seasonal").apply();
-                        dialogInterface.dismiss();
-
-
-                        Thread thread = new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                populateTableData();
-
-                            }
-                        });
-
-                        thread.start();
-
-
-                    }
-                }, "Seasonal", 0);
-
+                populateTableData();
 
             }
-        }, "YES", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+        });
 
-                prefs.edit().putBoolean("labour", false).apply();
-                dialogInterface.dismiss();
-
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        populateTableData();
-
-                    }
-                });
-
-                thread.start();
-
-
-            }
-        }, "No", 0);
+        thread.start();
 
 
         onBackClicked();
@@ -299,7 +346,7 @@ public class PandLActivity extends BaseActivity {
         TOTAL_LABOR_COST = new ArrayList<>();
         TOTAL_LABOR_DAYS = new ArrayList<>();
         TOTAL_MAINTENANCE_COST = new ArrayList<>();
-        TOTAL_NET_INCOME_FROM_COCOA = new ArrayList<>();
+        TOTAL_GROSS_INCOME_FROM_COCOA = new ArrayList<>();
         TOTAL_NET_INCOME_FROM_OTHER_CROPS = new ArrayList<>();
         TOTAL_FARMING_INCOME = new ArrayList<>();
         TOTAL_NET_INCOME_FROM_OTHER_SOURCES = new ArrayList<>();
@@ -310,23 +357,24 @@ public class PandLActivity extends BaseActivity {
         TOTAL_P_AND_L_LIST = new ArrayList<>();
 
 
-        NET_COCOA_STRING_BUILDERS = new ArrayList<>();
+        GROSS_COCOA_STRING_BUILDERS = new ArrayList<>();
         MAINTENANCE_COST_STRING_BUILDERS = new ArrayList<>()  ;
         LABOR_DAYS_STRING_BUILDERS = new ArrayList<>();
         LABOR_COST_STRING_BUILDERS = new ArrayList<>();
 
         for(int i = 0; i <= MAX_YEARS; i++){
 
-            NET_COCOA_STRING_BUILDERS.add(new StringBuilder());
+            GROSS_COCOA_STRING_BUILDERS.add(new StringBuilder());
             MAINTENANCE_COST_STRING_BUILDERS.add(new StringBuilder());
             LABOR_DAYS_STRING_BUILDERS.add(new StringBuilder());
             LABOR_COST_STRING_BUILDERS.add(new StringBuilder());
         }
 
+        PLOT_SIZES_IN_HA = new JSONObject();
 
 
         if (farmer != null) {
-            realPlotList = databaseHelper.getAllFarmerPlots(farmer.getCode());
+            realPlotList = databaseHelper.getAllFarmerPlots(farmer.getId());
 
 
             for (RealPlot PLOT : realPlotList) {
@@ -336,22 +384,12 @@ public class PandLActivity extends BaseActivity {
                 Log.d("P & L ACTIVITY", "START YEAR IS " + PLOT.getStartYear());
 
                 try {
-                    PLOT_AO_JSON_OBJECT = new JSONObject(PLOT.getAdoptionObservationsJson());
-                    PLOT_INFO_JSON_OBJECT = new JSONObject(PLOT.getPlotInformationJson());
+                    PLOT_ANSWERS_JSON_OBJECT = new JSONObject(PLOT.getPlotInformationJson());
                 } catch (Exception e) {
                     e.printStackTrace();
 
-                    PLOT_INFO_JSON_OBJECT = new JSONObject();
+                    PLOT_ANSWERS_JSON_OBJECT = new JSONObject();
                 }
-
-                try {
-                     PLOT_ADDITIONAL_INTERVENTION_JSON_OBJECT = new JSONObject(PLOT.getAdditionalInterventionJson());
-                } catch (Exception e) {
-                    e.printStackTrace();
-
-                    PLOT_ADDITIONAL_INTERVENTION_JSON_OBJECT =  new JSONObject();
-
-                 }
 
 
 
@@ -372,18 +410,17 @@ public class PandLActivity extends BaseActivity {
                 TOTAL_MAINTENANCE_COST.add(applyCalculation(MAINTENANCE_COST_STRING_BUILDERS.get(i).toString() + "0"));
                 TOTAL_LABOR_DAYS.add(applyCalculation(LABOR_DAYS_STRING_BUILDERS.get(i).toString() + "0"));
                 TOTAL_LABOR_COST.add(applyCalculation(LABOR_COST_STRING_BUILDERS.get(i).toString() + "0"));
-                TOTAL_NET_INCOME_FROM_COCOA.add(applyCalculation(NET_COCOA_STRING_BUILDERS.get(i).toString() + "0.0"));
+                TOTAL_GROSS_INCOME_FROM_COCOA.add(applyCalculation(GROSS_COCOA_STRING_BUILDERS.get(i).toString() + "0.0"));
             }
 
-            if (prefs.getBoolean("labour", false)) {
+            if (DID_LABOUR) {
 
 
                 //TABLE_DATA_LIST.add(new Data("Total Costs" + prefs.getString("labourType", ""), null, TAG_TITLE_TEXT_VIEW));
 
-                TABLE_DATA_LIST.add(new Data("Total Maintenance Cost", TOTAL_MAINTENANCE_COST, TAG_RESULTS));
-
-                TABLE_DATA_LIST.add(new Data("Total Labour Days", TOTAL_LABOR_DAYS, TAG_RESULTS));
-                TABLE_DATA_LIST.add(new Data("Total Labour Cost", TOTAL_LABOR_COST, TAG_RESULTS));
+                TABLE_DATA_LIST.add(new Data(getResources(R.string.total_maintenance_cost), TOTAL_MAINTENANCE_COST, TAG_RESULTS));
+                TABLE_DATA_LIST.add(new Data(getResources(R.string.total_labour_days), TOTAL_LABOR_DAYS, TAG_RESULTS));
+                TABLE_DATA_LIST.add(new Data(getResources(R.string.total_labour_cost), TOTAL_LABOR_COST, TAG_RESULTS));
 
             }
 
@@ -392,7 +429,7 @@ public class PandLActivity extends BaseActivity {
 
 
             Question nifc = databaseHelper.getQuestionByTranslation("Gross income from Cocoa");
-            TABLE_DATA_LIST.add(new Data((isTranslation) ?  nifc.getTranslation__c() : nifc.getCaption__c(), TOTAL_NET_INCOME_FROM_COCOA, TAG_RESULTS));
+            TABLE_DATA_LIST.add(new Data((isTranslation) ? nifc.getTranslation__c() : nifc.getCaption__c(), TOTAL_GROSS_INCOME_FROM_COCOA, TAG_RESULTS));
 
 
             for (Calculation calc :  databaseHelper.sortCalculations()) {
@@ -419,7 +456,7 @@ public class PandLActivity extends BaseActivity {
                         calculationsList = new ArrayList<>();
 
                         for(int i = 0; i < MAX_YEARS + 1; i++) {
-                            calculationsList.add(applyCalculation(TOTAL_NET_INCOME_FROM_COCOA.get(i) + "+" + TOTAL_NET_INCOME_FROM_OTHER_CROPS.get(i)));
+                            calculationsList.add(applyCalculation(TOTAL_GROSS_INCOME_FROM_COCOA.get(i) + "+" + TOTAL_NET_INCOME_FROM_OTHER_CROPS.get(i)));
                         }
 
                         TABLE_DATA_LIST.add(new Data((isTranslation) ?  q.getTranslation__c() : q.getCaption__c(), calculationsList, TAG_RESULTS));
@@ -539,12 +576,12 @@ public class PandLActivity extends BaseActivity {
 
              try {
 
-                 TABLE_DATA_LIST.add(new Data("Planned Investments", VALUES_JSON_OBJECT.get(pI.getId()).toString()));
+                 TABLE_DATA_LIST.add(new Data(getResources(R.string.planned_investment), VALUES_JSON_OBJECT.get(pI.getId()).toString()));
 
             } catch (JSONException e) {
                 e.printStackTrace();
 
-                TABLE_DATA_LIST.add(new Data("Planned Investments", "0.00"));
+                 TABLE_DATA_LIST.add(new Data(getResources(R.string.planned_investment), "0.00"));
 
             }
 
@@ -577,7 +614,7 @@ public class PandLActivity extends BaseActivity {
 
                             if (databaseHelper.editPlotStartYear(String.valueOf(view.getTag().toString().split("_")[0]), position + 1)) {
 
-                                progressDialog.setMessage("Updating table data");
+                                progressDialog.setMessage(getResources(R.string.updating_table_data));
                                 progressDialog.show();
 
 
@@ -614,43 +651,62 @@ public class PandLActivity extends BaseActivity {
                             String[] values = view.getTag().toString().split("_");
 
                             String plotId = values[0];
-                            String RecName = values[1];
+                            final String RecName = values[1];
 
 
-                            if (RecName.equalsIgnoreCase("Thinning Out")) {
+                            if (prefs.getBoolean("toggleTranslation", false))
+                                PLOT_REC = databaseHelper.getRecommendationBasedOnName(RecName);
 
-                                PLOT_REC = databaseHelper.getRecommendationBasedOnName("Thinning out");
-                                GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Maintenance (GAPs)");
-
-
-                            } else if (RecName.equalsIgnoreCase("Filling In")) {
-
-                                PLOT_REC = databaseHelper.getRecommendationBasedOnName("Filling in");
-                                GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Maintenance (GAPs)");
+                            else
+                                PLOT_REC = databaseHelper.getRecommendationBasedOnTranslationName(RecName);
 
 
-                            } else {
-                                PLOT_REC = databaseHelper.getRecommendationBasedOnName("Replant");
-                                GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Minimal GAPs");
-                            }
+                            if (PLOT_REC != null) {
 
-                            if (databaseHelper.editFarmerPlotRecommendationId(farmerCode.getText().toString(), plotId,
-                                    GAPS_RECOMMENDATION_FOR_START_YEAR.getId() + "," + PLOT_REC.getId())) {
 
-                                progressDialog.setMessage("Updating table data");
-                                progressDialog.show();
+                                if (PLOT_REC.getName().equalsIgnoreCase("Replant") || PLOT_REC.getName().equalsIgnoreCase("Replant + Extra soil")) {
 
-                                Thread thread = new Thread(new Runnable() {
+                                    GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Minimal GAPs");
+
+                                } else if (PLOT_REC.getName().equalsIgnoreCase("Grafting") || PLOT_REC.getName().equalsIgnoreCase("Grafting + Extra soil")) {
+
+                                    GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Modest GAPs");
+
+
+                                } else {
+
+                                    GAPS_RECOMMENDATION_FOR_START_YEAR = databaseHelper.getRecommendationBasedOnName("Maintenance (GAPs)");
+
+
+                                }
+
+
+                                if (databaseHelper.editFarmerPlotRecommendationId(farmer.getId(), plotId,
+                                        GAPS_RECOMMENDATION_FOR_START_YEAR.getId() + "," + PLOT_REC.getId())) {
+
+                                    progressDialog.setMessage(getResources(R.string.updating_table_data));
+                                    progressDialog.show();
+
+                                    Thread thread = new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+
+                                            populateTableData();
+
+                                        }
+                                    });
+
+                                    thread.start();
+                                }
+                            } else
+                                runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
 
-                                        populateTableData();
+                                        CustomToast.makeToast(PandLActivity.this, "DEBUG: Null recommendation with name " + RecName, Toast.LENGTH_LONG).show();
 
                                     }
                                 });
-
-                                thread.start();
-                            }
                         }
                     });
                     progressDialog.dismiss();
@@ -667,7 +723,12 @@ public class PandLActivity extends BaseActivity {
 
     void getAllFarmerDataValues() {
 
-            String jsonString = databaseHelper.getAllAnswersJson(farmer.getCode());
+
+        final Question labourQuestion = databaseHelper.getQuestionByTranslation("Labour");
+        final Question labourTypeQuestion = databaseHelper.getQuestionByTranslation("Labour type");
+
+
+        String jsonString = databaseHelper.getAllAnswersJson(farmer.getId());
 
             Log.d("P & L ACTIVITY", "FOUND STRING " + jsonString);
 
@@ -676,10 +737,46 @@ public class PandLActivity extends BaseActivity {
                 try {
                     VALUES_JSON_OBJECT = new JSONObject(jsonString);
 
+                    try {
+                        String val = VALUES_JSON_OBJECT.getString(labourQuestion.getId());
+                        if (val.equalsIgnoreCase("Yes"))
+                            DID_LABOUR = true;
+
+                        LABOUR_TYPE = VALUES_JSON_OBJECT.getString(labourTypeQuestion.getId());
+
+
+                        // CustomToast.makeToast(this, "Labour? " + val + " LABOUR TYPE = " + LABOUR_TYPE, Toast.LENGTH_LONG).show();
+
+                    } catch (Exception e) {
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+
+                                CustomToast.makeToast(PandLActivity.this, "Labour question is missing in SF.\nPlease consider adding a new question with translation \"Labour\" and another with translation \"Labour type\" ", Toast.LENGTH_LONG).show();
+
+                            }
+                        });
+                    }
+
+
+
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.d("P & L ACTIVITY", "####### JSON ERROR" + e.getMessage());
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+
+                            CustomToast.makeToast(PandLActivity.this, "No labour type provided!", Toast.LENGTH_LONG).show();
+
+                        }
+                    });
 
                 }
 
@@ -704,30 +801,14 @@ public class PandLActivity extends BaseActivity {
 
             try {
 
-                defVal = PLOT_AO_JSON_OBJECT.get(s).toString();
+                defVal = PLOT_ANSWERS_JSON_OBJECT.get(s).toString();
                 System.out.println("******* SECOND TRY ******* PLOT'S AO VALUES  " + s + " : " + defVal);
 
 
             } catch (JSONException f) {
                 System.out.println("\n******* EXCEPTION *******   MESSAGE : " + f.getMessage() + "\n\n");
 
-                try {
 
-                    defVal = PLOT_INFO_JSON_OBJECT.get(s).toString();
-                    System.out.println("******* THIRD TRY *******  PLOT'S INFO VALUES  " + s + " : " + defVal);
-
-                } catch (JSONException g) {
-                System.out.println("\n******* EXCEPTION *******   MESSAGE : " + g.getMessage() + "\n\n");
-
-                    try {
-
-                        defVal = PLOT_ADDITIONAL_INTERVENTION_JSON_OBJECT.get(s).toString();
-                        System.out.println("******* FOURTH TRY *******  PLOT'S AI VALUES  " + s + " : " + defVal);
-
-                    } catch (JSONException h) {
-                        System.out.println("\n******* EXCEPTION *******   MESSAGE : " + g.getMessage() + "\n\n");
-                    }
-            }
 
             }
         }
@@ -737,8 +818,6 @@ public class PandLActivity extends BaseActivity {
 
         return defVal;
     }
-
-
 
     String replaceStringWithValues(String name, String stringToReplace) {
 
@@ -861,6 +940,31 @@ public class PandLActivity extends BaseActivity {
     void loadDataForYear(RealPlot PLOT, int CONTROLLING_YEAR) {
 
 
+        String plotSizeInHaValue = "0.0";
+        try {
+            Question plotSizeInHaQuestion = databaseHelper.getQuestionByTranslation("Plot area ha");
+
+            //Todo complex calculation Application
+            ComplexCalculation complexCalculation = databaseHelper.getComplexCalculation(plotSizeInHaQuestion.getId());
+            if (complexCalculation != null) {
+                plotSizeInHaValue = applyComplexCalculation(complexCalculation);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        Log.i(TAG, "^^^^^^^^^^^^^^   PLOT SIZE IN HA VALUE IS ^^^^^^^^^^^^^^^^^  " + plotSizeInHaValue);
+
+
+        try {
+            PLOT_SIZES_IN_HA.put(PLOT.getId(), plotSizeInHaValue);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
         System.out.println("################################ \n CALCULATING INCOME \n ###################################");
 
 
@@ -884,74 +988,67 @@ public class PandLActivity extends BaseActivity {
 
         for(int i = 0; i < CONTROLLING_YEAR; i++){
 
-            if(i == 0){
-                Log.i(TAG, "\nYEAR " + i);
-                plotIncomes.add(applyCalculation(parseEquation(GAPS_RECOMENDATION_FOR_START_YEAR.getIncome0(), GAPS_RECOMENDATION_FOR_START_YEAR.getQuestionsInvolved())));
-                NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
-            }else {
+            Log.i(TAG, "\nYEAR " + i);
+            plotIncomes.add(applyCalculation(parseEquation(GAPS_RECOMENDATION_FOR_START_YEAR.getIncome0(), GAPS_RECOMENDATION_FOR_START_YEAR.getQuestionsInvolved())));
+            GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
-                Log.i(TAG, "\nYEAR " + i);
-                plotIncomes.add(applyCalculation(parseEquation(GAPS_RECOMENDATION_FOR_START_YEAR.getIncome0(), GAPS_RECOMENDATION_FOR_START_YEAR.getQuestionsInvolved())));
-                NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
-            }
         }
 
+        int temp = 0;
 
-        for(int i = 1; i < MAX_YEARS + 1; i++){
 
+        for (int i = CONTROLLING_YEAR; i <= MAX_YEARS; i++) {
 
-            switch (i){
+            temp++;
+
+            switch (temp) {
 
                 case 1:
                     Log.i(TAG, "\nYEAR 1 " + PLOT_RECOMMENDATION.getIncome1());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome1(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 2:
 
                     Log.i(TAG, "\nYEAR 2 " + PLOT_RECOMMENDATION.getIncome2());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome2(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
 
                     break;
                 case 3:
                     Log.i(TAG, "\nYEAR 3 " + PLOT_RECOMMENDATION.getIncome3());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome3(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 4:
                     Log.i(TAG, "\nYEAR 4 " + PLOT_RECOMMENDATION.getIncome4());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome4(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 5:
 
                     Log.i(TAG, "\nYEAR 5 " + PLOT_RECOMMENDATION.getIncome5());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome5(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
-
-
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 6:
 
                     Log.i(TAG, "\nYEAR 6 " + PLOT_RECOMMENDATION.getIncome6());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome6(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
-
-
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 7:
                     Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
 
@@ -968,8 +1065,10 @@ public class PandLActivity extends BaseActivity {
         }
 
 
+        String name = (prefs.getBoolean("toggleTranslation", false)) ? PLOT_RECOMMENDATION.getName() : PLOT_RECOMMENDATION.getTranslation();
 
-        TABLE_DATA_LIST.add(new Data(PLOT.getName() + "\n" + PLOT_RECOMMENDATION.getName(), null, TAG_TITLE_TEXT_VIEW));
+
+        TABLE_DATA_LIST.add(new Data(PLOT.getName() + "\n" + name, null, TAG_TITLE_TEXT_VIEW));
 
         Question plotIncomeQuestion = databaseHelper.getQuestionByTranslation("Plot income");
 
@@ -987,27 +1086,12 @@ public class PandLActivity extends BaseActivity {
 
 
 
-        String plotSizeInHaValue = "0.0";
-        try {
-            Question plotSizeInHaQuestion = databaseHelper.getQuestionByTranslation("Plot area ha");
-
-            //Todo complex calculation Application
-            ComplexCalculation complexCalculation = databaseHelper.getComplexCalculation(plotSizeInHaQuestion.getId());
-            if (complexCalculation != null) {
-                plotSizeInHaValue = applyComplexCalculation(complexCalculation);
-            }
-
-        }catch(Exception e){e.printStackTrace();}
-
-
-        Log.i(TAG, "^^^^^^^^^^^^^^   PLOT SIZE IN HA VALUE IS ^^^^^^^^^^^^^^^^^  " + plotSizeInHaValue);
-
-
 
 
         System.out.println("################################ \n CALCULATING MAINTENANCE COST \n ###################################");
 
-        LaborDaysLaborCostSupplies lls1 = new LaborDaysLaborCostSupplies();
+        LaborDaysLaborCost lls1;
+        SuppliesCost supplies;
 
         System.out.println("################################ \n CALCULATING LABOUR DAYS AND COST FOR YEAR 0 to SELECTED START YEAR (1 = DEFAULT) \n ###################################");
 
@@ -1021,15 +1105,27 @@ public class PandLActivity extends BaseActivity {
                 MAINTENANCE_COST_STRING_BUILDERS.get(i).append(maintenanceCostList.get(i)).append("+");
 
             }else {
-                lls1 = databaseHelper.getTotalLaborDaysLaborCostAndSuppliesByYear("1", GAPS_RECOMENDATION_FOR_START_YEAR.getId());
-                maintenanceCostList.add(applyCalculation( "(" + lls1.getSuppliesCost() + ") * " + plotSizeInHaValue));
+
+                supplies = databaseHelper.getTotalSuppliesCostByYear("1", GAPS_RECOMENDATION_FOR_START_YEAR.getId());
+
+                maintenanceCostList.add(applyCalculation("(" + supplies.getSuppliesCost() + ") * " + plotSizeInHaValue));
                 MAINTENANCE_COST_STRING_BUILDERS.get(i).append(  maintenanceCostList.get(i)).append("+");
             }
 
 
-            if (prefs.getBoolean("labour", false)) {
+            if (DID_LABOUR) {
+
+                if (LABOUR_TYPE.equalsIgnoreCase("full"))
+                    lls1 = databaseHelper.getTotalLaborDaysLaborCostByYear("1", GAPS_RECOMENDATION_FOR_START_YEAR.getId());
+                else
+                    lls1 = databaseHelper.getTotalSeasonalLaborDaysLaborCostByYear("1", GAPS_RECOMENDATION_FOR_START_YEAR.getId(), "true");
+
+
+
                 labourCostList.add(applyCalculation( "(" + lls1.getLaborCost() + ") * " + plotSizeInHaValue));
                 labourDaysList.add(applyCalculation( "(" + lls1.getLaborDays() + ") * " + plotSizeInHaValue));
+
+
             } else {
                 labourCostList.add("0.0");
                 labourDaysList.add("0.0");
@@ -1049,11 +1145,17 @@ public class PandLActivity extends BaseActivity {
 
         for(int i = 1; i < MAX_YEARS + 1; i++) {
 
-                    lls1 = databaseHelper.getTotalLaborDaysLaborCostAndSuppliesByYear(String.valueOf(i), PLOT_RECOMMENDATION.getId());
 
-                    maintenanceCostList.add(applyCalculation(lls1.getSuppliesCost()));
+            supplies = databaseHelper.getTotalSuppliesCostByYear(String.valueOf(i), PLOT_RECOMMENDATION.getId());
+            maintenanceCostList.add(applyCalculation("(" + supplies.getSuppliesCost() + ") * " + plotSizeInHaValue));
 
-                    if (prefs.getBoolean("labour", false)) {
+            if (DID_LABOUR) {
+
+                if (LABOUR_TYPE.equalsIgnoreCase("full"))
+                    lls1 = databaseHelper.getTotalLaborDaysLaborCostByYear(String.valueOf(i), PLOT_RECOMMENDATION.getId());
+                else
+                    lls1 = databaseHelper.getTotalSeasonalLaborDaysLaborCostByYear(String.valueOf(i), PLOT_RECOMMENDATION.getId(), "true");
+
                         labourCostList.add(applyCalculation( "(" + lls1.getLaborCost() + ") * " + plotSizeInHaValue));
                         labourDaysList.add(applyCalculation( "(" + lls1.getLaborDays() + ") * " + plotSizeInHaValue));
                     } else {
@@ -1104,16 +1206,14 @@ public class PandLActivity extends BaseActivity {
 
         List<Question> plotResultsQuestions = databaseHelper.getSpecificSetOfQuestions("plot results");
         if(plotResultsQuestions != null){
-
             for (Question q : plotResultsQuestions){
-
                 if(q.getType__c().equalsIgnoreCase(TYPE_TEXT)){
                     try {
+
                         SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(q.getId());
 
                         if( skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
                             TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), skipLogic.getAnswerValue()));
-
                     } catch (NullPointerException e) {
                         e.printStackTrace();
                     }
@@ -1122,85 +1222,82 @@ public class PandLActivity extends BaseActivity {
         }
 
 
-      /*//Question limeNeededQuestion = databaseHelper.getQuestionByTranslation("Lime");
-        //Question drainageNeededQuestion = databaseHelper.getQuestionByTranslation("Drainage");
-
-        try {
-
-            SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(limeNeededQuestion.getId());
-
-            if(skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
-                TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? limeNeededQuestion.getTranslation__c() : limeNeededQuestion.getCaption__c(), skipLogic.getAnswerValue()));
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        }
-
-        try {
-
-            SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(drainageNeededQuestion.getId());
-            if( skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
-               TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? drainageNeededQuestion.getTranslation__c() : drainageNeededQuestion.getCaption__c(), skipLogic.getAnswerValue()));
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        }*/
-
-
-
-
         showOrHideStartYear(PLOT.getId(), PLOT.getStartYear() - 1);
 
 
-        if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("grafting")) {
+        Question plotRenovatedCorrectlyQuestion = databaseHelper.getQuestionByTranslation("Plot Renovated Correctly?");
 
-          /*  if (prefs.getString("ISO", "").equalsIgnoreCase("CIV") || prefs.getString("ISO", "").equalsIgnoreCase("GHA"))
+        if (plotRenovatedCorrectlyQuestion != null) {
 
-                TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
+            if (!getAnswerValue(plotRenovatedCorrectlyQuestion.getId()).equalsIgnoreCase("yes"))
 
-            else if (prefs.getString("ISO", "").equalsIgnoreCase("IDN")) {
 
-                try {
-                    JSONObject jsonObject = new JSONObject(PLOT.getAdoptionObservationsJson());
-                    int treeAge = Integer.parseInt(jsonObject.get(prefs.getString("tree age", "")).toString());
+                if ((PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Grafting")) ||
+                        PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Thinning Out") ||
+                        PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Filling In")) {
 
-                    Log.i(TAG, "^^^^^^^^ TREE AGE IS  ^^^^^^^^^" + treeAge);
+                    prefs.edit().putString(PLOT.getId(), PLOT_RECOMMENDATION.getName()).apply();
 
-                    if (treeAge >= 21 && treeAge <= 25)
-                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
+                    TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
+                } else if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Replant")) {
+
+
+                    if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("thinning out"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Thinning out", null, BUTTON_VIEW));
+
+                    else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("filling in"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Filling in", null, BUTTON_VIEW));
+
+                    else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("grafting"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Grafting", null, BUTTON_VIEW));
+
+
+                } else if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Filling in + Extra Soil")
+                        || PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Thinning out + Extra Soil")
+                        || PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Grafting + Extra Soil")) {
+
+                    prefs.edit().putString(PLOT.getId(), PLOT_RECOMMENDATION.getName()).apply();
+                    TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant + Extra Soil", null, BUTTON_VIEW));
+
+
+                } else if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Replant + Extra Soil")) {
+
+
+                    if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("Thinning out + Extra Soil"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Thinning out + Extra Soil", null, BUTTON_VIEW));
+
+                    else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("Filling in + Extra Soil"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Filling in + Extra Soil", null, BUTTON_VIEW));
+                    else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("Grafting + Extra Soil"))
+
+                        TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Grafting + Extra Soil", null, BUTTON_VIEW));
+                } else
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            CustomToast.makeToast(PandLActivity.this, "Missing answer to question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
+
+                        }
+                    });
+
+        } else
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+
+                    CustomToast.makeToast(PandLActivity.this, "Missing question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
+
                 }
-            }*/
-
-
-
-                TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
- 
-
-
-
-
-        } else if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Thinning Out") ||
-                PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Filling In")) {
-
-            prefs.edit().putString(PLOT.getId(), PLOT_RECOMMENDATION.getName()).apply();
-
-            TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
-
-
-        } else if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("Replant")) {
-
-
-            if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("thinning out"))
-
-                TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Thinning Out", null, BUTTON_VIEW));
-
-            else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("filling in"))
-
-                TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Filling In", null, BUTTON_VIEW));
-
-
-        }
+            });
 
 
         TABLE_DATA_LIST.add(new Data("", null, TAG_OTHER_TEXT_VIEW));
@@ -1211,84 +1308,91 @@ public class PandLActivity extends BaseActivity {
 
     void loadDataForInterventionMadeYear(RealPlot PLOT, int CONTROLLING_YEAR) {
 
-
         Log.i(TAG, "loadDataForYear " + CONTROLLING_YEAR);
 
         String recommendationId = PLOT.getRecommendationId();
         String[] GAPS_PLOT_RECOMMENDATION_IDS = recommendationId.split(",");
 
+
         int TEMP = CONTROLLING_YEAR * -1;
         int TEMP2 = CONTROLLING_YEAR * -1;
 
+
         Log.i(TAG, "TEMP = " + TEMP);
-        Log.i(TAG, "TEMP2 =  " + TEMP2);
+        //Log.i(TAG, "TEMP2 =  " + TEMP2);
 
 
-
-        //Recommendation GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendation(GAPS_PLOT_RECOMMENDATION_IDS[0]);
+        Recommendation GAPS_RECOMENDATION_FOR_START_YEAR = databaseHelper.getRecommendation(GAPS_PLOT_RECOMMENDATION_IDS[0]);
         Recommendation PLOT_RECOMMENDATION = databaseHelper.getRecommendation(GAPS_PLOT_RECOMMENDATION_IDS[1]);
-
 
         List<String> plotIncomes = new ArrayList<>();
 
 
+        Log.i(TAG, "\nYEAR 0 " + PLOT_RECOMMENDATION.getIncome1());
+        plotIncomes.add(applyCalculation(parseEquation(GAPS_RECOMENDATION_FOR_START_YEAR.getIncome0(), GAPS_RECOMENDATION_FOR_START_YEAR.getQuestionsInvolved())));
+        GROSS_COCOA_STRING_BUILDERS.get(0).append(plotIncomes.get(0)).append("+");
 
-        for(int i = 0; i <= MAX_YEARS; i++){
 
-            switch (TEMP){//5
+        for (int i = 1; i <= MAX_YEARS; i++) {
+            TEMP += 1;
+
+            switch (TEMP) {
+
+                //5
 
                 case 1:
                     Log.i(TAG, "\nYEAR 1 " + PLOT_RECOMMENDATION.getIncome1());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome1(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 2:
 
                     Log.i(TAG, "\nYEAR 2 " + PLOT_RECOMMENDATION.getIncome2());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome2(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
 
                     break;
                 case 3:
                     Log.i(TAG, "\nYEAR 3 " + PLOT_RECOMMENDATION.getIncome3());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome3(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 4:
                     Log.i(TAG, "\nYEAR 4 " + PLOT_RECOMMENDATION.getIncome4());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome4(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 5:
 
                     Log.i(TAG, "\nYEAR 5 " + PLOT_RECOMMENDATION.getIncome5());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome5(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 6:
 
                     Log.i(TAG, "\nYEAR 6 " + PLOT_RECOMMENDATION.getIncome6());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome6(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
                 case 7:
                     Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
                     plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
 
 
                     default:
-                         Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
+
+                        Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
                         plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                        NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
+                        GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
 
             }
@@ -1297,27 +1401,14 @@ public class PandLActivity extends BaseActivity {
 
 
             //if(TEMP == MAX_YEARS ) break;
-            TEMP += 1;
             Log.i(TAG, "^^^^^^^^^^^^^^    TEMP IS NOW " + TEMP);
-
-
-
 
         }
 
 
-/*
-        for(int i = TEMP2 ; i <= MAX_YEARS; i++){
+        String name = (prefs.getBoolean("toggleTranslation", false)) ? PLOT_RECOMMENDATION.getName() : PLOT_RECOMMENDATION.getTranslation();
 
-            Log.i(TAG, "\nYEAR " + i);
-            plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-            NET_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
-
-
-        }*/
-
-
-        TABLE_DATA_LIST.add(new Data(PLOT.getName() + "\n" + PLOT_RECOMMENDATION.getName() + "\nYear " + -(PLOT.getStartYear()), null, TAG_TITLE_TEXT_VIEW));
+        TABLE_DATA_LIST.add(new Data(PLOT.getName() + "\n" + name + "\nYear " + PLOT.getStartYear(), null, TAG_TITLE_TEXT_VIEW));
 
         Question plotIncomeQuestion = databaseHelper.getQuestionByTranslation("Plot income");
 
@@ -1345,6 +1436,11 @@ public class PandLActivity extends BaseActivity {
         Log.i(TAG, "^^^^^^^^^^^^^^   PLOT SIZE IN HA VALUE IS ^^^^^^^^^^^^^^^^^  " + plotSizeInHaValue);
 
 
+        try {
+            PLOT_SIZES_IN_HA.put(PLOT.getId(), plotSizeInHaValue);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         ////////
 
@@ -1355,43 +1451,83 @@ public class PandLActivity extends BaseActivity {
         List<String> labourDaysList = new ArrayList<>();
         List<String> pandlist = new ArrayList<>();
 
-        LaborDaysLaborCostSupplies lls1;
+        LaborDaysLaborCost lls1;
+        SuppliesCost supplies;
 
 
-        TEMP = CONTROLLING_YEAR * -1;
-        TEMP2 = TEMP;
-        int LAST_INDEX = 0;
+        TEMP = 0;
 
 
-        for(int i = 0; i <= MAX_YEARS; i++) {
+        System.out.println();
+        System.out.println("**********************************************");
+        System.out.println("MAINTENANCE COST AND LABOUR COST CALCULATIONS");
+        System.out.println("**********************************************");
+        System.out.println();
+
+
+        Log.i(TAG, "\nYEAR " + 0);
+        maintenanceCostList.add(applyCalculation(parseEquation(GAPS_RECOMENDATION_FOR_START_YEAR.getCost0(), GAPS_RECOMENDATION_FOR_START_YEAR.getCostQuestions())));
+        MAINTENANCE_COST_STRING_BUILDERS.get(0).append(maintenanceCostList.get(0)).append("+");
+
+
+        if (DID_LABOUR) {
+            labourCostList.add(applyCalculation("0.0"));
+            labourDaysList.add(applyCalculation("0.0"));
+        } else {
+            labourCostList.add("0.0");
+            labourDaysList.add("0.0");
+
+        }
+
+        LABOR_COST_STRING_BUILDERS.get(0).append(labourCostList.get(0)).append("+");
+        LABOR_DAYS_STRING_BUILDERS.get(0).append(labourDaysList.get(0)).append("+");
+
+
+        for (int i = 1; i <= MAX_YEARS; i++) {
+
+            System.out.println("**********************************************");
+            System.out.println("TEMP 2 = " + TEMP2 + " and i = " + i);
+            System.out.println("**********************************************");
+
+            TEMP = TEMP2 + i;
 
             if (TEMP <= MAX_YEARS) {
 
-                lls1 = databaseHelper.getTotalLaborDaysLaborCostAndSuppliesByYear(String.valueOf(TEMP), PLOT_RECOMMENDATION.getId());
+                supplies = databaseHelper.getTotalSuppliesCostByYear(String.valueOf(TEMP), PLOT_RECOMMENDATION.getId());
 
-                maintenanceCostList.add(applyCalculation("(" + lls1.getSuppliesCost() + ") * " + plotSizeInHaValue));
+                maintenanceCostList.add(applyCalculation("(" + supplies.getSuppliesCost() + ") * " + plotSizeInHaValue));
+                MAINTENANCE_COST_STRING_BUILDERS.get(i).append(maintenanceCostList.get(i)).append("+");
 
-                if (prefs.getBoolean("labour", false)) {
+                if (DID_LABOUR) {
+
+                    if (LABOUR_TYPE.equalsIgnoreCase("full"))
+                        lls1 = databaseHelper.getTotalLaborDaysLaborCostByYear(String.valueOf(TEMP), PLOT_RECOMMENDATION.getId());
+                    else
+                        lls1 = databaseHelper.getTotalSeasonalLaborDaysLaborCostByYear(String.valueOf(TEMP), PLOT_RECOMMENDATION.getId(), "true");
+
                     labourCostList.add(applyCalculation("(" + lls1.getLaborCost() + ") * " + plotSizeInHaValue));
                     labourDaysList.add(applyCalculation("(" + lls1.getLaborDays() + ") * " + plotSizeInHaValue));
                 } else {
                     labourCostList.add("0.0");
                     labourDaysList.add("0.0");
-
                 }
 
-                MAINTENANCE_COST_STRING_BUILDERS.get(i).append(maintenanceCostList.get(i)).append("+");
                 LABOR_COST_STRING_BUILDERS.get(i).append(labourCostList.get(i)).append("+");
                 LABOR_DAYS_STRING_BUILDERS.get(i).append(labourDaysList.get(i)).append("+");
 
-
             } else {
 
-                lls1 = databaseHelper.getTotalLaborDaysLaborCostAndSuppliesByYear("7", PLOT_RECOMMENDATION.getId());
 
-                maintenanceCostList.add(applyCalculation("(" + lls1.getSuppliesCost() + ") * " + plotSizeInHaValue));
+                supplies = databaseHelper.getTotalSuppliesCostByYear("7", PLOT_RECOMMENDATION.getId());
 
-                if (prefs.getBoolean("labour", false)) {
+                maintenanceCostList.add(applyCalculation("(" + supplies.getSuppliesCost() + ") * " + plotSizeInHaValue));
+
+                if (DID_LABOUR) {
+                    if (LABOUR_TYPE.equalsIgnoreCase("full"))
+                        lls1 = databaseHelper.getTotalLaborDaysLaborCostByYear("7", PLOT_RECOMMENDATION.getId());
+                    else
+                        lls1 = databaseHelper.getTotalSeasonalLaborDaysLaborCostByYear("7", PLOT_RECOMMENDATION.getId(), "true");
+
                     labourCostList.add(applyCalculation("(" + lls1.getLaborCost() + ") * " + plotSizeInHaValue));
                     labourDaysList.add(applyCalculation("(" + lls1.getLaborDays() + ") * " + plotSizeInHaValue));
                 } else {
@@ -1405,10 +1541,6 @@ public class PandLActivity extends BaseActivity {
 
 
             }
-
-            //if(TEMP == MAX_YEARS) break;
-            TEMP += 1;
-
 
         }
 
@@ -1437,6 +1569,22 @@ public class PandLActivity extends BaseActivity {
         TABLE_DATA_LIST.add(new Data((isTranslation) ? pl.getTranslation__c() : pl.getCaption__c(), pandlist, TAG_OTHER_TEXT_VIEW));
 
 
+        List<Question> plotResultsQuestions = databaseHelper.getSpecificSetOfQuestions("plot results");
+        if (plotResultsQuestions != null) {
+            for (Question q : plotResultsQuestions) {
+                if (q.getType__c().equalsIgnoreCase(TYPE_TEXT)) {
+                    try {
+
+                        SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(q.getId());
+
+                        if (skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
+                            TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), skipLogic.getAnswerValue()));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
 
 
 
@@ -1444,7 +1592,7 @@ public class PandLActivity extends BaseActivity {
         //showOrHideStartYear(PLOT.getId(), PLOT.getStartYear() - 1);
 
 
-        if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("grafting")) {
+    /*    if (PLOT_RECOMMENDATION.getName().equalsIgnoreCase("grafting")) {
 
             if (prefs.getString("ISO", "").equalsIgnoreCase("CIV") || prefs.getString("ISO", "").equalsIgnoreCase("GHA"))
 
@@ -1453,8 +1601,7 @@ public class PandLActivity extends BaseActivity {
             else if (prefs.getString("ISO", "").equalsIgnoreCase("IDN")) {
 
                 try {
-                    JSONObject jsonObject = new JSONObject(PLOT.getAdoptionObservationsJson());
-                    int treeAge = Integer.parseInt(jsonObject.get(prefs.getString("tree age", "")).toString());
+                     int treeAge = Integer.parseInt(PLOT_ANSWERS_JSON_OBJECT.get(prefs.getString("tree age", "")).toString());
 
                     Log.i(TAG, "^^^^^^^^ TREE AGE IS  ^^^^^^^^^" + treeAge);
 
@@ -1486,7 +1633,7 @@ public class PandLActivity extends BaseActivity {
                 TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Filling In", null, BUTTON_VIEW));
 
 
-        }
+        }*/
 
 
         TABLE_DATA_LIST.add(new Data("", null, TAG_OTHER_TEXT_VIEW));
@@ -1504,11 +1651,11 @@ public class PandLActivity extends BaseActivity {
 
         CSSV_VALUE = "--";
 
-        if(PLOT_AO_JSON_OBJECT != null){
+        if (PLOT_ANSWERS_JSON_OBJECT != null) {
 
 
             try {
-                CSSV_VALUE = PLOT_AO_JSON_OBJECT.getString(CSSV_ID);
+                CSSV_VALUE = PLOT_ANSWERS_JSON_OBJECT.getString(CSSV_ID);
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -1548,6 +1695,7 @@ public class PandLActivity extends BaseActivity {
 
     }
 
+
     boolean setupSkipLogicsAndHideViews(SkipLogic sl) {
 
 
@@ -1569,6 +1717,7 @@ public class PandLActivity extends BaseActivity {
 
             return value;
     }
+
 
     String applyComplexCalculation(ComplexCalculation complexCalculation) {
 
@@ -1677,6 +1826,34 @@ public class PandLActivity extends BaseActivity {
 
 
         return  evaluatedValue;
+    }
+
+
+    @Override
+    public void taskComplete(int response) {
+
+        Log.i("SYNC TASK COMPLETE", "STATUS = " + response);
+
+
+        try {
+            SyncUpActivity.removeOnNetworkActivityComplete();
+
+
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+
+        if (response == Constants.SYNC_STATUS_COMPLETE) {
+
+            farmer.setLastVisitDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
+            farmer.setHasSubmitted(Constants.YES);
+
+            if (databaseHelper.editFarmerBasicInfo(farmer))
+                submit.setVisibility(View.GONE);
+
+
+        }
     }
 
 

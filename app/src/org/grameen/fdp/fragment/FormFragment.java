@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -14,6 +15,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,15 +27,18 @@ import android.widget.Toast;
 import com.github.dkharrat.nexusdialog.FormModel;
 import com.github.dkharrat.nexusdialog.FormModelFragment;
 import com.github.dkharrat.nexusdialog.FragmentActivityHelper;
-import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.activity.Add_EditFarmerDetailsActivity;
+import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.ImageUtil;
 import org.grameen.fdp.utility.MyFormController;
 
+import java.io.File;
+
 import static android.app.Activity.RESULT_OK;
+import static org.grameen.fdp.application.FdpApplication.ROOT_DIR;
 
 /**
  * Created by aangjnr on 05/01/2018.
@@ -42,6 +47,8 @@ import static android.app.Activity.RESULT_OK;
 public abstract class FormFragment extends Fragment {
 
     String ID;
+    Uri URI;
+
     String TAG = "FormFragment";
     SharedPreferences preferences;
     private FormModelFragment formModelFragment;
@@ -117,7 +124,7 @@ public abstract class FormFragment extends Fragment {
 
 
 
-    void startCameraIntent(String id) {
+   /* void startCameraIntent(String id) {
 
 
         this.ID = id;
@@ -140,6 +147,63 @@ public abstract class FormFragment extends Fragment {
 
         }
     }
+*/
+
+
+    void startCameraIntent(String id) {
+        this.ID = id;
+        File photo;
+
+        Intent takePictureIntent;
+        PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putBoolean("shouldSave", false).apply();
+
+        if (!hasPermissions(getActivity(), Manifest.permission.CAMERA)) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA}, PERMISSION_CAMERA);
+        } else {
+
+
+            takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+            try {
+                // place where to store camera taken picture
+                photo = this.createTemporaryFile("picture", ".jpg");
+                photo.delete();
+                //URI = Uri.fromFile(photo);
+                URI = FileProvider.getUriForFile(getActivity(), getActivity().getApplicationContext().getPackageName() + ".org.grameen.fdp.provider", photo);
+
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, URI);
+                takePictureIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+
+            } catch (Exception e) {
+                Log.v(TAG, "Can't create file to take picture!");
+                //Toast.makeText(activity, "Please check SD card! Image shot is impossible!", 10000);
+            }
+
+
+            if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+
+                Log.d(TAG, "Starting camera intent");
+
+                startActivityForResult(takePictureIntent, CAMERA_INTENT);
+
+            }
+
+
+        }
+    }
+
+
+    private File createTemporaryFile(String part, String ext) throws Exception {
+
+        File dir = new File(ROOT_DIR + File.separator + ".temp/");
+        if (!dir.exists()) Log.i(TAG, "Is DIR created?  " + dir.mkdirs());
+        Log.i(TAG, "Destination path is " + dir);
+
+
+        return File.createTempFile(part, ext, dir);
+    }
+
 
 
 
@@ -177,6 +241,26 @@ public abstract class FormFragment extends Fragment {
                 if (requestCode == CAMERA_INTENT) {
 
 
+                    try {
+                        String BASE64_STRING;
+
+                        Bitmap bitmap = ImageUtil.handleSamplingAndRotationBitmap(getActivity(), URI);
+                        BASE64_STRING = ImageUtil.bitmapToBase64(bitmap);
+                        getModel().setValue(ID, BASE64_STRING);
+
+                        CustomToast.makeToast(getActivity(), getResources().getString(R.string.click_photo_to_delete), Toast.LENGTH_LONG).show();
+
+
+                    } catch (Exception e) {
+                        CustomToast.makeToast(getActivity(), "Failed to load image", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, "Failed to load", e);
+                    }
+
+
+
+
+
+/*
                     Log.d(TAG, "CAMERA INTENT");
 
 
@@ -185,12 +269,14 @@ public abstract class FormFragment extends Fragment {
 
                     //imageView.setImageBitmap(imageBitmap);
 
-                    String value = ImageUtil.convert(imageBitmap);
+                    String value = ImageUtil.bitmapToBase64(imageBitmap);
                     getModel().setValue(ID, value);
 
-                    Log.i(TAG, "***** Value for Photo was " + value);
+                    //Log.i(TAG, "***** Value for Photo was " + value);
 
                     CustomToast.makeToast(getActivity(), getResources().getString(R.string.click_photo_to_delete), Toast.LENGTH_LONG).show();
+
+                    */
 
                 }
 

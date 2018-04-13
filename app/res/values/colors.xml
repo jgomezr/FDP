@@ -14,12 +14,18 @@
 
     <color name="colorAccent">#4CAF50</color>
 
- <color name="colorAccent50Alpha">#8f4caf50</color>
+
+    <color name="colorPrimaryMonitoring">#26a790</color>
+    <color name="colorPrimaryDarkMonitoring">#13917a</color>
 
 
+    <color name="colorAccentMonitoring">#4db6ac</color>
 
- <color name="background_1">#3949AB</color>
-    <color name="background_2">#3F51B5</color>
+    <color name="colorAccent50Alpha">#8f4caf50</color>
+
+
+    <color name="background_1">#0b68c4</color>
+    <color name="background_2">#247ad1</color>
     <color name="background_3">#5C6BC0</color>
 
 

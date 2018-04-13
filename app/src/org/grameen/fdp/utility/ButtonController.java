@@ -36,6 +36,7 @@ public class ButtonController extends MyLabeledFieldController {
     LocationManager locationManager;
     Context context;
     private DatePickerDialog datePickerDialog = null;
+    boolean isEnabled = true;
 
     /**
      * Constructs a new instance of a date picker field.
@@ -61,10 +62,11 @@ public class ButtonController extends MyLabeledFieldController {
      * @param isRequired    indicates if the field is required or not
      * @param displayFormat the format of the date to show in the text box when a date is set
      */
-    public ButtonController(Context ctx, String name, String labelText, boolean isRequired, LocationListener displayFormat) {
+    public ButtonController(Context ctx, String name, String labelText, boolean isRequired, LocationListener displayFormat, boolean enabled) {
         super(ctx, name, labelText, isRequired);
         this.locationListener = displayFormat;
         this.context = ctx;
+        this.isEnabled = enabled;
 
     }
 
@@ -74,8 +76,8 @@ public class ButtonController extends MyLabeledFieldController {
      * @param name      the name of the field
      * @param labelText the label to display beside the field
      */
-    public ButtonController(Context context, String name, String labelText, LocationListener locationListener) {
-        this(context, name, labelText, false, locationListener);
+    public ButtonController(Context context, String name, String labelText, LocationListener locationListener, boolean enabled) {
+        this(context, name, labelText, false, locationListener, enabled);
         this.context = context;
 
     }
@@ -110,6 +112,12 @@ public class ButtonController extends MyLabeledFieldController {
                 }
             }
         });
+        try {
+
+            editText.setEnabled(isEnabled);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return editText;
     }

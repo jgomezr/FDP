@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.view.ContextThemeWrapper;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -134,6 +135,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 textView.setText(data.getLabel());
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.colorAccent));
 
@@ -143,6 +146,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getLabel());
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TEXT_SIZE);
                 view = textView;
@@ -176,6 +181,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 final MaterialSpinner spinner = new MaterialSpinner(getContext());
                 spinner.setItems(YEARS);
                 spinner.setTag(data.getLabel());
+
                 spinner.setPadding(20, 10, 20, 10);
                 spinner.setTextSize(TEXT_SIZE);
                 spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
@@ -205,6 +211,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 textView.setText(data.getLabel());
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                 view = textView;
@@ -214,6 +222,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
             TextView textView = new TextView(getContext());
             textView.setText(data.getLabel());
+            textView.setMaxLines(2);
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             textView.setPadding(20, 10, 20, 10);
             textView.setTextSize(TEXT_SIZE);
             view = textView;
@@ -233,6 +243,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getV1());
                 textView.setPadding(20, 10, 20, 10);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTextSize(TITLE_TEXT_SIZE);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.colorAccent));
@@ -244,6 +256,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getV1());
                 textView.setPadding(20, 10, 20, 10);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTextSize(TEXT_SIZE);
                 view = textView;
 
@@ -305,6 +319,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 textView.setText(data.getV1());
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                 view = textView;
@@ -314,6 +330,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
             TextView textView = new TextView(getContext());
             textView.setText(data.getV1());
+            textView.setMaxLines(2);
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             textView.setPadding(20, 10, 20, 10);
             textView.setTextSize(TEXT_SIZE);
             view = textView;
@@ -332,6 +350,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
             if (data.getTag().equals(TAG_TITLE_TEXT_VIEW)) {
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getV2());
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
@@ -343,6 +363,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getV2());
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TEXT_SIZE);
                 view = textView;
@@ -405,6 +427,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                 textView.setText(data.getV2());
@@ -416,6 +440,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
             TextView textView = new TextView(getContext());
             textView.setText(data.getV2());
             textView.setPadding(20, 10, 20, 10);
+            textView.setMaxLines(2);
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             textView.setTextSize(TEXT_SIZE);
             view = textView;
         }
@@ -435,6 +461,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 textView.setText(data.getV3());
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.colorAccent));
 
@@ -444,6 +472,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
                 TextView textView = new TextView(getContext());
                 textView.setText(data.getV3());
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TEXT_SIZE);
                 view = textView;
@@ -506,6 +536,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
                 textView.setText(data.getV3());
                 textView.setPadding(20, 10, 20, 10);
                 textView.setTextSize(TITLE_TEXT_SIZE);
+                textView.setMaxLines(2);
+                textView.setEllipsize(TextUtils.TruncateAt.END);
                 textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
                 textView.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                 view = textView;
@@ -516,6 +548,8 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
             TextView textView = new TextView(getContext());
             textView.setText(data.getV3());
             textView.setPadding(20, 10, 20, 10);
+            textView.setMaxLines(2);
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             textView.setTextSize(TEXT_SIZE);
             view = textView;
         }

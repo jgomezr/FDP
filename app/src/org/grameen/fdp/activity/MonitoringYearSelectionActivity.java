@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -30,6 +31,7 @@ import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.ImageUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -54,7 +56,9 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
     TextView villageName;
     TextView landArea;
     TextView lastVisitDate;
-    View syncIndicator;
+    TextView lastSyncDate;
+    ImageView syncIndicator;
+    JSONObject ALL_FARMER_ANSWERS_JSON;
 
     RealPlot PLOT;
 
@@ -67,10 +71,10 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
     RecyclerView plotsRecyclerView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitoring_year_selection);
-        Toolbar toolbar = setToolbar("Farmer Details");
+        Toolbar toolbar = setToolbar(getResources(R.string.farmer_details));
 
 
         name = (TextView) findViewById(R.id.name);
@@ -79,7 +83,8 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
         villageName = (TextView) findViewById(R.id.villageName);
         landArea = (TextView) findViewById(R.id.landSize);
         lastVisitDate = (TextView) findViewById(R.id.lastVisitDate);
-        syncIndicator = findViewById(R.id.sync);
+        lastSyncDate = findViewById(R.id.lastSyncDate);
+        syncIndicator = findViewById(R.id.syncIndicator);
         plotsRecyclerView = (RecyclerView) findViewById(R.id.plotsRecyclerView);
         circleImageView = (CircleImageView) findViewById(R.id.photo);
 
@@ -110,12 +115,47 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
     void initializeViews() {
 
         name.setText(farmer.getFarmerName());
+        try {
+            ALL_FARMER_ANSWERS_JSON = new JSONObject(databaseHelper.getAllAnswersJson(farmer.getId()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        name.setText(farmer.getFarmerName());
         code.setText(farmer.getCode());
         villageName.setText(farmer.getVillage());
         landArea.setText(farmer.getLandArea());
-        lastVisitDate.setText(farmer.getLastVisitDate());
+        if (farmer.getSyncStatus() != null) {
 
-        plot_name_text_view.setText(PLOT.getName());
+            if (farmer.getSyncStatus() == 0) {
+                syncIndicator.setImageResource(R.drawable.ic_sync_problem_black_24dp);
+                syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.cpb_red));
+
+            } else if (farmer.getSyncStatus() == 1) {
+                syncIndicator.setImageResource(R.drawable.ic_check_circle_black_24dp);
+                syncIndicator.setColorFilter(ContextCompat.getColor(this, R.color.colorAccent));
+            }
+        }
+
+
+        try {
+
+            String farmAcre = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalLandSize", ""));
+            String totalUnit = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalAreaUnit", ""));
+
+            landArea.setText(farmAcre + " " + totalUnit);
+
+        } catch (Exception ignored) {
+            //e.printStackTrace();
+
+            landArea.setVisibility(View.GONE);
+
+        }
+
+
+        lastSyncDate.setText(prefs.getString("lastSync", "--"));
+        lastVisitDate.setText(farmer.getLastModifiedDate());
 
 
         Log.d(TAG, "IMAGE URL ###########   " + farmer.getImageUrl() + "");
@@ -124,8 +164,19 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
             Log.d(TAG, "IMAGE URL    " + farmer.getImageUrl() + "");
 
+            circleImageView.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MonitoringYearSelectionActivity.this, ImageViewActivity.class);
+                    intent.putExtra("image_string", farmer.getImageUrl());
+                    startActivity(intent);
 
-            Picasso.with(this).load(farmer.getImageUrl()).resize(200, 200).into(circleImageView);
+                }
+            });
+            initials.setText("");
+
+            //Picasso.with(this).load(farmer.getImageUrl()).resize(200, 200).into(circleImageView);
 
         } else {
 
@@ -149,7 +200,15 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
             drawable.setCornerRadius(1000);
             drawable.setColor(randomColor);
             circleImageView.setBackground(drawable);
+
+            circleImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CustomToast.makeToast(MonitoringYearSelectionActivity.this, "No image to display!", Toast.LENGTH_LONG).show();
+                }
+            });
         }
+
 
 
         setUpListAdapter();
@@ -161,13 +220,13 @@ public class MonitoringYearSelectionActivity extends BaseActivity {
     void setUpListAdapter() {
 
         List<String> YEARS = new ArrayList<>();
-        YEARS.add("Year 1");
-        YEARS.add("Year 2");
-        YEARS.add("Year 3");
-        YEARS.add("Year 4");
-        YEARS.add("Year 5");
-        YEARS.add("Year 6");
-        YEARS.add("Year 7");
+        YEARS.add(getResources(R.string.year_1));
+        YEARS.add(getResources(R.string.year_2));
+        YEARS.add(getResources(R.string.year_3));
+        YEARS.add(getResources(R.string.year_4));
+        YEARS.add(getResources(R.string.year_5));
+        YEARS.add(getResources(R.string.year_6));
+        YEARS.add(getResources(R.string.year_7));
 
 
         ListView listView = findViewById(R.id.list_view);

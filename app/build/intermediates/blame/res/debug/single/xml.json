@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/xml/provider_paths.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/xml/app_restrictions.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/debug/res/xml/app_restrictions.xml"
     },

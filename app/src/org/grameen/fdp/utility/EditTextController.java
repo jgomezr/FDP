@@ -11,6 +11,9 @@ import android.widget.EditText;
 import com.github.dkharrat.nexusdialog.validations.InputValidator;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Set;
 
 /**
@@ -207,8 +210,12 @@ public class EditTextController extends MyLabeledFieldController {
         }
 
 
+        try {
 
-        refresh(editText);
+            refresh(editText);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
 
@@ -217,7 +224,6 @@ public class EditTextController extends MyLabeledFieldController {
             editText.setHelperTextAlwaysShown(true);
 
         }
-
 
 
         editText.addTextChangedListener(new TextWatcher() {
@@ -230,12 +236,54 @@ public class EditTextController extends MyLabeledFieldController {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable s) {
+
+                if (inputType != InputType.TYPE_CLASS_TEXT) {
 
 
-                getModel().setValue(getName(), editText.getText().toString());
+                    double doubleValue = 0;
+                    if (editText.getText() != null) {
+                        try {
+
+                            NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+                            DecimalFormat formatter = (DecimalFormat) nf;
+                            formatter.applyPattern("#,###,###.##");
 
 
+                            doubleValue = Double.parseDouble(editText.getText().toString().replace(",", " "));
+                            getModel().setValue(getName(), formatter.format(doubleValue));
+
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                            getModel().setValue(getName(), editText.getText().toString());
+                        }
+                    }
+                } else
+                    getModel().setValue(getName(), editText.getText().toString());
+
+
+            }
+        });
+
+
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+
+                    double doubleValue = 0;
+                    if (editText.getText() != null) {
+
+                        editText.setText(getModel().getValue(getName()).toString());
+                        /*try {
+                            doubleValue = Double.parseDouble(editText.getText().toString().replace(".", ""));
+                            editText.setText(new DecimalFormat("#,###,###.##").format(doubleValue));
+
+                        } catch (NumberFormatException e) {
+                            e.printStackTrace();
+                        }*/
+                    }
+                }
             }
         });
 
@@ -253,11 +301,15 @@ public class EditTextController extends MyLabeledFieldController {
 
         String valueStr = value != null ? value.toString() : placeholder;
 
-        if (!valueStr.equals(editText.getText().toString()))
-            editText.setHint(valueStr);
+        if (!valueStr.equals(editText.getText().toString())) {
 
 
+            try {
+                editText.setHint(valueStr);
+            } catch (Exception ignored) {
+            }
 
+        }
 
 
     }

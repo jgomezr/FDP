@@ -1,9 +1,12 @@
 package org.grameen.fdp.utility;
 
 
+import android.util.Log;
+
 import org.ocpsoft.prettytime.PrettyTime;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -15,6 +18,7 @@ import java.util.Locale;
 public class DateUtil {
 
 
+    static String TAG = "DateUtil";
     public static String getDateInMillisToString() {
 
         long now = System.currentTimeMillis();
@@ -50,6 +54,60 @@ public class DateUtil {
 
 
     }
+
+
+    public static Date formatDateMMDDYYYYhhmma() {
+
+        String dateString = getFormattedDateMMDDYYYYhhmmaa();
+        //Log.i(TAG, "DATE IS " + dateString);
+
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault());
+
+        Date date = null;
+        try {
+            date = format.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            date = Calendar.getInstance().getTime();
+        }
+
+        return date;
+    }
+
+
+    public static Date stringToDateMMDDYYYYhhmma(String s) {
+
+        Date date = null;
+        try {
+            date = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.ENGLISH).parse(s);
+        } catch (ParseException | NullPointerException e) {
+            e.printStackTrace();
+            date = Calendar.getInstance().getTime();
+        }
+
+        return date;
+    }
+
+
+    public static Date formatDateMMDDYYYY() {
+
+        String dateString = getFormattedDateMMDDYYYY();
+        //Log.i(TAG, "DATE IS " + dateString);
+
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+
+        Date date = null;
+        try {
+            date = format.parse(dateString);
+        } catch (ParseException | NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        return date;
+    }
+
+
+
 
     //3/1/2018 12:20 PM
 
