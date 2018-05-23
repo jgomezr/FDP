@@ -4,6 +4,7 @@
         <item>api</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
+    <attr format="reference" name="floatingSearchViewStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
     <attr format="string" name="title"/>
@@ -396,6 +397,7 @@
             <enum name="mini" value="1"/>
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
+    <declare-styleable name="FloatingSearchView"><attr format="dimension|reference" name="fsv_searchBarWidth"/><attr format="reference" name="fsv_menu"/><attr format="color|reference" name="fsv_contentBackgroundColor"/><attr format="dimension|reference" name="fsv_cornerRadius"/><attr format="reference" name="fsv_icon"/><attr name="logo"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="android:divider"/><attr name="android:dividerHeight"/><attr name="android:hint"/><attr name="popupTheme"/></declare-styleable>
     <declare-styleable name="FontFamily"><attr format="string" name="fontProviderAuthority"/><attr format="string" name="fontProviderPackage"/><attr format="string" name="fontProviderQuery"/><attr format="reference" name="fontProviderCerts"/><attr name="fontProviderFetchStrategy">
             
             <enum name="blocking" value="0"/>
@@ -681,7 +683,7 @@
     <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
     <dimen name="compat_button_padding_vertical_material">4dp</dimen>
     <dimen name="compat_control_corner_material">2dp</dimen>
-    <dimen name="corner_radius_default">4dp</dimen>
+    <dimen name="corner_radius_default">2dp</dimen>
     <dimen name="corner_radius_rounded">25dp</dimen>
     <dimen name="default_column_header_height">55dp</dimen>
     <dimen name="default_padding_bottom">8dp</dimen>
@@ -918,6 +920,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="default_cell">Data [%1$d:%2$d]</string>
     <string name="default_header">Header %1$d</string>
+    <string name="fsv.transition.search.layout">fsv_transition_search_layout</string>
     <string name="hint_prompt">Speak an item name or a number</string>
     <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
     <string name="oauthRedirectURI">testsfdc:///mobilesdk/detect/oauth/done</string>

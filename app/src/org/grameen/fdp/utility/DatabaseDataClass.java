@@ -39,7 +39,7 @@ public class DatabaseDataClass {
 
     static final String QUESTION_CAPTION = "caption";
     static final String QUESTION_DEFAULT_VALUE = "default_value";
-    static final String QUESTION_DISPLAY_ORDER = "display_order";
+    static final String DISPLAY_ORDER = "display_order";
 
     static final String QUESTION_ERROR_TEXT = "error_text";
     static final String QUESTION_HELPER_TEXT = "helper_text";
@@ -316,7 +316,7 @@ public class DatabaseDataClass {
             + QUESTION_NAME + TEXT_TYPE + COMMA
             + QUESTION_CAPTION + TEXT_TYPE + COMMA
             + QUESTION_DEFAULT_VALUE + TEXT_TYPE + COMMA
-            + QUESTION_DISPLAY_ORDER + OTHER_DATA_TYPE + COMMA
+            + DISPLAY_ORDER + OTHER_DATA_TYPE + COMMA
             + QUESTION_HIDE + TEXT_TYPE + COMMA
             + QUESTION_ERROR_TEXT + TEXT_TYPE + COMMA
             + QUESTION_HELPER_TEXT + TEXT_TYPE + COMMA
@@ -336,6 +336,7 @@ public class DatabaseDataClass {
             + DISPLAY_NAME + TEXT_TYPE + COMMA
             + TRANSLATION + TEXT_TYPE + COMMA
             + FORM_TYPE + TEXT_TYPE + COMMA
+            + DISPLAY_ORDER + OTHER_DATA_TYPE + COMMA
             + FORM_NAME + " TEXT " + ")";
 
     static final String CREATE_VILLAGES_TABLE = "CREATE TABLE IF NOT EXISTS " + VILLAGES_TABLE + "("
@@ -525,10 +526,6 @@ public class DatabaseDataClass {
             + COMPLEX_CALCULATION_QUESTION_ID + TEXT_TYPE + COMMA
             + COMPLEX_CALCULATION_NAME + TEXT_TYPE + COMMA
             + COMPLEX_CALCULATION_CONDITION + " TEXT" + ")";
-
-
-
-
 
 
 }

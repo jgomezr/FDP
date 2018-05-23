@@ -20,13 +20,13 @@
 
 
         <com.mancj.materialsearchbar.MaterialSearchBar
+            android:visibility="visible"
             style="@style/MaterialSearchBarLight"
             app:mt_speechMode="false"
             app:mt_hint="Search farmer"
             android:layout_margin="@dimen/spacing_half"
             app:mt_maxSuggestionsCount="10"
             app:mt_navIconEnabled="true"
-            app:mt_placeholder="@string/app_name"
             app:mt_placeholderColor="@android:color/primary_text_light"
             app:mt_navIconTint="@android:color/tertiary_text_light"
             app:mt_searchIconTint="@android:color/tertiary_text_light"
@@ -35,7 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/searchBar" />
-
 
 
         <TextView

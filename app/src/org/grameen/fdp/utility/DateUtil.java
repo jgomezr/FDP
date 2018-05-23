@@ -111,9 +111,7 @@ public class DateUtil {
 
     //3/1/2018 12:20 PM
 
-
     public static String getFormattedTime() {
-
 
         DateFormat df = new SimpleDateFormat(" '@' HH:mm:ss", Locale.US);
         return df.format(Calendar.getInstance().getTime());

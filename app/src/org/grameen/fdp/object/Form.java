@@ -19,6 +19,10 @@ public class Form {
     @SerializedName("Display_Name__c")
     String diaplayName;
 
+
+    @SerializedName("Display_Order__c")
+    Double diaplayOrder;
+
     @SerializedName("Translation__c")
     String translation;
 
@@ -32,6 +36,14 @@ public class Form {
         this.type = type;
     }
 
+
+    public void setDiaplayOrder(Double diaplayOrder) {
+        this.diaplayOrder = diaplayOrder;
+    }
+
+    public Double getDiaplayOrder() {
+        return diaplayOrder;
+    }
 
     public void setLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;

@@ -22,6 +22,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,11 +32,16 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.evrencoskun.tableview.filter.FilterType;
+import com.google.gson.Gson;
 import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.mancj.materialsearchbar.adapter.SuggestionsAdapter;
 import com.wooplr.spotlight.SpotlightConfig;
 import com.wooplr.spotlight.utils.SpotlightSequence;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.adapter.CustomSuggestionsAdapter;
+import org.grameen.fdp.adapter.FarmerListAdapter;
 import org.grameen.fdp.fragment.FarmerListFragment;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.Village;
@@ -61,7 +67,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     Switch toggleTranslation;
 
     ViewPager viewPager;
-
     String TAG = "MainActivity";
     MaterialSearchBar searchBar;
     GridLayoutManager productsGridLayoutManager;
@@ -76,6 +81,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private DrawerLayout drawer;
     private boolean IS_FAB_VISIBLE = false;
     private LinearLayout pager_indicator;
+
+    private FilterType filterType;
+    private CustomSuggestionsAdapter customSuggestionsAdapter;
+    private List<RealFarmer> farmers = new ArrayList<>();
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -103,26 +113,41 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
         viewPager = (ViewPager) findViewById(R.id.view_pager);
 
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-        searchBar = (MaterialSearchBar) findViewById(R.id.searchBar);
-        searchBar.setOnClickListener(new View.OnClickListener() {
+        searchBar = findViewById(R.id.searchBar);
+
+        searchBar.setPlaceHolder("FDP");
+
+        searchBar.setOnSearchActionListener(this);
+        //searchBar.setCardViewElevation(10);
+
+
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        customSuggestionsAdapter = new CustomSuggestionsAdapter(inflater);
+
+        farmers = databaseHelper.getAllFarmers();
+
+        customSuggestionsAdapter.setSuggestions(farmers);
+        customSuggestionsAdapter.setOnItemClickListener(new CustomSuggestionsAdapter.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                searchBar.enableSearch();
+            public void onItemClick(View view, int position) {
+
+
+                Log.i(TAG, "Farmer " + customSuggestionsAdapter.getSuggestions().get(position).getFarmerName() + " clicked!");
+
+                Intent intent = new Intent(MainActivity.this, FarmerDetailsActivity.class);
+                intent.putExtra("farmer", new Gson().toJson(customSuggestionsAdapter.getSuggestions().get(position)));
+                startActivity(intent);
+
             }
         });
-        searchBar.setOnSearchActionListener(this);
-        //searchBar.inflateMenu(R.menu.main);
-        Log.d("LOG_TAG", getClass().getSimpleName() + ": text " + searchBar.getText());
-        searchBar.setCardViewElevation(10);
-        searchBar.setRoundedSearchBarEnabled(false);
 
+        searchBar.setCustomSuggestionAdapter(customSuggestionsAdapter);
 
         searchBar.addTextChangeListener(new TextWatcher() {
             @Override
@@ -132,6 +157,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 Log.d("LOG_TAG", getClass().getSimpleName() + " text changed " + searchBar.getText());
+
+                customSuggestionsAdapter.getFilter().filter(searchBar.getText());
             }
 
             @Override
@@ -175,6 +202,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 if (Utils.checkInternetConnection(MainActivity.this)) {
                     DataDownloadActivity.onNetworkActivityComplete(MainActivity.this);
+                    SyncDownActivity.onNetworkActivityComplete(MainActivity.this);
+
                     startActivity(new Intent(MainActivity.this, DataDownloadActivity.class));
                 }
 
@@ -285,6 +314,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onStart();
         Log.d(TAG, "ON START!");
 
+
     }
 
 
@@ -292,9 +322,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     protected void onStop() {
         super.onStop();
 
-
         Log.d(TAG, "ON STOP!");
 
+        searchBar.disableSearch();
+        searchBar.hideSuggestionsList();
+        searchBar.clearSuggestions();
 
     }
 
@@ -382,16 +414,22 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public void onSearchStateChanged(boolean enabled) {
 
         String s = enabled ? "enabled" : "disabled";
-        Toast.makeText(MainActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "Search " + s, Toast.LENGTH_SHORT).show();
+
+
     }
 
     @Override
     public void onSearchConfirmed(CharSequence text) {
 
-        Toast.makeText(MainActivity.this, "Search confirmed " + text.toString(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "Search confirmed " + text.toString(), Toast.LENGTH_SHORT).show();
+/*
 
-        searchBar.clearSuggestions();
+        hideSoftKeyboard();
+        searchBar.hideSuggestionsList();
         searchBar.disableSearch();
+*/
+
 
     }
 
@@ -413,6 +451,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             setUpAdatper();
         }
 
+        if (customSuggestionsAdapter != null) {
+            searchBar.setCustomSuggestionAdapter(customSuggestionsAdapter);
+
+
+        }
+
     }
 
 
@@ -423,9 +467,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 drawer.openDrawer(Gravity.LEFT);
                 break;
             case MaterialSearchBar.BUTTON_BACK:
-                searchBar.clearSuggestions();
+                searchBar.hideSuggestionsList();
                 searchBar.disableSearch();
 
+                break;
+
+            case MaterialSearchBar.BUTTON_SPEECH:
+                searchBar.hideSuggestionsList();
+                searchBar.disableSearch();
                 break;
 
 

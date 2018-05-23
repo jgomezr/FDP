@@ -17,7 +17,12 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.object.Data;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
+
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 import de.codecrafters.tableview.TableView;
 import de.codecrafters.tableview.toolkit.LongPressAwareTableDataAdapter;
@@ -72,57 +77,6 @@ public class DetailedYearTableViewAdapter extends LongPressAwareTableDataAdapter
             //renderedView = renderColumn0Values(myTableData);
             renderedView = renderCalculatedValuesForYear(myTableData, i1);
 
-/*
-        } else if (i1 == 1) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 2) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 3) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 4) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 5) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 6) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 7) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 8) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 9 ){
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 10) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 11) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        } else if (i1 == 12) {
-            //Todo set Answer Values here
-            renderedView = renderCalculatedValuesForYear(myTableData, i1);
-
-        }*/
-
 
         return renderedView;
     }
@@ -149,9 +103,11 @@ public class DetailedYearTableViewAdapter extends LongPressAwareTableDataAdapter
 
             try {
 
-                Double value = Double.parseDouble(calculationsForTheYears.get(year));
-
-                textView.setText(new DecimalFormat("#,###,###").format(value));
+                Double value = Double.parseDouble(calculationsForTheYears.get(year).replace(",", ""));
+                NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+                DecimalFormat formatter = (DecimalFormat) nf;
+                formatter.applyPattern("#,###,###.##");
+                textView.setText(formatter.format(value));
 
 
             } catch (Exception ignored) {

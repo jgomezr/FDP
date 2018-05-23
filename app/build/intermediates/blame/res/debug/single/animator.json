@@ -1,22 +1,22 @@
 [
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/back_to_menu_rotation.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/animator/back_to_menu_rotation.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/animator/back_to_menu_rotation.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/arc_animator.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/945840a2dd27b2c3156a73ec236d4913/res/animator/arc_animator.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/Spotlight-1.2.3.aar/96bfe1668360e94c1e9794fb1538073a/res/animator/arc_animator.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/back_to_menu_morph.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/animator/back_to_menu_morph.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/animator/back_to_menu_morph.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/menu_to_back_morph.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/animator/menu_to_back_morph.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/animator/menu_to_back_morph.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/animator/menu_to_back_rotation.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/animator/menu_to_back_rotation.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/animator/menu_to_back_rotation.xml"
     }
 ]

@@ -53,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final String TAG = DatabaseHelper.class.getSimpleName();
     static final String DB_NAME = "fdp.db";
-    static final int DB_VERSION = 45;
+    static final int DB_VERSION = 46;
 
     private static DatabaseHelper instance;
     Context _context;
@@ -191,7 +191,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } catch (Exception ignored) {
                 ignored.printStackTrace();
             }
-            contentValues.put(QUESTION_DISPLAY_ORDER, question.getDisplay_Order__c());
+            contentValues.put(DISPLAY_ORDER, question.getDisplay_Order__c());
             contentValues.put(QUESTION_HIDE, question.getHide__c());
 
             contentValues.put(QUESTION_ERROR_TEXT, question.getError_text__c());
@@ -291,6 +291,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
     public boolean deleteQuestion(String id) {
 
         return db.delete(QUESTIONS_TABLE, QUESTION_ID + " = ? ", new String[]{id}) > 0;
@@ -345,7 +346,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
 
                         question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
-                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
                         question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
 
@@ -410,7 +411,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
 
                         question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
-                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
                         question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
                         question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
@@ -479,7 +480,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         question.setName(cursor.getString(cursor.getColumnIndex(QUESTION_NAME)));
 
                         question.setCaption__c(cursor.getString(cursor.getColumnIndex(QUESTION_CAPTION)));
-                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
                         question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
                         question.setError_text__c(cursor.getString(cursor.getColumnIndex(QUESTION_ERROR_TEXT)));
@@ -514,6 +515,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return question;
 
     }
+
 
 
 
@@ -669,7 +671,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         question.setTranslation__c(cursor.getString(cursor.getColumnIndex(QUESTION_TRANSLATION)));
 
-                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(QUESTION_DISPLAY_ORDER)));
+                        question.setDisplay_Order__c(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         question.setDefault_value__c(cursor.getString(cursor.getColumnIndex(QUESTION_DEFAULT_VALUE)));
                         question.setHide__c(cursor.getString(cursor.getColumnIndex(QUESTION_HIDE)));
 
@@ -1482,6 +1484,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     contentValues.put(LAST_MODIFIED_DATE, form.getLastModifiedDate());
                     contentValues.put(FORM_NAME, form.getName().toLowerCase());
                     contentValues.put(DISPLAY_NAME, form.getDiaplayName());
+                    contentValues.put(DISPLAY_ORDER, form.getDiaplayOrder());
                     contentValues.put(TRANSLATION, form.getTranslation());
 
 
@@ -1568,6 +1571,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
+
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         Log.i(TAG, "Form found with value " + form.getName());
@@ -1583,7 +1588,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (cursor != null)
                 cursor.close();
         }
-        return forms;
+        return sortFormsInAscendingOrder(forms);
 
     }
 
@@ -1612,6 +1617,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
 
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
@@ -1633,8 +1639,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 cursor.close();
         }
 
-        return forms;
-
+        return sortFormsInAscendingOrder(forms);
 
     }
 
@@ -1661,6 +1666,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Form form = new Form();
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
+
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
 
@@ -1683,8 +1690,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 cursor.close();
         }
 
-        return forms;
-
+        return sortFormsInAscendingOrder(forms);
 
     }
 
@@ -1718,6 +1724,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
+
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         Log.i(TAG, "Form found with name " + form.getName());
@@ -1753,6 +1761,53 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public Form getFormBasedOnId(String id) {
+
+        Cursor cursor = null;
+        Form form = null;
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + FORM_NAME + "='" + id + "'";
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+
+                        form = new Form();
+                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
+                        form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
+                        form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
+
+                        form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
+                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+                        Log.i(TAG, "Form found with name " + form.getName());
+                        Log.i(TAG, "Form found with display name " + form.getDiaplayName());
+                        Log.i(TAG, "Form found with Translation " + form.getTranslation());
+
+
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+
+            if (cursor != null)
+                cursor.close();
+        }
+
+        return form;
+
+
+    }
+
+
     public Form getFormBasedOnDisplayName(String name) {
 
         Cursor cursor = null;
@@ -1774,6 +1829,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         Log.i(TAG, "Form found with value " + form.getName());
@@ -1828,6 +1884,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
+                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         Log.i(TAG, "Form found with value " + form.getName());
@@ -3331,6 +3388,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     try {
                         return o.compareTo(t1);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    return -1;
+
+                }
+            });
+
+        return objects;
+
+    }
+
+
+    List<Form> sortFormsInAscendingOrder(List<Form> objects) {
+
+        if (objects != null)
+
+            Collections.sort(objects, new Comparator<Form>() {
+                @Override
+                public int compare(Form o, Form t1) {
+
+                    try {
+                        return o.getDiaplayOrder().compareTo(t1.getDiaplayOrder());
 
                     } catch (Exception e) {
                         e.printStackTrace();

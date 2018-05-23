@@ -6,31 +6,31 @@
     <item
         android:id="@+id/sync"
         android:icon="@drawable/ic_cloud_download_black_24dp"
-        android:title="@string/download_resources"/>
+        android:title="@string/download_resources" />
 
 
     <item
         android:id="@+id/sync_farmer"
         android:icon="@drawable/ic_refresh_black_24dp"
-        android:title="@string/upload_farmer_data"/>
+        android:title="@string/upload_farmer_data" />
 
 
     <item
         android:id="@+id/download_farmer_data"
         android:icon="@drawable/ic_file_download_black_24dp"
-        android:title="@string/download_farmer_data"/>
+        android:title="@string/download_farmer_data" />
 
 
 
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_settings_black_24dp"
-        android:title="@string/settings"/>
+        android:title="@string/settings" />
 
     <item
         android:id="@+id/share"
         android:icon="@drawable/ic_menu_share"
-        android:title="@string/share"/>
+        android:title="@string/share" />
 
 
 
@@ -39,7 +39,7 @@
     <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_close_black_24dp"
-        android:title="@string/log_out"/>
+        android:title="@string/log_out" />
 
 
 </menu>

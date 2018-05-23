@@ -206,8 +206,8 @@
     <string name="open">Buka</string>
     <string name="close">Tutup</string>
     <string name="title">Tutup</string>
-    <string name="ipsum" translatable="false">Lorem Ipsum hanyalah teks tiruan dari industri percetakan dan penataan huruf. Lorem Ipsum telah menjadi teks dummy standar industri sejak tahun 1500-an, ketika printer yang tidak dikenal mengambil jenis galai dan mengacaknya untuk membuat buku jenis spesimen. Ia telah bertahan tidak hanya lima abad, tetapi juga lompatan ke pengaturan huruf elektronik, yang pada dasarnya tetap tidak berubah. Itu dipopulerkan pada 1960-an dengan merilis lembaran Letraset yang berisi bagian-bagian Lorem Ipsum, dan baru-baru ini dengan perangkat lunak desktop publishing seperti Aldus PageMaker termasuk versi Lorem Ipsum.</string>
-    <string name="pandl" translatable="false">Halaman Ulasan dan P &amp; L</string>
+    <string name="generic_error">Tidak dapat menyimpan data!</string>
+    <string name="pandl">Tinjau halaman dan P &amp; L</string>
 
 
     //Ignore
@@ -272,7 +272,7 @@
     <string name="add_3_more_points">Untuk menghitung luas, tambahkan 3 poin atau lebih.</string>
     <string name="delete">Menghapus foto</string>
     <string name="delete_photo_rationale">Anda yakin ingin menghapus foto?</string>
-    <string name="click_photo_to_delete">Anda dapat mengklik pada foto untuk menghapus / menghapus</string>
+    <string name="click_photo_to_delete">Anda dapat mengklik pada foto untuk menghapus menghapus</string>
     <string name="no_image_taken">Tidak ada foto yang dipilih.</string>
     <string name="something_went_wrong">Ada yang salah </string>
     <string name="image_options">Silakan pilih satu opsi</string>
@@ -281,12 +281,12 @@
     <string name="save_and_continue">Simpan dan Lanjutkan</string>
     <string name="cancel">Batal</string>
     <string name="take_picture">Mengambil gambar</string>
-    <string name="hello">- Halo./ - Selamat datang!</string>
+    <string name="hello">- Halo! Selamat datang!</string>
     <string name="change_to">Mengubah</string>
     <string name="status_submitted">Perjanjian Disampaikan!</string>
     <string name="status_incomplete">Anda masih bisa melakukan pengeditan</string>
-    <string name="caution">Perhatian!\"</string>
-    <string name="read_only_rational">Setelah dikirimkan dan disinkronkan, Anda tidak dapat melakukan modifikasi lagi. \ N \ nLanjutkan?</string>
+    <string name="caution">Perhatian!</string>
+    <string name="read_only_rational">Setelah dikirimkan dan disinkronkan, Anda tidak dapat melakukan modifikasi lagi.\nLanjutkan?</string>
     <string name="agreement_submitted_and_data_synced">Perjanjian dikirimkan dan data berhasil disinkronkan!</string>
 
     <string name="plot_aos">Pengamatan Adopsi Plot </string>
@@ -360,6 +360,8 @@
     <string name="upload_farmer_data">Unggah data petani</string>
     <string name="share">Bagikan</string>
     <string name="toggle_translation">Alihkan terjemahan</string>
+    <string name="estimated_production_size">Perkiraan ukuran produksi:</string>
+    <string name="lime_needed">Kapur dibutuhkan:</string>
 
 
 </resources>

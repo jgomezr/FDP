@@ -3,7 +3,7 @@
     <string-array name="answer">
         <item name="1">Yes</item>
         <item name="2">No</item>
-     </string-array>
+    </string-array>
     <string-array name="educationLevel">
         <item name="1">Primaire</item>
         <item name="2">Secondaire</item>
@@ -176,6 +176,7 @@
     <string name="error_missing_estimated_production">La production agricole totale ou la production de parcelles n\'ont pas été fournies!</string>
     <string name="error_total_plot_estimated_production">Les parcelles totales estiment que la production est supérieure à la production agricole totale!</string>
     <string name="est_production_size">Estimation de la taille de production</string>
+    <string name="estimated_production_size">Taille de production estimée:</string>
     <string name="family_members">Membres de la famille</string>
     <string name="farm_assessment">Évaluation de ferme</string>
     <string name="farm_result">Résultat de la ferme</string>
@@ -199,6 +200,7 @@
     <string name="for_"> pour </string>
     <string name="full_name_error">S\'il vous plaît entrer Nom complet</string>
     <string name="games">Arcade</string>
+    <string name="generic_error">Impossible de sauvegarder les données!</string>
     <string name="getting_c">Synchroniser toutes les données de calculs</string>
     <string name="getting_cc">Synchroniser toutes les données de calculs complexes</string>
     <string name="getting_data">Obtenir des données</string>
@@ -225,13 +227,13 @@
     <string name="incorrect_no_plots_suffix">Les parcelles ne sont pas égales. \\ nVeuillez vous assurer que toutes les parcelles ont le même nombre de surveillance!</string>
     <string name="info_plot_monitoring">Surveillance de parcelles d\'information</string>
     <string name="invalid_phone_number">Veuillez saisir un numéro de téléphone valide.</string>
-    <string name="ipsum" translatable="false">Lorem Ipsum est simplement un faux texte de l\'industrie de l\'impression et de la composition. Lorem Ipsum a été le texte factice standard de l\'industrie depuis les années 1500, quand une imprimante inconnue a pris une galère de type et l\'a brouillée pour faire un livre de spécimen de type. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles de Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker, y compris des versions de Lorem Ipsum.</string>
     <string name="jan">Jan</string>
     <string name="jul">Juillet</string>
     <string name="jun">Juin</string>
     <string name="labour">Coût de la main d\'oeuvre</string>
     <string name="last_sync">Derniere synchronisation: </string>
     <string name="last_visit">Dernière visite </string>
+    <string name="lime_needed">Citron vert nécessaire:</string>
     <string name="loading">Chargement en cours…</string>
     <string name="location_permission_denied">Cet exemple nécessite une autorisation de localisation pour activer la couche \"Ma position\". Veuillez réessayer et autoriser l\'accès à l\'emplacement. \ NSi l\'autorisation a été définitivement refusée, elle peut être activée à partir de Paramètres système> Applications> \"Démos de l\'API Google Maps\".</string>
     <string name="log_in_facebook">Se connecter avec Facebook</string>
@@ -273,7 +275,7 @@
     <string name="oct">Octobre</string>
     <string name="ok">OK</string>
     <string name="open">Ouvrir</string>
-    <string name="pandl">Page de revue et P &amp; L</string>
+    <string name="pandl">Page de revue et P &amp; L </string>
     <string name="password">Mot de Passe</string>
     <string name="permission_rationale_location">L\'accès au service de localisation est requis pour démontrer la fonction «ma position», qui indique votre position actuelle sur la carte.</string>
     <string name="permission_required">Permission requise</string>

@@ -39,8 +39,10 @@ import org.json.JSONObject;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -120,13 +122,13 @@ public class MonitoringFormFragment extends FormFragment {
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
 
-        MONITORING_PLOT_INFO_SECTION_CONTROLLER = new MyFormSectionController(getContext(), "Monitoring Plot Info");
+        MONITORING_PLOT_INFO_SECTION_CONTROLLER = new MyFormSectionController(getContext(), getString(R.string.info_plot_monitoring));
 
 
         // Add new Questions with data model of Question.class
         // The Question data model takes 2 or more parameters based on the type value
 
-        monitoringPlotInfoQuestions = databaseHelper.getSpecificSetOfQuestions(getString(R.string.info_plot_monitoring));
+        monitoringPlotInfoQuestions = databaseHelper.getSpecificSetOfQuestions("Monitoring Plot Information");
 
             if (!shouldLoadOldValues) {
                 Log.d("MYFORMFRAG", "NO DEFAULT VALUES TO LOAD");
@@ -254,6 +256,7 @@ public class MonitoringFormFragment extends FormFragment {
 
     }
 
+
     public JSONObject getAllAnswersInJSONObject() {
 
 
@@ -295,7 +298,7 @@ public class MonitoringFormFragment extends FormFragment {
                         break;
 
                     case Constants.TYPE_NUMBER_DECIMAL:
-                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
 
                         break;
 
@@ -401,7 +404,7 @@ public class MonitoringFormFragment extends FormFragment {
                     break;
 
                 case Constants.TYPE_NUMBER_DECIMAL:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
+                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled));
 
                     break;
 
@@ -443,9 +446,6 @@ public class MonitoringFormFragment extends FormFragment {
             }
         }
     }
-
-
-
 
     public static void setMyItemSelectedListener(Callbacks.AnItemSelectedListener listener){
 
@@ -774,8 +774,12 @@ public class MonitoringFormFragment extends FormFragment {
     String calculate(String equation) throws ScriptException {
 
         Double value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+        DecimalFormat formatter = (DecimalFormat) nf;
+        formatter.applyPattern("#,###,###.##");
 
-        return (new DecimalFormat("#,###,###.##").format(value));
+
+        return (formatter.format(value));
     }
 
 

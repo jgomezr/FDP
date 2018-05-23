@@ -118,8 +118,10 @@ public class DatePickerController extends MyLabeledFieldController {
                     Calendar calendar = Calendar.getInstance(Locale.getDefault());
                     calendar.setTimeZone(timeZone);
                     calendar.set(year, monthOfYear, dayOfMonth);
-                    getModel().setValue(getName(), calendar.getTime());
-                    editText.setText(displayFormat.format(calendar.getTime()));
+                    String date = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH) + "/" + calendar.get(Calendar.YEAR);
+                    getModel().setValue(getName(), date);
+                    editText.setText(date);
+                    // editText.setText(displayFormat.format(calendar.getTime()));
 
                 }
             }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
@@ -145,7 +147,7 @@ public class DatePickerController extends MyLabeledFieldController {
         if(getModel().getValue(getName()) != null) {
               value = getModel().getValue(getName()).toString();
         }
-        editText.setHint(value != null ? value.substring(0, 19) : "Click to add date");
+        editText.setHint(value != null ? value : "Click to add date");
 
 
     }

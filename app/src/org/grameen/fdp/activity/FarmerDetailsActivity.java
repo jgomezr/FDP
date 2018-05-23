@@ -331,7 +331,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                 //btn.setId(f.getId());
 
                 btn.setText((prefs.getBoolean("toggleTranslation", false)) ? f.getTranslation() : f.getDiaplayName());
-                btn.setTag(f.getType());
+                btn.setTag(f.getName());
 
                  dynamicButtonsLayout.addView(btn, params);
 
@@ -340,13 +340,11 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                     @Override
                     public void onClick(View view) {
 
+                        String formName = btn.getTag().toString();
 
                         Form form;
-                        if (prefs.getBoolean("toggleTranslation", false))
-                            form = databaseHelper.getFormBasedOnTranslation(btn.getText().toString());
-                        else
-                            form = databaseHelper.getFormBasedOnDisplayName(btn.getText().toString());
 
+                        form = databaseHelper.getFormBasedOnName(formName);
 
                         if (form.getName().equalsIgnoreCase(Constants.FAMILY_MEMBERS)) {
 
@@ -396,7 +394,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                                     Intent intent = new Intent(FarmerDetailsActivity.this, FamilyMembersActivity_v2.class);
                                     intent.putExtra("farmer", new Gson().toJson(farmer));
                                     intent.putExtra("familyMembers", familyMembers);
-                                    intent.putExtra("type", f.getType());
+                                    intent.putExtra("type", form.getType());
 
                                     startActivity(intent);
 
@@ -411,7 +409,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                             Intent intent = new Intent(FarmerDetailsActivity.this, Add_EditFarmerDetailsActivity.class);
                             intent.putExtra("farmer", new Gson().toJson(farmer));
                             intent.putExtra("flag", "edit");
-                            intent.putExtra("type", btn.getTag().toString());
+                            intent.putExtra("type", form.getType());
                             intent.putExtra("formLabel", form.getName());
                             startActivity(intent);
                             //finish();

@@ -210,7 +210,7 @@ public class DataDownloadActivity extends SalesforceActivity {
 
 
         String soql =
-                "select LastModifiedDate, id, Name, Caption__c, Default_value__c, Display_Order__c, Error_text__c, Hide__c, Help_Text__c, Max_value__c, Min_value__c, Options__c, Type__c, Translation__c, Related_questions__c, Form__r.Name, Form__r.Display_Name__c, Form__r.Translation__c, Form__r.Id, Form__r.Type__c from fpd_question__c where form__r.Country__r.ISO_code__c = '" + ISO_CODE + "'";
+                "select LastModifiedDate, id, Name, Caption__c, Default_value__c, Display_Order__c, Error_text__c, Hide__c, Help_Text__c, Max_value__c, Min_value__c, Options__c, Type__c, Translation__c, Related_questions__c, Form__r.Name, Form__r.Display_Name__c, Form__r.Display_Order__c, Form__r.Translation__c, Form__r.Id, Form__r.Type__c from fpd_question__c where form__r.Country__r.ISO_code__c = '" + ISO_CODE + "'";
 
         RestRequest restRequest = null;
         try {
@@ -285,12 +285,13 @@ public class DataDownloadActivity extends SalesforceActivity {
                         }
                     } else {
 
+                        progressDialog.dismiss();
                         Log.d(TAG, "THE RESULT IS A FAILURE");
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(DataDownloadActivity.this, R.style.AppDialog);
                         builder.setTitle(getResources(R.string.could_not_connect));
                         builder.setCancelable(false);
-                        builder.setMessage(getResources(R.string.could_not_connect_rationale));
+                        builder.setMessage(getResources(R.string.connection_error));
                         builder.setPositiveButton(getResources(R.string.ok), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -300,6 +301,8 @@ public class DataDownloadActivity extends SalesforceActivity {
 
                             }
                         });
+
+                        builder.show();
 
 
                     }

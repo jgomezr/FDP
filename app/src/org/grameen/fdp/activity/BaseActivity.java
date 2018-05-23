@@ -244,6 +244,7 @@ public class BaseActivity extends AppCompatActivity {
                 return true;
         }
 
+
         return super.onOptionsItemSelected(item);
 
 
@@ -1933,8 +1934,8 @@ public class BaseActivity extends AppCompatActivity {
             value = jsonObject.get(id).toString();
 
 
-        } catch (JSONException e) {
-            e.printStackTrace();
+        } catch (JSONException ignore) {
+            Log.i(TAG, ignore.getMessage());
             value = "--";
         }
 

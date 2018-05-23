@@ -528,7 +528,10 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
             Question iIFDP = databaseHelper.getQuestionByTranslation("Investment in FDP");
             TABLE_DATA_LIST.add(new Data((isTranslation) ?  iIFDP.getTranslation__c() : iIFDP.getCaption__c(), calculationsList, TAG_RESULTS));
+
+
             TOTAL_INVESTMENT_IN_FDP = calculationsList;
+
 
             calculationsList = new ArrayList<>();
 
@@ -654,10 +657,10 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                             final String RecName = values[1];
 
 
-                            if (prefs.getBoolean("toggleTranslation", false))
+                            //if (prefs.getBoolean("toggleTranslation", false))
                                 PLOT_REC = databaseHelper.getRecommendationBasedOnName(RecName);
 
-                            else
+                            if (PLOT_REC == null)
                                 PLOT_REC = databaseHelper.getRecommendationBasedOnTranslationName(RecName);
 
 
@@ -703,7 +706,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                                     @Override
                                     public void run() {
 
-                                        CustomToast.makeToast(PandLActivity.this, "DEBUG: Null recommendation with name " + RecName, Toast.LENGTH_LONG).show();
+                                        CustomToast.makeToast(PandLActivity.this, "DEBUG: Couldn't find recommendation with name " + RecName, Toast.LENGTH_LONG).show();
 
                                     }
                                 });
@@ -722,7 +725,6 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
 
     void getAllFarmerDataValues() {
-
 
         final Question labourQuestion = databaseHelper.getQuestionByTranslation("Labour");
         final Question labourTypeQuestion = databaseHelper.getQuestionByTranslation("Labour type");
@@ -754,7 +756,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                             public void run() {
 
 
-                                CustomToast.makeToast(PandLActivity.this, "Labour question is missing in SF.\nPlease consider adding a new question with translation \"Labour\" and another with translation \"Labour type\" ", Toast.LENGTH_LONG).show();
+                                //CustomToast.makeToast(PandLActivity.this, "Labour question is missing in SF.\nPlease consider adding a new question with translation \"Labour\" and another with translation \"Labour type\" ", Toast.LENGTH_LONG).show();
 
                             }
                         });
@@ -773,7 +775,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                         public void run() {
 
 
-                            CustomToast.makeToast(PandLActivity.this, "No labour type provided!", Toast.LENGTH_LONG).show();
+                            //CustomToast.makeToast(PandLActivity.this, "No labour type provided!", Toast.LENGTH_LONG).show();
 
                         }
                     });
@@ -1238,6 +1240,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
                     prefs.edit().putString(PLOT.getId(), PLOT_RECOMMENDATION.getName()).apply();
 
+
                     TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Replant", null, BUTTON_VIEW));
 
 
@@ -1278,27 +1281,27 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                     else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("Grafting + Extra Soil"))
 
                         TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Grafting + Extra Soil", null, BUTTON_VIEW));
-                } else
-                    runOnUiThread(new Runnable() {
+                } //else
+                   /* runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
 
-                            CustomToast.makeToast(PandLActivity.this, "Missing answer to question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
+                            //CustomToast.makeToast(PandLActivity.this, "Missing answer to question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
 
-        } else
+        } /*else
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
 
 
-                    CustomToast.makeToast(PandLActivity.this, "Missing question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
+                   // CustomToast.makeToast(PandLActivity.this, "Missing question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
 
                 }
             });
-
+*/
 
         TABLE_DATA_LIST.add(new Data("", null, TAG_OTHER_TEXT_VIEW));
 

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +28,11 @@ import org.grameen.fdp.object.Question;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 /**
  * Created by aangjnr on 22/02/2018.
@@ -82,16 +87,16 @@ public class CellViewHolder extends AbstractViewHolder {
     }
 
 
-
-
-    void bindEditTextView(MaterialEditText editText, final Question q, final int rowPosition){
+    void bindEditTextView(final MaterialEditText editText, final Question q, final int rowPosition) {
 
         Log.i("Edittext Cell VH", "NOT NULL");
 
 
         if (q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER))
             editText.setInputType(InputType.TYPE_CLASS_NUMBER);
-        else if (q.getType__c().equalsIgnoreCase(Constants.TYPE_TEXT))
+        else if (q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER_DECIMAL)) {
+            editText.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        } else if (q.getType__c().equalsIgnoreCase(Constants.TYPE_TEXT))
             editText.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
 
 
@@ -114,16 +119,54 @@ public class CellViewHolder extends AbstractViewHolder {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                final char space = ',';
 
                 //q.setDefault_value__c(s.toString());
 
                 if (updateJsonArrayListener != null)
                     updateJsonArrayListener.onItemValueChanged(rowPosition, q.getId(), s.toString());
 
+               /* if(q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER_DECIMAL)) {
+                    // Insert char where needed.
+                    if (s.length() > 0 && (s.length() % 4) == 0) {
+                        char c = s.charAt(s.length() - 1);
+                        // Only if its a digit where there should be a space we insert a space
+                        if (Character.isDigit(c) && !Objects.equals(String.valueOf(c), ".")) {
+                            s.insert(s.length() - 1, String.valueOf(space));
+                        }
+                    }
+
+                }*/
 
             }
         });
+
+
+        if (q.getType__c().equalsIgnoreCase(Constants.TYPE_NUMBER_DECIMAL)) {
+
+            editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+
+                        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+                        DecimalFormat formatter = (DecimalFormat) nf;
+                        formatter.applyPattern("#,###,###.##");
+
+
+                        Double doubleValue = Double.parseDouble(editText.getText().toString().replace(",", ""));
+
+                        editText.setText(formatter.format(doubleValue));
+
+
+                    }
+                }
+            });
+
+        }
+
+
+
 
 
           /* cell_container.getLayoutParams().width = LinearLayout.LayoutParams.WRAP_CONTENT;

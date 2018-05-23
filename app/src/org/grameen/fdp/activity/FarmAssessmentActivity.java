@@ -49,6 +49,7 @@ public class FarmAssessmentActivity extends BaseActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farm_assessment);
+
         farmStatus = findViewById(R.id.farm_status);
 
         farmerName = findViewById(R.id.name);
@@ -68,7 +69,7 @@ public class FarmAssessmentActivity extends BaseActivity {
 
             tableView = findViewById(R.id.tableView);
             tableView.setColumnCount(2);
-            String[] TABLE_HEADERS = {"PLOT NAME", "ASSESSMENT"};
+            String[] TABLE_HEADERS = {getResources(R.string.plot_name), getResources(R.string.farm_assessment)};
             TableColumnWeightModel columnModel = new TableColumnWeightModel(tableView.getColumnCount());
             columnModel.setColumnWeight(0, 1);
             columnModel.setColumnWeight(1, 1);

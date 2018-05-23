@@ -92,6 +92,10 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
     JSONObject PLOT_ANSWERS_JSON;
     Iterator i1;
     private JSONObject FARMING_ECONOMIC_PROFILE_JSON;
+    private Question plotNameQue;
+    private Question plotSizeQue;
+    private Question estProdQue;
+    private Question soilPhQue;
 
 
     @Override
@@ -99,8 +103,19 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_plot_monitoring);
 
-        Question plotSizeQue = databaseHelper.getQuestionByTranslation("Plot Size");
-        Question estProdQue = databaseHelper.getQuestionByTranslation("Estimated production size");
+
+        try {
+            plotNameQue = databaseHelper.getQuestionByTranslation("Plot Name");
+            plotSizeQue = databaseHelper.getQuestionByTranslation("Plot Size");
+
+            estProdQue = databaseHelper.getQuestionByTranslation("Estimated production size");
+            soilPhQue = databaseHelper.getQuestionByTranslation("Soil PH");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            CustomToast.makeToast(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
 
         engine = new ScriptEngineManager().getEngineByName("rhino");
 
@@ -186,6 +201,9 @@ public class AddNewPlotMonitoringActivity extends BaseActivity implements Callba
              value = PLOT_RECOMMENDATION.getName() + ", " + GAPS_RECOMENDATION_FOR_START_YEAR.getName();
             else*/
                 value = PLOT_RECOMMENDATION.getName();
+
+
+            value = (prefs.getBoolean("toggleTranslation", false)) ? PLOT_RECOMMENDATION.getName() : PLOT_RECOMMENDATION.getTranslation();
 
             recommendedIntervention.setText(value);
 

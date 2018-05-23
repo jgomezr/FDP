@@ -3,6 +3,7 @@ package org.grameen.fdp.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.view.ContextThemeWrapper;
 import android.util.Log;
@@ -16,6 +17,7 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 import org.grameen.fdp.R;
 import org.grameen.fdp.object.Data;
 import org.grameen.fdp.object.Question;
+import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.utility.DatabaseHelper;
 
 import java.text.DecimalFormat;
@@ -169,9 +171,20 @@ public class MyTableViewAdapter extends LongPressAwareTableDataAdapter<Data> {
                 final Button button = new Button(newContext);
                 // button.setBackgroundResource(R.drawable.button_background_accent);
 
-                String text = getResources().getString(R.string.change_to) + " " + data.getLabel().split("_")[1];
+                String name = "";
+                try {
+                    Recommendation recommendation = DatabaseHelper.getInstance(context).getRecommendationBasedOnName(data.getLabel().split("_")[1]);
+                    name = (PreferenceManager.getDefaultSharedPreferences(context).getBoolean("toggleTranslation", false)) ? recommendation.getName() : recommendation.getTranslation();
+                    name = getResources().getString(R.string.change_to) + " " + name;
 
-                button.setText(text);
+                } catch (Exception ignored) {
+
+                    name = getResources().getString(R.string.change_to) + " " + data.getLabel().split("_")[1];
+
+                }
+                // String text = getResources().getString(R.string.change_to) + " " + data.getLabel().split("_")[1];
+
+                button.setText(name);
                 // button.setTextColor(ContextCompat.getColor(context, R.color.white));
                 button.setTag(data.getLabel());
                 button.setPadding(20, 10, 20, 10);

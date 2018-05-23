@@ -107,8 +107,6 @@
 
     <string name="getting_data">Getting data</string>
     <string name="sending_data">Uploading records</string>
-
-
     <string name="please_wait">Please wait a moment…</string>
     <string name="network_error">No internet!</string>
     <string name="network_error_rational">You have no internet access! Please connect to a network and try again.</string>
@@ -215,7 +213,7 @@
     <string name="close">Close</string>
     <string name="title">Close</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
-    <string name="pandl" translatable="false"><![CDATA[Review Page and P & L]]></string>
+    <string name="pandl">Review Page and P &amp; L</string>
 
 
     //Ignore
@@ -337,8 +335,6 @@
     <string name="apostrophe_s">\'s </string>
     <string name="currency">Currency:</string>
     <string name="fdp_status">FDP status</string>
-
-
     <string name="no_internet_connection_available">No internet connection available.</string>
 
     <string name="you_can_still_make_edits">You can still make edits to </string>
@@ -350,8 +346,6 @@
     <string name="data">data.</string>
 
     <string name="populating_data">Populating Data</string>
-
-
     <string name="total_maintenance_cost">Total Maintenance Cost</string>
     <string name="total_labour_days">Total Labour Days</string>
     <string name="total_labour_cost">Total Labour Cost</string>
@@ -373,6 +367,8 @@
     <string name="upload_farmer_data">Upload farmer data</string>
     <string name="share">Share</string>
     <string name="toggle_translation">Toggle Translation</string>
+    <string name="estimated_production_size">Estimated production size:</string>
+    <string name="lime_needed">Lime needed:</string>
 
 
 </resources>

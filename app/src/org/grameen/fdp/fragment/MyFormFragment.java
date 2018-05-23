@@ -37,8 +37,10 @@ import org.json.JSONObject;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -419,7 +421,7 @@ public class MyFormFragment extends FormFragment {
                     break;
 
                 case Constants.TYPE_NUMBER_DECIMAL:
-                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ?  q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
+                    formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), q.getDefault_value__c(), true, InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
 
                     break;
 
@@ -547,7 +549,7 @@ public class MyFormFragment extends FormFragment {
                         break;
 
                     case Constants.TYPE_NUMBER_DECIMAL:
-                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
+                        formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_NUMBER_FLAG_DECIMAL, !isEnabled, q.getHelp_Text__c()));
                         //getValue(q);
 
                         break;
@@ -672,7 +674,6 @@ public class MyFormFragment extends FormFragment {
         }
 
     }
-
 
 
 
@@ -961,8 +962,12 @@ public class MyFormFragment extends FormFragment {
     String calculate(String equation) throws ScriptException {
 
         Double value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim());
+        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+        DecimalFormat formatter = (DecimalFormat) nf;
+        formatter.applyPattern("#,###,###.##");
 
-        return (new DecimalFormat("#,###,###.##").format(value));
+
+        return (formatter.format(value));
     }
 
     Boolean compareValues(SkipLogic sl, String newValue) {

@@ -368,7 +368,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButtonGrey"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:padding="@dimen/spacing_normal"
                 app:layout_widthPercent="40%"
                  />
@@ -380,7 +380,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_widthPercent="60%"
-                android:text="Save"
+                android:text="@string/save"
                 android:padding="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
 

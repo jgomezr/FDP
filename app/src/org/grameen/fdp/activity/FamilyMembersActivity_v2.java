@@ -25,6 +25,7 @@ import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
 import org.grameen.fdp.utility.TableViewListener;
+import org.grameen.fdp.utility.Utils;
 import org.grameen.fdp.viewholder.CellViewHolder;
 import org.grameen.fdp.viewholder.CheckBoxViewHolder;
 import org.grameen.fdp.viewholder.SpinnerViewHolder;
@@ -70,6 +71,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     Question familyMembersQuestion;
 
 
+    int SCROLL_POSITION = 3;
     RealFarmer farmer;
 
     List<Question> INITIALIZED_QUESTIONS;
@@ -99,6 +101,7 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         tableView = findViewById(R.id.table_view);
 
+
         Log.d("ACTION TYPE", prefs.getString("flag", ""));
         if (prefs.getString("flag", "").equals(Constants.MONITORING)) {
 
@@ -123,6 +126,56 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
         INITIALIZED_QUESTIONS = databaseHelper.getSpecificSetOfQuestions(Constants.FAMILY_MEMBERS);
 
         COLUMN_SIZE = INITIALIZED_QUESTIONS.size();
+
+
+        findViewById(R.id.scrollRight).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                System.out.println();
+                Log.i(TAG, "********************************");
+                Log.i(TAG, "SCROLL RIGHT POSITION = " + SCROLL_POSITION);
+                Log.i(TAG, "********************************");
+                System.out.println();
+
+
+                if (SCROLL_POSITION >= COLUMN_SIZE + 1) {
+                    tableView.scrollToColumnPosition(COLUMN_SIZE - 1);
+
+                    SCROLL_POSITION = 0;
+                } else {
+                    tableView.scrollToColumnPosition(SCROLL_POSITION);
+                    SCROLL_POSITION += 3;
+
+
+                }
+
+
+            }
+        });
+
+
+        findViewById(R.id.scrollLeft).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (SCROLL_POSITION > 3) {
+                    SCROLL_POSITION -= 3;
+                    tableView.scrollToColumnPosition(SCROLL_POSITION);
+
+                } else {
+                    tableView.scrollToColumnPosition(0);
+
+                }
+
+                System.out.println();
+                Log.i(TAG, "********************************");
+                Log.i(TAG, "SCROLL LEFT POSITION = " + SCROLL_POSITION);
+                Log.i(TAG, "********************************");
+                System.out.println();
+
+            }
+        });
 
         try {
             ROW_SIZE = Integer.parseInt(getIntent().getStringExtra("familyMembers"));

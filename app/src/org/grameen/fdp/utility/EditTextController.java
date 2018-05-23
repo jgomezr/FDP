@@ -238,8 +238,7 @@ public class EditTextController extends MyLabeledFieldController {
             @Override
             public void afterTextChanged(Editable s) {
 
-                if (inputType != InputType.TYPE_CLASS_TEXT) {
-
+                if (inputType == InputType.TYPE_NUMBER_FLAG_DECIMAL) {
 
                     double doubleValue = 0;
                     if (editText.getText() != null) {
@@ -250,7 +249,7 @@ public class EditTextController extends MyLabeledFieldController {
                             formatter.applyPattern("#,###,###.##");
 
 
-                            doubleValue = Double.parseDouble(editText.getText().toString().replace(",", " "));
+                            doubleValue = Double.parseDouble(editText.getText().toString().replace(",", ""));
                             getModel().setValue(getName(), formatter.format(doubleValue));
 
                         } catch (NumberFormatException e) {
@@ -260,9 +259,8 @@ public class EditTextController extends MyLabeledFieldController {
                     }
                 } else
                     getModel().setValue(getName(), editText.getText().toString());
-
-
             }
+
         });
 
 

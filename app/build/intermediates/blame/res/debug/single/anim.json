@@ -1,23 +1,23 @@
 [
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_fade_out.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/alpha.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/anim/alpha.xml"
     },
     {
-        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/fade_in_left.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/anim/fade_in_left.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/anim/fade_in_left.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_popup_enter.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_popup_enter.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/fade_out.xml",
@@ -25,7 +25,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_popup_exit.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/fade_in_text.xml",
@@ -45,7 +45,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/res/anim/design_snackbar_out.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/ec7b1cdbb8b3e259e6d1a4ef6a0cee27/res/anim/design_snackbar_out.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/grow_in.xml",
@@ -53,7 +53,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/tooltip_exit.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/tooltip_exit.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/translate.xml",
@@ -61,19 +61,19 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_slide_out_bottom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/res/anim/design_snackbar_in.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/ec7b1cdbb8b3e259e6d1a4ef6a0cee27/res/anim/design_snackbar_in.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/fade_in_right.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/anim/fade_in_right.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/anim/fade_in_right.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_slide_out_top.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_slide_out_top.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/slide_out_left.xml",
@@ -81,7 +81,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/res/anim/design_bottom_sheet_slide_in.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/ec7b1cdbb8b3e259e6d1a4ef6a0cee27/res/anim/design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/pop_down.xml",
@@ -89,7 +89,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/220ee22b6f8f8fb94afb2f71ee28dd3f/res/anim/design_bottom_sheet_slide_out.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/ec7b1cdbb8b3e259e6d1a4ef6a0cee27/res/anim/design_bottom_sheet_slide_out.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/zoom_in.xml",
@@ -97,27 +97,23 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/tooltip_enter.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/tooltip_enter.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_fade_in.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_slide_in_top.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/pop_up.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/anim/pop_up.xml"
-    },
-    {
-        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/animation_localization_activity_transition_out.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/localizationactivity-1.2.2.aar/8676c08c2df295a459696250f2ca82ba/res/anim/animation_localization_activity_transition_out.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/right_slide.xml",
@@ -133,7 +129,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/c341a165bdd6e63a7f4b70f320b9343a/res/anim/abc_slide_in_bottom.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/e46e019efb39447dc262a7770db0a3ef/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/bounce.xml",
@@ -145,11 +141,7 @@
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/fade_out_left.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.5.aar/8cd8f744ecbb2de4518703f1f2df317d/res/anim/fade_out_left.xml"
-    },
-    {
-        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/animation_localization_activity_transition_in.xml",
-        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/localizationactivity-1.2.2.aar/8676c08c2df295a459696250f2ca82ba/res/anim/animation_localization_activity_transition_in.xml"
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/MaterialSearchBar-0.7.6.aar/5d943e73d914d1dd128a43e49cd17ff5/res/anim/fade_out_left.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/anim/grow_out.xml",

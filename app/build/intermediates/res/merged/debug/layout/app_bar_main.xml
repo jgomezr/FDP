@@ -12,6 +12,18 @@
         android:orientation="vertical"
         >
 
+
+
+        <LinearLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/custom_toolbar"/>
+
+        </LinearLayout>
+
+
         <RelativeLayout
             android:layout_below="@+id/toolbarLayout"
             android:orientation="vertical"
@@ -86,17 +98,6 @@
 
 
         </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/toolbarLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <include layout="@layout/custom_toolbar"/>
-
-        </LinearLayout>
-
-
 
 
         <LinearLayout

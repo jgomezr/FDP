@@ -284,30 +284,54 @@ public class MapActivity extends BaseActivity {
 
         locationListener = new android.location.LocationListener() {
             @Override
-            public void onLocationChanged(Location location) {
-
+            public void onLocationChanged(final Location location) {
                 Log.i(TAG, "^^^^^^^^^^ LOCATION CHANGED ^^^^^^^^^^^^");
 
-                LatLng newLL = new LatLng(location.getLatitude(), location.getLongitude());
-                mAdapter.addPoint(newLL);
-                addPoint.setEnabled(true);
-                progressDialog.dismiss();
-                hasCalculated = false;
 
-                if(latLngs.size() > 0) {
-                    if(findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
-                    findViewById(R.id.placeHolder).setVisibility(View.GONE);
+                String msg = "Updated Location " + "\n" +
+                        "Latitude : " + Double.toString(location.getLatitude()) + "\n" +
+                        "Longitude : " + Double.toString(location.getLongitude()) + "\n" +
+                        "Accuracy : " + location.getAccuracy() + " meters ";
+                //"Altitude : "+mCurrentLocation.getAltitude()+" high ";
+                //Toast.makeText(CustomerMapActivity.this, msg, Toast.LENGTH_LONG).show();
 
-                }
 
-                if(latLngs.size() > 2) {
-                    calculateArea.setEnabled(true);
+                showAlertDialog(true, "Are you sure?", msg, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                }
-                else {
-                    calculateArea.setEnabled(false);
+                        dialog.dismiss();
 
-                }
+                        LatLng newLL = new LatLng(location.getLatitude(), location.getLongitude());
+                        mAdapter.addPoint(newLL);
+                        addPoint.setEnabled(true);
+                        progressDialog.dismiss();
+                        hasCalculated = false;
+
+                        if (latLngs.size() > 0) {
+                            if (findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
+                                findViewById(R.id.placeHolder).setVisibility(View.GONE);
+
+                        }
+
+                        if (latLngs.size() > 2) {
+                            calculateArea.setEnabled(true);
+
+                        } else {
+                            calculateArea.setEnabled(false);
+
+                        }
+
+
+                    }
+                }, "YES, CONTINUE", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }, "NO, CANCEL", 0);
+
+
 
 
             }
@@ -338,6 +362,7 @@ public class MapActivity extends BaseActivity {
 
 
     void computeAreaInSquareMeters() {
+
 
             AREA_OF_PLOT = SphericalUtil.computeArea(latLngs);
             Log.d(TAG, "computeAreaInSquareMeters " + AREA_OF_PLOT);
@@ -396,7 +421,9 @@ public class MapActivity extends BaseActivity {
 
 
             hasCalculated = true;
- }
+
+
+    }
 
 
     double convertToHectres(Double valueInSquareMetres) {
@@ -421,8 +448,8 @@ public class MapActivity extends BaseActivity {
         if (GpsStatus) {
 
             Criteria criteria = new Criteria();
-            criteria.setAccuracy(Criteria.ACCURACY_COARSE);
-            criteria.setPowerRequirement(Criteria.POWER_LOW);
+            criteria.setAccuracy(Criteria.ACCURACY_FINE);
+            criteria.setPowerRequirement(Criteria.POWER_HIGH);
             criteria.setAltitudeRequired(false);
             criteria.setBearingRequired(false);
             criteria.setSpeedRequired(false);

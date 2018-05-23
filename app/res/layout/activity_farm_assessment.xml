@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Farmer Name:"
+                android:text="@string/farmer_name"
                  android:layout_marginRight="@dimen/spacing_half"
                 android:textColor="@color/text_black_87"
                 />
@@ -64,7 +64,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Farmer Code:"
+                android:text="@string/farmer"
                 android:layout_marginRight="@dimen/spacing_half"
 
                 />
@@ -94,7 +94,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Farm Results"
+            android:text="@string/farm_result"
             android:layout_marginRight="@dimen/spacing_half"
             android:textColor="@color/text_black_87"
             />
@@ -244,7 +244,7 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:theme="@style/PrimaryButtonGrey"
-            android:text="Back"
+            android:text="@string/back"
             android:padding="@dimen/spacing_normal"
             />
 
@@ -256,7 +256,7 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:theme="@style/PrimaryButtonGrey"
-            android:text="Save"
+            android:text="@string/save"
             android:layout_marginLeft="@dimen/spacing_normal"
             android:padding="@dimen/spacing_normal"
             />
@@ -269,13 +269,14 @@
             android:layout_weight="3"
             android:layout_height="wrap_content"
             android:theme="@style/PrimaryButtonAccent"
-            android:text="Submit agreement"
+            android:text="@string/submit"
             android:padding="@dimen/spacing_normal"
             android:layout_marginLeft="@dimen/spacing_normal"
 
             />
 
         </LinearLayout>
+
     </LinearLayout>
 
 

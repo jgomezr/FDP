@@ -205,8 +205,8 @@
     <string name="open">Ouvrir</string>
     <string name="close">Fermer</string>
     <string name="title">Fermer</string>
-    <string name="ipsum" translatable="false">Lorem Ipsum est simplement un faux texte de l\'industrie de l\'impression et de la composition. Lorem Ipsum a été le texte factice standard de l\'industrie depuis les années 1500, quand une imprimante inconnue a pris une galère de type et l\'a brouillée pour faire un livre de spécimen de type. Il a survécu non seulement cinq siècles, mais aussi le saut dans la composition électronique, demeurant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles de Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker, y compris des versions de Lorem Ipsum.</string>
-    <string name="pandl">Page de revue et P &amp; L</string>
+    <string name="pandl">Page de revue et P &amp; L </string>
+    <string name="generic_error">Impossible de sauvegarder les données!</string>
 
 
     //Ignore
@@ -363,5 +363,7 @@
     <string name="upload_farmer_data">télécharger des données sur les agriculteurs</string>
     <string name="share">Partager</string>
     <string name="toggle_translation">Toggle Traduction</string>
+    <string name="estimated_production_size">Taille de production estimée:</string>
+    <string name="lime_needed">Citron vert nécessaire:</string>
 
 </resources>
