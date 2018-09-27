@@ -77,7 +77,7 @@ public class TimePickerController extends MyLabeledFieldController {
     protected View createFieldView() {
         final EditText editText = new EditText(getContext());
         editText.setId(editTextId);
-
+        editText.setContentDescription(getName());
         editText.setSingleLine(true);
         editText.setInputType(InputType.TYPE_CLASS_DATETIME);
         editText.setKeyListener(null);

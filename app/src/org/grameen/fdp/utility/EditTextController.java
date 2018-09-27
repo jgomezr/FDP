@@ -195,6 +195,7 @@ public class EditTextController extends MyLabeledFieldController {
         editText.setId(editTextId);
         editText.setFloatingLabel(MaterialEditText.FLOATING_LABEL_NONE);
 
+        editText.setContentDescription(getName());
 
         editText.setSingleLine(!isMultiLine());
         editText.setInputType(inputType);

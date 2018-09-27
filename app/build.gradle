@@ -6,18 +6,25 @@ dependencies {
 
 android {
   compileSdkVersion 27
-  buildToolsVersion '26.0.2'
+  buildToolsVersion '27.0.3'
 
   defaultConfig {
     applicationId "org.grameen.fdp"
     minSdkVersion 19
     targetSdkVersion 27
-    versionCode 2
-    versionName "1.1"
+    versionCode 5
+    versionName "1.5"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     multiDexEnabled true
   }
 
+
+    lintOptions {
+        checkReleaseBuilds true
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 
 
   allprojects {
@@ -69,46 +76,46 @@ android {
 
 
   dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
       exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.android.support:design:27.0.2'
-    compile 'com.android.support:cardview-v7:27.0.2'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.android.support:preference-v14:27.0.2'
-    compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.2.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:preference-v14:27.1.1'
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.2.3'
 
-    compile 'com.github.dkharrat.nexusdialog:nexusdialog:0.4.2'
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.android.support:percent:27.0.2'
-    compile 'com.jaredrummler:material-spinner:1.2.1'
-    compile 'br.com.mauker.materialsearchview:materialsearchview:1.2.2'
-    compile 'com.github.mancj:MaterialSearchBar:0.7.6'
+    implementation 'com.github.dkharrat.nexusdialog:nexusdialog:0.4.2'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.android.support:percent:27.1.1'
+    implementation 'com.jaredrummler:material-spinner:1.2.1'
+    implementation 'br.com.mauker.materialsearchview:materialsearchview:1.2.3'
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.6'
 
-    compile 'com.github.renaudcerrato:FloatingSearchView:1.0.1'
+    implementation 'com.github.renaudcerrato:FloatingSearchView:1.0.1'
 
 
 
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'de.codecrafters.tableview:tableview:2.8.0'
-    compile 'com.google.maps.android:android-maps-utils:0.5+'
-    compile 'io.apisense:rhino-android:1.0'
-    compile 'com.github.wooplr:Spotlight:1.2.3'
-    compile 'com.android.volley:volley:1.1.0'
-    compile 'com.google.android.gms:play-services-maps:10.2.0'
-    compile 'com.google.android.gms:play-services-location:10.2.0'
-    compile 'com.rengwuxian.materialedittext:library:2.1.4'
-    compile 'com.evrencoskun.library:tableview:0.8.6'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'de.codecrafters.tableview:tableview:2.8.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'io.apisense:rhino-android:1.0'
+    implementation 'com.github.wooplr:Spotlight:1.2.3'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.android.gms:play-services-maps:10.2.0'
+    implementation 'com.google.android.gms:play-services-location:10.2.0'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.evrencoskun.library:tableview:0.8.6'
 /*
     compile 'com.akexorcist:localizationactivity:1.2.2'
 */
 
     dependencies {
-      compile ('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+      implementation ('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
         transitive = true
       }
     }

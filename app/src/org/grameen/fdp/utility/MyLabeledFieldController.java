@@ -180,6 +180,7 @@ public abstract class MyLabeledFieldController extends MyFormElementController {
             label.setVisibility(View.GONE);
         } else {
             label.setText(labelText);
+            label.setContentDescription(getName());
         }
 
         FrameLayout container = (FrameLayout) view.findViewById(R.id.field_container);

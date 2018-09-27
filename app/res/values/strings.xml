@@ -369,6 +369,7 @@
     <string name="toggle_translation">Toggle Translation</string>
     <string name="estimated_production_size">Estimated production size:</string>
     <string name="lime_needed">Lime needed:</string>
+    <string name="search_title">Search</string>
 
 
 </resources>

@@ -149,7 +149,7 @@ public class SelectionController extends MyLabeledFieldController {
 
 
         Spinner spinnerView = new Spinner(getContext());
-
+        spinnerView.setContentDescription(getName());
         spinnerView.setId(spinnerId);
         spinnerView.setPrompt(prompt);
          ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, items) {
@@ -231,7 +231,6 @@ public class SelectionController extends MyLabeledFieldController {
 
         if(helperText != null && !helperText.equalsIgnoreCase("null") && !helperText.equalsIgnoreCase("")) {
 
-            Log.i("SELECTABLE", "HAS HELPER TEXT !!!!!!!!!!!!!!!!!!" );
             final ImageView imageView = new ImageView(getContext());
             imageView.setImageResource(R.drawable.ic_info_grey_400_18dp);
             imageView.setPadding(4, 4, 4, 4);

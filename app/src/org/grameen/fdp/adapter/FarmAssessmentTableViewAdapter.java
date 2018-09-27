@@ -151,7 +151,7 @@ public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapt
                 return R.color.non_critical_fail;
 
             default:
-                return R.color.gray_50;
+                return R.color.divider_2;
         }
 
     }

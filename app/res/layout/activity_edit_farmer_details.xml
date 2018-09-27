@@ -136,6 +136,7 @@
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 style="@style/TextAppearance.AppCompat.Medium"
+                android:background="@drawable/border_background"
 
                 />
 
@@ -169,7 +170,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:maxLines="1"
-                    android:textColor="@android:color/primary_text_light" />
+                    android:textColor="@android:color/primary_text_light"
+                    android:background="@drawable/border_background" />
 
 
 

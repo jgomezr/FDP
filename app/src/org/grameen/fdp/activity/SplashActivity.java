@@ -25,7 +25,6 @@ import static java.lang.Thread.sleep;
 
 public class SplashActivity extends AppCompatActivity {
 
-    TextView text;
     ImageView image1;
     LinearLayout textLayout;
     String TAG = SplashActivity.class.getSimpleName();
@@ -52,7 +51,6 @@ public class SplashActivity extends AppCompatActivity {
         textLayout = (LinearLayout) findViewById(R.id.ll1);
 
         image1 = (ImageView) findViewById(R.id.image_view1);
-        text = (TextView) findViewById(R.id.text_1);
 
        /* image1.setTranslationY(Utils.getScreenHeight(this));
         image2.setTranslationY(image1.getHeight());*/

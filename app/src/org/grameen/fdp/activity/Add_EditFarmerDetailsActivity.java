@@ -96,6 +96,8 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
     String[] genders = {"Male", "Female"};
     private boolean newDataSaved = false;
     FragmentManager fm;
+
+
     public static void createNoMediaFile() {
         FileOutputStream out = null;
 

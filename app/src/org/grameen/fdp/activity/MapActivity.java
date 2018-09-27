@@ -196,6 +196,10 @@ public class MapActivity extends BaseActivity {
 
                 }else{
 
+
+                    if (progressDialog.isShowing())
+                        progressDialog.dismiss();
+
                     Double inHectares = convertToHectres(AREA_OF_PLOT);
                     Double inAcres = convertToAcres(AREA_OF_PLOT);
 
@@ -363,6 +367,9 @@ public class MapActivity extends BaseActivity {
 
     void computeAreaInSquareMeters() {
 
+        if (progressDialog.isShowing())
+            progressDialog.dismiss();
+
 
             AREA_OF_PLOT = SphericalUtil.computeArea(latLngs);
             Log.d(TAG, "computeAreaInSquareMeters " + AREA_OF_PLOT);
@@ -479,5 +486,31 @@ public class MapActivity extends BaseActivity {
     }
 
 
+    @Override
+    protected void onStop() {
 
+        StringBuilder builder = new StringBuilder();
+
+        //Todo save latLngs
+        for (LatLng latLng : latLngs) {
+
+            if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
+                builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
+            else
+                builder.append(latLng.latitude).append(",").append(latLng.longitude);
+
+        }
+
+        if (databaseHelper.editPlotGPS(plot.getId(), builder.toString())) {
+
+            CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
+
+        } else {
+
+            CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
+
+        }
+
+        super.onStop();
+    }
 }

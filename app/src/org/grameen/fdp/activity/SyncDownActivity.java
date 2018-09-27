@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.WindowManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -103,6 +104,8 @@ public class SyncDownActivity extends SalesforceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 
         databaseHelper = DatabaseHelper.getInstance(this);
 
@@ -404,7 +407,6 @@ public class SyncDownActivity extends SalesforceActivity {
 //        showDialog(getResources(R.string.generic_error), getResources(R.string.connection_error), true);
 
     }
-
 
     void getFarmerData(String submissionId) {
 

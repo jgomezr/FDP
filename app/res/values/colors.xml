@@ -106,6 +106,8 @@
     <color name="text_white_87">#deFFFFFF</color>
     <color name="text_white_75">#87ececec</color>
     <color name="drawable_grey">#555b55</color>
+    <color name="black_50">#555b55</color>
+
     <color name="viewBg">#f1f5f8</color>
     <color name="customButtonNormal">#00ececec</color>
     <color name="customButtonPressed">#5acacaca</color>
@@ -126,22 +128,22 @@
     <array name="recommendations_colors">
         <item name="1" type="color">@color/colorAccent</item>
         <item name="2" type="color">#9288c9</item>
-        <item name="3" type="color">#fc6177</item>
+        <item name="3" type="color">#d76b7b</item>
         <item name="4" type="color">#3b9aee</item>
         <item name="5" type="color">#9bc53d</item>
         <item name="6" type="color">#f4a261</item>
         <item name="7" type="color">#1ed2bb</item>
         <item name="8" type="color">#778da9</item>
          <item name="10" type="color">#9f9fed</item>
-        <item name="13" type="color">#61f4ad</item>
-        <item name="14" type="color">#d2481e</item>
+        <item name="13" type="color">#98ecb2</item>
+        <item name="14" type="color">#ef8362</item>
         <item name="15" type="color">#b97c9c</item>
-        <item name="16" type="color">#ec494f</item>
+        <item name="16" type="color">#ef686d</item>
         <item name="17" type="color">#5ec9dc</item>
-        <item name="18" type="color">#13917a</item>
+        <item name="18" type="color">#3eae99</item>
         <item name="19" type="color">#d29547</item>
         <item name="20" type="color">#404040</item>
-        <item name="21" type="color">#603eb1</item>
+        <item name="21" type="color">#8263cc</item>
 
     </array>
 

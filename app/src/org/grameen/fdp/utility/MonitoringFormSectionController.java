@@ -173,6 +173,7 @@ public class MonitoringFormSectionController extends MyFormElementController {
         if (!TextUtils.isEmpty(getTitle())) {
             view = layoutInflater.inflate(R.layout.monitoring_form_section, null);
             view.setOnClickListener(null);
+            view.setContentDescription(getName());
             view.setOnLongClickListener(null);
             view.setLongClickable(false);
 

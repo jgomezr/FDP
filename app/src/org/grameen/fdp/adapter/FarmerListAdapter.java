@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.grameen.fdp.R;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.utility.Constants;
@@ -75,11 +77,14 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
         RealFarmer farmer = farmers.get(position);
 
 
-        if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals(""))
+        if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
             viewHolder.photo.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
             //Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
+            viewHolder.setIsRecyclable(false);
+        }
 
         else {
+            viewHolder.setIsRecyclable(true);
 
             try {
                 String[] valueArray = farmer.getFarmerName().split(" ");
@@ -139,9 +144,8 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
 
     @Override
     public long getItemId(int position) {
-        return super.getItemId(position);
 
-
+        return position;
     }
 
     public void setOnItemClickListener(final FarmerListAdapter.OnItemClickListener mItemClickListener) {

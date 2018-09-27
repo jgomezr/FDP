@@ -56,6 +56,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -301,6 +303,7 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
+
     boolean hasPermissions(Context context, String permission) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null) {
 
@@ -360,7 +363,7 @@ public class BaseActivity extends AppCompatActivity {
 
     Double calculateDouble(String equation) {
         Log.i(TAG, "Evaluating " + equation);
-        Double value = 0.0;
+        Double value;
         try {
             value = (Double) new ScriptEngineManager().getEngineByName("rhino").eval(equation.trim().replace(",", ""));
         } catch (Exception e) {
@@ -1658,6 +1661,15 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
+
+
     public boolean checkIfFarmProductionCorresponds(String farmerId) {
 
         Question estProdQue = databaseHelper.getQuestionByTranslation("Estimated production size");
@@ -1669,7 +1681,7 @@ public class BaseActivity extends AppCompatActivity {
         try {
 
             JSONObject farmingEconomicProfileJson = new JSONObject(databaseHelper.getAllAnswersJson(farmerId));
-            totalFarmProduction = Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString().replace(",", ""));
+            totalFarmProduction = round(Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString().replace(",", "")), 2);
             totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalWeightUnit", ""));
 
         } catch (Exception e) {
@@ -1704,7 +1716,7 @@ public class BaseActivity extends AppCompatActivity {
 
         stringBuilder.append("0");
 
-        Double totalPlotsProduction = calculateDouble(stringBuilder.toString());
+        Double totalPlotsProduction = round(calculateDouble(stringBuilder.toString()), 2);
 
         //Log.i(TAG, "$$$$$$$$$$$$$    TOTAL UNITS " + totalUnit + " AND TOTAL WEIGHTS " + stringUnitBuilder.toString());
 
@@ -1757,7 +1769,7 @@ public class BaseActivity extends AppCompatActivity {
         try {
 
 
-            farmAcre = Double.parseDouble(ALL_FARMER_ANSWERS_JSON.get(farmSizeForCocoaQuestion.getId()).toString().replace(",", ""));
+            farmAcre = round(Double.parseDouble(ALL_FARMER_ANSWERS_JSON.get(farmSizeForCocoaQuestion.getId()).toString().replace(",", "")), 2);
 
             // totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalAreaUnit", ""));
 
@@ -1791,7 +1803,12 @@ public class BaseActivity extends AppCompatActivity {
         }
         stringBuilder.append("0");
 
-        Double totalSizes = calculateDouble(stringBuilder.toString());
+        Double totalSizes = round(calculateDouble(stringBuilder.toString()), 2);
+
+
+
+
+
 
 
         Log.i(TAG, "$$$$$$$$$$$$$    TOTAL SIZES " + farmAcre + " AND TOTAL PLOTS SIZES " + totalSizes);
@@ -1806,7 +1823,6 @@ public class BaseActivity extends AppCompatActivity {
             } else if (totalSizes < farmAcre) {
 
                 booleanValue = false;
-
                 correspondingMessage = getResources(R.string.ensure_farm_acre_equal);
                 CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
 
@@ -1814,7 +1830,6 @@ public class BaseActivity extends AppCompatActivity {
         } else {
 
             correspondingMessage = getResources(R.string.fill_in_plot_size_values);
-
             booleanValue = false;
             CustomToast.makeToast(this, correspondingMessage, Toast.LENGTH_LONG).show();
 
@@ -1927,13 +1942,9 @@ public class BaseActivity extends AppCompatActivity {
 
     String getValue(String id, JSONObject jsonObject) {
         String value = null;
-
-
         try {
 
             value = jsonObject.get(id).toString();
-
-
         } catch (JSONException ignore) {
             Log.i(TAG, ignore.getMessage());
             value = "--";

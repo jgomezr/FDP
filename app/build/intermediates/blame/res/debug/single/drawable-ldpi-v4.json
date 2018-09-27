@@ -4,6 +4,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/generated/res/pngs/debug/drawable-ldpi/ic_settings_black_24dp.png"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_arrow_down_24dp.png",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/preference-v7-27.1.1.aar/3b646ddac6f9a7ffff21339c28aa9f51/res/drawable-ldpi-v4/ic_arrow_down_24dp.png"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_keyboard_arrow_left_white_24dp.png",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_left_white_24dp.png"
     },

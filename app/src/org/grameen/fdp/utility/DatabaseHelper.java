@@ -1593,6 +1593,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
     public List<Form> getAllMonitoringForms() {
 
         List<Form> forms = null;
@@ -4521,6 +4522,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public boolean addActivityPlusInput(ActivitiesPlusInputs activitiesPlusInputs) {
+
+
         try {
 
             ContentValues contentValues = new ContentValues();

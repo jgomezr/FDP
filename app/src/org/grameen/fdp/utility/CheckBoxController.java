@@ -141,6 +141,7 @@ public class CheckBoxController extends MyLabeledFieldController {
         for (int index = 0; index < nbItem; index++) {
             checkBox = new CheckBox(getContext());
             checkBox.setText(items.get(index));
+            checkBox.setContentDescription(getName());
             checkBox.setId(CHECKBOX_ID + index);
             checkBox.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
                 @Override

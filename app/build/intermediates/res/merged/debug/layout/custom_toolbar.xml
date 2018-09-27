@@ -1,82 +1,147 @@
-
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    app:cardBackgroundColor="?attr/colorPrimary"
-    app:cardCornerRadius="0dp"
-    app:cardElevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
     android:layout_height="wrap_content">
 
 
-    <RelativeLayout
-        android:id="@+id/toolbar"
+    <FrameLayout
+        android:id="@+id/rl1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-
-        >
+        android:layout_height="wrap_content">
 
 
-
-        <com.mancj.materialsearchbar.MaterialSearchBar
-            android:visibility="visible"
-            style="@style/MaterialSearchBarLight"
-            app:mt_speechMode="false"
-            app:mt_hint="Search farmer"
-            android:layout_margin="@dimen/spacing_half"
-            app:mt_maxSuggestionsCount="10"
-            app:mt_navIconEnabled="true"
-            app:mt_placeholderColor="@android:color/primary_text_light"
-            app:mt_navIconTint="@android:color/tertiary_text_light"
-            app:mt_searchIconTint="@android:color/tertiary_text_light"
-            app:mt_clearIconTint="@android:color/tertiary_text_light"
-            app:mt_roundedSearchBarEnabled="false"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/searchBar" />
+            android:layout_margin="@dimen/spacing_half"
+            >
 
 
-        <TextView
-            android:id="@+id/tab_indicator_text"
-            android:layout_width="wrap_content"
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_below="@id/searchBar"
-            android:layout_marginTop="@dimen/spacing_half"
-            style="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5dp"
 
-            />
+            >
 
 
-
-        <RelativeLayout
-            android:id="@+id/viewPagerIndicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tab_indicator_text"
-             android:gravity="center"
-            android:paddingBottom="@dimen/spacing_normal"
-            android:paddingTop="@dimen/spacing_normal">
-
-            <LinearLayout
-                android:id="@+id/viewPagerCountDots"
+            <RelativeLayout
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:orientation="horizontal"/>
+                android:clipToPadding="false"
+
+                >
+
+                <ImageView
+                    android:id="@+id/hamburger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_menu_black_24dp"
+                    />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FDP"
+                android:layout_toRightOf="@+id/hamburger"
+                android:layout_centerVertical="true"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                />
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_normal"
+                    android:tint="@color/divider_2"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_search_white_24dp"
+                    />
 
 
-        </RelativeLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <br.com.mauker.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/spacing_normal"
+            android:layout_height="wrap_content"
+            style="@style/MaterialSearchViewStyle"/>
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <TextView
+        android:id="@+id/tab_indicator_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_half"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/viewPagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_indicator_text"
+        android:gravity="center"
+        android:paddingBottom="@dimen/spacing_normal"
+        >
+
+        <LinearLayout
+            android:id="@+id/viewPagerCountDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"/>
 
 
     </RelativeLayout>
-</android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
 
 
 

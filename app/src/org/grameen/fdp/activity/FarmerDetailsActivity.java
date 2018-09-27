@@ -332,6 +332,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                 btn.setText((prefs.getBoolean("toggleTranslation", false)) ? f.getTranslation() : f.getDiaplayName());
                 btn.setTag(f.getName());
+                btn.setContentDescription(f.getId());
 
                  dynamicButtonsLayout.addView(btn, params);
 

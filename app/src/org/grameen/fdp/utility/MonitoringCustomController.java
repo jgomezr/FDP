@@ -149,12 +149,9 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
         LinearLayout linearLayout = new LinearLayout(getContext());
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-
-
-
-
         Spinner spinnerView = new Spinner(getContext());
         spinnerView.setId(spinnerId);
+        spinnerView.setContentDescription(getName());
         spinnerView.setPrompt("Select");
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, itemsLists.get(0)) {
             @NonNull
@@ -222,6 +219,7 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
         Spinner spinnerView2 = new Spinner(getContext());
         spinnerView2.setId(competenceId);
         spinnerView2.setPrompt("Select");
+        spinnerView2.setContentDescription(getName());
         ArrayAdapter<String> spinnerAdapter2 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, itemsLists.get(1) ) {
             @NonNull
             @Override
@@ -295,6 +293,7 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
         Spinner spinnerView3 = new Spinner(getContext());
         spinnerView3.setId(reasonForFailureId);
         spinnerView3.setPrompt("Select");
+        spinnerView3.setContentDescription(getName());
         ArrayAdapter<String> spinnerAdapter3 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,  itemsLists.get(2)) {
             @NonNull
             @Override

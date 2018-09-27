@@ -219,7 +219,7 @@ public class MyFormFragment extends FormFragment {
             if (getActivity() instanceof PlotDetailsActivity) {
 
 
-                Log.d("MY FORM FRAG", "LOAD DEFAULT VALUES");
+                Log.i("MY FORM FRAG", "LOAD DEFAULT VALUES");
 
 
                 form = databaseHelper.getFormBasedOnName(Constants.ADOPTION_OBSERVATION_RESULTS);
@@ -536,7 +536,6 @@ public class MyFormFragment extends FormFragment {
 
 
                 switch (q.getType__c().toLowerCase()) {
-
                     case Constants.TYPE_TEXT:
                         formSectionController.addElement(new EditTextController(context, q.getId(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, !isEnabled, q.getHelp_Text__c()));
                         //getValue(q);
@@ -601,11 +600,11 @@ public class MyFormFragment extends FormFragment {
 
                                 getModel().setValue(q.getId(), location.getLatitude() + ", " + location.getLongitude());
 
-
                             }
 
                             @Override
                             public void onStatusChanged(String s, int i, Bundle bundle) {
+
 
                             }
 

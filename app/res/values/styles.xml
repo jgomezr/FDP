@@ -446,4 +446,18 @@
     </style>
 
 
+    <style name="MaterialSearchViewStyle">
+        <item name="searchBackground">@color/white_ish</item>
+        <item name="searchSuggestionBackground">@color/white</item>
+        <item name="listTextColor">@color/text_black_87</item>
+        <item name="searchBarHeight">?attr/actionBarSize</item>
+        <item name="android:textColor">@color/black</item>
+
+        <item name="historyIcon">@drawable/ic_history_black_24dp</item>
+        <item name="suggestionIcon">@drawable/ic_person_black_24dp</item>
+
+
+    </style>
+
+
 </resources>

@@ -101,6 +101,7 @@ public class PhotoButtonController extends MyLabeledFieldController {
         @SuppressLint("RestrictedApi") ContextThemeWrapper newContext = new ContextThemeWrapper(context, R.style.PrimaryButton);
         final Button button = new Button(newContext);
         button.setText("Take a photo");
+        button.setContentDescription(getName());
         button.setPadding(0, 20, 0, 20);
         button.setTextSize(12);
         button.setId(editTextId);

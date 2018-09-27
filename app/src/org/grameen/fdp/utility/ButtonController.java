@@ -88,6 +88,7 @@ public class ButtonController extends MyLabeledFieldController {
 
         editText.setId(editTextId);
 
+        editText.setContentDescription(getName());
         editText.setSingleLine(true);
         editText.setInputType(InputType.TYPE_CLASS_TEXT);
         editText.setKeyListener(null);

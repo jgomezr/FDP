@@ -63,8 +63,7 @@ public class FarmerListFragment extends Fragment {
         FarmerListFragment farmerListFragment = new FarmerListFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putString("filter", filter);
-        //bundle.putSerializable("farmers", farmers);
+        bundle.putString("filterTag", filter);
         farmerListFragment.setArguments(bundle);
         return farmerListFragment;
 
@@ -148,6 +147,7 @@ public class FarmerListFragment extends Fragment {
         mAdapter = new FarmerListAdapter(getActivity(), farmers);
         mAdapter.setHasStableIds(true);
         recyclerView.setAdapter(mAdapter);
+
 
         mAdapter.setOnItemClickListener(new FarmerListAdapter.OnItemClickListener() {
             @Override

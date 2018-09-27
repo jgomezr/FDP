@@ -79,7 +79,7 @@ public class DatePickerController extends MyLabeledFieldController {
     protected View createFieldView() {
         final EditText editText = new EditText(getContext());
         editText.setId(editTextId);
-
+        editText.setContentDescription(getName());
         editText.setSingleLine(true);
         editText.setInputType(InputType.TYPE_CLASS_DATETIME);
         editText.setKeyListener(null);
@@ -108,17 +108,18 @@ public class DatePickerController extends MyLabeledFieldController {
         if (datePickerDialog == null) {
             Date date = new Date();
 
-            Calendar calendar = Calendar.getInstance(Locale.getDefault());
+            Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
             calendar.setTimeZone(timeZone);
             calendar.setTime(date);
 
             datePickerDialog = new DatePickerDialog(context, R.style.DatePickerSpinner, new OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    Calendar calendar = Calendar.getInstance(Locale.getDefault());
+                  /*  Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
                     calendar.setTimeZone(timeZone);
-                    calendar.set(year, monthOfYear, dayOfMonth);
-                    String date = calendar.get(Calendar.MONTH) + "/" + calendar.get(Calendar.DAY_OF_MONTH) + "/" + calendar.get(Calendar.YEAR);
+                    calendar.set(year, monthOfYear, dayOfMonth);*/
+
+                    String date = (monthOfYear + 1) + "/" + dayOfMonth + "/" + year;
                     getModel().setValue(getName(), date);
                     editText.setText(date);
                     // editText.setText(displayFormat.format(calendar.getTime()));
