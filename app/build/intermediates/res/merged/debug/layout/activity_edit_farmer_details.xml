@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -135,7 +136,10 @@
                  android:textColor="@android:color/primary_text_light"
                 android:inputType="textPersonName"
                 android:maxLines="1"
+                tools:text="Farmer 1"
+                android:paddingLeft="@dimen/spacing_normal"
                 style="@style/TextAppearance.AppCompat.Medium"
+                android:background="@drawable/border_background"
 
                 />
 
@@ -169,7 +173,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:maxLines="1"
-                    android:textColor="@android:color/primary_text_light" />
+                    android:paddingLeft="@dimen/spacing_normal"
+                    android:textColor="@android:color/primary_text_light"
+                    android:background="@drawable/border_background" />
 
 
 
@@ -253,7 +259,7 @@
 
     </LinearLayout>
 
-            <LinearLayout
+    <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -349,10 +355,6 @@
 
     <include layout="@layout/divider_view"/>
 
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -360,13 +362,7 @@
                 android:gravity="center"
                 android:padding="@dimen/spacing_normal"
                  android:id="@+id/dynamicLayout"
-                >
-
-
-
-
-
-            </LinearLayout>
+              />
 
 
 

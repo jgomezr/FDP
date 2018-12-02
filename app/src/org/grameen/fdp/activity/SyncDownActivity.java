@@ -169,10 +169,12 @@ public class SyncDownActivity extends SalesforceActivity {
 
     private RestResponse sendRequest(RestRequest request) {
         RestResponse restResponse = null;
-        println("####  SEND REQUEST  ####");
+        System.out.println("####  SEND REQUEST  ####");
         BaseActivity.printHeader(request);
         try {
             restResponse = sendSync(request);
+
+            System.out.println("####  STATUS CODE = " + restResponse.getStatusCode());
         } catch (Exception e) {
             BaseActivity.printException(e);
             showDialog(getResources(R.string.generic_error), getResources(R.string.connection_error), true);
@@ -327,7 +329,7 @@ public class SyncDownActivity extends SalesforceActivity {
         RestResponse restResponse = null;
 
 
-        String soql = "select id, name, Start__c, End__c from fpd_Submission__c where Respondent__c = '" + assignation.getFarmer__c() + "' and Country_iso__c = '" + ISO_CODE + "' ORDER BY LastModifiedDate DESC";
+        String soql = "select id, name, Start__c, End__c from fpd_Submission__c where Respondent__c = '" + assignation.getFarmer__c() + "' and Country_iso__c = '" + ISO_CODE + "' ORDER BY createdDate DESC";
 
 
         try {
@@ -622,6 +624,7 @@ public class SyncDownActivity extends SalesforceActivity {
 
             if (restResponse.isSuccess()) {
                 try {
+
 
                     DONE = Boolean.valueOf(restResponse.asJSONObject().getString("done"));
                     TOTAL_SIZE = Integer.parseInt(restResponse.asJSONObject().getString("totalSize"));

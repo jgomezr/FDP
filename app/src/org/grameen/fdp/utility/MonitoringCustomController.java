@@ -70,9 +70,8 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
      */
 
 
-
-    public MonitoringCustomController(Context ctx, String name, String labelText, List<List<String>> itemsLists, boolean isEnabled) {
-        super(ctx, name, labelText, isEnabled);
+    public MonitoringCustomController(Context ctx, String name, String content_desc, String labelText, List<List<String>> itemsLists, boolean isEnabled) {
+        super(ctx, name, content_desc, labelText, isEnabled);
         this.itemsLists = itemsLists;
         this.IS_ENABLED = isEnabled;
         values = null;
@@ -85,10 +84,8 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
     }
 
 
-
-
-    public MonitoringCustomController(Context ctx, String name, String labelText, List<List<String>> itemsLists, List<String> values, boolean isEnabled) {
-        super(ctx, name, labelText, isEnabled);
+    public MonitoringCustomController(Context ctx, String name, String content_desc, String labelText, List<List<String>> itemsLists, List<String> values, boolean isEnabled) {
+        super(ctx, name, content_desc, labelText, isEnabled);
         this.itemsLists = itemsLists;
         this.IS_ENABLED = isEnabled;
         this.values = values;
@@ -151,7 +148,7 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
 
         Spinner spinnerView = new Spinner(getContext());
         spinnerView.setId(spinnerId);
-        spinnerView.setContentDescription(getName());
+        spinnerView.setContentDescription(getContentDesc());
         spinnerView.setPrompt("Select");
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, itemsLists.get(0)) {
             @NonNull
@@ -219,7 +216,7 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
         Spinner spinnerView2 = new Spinner(getContext());
         spinnerView2.setId(competenceId);
         spinnerView2.setPrompt("Select");
-        spinnerView2.setContentDescription(getName());
+        spinnerView2.setContentDescription(getContentDesc());
         ArrayAdapter<String> spinnerAdapter2 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, itemsLists.get(1) ) {
             @NonNull
             @Override
@@ -293,7 +290,7 @@ public class MonitoringCustomController extends MonitoringLabeledFieldController
         Spinner spinnerView3 = new Spinner(getContext());
         spinnerView3.setId(reasonForFailureId);
         spinnerView3.setPrompt("Select");
-        spinnerView3.setContentDescription(getName());
+        spinnerView3.setContentDescription(getContentDesc());
         ArrayAdapter<String> spinnerAdapter3 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,  itemsLists.get(2)) {
             @NonNull
             @Override

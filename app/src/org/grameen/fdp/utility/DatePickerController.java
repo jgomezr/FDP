@@ -44,8 +44,8 @@ public class DatePickerController extends MyLabeledFieldController {
      * @param validators    contains the validations to process on the field
      * @param displayFormat the format of the date to show in the text box when a date is set
      */
-    public DatePickerController(Context ctx, String name, String labelText, Set<InputValidator> validators, SimpleDateFormat displayFormat) {
-        super(ctx, name, labelText, validators);
+    public DatePickerController(Context ctx, String name, String content_desc, String labelText, Set<InputValidator> validators, SimpleDateFormat displayFormat) {
+        super(ctx, name, content_desc, labelText, validators);
         this.displayFormat = displayFormat;
         this.timeZone = displayFormat.getTimeZone();
     }
@@ -59,8 +59,8 @@ public class DatePickerController extends MyLabeledFieldController {
      * @param isRequired    indicates if the field is required or not
      * @param displayFormat the format of the date to show in the text box when a date is set
      */
-    public DatePickerController(Context ctx, String name, String labelText, boolean isRequired, SimpleDateFormat displayFormat) {
-        super(ctx, name, labelText, isRequired);
+    public DatePickerController(Context ctx, String name, String content_desc, String labelText, boolean isRequired, SimpleDateFormat displayFormat) {
+        super(ctx, name, content_desc, labelText, isRequired);
         this.displayFormat = displayFormat;
         this.timeZone = displayFormat.getTimeZone();
     }
@@ -71,15 +71,15 @@ public class DatePickerController extends MyLabeledFieldController {
      * @param name      the name of the field
      * @param labelText the label to display beside the field
      */
-    public DatePickerController(Context context, String name, String labelText) {
-        this(context, name, labelText, false, new SimpleDateFormat("MMM d, yyyy", Locale.getDefault()));
+    public DatePickerController(Context context, String name, String content_desc, String labelText) {
+        this(context, name, content_desc, labelText, false, new SimpleDateFormat("MMM d, yyyy", Locale.getDefault()));
     }
 
     @Override
     protected View createFieldView() {
         final EditText editText = new EditText(getContext());
         editText.setId(editTextId);
-        editText.setContentDescription(getName());
+        editText.setContentDescription(getContentDesc());
         editText.setSingleLine(true);
         editText.setInputType(InputType.TYPE_CLASS_DATETIME);
         editText.setKeyListener(null);

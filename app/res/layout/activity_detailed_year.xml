@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -28,9 +29,22 @@
             android:id="@+id/currencyLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/spacing_normal"
-            android:layout_marginBottom="@dimen/spacing_half"
-            >
+            android:paddingTop="@dimen/spacing_half"
+            android:paddingBottom="@dimen/spacing_half">
+
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/print"
+                android:src="@drawable/ic_print_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_half"
+                android:layout_toLeftOf="@+id/currency_layout"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:tint="@color/colorAccent"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
 
             <LinearLayout
                 android:id="@+id/nameLayout"
@@ -39,6 +53,7 @@
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/spacing_normal"
                 android:paddingRight="@dimen/spacing_normal"
+                android:layout_centerVertical="true"
                 >
 
                 <LinearLayout
@@ -101,11 +116,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/currency_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/spacing_normal"
                 android:layout_alignParentRight="true"
-
+                android:layout_centerVertical="true"
                 >
 
                 <TextView
@@ -170,7 +186,6 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/bottom_buttons"
         android:paddingLeft="@dimen/spacing_normal"
-        android:layout_marginRight="@dimen/spacing_normal"
         android:paddingBottom="@dimen/spacing_normal"
 
         >
@@ -208,6 +223,7 @@
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="@string/save"
+                android:layout_marginRight="@dimen/spacing_normal"
                 android:padding="@dimen/spacing_normal"
                 android:layout_marginLeft="@dimen/spacing_normal"
 

@@ -121,9 +121,13 @@ public class DatabaseDataClass {
     static final String COMPLEX_CALCULATION_CONDITION = "condition";
 
 
+    static final String NAME = "name";
+
+
 
     public  static final String SKIP_LOGIC_TABLE = "skip_logic";
     static final String ID = "id";
+
     static final String SKIP_LOGIC_NAME = "name";
     static final String SKIP_LOGIC_QUESTION_ID = "question_id";
     static final String SKIP_LOGIC_ANSWER_VALUE = "answer";
@@ -252,6 +256,12 @@ public class DatabaseDataClass {
     static final String INPUTS_SI_UNIT = "si_unit";
 
 
+    static final String HISTORICAL_DATA = "historical_data_table";
+    static final String DATE_TIME = "date_time";
+    static final String FORM_ID = "form_id";
+
+
+
 
     static final String DROP_PLOTS_TABLE = "drop table if exists " + PLOTS_TABLE;
     static final String DROP_FARMER_TABLE = "drop table if exists " + FARMER_TABLE;
@@ -268,6 +278,8 @@ public class DatabaseDataClass {
     static final String DROP_INPUTS_TABLE = "drop table if exists " + INPUTS_TABLE;
     static final String DROP_MONITORING_TABLE = "drop table if exists " + MONITORING_TABLE;
     static final String DROP_COMPLEX_CALCULATIONS_TABLE = "drop table if exists " + COMPLEX_CALCULATIONS_TABLE;
+    static final String DROP_HISTORICAL_DATA_TABLE = "drop table if exists " + HISTORICAL_DATA;
+
 
 
 
@@ -527,5 +539,14 @@ public class DatabaseDataClass {
             + COMPLEX_CALCULATION_NAME + TEXT_TYPE + COMMA
             + COMPLEX_CALCULATION_CONDITION + " TEXT" + ")";
 
+
+    static final String CREATE_HISTORICAL_DATA_TABLE = "CREATE TABLE IF NOT EXISTS " + HISTORICAL_DATA + "("
+            + BaseColumns._ID + " integer primary key autoincrement, "
+            + ID + TEXT_TYPE + COMMA
+            + NAME + TEXT_TYPE + COMMA
+            + DATE_TIME + TEXT_TYPE + COMMA
+            + LAST_MODIFIED_DATE + TEXT_TYPE + COMMA
+            + ANSWERS_JSON + TEXT_TYPE + COMMA
+            + FORM_ID + " TEXT" + ")";
 
 }

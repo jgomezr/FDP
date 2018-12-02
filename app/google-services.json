@@ -1,29 +1,53 @@
 {
   "project_info": {
-    "project_number": "611301447040",
-    "project_id": "grameen-fdp"
+    "project_number": "322494950635",
+    "firebase_url": "https://fdp-v2.firebaseio.com",
+    "project_id": "fdp-v2",
+    "storage_bucket": "fdp-v2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:611301447040:android:1dd3f698231e392c",
+        "mobilesdk_app_id": "1:322494950635:android:85b76a5f6dcb3725",
         "android_client_info": {
           "package_name": "org.grameen.fdp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "611301447040-8jl2l7c8pds988cqscp5dcfq6idg4cei.apps.googleusercontent.com",
+          "client_id": "322494950635-r20bk3cmdda7q5otd87jk4uodhqmfgn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.grameen.fdp",
+            "certificate_hash": "a1a46854a198182521f91f82c48474ddad5f9ee1"
+          }
+        },
+        {
+          "client_id": "322494950635-5akf64v988eq1157caeq09foff0rlbuu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag"
+          "current_key": "AIzaSyDAD38jbTtkFRrCZ6zO56M0DuQhBzg-bB4"
         }
       ],
       "services": {
-
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322494950635-5akf64v988eq1157caeq09foff0rlbuu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
       }
     }
   ],

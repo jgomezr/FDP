@@ -18,10 +18,10 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.adapter.PlotMonitoringTableHearderAdapter;
+import org.grameen.fdp.adapter.HistoricalTableHeaderAdapter;
 import org.grameen.fdp.adapter.PlotMonitoringTablePagerAdapter;
 import org.grameen.fdp.adapter.PlotMonitoringTableViewAdapter;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 import org.grameen.fdp.object.Monitoring;
 import org.grameen.fdp.object.PlotMonitoringTableData;
 import org.grameen.fdp.object.Question;
@@ -102,7 +102,6 @@ public class PlotMonitoringActivity extends BaseActivity {
         farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
         PLOT = new Gson().fromJson(getIntent().getStringExtra("plot"), RealPlot.class);
         selectedYear = getIntent().getIntExtra("selectedYear", 0);
-
 
 
 
@@ -270,7 +269,7 @@ public class PlotMonitoringActivity extends BaseActivity {
         generalAOTableView.setColumnModel(columnModel);
 
 
-        PlotMonitoringTableHearderAdapter headerAdapter = new PlotMonitoringTableHearderAdapter(PlotMonitoringActivity.this, TABLE_HEADERS);
+        HistoricalTableHeaderAdapter headerAdapter = new HistoricalTableHeaderAdapter(PlotMonitoringActivity.this, TABLE_HEADERS);
         generalAOTableView.setHeaderAdapter(headerAdapter);
       /*  headerAdapter.setHeaderClickListener(new View.OnClickListener() {
             @Override
@@ -286,14 +285,10 @@ public class PlotMonitoringActivity extends BaseActivity {
         });*/
 
 
-      List<Data2> ADOPTION_OBSERVATIONS = new ArrayList<>();
-
-
+        List<HistoricalTableViewData> ADOPTION_OBSERVATIONS = new ArrayList<>();
       for(Question q : AO_QUESTIONS){
-
           //Todo get results
-          ADOPTION_OBSERVATIONS.add(new Data2((loadTranslation) ? q.getTranslation__c() : q.getCaption__c(), getValue(q.getId(), AO_JSON_OBJECT), "--", "--", null));
-
+          ADOPTION_OBSERVATIONS.add(new HistoricalTableViewData((loadTranslation) ? q.getTranslation__c() : q.getCaption__c(), getValue(q.getId(), AO_JSON_OBJECT), "--", "--", null));
       }
 
 
@@ -309,58 +304,6 @@ public class PlotMonitoringActivity extends BaseActivity {
 
 
 
-    void setUpViewPager(){
-
-         plotMonitoringTableDataList = new ArrayList<>();
-
-        updateTableData();
-
-        plotMonitoringTablePagerAdapter = new PlotMonitoringTablePagerAdapter(this, plotMonitoringTableDataList);
-
-
-        if(plotMonitoringTableDataList.size() > 0) {
-            viewPager.setAdapter(plotMonitoringTablePagerAdapter);
-
-
-            titleTextView.setText(plotMonitoringTableDataList.get(0).getTitle());
-
-
-            SELECTED_MONITORING_ID = 0;
-
-            viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                @Override
-                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                }
-
-                @Override
-                public void onPageSelected(int position) {
-
-
-                    SELECTED_MONITORING_ID = position;
-                    titleTextView.setText(plotMonitoringTableDataList.get(position).getTitle());
-
-
-
-
-                }
-
-                @Override
-                public void onPageScrollStateChanged(int state) {
-
-                }
-            });
-
-            findViewById(R.id.noData).setVisibility(View.GONE);
-            editMonitoring.setVisibility(View.VISIBLE);
-
-        } else {
-            findViewById(R.id.noData).setVisibility(View.VISIBLE);
-            editMonitoring.setVisibility(View.GONE);
-        }
-
-
-    }
 
 
     String getValue(String id, JSONObject jsonObject) {
@@ -420,6 +363,58 @@ public class PlotMonitoringActivity extends BaseActivity {
     }
 
 
+    void setUpViewPager() {
+
+        plotMonitoringTableDataList = new ArrayList<>();
+
+        updateTableData();
+
+        plotMonitoringTablePagerAdapter = new PlotMonitoringTablePagerAdapter(this, plotMonitoringTableDataList);
+
+
+        if (plotMonitoringTableDataList.size() > 0) {
+            viewPager.setAdapter(plotMonitoringTablePagerAdapter);
+
+
+            titleTextView.setText(plotMonitoringTableDataList.get(0).getTitle());
+
+
+            SELECTED_MONITORING_ID = 0;
+
+            viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                }
+
+                @Override
+                public void onPageSelected(int position) {
+
+
+                    SELECTED_MONITORING_ID = position;
+                    titleTextView.setText(plotMonitoringTableDataList.get(position).getTitle());
+
+
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int state) {
+
+                }
+            });
+
+            findViewById(R.id.noData).setVisibility(View.GONE);
+            editMonitoring.setVisibility(View.VISIBLE);
+
+        } else {
+            findViewById(R.id.noData).setVisibility(View.VISIBLE);
+            editMonitoring.setVisibility(View.GONE);
+        }
+
+
+    }
+
+
     void updateTableData(){
 
         plotMonitoringTableDataList = new ArrayList<>();
@@ -428,7 +423,7 @@ public class PlotMonitoringActivity extends BaseActivity {
 
         for(Monitoring monitoring : monitoringList) {
 
-            List<Data2> data2List = new ArrayList<>();
+            List<HistoricalTableViewData> historicalTableViewDataList = new ArrayList<>();
 
             JSONObject jsonObject;
             try {
@@ -446,7 +441,7 @@ public class PlotMonitoringActivity extends BaseActivity {
 
 
                     //Todo get results
-                    data2List.add(new Data2("", getValue(q.getId(), jsonObject), getValue(databaseHelper.getQuestionId(ids[0]), jsonObject), getValue(databaseHelper.getQuestionId(ids[1]), jsonObject), null));
+                    historicalTableViewDataList.add(new HistoricalTableViewData("", getValue(q.getId(), jsonObject), getValue(databaseHelper.getQuestionId(ids[0]), jsonObject), getValue(databaseHelper.getQuestionId(ids[1]), jsonObject), null));
 
                 }
             }
@@ -458,17 +453,17 @@ public class PlotMonitoringActivity extends BaseActivity {
                 String dateValue = getValue(prefs.getString("monitoringDate", ""), jsonObject);
                 if(dateValue.length() > 20) {
                     date = dateValue.substring(0, 19);
-                    data2List.add(new Data2("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
+                    historicalTableViewDataList.add(new HistoricalTableViewData("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
 
                 }
                 else {
-                    data2List.add(new Data2("", "", getResources(R.string.date), dateValue, Constants.TAG_RESULTS));
+                    historicalTableViewDataList.add(new HistoricalTableViewData("", "", getResources(R.string.date), dateValue, Constants.TAG_RESULTS));
                 }
 
             }catch(Exception e){
                 e.printStackTrace();
 
-                data2List.add(new Data2("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
+                historicalTableViewDataList.add(new HistoricalTableViewData("", "", getResources(R.string.date), date, Constants.TAG_RESULTS));
 
             }
 
@@ -476,15 +471,13 @@ public class PlotMonitoringActivity extends BaseActivity {
             for(Question q : databaseHelper.getSpecificSetOfQuestions(Constants.AO_MONITORING_RESULT)){
 
                 if(q.getType__c().equalsIgnoreCase(Constants.TYPE_LOGIC_FORMULA))
-                data2List.add(new Data2("", "", q.getCaption__c(), getValue(q.getId(), jsonObject), Constants.TAG_RESULTS));
+                    historicalTableViewDataList.add(new HistoricalTableViewData("", "", q.getCaption__c(), getValue(q.getId(), jsonObject), Constants.TAG_RESULTS));
 
 
             }
 
 
-
-
-            PlotMonitoringTableData p = new PlotMonitoringTableData(monitoring.getName(), data2List);
+            PlotMonitoringTableData p = new PlotMonitoringTableData(monitoring.getName(), historicalTableViewDataList);
 
 
             plotMonitoringTableDataList.add(p);

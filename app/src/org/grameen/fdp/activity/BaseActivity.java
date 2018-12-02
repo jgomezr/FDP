@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -55,6 +57,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -67,6 +71,8 @@ import java.util.Locale;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+
+import static org.grameen.fdp.application.FdpApplication.ROOT_DIR;
 
 /**
  * Created by aangjnr on 08/11/2017.
@@ -268,7 +274,6 @@ public class BaseActivity extends AppCompatActivity {
 
     public void logOut(final AppCompatActivity context) {
 
-
         LogoutDialogFragment logoutDialogFragment = new LogoutDialogFragment();
         logoutDialogFragment.show(getSupportFragmentManager(), "logoutDialog");
 
@@ -359,7 +364,6 @@ public class BaseActivity extends AppCompatActivity {
 
         return String.valueOf(value);
     }
-
 
     Double calculateDouble(String equation) {
         Log.i(TAG, "Evaluating " + equation);
@@ -1679,7 +1683,6 @@ public class BaseActivity extends AppCompatActivity {
         String totalUnit = "--";
 
         try {
-
             JSONObject farmingEconomicProfileJson = new JSONObject(databaseHelper.getAllAnswersJson(farmerId));
             totalFarmProduction = round(Double.parseDouble(farmingEconomicProfileJson.get(prefs.getString("totalProduction", "")).toString().replace(",", "")), 2);
             totalUnit = farmingEconomicProfileJson.getString(prefs.getString("totalWeightUnit", ""));
@@ -1689,26 +1692,26 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        // StringBuilder stringUnitBuilder = new StringBuilder();
-
 
         List<RealPlot> plots = databaseHelper.getAllFarmerPlots(farmerId);
 
 
         for (RealPlot plot : plots) {
-
             try {
+
                 JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
 
-                String estimatedProductions = jsonObject.getString(estProdQue.getId());
+                String estimatedProductions = "0";
+
+                if (jsonObject.has(estProdQue.getId()) && !jsonObject.getString(estProdQue.getId()).trim().isEmpty())
+                    estimatedProductions = jsonObject.getString(estProdQue.getId());
 
                 stringBuilder.append(estimatedProductions).append("+");
 
-                // stringUnitBuilder.append(estimatedProductions[1]);
-
-
-            } catch (JSONException | NullPointerException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
+
+                stringBuilder.append("0").append("+");
             }
 
         }
@@ -1723,7 +1726,7 @@ public class BaseActivity extends AppCompatActivity {
         Log.i(TAG, "$$$$$$$$$$$$$    TOTAL FARM PROD " + totalFarmProduction + " AND TOTAL PLOTS PROD " + totalPlotsProduction);
 
         // if (stringUnitBuilder.toString().toLowerCase().contains(totalUnit.toLowerCase())) {
-            if (totalPlotsProduction != null && totalFarmProduction != null) {
+        if (totalFarmProduction != null) {
                 if (totalPlotsProduction > totalFarmProduction) {
                     CustomToast.makeToast(this, getResources(R.string.error_total_plot_estimated_production), Toast.LENGTH_LONG).show();
                     return false;
@@ -1747,7 +1750,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
-
 
     public boolean checkIfFarmSizeCorresponds(String farmerCode, JSONObject ALL_FARMER_ANSWERS_JSON) {
 
@@ -1787,17 +1789,25 @@ public class BaseActivity extends AppCompatActivity {
         for (RealPlot plot : plots) {
 
             try {
+                Log.i(TAG, "******* PLOT NAME " + plot.getName() + " AND INFO JSON " + plot.getPlotInformationJson());
+
+
+                String value = "0";
                 JSONObject jsonObject = new JSONObject(plot.getPlotInformationJson());
 
-                String value = jsonObject.getString(plotSizeQue.getId());
+                if (jsonObject.has(plotSizeQue.getId()) && !jsonObject.getString(plotSizeQue.getId()).trim().isEmpty()) {
+                    value = jsonObject.getString(plotSizeQue.getId());
+
+                }
 
                 stringBuilder.append(value).append("+");
-
-                // stringUnitBuilder.append(estimatedProductions[1]);
 
 
             } catch (JSONException e) {
                 e.printStackTrace();
+
+                stringBuilder.append("0").append("+");
+
             }
 
         }
@@ -1813,7 +1823,7 @@ public class BaseActivity extends AppCompatActivity {
 
         Log.i(TAG, "$$$$$$$$$$$$$    TOTAL SIZES " + farmAcre + " AND TOTAL PLOTS SIZES " + totalSizes);
 
-        if (farmAcre != null && totalSizes != null) {
+        if (farmAcre != null) {
             if (totalSizes > farmAcre) {
                 booleanValue = false;
 
@@ -1840,7 +1850,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
-
 
     public String getResources(int resource) {
         return getString(resource);
@@ -1939,7 +1948,6 @@ public class BaseActivity extends AppCompatActivity {
         return String.valueOf(finalValue.intValue());
     }
 
-
     String getValue(String id, JSONObject jsonObject) {
         String value = null;
         try {
@@ -1953,7 +1961,6 @@ public class BaseActivity extends AppCompatActivity {
 
         return value;
     }
-
 
     public void syncFarmerData(final Context context) {
 
@@ -2025,7 +2032,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
-
 
     void sendAllFarmersDataToServer2(final Context context) {
 
@@ -2263,7 +2269,6 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
     void sendDataToServer2(final Context context, final RealFarmer farmer) {
 
 
@@ -2415,7 +2420,6 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
     void showSyncCompleteDialog(final Context context, String farmerId) {
         final RealFarmer farmer = databaseHelper.getFarmerBasicInfo(farmerId);
 
@@ -2487,7 +2491,6 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
     JSONArray formatFarmerPlotsJsonStructure(String farmerCode, String date) {
 
         JSONArray plotsArray = new JSONArray();
@@ -2520,7 +2523,6 @@ public class BaseActivity extends AppCompatActivity {
         }
         return plotsArray;
     }
-
 
     JSONArray formatAnswersJsonStructure(String farmerCode, String date, String answersObjectString) {
 
@@ -2556,7 +2558,6 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
     JSONArray formatPlotMonitoringJsonStructure(String plotId) {
 
         JSONArray monitoringArray = new JSONArray();
@@ -2585,7 +2586,6 @@ public class BaseActivity extends AppCompatActivity {
         }
         return monitoringArray;
     }
-
 
     JSONArray formatMonitoringAnswersJsonStructure(String answersObjectString) {
 
@@ -2677,7 +2677,6 @@ public class BaseActivity extends AppCompatActivity {
         return refinedArray;
 
     }
-
 
     public static void largeLog(String tag, String content) {
 
@@ -2874,11 +2873,44 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
+    public void goBack(@Nullable View v) {
+        onBackPressed();
+    }
 
 
+    String captureScreenshot(View v, String activityName) {
+        String fileLocation = null;
+
+        String dir = ROOT_DIR + "/screenCaptures/";
+
+        File file = new File(dir);
+        if (!file.exists()) file.mkdirs();
 
 
+        try {
+            // image naming and path  to include sd card  appending name you choose for file
+            fileLocation = dir + activityName + ".jpg";
 
+
+            // create bitmap screen capture
+            v.setDrawingCacheEnabled(true);
+            Bitmap bitmap = Bitmap.createBitmap(v.getDrawingCache());
+            v.setDrawingCacheEnabled(false);
+
+            File imageFile = new File(fileLocation);
+
+            FileOutputStream outputStream = new FileOutputStream(imageFile);
+            int quality = 100;
+            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
+            outputStream.flush();
+            outputStream.close();
+
+        } catch (Throwable e) {
+            // Several error may come out with file handling or DOM
+            e.printStackTrace();
+        }
+        return fileLocation;
+    }
 
 
 

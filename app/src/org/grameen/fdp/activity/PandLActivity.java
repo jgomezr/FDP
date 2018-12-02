@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
+import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.MyTableHearderAdapter;
 import org.grameen.fdp.adapter.MyTableViewAdapter;
@@ -129,6 +131,64 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p_and_l);
+
+
+        if (BuildConfig.DEBUG) {
+
+            findViewById(R.id.print).setVisibility(View.VISIBLE);
+
+            findViewById(R.id.print).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    findViewById(R.id.bottom_buttons).setVisibility(View.GONE);
+                    findViewById(R.id.fdpStatus).setVisibility(View.GONE);
+                    findViewById(R.id.currency_layout).setVisibility(View.GONE);
+
+
+                    progressDialog.setTitle("Initializing");
+                    progressDialog.setMessage("Please wait...");
+                    progressDialog.show();
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+
+                            String fileLocation = captureScreenshot(findViewById(R.id.main_layout), "pandl");
+
+                            progressDialog.dismiss();
+
+                            if (fileLocation != null) {
+
+                                Intent intent = new Intent(PandLActivity.this, PrintingActivity.class);
+                                intent.putExtra("file_location", fileLocation);
+                                startActivity(intent);
+
+                                findViewById(R.id.bottom_buttons).setVisibility(View.VISIBLE);
+                                findViewById(R.id.fdpStatus).setVisibility(View.VISIBLE);
+                                findViewById(R.id.currency_layout).setVisibility(View.VISIBLE);
+
+
+                            } else {
+                                CustomToast.makeToast(PandLActivity.this, "Error starting the printer service!", Toast.LENGTH_LONG).show();
+                            }
+
+
+                        }
+                    }, 2000);
+
+
+                }
+            });
+
+        }
+
+
+
+
+
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 

@@ -1,35 +1,27 @@
 package org.grameen.fdp.activity;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.ReviewTablePagerAdapter;
-import org.grameen.fdp.object.Data2;
-import org.grameen.fdp.object.Monitoring;
+import org.grameen.fdp.object.HistoricalTableViewData;
 import org.grameen.fdp.object.PlotMonitoringTableData;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
-import org.grameen.fdp.object.Recommendation;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -37,7 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.codecrafters.tableview.TableView;
-import de.codecrafters.tableview.model.TableColumnWeightModel;
 
 /**
  * Created by aangjnr on 08/02/2018.
@@ -269,7 +260,7 @@ public class PlotsReviewActivity extends BaseActivity {
             for (RealPlot plot : PLOTS_LIST) {
 
 
-                List<Data2> data2List = new ArrayList<>();
+                List<HistoricalTableViewData> historicalTableViewDataList = new ArrayList<>();
 
                 JSONObject jsonObject;
                 try {
@@ -282,17 +273,17 @@ public class PlotsReviewActivity extends BaseActivity {
 
                 Question plotSizeQuestion = databaseHelper.getQuestionByTranslation("Plot Size");
                 if (plotSizeQuestion != null)
-                    data2List.add(new Data2((IS_TRANSLATION) ? plotSizeQuestion.getTranslation__c() : plotSizeQuestion.getCaption__c(), getValue(plotSizeQuestion.getId(), jsonObject), "", "", null));
+                    historicalTableViewDataList.add(new HistoricalTableViewData((IS_TRANSLATION) ? plotSizeQuestion.getTranslation__c() : plotSizeQuestion.getCaption__c(), getValue(plotSizeQuestion.getId(), jsonObject), "", "", null));
 
 
                 Question estProd = databaseHelper.getQuestionByTranslation("Estimated production size");
                 if (estProd != null)
-                    data2List.add(new Data2((IS_TRANSLATION) ? estProd.getTranslation__c() : estProd.getCaption__c(), getValue(estProd.getId(), jsonObject), "", "", null));
+                    historicalTableViewDataList.add(new HistoricalTableViewData((IS_TRANSLATION) ? estProd.getTranslation__c() : estProd.getCaption__c(), getValue(estProd.getId(), jsonObject), "", "", null));
 
 
                 Question limeNeeded = databaseHelper.getQuestionByTranslation("Lime need");
                 if (limeNeeded != null)
-                    data2List.add(new Data2((IS_TRANSLATION) ? limeNeeded.getTranslation__c() : limeNeeded.getCaption__c(), getValue(limeNeeded.getId(), jsonObject), "", "", null));
+                    historicalTableViewDataList.add(new HistoricalTableViewData((IS_TRANSLATION) ? limeNeeded.getTranslation__c() : limeNeeded.getCaption__c(), getValue(limeNeeded.getId(), jsonObject), "", "", null));
 
 
                 Question plotRec = databaseHelper.getQuestionByTranslation("Plot recommendation");
@@ -307,7 +298,7 @@ public class PlotsReviewActivity extends BaseActivity {
                         recName = "--";
                     }
 
-                    data2List.add(new Data2((IS_TRANSLATION) ? plotRec.getTranslation__c() : plotRec.getCaption__c(), recName, "", "", null));
+                    historicalTableViewDataList.add(new HistoricalTableViewData((IS_TRANSLATION) ? plotRec.getTranslation__c() : plotRec.getCaption__c(), recName, "", "", null));
 
                 }
 
@@ -316,14 +307,14 @@ public class PlotsReviewActivity extends BaseActivity {
                     if (!q.getHide__c().equalsIgnoreCase(Constants.HIDE)) {
 
 
-                        data2List.add(new Data2((IS_TRANSLATION) ? q.getTranslation__c() : q.getCaption__c(), getValue(q.getId(), jsonObject), "", "", null));
+                        historicalTableViewDataList.add(new HistoricalTableViewData((IS_TRANSLATION) ? q.getTranslation__c() : q.getCaption__c(), getValue(q.getId(), jsonObject), "", "", null));
 
 
                     }
                 }
 
 
-                PlotMonitoringTableData p = new PlotMonitoringTableData(plot.getName(), data2List);
+                PlotMonitoringTableData p = new PlotMonitoringTableData(plot.getName(), historicalTableViewDataList);
 
 
                 plotMonitoringTableDataList.add(p);

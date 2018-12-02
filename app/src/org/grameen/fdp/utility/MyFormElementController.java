@@ -12,6 +12,7 @@ import com.github.dkharrat.nexusdialog.FormModel;
 public abstract class MyFormElementController {
     private final Context context;
     private final String name;
+    private final String contentDesc;
     private FormModel model;
     private View view;
 
@@ -21,10 +22,12 @@ public abstract class MyFormElementController {
      * @param ctx  the Android context
      * @param name the name of this instance
      */
-    protected MyFormElementController(Context ctx, String name) {
+    protected MyFormElementController(Context ctx, String name, String content_desc) {
         this.context = ctx;
         this.name = name;
+        this.contentDesc = content_desc;
     }
+
 
     /**
      * Returns the Android context associated with this element.
@@ -42,6 +45,15 @@ public abstract class MyFormElementController {
      */
     public String getName() {
         return name;
+    }
+
+
+    public String getContentDesc() {
+        return contentDesc;
+    }
+
+    public void setView(View view) {
+        this.view = view;
     }
 
     /**

@@ -19,17 +19,25 @@ import java.io.InputStream;
 
 public class ImageUtil
 {
-    public static Bitmap base64ToBitmap(String base64Str) throws IllegalArgumentException
-    {
+
+
+    public static Bitmap base64ToScaledBitmap(String base64Str) throws IllegalArgumentException {
         byte[] decodedBytes = Base64.decode(base64Str.getBytes(), Base64.DEFAULT);
 
+        Bitmap bitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+        return Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() / 10, bitmap.getHeight() / 10, false);
+    }
+
+
+    public static Bitmap base64ToBitmap(String base64Str) throws IllegalArgumentException {
+        byte[] decodedBytes = Base64.decode(base64Str.getBytes(), Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 
     public static String bitmapToBase64(Bitmap bitmap)
     {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 20, outputStream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 10, outputStream);
 
         return Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT);
     }

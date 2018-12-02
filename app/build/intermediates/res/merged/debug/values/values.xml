@@ -154,12 +154,15 @@
     <color name="colorAccentDark">#060606</color>
     <color name="colorAccentLighter">@color/background_1</color>
     <color name="colorAccentMonitoring">#4db6ac</color>
+    <color name="colorAccent_CrashReporter">#cf1162</color>
     <color name="colorPrimary">#1b8f63</color>
     <color name="colorPrimaryDark">#1b7653</color>
     <color name="colorPrimaryDarkInverted">@color/background_1</color>
     <color name="colorPrimaryDarkMonitoring">#13917a</color>
+    <color name="colorPrimaryDark_CrashReporter">#f50057</color>
     <color name="colorPrimaryInverted">@color/background_1</color>
     <color name="colorPrimaryMonitoring">#26a790</color>
+    <color name="colorPrimary_CrashReporter">#ff4081</color>
     <color name="color_dark_slide_intro">#ebeef0</color>
     <color name="color_slide_intro">#fdfdfd</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
@@ -294,6 +297,8 @@
     <color name="searchBarTextColorDark">#DEFFFFFF</color>
     <color name="searchBarTextHighlightColor">#8000a1ff</color>
     <color name="searchBarTextHighlightColorDark">#BF00a1ff</color>
+    <color name="searchDialogResultColor">@android:color/secondary_text_light</color>
+    <color name="searchDialogResultHighlightColor">#FFED2E47</color>
     <color name="search_field_bg">@color/white_ish</color>
     <color name="search_layover_bg">@color/gray</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -1110,7 +1115,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
-    <integer name="google_play_services_version">10298000</integer>
+    <integer name="google_play_services_version">12451000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="icon_animation_duration">250</integer>
     <integer name="mtb_from">0</integer>
@@ -1146,6 +1151,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="ac_adapter">AC adapter</string>
     <string name="account_type">org.grameen.fdp.login</string>
     <string name="action_placeholder">Your App Name</string>
     <string name="action_search">Search</string>
@@ -1157,9 +1163,11 @@
     <string name="add_farmer_rational">Add new farmer data by clicking on the green button below</string>
     <string name="add_new_monitoring">"Add new monitoring</string>
     <string name="add_new_plot">Add a new plot</string>
+    <string name="add_new_record">Add new record</string>
     <string name="add_plot">Add a new plot</string>
     <string name="add_plot_monitoring">Add new plot monitoring</string>
     <string name="add_plot_to_access_pl">Please add a plot to access P &amp; L.</string>
+    <string name="add_your_crash">Add your own crash and check if it gets logged</string>
     <string name="agreement_submitted_and_data_synced">Agreement submitted and data synced successfully!</string>
     <string name="all_data_downloaded">All data downloaded successfully!</string>
     <string name="all_data_synced">All data synced successfully!</string>
@@ -1173,14 +1181,23 @@
     <string name="app_package">org.grameen.fdp</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="apr">Apr</string>
+    <string name="array_store_exception">ArrayStoreException</string>
     <string name="aug">Aug</string>
     <string name="back">Back</string>
     <string name="back_vector_path" translatable="false">M50 25,L80 50,M20 50,L80 50,M50 75,L80 50</string>
+    <string name="battery_charge">Need charging</string>
+    <string name="battery_full">Full</string>
+    <string name="battery_middle">Middle</string>
+    <string name="battery_weak">Weak</string>
     <string name="before_proceed_suffux"> before proceeding.</string>
+    <string name="bluetooth_printer_list_title_label">Bluetooth Printer</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="button_next_print">Next Template</string>
+    <string name="button_ok">OK</string>
     <string name="calc_area">click to calculate plot area</string>
     <string name="camera_permission_rationale">Please provide camera permission to be able to take pictures</string>
     <string name="cancel">Cancel</string>
+    <string name="cancel_printer_msg">Is cancelling, please wait</string>
     <string name="caution">Caution!</string>
     <string name="cd_clear_button">Clear field</string>
     <string name="cd_suggestion_icon">List item icon</string>
@@ -1188,15 +1205,20 @@
     <string name="cd_voice_search">Voice search</string>
     <string name="change_to">Change to</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="check_your_message_here">Check your crashes and exceptions here.</string>
+    <string name="class_cast_exception">ClassCast Exception</string>
     <string name="clear_button">Clear</string>
     <string name="click_photo_to_delete">You can click on photo to remove/delete</string>
     <string name="close">Close</string>
+    <string name="close_connect">closeing…</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">b63a8cf7-6ea1-48e1-b355-01b9533bb0eb</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
     <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
     <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
     <string name="common_google_play_services_notification_ticker">Google Play services error</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
@@ -1212,19 +1234,28 @@
     <string name="could_not_add_plot">Could not add plot info. Please try again</string>
     <string name="could_not_connect">Could not connect</string>
     <string name="could_not_connect_rationale">There might be a problem with your connection. Please check and try again.!</string>
+    <string name="could_not_export_database">Could not export database!</string>
     <string name="could_not_save">Could not save farmer</string>
+    <string name="could_not_save_data">An error occurred saving the data.</string>
+    <string name="crash_reporter">Open CrashReporter</string>
+    <string name="crashes">Crashes</string>
     <string name="currency">Currency:</string>
     <string name="data">data.</string>
     <string name="data_already_synced">data has already been synced!</string>
     <string name="data_before_sync">data before syncing.</string>
     <string name="data_not_saved">Could not save data!</string>
     <string name="data_saved">Data saved</string>
+    <string name="database_export_error">Could not export database!</string>
+    <string name="database_exported">Database has been exported!</string>
+    <string name="database_import_error">Could not import database!</string>
+    <string name="database_imported">Database has been imported!</string>
     <string name="date">Date</string>
     <string name="dec">Dec</string>
     <string name="default_cell">Data [%1$d:%2$d]</string>
     <string name="default_header">Header %1$d</string>
-    <string name="default_web_client_id" translatable="false">611301447040-8jl2l7c8pds988cqscp5dcfq6idg4cei.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" translatable="false">322494950635-5akf64v988eq1157caeq09foff0rlbuu.apps.googleusercontent.com</string>
     <string name="delete">Delete photo</string>
+    <string name="delete_confirmation_msg">Are you sure to delete all the crash logs</string>
     <string name="delete_photo_rationale">Are you sure you want to delete photo?</string>
     <string name="diagnostic">Diagnostics</string>
     <string name="different_no_monitoring">Different number of monitoring for plots</string>
@@ -1235,6 +1266,7 @@
     <string name="download_farmer_data">Download farmer data</string>
     <string name="download_resources">Download Resources</string>
     <string name="edit">Edit</string>
+    <string name="edit_current_record">Edit current record</string>
     <string name="edit_farmer_details">Edit Farmer Details</string>
     <string name="edit_plot">Edit plot details</string>
     <string name="edit_plot_monitoring">Edit plot monitoring</string>
@@ -1244,12 +1276,19 @@
     <string name="enter_data_rationale">"Please enter number of family members in Farmer Profile form for "</string>
     <string name="enter_valid_plot_name">Please enter a valid plot name</string>
     <string name="error_getting_farmer_info">There was an error attempting to retrieve farmer info</string>
+    <string name="error_input">wrong input</string>
     <string name="error_invalid_units">Invalid units provided for plot production sizes!</string>
+    <string name="error_message_no_usb">USB device is not found</string>
+    <string name="error_message_none">Succeeded</string>
+    <string name="error_message_runtime">Runtime error occurred </string>
+    <string name="error_message_weong_os">Android OS is not supported</string>
     <string name="error_missing_estimated_production">Total Farm Production or Plot production was not provided!</string>
     <string name="error_total_plot_estimated_production">Total Plots estimated production is more than total farm production!</string>
     <string name="est_production_size">Estimated Production Size</string>
     <string name="estimated_production_size">Estimated production size:</string>
+    <string name="exceptions">Exceptions</string>
     <string name="expand_button_title">Advanced</string>
+    <string name="export_database">Export database</string>
     <string name="family_members">Family Members</string>
     <string name="farm_assessment">Farm Assessment</string>
     <string name="farm_result">Farm Result</string>
@@ -1269,13 +1308,15 @@
     <string name="fill_in_plot_size_values">Please fill in values for farm size and all plot sizes!</string>
     <string name="fill_out_ao_data">Please fill out all Adoption Observations data!</string>
     <string name="fill_out_fdp_status">"Please fill out FDP status Form for "</string>
+    <string name="firebase_database_url" translatable="false">https://fdp-v2.firebaseio.com</string>
     <string name="first_sign_in_rationale">Looks like this is your first sign in.
         "Since you have internet connection it's recommended you sync data from the server.</string>
+    <string name="folder_name">Folder Name</string>
     <string name="for_"> for </string>
     <string name="fsv.transition.search.layout">fsv_transition_search_layout</string>
     <string name="full_name_error">Please enter full name</string>
     <string name="games">Arcade</string>
-    <string name="gcm_defaultSenderId" translatable="false">611301447040</string>
+    <string name="gcm_defaultSenderId" translatable="false">322494950635</string>
     <string name="generic_error">Could not save data!</string>
     <string name="getting_c">Syncing all Calculations data</string>
     <string name="getting_cc">Syncing all Complex calculations data</string>
@@ -1287,11 +1328,12 @@
     <string name="getting_recommendations">Obtaining Recommendations data</string>
     <string name="getting_skip_logic">Obtaining Skip Logic data</string>
     <string name="go_to_fdp_status_form">Go to FDP status form</string>
-    <string name="google_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
-    <string name="google_app_id" translatable="false">1:611301447040:android:1dd3f698231e392c</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBFD3I252Qti1bL149_ccYgF1xM9hXb1ag</string>
+    <string name="google_api_key" translatable="false">AIzaSyDAD38jbTtkFRrCZ6zO56M0DuQhBzg-bB4</string>
+    <string name="google_app_id" translatable="false">1:322494950635:android:85b76a5f6dcb3725</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDAD38jbTtkFRrCZ6zO56M0DuQhBzg-bB4</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAyMAONPNB7wlxaEwLVfbsFtRMSHN29K3k</string>
     <string name="google_sign_in">Google Sign in</string>
+    <string name="google_storage_bucket" translatable="false">fdp-v2.appspot.com</string>
     <string name="have_account_text">Have an account?</string>
     <string name="hello">Hello, Welcome!</string>
     <string name="hey_there">Hi there!</string>
@@ -1300,12 +1342,16 @@
     <string name="hire_labour_type">Labour type</string>
     <string name="home">Home</string>
     <string name="image_options">Please select an option</string>
+    <string name="import_data_question">Import data?</string>
+    <string name="import_data_rationale">This will replace current data with the one stored on the device.</string>
+    <string name="import_database">Import local database</string>
     <string name="incomplete_ao_monitoring">Incomplete AO monitoring</string>
     <string name="incomplete_ao_rational">Please complete Diagnostic Adoption Observation for Plot </string>
     <string name="incomplete_monitoring_prefix">Some plots have incomplete AO Monitoring results for Year</string>
     <string name="incomplete_monitoring_suffix">.
         Please make sure all plot monitoring are complete for the specified year</string>
     <string name="incorrect_no_plots_suffix">\'s plots are not equal.\\nPlease make sure all plots have the same number of monitoring!</string>
+    <string name="index_out_of_bound_exception">IndexOutOfBound</string>
     <string name="info_plot_monitoring">Info Plot Monitoring</string>
     <string name="invalid_phone_number">Please enter a valid phone number</string>
     <string name="ipsum" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
@@ -1322,6 +1368,7 @@
     <string name="log_out">Log Out?</string>
     <string name="login">Log In</string>
     <string name="logout_button">Logout</string>
+    <string name="logs_sent">Logs have been sent!</string>
     <string name="mar">Mar</string>
     <string name="may">May</string>
     <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
@@ -1329,11 +1376,14 @@
     <string name="monitoring">Monitoring</string>
     <string name="monitoring_ao">Monitoring Adoption Observations</string>
     <string name="monitoring_for_year">Monitoring for Year</string>
+    <string name="msg_title_warning">Warning</string>
     <string name="name">Name</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="netPrinterListTitle_label">Net Printer</string>
     <string name="network_error">No internet!</string>
     <string name="network_error_rational">You have no internet access! Please connect to a network and try again.</string>
+    <string name="new_data_saved">New data has been saved!</string>
     <string name="new_data_updated">New data updated</string>
     <string name="new_farmer_added">New Farmer added!</string>
     <string name="new_farmer_not_added">Could not add farmer info. Please try again.</string>
@@ -1341,12 +1391,14 @@
     <string name="next">Next</string>
     <string name="no">No</string>
     <string name="no_access_to_pl">No access to P &amp; L</string>
-    <string name="no_data">No data</string>
+    <string name="no_data">No data!</string>
+    <string name="no_database_data_found">No database data found!</string>
     <string name="no_farmers">No new farmer data to sync</string>
     <string name="no_image_taken">No photo was selected.</string>
     <string name="no_internet_connection_available">No internet connection available.</string>
     <string name="no_monitoring_added"> has no monitoring added for Year </string>
     <string name="no_more_mods">You cannot make any more modifications to </string>
+    <string name="no_network_device">No Net Printer Found</string>
     <string name="no_new_data">No new data</string>
     <string name="no_old_data">No data to download</string>
     <string name="no_plots">No Plots Added!</string>
@@ -1355,12 +1407,13 @@
     <string name="no_plots_added_suffix">has no plots added! Please add at least 1 plot before proceeding</string>
     <string name="no_points">No Points added yet</string>
     <string name="nov">Nov</string>
+    <string name="null_pointer_exception">Null Pointer</string>
     <string name="oauthRedirectURI" translatable="false">fdpapp://auth/success</string>
     <string name="oauth_display_type">touch</string>
     <string name="oct">Oct</string>
     <string name="ok">OK</string>
     <string name="open">Open</string>
-    <string name="pandl">Review Page and P &amp; L</string>
+    <string name="pandl">Review Page, P &amp; L and Historical View</string>
     <string name="password">Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -1381,9 +1434,34 @@
     <string name="plot_info">Plot Info</string>
     <string name="plot_name">Plot Name</string>
     <string name="populating_data">Populating Data</string>
+    <string name="port_title">Port</string>
+    <string name="port_value">Select the port</string>
+    <string name="printer_model_title">PrinterModel</string>
+    <string name="printer_model_value">Select the printer model </string>
+    <string name="progress_dialog_message_close_connection">Closing the connection</string>
+    <string name="progress_dialog_message_communication_start">Start communication…</string>
+    <string name="progress_dialog_message_cooling_end">Printer cooling end</string>
+    <string name="progress_dialog_message_cooling_start">Printer cooling start</string>
+    <string name="progress_dialog_message_createData">Creating the data</string>
+    <string name="progress_dialog_message_dataSent">The data was sent </string>
+    <string name="progress_dialog_message_getting_bluetooth_setting">Getting Bluetooth settings </string>
+    <string name="progress_dialog_message_getting_template">Getting template list </string>
+    <string name="progress_dialog_message_preparing_connection">Preparing the connection…</string>
+    <string name="progress_dialog_message_printed">The printing process was completed </string>
+    <string name="progress_dialog_message_removing_template">Removing templates </string>
+    <string name="progress_dialog_message_sendingData">Sending the data…</string>
+    <string name="progress_dialog_message_sendingPrintingData">Sending the data…</string>
+    <string name="progress_dialog_message_sending_template">File transferring</string>
+    <string name="progress_dialog_message_set_paper">Please Set Paper</string>
+    <string name="progress_dialog_message_setting_bluetooth_setting">Transferring Bluetooth settings </string>
+    <string name="progress_dialog_message_startPrint">Printing the data </string>
+    <string name="progress_dialog_message_transfer_start">Transfer Start…</string>
+    <string name="progress_dialog_message_waiting_peel">Wait for peeling label</string>
+    <string name="project_id" translatable="false">fdp-v2</string>
     <string name="provide_all_permissions">Provide Permissions</string>
     <string name="provide_all_permissions_rationale">All permissions are needed for FDP to work properly</string>
     <string name="provide_plot_name">Please provide the plot name</string>
+    <string name="questions">Survey questions</string>
     <string name="quit">Quit</string>
     <string name="read_only_rational">Once submitted and synced, you cannot make any more modifications.\n\nProceed?</string>
     <string name="reason_for_failure">Reason for Failure</string>
@@ -1397,9 +1475,11 @@
     <string name="save_data_explanation">Do you want to save your current data before exit?</string>
     <string name="search_hint">Search…</string>
     <string name="search_menu_title">Search</string>
+    <string name="search_printer">Searching…</string>
     <string name="search_title">Search</string>
     <string name="select_country_region">Please Select a Country/Region</string>
     <string name="select_picture">Select a profile picture</string>
+    <string name="send_logs_to_server">Send logs to server</string>
     <string name="sending_data">Uploading records</string>
     <string name="sep">Sep</string>
     <string name="settings">Settings</string>
@@ -1501,6 +1581,7 @@
     <string name="sync_farmer">Sync Farmer</string>
     <string name="sync_in_complete">Sync Incomplete</string>
     <string name="take_picture">Take picture</string>
+    <string name="template_encoding">Encoding:</string>
     <string name="title">Close</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_maps">Map</string>
@@ -1518,6 +1599,7 @@
     <string name="valid_phone_number">Valid phone numbers!</string>
     <string name="validation_error_title">Invalid Input</string>
     <string name="view">View</string>
+    <string name="view_crash_report">View Crash Report</string>
     <string name="welcome">Welcome %s</string>
     <string name="year">Year</string>
     <string name="year_1">Year 1</string>
@@ -2752,6 +2834,11 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
+    <style name="CrashReporter.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary_CrashReporter</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_CrashReporter</item>
+        <item name="colorAccent">@color/colorAccent_CrashReporter</item>
+    </style>
     <style name="CustomAnimations"/>
     <style name="CustomAnimations.grow">
         <item name="@android:windowEnterAnimation">@anim/grow_in</item>
@@ -2836,7 +2923,7 @@
         <item name="searchSuggestionBackground">@color/white</item>
         <item name="listTextColor">@color/text_black_87</item>
         <item name="searchBarHeight">?attr/actionBarSize</item>
-         <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
 
         <item name="historyIcon">@drawable/ic_history_black_24dp</item>
         <item name="suggestionIcon">@drawable/ic_person_black_24dp</item>

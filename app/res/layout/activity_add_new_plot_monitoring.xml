@@ -320,8 +320,6 @@
                     android:layout_below="@id/aosLayout"
                     android:padding="@dimen/spacing_normal"
                     >
-
-
                 <include layout="@layout/monitoring_form_section"/>
                 </LinearLayout>
 

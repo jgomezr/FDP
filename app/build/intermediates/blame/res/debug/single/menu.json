@@ -4,6 +4,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/menu/dashboard_menu.xml"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/activity_landing_page_menu.xml",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/menu/activity_landing_page_menu.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/activity_bottom_navigation.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/menu/activity_bottom_navigation.xml"
     },
@@ -12,8 +16,16 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/menu/main.xml"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/crash_detail_menu.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/crashreporter-1.0.9.aar/2783353b9c79b315595a772a0e9b0e35/res/menu/crash_detail_menu.xml"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/log_main_menu.xml",
+        "source": "/Users/aangjnr/.gradle/caches/transforms-1/files-1.1/crashreporter-1.0.9.aar/2783353b9c79b315595a772a0e9b0e35/res/menu/log_main_menu.xml"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/menu/sf__clear_custom_url.xml",

@@ -94,6 +94,7 @@
     <string name="add_farmer_rational">Ajouter de nouvelles données sur l\'agriculteur en cliquant sur le bouton vert ci-dessous</string>
     <string name="add_new_monitoring">Ajouter un nouveau suivi</string>
     <string name="add_new_plot">Ajouter un nouveau terrain</string>
+    <string name="add_new_record">Add new record</string>
     <string name="add_plot">Ajouter un nouveau terrain</string>
     <string name="add_plot_monitoring">Ajouter une nouvelle surveillance de parcelle</string>
     <string name="add_plot_to_access_pl">S\'il vous plaît ajouter une parcelle pour accéder à P &amp; L.</string>
@@ -128,6 +129,7 @@
     <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installer"</string>
     <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas installés sur votre appareil."</string>
     <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Installer les services Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Disponibilité des services Google Play"</string>
     <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Erreur liée aux services Google Play"</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"L\'application <ns1:g id="APP_NAME">%1$s</ns1:g> rencontre des problèmes avec les services Google Play. Veuillez réessayer."</string>
     <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ne fonctionnera pas sans les services Google Play, qui ne sont pas compatibles avec votre appareil."</string>
@@ -143,13 +145,19 @@
     <string name="could_not_add_plot">Impossible d\'ajouter des informations sur l\'intrigue. Veuillez réessayer</string>
     <string name="could_not_connect">N\'a pas pu se connecter</string>
     <string name="could_not_connect_rationale">Il pourrait y avoir un problème avec votre connexion. S\'il vous plaît, vérifiez et essayez à nouveau.!</string>
+    <string name="could_not_export_database">Impossible d\'exporter la base de données!</string>
     <string name="could_not_save">Impossible de sauver l\'agriculteur</string>
+    <string name="could_not_save_data">An error occurred saving the data.</string>
+    <string name="crash_reporter">Ouvrir CrashReporter</string>
     <string name="currency">Monnaie:</string>
     <string name="data">données</string>
     <string name="data_already_synced">les données ont déjà été synchronisées!</string>
     <string name="data_before_sync">données avant la synchronisation.</string>
     <string name="data_not_saved">Impossible de sauvegarder les données!</string>
     <string name="data_saved">Données enregistrées</string>
+    <string name="database_exported">La base de données a été exportée!</string>
+    <string name="database_import_error">Impossible d\'importer la base de données!</string>
+    <string name="database_imported">La base de données a été importée!</string>
     <string name="date">Rendez-vous amoureux</string>
     <string name="dec">Déc</string>
     <string name="delete">Supprimer la photo</string>
@@ -163,6 +171,7 @@
     <string name="download_farmer_data">Télécharger les données de l\'agriculteur</string>
     <string name="download_resources">Télécharger les ressources</string>
     <string name="edit">Modifier</string>
+    <string name="edit_current_record">Edit current record</string>
     <string name="edit_farmer_details">Modifier les détails de l\'agriculteur</string>
     <string name="edit_plot">Modifier les détails du tracé</string>
     <string name="edit_plot_monitoring">Modifier la surveillance de tracé</string>
@@ -177,6 +186,7 @@
     <string name="error_total_plot_estimated_production">Les parcelles totales estiment que la production est supérieure à la production agricole totale!</string>
     <string name="est_production_size">Estimation de la taille de production</string>
     <string name="estimated_production_size">Taille de production estimée:</string>
+    <string name="export_database">Base de données d\'exportation</string>
     <string name="family_members">Membres de la famille</string>
     <string name="farm_assessment">Évaluation de ferme</string>
     <string name="farm_result">Résultat de la ferme</string>
@@ -220,6 +230,9 @@
     <string name="hire_labour_type">Type de travail</string>
     <string name="home">Départ</string>
     <string name="image_options">* Merci de sélectionner une option</string>
+    <string name="import_data_question">Importer des données?</string>
+    <string name="import_data_rationale">Cela remplacera les données actuelles par celles stockées sur l\'appareil.</string>
+    <string name="import_database">Importer une base de données locale</string>
     <string name="incomplete_ao_monitoring">Surveillance AO incomplète</string>
     <string name="incomplete_ao_rational">S\'il vous plaît compléter l\'observation d\'adoption diagnostique pour le complot </string>
     <string name="incomplete_monitoring_prefix">Certaines parcelles ont des résultats de surveillance AO incomplets pour l\'année</string>
@@ -240,6 +253,7 @@
     <string name="log_out">Se déconnecter</string>
     <string name="login">Connecter</string>
     <string name="logout_button">Déconnecter</string>
+    <string name="logs_sent">Logs have been sent!</string>
     <string name="mar">Mars</string>
     <string name="may">Mai</string>
     <string name="missing_data">Données manquantes</string>
@@ -251,6 +265,7 @@
     <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
     <string name="network_error">Pas d\'Internet</string>
     <string name="network_error_rational">Vous n\'avez pas d\'accès internet! Veuillez vous connecter à un réseau et réessayer.</string>
+    <string name="new_data_saved">New data has been saved!</string>
     <string name="new_data_updated">Nouvelles données mises à jour</string>
     <string name="new_farmer_added">Nouveau fermier ajouté!</string>
     <string name="new_farmer_not_added">Impossible d\'ajouter des informations sur l\'agriculteur. Veuillez réessayer.</string>
@@ -259,6 +274,7 @@
     <string name="no">Non</string>
     <string name="no_access_to_pl">Pas d\'accès à P &amp; L</string>
     <string name="no_data">Pas de données</string>
+    <string name="no_database_data_found">Aucune donnée de base de données trouvée!</string>
     <string name="no_farmers">Aucune nouvelle donnée de l\'agriculteur à synchroniser</string>
     <string name="no_image_taken">Aucune photo n\'a été sélectionnée.</string>
     <string name="no_internet_connection_available">Pas de connexion Internet disponible.</string>
@@ -294,6 +310,7 @@
     <string name="provide_all_permissions">Fournir des autorisations</string>
     <string name="provide_all_permissions_rationale">Toutes les autorisations sont nécessaires pour que FDP fonctionne correctement</string>
     <string name="provide_plot_name">S\'il vous plaît fournir le nom de l\'intrigue</string>
+    <string name="questions">Survey questions</string>
     <string name="quit">Quite</string>
     <string name="read_only_rational">Une fois soumis et synchronisé, vous ne pouvez plus apporter de modifications. \ N \ nRéaliser?</string>
     <string name="reason_for_failure">Raison de l\'échec</string>

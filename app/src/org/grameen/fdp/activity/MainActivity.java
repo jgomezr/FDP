@@ -3,6 +3,8 @@ package org.grameen.fdp.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -39,6 +41,7 @@ import android.widget.Toast;
 
 import com.evrencoskun.tableview.filter.FilterType;
 import com.google.gson.Gson;
+import com.salesforce.androidsdk.rest.RestClient;
 import com.wooplr.spotlight.SpotlightConfig;
 import com.wooplr.spotlight.utils.SpotlightSequence;
 
@@ -47,6 +50,7 @@ import org.grameen.fdp.adapter.CustomSuggestionsAdapter;
 import org.grameen.fdp.adapter.FarmerListAdapter;
 import org.grameen.fdp.fragment.FarmerListFragment;
 import org.grameen.fdp.object.RealFarmer;
+import org.grameen.fdp.object.SearchModel;
 import org.grameen.fdp.object.Village;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
@@ -62,6 +66,9 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import br.com.mauker.materialsearchview.MaterialSearchView;
+import ir.mirrajabi.searchdialog.SimpleSearchDialogCompat;
+import ir.mirrajabi.searchdialog.core.BaseSearchDialogCompat;
+import ir.mirrajabi.searchdialog.core.SearchResultListener;
 
 /**
  * Created by aangjnr on 08/11/2017.
@@ -74,7 +81,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     Switch toggleTranslation;
     ViewPager viewPager;
     String TAG = "MainActivity";
-    MaterialSearchView searchBar;
     GridLayoutManager productsGridLayoutManager;
     DatabaseHelper databaseHelper;
     TextView tabOIndicatorText;
@@ -92,7 +98,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     ImageView hamburger;
     RelativeLayout searchLayout;
 
-    private List<RealFarmer> TOTAL_FARMER_LIST;
+    ArrayList<SearchModel> LIST_OF_FARMERS = new ArrayList<>();
 
 
 
@@ -110,6 +116,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
 
         databaseHelper = DatabaseHelper.getInstance(this);
+
+
+        //Log.i(TAG, "********************* PATH OF THE DATABASE IS " + databaseHelper.getReadableDatabase().getPath());
+
+
+
+
         pager_indicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
 
         toggleTranslation = findViewById(R.id.translation_switch);
@@ -127,29 +140,64 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         }
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        drawer = findViewById(R.id.drawer_layout);
+        viewPager = findViewById(R.id.view_pager);
+
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        View headerLayout = navigationView.getHeaderView(0);
+
+
+        try {
+            TextView nameTV = headerLayout.findViewById(R.id.name_textView);
+            TextView emailTV = headerLayout.findViewById(R.id.email_textView);
+            TextView versionNumberTV = navigationView.findViewById(R.id.version_number);
+
+
+            nameTV.setText(prefs.getString("client_name", ""));
+            emailTV.setText(prefs.getString("client_email", ""));
+
+
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            versionNumberTV.setText(pInfo.versionName);
+
+        } catch (PackageManager.NameNotFoundException ignore) {
+        }
 
 
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-        searchBar = findViewById(R.id.search_view);
+
 
 
         searchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchBar.openSearch();
+
+                showSearchDialog();
+
+            }
+
+
+        });
+
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                List<RealFarmer> TOTAL_FARMER_LIST = databaseHelper.getAllFarmers();
+
+                for (RealFarmer f : TOTAL_FARMER_LIST)
+                    LIST_OF_FARMERS.add(new SearchModel(f.getId(), f.getFarmerName()));
+
+                TOTAL_FARMER_LIST.clear();
+
+
             }
         });
 
 
-        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        // customSuggestionsAdapter = new CustomSuggestionsAdapter(inflater);
 
-        TOTAL_FARMER_LIST = databaseHelper.getAllFarmers();
 
 
 
@@ -246,52 +294,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         });
 
 
-        searchBar.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-
-                searchBar.addSuggestions(generateSearchFilter(query));
-
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                searchBar.addSuggestions(generateSearchFilter(newText));
-                return true;
-            }
-        });
-
-        searchBar.setSearchViewListener(new MaterialSearchView.SearchViewListener() {
-            @Override
-            public void onSearchViewOpened() {
-                findViewById(R.id.card_view).setAlpha(0f);
-                // Do something once the view is open.
-            }
-
-            @Override
-            public void onSearchViewClosed() {
-
-                findViewById(R.id.card_view).animate().alpha(1f).setDuration(1000).start();
-            }
-        });
 
 
-        searchBar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Do something when the suggestion list is clicked.
-                String suggestion = searchBar.getSuggestionAtPosition(position);
-                //searchBar.setQuery(suggestion, true);
 
-                searchBar.closeSearch();
 
-                Intent intent = new Intent(MainActivity.this, FarmerDetailsActivity.class);
-                intent.putExtra("farmer", new Gson().toJson(databaseHelper.getFarmerBasicInfo(suggestion.split(Pattern.quote("|"))[1].trim())));
-                startActivity(intent);
-
-            }
-        });
 
 
         hamburger.setOnClickListener(new View.OnClickListener() {
@@ -458,19 +464,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (searchBar.isOpen()) {
-            searchBar.closeSearch();
         } else {
             super.onBackPressed();
         }
     }
 
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        searchBar.clearSuggestions();
-    }
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -631,47 +629,29 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
 
-    ArrayList<String> generateSearchFilter(String query) {
-
-        ArrayList<String> filteredList = new ArrayList<>();
-
-        if (!TextUtils.isEmpty(query)) {
-            //searchBar.clearHistory();
+    private void showSearchDialog() {
 
 
-            for (RealFarmer f : TOTAL_FARMER_LIST) {
-                if (f.getFarmerName().toLowerCase().contains(query.toLowerCase())) {
+        new SimpleSearchDialogCompat(this, "Select a farmer",
+                "Who are you looking for?", null, LIST_OF_FARMERS,
+                new SearchResultListener<SearchModel>() {
+                    @Override
+                    public void onSelected(BaseSearchDialogCompat dialog, SearchModel item, int position) {
 
-                    filteredList.add(f.getFarmerName() + " | " + f.getId());
 
-                }
-            }
-        }
+                        Intent intent = new Intent(MainActivity.this, FarmerDetailsActivity.class);
+                        intent.putExtra("farmer", new Gson().toJson(databaseHelper.getFarmerBasicInfo(item.getId())));
 
-        return filteredList;
+                        dialog.dismiss();
+                        startActivity(intent);
+                    }
+                }).show();
+
+
+
+
+
     }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == MaterialSearchView.REQUEST_VOICE && resultCode == RESULT_OK) {
-            ArrayList<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            if (matches != null && matches.size() > 0) {
-                String searchWrd = matches.get(0);
-                if (!TextUtils.isEmpty(searchWrd)) {
-
-                    searchBar.setQuery(searchWrd, false);
-                    searchBar.addSuggestions(generateSearchFilter(searchWrd));
-
-
-                }
-            }
-
-            return;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
 
 
 }

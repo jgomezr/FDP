@@ -8,22 +8,44 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.PopupMenu;
+import android.widget.Toast;
+
+import com.balsikandar.crashreporter.CrashReporter;
+import com.balsikandar.crashreporter.ui.CrashReporterActivity;
+import com.balsikandar.crashreporter.utils.CrashUtil;
+import com.balsikandar.crashreporter.utils.FileUtils;
+import com.crashlytics.android.Crashlytics;
 
 import org.grameen.fdp.R;
+import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.object.Country;
 import org.grameen.fdp.utility.Constants;
+import org.grameen.fdp.utility.CustomToast;
+import org.grameen.fdp.utility.DatabaseHelper;
 import org.grameen.fdp.utility.Utils;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+
+import static org.grameen.fdp.application.FdpApplication.databaseBackupsPath;
 
 /**
  * Created by aangjnr on 11/12/2017.
@@ -33,6 +55,11 @@ import java.util.List;
 public class LandingPageActivity extends BaseActivity {
 
     Boolean permissionGranted = false;
+
+
+    String localPath;
+    String backupPath;
+
 
     String[] PERMISSIONS = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -47,6 +74,11 @@ public class LandingPageActivity extends BaseActivity {
         setContentView(R.layout.activity_landing_page);
 
 
+        localPath = Environment.getDataDirectory().getPath() + "/data/" + getPackageName() + "/databases/" + Constants.DB_NAME;
+        backupPath = databaseBackupsPath + "/" + Constants.DB_NAME;
+
+
+
         //Check for permission
         if (launchMultiplePermissions(PERMISSIONS)) {
             // showAlertDialog();
@@ -54,6 +86,7 @@ public class LandingPageActivity extends BaseActivity {
 
 
         }
+
 
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
@@ -144,6 +177,16 @@ public class LandingPageActivity extends BaseActivity {
             if (launchMultiplePermissions(PERMISSIONS))
                 //showAlertDialog();
                 if (prefs.getBoolean("initialData", true)) {
+
+
+                    try {
+
+                        File databaseFile = new File(databaseBackupsPath);
+                        if (!databaseFile.exists())
+                            databaseFile.mkdirs();
+                    } catch (Exception ignored) {
+                    }
+
                     syncInitialData();
                 } else {
                     showAlertDialog();
@@ -235,18 +278,18 @@ public class LandingPageActivity extends BaseActivity {
 
 
                             }
-                        }, getResources(R.string.sync_anyway), new DialogInterface.OnClickListener() {
+                        }, getResources(R.string.sync), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
 
-                                startActivity(new Intent(LandingPageActivity.this, DataDownloadActivity.class));
+                                //startActivity(new Intent(LandingPageActivity.this, DataDownloadActivity.class));
 
                                 editor.putBoolean("isFirstSignIn", false).apply();
 
 
                             }
-                        }, getResources(R.string.sync), 0);
+                        }, getResources(R.string.no), 0);
 
 
                     }
@@ -289,5 +332,156 @@ public class LandingPageActivity extends BaseActivity {
             showAlertDialog();
 
         }
+    }
+
+
+    public void showPopUp(@Nullable final View v) {
+
+        PopupMenu menu = new PopupMenu(this, v);
+
+        menu.getMenuInflater()
+                .inflate(R.menu.activity_landing_page_menu, menu.getMenu());
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+
+                switch (item.getItemId()) {
+                    case R.id.upload_logs:
+
+                        //Todo upload logs to server
+
+                        if (Utils.checkInternetConnection(LandingPageActivity.this))
+                            sendLatestLogToServer();
+
+
+                        return true;
+
+                    case R.id.crash_reports:
+
+                        // Intent intent = new Intent(LandingPageActivity.this, CrashReporterActivity.class);
+                        Intent intent = new Intent(LandingPageActivity.this, CrashTestingActivity.class);
+                        startActivity(intent);
+
+                        return true;
+
+
+                    case R.id.export_database:
+
+                        Log.i(TAG, "********* LOCAL PATH IS " + localPath);
+                        Log.i(TAG, "********* BACKUP PATH IS " + backupPath);
+
+
+                        int value;
+
+                        value = databaseHelper.exportDB(localPath, backupPath);
+
+                        if (value == 1)
+                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.database_exported), Toast.LENGTH_LONG).show();
+                        else if (value == 0)
+                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.no_database_data_found), Toast.LENGTH_LONG).show();
+                        else
+                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.database_export_error), Toast.LENGTH_LONG).show();
+
+
+                        return true;
+
+
+                    case R.id.import_database:
+
+                        Log.i(TAG, "********* LOCAL PATH IS " + localPath);
+                        Log.i(TAG, "********* BACKUP PATH IS " + backupPath);
+
+
+                        showAlertDialog(true, getString(R.string.import_data_question), getString(R.string.import_data_rationale),
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                        Log.i(TAG, "********* LOCAL PATH IS " + localPath);
+                                        Log.i(TAG, "********* BACKUP PATH IS " + backupPath);
+
+
+                                        int value;
+
+                                        value = databaseHelper.exportDB(backupPath, localPath);
+
+                                        if (value == 1)
+                                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.database_imported), Toast.LENGTH_LONG).show();
+                                        else if (value == 0)
+                                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.no_database_data_found), Toast.LENGTH_LONG).show();
+                                        else
+                                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.database_import_error), Toast.LENGTH_LONG).show();
+
+
+                                    }
+                                }, getString(R.string.yes), new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+
+                                        dialog.dismiss();
+
+
+                                    }
+                                }, getString(R.string.no), 0);
+                        return true;
+
+
+                    default:
+                        return false;
+                }
+            }
+
+        });
+
+        menu.show();
+
+    }
+
+    private void sendLatestLogToServer() {
+        CustomToast.makeToast(LandingPageActivity.this, "Sending logs...", Toast.LENGTH_LONG).show();
+
+        List<File> logFiles = getAllCrashes();
+        if (logFiles.size() > 0) {
+
+            Crashlytics.setUserIdentifier(PreferenceManager.getDefaultSharedPreferences(
+                    LandingPageActivity.this).getString("client_name", "FDP USER"));
+
+            Crashlytics.log(FileUtils.readFromFile(new File(logFiles.get(0).getAbsolutePath())));
+
+            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.logs_sent), Toast.LENGTH_LONG).show();
+
+            try {
+                File[] logs = new File(CrashReporter.getCrashReportPath()).listFiles();
+                for (File file : logs) {
+                    FileUtils.delete(file);
+                }
+            } catch (Exception ignored) {
+            }
+        }
+    }
+
+
+    private ArrayList<File> getAllCrashes() {
+        String directoryPath;
+        String crashReportPath = CrashReporter.getCrashReportPath();
+
+        if (TextUtils.isEmpty(crashReportPath)) {
+            directoryPath = CrashUtil.getDefaultPath();
+        } else {
+            directoryPath = crashReportPath;
+        }
+        File directory = new File(directoryPath);
+        if (!directory.exists() || !directory.isDirectory()) {
+            throw new RuntimeException("The path provided doesn't exists : " + directoryPath);
+        }
+        ArrayList<File> listOfFiles = new ArrayList<>(Arrays.asList(directory.listFiles()));
+        for (Iterator<File> iterator = listOfFiles.iterator(); iterator.hasNext(); ) {
+            if (iterator.next().getName().contains(com.balsikandar.crashreporter.utils.Constants.EXCEPTION_SUFFIX)) {
+                iterator.remove();
+            }
+        }
+        Collections.sort(listOfFiles, Collections.reverseOrder());
+        return listOfFiles;
     }
 }

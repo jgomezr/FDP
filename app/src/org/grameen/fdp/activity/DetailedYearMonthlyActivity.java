@@ -1,18 +1,24 @@
 package org.grameen.fdp.activity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.DetailedYearTableHearderAdapter;
 import org.grameen.fdp.adapter.DetailedYearTableViewAdapter;
 import org.grameen.fdp.object.Data;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
 import org.grameen.fdp.object.RecommendationsPlusActivity;
@@ -166,16 +172,80 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
 
 
         }
+
+
         onBackClicked();
+
+
+        if (BuildConfig.DEBUG) {
+
+
+            findViewById(R.id.print).setVisibility(View.VISIBLE);
+
+            findViewById(R.id.print).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    findViewById(R.id.bottom_buttons).setVisibility(View.GONE);
+                    findViewById(R.id.currency_layout).setVisibility(View.GONE);
+                    findViewById(R.id.print).setVisibility(View.GONE);
+
+
+                    progressDialog = showProgress(DetailedYearMonthlyActivity.this, "Initializing", "Please wait...", false);
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            String fileLocation = captureScreenshot(findViewById(R.id.main_layout), "monthly_activities");
+
+                            progressDialog.dismiss();
+
+                            if (fileLocation != null) {
+
+                                Intent intent = new Intent(DetailedYearMonthlyActivity.this, PrintingActivity.class);
+                                intent.putExtra("file_location", fileLocation);
+                                startActivity(intent);
+
+                                findViewById(R.id.bottom_buttons).setVisibility(View.VISIBLE);
+                                findViewById(R.id.currency_layout).setVisibility(View.VISIBLE);
+                                findViewById(R.id.print).setVisibility(View.VISIBLE);
+
+
+                            } else {
+                                CustomToast.makeToast(DetailedYearMonthlyActivity.this, "Error starting the printer service!", Toast.LENGTH_LONG).show();
+                            }
+
+
+                        }
+                    }, 2000);
+
+                }
+            });
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
-    Data2 getMonthlyData(String id, String month, int year) {
+    HistoricalTableViewData getMonthlyData(String id, String month, int year) {
 
         List<RecommendationsPlusActivity> recommendationsPlusActivities = new ArrayList<>();
         List<RecommendationsPlusActivity> recommendationsPlusActivities2 = new ArrayList<>();
 
-        Data2 data = new Data2("", "", "");
+        HistoricalTableViewData data = new HistoricalTableViewData("", "", "");
         try {
 
            /*
@@ -243,7 +313,7 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
             Log.i(TAG, "Appended labor cost are = " + labourCost.toString());
 
 
-            data = new Data2(activities.toString(),
+            data = new HistoricalTableViewData(activities.toString(),
                     applyCalculation("(" + suppliesCost.toString() + ") * " + CURRENT_SIZE_IN_HA),
                     applyCalculation("(" + labourCost.toString() + ") * " + CURRENT_SIZE_IN_HA));
 
@@ -258,7 +328,7 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
     void getActivitiesSuppliesAndCosts(String recommendationId, String plotName, int year) {
 
 
-        List<Data2> dataList = new ArrayList<>();
+        List<HistoricalTableViewData> dataList = new ArrayList<>();
 
 
         dataList.add(getMonthlyData(recommendationId, "Jan", year));
@@ -279,7 +349,7 @@ public class DetailedYearMonthlyActivity extends BaseActivity {
         List<String> labourCost = new ArrayList<>();
         List<String> suppliesCost = new ArrayList<>();
 
-        for (Data2 data : dataList) {
+        for (HistoricalTableViewData data : dataList) {
 
             activities.add(data.getLabel());
             suppliesCost.add(data.getV1());

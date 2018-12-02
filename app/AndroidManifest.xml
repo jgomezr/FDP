@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="org.grameen.fdp"
 	android:installLocation="internalOnly"
@@ -7,8 +6,11 @@
 	>
 
 
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 	<uses-permission android:name="android.permission.CAMERA"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
@@ -20,9 +22,7 @@
 	<uses-permission android:name="android.permission.VIBRATE"/>
 
 
-
-
-	<uses-feature
+    <uses-feature
 		android:glEsVersion="0x00020000"
 		android:required="true"/>
 
@@ -41,6 +41,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		android:screenOrientation="portrait"
+        android:largeHeap="true"
 	android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity">
 
 
@@ -64,6 +65,7 @@
 		<activity android:name=".activity.BaseActivity"/>
 
 		<activity android:name=".activity.MainActivity"
+            android:windowSoftInputMode="adjustNothing"
 				    />
 		<activity android:name=".activity.FarmerDetailsActivity"/>
 		<activity android:name=".activity.Add_EditFarmerDetailsActivity"/>
@@ -110,9 +112,18 @@
 		<activity
 			android:name=".activity.SyncDownActivity"
 			android:theme="@style/Theme.Translucent" />
+        <activity android:name=".activity.CrashTestingActivity" />
+        <activity
+            android:name=".activity.HistoricalDataActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".activity.AddEditHistoricalData" />
+        <activity
+            android:name=".activity.PrintingActivity"
+            android:screenOrientation="landscape" />
 
 
-		<provider
+        <provider
 			android:name="br.com.mauker.materialsearchview.db.HistoryProvider"
 			android:authorities="br.com.mauker.materialsearchview.searchhistorydatabase"
 			android:exported="false"
@@ -124,6 +135,9 @@
 			android:name="com.google.android.geo.API_KEY"
 			android:value="@string/google_maps_key"/>
 
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
 
 		<provider
 			android:name=".utility.GenericFileProvider"

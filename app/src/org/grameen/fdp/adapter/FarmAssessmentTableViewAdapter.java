@@ -1,37 +1,27 @@
 package org.grameen.fdp.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.view.ContextThemeWrapper;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 
 import java.util.List;
 
 import de.codecrafters.tableview.TableView;
 import de.codecrafters.tableview.toolkit.LongPressAwareTableDataAdapter;
 
-import static org.grameen.fdp.utility.Constants.BUTTON_VIEW;
-import static org.grameen.fdp.utility.Constants.TAG_OTHER_TEXT_VIEW;
-import static org.grameen.fdp.utility.Constants.TAG_RESULTS;
-import static org.grameen.fdp.utility.Constants.TAG_TITLE_TEXT_VIEW;
-import static org.grameen.fdp.utility.Constants.TAG_VIEW;
-
 /**
  * Created by aangjnr on 17/01/2018.
  */
 
-public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapter<Data2> {
+public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapter<HistoricalTableViewData> {
 
     String TAG = FarmAssessmentTableViewAdapter.class.getSimpleName();
     private static final int TEXT_SIZE = 10;
@@ -43,7 +33,7 @@ public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapt
 
     Integer dataSize;
 
-    public FarmAssessmentTableViewAdapter(final Context context, final List<Data2> data, final TableView<Data2> tableView) {
+    public FarmAssessmentTableViewAdapter(final Context context, final List<HistoricalTableViewData> data, final TableView<HistoricalTableViewData> tableView) {
         super(context, data, tableView);
 
         this.dataSize = data.size();
@@ -63,7 +53,7 @@ public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapt
     @Override
     public View getDefaultCellView(int i, int i1, ViewGroup viewGroup) {
 
-        final Data2 myTableData = getRowData(i);
+        final HistoricalTableViewData myTableData = getRowData(i);
         View renderedView = new View(context);
 
 
@@ -93,10 +83,7 @@ public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapt
     }
 
 
-
-
-
-    private View renderColumnLabelValues(final Data2 data) {
+    private View renderColumnLabelValues(final HistoricalTableViewData data) {
 
         View view = null;
 
@@ -114,8 +101,7 @@ public class FarmAssessmentTableViewAdapter extends LongPressAwareTableDataAdapt
     }
 
 
-
-    private View renderColumnSingleValues(final Data2 data) {
+    private View renderColumnSingleValues(final HistoricalTableViewData data) {
 
         View view = null;
 

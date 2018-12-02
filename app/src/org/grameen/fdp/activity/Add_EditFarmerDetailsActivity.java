@@ -588,9 +588,6 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         //Todo add parameter to load data from the database, if is in editing mode else display default forms with their resp values
 
-
-
-
         try {
            // if (fm.getFragments().contains(formFragment)) {
 
@@ -620,11 +617,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 saveOrUpdateData(true);
-
-
             }
         });
 
@@ -655,7 +648,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             _farmer.setGender(gender);
             _farmer.setImageUrl(IMAGE_URL);
             _farmer.setFirstVisitDate(date);
-            _farmer.setLastVisitDate("--");
+            _farmer.setLastVisitDate(date);
             _farmer.setLastModifiedDate(date);
             _farmer.setSyncStatus(0);
             _farmer.setImageUrl(BASE64_STRING);
@@ -699,7 +692,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             farmer.setGender(gender);
             farmer.setImageUrl(BASE64_STRING);
             //farmer.setFirstVisitDate(null);
-            farmer.setLastVisitDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
+            farmer.setLastVisitDate(farmer.getLastVisitDate());
             farmer.setLastModifiedDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
             farmer.setSyncStatus(0);
 

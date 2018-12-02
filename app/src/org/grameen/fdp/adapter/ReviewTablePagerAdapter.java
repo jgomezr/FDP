@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 import org.grameen.fdp.object.PlotMonitoringTableData;
 
 import java.util.ArrayList;
@@ -110,17 +110,17 @@ public class ReviewTablePagerAdapter extends PagerAdapter {
         tableView.setColumnModel(columnModel);
 
 
-        PlotMonitoringTableHearderAdapter headerAdapter = new PlotMonitoringTableHearderAdapter(mContext, TABLE_HEADERS);
+        HistoricalTableHeaderAdapter headerAdapter = new HistoricalTableHeaderAdapter(mContext, TABLE_HEADERS);
         tableView.setHeaderAdapter(headerAdapter);
 
 
-        List<Data2> GENERAL_AO_MONITORING = new ArrayList<>();
+        List<HistoricalTableViewData> GENERAL_AO_MONITORING = new ArrayList<>();
 
 
-        for (Data2 q : data.getTableData()) {
+        for (HistoricalTableViewData q : data.getTableData()) {
 
             //Todo get results
-            GENERAL_AO_MONITORING.add(new Data2(q.getLabel(), q.getV1(), q.getV2(), q.getV3(), q.getTag()));
+            GENERAL_AO_MONITORING.add(new HistoricalTableViewData(q.getLabel(), q.getV1(), q.getV2(), q.getV3(), q.getTag()));
 
         }
 

@@ -7,14 +7,21 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.support.multidex.MultiDexApplication;
+import android.util.Log;
 
+import com.balsikandar.crashreporter.CrashReporter;
+import com.crashlytics.android.Crashlytics;
 import com.salesforce.androidsdk.analytics.security.Encryptor;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 import com.salesforce.androidsdk.smartsync.app.SmartSyncSDKManager;
 
+import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.activity.MainActivity;
+import org.grameen.fdp.utility.Constants;
 
 import java.io.File;
+
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by aangjnr on 27/11/2017.
@@ -28,8 +35,12 @@ public class FdpApplication extends MultiDexApplication {
     public static final String REQUEST_TYPE_FARMER = "requesttype=farmer&data=";
     public static final String REQUEST_TYPE_PLOT = "requesttype=plot&data=";
 
-    public static String ROOT_DIR = Environment
-            .getExternalStorageDirectory() + File.separator + ".FDP";
+    public static String ROOT_DIR = Environment.getExternalStorageDirectory() + File.separator + ".FDP/v2";
+
+    public static String crashReportsPath = ROOT_DIR + File.separator + "crashReports";
+
+    public static String databaseBackupsPath = ROOT_DIR + File.separator + "databaseBackups";
+
 
 
 
@@ -54,6 +65,21 @@ public class FdpApplication extends MultiDexApplication {
             StrictMode.setVmPolicy(builder.build());
         }*/
 
+
+        if (BuildConfig.ENABLE_CRASHLYTICS) {
+
+            Log.i("FDP APPLICATION", "************  CRASHYTICS ENABLED! **********");
+            Fabric.with(this, new Crashlytics());
+
+            try {
+                CrashReporter.initialize(this, crashReportsPath);
+                File databaseFile = new File(databaseBackupsPath);
+                if (!databaseFile.exists())
+                    databaseFile.mkdirs();
+            } catch (Exception ignore) {
+            }
+
+        }
     }
 }
 

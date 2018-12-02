@@ -363,5 +363,23 @@
     <string name="estimated_production_size">Perkiraan ukuran produksi:</string>
     <string name="lime_needed">Kapur dibutuhkan:</string>
 
+    <string name="crash_reporter">Buka CrashReporter</string>
+    <string name="send_logs_to_server">Kirim log ke server</string>
+    <string name="export_database">Mengekspor basis data</string>
+    <string name="import_database">Impor basis data lokal</string>
+    <string name="database_exported">Database telah diekspor!</string>
+    <string name="could_not_export_database">Tidak dapat mengekspor basis data!</string>
+    <string name="import_data_question">Impor data?</string>
+    <string name="import_data_rationale">Ini akan menggantikan data saat ini dengan yang tersimpan di perangkat.</string>
+    <string name="database_imported">Basis data telah diimpor!</string>
+    <string name="database_import_error">Tidak dapat mengimpor basis data!</string>
+    <string name="no_database_data_found">Tidak ada data database yang ditemukan!</string>
+    <string name="logs_sent">Logs have been sent!</string>
+    <string name="add_new_record">Add new record</string>
+    <string name="edit_current_record">Edit current record</string>
+    <string name="questions">Survey questions</string>
+    <string name="new_data_saved">New data has been saved!</string>
+    <string name="could_not_save_data">An error occurred saving the data.</string>
+
 
 </resources>

@@ -25,13 +25,13 @@
 
 
 
-
         <RelativeLayout
             android:id="@+id/translationLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:padding="@dimen/spacing_normal"
+            android:layout_marginBottom="?attr/actionBarSize"
             android:background="?attr/selectableItemBackground"
 
             >
@@ -48,12 +48,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/spacing_normal"
-                android:clickable="false"
+                 android:clickable="false"
                     />
 
 
         </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/version_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="v.3.0"
+            android:padding="@dimen/spacing_normal"
+            android:layout_gravity="bottom"
+            android:gravity="end"
+            style="@style/TextAppearance.AppCompat.Small"
+             />
+
     </android.support.design.widget.NavigationView>
 
 

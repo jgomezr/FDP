@@ -7,14 +7,21 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.BaseColumns;
 import android.util.Log;
+import android.widget.Toast;
 
+import org.grameen.fdp.BuildConfig;
+import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.object.ActivitiesPlusInputs;
 import org.grameen.fdp.object.Calculation;
 import org.grameen.fdp.object.ComplexCalculation;
 import org.grameen.fdp.object.Country;
 import org.grameen.fdp.object.Form;
+import org.grameen.fdp.object.HistoricalData;
 import org.grameen.fdp.object.Input;
 import org.grameen.fdp.object.LaborDaysLaborCost;
 import org.grameen.fdp.object.Logic;
@@ -30,7 +37,12 @@ import org.grameen.fdp.object.Village;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.math.BigInteger;
+import java.nio.channels.FileChannel;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final String TAG = DatabaseHelper.class.getSimpleName();
     static final String DB_NAME = "fdp.db";
-    static final int DB_VERSION = 46;
+    static final int DB_VERSION = 48;
 
     private static DatabaseHelper instance;
     Context _context;
@@ -67,7 +79,77 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
         _context = ctx;
 
+
     }
+
+
+    public int backupDatabase(String oldPath, String newPath) throws IOException {
+
+        // Close the SQLiteOpenHelper so it will commit the created empty
+        // database to internal storage.
+        close();
+        File newDb = new File(newPath);
+        File oldDb = new File(oldPath);
+
+        if (!oldDb.exists())
+            return 0;
+
+
+        if (!newDb.exists()) {
+            FileOutputStream out = new FileOutputStream(newDb);
+            out.write(0);
+            out.close();
+        }
+
+        if (newDb.exists()) {
+            FileUtils.copyFile(new FileInputStream(newDb), new FileOutputStream(oldDb));
+            // Access the copied database so SQLiteHelper will cache it and mark
+            // it as created.
+            getWritableDatabase().close();
+            return 1;
+        }
+
+        return -1;
+    }
+
+
+    public int exportDB(String oldPath, String newPath) {
+
+        int value;
+
+        File currentDB = new File(oldPath);
+
+        File backupDB = new File(newPath);
+
+        if (!currentDB.exists())
+            return 0;
+
+        FileChannel source;
+        FileChannel destination;
+
+        try {
+            source = new FileInputStream(currentDB).getChannel();
+            destination = new FileOutputStream(backupDB).getChannel();
+            destination.transferFrom(source, 0, source.size());
+            source.close();
+            destination.close();
+
+            value = 1;
+        } catch (IOException e) {
+            e.printStackTrace();
+            value = -1;
+        }
+
+        return value;
+    }
+
+
+
+
+
+
+
+
 
     public static synchronized DatabaseHelper getInstance(Context ctx) {
         if (instance == null) {
@@ -89,8 +171,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.endTransaction();
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+
         db.execSQL(CREATE_COUNTRIES_TABLE);
         db.execSQL(CREATE_QUESTIONS_TABLE);
         db.execSQL(CREATE_FARMER_TABLE);
@@ -108,52 +193,69 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_COMPLEX_CALCULATIONS_TABLE);
 
 
-
     }
+
+
+
+
+
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(DROP_COUNTRIES_TABLE);
-        db.execSQL(DROP_QUESTIONS_TABLE);
-        db.execSQL(DROP_FARMER_TABLE);
-        db.execSQL(DROP_FORMS_TABLE);
-        db.execSQL(DROP_PLOTS_TABLE);
-        db.execSQL(DROP_VILLAGES_TABLE);
-        db.execSQL(DROP_SKIP_LOGIC_TABLE);
-        db.execSQL(DROP_CALCULATIONS_TABLE);
-        db.execSQL(DROP_RECOMMENDATIONS_TABLE);
-        db.execSQL(DROP_LOGIC_TABLE);
-        db.execSQL(DROP_RECOMMENDATION_PLUS_ACTIVITIES_TABLE);
-        db.execSQL(DROP_ACTIVITIES_PLUS_INPUTS_TABLE);
-        db.execSQL(DROP_INPUTS_TABLE);
-        db.execSQL(DROP_MONITORING_TABLE);
-        db.execSQL(DROP_COMPLEX_CALCULATIONS_TABLE);
 
 
+        //deleteAllTables();
+        //onCreate(db);
+
+        if (BuildConfig.DEBUG && (oldVersion > newVersion)) {
+            db.execSQL(DROP_HISTORICAL_DATA_TABLE);
 
 
-        onCreate(db);
-    }
+            db.execSQL(CREATE_HISTORICAL_DATA_TABLE);
 
-
-    public void deleteAllTables() {
-
-        db.execSQL(DROP_QUESTIONS_TABLE);
-        db.execSQL(DROP_FARMER_TABLE);
-        db.execSQL(DROP_FORMS_TABLE);
-        db.execSQL(DROP_PLOTS_TABLE);
-        db.execSQL(DROP_VILLAGES_TABLE);
-        db.execSQL(DROP_SKIP_LOGIC_TABLE);
-        db.execSQL(DROP_CALCULATIONS_TABLE);
-        db.execSQL(DROP_RECOMMENDATIONS_TABLE);
-        db.execSQL(DROP_LOGIC_TABLE);
-        db.execSQL(DROP_RECOMMENDATION_PLUS_ACTIVITIES_TABLE);
-        db.execSQL(DROP_ACTIVITIES_PLUS_INPUTS_TABLE);
-        db.execSQL(DROP_COUNTRIES_TABLE);
-
-        onCreate(db);
+        }
 
     }
 
+
+    public boolean deleteAllTables() {
+
+        Log.i(TAG, "************* DELETING ALL TABLES! ************");
+
+        try {
+            Cursor c = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
+
+            List<String> tables = new ArrayList<>();
+
+            while (c.moveToNext()) {
+                tables.add(c.getString(0));
+            }
+
+            for (String table : tables) {
+
+                if (table.startsWith("sqlite_")) {
+                    continue;
+                }
+
+                String dropQuery = "DROP TABLE IF EXISTS " + table;
+                db.execSQL(dropQuery);
+
+                Log.i(TAG, "************* TABLE : " + table);
+
+            }
+
+            c.close();
+
+            onCreate(db);
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+        }
+
+
+    }
 
     public boolean addAQuestion(Question question) {
         try {
@@ -210,7 +312,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.insert(QUESTIONS_TABLE, null, contentValues);
 
-            Log.d(TAG, "QUESTION WITH ID " + question.getId() + ", NAME " + question.getName() + " AND TRANSLATION " + question.getTranslation__c() + " DISPLAY ORDER "+  question.getDisplay_Order__c() + " SHOULD HIDE ?" + question.getHide__c() +" INSERTED");
+            //Log.d(TAG, "QUESTION WITH ID " + question.getId() + ", NAME " + question.getName() + " AND TRANSLATION " + question.getTranslation__c() + " DISPLAY ORDER "+  question.getDisplay_Order__c() + " SHOULD HIDE ?" + question.getHide__c() +" INSERTED");
 
             if(question.getTranslation__c() != null) {
 
@@ -517,9 +619,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-
-
-
     public String getQuestionId(String name) {
 
         String id = "null";
@@ -687,7 +786,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         question.setForm__r(form);
 
 
-                        Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() + " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Translation " + question.getTranslation__c() + " Related Questions " + question.getRelated_Questions__c() + " Options " + question.getOptions__c() + " Form label " + question.getForm__r().getName());
+                        //Log.i(TAG, "QUESTION : id " + question.getId() + " Name " + question.getName() + " Type " + question.getType__c() + " Caption " + question.getCaption__c() + " Translation " + question.getTranslation__c() + " Related Questions " + question.getRelated_Questions__c() + " Options " + question.getOptions__c() + " Form label " + question.getForm__r().getName());
 
 
                         questions.add(question);
@@ -767,6 +866,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             if(realFarmer.getFirstVisitDate() != null)
             contentValues.put(FARMER_FIRST_VISIT_DATE, realFarmer.getFirstVisitDate());
+
             contentValues.put(LAST_MODIFIED_DATE, realFarmer.getLastModifiedDate());
 
 
@@ -776,21 +876,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(HAS_REGISTERED, realFarmer.getHasSubmitted());
 
             db.insert(FARMER_TABLE, null, contentValues);
-
-            Log.d(TAG, "FARMER WITH CODE " + realFarmer.getCode() + " INSERTED");
-
-            Log.d(TAG, "******** NEW FARMER DATA ADDED  WITH DATA");
-            Log.d(TAG, "NAME  " + realFarmer.getFarmerName());
-            Log.d(TAG, "CODE  " + realFarmer.getCode());
-            Log.d(TAG, "GENDER   " + realFarmer.getGender());
-            Log.d(TAG, "VILLAGE   " + realFarmer.getVillage());
-            Log.d(TAG, "EDUCATION LEVEL  " + realFarmer.getEducationLevel());
-            Log.d(TAG, "BIRTH YEAR   " + realFarmer.getBirthYear());
-            Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
-            Log.d(TAG, "ANSWERS JSON     " + realFarmer.getAnswersJson());
-            Log.d(TAG, "HAS SUBMITTED     " + realFarmer.getHasSubmitted());
-
-
 
 
         } catch (Exception e) {
@@ -847,7 +932,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             ContentValues contentValues = new ContentValues();
 
             contentValues.put(FARMER_SYNC_STATUS, 0);
-            // contentValues.put(FARMER_LAST_VISIT_DATE, "--");
 
 
             db.update(FARMER_TABLE, contentValues, FARMER_ID + "= ?", new String[]{id});
@@ -958,6 +1042,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         RealFarmer realFarmer = new RealFarmer();
 
+                        realFarmer.set_ID(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID)));
                         realFarmer.setId(cursor.getString(cursor.getColumnIndex(FARMER_ID)));
                         realFarmer.setFarmerName(cursor.getString(cursor.getColumnIndex(FARMER_NAME)));
                         realFarmer.setCode(cursor.getString(cursor.getColumnIndex(FARMER_CODE)));
@@ -1036,7 +1121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setHasSubmitted(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
 
-                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
+                        //Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
 
                         realFarmers.add(realFarmer);
 
@@ -1099,7 +1184,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setHasSubmitted(cursor.getString(cursor.getColumnIndex(HAS_REGISTERED)));
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
 
-                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
+                        //Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
 
                         realFarmers.add(realFarmer);
 
@@ -1161,20 +1246,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realFarmer.setSyncStatus(cursor.getInt(cursor.getColumnIndex(FARMER_SYNC_STATUS)));
 
 
-                        Log.i(TAG, "RealFarmer found with CODE " + realFarmer.getCode());
-
-
-                        Log.d(TAG, "************FARMER WITH DATA");
-                        Log.d(TAG, "NAME  " + realFarmer.getFarmerName());
-                        Log.d(TAG, "CODE  " + realFarmer.getCode());
-                        Log.d(TAG, "GENDER   " + realFarmer.getGender());
-                        Log.d(TAG, "VILLAGE   " + realFarmer.getVillage());
-                        Log.d(TAG, "EDUCATION LEVEL  " + realFarmer.getEducationLevel());
-                        Log.d(TAG, "BIRTH YEAR   " + realFarmer.getBirthYear());
-                        //Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
-                        Log.d(TAG, "ANSWERS " + realFarmer.getAnswersJson());
-
-
 
                     } while (cursor.moveToNext());
             }
@@ -1217,17 +1288,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
             db.update(FARMER_TABLE, contentValues, FARMER_ID + "= ?", new String[]{realFarmer.getId()});
-
-
-            Log.d(TAG, "************FARMER UPDATED WITH DATA");
-            Log.d(TAG, "NAME  " + realFarmer.getFarmerName());
-            Log.d(TAG, "CODE  " + realFarmer.getCode());
-            Log.d(TAG, "GENDER   " + realFarmer.getGender());
-            Log.d(TAG, "VILLAGE   " + realFarmer.getVillage());
-            Log.d(TAG, "EDUCATION LEVEL  " + realFarmer.getEducationLevel());
-            Log.d(TAG, "BIRTH YEAR   " + realFarmer.getBirthYear());
-            Log.d(TAG, "IMAGE URL    " + realFarmer.getImageUrl());
-            Log.d(TAG, "HAS AGREED?    " + realFarmer.getHasSubmitted());
 
 
 
@@ -1568,6 +1628,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 if (cursor.moveToFirst())
                     do {
                         Form form = new Form();
+                        form.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))));
+
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
@@ -1615,6 +1677,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
 
                         Form form = new Form();
+                        form.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))));
+
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
@@ -1623,7 +1687,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
-                        Log.i(TAG, "Form found with value " + form.getName());
 
                         forms.add(form);
 
@@ -1665,6 +1728,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
 
                         Form form = new Form();
+                        form.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))));
+
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
@@ -1674,7 +1739,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
-                        Log.i(TAG, "Form found with value " + form.getName());
+                        //Log.i(TAG, "Form found with value " + form.getName());
 
                         forms.add(form);
 
@@ -1722,6 +1787,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
 
                         form = new Form();
+                        form.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))));
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
@@ -1729,9 +1795,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
-                        Log.i(TAG, "Form found with name " + form.getName());
-                        Log.i(TAG, "Form found with display name " + form.getDiaplayName());
-                        Log.i(TAG, "Form found with Translation " + form.getTranslation());
 
 
                     } while (cursor.moveToNext());
@@ -1769,7 +1832,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         try {
 
-            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + FORM_NAME + "='" + id + "'";
+            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + BaseColumns._ID + "='" + id + "'";
             Log.i("QUERY", selectQuery);
             cursor = db.rawQuery(selectQuery, null);
 
@@ -1780,6 +1843,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     do {
 
                         form = new Form();
+                        form.setId(String.valueOf(cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))));
+
                         form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
                         form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
                         form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
@@ -1787,9 +1852,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
                         form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
-                        Log.i(TAG, "Form found with name " + form.getName());
-                        Log.i(TAG, "Form found with display name " + form.getDiaplayName());
-                        Log.i(TAG, "Form found with Translation " + form.getTranslation());
 
 
                     } while (cursor.moveToNext());
@@ -1808,115 +1870,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-    public Form getFormBasedOnDisplayName(String name) {
-
-        Cursor cursor = null;
-        Form form = null;
-
-        try {
-
-            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + DISPLAY_NAME + "='" + name + "'";
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-
-                        form = new Form();
-                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
-                        form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
-                        form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
-                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
-                        form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
-                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
-                        Log.i(TAG, "Form found with value " + form.getName());
-
-
-                    } while (cursor.moveToNext());
-            } else {
-
-                form = new Form();
-                form.setDiaplayName(name);
-                form.setTranslation(name);
-                form.setName(name);
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            form = new Form();
-            form.setDiaplayName(name);
-            form.setTranslation(name);
-            form.setName(name);
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return form;
-
-
-    }
-
-
-    public Form getFormBasedOnTranslation(String name) {
-
-        Cursor cursor = null;
-        Form form = null;
-
-        try {
-
-            String selectQuery = "SELECT  * FROM " + FORMS_TABLE + " WHERE " + TRANSLATION + "='" + name + "'";
-            Log.i("QUERY", selectQuery);
-            cursor = db.rawQuery(selectQuery, null);
-
-            if (cursor != null && cursor.getCount() > 0) {
-
-                if (cursor.moveToFirst())
-
-                    do {
-
-                        form = new Form();
-                        form.setType(cursor.getString(cursor.getColumnIndex(FORM_TYPE)));
-                        form.setName(cursor.getString(cursor.getColumnIndex(FORM_NAME)));
-                        form.setDiaplayName(cursor.getString(cursor.getColumnIndex(DISPLAY_NAME)));
-                        form.setDiaplayOrder(cursor.getDouble(cursor.getColumnIndex(DISPLAY_ORDER)));
-                        form.setTranslation(cursor.getString(cursor.getColumnIndex(TRANSLATION)));
-                        form.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
-                        Log.i(TAG, "Form found with value " + form.getName());
-
-
-                    } while (cursor.moveToNext());
-            } else {
-
-                form = new Form();
-                form.setDiaplayName(name);
-                form.setTranslation(name);
-                form.setName(name);
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            form = new Form();
-            form.setDiaplayName(name);
-            form.setTranslation(name);
-            form.setName(name);
-
-        } finally {
-
-            if (cursor != null)
-                cursor.close();
-        }
-
-        return form;
-
-
-    }
 
 
     public boolean addVillage(Village village) {
@@ -2013,7 +1966,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
     public String getVillageName(String id) {
 
         String name = "";
@@ -2052,8 +2004,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-
     public List<Village> getAllVillages() {
 
         List<Village> villages;
@@ -2079,7 +2029,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         village.setName(cursor.getString(cursor.getColumnIndex(VILLAGE_NAME)));
                         village.setDistrict(cursor.getString(cursor.getColumnIndex(VILLAGE_DISTRICT)));
 
-                        Log.i(TAG, "Village found with value " + village);
 
                         villages.add(village);
 
@@ -2136,7 +2085,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (cursor != null)
                 cursor.close();
         }
-        Log.i("QUERY", "Village Table size is   " + villages.size());
 
 
         return sortVillagesByNameInAscendingOrder(villages);
@@ -2148,8 +2096,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean addCountry(Country country) {
 
         try {
-
-
             ContentValues contentValues = new ContentValues();
             contentValues.put(ID, country.getId());
             contentValues.put(COUNTRY_NAME, country.getName());
@@ -2160,7 +2106,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.insert(COUNTRIES_TABLE, null, contentValues);
 
-            Log.d(TAG, "COUNTRY WITH NAME " + country.getName() + " INSERTED");
 
 
         } catch (Exception e) {
@@ -2185,7 +2130,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.execSQL("DELETE FROM " + COUNTRIES_TABLE);
 
-            Log.i("DATABASE", "COUNTRIES TABLE DELETED");
 
             return true;
         } catch (Exception e) {
@@ -2224,7 +2168,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         country.setAverageGatePrice(cursor.getString(cursor.getColumnIndex(COUNTRY_DRY_GATE_PRICE)));
 
 
-                        Log.i(TAG, "Country found with value " + country.getName());
 
                         countries.add(country);
 
@@ -2283,7 +2226,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             db.insert(PLOTS_TABLE, null, contentValues);
 
-            Log.d(TAG, "DATA\n" + realPlot.getPlotInformationJson() + " \n ADDED FOR FARMER WITH CODE " + realPlot.getFarmerCode() + " AND ID " + realPlot.getId());
 
 
         } catch (Exception e) {
@@ -2446,7 +2388,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realPlot.setStartYear(cursor.getInt(cursor.getColumnIndex(START_YEAR)));
 
 
-                        Log.i(TAG, "RealPlot found with ID  " + realPlot.getId());
 
                         realPlots.add(realPlot);
 
@@ -2500,10 +2441,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         realPlot.setGpsPoints(cursor.getString(cursor.getColumnIndex(PLOT_GPS_POINTS)));
                         realPlot.setStartYear(cursor.getInt(cursor.getColumnIndex(START_YEAR)));
 
-
-                        Log.i(TAG, "RealPlot found with CODE " + realPlot.getId());
-
-
                     } while (cursor.moveToNext());
             }
         } catch (Exception e) {
@@ -2536,8 +2473,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
             db.insert(SKIP_LOGIC_TABLE, null, contentValues);
-
-            Log.d(TAG, "SKIP LOGIC WITH ID " + skipLogic.getId() + " INSERTED");
 
 
         } catch (Exception e) {
@@ -2603,9 +2538,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         skipLogic.setActionToBeTaken(cursor.getString(cursor.getColumnIndex(SKIP_LOGIC_ACTION_TAKEN)));
                         skipLogic.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
-
-                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
-
                         skipLogics.add(skipLogic);
 
 
@@ -2657,8 +2589,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         skipLogic.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
 
 
-                        Log.i(TAG, "QUESTION WITH ID " + questionId + " HAS A SKIP LOGIC WITH NAME " + skipLogic.getName());
-
                     } while (cursor.moveToNext());
             }
         } catch (Exception e) {
@@ -2699,8 +2629,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
             db.insert(CALCULATIONS_TABLE, null, contentValues);
-
-            Log.d(TAG, "CALCULATION WITH ID " + calculation.getId() + " INSERTED");
 
 
         } catch (Exception e) {
@@ -2770,6 +2698,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setHierarchy(cursor.getInt(cursor.getColumnIndex(HIERARCHY)));
                         calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
                         calculation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+/*
 
 
                         Log.i(TAG, "CALCULATION WITH ID " + id + " \nDATA IS \n\n");
@@ -2782,6 +2711,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "OP2  =  " + calculation.getOperator2() + " \n");
                         Log.i(TAG, "OP3  =  " + calculation.getOperator3() + " \n");
                         Log.i(TAG, "RESULT QUESTION  =  " + calculation.getResultQuestion() + " \n");
+*/
 
 
                     } while (cursor.moveToNext());
@@ -2838,6 +2768,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         calculation.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
                         calculation.setResultQuestion(cursor.getString(cursor.getColumnIndex(CALCULATIONS_RESULT_QUESTION)));
 
+/*
 
                         Log.i(TAG, "CALCULATION WITH ID " + calculation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + calculation.getName() + " \n");
@@ -2849,6 +2780,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "OP2  =  " + calculation.getOperator2() + " \n");
                         Log.i(TAG, "OP3  =  " + calculation.getOperator3() + " \n");
                         Log.i(TAG, "RESULT QUESTION  =  " + calculation.getResultQuestion() + " \n");
+*/
 
 
                         calculationList.add(calculation);
@@ -2906,7 +2838,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             });
 
 
-        Log.i(TAG, "SORTED OUT WITH SIZE " + recommendations.size());
+        // Log.i(TAG, "SORTED OUT WITH SIZE " + recommendations.size());
 
 
         return recommendations;
@@ -2963,23 +2895,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete(RECOMMENDATIONS_TABLE, ID + " = ? ", new String[]{id}) > 0;
 
     }
-/*
-    public boolean deleteRecommendationsTable() {
 
-        try {
-
-
-            db.execSQL("DELETE FROM " + RECOMMENDATIONS_TABLE);
-
-            Log.i("DATABASE", "RECOMMENDATIONS TABLE DELETED");
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            return false;
-        }
-    }*/
 
     public Recommendation getRecommendation(String id) {
 
@@ -3029,6 +2945,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setYearBackToGAPs(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_YEAR_BACK_TO_GAPS)));
                         recommendation.setQuestionsInvolved(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_QUESTIONS_INVOLVED)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
@@ -3050,6 +2967,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RELATED_2  =  " + recommendation.getRelatedTwo() + " \n");
                         Log.i(TAG, "YEAR_BACK_TO_GAPS  =  " + recommendation.getYearBackToGAPs() + " \n");
                         Log.i(TAG, "QUESTIONS INVOLVED  =  " + recommendation.getQuestionsInvolved() + " \n");
+*/
 
 
 
@@ -3205,6 +3123,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setYearBackToGAPs(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_YEAR_BACK_TO_GAPS)));
                         recommendation.setQuestionsInvolved(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_QUESTIONS_INVOLVED)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
@@ -3223,6 +3142,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RELATED_1  =  " + recommendation.getRelatedOne() + " \n");
                         Log.i(TAG, "RELATED_2  =  " + recommendation.getRelatedTwo() + " \n");
                         Log.i(TAG, "YEAR_BACK_TO_GAPS  =  " + recommendation.getYearBackToGAPs() + " \n");
+*/
 
                     } while (cursor.moveToNext());
             }
@@ -3287,6 +3207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setYearBackToGAPs(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_YEAR_BACK_TO_GAPS)));
                         recommendation.setQuestionsInvolved(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_QUESTIONS_INVOLVED)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
@@ -3305,6 +3226,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RELATED_1  =  " + recommendation.getRelatedOne() + " \n");
                         Log.i(TAG, "RELATED_2  =  " + recommendation.getRelatedTwo() + " \n");
                         Log.i(TAG, "YEAR_BACK_TO_GAPS  =  " + recommendation.getYearBackToGAPs() + " \n");
+*/
 
                     } while (cursor.moveToNext());
             }
@@ -3495,23 +3417,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
- /*   public boolean deleteRecommendationPlusAcivityTable() {
-
-        try {
-
-
-            db.execSQL("DELETE FROM " + RECOMMENDATIONS_PLUS_ACTIVITIES_TABLE);
-
-
-            Log.i("DATABASE", "RECOMMENDATIONS_PLUS_ACTIVITIES TABLE DELETED");
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            return false;
-        }
-    }*/
 
     public RecommendationsPlusActivity getRecommendationPlusAcivity(String id) {
 
@@ -3547,6 +3452,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
@@ -3558,6 +3464,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "YEAR  =  " + recommendation.getYear() + " \n");
                         Log.i(TAG, "SUPPLIES COST  =  " + recommendation.getSuppliesCost() + " \n");
                         Log.i(TAG, "RECOMMENDATION ID  =  " + recommendation.getRecommendationId() + " \n\n");
+*/
 
 
                     } while (cursor.moveToNext());
@@ -3614,6 +3521,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
@@ -3627,6 +3535,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "YEAR  =  " + recommendation.getYear() + " \n");
                         Log.i(TAG, "SUPPLIES COST  =  " + recommendation.getSuppliesCost() + " \n");
                         Log.i(TAG, "RECOMMENDATION ID  =  " + recommendation.getRecommendationId() + " \n\n");
+*/
 
 
                         recommendationsPlusActivityList.add(recommendation);
@@ -3689,7 +3598,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
-
+/*
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
 
@@ -3704,6 +3613,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         Log.i(TAG, "RECOMMENDATION ID  =  " + recommendation.getRecommendationId() + " \n\n");
 
 
+                     */
                         recommendationsPlusActivityList.add(recommendation);
 
                     } while (cursor.moveToNext());
@@ -3763,12 +3673,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
 
+/*
 
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + recommendation.getName() + " \n");
 
                         Log.i(TAG, "YEAR  =  " + recommendation.getYear() + " \n");
 
+*/
 
                         recommendationsPlusActivities.add(recommendation);
 
@@ -3827,6 +3739,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         recommendation.setYear(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_YEAR)));
                         recommendation.setSuppliesCost(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_SUPPLIES_COST)));
                         recommendation.setRecommendationId(cursor.getString(cursor.getColumnIndex(RECOMMENDATIONS_PLUS_ACTIVITIES_RECOMMENDATION_ID)));
+/*
 
 
                         Log.i(TAG, "RECOMMENDATION + ACTIVITY WITH ID " + recommendation.getId() + " \nDATA IS \n\n");
@@ -3834,6 +3747,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                         Log.i(TAG, "YEAR  =  " + recommendation.getYear() + " \n");
 
+*/
 
                         recommendationsPlusActivities.add(recommendation);
 
@@ -4666,9 +4580,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         activitiesPlusInputs.setRecommendationId(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_ID)));
                         activitiesPlusInputs.setRecommendationName(cursor.getString(cursor.getColumnIndex(ACTIVITIY_PLUS_INPUTS_RECOMMENDATION_NAME)));
 
-                        Log.i(TAG, "ACTIVITY + INPUTS WITH ID " + activitiesPlusInputs.getId() + " \nDATA IS \n\n");
+                     /*   Log.i(TAG, "ACTIVITY + INPUTS WITH ID " + activitiesPlusInputs.getId() + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + activitiesPlusInputs.getName() + " \n");
-
+*/
 
                     } while (cursor.moveToNext());
             }
@@ -4719,23 +4633,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /*public boolean deleteInputTable() {
-
-        try {
-
-            db.execSQL("DELETE FROM " + INPUTS_TABLE);
-
-
-            Log.i("DATABASE", "INPUTS TABLE DELETED");
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            return false;
-        }
-    }*/
-
 
     public Input getInput(String id) {
 
@@ -4769,10 +4666,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         activitiesPlusInputs.setUnit(cursor.getString(cursor.getColumnIndex(INPUTS_SI_UNIT)));
 
 
-                        Log.i(TAG, "INPUTS WITH ID " + id + " \nDATA IS \n\n");
+                 /*       Log.i(TAG, "INPUTS WITH ID " + id + " \nDATA IS \n\n");
                         Log.i(TAG, "NAME  =  " + activitiesPlusInputs.getName() + " \n");
 
-
+*/
                     } while (cursor.moveToNext());
             }
         } catch (Exception e) {
@@ -5075,6 +4972,97 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public boolean addNewHistoricalData(HistoricalData historicalData) {
+        try {
+
+            String dateTime = DateUtil.getFormattedDateMMDDYYYYhhmmaa();
+
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ID, historicalData.getId());
+            contentValues.put(NAME, historicalData.getName());
+            contentValues.put(DATE_TIME, dateTime);
+            contentValues.put(LAST_MODIFIED_DATE, dateTime);
+
+            contentValues.put(ANSWERS_JSON, historicalData.getAnswersJson());
+            contentValues.put(FORM_ID, historicalData.getFormId());
+
+            db.insert(HISTORICAL_DATA, null, contentValues);
+            Log.d(TAG, "HISTORICAL DATA FOR FORM WITH ID " + historicalData.getId() + " INSERTED");
+            return true;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean editHistoricalData(String id, String newValue) {
+        try {
+
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(ANSWERS_JSON, newValue);
+            contentValues.put(LAST_MODIFIED_DATE, DateUtil.getFormattedDateMMDDYYYYhhmmaa());
+            db.update(HISTORICAL_DATA, contentValues, ID + " = ?", new String[]{id});
+            Log.d(TAG, "HISTORICAL DATA EDITED WITH ID " + id + " EDITED WITH VALUE " + newValue);
+            return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+
+    }
+
+    public List<HistoricalData> getAllHistoricalDataForForm(String formId) {
+
+        List<HistoricalData> historicalDataList = new ArrayList<>();
+
+        Cursor cursor = null;
+
+
+        try {
+
+            String selectQuery = "SELECT  * FROM " + HISTORICAL_DATA + " WHERE " + FORM_ID + " ='" + formId + "'";
+
+            Log.i("QUERY", selectQuery);
+            cursor = db.rawQuery(selectQuery, null);
+
+            if (cursor != null && cursor.getCount() > 0) {
+
+                if (cursor.moveToFirst())
+
+                    do {
+                        HistoricalData historicalData = new HistoricalData();
+                        historicalData.setName("Data " + cursor.getInt(cursor.getColumnIndex(BaseColumns._ID)));
+                        historicalData.setId(cursor.getString(cursor.getColumnIndex(ID)));
+                        historicalData.setDateTime(cursor.getString(cursor.getColumnIndex(DATE_TIME)));
+                        historicalData.setLastModifiedDate(cursor.getString(cursor.getColumnIndex(LAST_MODIFIED_DATE)));
+                        historicalData.setAnswersJson(cursor.getString(cursor.getColumnIndex(ANSWERS_JSON)));
+                        historicalData.setFormId(cursor.getString(cursor.getColumnIndex(FORM_ID)));
+                        historicalDataList.add(historicalData);
+                    } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            if (cursor != null)
+                cursor.close();
+        }
+        return historicalDataList;
+
+
+    }
+
+
+
+
+
+
+
 
 
 
@@ -5117,23 +5105,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-  /*  public boolean deleteComplexCalculationTable() {
-
-        try {
-            prefs.edit().putString("monitoringToUse", null).apply();
-
-            db.execSQL("DELETE FROM " + COMPLEX_CALCULATIONS_TABLE);
-
-
-            Log.i("DATABASE", "ComplexCalculation TABLE DELETED");
-
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            return false;
-        }
-    }*/
 
 
     public List<ComplexCalculation> getAllComplexCalculation() {

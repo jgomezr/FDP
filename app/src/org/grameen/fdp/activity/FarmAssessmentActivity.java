@@ -2,26 +2,21 @@ package org.grameen.fdp.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.DetailedYearTableHearderAdapter;
-import org.grameen.fdp.adapter.FamilyMembersTableHearderAdapter;
 import org.grameen.fdp.adapter.FarmAssessmentTableViewAdapter;
-import org.grameen.fdp.adapter.MyTableHearderAdapter;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 import org.grameen.fdp.object.FarmResult;
 import org.grameen.fdp.object.PlotAssessment;
 import org.grameen.fdp.object.RealFarmer;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import de.codecrafters.tableview.TableView;
@@ -78,14 +73,14 @@ public class FarmAssessmentActivity extends BaseActivity {
             tableView.setHeaderAdapter(tableHearderAdapter);
 
 
-            List<Data2> dataList = new ArrayList<>();
+            List<HistoricalTableViewData> dataList = new ArrayList<>();
 
 
             Log.i(TAG, "PLOT ASSESSMENT RESULTS " + farmResult.getPlotAssessmentList().size());
 
             for(PlotAssessment plotAssessment : farmResult.getPlotAssessmentList()){
 
-                dataList.add(new Data2(plotAssessment.getPlotName(), plotAssessment.getResults()));
+                dataList.add(new HistoricalTableViewData(plotAssessment.getPlotName(), plotAssessment.getResults()));
 
             }
 

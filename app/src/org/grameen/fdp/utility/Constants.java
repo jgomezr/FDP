@@ -1,11 +1,21 @@
 package org.grameen.fdp.utility;
 
 
+import android.os.Environment;
+
+import java.io.File;
+
 /**
  * Created by aangjnr on 11/06/2017.
  */
 
 public class Constants {
+
+
+    public static String DB_NAME = "fdp.db";
+
+
+
 
 
     public static final String FORM_DIAGNOSTIC = "diagnostic";
@@ -16,6 +26,8 @@ public class Constants {
     public static final String YES = "Yes";
     public static final String NO = "No";
 
+    public static final String RECORD_EDIT = "edit";
+    public static final String RECORD_NEW = "new";
 
 
 

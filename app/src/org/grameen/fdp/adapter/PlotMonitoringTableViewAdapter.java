@@ -15,10 +15,8 @@ import android.widget.TextView;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import org.grameen.fdp.R;
-import org.grameen.fdp.object.Data;
-import org.grameen.fdp.object.Data2;
+import org.grameen.fdp.object.HistoricalTableViewData;
 
-import java.text.DecimalFormat;
 import java.util.List;
 
 import de.codecrafters.tableview.TableView;
@@ -34,7 +32,7 @@ import static org.grameen.fdp.utility.Constants.TAG_VIEW;
  * Created by aangjnr on 17/01/2018.
  */
 
-public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapter<Data2> {
+public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapter<HistoricalTableViewData> {
 
     String TAG = PlotMonitoringTableViewAdapter.class.getSimpleName();
     private static final int TEXT_SIZE = 10;
@@ -47,7 +45,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
 
     Integer dataSize;
 
-    public PlotMonitoringTableViewAdapter(final Context context, final List<Data2> data, final TableView<Data2> tableView) {
+    public PlotMonitoringTableViewAdapter(final Context context, final List<HistoricalTableViewData> data, final TableView<HistoricalTableViewData> tableView) {
         super(context, data, tableView);
 
         this.dataSize = data.size();
@@ -67,7 +65,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
     @Override
     public View getDefaultCellView(int i, int i1, ViewGroup viewGroup) {
 
-        final Data2 myTableData = getRowData(i);
+        final HistoricalTableViewData myTableData = getRowData(i);
         View renderedView = new View(context);
 
 
@@ -121,10 +119,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
     }
 
 
-
-
-
-    private View renderColumnLabelValues(final Data2 data) {
+    private View renderColumnLabelValues(final HistoricalTableViewData data) {
 
         View view = null;
 
@@ -239,7 +234,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
         return view;
     }
 
-    private View renderColumn0Values(final Data2 data) {
+    private View renderColumn0Values(final HistoricalTableViewData data) {
 
         View view = null;
 
@@ -351,7 +346,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
         return view;
     }
 
-    private View renderColumn1Values(final Data2 data) {
+    private View renderColumn1Values(final HistoricalTableViewData data) {
 
         View view = null;
 
@@ -464,7 +459,7 @@ public class PlotMonitoringTableViewAdapter extends LongPressAwareTableDataAdapt
         return view;
     }
 
-    private View renderColumn2Values(final Data2 data) {
+    private View renderColumn2Values(final HistoricalTableViewData data) {
 
         View view = null;
 

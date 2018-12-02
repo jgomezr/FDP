@@ -125,7 +125,7 @@ public class FarmerListFragment extends Fragment {
         Type listType = new TypeToken<List<RealFarmer>>() {}.getType();
         farmers = (List<RealFarmer>) new Gson().fromJson(array, listType);
         */
-        String filter = getArguments().getString("filter");
+        String filter = getArguments().getString("filterTag");
 
         Log.d("FARMER LIST FRAG", "FILTER IS " + filter);
 
@@ -205,11 +205,13 @@ public class FarmerListFragment extends Fragment {
 
                             if (databaseHelper.deleteFarmer(farmer.getId())) {
 
-
-
                                 CustomToast.makeToast(getActivity(), "Data deleted!", Toast.LENGTH_LONG).show();
+
                                 farmers.remove(position);
+                                //recyclerView.getRecycledViewPool().clear();
                                 mAdapter.notifyItemRemoved(position);
+                                //mAdapter.notifyDataSetChanged();
+
 
                             }
 

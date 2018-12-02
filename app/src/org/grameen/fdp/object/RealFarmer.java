@@ -12,6 +12,7 @@ public class RealFarmer {
     String lastModifiedDate;
 
 
+    int _ID;
     String farmerName;
     String code;
     String id;
@@ -31,6 +32,14 @@ public class RealFarmer {
     Integer syncStatus;
     String hasSubmitted;
 
+
+    public void set_ID(int _ID) {
+        this._ID = _ID;
+    }
+
+    public int get_ID() {
+        return _ID;
+    }
 
     public void setFirstVisitDate(String firstVisitDate) {
         this.firstVisitDate = firstVisitDate;

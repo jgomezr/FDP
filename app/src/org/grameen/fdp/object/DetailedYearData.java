@@ -10,7 +10,7 @@ public class DetailedYearData {
 
     String name;
 
-    List<Data2> dataList;
+    List<HistoricalTableViewData> dataList;
 
     public String getName() {
         return name;
@@ -20,11 +20,11 @@ public class DetailedYearData {
         this.name = name;
     }
 
-    public List<Data2> getDataList() {
+    public List<HistoricalTableViewData> getDataList() {
         return dataList;
     }
 
-    public void setDataList(List<Data2> dataList) {
+    public void setDataList(List<HistoricalTableViewData> dataList) {
         this.dataList = dataList;
     }
 }

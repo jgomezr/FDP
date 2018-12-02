@@ -146,8 +146,10 @@ public class AddNewPlotActivity extends BaseActivity {
                 String size = jsonObject.getString(plotSizeQue.getId());
                 plotSizeEdittext.setText(size.split(" ")[0]);
 
+
                 String estProd = jsonObject.getString(estProdQue.getId());
                 estimatedProductionEdittext.setText(estProd.split(" ")[0]);
+
 
                 phEdittext.setText(jsonObject.getString(soilPhQue.getId()));
 
@@ -206,6 +208,12 @@ public class AddNewPlotActivity extends BaseActivity {
                 plotSizeUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
                 estimatedProductionUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
 
+
+                plotSizeEdittext.setText(plotSizeQue.getDefault_value__c());
+                estimatedProductionEdittext.setText(estProdQue.getDefault_value__c());
+                phEdittext.setText(soilPhQue.getDefault_value__c());
+
+
             } catch (JSONException e) {
                 e.printStackTrace();
 
@@ -242,16 +250,16 @@ public class AddNewPlotActivity extends BaseActivity {
                 if (!plotName.getText().toString().isEmpty() || !plotName.getText().toString().equals("")) {
 
                     saveOrUpdateData(false);
-                    newDataSaved = true;
+                    // newDataSaved = true;
 
                     final Intent intent = new Intent(AddNewPlotActivity.this, MapActivity.class);
 
-                    if (!isEditMode) {
+                   /* if (!isEditMode) {
                         plot = new RealPlot();
                         plot.setId(databaseHelper.getSystemTime());
                         plot.setFarmerCode(farmerCode);
                         plot.setName(plotName.getText().toString());
-                    }
+                    }*/
 
                     intent.putExtra("plot", new Gson().toJson(plot));
 
@@ -259,6 +267,7 @@ public class AddNewPlotActivity extends BaseActivity {
                         @Override
                         public void run() {
                             startActivity(intent);
+                            finish();
                         }
                     }, 500);
 
@@ -273,7 +282,6 @@ public class AddNewPlotActivity extends BaseActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 saveOrUpdateData(true);
 
@@ -318,8 +326,6 @@ public class AddNewPlotActivity extends BaseActivity {
         engine = new ScriptEngineManager().getEngineByName("rhino");
 
         if (!newDataSaved) {
-
-
 
             save.setEnabled(false);
 
@@ -395,17 +401,12 @@ public class AddNewPlotActivity extends BaseActivity {
 
             }
 
-            //String newPlotInfoJsonValue = "";
              try {
 
-                 //ALL_DATA_JSON.put(plotNameQue.getId(), plotName.getText().toString());
-                 //ALL_DATA_JSON.put(plotSizeQue.getId(), plotSizeEdittext.getText().toString() + " " +  plotSizeUnit.getText().toString());
-                 //ALL_DATA_JSON.put(estProdQue.getId(), estimatedProductionEdittext.getText().toString() +" " + estimatedProductionUnit.getText().toString());
                  ALL_DATA_JSON.put(soilPhQue.getId(), phEdittext.getText().toString());
 
             } catch (JSONException e) {
                 e.printStackTrace();
-                 //newPlotInfoJsonValue = ALL_DATA_JSON.toString();
             }
 
 
@@ -636,11 +637,13 @@ public class AddNewPlotActivity extends BaseActivity {
 
 
         Log.i(TAG, "ON PAUSE");
+/*
 
 
         if (!newDataSaved && save.isEnabled())
             saveOrUpdateData(true);
 
+*/
 
         super.onPause();
 

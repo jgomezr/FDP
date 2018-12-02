@@ -54,8 +54,8 @@ public class PhotoButtonController extends MyLabeledFieldController {
      * @param validators    contains the validations to process on the field
      * @param onClickListener the format of the date to show in the text box when a date is set
      */
-    public PhotoButtonController(Context ctx, String name, String labelText, Set<InputValidator> validators, View.OnClickListener onClickListener) {
-        super(ctx, name, labelText, validators);
+    public PhotoButtonController(Context ctx, String name, String content_desc, String labelText, Set<InputValidator> validators, View.OnClickListener onClickListener) {
+        super(ctx, name, content_desc, labelText, validators);
         this.onClickListener = onClickListener;
         this.context = ctx;
     }
@@ -69,8 +69,8 @@ public class PhotoButtonController extends MyLabeledFieldController {
      * @param isRequired    indicates if the field is required or not
      * @param displayFormat the format of the date to show in the text box when a date is set
      */
-    public PhotoButtonController(Context ctx, String name, String labelText, boolean isRequired, OnClickListener displayFormat) {
-        super(ctx, name, labelText, isRequired);
+    public PhotoButtonController(Context ctx, String name, String content_desc, String labelText, boolean isRequired, OnClickListener displayFormat) {
+        super(ctx, name, content_desc, labelText, isRequired);
         this.onClickListener = displayFormat;
         this.context = ctx;
 
@@ -82,8 +82,8 @@ public class PhotoButtonController extends MyLabeledFieldController {
      * @param name      the name of the field
      * @param labelText the label to display beside the field
      */
-    public PhotoButtonController(Context context, String name, String labelText, OnClickListener locationListener, Boolean enabled) {
-        this(context, name, labelText, false, locationListener);
+    public PhotoButtonController(Context context, String name, String content_desc, String labelText, OnClickListener locationListener, Boolean enabled) {
+        this(context, name, content_desc, labelText, false, locationListener);
         this.context = context;
         this.isEnabled = enabled;
 
@@ -101,7 +101,7 @@ public class PhotoButtonController extends MyLabeledFieldController {
         @SuppressLint("RestrictedApi") ContextThemeWrapper newContext = new ContextThemeWrapper(context, R.style.PrimaryButton);
         final Button button = new Button(newContext);
         button.setText("Take a photo");
-        button.setContentDescription(getName());
+        button.setContentDescription(getContentDesc());
         button.setPadding(0, 20, 0, 20);
         button.setTextSize(12);
         button.setId(editTextId);

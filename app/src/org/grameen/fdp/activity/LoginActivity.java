@@ -32,8 +32,8 @@ public class LoginActivity extends SalesforceActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        passcodeManager = SalesforceSDKManager.getInstance().getPasscodeManager();
 
+        passcodeManager = SalesforceSDKManager.getInstance().getPasscodeManager();
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
 
@@ -43,6 +43,17 @@ public class LoginActivity extends SalesforceActivity {
     public void onResume(RestClient client) {
 
         restClient = client;
+
+
+
+      /*  Log.i("", "***************************************");
+        Log.i("", "***************************************");
+        Log.i("TOKEN IS ", restClient.getAuthToken());
+
+        Log.i("", "***************************************");
+        Log.i("", "***************************************");
+
+*/
 
 
         // Hides everything until we are logged in.
@@ -72,12 +83,16 @@ public class LoginActivity extends SalesforceActivity {
                     // Shows everything.
                     // findViewById(R.id.root).setVisibility(View.VISIBLE);
 
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("client_name", client.getClientInfo().displayName);
+                    editor.putString("client_email", client.getClientInfo().username);
+                    editor.putString(Constants.USER_UID, client.getClientInfo().userId);
 
-                    prefs.edit().putBoolean(Constants.IS_USER_SIGNED_IN, true).apply();
+                    editor.putBoolean(Constants.IS_USER_SIGNED_IN, true);
+                    editor.apply();
+
                     startActivity(new Intent(LoginActivity.this, LandingPageActivity.class));
                     finish();
-
-
                 }
             });
         } else {

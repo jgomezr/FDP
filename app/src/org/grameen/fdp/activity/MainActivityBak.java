@@ -119,7 +119,6 @@ public class MainActivityBak extends BaseActivity implements NavigationView.OnNa
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-        searchBar = findViewById(R.id.search_view);
 
         searchBar.setPlaceHolder("FDP");
         searchBar.setTextColor(R.color.text_black_87);

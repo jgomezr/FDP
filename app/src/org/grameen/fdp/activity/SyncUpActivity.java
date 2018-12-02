@@ -72,7 +72,7 @@ public class SyncUpActivity extends SalesforceActivity {
     int NEXT_BATCH = 0;
     int COUNT = 0;
     int BEGIN_INDEX = 0;
-    final int BATCH = 200;
+    final int BATCH = 100;
     int SYNC_STATUS = Constants.SYNC_STATUS_NO_SYNC;
     String message = "";
     String title = "";
@@ -1269,6 +1269,7 @@ public class SyncUpActivity extends SalesforceActivity {
                 }
                 while (RETRY_COUNT > 0);
 
+
             }
 
         }
@@ -1307,15 +1308,15 @@ public class SyncUpActivity extends SalesforceActivity {
         }
 
 
+        if (!BREAK_OUT_OF_LOOP)
+            databaseHelper.setFarmerAsSynced(realFarmer.getId());
+
         ALL_FARMER_LIST.clear();
         ALL_FARMERS_PLOT_LIST.clear();
         ALL_FARMER_ANSWERS.clear();
         ALL_PLOT_ANSWERS.clear();
         ALL_MONITORING_LIST.clear();
         ALL_MONITORING_ANSWERS_LIST.clear();
-
-
-        databaseHelper.setFarmerAsSynced(realFarmer.getId());
 
 
     }

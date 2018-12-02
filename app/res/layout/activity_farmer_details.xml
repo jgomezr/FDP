@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -462,33 +461,28 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="@dimen/spacing_normal"
-
                     >
 
-
-
-
-                        <TextView
-                            android:id="@+id/text1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/pandl"
-                            android:textAllCaps="true"
-                            android:layout_marginBottom="@dimen/spacing_normal"
-                            android:textColor="?attr/colorAccent"
-                            android:textSize="@dimen/text_size_tiny"
-                            android:textStyle="bold"
-
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pandl"
+                        android:textAllCaps="true"
+                        android:layout_marginBottom="@dimen/spacing_normal"
+                        android:textColor="?attr/colorAccent"
+                        android:textSize="@dimen/text_size_tiny"
+                        android:textStyle="bold"
                             />
 
 
                     <ImageView
                         android:id="@+id/review_page"
+                        android:src="@drawable/review"
                         android:layout_below="@id/text1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/review"
                         android:clickable="true"
                         android:focusable="true" />
 
@@ -507,7 +501,18 @@
                         />
 
 
-
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/historical_view"
+                        android:src="@drawable/combo_chart"
+                        android:layout_below="@id/text1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_toRightOf="@id/pandl"
+                        android:layout_marginLeft="@dimen/spacing_2"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true" />
 
                 </RelativeLayout>
 

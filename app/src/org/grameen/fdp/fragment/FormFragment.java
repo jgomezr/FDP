@@ -85,26 +85,26 @@ public abstract class FormFragment extends Fragment {
     }
 
     /**
-     * An abstract method that must be overridden by subclasses where the form fields are initialized.
+     * An abstract method that must be overridden by subclasses where the FORM fields are initialized.
      */
     abstract public void initForm(MyFormController controller);
 
     /**
-     * Returns the associated <code>MyFormController</code> that manages the form fields.
+     * Returns the associated <code>MyFormController</code> that manages the FORM fields.
      */
     public MyFormController getFormController() {
         return formController;
     }
 
     /**
-     * Returns the associated model of this form.
+     * Returns the associated model of this FORM.
      */
     public FormModel getModel() {
         return formModelFragment.getModel();
     }
 
     /**
-     * Sets the model to use for this form
+     * Sets the model to use for this FORM
      *
      * @param formModel the model to use
      */
@@ -114,7 +114,7 @@ public abstract class FormFragment extends Fragment {
     }
 
     /**
-     * Recreates the views for all the elements that are in the form. This method needs to be called when field are dynamically added or
+     * Recreates the views for all the elements that are in the FORM. This method needs to be called when field are dynamically added or
      * removed
      */
     protected void recreateViews() {

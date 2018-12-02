@@ -31,6 +31,7 @@ import org.grameen.fdp.object.PlotAssessment;
 import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.RealPlot;
+import org.grameen.fdp.object.SearchModel;
 import org.grameen.fdp.utility.Callbacks;
 import org.grameen.fdp.utility.Constants;
 import org.grameen.fdp.utility.CustomToast;
@@ -49,6 +50,9 @@ import java.util.regex.Pattern;
 import javax.script.ScriptException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import ir.mirrajabi.searchdialog.SimpleSearchDialogCompat;
+import ir.mirrajabi.searchdialog.core.BaseSearchDialogCompat;
+import ir.mirrajabi.searchdialog.core.SearchResultListener;
 
 /**
  * Created by aangjnr on 08/11/2017.
@@ -92,6 +96,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     private ImageView editFarmerDetails;
     private TextView noOfPlots;
 
+    ArrayList<SearchModel> HISTORICAL_FORMS_LIST = new ArrayList<>();
 
 
     @Override
@@ -190,9 +195,42 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         });
 
 
+        if (IS_MONITIRING_MODE) {
+            findViewById(R.id.historical_view).setVisibility(View.VISIBLE);
+
+            findViewById(R.id.historical_view).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showSelectFormDialog();
+                }
+            });
+        }
+
+
         onBackClicked();
+
+
     }
 
+
+    void showSelectFormDialog() {
+
+        new SimpleSearchDialogCompat(this, "Select a form",
+                "", null, HISTORICAL_FORMS_LIST,
+                new SearchResultListener<SearchModel>() {
+                    @Override
+                    public void onSelected(BaseSearchDialogCompat dialog, SearchModel item, int position) {
+
+
+                        Intent intent = new Intent(FarmerDetailsActivity.this, HistoricalDataActivity.class);
+                        intent.putExtra("farmer", new Gson().toJson(farmer));
+                        intent.putExtra("formId", item.getId());
+                        intent.putExtra("formName", item.getTitle());
+                        dialog.dismiss();
+                        startActivity(intent);
+                    }
+                }).show();
+    }
 
 
     void initializeViews(Boolean loadButtons) {
@@ -246,11 +284,9 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         setUpPlotsAdapter();
 
 
-        //Log.d(TAG, "IMAGE URL ###########   " + farmer.getImageUrl() + "");
 
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
-            Log.d(TAG, "IMAGE URL    " + farmer.getImageUrl() + "");
 
             circleImageView.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
             circleImageView.setOnClickListener(new View.OnClickListener() {
@@ -309,6 +345,9 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
 
             for (final Form f : FORMS) {
+
+                HISTORICAL_FORMS_LIST.add(new SearchModel(f.getId(), (prefs.getBoolean("toggleTranslation", false)) ? f.getTranslation() : f.getDiaplayName()));
+
                 final Button btn;
 
 
@@ -332,9 +371,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
                 btn.setText((prefs.getBoolean("toggleTranslation", false)) ? f.getTranslation() : f.getDiaplayName());
                 btn.setTag(f.getName());
-                btn.setContentDescription(f.getId());
-
-                 dynamicButtonsLayout.addView(btn, params);
+                btn.setContentDescription(f.getName());
+                dynamicButtonsLayout.addView(btn, params);
 
 
                 btn.setOnClickListener(new View.OnClickListener() {

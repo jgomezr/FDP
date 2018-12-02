@@ -6,7 +6,9 @@ package org.grameen.fdp.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -53,10 +55,6 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
     }
 
 
-    @Override
-    public int getItemViewType(int position) {
-        return 0;
-    }
 
     @Override
     public int getItemCount() {
@@ -65,7 +63,7 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
     }
 
     @Override
-    public FarmerListAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public FarmerListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.farmer_item_view, viewGroup, false);
 
         return new FarmerListAdapter.ViewHolder(v);
@@ -73,14 +71,22 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
 
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        RealFarmer farmer = farmers.get(position);
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
+        final RealFarmer farmer = farmers.get(viewHolder.getAdapterPosition());
 
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
-            viewHolder.photo.setImageBitmap(ImageUtil.base64ToBitmap(farmer.getImageUrl()));
-            //Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
-            viewHolder.setIsRecyclable(false);
+            try {
+
+                viewHolder.photo.setImageBitmap(ImageUtil.base64ToScaledBitmap(farmer.getImageUrl()));
+
+                //Picasso.with(context).load(farmer.getImageUrl()).resize(200, 200).into(viewHolder.photo);
+
+                viewHolder.setIsRecyclable(false);
+
+            } catch (IllegalArgumentException ignored) {
+            }
+
         }
 
         else {
@@ -145,7 +151,8 @@ public class FarmerListAdapter extends RecyclerView.Adapter<FarmerListAdapter.Vi
     @Override
     public long getItemId(int position) {
 
-        return position;
+        RealFarmer realFarmer = farmers.get(position);
+        return realFarmer.get_ID();
     }
 
     public void setOnItemClickListener(final FarmerListAdapter.OnItemClickListener mItemClickListener) {

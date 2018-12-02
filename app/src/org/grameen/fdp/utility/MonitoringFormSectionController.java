@@ -32,8 +32,8 @@ public class MonitoringFormSectionController extends MyFormElementController {
      * @param name  the name of the section
      * @param title the title of the section to display
      */
-    public MonitoringFormSectionController(Context ctx, String name, String title) {
-        super(ctx, name);
+    public MonitoringFormSectionController(Context ctx, String name, String content_desc, String title) {
+        super(ctx, name, content_desc);
         this.title = title;
     }
 
@@ -43,15 +43,15 @@ public class MonitoringFormSectionController extends MyFormElementController {
      *
      * @param title
      */
-    public MonitoringFormSectionController(Context context, String title) {
-        this(context, UUID.randomUUID().toString(), title);
+    public MonitoringFormSectionController(Context context, String title, String content_desc) {
+        this(context, UUID.randomUUID().toString(), title, content_desc);
     }
 
     /**
      * Creates a new instance of a form section with no title or name.
      */
     public MonitoringFormSectionController(Context context) {
-        this(context, null);
+        this(context, null, null);
     }
 
     /**

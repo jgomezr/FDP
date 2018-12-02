@@ -105,6 +105,7 @@ public class MapActivity extends BaseActivity {
 
         plot = new Gson().fromJson(getIntent().getStringExtra("plot"), RealPlot.class);
 
+
         Toolbar toolbar;
         if (plot != null) {
             toolbar = setToolbar(plot.getName() +" " + getResources(R.string.title_area_calc));
@@ -299,6 +300,9 @@ public class MapActivity extends BaseActivity {
                 //"Altitude : "+mCurrentLocation.getAltitude()+" high ";
                 //Toast.makeText(CustomerMapActivity.this, msg, Toast.LENGTH_LONG).show();
 
+
+                if (progressDialog.isShowing())
+                    progressDialog.dismiss();
 
                 showAlertDialog(true, "Are you sure?", msg, new DialogInterface.OnClickListener() {
                     @Override
@@ -511,6 +515,17 @@ public class MapActivity extends BaseActivity {
 
         }
 
+        plot.setGpsPoints(builder.toString());
+
         super.onStop();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, PlotDetailsActivity.class);
+        intent.putExtra("plot", new Gson().toJson(plot));
+        startActivity(intent);
+        supportFinishAfterTransition();
     }
 }

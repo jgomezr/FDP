@@ -39,8 +39,8 @@ public class EditTextController extends MyLabeledFieldController {
      * @param inputType   the content type of the text box as a mask; possible values are defined by {@link InputType}.
      *                    For example, to enable multi-line, enable {@code InputType.TYPE_TEXT_FLAG_MULTI_LINE}.
      */
-    public EditTextController(Context ctx, String name, String labelText, String placeholder, Set<InputValidator> validators, int inputType, boolean isEnabled) {
-        super(ctx, name, labelText, validators, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, String placeholder, Set<InputValidator> validators, int inputType, boolean isEnabled) {
+        super(ctx, name, content_desc, labelText, validators, isEnabled);
         this.placeholder = placeholder;
         this.inputType = inputType;
         this.IS_ENABLED = isEnabled;
@@ -56,8 +56,8 @@ public class EditTextController extends MyLabeledFieldController {
      * @param placeholder a placeholder text to show when the input field is empty. If null, no placeholder is displayed
      * @param validators  contains the validations to process on the field
      */
-    public EditTextController(Context ctx, String name, String labelText, String placeholder, Set<InputValidator> validators, boolean isEnabled) {
-        this(ctx, name, labelText, placeholder, validators, InputType.TYPE_CLASS_TEXT, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, String placeholder, Set<InputValidator> validators, boolean isEnabled) {
+        this(ctx, name, content_desc, labelText, placeholder, validators, InputType.TYPE_CLASS_TEXT, isEnabled);
     }
 
     /**
@@ -71,8 +71,8 @@ public class EditTextController extends MyLabeledFieldController {
      * @param inputType   the content type of the text box as a mask; possible values are defined by {@link InputType}.
      *                    For example, to enable multi-line, enable {@code InputType.TYPE_TEXT_FLAG_MULTI_LINE}.
      */
-    public EditTextController(Context ctx, String name, String labelText, String placeholder, boolean isRequired, int inputType, boolean isEnabled) {
-        super(ctx, name, labelText, isRequired, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, String placeholder, boolean isRequired, int inputType, boolean isEnabled) {
+        super(ctx, name, content_desc, labelText, isRequired, isEnabled);
         this.placeholder = placeholder;
         this.inputType = inputType;
         this.IS_ENABLED = isEnabled;
@@ -88,8 +88,8 @@ public class EditTextController extends MyLabeledFieldController {
      * @param placeholder a placeholder text to show when the input field is empty. If null, no placeholder is displayed
      * @param isRequired  indicates if the field is required or not
      */
-    public EditTextController(Context ctx, String name, String labelText, String placeholder, boolean isRequired, boolean isEnabled, String helperText) {
-        this(ctx, name, labelText, placeholder, isRequired, InputType.TYPE_CLASS_TEXT, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, String placeholder, boolean isRequired, boolean isEnabled, String helperText) {
+        this(ctx, name, content_desc, labelText, placeholder, isRequired, InputType.TYPE_CLASS_TEXT, isEnabled);
         this.helpertext = helperText;
     }
 
@@ -101,8 +101,8 @@ public class EditTextController extends MyLabeledFieldController {
      * @param labelText   the label to display beside the field
      * @param placeholder a placeholder text to show when the input field is empty. If null, no placeholder is displayed
      */
-    public EditTextController(Context ctx, String name, String labelText, String placeholder, boolean isEnabled) {
-        this(ctx, name, labelText, placeholder, false, InputType.TYPE_CLASS_TEXT, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, String placeholder, boolean isEnabled) {
+        this(ctx, name, content_desc, labelText, placeholder, false, InputType.TYPE_CLASS_TEXT, isEnabled);
     }
 
     /**
@@ -112,12 +112,12 @@ public class EditTextController extends MyLabeledFieldController {
      * @param name      the name of the field
      * @param labelText the label to display beside the field
      */
-    public EditTextController(Context ctx, String name, String labelText, boolean isEnabled) {
-        this(ctx, name, labelText, null, false, InputType.TYPE_CLASS_TEXT, isEnabled);
+    public EditTextController(Context ctx, String name, String content_desc, String labelText, boolean isEnabled) {
+        this(ctx, name, content_desc, labelText, null, false, InputType.TYPE_CLASS_TEXT, isEnabled);
     }
 
-    public EditTextController(Context context, String id, String caption__c, String default_value__c, boolean b, int typeClassText, boolean b1, String help_text__c) {
-        this(context, id, caption__c, default_value__c, b, typeClassText, b1);
+    public EditTextController(Context context, String id, String content_desc, String caption__c, String default_value__c, boolean b, int typeClassText, boolean b1, String help_text__c) {
+        this(context, id, content_desc, caption__c, default_value__c, b, typeClassText, b1);
         this.helpertext = help_text__c;
 
     }
@@ -195,7 +195,7 @@ public class EditTextController extends MyLabeledFieldController {
         editText.setId(editTextId);
         editText.setFloatingLabel(MaterialEditText.FLOATING_LABEL_NONE);
 
-        editText.setContentDescription(getName());
+        editText.setContentDescription(getContentDesc());
 
         editText.setSingleLine(!isMultiLine());
         editText.setInputType(inputType);

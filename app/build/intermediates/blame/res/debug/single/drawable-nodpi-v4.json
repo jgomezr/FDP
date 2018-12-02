@@ -48,6 +48,10 @@
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/check_in.png"
     },
     {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/combo_chart.png",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/combo_chart.png"
+    },
+    {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/circle_border_accent.xml",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/circle_border_accent.xml"
     },
@@ -214,6 +218,10 @@
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/airtel_mm.png",
         "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/airtel_mm.png"
+    },
+    {
+        "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/no_data.png",
+        "source": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/res/drawable-nodpi/no_data.png"
     },
     {
         "merged": "/Users/aangjnr/Documents/AppsDev/grameen/FDP/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/review.png",
