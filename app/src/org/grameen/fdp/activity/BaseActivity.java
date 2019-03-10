@@ -328,8 +328,6 @@ public class BaseActivity extends AppCompatActivity {
     void loadDynamicView(MyFormFragment formFragment1, int layout1) {
 
         //Todo add parameter to load data from the database, if is in editing mode else display default forms with their resp values
-
-
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
                 .add(layout1, formFragment1, formFragment1.getClass().getSimpleName())

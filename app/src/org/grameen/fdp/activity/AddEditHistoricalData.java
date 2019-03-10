@@ -1,6 +1,7 @@
 package org.grameen.fdp.activity;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -63,7 +64,7 @@ public class AddEditHistoricalData extends BaseActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_farmer_details);
+        setContentView(R.layout.activity_add_edit_historical_data);
 
         Toolbar toolbar;
 
@@ -72,22 +73,26 @@ public class AddEditHistoricalData extends BaseActivity {
             if (getIntent().getStringExtra("mode") != null && getIntent().getStringExtra("mode").equalsIgnoreCase(Constants.RECORD_EDIT)) {
                 toolbar = setToolbar(getResources(R.string.edit_current_record));
                 loadOldValues = true;
-            } else
+                HISTORICAL_DATA = new Gson().fromJson(getIntent().getStringExtra("historicalData"), HistoricalData.class);
+
+            } else{
                 toolbar = setToolbar(getResources(R.string.add_new_record));
+                HISTORICAL_DATA = new HistoricalData();
+            }
 
 
             farmer = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
             FORM_NAME = getIntent().getStringExtra("formName");
             FORM_ID = getIntent().getStringExtra("formId");
-
-            HISTORICAL_DATA = new Gson().fromJson(getIntent().getStringExtra("historicalData"), HistoricalData.class);
             noOfHistoricalData = getIntent().getIntExtra("size", -1);
 
-            if (farmer != null) {
+
+            Log.i(TAG, "**************   FORM NAME = " + FORM_NAME);
+
+
+            if (farmer != null)
                 setupViews();
 
-
-            }
         } else
             Toast.makeText(this, getResources(R.string.error_getting_farmer_info), Toast.LENGTH_SHORT).show();
 
@@ -111,6 +116,8 @@ public class AddEditHistoricalData extends BaseActivity {
         code.setText(farmer.getCode());
         villageName.setText(farmer.getVillage());
         landArea.setText(farmer.getLandArea());
+
+
         if (farmer.getSyncStatus() != null) {
 
             if (farmer.getSyncStatus() == 0) {
@@ -197,7 +204,7 @@ public class AddEditHistoricalData extends BaseActivity {
             data.setAnswersJson(newJsonValue.toString());
 
             if (databaseHelper.addNewHistoricalData(data)) {
-                prefs.edit().putBoolean("shouldRestartMainActivity", true).apply();
+                prefs.edit().putBoolean("refreshViewPager", true).apply();
 
                 CustomToast.makeToast(this, getResources(R.string.new_data_saved), Toast.LENGTH_SHORT).show();
                 supportFinishAfterTransition();
@@ -207,7 +214,7 @@ public class AddEditHistoricalData extends BaseActivity {
 
         } else {//Editing old Data
             if (databaseHelper.editHistoricalData(HISTORICAL_DATA.getId(), newJsonValue.toString())) {
-                prefs.edit().putBoolean("shouldRestartMainActivity", true).apply();
+                prefs.edit().putBoolean("refreshViewPager", true).apply();
 
 
                 CustomToast.makeToast(this, getResources(R.string.new_data_updated), Toast.LENGTH_SHORT).show();
@@ -223,7 +230,27 @@ public class AddEditHistoricalData extends BaseActivity {
 
         //Todo Prompt to save before closing activity
 
+        showAlertDialog(true, getResources(R.string.save_data), getResources(R.string.save_data_explanation), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
-        super.onBackPressed();
-    }
+                dialogInterface.dismiss();
+                saveOrUpdateData();
+
+
+
+            }
+        }, getResources(R.string.yes), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                prefs.edit().putBoolean("shouldRestartActivity", false).apply();
+                dialogInterface.dismiss();
+                finish();
+
+            }
+        }, getResources(R.string.no), 0);
+
+
+        }
 }

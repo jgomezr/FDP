@@ -98,6 +98,9 @@ public class HistoricalTableHeaderAdapter extends TableHeaderAdapter {
 
         if(headers.length == 3)
         textView.setTextColor(this.textColor);
+        else if(headers.length == 1)
+        textView.setTextColor(this.textColor);
+
         else
             textView.setTextColor(getResources().getColor(R.color.white));
         textView.setSingleLine(true);

@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.PlotsListAdapter;
 import org.grameen.fdp.object.ComplexCalculation;
@@ -195,7 +197,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         });
 
 
-        if (IS_MONITIRING_MODE) {
+        if (IS_MONITIRING_MODE && BuildConfig.DEBUG) {
             findViewById(R.id.historical_view).setVisibility(View.VISIBLE);
 
             findViewById(R.id.historical_view).setOnClickListener(new View.OnClickListener() {
@@ -221,13 +223,21 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                     @Override
                     public void onSelected(BaseSearchDialogCompat dialog, SearchModel item, int position) {
 
-
-                        Intent intent = new Intent(FarmerDetailsActivity.this, HistoricalDataActivity.class);
+                        final Intent intent = new Intent(FarmerDetailsActivity.this, HistoricalDataActivity.class);
                         intent.putExtra("farmer", new Gson().toJson(farmer));
                         intent.putExtra("formId", item.getId());
                         intent.putExtra("formName", item.getTitle());
                         dialog.dismiss();
-                        startActivity(intent);
+
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                startActivity(intent);
+                            }
+                        }, 500);
+
+
                     }
                 }).show();
     }
@@ -278,13 +288,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         lastVisitDate.setText(farmer.getLastModifiedDate());
 
 
-
-
-
         setUpPlotsAdapter();
-
-
-
 
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
 
@@ -332,6 +336,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                 }
             });
         }
+
+
 
 
         if (loadButtons) {
@@ -777,6 +783,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             plots = databaseHelper.getAllFarmerPlots(farmer.getId());
 
         if (plots != null) {
+
+
             int plotsSize = plots.size();
 
             noOfPlots.setText((plotsSize > 1) ? getResources(R.string.plot_aos) + "(" + plotsSize + ")" : getResources(R.string.plot_ao) + "(" + plotsSize + ")");

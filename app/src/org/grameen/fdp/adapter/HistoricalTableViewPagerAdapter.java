@@ -3,6 +3,7 @@ package org.grameen.fdp.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,9 @@ public class HistoricalTableViewPagerAdapter extends PagerAdapter {
         return layout;
     }
 
+
+
+
     @Override
     public void destroyItem(@NonNull ViewGroup collection, int position, @NonNull Object view) {
         collection.removeView((View) view);
@@ -64,25 +68,18 @@ public class HistoricalTableViewPagerAdapter extends PagerAdapter {
 
 
     @Override
-    public int getItemPosition(@NonNull Object object) {
-        //return super.getItemPosition(object);
-
-
-//        PlotMonitoringTableData plotMonitoringTableData = (PlotMonitoringTableData) object;
-        //int position = plotMonitoringTableDataList.indexOf(plotMonitoringTableData);
-/*
-        if (position >= 0) {
-            // The current data matches the data in this active fragment, so let it be as it is.
-            return position;
-        } else {
-            // Returning POSITION_NONE means the current data does not matches the data this fragment is showing right now.  Returning POSITION_NONE constant will force the fragment to redraw its view layout all over again and show new data.
+    public int getItemPosition (@NonNull Object object)
+    {
+        int index = historicalViewPagerTableDataList.indexOf (object);
+        if (index == -1)
             return POSITION_NONE;
-        }*/
-
-        return POSITION_NONE;
-
-
+        else
+            return index;
     }
+
+
+
+
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {

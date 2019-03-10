@@ -15,7 +15,7 @@ public class HistoricalData {
     String id;
     String dateTime;
     String lastModifiedDate;
-    String answersJson;
+    String answersJson = "{}";
     String formId;
     String name;
 

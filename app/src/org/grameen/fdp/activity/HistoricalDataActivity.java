@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -69,7 +70,7 @@ public class HistoricalDataActivity extends BaseActivity {
     private JSONObject ANSWERS_JSON_OBJECT;
 
     List<HistoricalViewPagerTableData> historicalViewPagerTableDataList;
-    List<HistoricalData> HISTORICAL_DATALIST;
+    List<HistoricalData> HISTORICAL_DATALIST = new ArrayList<>();
     HistoricalTableViewPagerAdapter historicalTableViewPagerAdapter;
 
 
@@ -94,7 +95,12 @@ public class HistoricalDataActivity extends BaseActivity {
             FARMER = new Gson().fromJson(getIntent().getStringExtra("farmer"), RealFarmer.class);
             FORM = databaseHelper.getFormBasedOnId(getIntent().getStringExtra("formId"));
 
+            Log.i("HISTORICAL DATA ACT", new Gson().toJson(FORM));
+
             QUESTIONS = databaseHelper.getSpecificSetOfQuestions(FORM.getName());
+
+
+            Log.i("HISTORICAL DATA ACT", QUESTIONS.size() + "");
 
             String jsonValue = databaseHelper.getAllAnswersJson(FARMER.getId());
 
@@ -118,7 +124,7 @@ public class HistoricalDataActivity extends BaseActivity {
                 setupViewPager();
 
             }
-        });
+        }).start();
 
 
     }
@@ -147,14 +153,22 @@ public class HistoricalDataActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(HistoricalDataActivity.this, AddEditHistoricalData.class);
+                final Intent intent = new Intent(HistoricalDataActivity.this, AddEditHistoricalData.class);
                 intent.putExtra("farmer", new Gson().toJson(FARMER));
                 intent.putExtra("formName", FORM.getName());
                 intent.putExtra("formId", FORM.getId());
 
                 intent.putExtra("mode", Constants.RECORD_NEW);
                 intent.putExtra("size", HISTORICAL_DATALIST.size());
-                startActivity(intent);
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(intent);
+
+                    }
+                }, 500);
 
             }
         });
@@ -164,14 +178,27 @@ public class HistoricalDataActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(HistoricalDataActivity.this, AddEditHistoricalData.class);
-                intent.putExtra("farmer", new Gson().toJson(FARMER));
-                intent.putExtra("formName", FORM.getName());
-                intent.putExtra("formId", FORM.getId());
-                intent.putExtra("mode", Constants.RECORD_EDIT);
-                intent.putExtra("size", HISTORICAL_DATALIST.size());
-                intent.putExtra("historicalData", new Gson().toJson(HISTORICAL_DATALIST.get(CURRENT_SELECTED_ITEM)));
-                startActivity(intent);
+
+                if(HISTORICAL_DATALIST != null && HISTORICAL_DATALIST.size() > 0) {
+
+                    final Intent intent = new Intent(HistoricalDataActivity.this, AddEditHistoricalData.class);
+                    intent.putExtra("farmer", new Gson().toJson(FARMER));
+                    intent.putExtra("formName", FORM.getName());
+                    intent.putExtra("formId", FORM.getId());
+                    intent.putExtra("mode", Constants.RECORD_EDIT);
+                    intent.putExtra("size", HISTORICAL_DATALIST.size());
+                    intent.putExtra("historicalData", new Gson().toJson(HISTORICAL_DATALIST.get(CURRENT_SELECTED_ITEM)));
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(intent);
+                        }
+                    }, 500);
+
+                }else{
+                    CustomToast.makeToast(HistoricalDataActivity.this, "No data to edit!", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
@@ -282,15 +309,12 @@ public class HistoricalDataActivity extends BaseActivity {
                 List<String> values = new ArrayList<>();
                 values.add(getValue(q.getId(), jsonObject));
 
-                if (q.equals(QUESTIONS.get(QUESTIONS.size() - 1)))
-                    values.add("DATE:\t" + historicalData.getDateTime());
-
                 historicalTableViewDataList.add(values);
 
             }
 
 
-            historicalViewPagerTableDataList.add(new HistoricalViewPagerTableData(historicalData.getName(), historicalTableViewDataList));
+            historicalViewPagerTableDataList.add(new HistoricalViewPagerTableData(historicalData.getName() + "\t - " + historicalData.getDateTime(), historicalTableViewDataList));
 
         }
     }
@@ -298,29 +322,55 @@ public class HistoricalDataActivity extends BaseActivity {
 
     @Override
     public void onResume() {
-        super.onResume();
 
-        if (historicalTableViewPagerAdapter != null)
+        Log.i(TAG, "On RESUME");
+
+        if (prefs.getBoolean("refreshViewPager", false)) {
+
+            Log.i(TAG, "refreshViewPager");
 
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
 
-                    if (prefs.getBoolean("refreshViewPager", false)) {
 
-                        Log.i(TAG, "On RESUME");
+
+                    if(findViewById(R.id.place_holder).getVisibility() == View.VISIBLE)
+                        setupViewPager();
+                    else
                         updateTableData();
 
 
+                    if (historicalTableViewPagerAdapter != null) {
+
+                        Log.i(TAG, "Changing dataset");
+
+                        viewPager.removeAllViews();
+                        viewPager.invalidate();
+
+                        viewPager.setAdapter(null);
+
+
+                        //historicalTableViewPagerAdapter = new HistoricalTableViewPagerAdapter(HistoricalDataActivity.this, historicalViewPagerTableDataList);
+                        //viewPager.setAdapter(historicalTableViewPagerAdapter);
+
                         historicalTableViewPagerAdapter.setData(historicalViewPagerTableDataList);
                         historicalTableViewPagerAdapter.notifyDataSetChanged();
+                        viewPager.setAdapter(historicalTableViewPagerAdapter);
+
+
                         viewPager.setCurrentItem(CURRENT_SELECTED_ITEM, true);
 
                     }
+                    prefs.edit().putBoolean("refreshViewPager", false).apply();
+
 
                 }
             }, 300);
 
+        }
+
+        super.onResume();
 
     }
 

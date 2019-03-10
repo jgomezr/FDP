@@ -278,10 +278,7 @@ public class PlotDetailsActivity extends BaseActivity {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-
-
                 recommendations = databaseHelper.getAllRecommendations();
-
 
                 int sizeOfAO = databaseHelper.getSpecificSetOfQuestions(Constants.ADOPTION_OBSERVATIONS).size();
                 boolean hasIncompleteData = false;
@@ -300,11 +297,9 @@ public class PlotDetailsActivity extends BaseActivity {
                     }
                 }
 
-
                 if (ALL_DATA_JSON.length() >= sizeOfAO && !hasIncompleteData) {
 
                     Log.i(TAG, "START YEAR IS " + plot.getStartYear());
-
 
                     Recommendation PLOT_RECOMMENDATION = null;
                     Recommendation GAPS_RECOMENDATION_FOR_START_YEAR = null;

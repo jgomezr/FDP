@@ -1,27 +1,22 @@
 package org.grameen.fdp.application;
 
-import android.annotation.TargetApi;
-import android.content.Context;
-import android.content.res.Configuration;
-import android.os.Build;
-import android.os.Environment;
-import android.os.StrictMode;
-import android.support.multidex.MultiDexApplication;
-import android.util.Log;
+ import android.os.Environment;
+  import android.support.multidex.MultiDexApplication;
+ import android.support.v7.preference.PreferenceManager;
+ import android.util.Log;
 
 import com.balsikandar.crashreporter.CrashReporter;
-import com.crashlytics.android.Crashlytics;
-import com.salesforce.androidsdk.analytics.security.Encryptor;
+ import com.crashlytics.android.Crashlytics;
+ import com.salesforce.androidsdk.analytics.security.Encryptor;
 import com.salesforce.androidsdk.app.SalesforceSDKManager;
 import com.salesforce.androidsdk.smartsync.app.SmartSyncSDKManager;
 
-import org.grameen.fdp.BuildConfig;
-import org.grameen.fdp.activity.MainActivity;
-import org.grameen.fdp.utility.Constants;
+  import org.grameen.fdp.activity.MainActivity;
 
 import java.io.File;
 
-import io.fabric.sdk.android.Fabric;
+ import io.fabric.sdk.android.Fabric;
+
 
 /**
  * Created by aangjnr on 27/11/2017.
@@ -49,37 +44,36 @@ public class FdpApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         SmartSyncSDKManager.initNative(getApplicationContext(), new NativeKeyImpl(), MainActivity.class);
-
-		/*
-         * Un-comment the line below to enable push notifications in this app.
-		 * Replace 'pnInterface' with your implementation of 'PushNotificationInterface'.
-		 * Add your Google package ID in 'bootonfig.xml', as the value
-		 * for the key 'androidPushNotificationClientId'.
-		 */
-        // SalesforceSDKManager.getInstance().setPushNotificationReceiver(pnInterface);
+        Fabric.with(this, new Crashlytics());
 
 
 
-       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-            StrictMode.setVmPolicy(builder.build());
-        }*/
-
-
-        if (BuildConfig.ENABLE_CRASHLYTICS) {
-
+        try {
             Log.i("FDP APPLICATION", "************  CRASHYTICS ENABLED! **********");
-            Fabric.with(this, new Crashlytics());
+            File databaseFile = new File(crashReportsPath);
+            if (!databaseFile.exists())
+                databaseFile.mkdirs();
+        } catch (Exception ignore) {
+        }
+
+
+        Crashlytics.setUserIdentifier(PreferenceManager.getDefaultSharedPreferences(
+                this).getString("client_email",
+                PreferenceManager.getDefaultSharedPreferences(
+                        this).getString("client_name", "FDP USER")));
+        CrashReporter.initialize(this, crashReportsPath);
 
             try {
-                CrashReporter.initialize(this, crashReportsPath);
+                Log.i("FDP APPLICATION", "************  CRASHYTICS ENABLED! **********");
                 File databaseFile = new File(databaseBackupsPath);
                 if (!databaseFile.exists())
                     databaseFile.mkdirs();
+
             } catch (Exception ignore) {
             }
 
-        }
+
+
     }
 }
 

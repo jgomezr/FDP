@@ -11,7 +11,6 @@ import android.widget.Button;
 
 import com.balsikandar.crashreporter.CrashReporter;
 import com.balsikandar.crashreporter.ui.CrashReporterActivity;
-import com.crashlytics.android.Crashlytics;
 
 
 import org.grameen.fdp.R;
@@ -98,7 +97,7 @@ public class CrashTestingActivity extends AppCompatActivity {
 
         findViewById(R.id.firebaseCrash).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Crashlytics.getInstance().crash(); // Force a crash
+                //Crashlytics.getInstance().crash(); // Force a crash
             }
         });
 

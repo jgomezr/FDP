@@ -14,6 +14,8 @@ import android.provider.BaseColumns;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.object.ActivitiesPlusInputs;
@@ -65,7 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final String TAG = DatabaseHelper.class.getSimpleName();
     static final String DB_NAME = "fdp.db";
-    static final int DB_VERSION = 48;
+    static final int DB_VERSION = 50;
 
     private static DatabaseHelper instance;
     Context _context;
@@ -206,8 +208,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //deleteAllTables();
         //onCreate(db);
 
-        if (BuildConfig.DEBUG && (oldVersion > newVersion)) {
-            db.execSQL(DROP_HISTORICAL_DATA_TABLE);
+        if (BuildConfig.DEBUG && (oldVersion < newVersion)) {
+            Log.i(TAG, ">>>>>>>>>>>>>>>>>>>>>>>>> SQLITE CREATING HISTORICAL TABLE");
+            //db.execSQL(DROP_HISTORICAL_DATA_TABLE);
 
 
             db.execSQL(CREATE_HISTORICAL_DATA_TABLE);
@@ -3358,16 +3361,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Collections.sort(objects, new Comparator<RealFarmer>() {
                 @Override
                 public int compare(RealFarmer o, RealFarmer t1) {
-
                     try {
                         return o.getFarmerName().compareTo(t1.getFarmerName());
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                     return -1;
-
                 }
             });
 
@@ -3632,8 +3631,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
-
 
     public List<RecommendationsPlusActivity> getAllRecommendationPlusAcivityByYear(String year) {
 
@@ -4329,7 +4326,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
+
+
     public List<Logic> doesQuestionHaveLogics(String questionId) {
+
+
 
         List<Logic> logics = null;
 
@@ -4988,7 +4990,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             contentValues.put(FORM_ID, historicalData.getFormId());
 
             db.insert(HISTORICAL_DATA, null, contentValues);
-            Log.d(TAG, "HISTORICAL DATA FOR FORM WITH ID " + historicalData.getId() + " INSERTED");
+            Log.d(TAG, "HISTORICAL DATA " + new Gson().toJson(historicalData) + " INSERTED");
             return true;
 
 
@@ -5056,9 +5058,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
-
-
-
 
 
 

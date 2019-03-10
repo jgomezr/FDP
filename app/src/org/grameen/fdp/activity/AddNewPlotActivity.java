@@ -244,8 +244,6 @@ public class AddNewPlotActivity extends BaseActivity {
         findViewById(R.id.plot_area_calculation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 //Todo go to Map Activity
                 if (!plotName.getText().toString().isEmpty() || !plotName.getText().toString().equals("")) {
 
@@ -270,8 +268,6 @@ public class AddNewPlotActivity extends BaseActivity {
                             finish();
                         }
                     }, 500);
-
-
                 } else
                     Toast.makeText(AddNewPlotActivity.this, getResources(R.string.provide_plot_name), Toast.LENGTH_SHORT).show();
 

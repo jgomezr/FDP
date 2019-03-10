@@ -346,9 +346,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         takePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startCameraIntent();
-
             }
         });
 
@@ -388,7 +386,8 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
         }catch(Exception e){e.printStackTrace();
 
-        educationLevelSpinner.setItems(educationLevels);}
+        educationLevelSpinner.setItems(educationLevels);
+        }
 
 
         education = educationLevelSpinner.getItems().get(0).toString();
@@ -398,11 +397,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
             @Override
             public void onItemSelected(MaterialSpinner view, int position, long id, Object item) {
                 education = item.toString();
-
-
                 Log.i(TAG, "^^^^^^^^^^ ON EDUCATION ITEM SELECTED " + education);
-
-
             }
         });
 
@@ -464,12 +459,12 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
 
         } else {
-
-            //Todo load farmer details with tag
+            //Todo load farmer details
 
             if (intent.getStringExtra("flag") != null && intent.getStringExtra("flag").equals("edit")) {
 
                 Toolbar toolbar = setToolbar(getResources(R.string.edit_farmer_details));
+
                 isEditMode = true;
                 newFarmer = false;
 
@@ -495,7 +490,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
                 isEditMode = true;
                 newFarmer = true;
 
-                //Todo load ui views with tag default socioeconomic
+                //Todo load ui views with tag default farmer profile
                 Toolbar toolbar = setToolbar(getResources(R.string.add_farmer_details));
                 formLabel = Constants.FARMER_PROFILE;
                 formFragment = MyFormFragment.newInstance(formLabel, false, null, false);
@@ -760,8 +755,6 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
 
         BASE64_STRING = farmer.getImageUrl();
-
-
         if (farmer.getImageUrl() != null && !farmer.getImageUrl().equals("")) {
             try {
                 circleImageView.setImageBitmap(ImageUtil.base64ToBitmap(BASE64_STRING));
@@ -1000,8 +993,6 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         return new File(ROOT_DIR,
                 "temp" + ".jpg");
     }
-
-
 
     void loadNextForm(){
 

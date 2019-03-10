@@ -14,6 +14,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.grameen.fdp.activity.PlotDetailsActivity;
 import org.grameen.fdp.object.Calculation;
 import org.grameen.fdp.object.Form;
@@ -54,7 +56,7 @@ import javax.script.ScriptException;
 public class DynamicFormFragment extends FormFragment {
 
 
-    JSONObject ANSWERS_JSON;
+    JSONObject ANSWERS_JSON = new JSONObject();
     List<Question> questions = new ArrayList<>();
     MyFormSectionController formSectionController;
     DatabaseHelper databaseHelper;
@@ -87,6 +89,7 @@ public class DynamicFormFragment extends FormFragment {
         Bundle bundle = new Bundle();
         bundle.putString("formName", formName);
         bundle.putBoolean("loadOldValues", shouldLoadOldValues);
+
         if (answersJson != null)
             bundle.putString("answersJson", answersJson.toString());
 
@@ -103,9 +106,16 @@ public class DynamicFormFragment extends FormFragment {
     @Override
     public void onAttach(Context context) {
 
+        Log.i(TAG, "**************   ON ATTACHED");
+
         if (getArguments() != null) {
+            databaseHelper = DatabaseHelper.getInstance(context);
+
 
             FORM = databaseHelper.getFormBasedOnName(getArguments().getString("formName"));
+
+            Log.i(TAG, "**************   FORM = " + new Gson().toJson(FORM));
+
 
             shouldLoadOldValues = getArguments().getBoolean("loadOldValues");
 
@@ -119,7 +129,6 @@ public class DynamicFormFragment extends FormFragment {
             IS_CONTROLLER_ENABLED = getArguments().getBoolean("isEnabled");
 
             FARMER_ID = getArguments().getString("farmerId");
-            databaseHelper = DatabaseHelper.getInstance(context);
         }
 
         super.onAttach(context);
@@ -127,6 +136,7 @@ public class DynamicFormFragment extends FormFragment {
 
     @Override
     public void initForm(MyFormController controller) {
+        Log.i(TAG, "**************   INIT FORM");
 
         Context context = getContext();
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -213,8 +223,6 @@ public class DynamicFormFragment extends FormFragment {
         JSONObject jsonObject = new JSONObject();
 
         for (Question q : questions) {
-
-
             try {
                 jsonObject.put(q.getId(), getModel().getValue(q.getId()));
             } catch (JSONException e) {
@@ -244,30 +252,30 @@ public class DynamicFormFragment extends FormFragment {
 
                 switch (q.getType__c().toLowerCase()) {
                     case Constants.TYPE_TEXT:
-                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, !IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
+                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_TEXT, IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
                         //getValue(q);
 
                         break;
                     case Constants.TYPE_NUMBER:
-                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER, !IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
+                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_CLASS_NUMBER, IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
                         //getValue(q);
 
                         break;
 
                     case Constants.TYPE_NUMBER_DECIMAL:
-                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_NUMBER_FLAG_DECIMAL, !IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
+                        formSectionController.addElement(new EditTextController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), storedValue, true, InputType.TYPE_NUMBER_FLAG_DECIMAL, IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
                         //getValue(q);
 
                         break;
 
                     case Constants.TYPE_SELECTABLE:
-                        formSectionController.addElement(new SelectionController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, storedValue, q.formatQuestionOptions(), true, !IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
+                        formSectionController.addElement(new SelectionController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, storedValue, q.formatQuestionOptions(), true, IS_CONTROLLER_ENABLED, q.getHelp_Text__c()));
                         //getValue(q);
 
                         break;
 
                     case Constants.TYPE_MULTI_SELECTABLE:
-                        formSectionController.addElement(new CheckBoxController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, !IS_CONTROLLER_ENABLED));
+                        formSectionController.addElement(new CheckBoxController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), true, q.formatQuestionOptions(), true, IS_CONTROLLER_ENABLED));
                         //getValue(q, jsonObject);
 
                         break;

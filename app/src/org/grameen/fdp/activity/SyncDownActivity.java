@@ -866,11 +866,12 @@ public class SyncDownActivity extends SalesforceActivity {
 
         try {
 
-            RestRequest restRequest = RestRequest.getRequestForQuery(ApiVersionStrings.getVersionNumber(this), url);
+            //RestRequest restRequest = RestRequest.getRequestForQuery(ApiVersionStrings.getVersionNumber(this), url);
+            RestRequest restRequest = new RestRequest(RestRequest.RestMethod.GET, url);
             restResponse = sendRequest(restRequest);
 
 
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             showDialog(getResources(R.string.generic_error), getResources(R.string.connection_error), true);
 
@@ -901,6 +902,8 @@ public class SyncDownActivity extends SalesforceActivity {
                     Log.d(TAG, "NEXT RECORDS OBJECTS ARRAY SIZE IS " + COUNT);
 
                     objects.addAll(objectList);
+
+                    DONE = Boolean.valueOf(restResponse.asJSONObject().getString("done"));
 
 
                 } catch (IOException | JSONException e) {

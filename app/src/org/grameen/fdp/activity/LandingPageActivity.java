@@ -24,11 +24,11 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.balsikandar.crashreporter.CrashReporter;
-import com.balsikandar.crashreporter.ui.CrashReporterActivity;
 import com.balsikandar.crashreporter.utils.CrashUtil;
 import com.balsikandar.crashreporter.utils.FileUtils;
 import com.crashlytics.android.Crashlytics;
 
+import org.grameen.fdp.BuildConfig;
 import org.grameen.fdp.R;
 import org.grameen.fdp.application.FdpApplication;
 import org.grameen.fdp.object.Country;
@@ -44,6 +44,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
 
 import static org.grameen.fdp.application.FdpApplication.databaseBackupsPath;
 
@@ -203,6 +204,7 @@ public class LandingPageActivity extends BaseActivity {
                     launchMultiplePermissions(PERMISSIONS);
 
 
+
                 }
             }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
                 @Override
@@ -337,10 +339,17 @@ public class LandingPageActivity extends BaseActivity {
 
     public void showPopUp(@Nullable final View v) {
 
-        PopupMenu menu = new PopupMenu(this, v);
+        final PopupMenu menu = new PopupMenu(this, v);
 
         menu.getMenuInflater()
                 .inflate(R.menu.activity_landing_page_menu, menu.getMenu());
+
+        //if(!BuildConfig.DEBUG)
+        //menu.getMenu().findItem(R.id.crash_reports).setVisible(false);
+
+
+
+
         menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -352,7 +361,8 @@ public class LandingPageActivity extends BaseActivity {
 
                         if (Utils.checkInternetConnection(LandingPageActivity.this))
                             sendLatestLogToServer();
-
+                        else
+                            CustomToast.makeToast(LandingPageActivity.this, getString(R.string.no_internet_connection_available), Toast.LENGTH_LONG).show();
 
                         return true;
 
@@ -424,11 +434,22 @@ public class LandingPageActivity extends BaseActivity {
 
                                     }
                                 }, getString(R.string.no), 0);
+
+
                         return true;
+
 
 
                     default:
                         return false;
+
+
+
+
+
+
+
+
                 }
             }
 
@@ -444,9 +465,6 @@ public class LandingPageActivity extends BaseActivity {
         List<File> logFiles = getAllCrashes();
         if (logFiles.size() > 0) {
 
-            Crashlytics.setUserIdentifier(PreferenceManager.getDefaultSharedPreferences(
-                    LandingPageActivity.this).getString("client_name", "FDP USER"));
-
             Crashlytics.log(FileUtils.readFromFile(new File(logFiles.get(0).getAbsolutePath())));
 
             CustomToast.makeToast(LandingPageActivity.this, getString(R.string.logs_sent), Toast.LENGTH_LONG).show();
@@ -458,7 +476,10 @@ public class LandingPageActivity extends BaseActivity {
                 }
             } catch (Exception ignored) {
             }
-        }
+        }else
+            CustomToast.makeToast(LandingPageActivity.this, "No logs to send!", Toast.LENGTH_LONG).show();
+
+
     }
 
 

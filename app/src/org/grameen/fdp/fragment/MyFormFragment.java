@@ -434,10 +434,6 @@ public class MyFormFragment extends FormFragment {
 
                     break;
 
-               /* case Constants.TYPE_CHECKBOX:
-                    formSectionController.addElement(new CheckBoxController(context, q.getId(), q.getCaption__c(), true, null, true, !IS_CONTROLLER_ENABLED));
-
-                    break;*/
                 case Constants.TYPE_TIMEPICKER:
                     formSectionController.addElement(new TimePickerController(context, q.getId(), q.getName(), (preferences.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c()));
 

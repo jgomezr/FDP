@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.renaudcerrato:FloatingSearchView-1.0.1">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/FloatingSearchView-1.0.1.aar/7eb76ff9b3fda06d0ee017946344b526/annotations.zip!/" />
+    </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/FloatingSearchView-1.0.1.aar/c958e2cbc6d21a491bf28d177981dc39/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/FloatingSearchView-1.0.1.aar/c958e2cbc6d21a491bf28d177981dc39/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/FloatingSearchView-1.0.1.aar/7eb76ff9b3fda06d0ee017946344b526/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/FloatingSearchView-1.0.1.aar/7eb76ff9b3fda06d0ee017946344b526/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
