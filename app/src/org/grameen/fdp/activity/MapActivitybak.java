@@ -643,7 +643,7 @@ public class MapActivitybak{ /*extends BaseActivity implements
     }
 
 
-    double convertToHectres(Double valueInSquareMetres) {
+    double convertToHectares(Double valueInSquareMetres) {
 
         return valueInSquareMetres / 10000;
 

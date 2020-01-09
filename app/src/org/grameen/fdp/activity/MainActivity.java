@@ -49,6 +49,7 @@ import org.grameen.fdp.R;
 import org.grameen.fdp.adapter.CustomSuggestionsAdapter;
 import org.grameen.fdp.adapter.FarmerListAdapter;
 import org.grameen.fdp.fragment.FarmerListFragment;
+import org.grameen.fdp.object.Question;
 import org.grameen.fdp.object.RealFarmer;
 import org.grameen.fdp.object.SearchModel;
 import org.grameen.fdp.object.Village;
@@ -81,7 +82,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     Switch toggleTranslation;
     ViewPager viewPager;
     String TAG = "MainActivity";
-    GridLayoutManager productsGridLayoutManager;
     DatabaseHelper databaseHelper;
     TextView tabOIndicatorText;
     SharedPreferences prefs;
@@ -109,21 +109,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         hamburger = findViewById(R.id.hamburger);
         searchLayout = findViewById(R.id.toolbar);
-
-
-
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
-
         databaseHelper = DatabaseHelper.getInstance(this);
-
-
-        //Log.i(TAG, "********************* PATH OF THE DATABASE IS " + databaseHelper.getReadableDatabase().getPath());
-
-
-
-
-        pager_indicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
+        pager_indicator = findViewById(R.id.viewPagerCountDots);
 
         toggleTranslation = findViewById(R.id.translation_switch);
 
@@ -152,7 +140,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             TextView nameTV = headerLayout.findViewById(R.id.name_textView);
             TextView emailTV = headerLayout.findViewById(R.id.email_textView);
             TextView versionNumberTV = navigationView.findViewById(R.id.version_number);
-
 
             nameTV.setText(prefs.getString("client_name", ""));
             emailTV.setText(prefs.getString("client_email", ""));
@@ -229,20 +216,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 if (Utils.checkInternetConnection(MainActivity.this)) {
                     DataDownloadActivity.onNetworkActivityComplete(MainActivity.this);
                     SyncDownActivity.onNetworkActivityComplete(MainActivity.this);
-
                     startActivity(new Intent(MainActivity.this, DataDownloadActivity.class));
-                } else {
+                } else
                     CustomToast.makeToast(MainActivity.this, getResources(R.string.no_internet_connection_available), Toast.LENGTH_LONG).show();
-
-                }
             }
         });
 
-
-
-
-
-        tabOIndicatorText = (TextView) findViewById(R.id.tab_indicator_text);
+        tabOIndicatorText =  findViewById(R.id.tab_indicator_text);
 
 
         //Todo obtain categories/Groups according to a filter flag and populate the viewpager accordingly

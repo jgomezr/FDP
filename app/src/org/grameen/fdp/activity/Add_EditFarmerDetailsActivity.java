@@ -957,15 +957,6 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
         }
     }
 
-    private int getRandomNumber() {
-
-
-        Random r = new Random(System.currentTimeMillis());
-        return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
-
-
-    }
-
 
     protected String getSaltString() {
         String UUID = prefs.getString(Constants.USER_UID, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890");

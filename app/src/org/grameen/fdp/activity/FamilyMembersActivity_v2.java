@@ -281,7 +281,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
             @Override
             public void onClick(View v) {
 
-
               /*  if(monitoringMode)
                     onBackClicked();
                 else {*/
@@ -306,7 +305,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
                         }
 
                         stringBuilder.append(value).append("+");
-
 
                     }
 
@@ -388,17 +386,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     private void loadData() {
         List<RowHeader> rowHeaders = getRowHeaderList();
         List<ColumnHeader> columnHeaders = getColumnHeaderList(); //getRandomColumnHeaderList(); //
@@ -473,8 +460,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
         return list;
     }
 
-
-
     private List<RowHeader> getRowHeaderList() {
         List<RowHeader> list = new ArrayList<>();
         for (int i = 0; i < ROW_SIZE; i++) {
@@ -487,9 +472,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         return list;
     }
-
-
-
 
     private List<ColumnHeader> getColumnHeaderList() {
         List<ColumnHeader> list = new ArrayList<>();
@@ -529,11 +511,6 @@ public class FamilyMembersActivity_v2 extends BaseActivity implements Callbacks.
 
         return list;
     }
-
-
-
-
-
 
     private void initData() {
         mRowHeaderList = new ArrayList<>();

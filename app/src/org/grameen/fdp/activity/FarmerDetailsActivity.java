@@ -715,19 +715,14 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                         farmResult.setStatus(thisLogic.getResult());
                         farmResult.setPlotAssessmentList(PLOT_ASSESSMENTS);
 
-                        Log.d(TAG, "***** FARM RESULTS = " + farmResult.getStatus());
+                        prefs.edit().putString(farmer.getCode() + "_farm_results", farmResult.getStatus()).apply();
 
-
+                        //Save the farm results data
                         Intent intent = new Intent(FarmerDetailsActivity.this, FarmAssessmentActivity.class);
                         intent.putExtra("farmResults", new Gson().toJson(farmResult));
                         intent.putExtra("farmer", new Gson().toJson(farmer));
 
                         startActivity(intent);
-
-
-
-
-
 
                     }else{
                         Log.d(TAG, "AO M FOR ALL PLOTS? = false");
@@ -742,23 +737,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
                         }, getResources(R.string.ok), null, "", 0);
 
                     }
-             /*   }else{
-                    Log.d(TAG, "SAME NUMBER OF MONITORING? = false");
-
-
-
-                    showAlertDialog(true, getResources(R.string.different_no_monitoring), message, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-
-                            dialogInterface.dismiss();
-
-                        }
-                    }, getResources(R.string.ok), null, "", 0);
-
-
-                }*/
-
             }
         });
 
@@ -766,8 +744,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
 
             addPlot.setVisibility(View.GONE);
             findViewById(R.id.sync_farmer).setVisibility(View.GONE);
-
-
         }
 
 
@@ -956,23 +932,11 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             }else {
 
                 if(noOfPlotMonitorings.contains(0))
-                {
                     message = getResources(R.string.farmer)+ farmer.getFarmerName() + getResources(R.string.no_monitoring_added) + monitoringYear + getResources(R.string.please_add_monitoring_suffix);
-
-                    // return false;
-
-                }else {
-                    // return true;
-                }
-
             }
 
-        }else{
+        }else
             message = getResources(R.string.farmer) + farmer.getFarmerName() + getResources(R.string.no_plots_added_suffix);
-            //return false;
-
-        }
-
     }
 
 
@@ -987,7 +951,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         String plotAssessmentID = databaseHelper.getQuestionIdByTranslationName("Plot Assessment");
 
         for (RealPlot plot : plots) {
-
             MONITORING_LIST = databaseHelper.getAllPlotMonitoringForYear(plot.getId(), String.valueOf(monitoringYear));
 
             if(prefs.getString("monitoringToUse", "Last").equalsIgnoreCase("last")){
@@ -1068,12 +1031,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     }
 
 
-
-
-
-
-
-
     String parseCollectionsFormula(String formula){
         int value = -1;
 
@@ -1089,9 +1046,6 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         Log.i(TAG, formula + " IS " + value);
 
         return String.valueOf(value);
-
-
-
 
     }
 
