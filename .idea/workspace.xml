@@ -35,101 +35,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83ffcf1e-b9c7-473c-91cf-1661c73aea8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__br_com_mauker_materialsearchview_materialsearchview_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_percent_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_preference_v14_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_preference_v7_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_mancj_MaterialSearchBar_0_7_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_renaudcerrato_FloatingSearchView_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FDP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FDP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-hdpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_history_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_history_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_left_white_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_left_white_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_left_white_36dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_left_white_36dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_right_white_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_keyboard_arrow_right_white_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_monetization_on_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_monetization_on_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_person_pin_grey_500_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_person_pin_grey_500_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-ldpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-mdpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/gas_cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/gas_cylinder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_add_location_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_add_location_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_radio_button_checked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_radio_button_checked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_radio_button_unchecked_black_18dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_radio_button_unchecked_black_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_settings_black_24dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_settings_black_24dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/res/layout/activity_monitoring_year_selection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/res/layout/activity_monitoring_year_selection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/res/layout/custom_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/res/layout/custom_toolbar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotMonitoringActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotMonitoringActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/res/layout/activity_map.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/Add_EditFarmerDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/Add_EditFarmerDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity_v2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity_v2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmAssessmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmAssessmentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity_v2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivitybak.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivitybak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MonitoringYearSelectionActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MonitoringYearSelectionActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotMonitoringActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotMonitoringActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotsReviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotsReviewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/SyncUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/SyncUpActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/DynamicFormFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/DynamicFormFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/MonitoringFormFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/MonitoringFormFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/MyFormFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/MyFormFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/FarmResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/FarmResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/PlotAssessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/PlotAssessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/RealPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/object/RealPlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/syncObjects/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/syncObjects/Farmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Callbacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Callbacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/EditTextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/EditTextController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/libs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/libs/libs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivitybak.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/FamilyMembersTableViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/FamilyMembersTableViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CellViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CellViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CheckBoxViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CheckBoxViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/SpinnerViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/SpinnerViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/TextViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/TextViewHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build.gradle" afterDir="false" />
@@ -149,7 +72,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="52004948fe20c491" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_7_API_29" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -167,34 +90,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1454">
-              <caret line="177" column="24" selection-start-line="177" selection-start-column="24" selection-end-line="177" selection-end-column="24" />
+            <state relative-caret-position="144">
+              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
               <folding>
-                <element signature="e#5822#8271#1" />
-                <element signature="e#7428#8648#0" expanded="true" />
-                <element signature="e#8647#8648#0" expanded="true" />
-                <element signature="e#12000#13991#0" expanded="true" />
-                <element signature="e#13990#13991#0" expanded="true" />
+                <element signature="e#2951#3352#1" />
                 <element signature="method#computeAreaInSquareMeters#0;class#MapActivity#0" />
-                <element signature="e#14742#14960#0" expanded="true" />
-                <element signature="e#14959#14960#0" expanded="true" />
-                <element signature="e#14989#15972#0" expanded="true" />
-                <element signature="e#15971#15972#0" expanded="true" />
-                <element signature="e#16740#17003#0" expanded="true" />
-                <element signature="e#17002#17003#0" expanded="true" />
-                <element signature="e#17018#17030#0" expanded="true" />
-                <element signature="e#17033#17241#0" expanded="true" />
-                <element signature="e#17240#17241#0" expanded="true" />
-                <element signature="e#17256#17267#0" expanded="true" />
+                <element signature="method#getLocationUpdates#0;class#MapActivity#0" />
+                <element signature="method#startLocationListener#0;class#MapActivity#0" />
                 <element signature="method#checkPlayServices#0;class#MapActivity#0" />
-                <element signature="e#19668#20248#0" expanded="true" />
-                <element signature="e#20247#20248#0" expanded="true" />
-                <element signature="e#20261#20461#0" expanded="true" />
-                <element signature="e#20460#20461#0" expanded="true" />
+                <element signature="method#onStop#0;class#MapActivity#0" />
                 <element signature="method#onBackPressed#0;class#MapActivity#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/res/layout/activity_map.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -235,15 +153,17 @@
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MonitoringYearSelectionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/syncObjects/Farmer.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/object/FarmResult.java" />
-        <option value="$PROJECT_DIR$/app/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/object/PlotAssessment.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmAssessmentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/SyncUpActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" />
+        <option value="$PROJECT_DIR$/app/res/layout/activity_map.xml" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" />
       </list>
     </option>
@@ -260,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -334,12 +253,48 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="org" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="org" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="grameen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="org" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="grameen" type="462c0819:PsiDirectoryNode" />
+              <item name="fdp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FDP" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="org" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="grameen" type="462c0819:PsiDirectoryNode" />
+              <item name="fdp" type="462c0819:PsiDirectoryNode" />
+              <item name="activity" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,14 +441,14 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
       <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Android Profiler" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50270563" side_tool="true" visible="true" weight="0.33773586" />
-      <window_info anchor="bottom" id="Build" order="2" sideWeight="0.49729437" weight="0.33869442" />
+      <window_info anchor="bottom" id="Android Profiler" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50361717" side_tool="true" weight="0.33773586" />
+      <window_info anchor="bottom" id="Build" order="2" sideWeight="0.49638286" weight="0.33867925" />
       <window_info anchor="bottom" id="Flutter Performance" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32820514" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32735848" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32923368" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32830188" />
       <window_info anchor="bottom" id="Run" order="8" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -510,7 +465,7 @@
       <window_info anchor="right" id="Gradle" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Preview" order="10" weight="0.32764506" />
+      <window_info anchor="right" id="Preview" order="10" weight="0.327212" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -551,16 +506,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="186" column="72" selection-start-line="186" selection-start-column="72" selection-end-line="186" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/DetailedYearMonthlyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3675">
@@ -736,21 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity_v2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="567" lean-forward="true" selection-start-line="540" selection-start-column="7" selection-end-line="567" />
-          <folding>
-            <element signature="method#loadData#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getCellList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getRowHeaderList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getColumnHeaderList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#initData#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getValue#0;class#FamilyMembersActivity_v2#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MonitoringYearSelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -794,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -839,13 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="303" column="78" selection-start-line="303" selection-start-column="78" selection-end-line="303" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="118" column="72" selection-start-line="118" selection-start-column="72" selection-end-line="118" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -917,19 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15816">
-          <caret line="717" column="66" selection-start-line="717" selection-start-column="66" selection-end-line="717" selection-end-column="81" />
-          <folding>
-            <element signature="method#getValue#0;class#FarmerDetailsActivity#0" />
-            <element signature="method#getLogicValue#0;class#FarmerDetailsActivity#0" />
-            <element signature="method#compareValues#0;class#FarmerDetailsActivity#0" />
-            <element signature="method#taskComplete#0;class#FarmerDetailsActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/src/com/salesforce/androidsdk/smartstore/app/SmartStoreSDKManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -975,32 +877,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding>
+            <element signature="e#3781#4133#0" expanded="true" />
+            <element signature="e#4132#4133#0" expanded="true" />
+            <element signature="method#loadData#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getCellList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getRowHeaderList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getColumnHeaderList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#initData#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getValue#0;class#FamilyMembersActivity_v2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6768">
+          <caret line="478" column="5" selection-start-line="478" selection-start-column="5" selection-end-line="478" selection-end-column="5" />
+          <folding>
+            <element signature="e#3781#4133#0" expanded="true" />
+            <element signature="e#4132#4133#0" expanded="true" />
+            <element signature="method#loadData#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getCellList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getRowHeaderList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getColumnHeaderList#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#initData#0;class#FamilyMembersActivity_v2#0" />
+            <element signature="method#getValue#0;class#FamilyMembersActivity_v2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="333" column="91" selection-start-line="333" selection-start-column="91" selection-end-line="333" selection-end-column="91" />
+          <folding>
+            <element signature="e#20360#26298#0" expanded="true" />
+            <element signature="e#26297#26298#0" expanded="true" />
+            <element signature="method#getValue#0;class#FarmerDetailsActivity#0" />
+            <element signature="method#getLogicValue#0;class#FarmerDetailsActivity#0" />
+            <element signature="method#compareValues#0;class#FarmerDetailsActivity#0" />
+            <element signature="method#taskComplete#0;class#FarmerDetailsActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="79" column="58" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/res/layout/activity_map.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1454">
-          <caret line="177" column="24" selection-start-line="177" selection-start-column="24" selection-end-line="177" selection-end-column="24" />
+        <state relative-caret-position="144">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
           <folding>
-            <element signature="e#5822#8271#1" />
-            <element signature="e#7428#8648#0" expanded="true" />
-            <element signature="e#8647#8648#0" expanded="true" />
-            <element signature="e#12000#13991#0" expanded="true" />
-            <element signature="e#13990#13991#0" expanded="true" />
+            <element signature="e#2951#3352#1" />
             <element signature="method#computeAreaInSquareMeters#0;class#MapActivity#0" />
-            <element signature="e#14742#14960#0" expanded="true" />
-            <element signature="e#14959#14960#0" expanded="true" />
-            <element signature="e#14989#15972#0" expanded="true" />
-            <element signature="e#15971#15972#0" expanded="true" />
-            <element signature="e#16740#17003#0" expanded="true" />
-            <element signature="e#17002#17003#0" expanded="true" />
-            <element signature="e#17018#17030#0" expanded="true" />
-            <element signature="e#17033#17241#0" expanded="true" />
-            <element signature="e#17240#17241#0" expanded="true" />
-            <element signature="e#17256#17267#0" expanded="true" />
+            <element signature="method#getLocationUpdates#0;class#MapActivity#0" />
+            <element signature="method#startLocationListener#0;class#MapActivity#0" />
             <element signature="method#checkPlayServices#0;class#MapActivity#0" />
-            <element signature="e#19668#20248#0" expanded="true" />
-            <element signature="e#20247#20248#0" expanded="true" />
-            <element signature="e#20261#20461#0" expanded="true" />
-            <element signature="e#20460#20461#0" expanded="true" />
+            <element signature="method#onStop#0;class#MapActivity#0" />
             <element signature="method#onBackPressed#0;class#MapActivity#0" />
           </folding>
         </state>

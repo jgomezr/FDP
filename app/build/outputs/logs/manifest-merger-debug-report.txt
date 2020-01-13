@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 meta-data#firebase_crashlytics_collection_enabled
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:131:3-132:46
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:128:3-129:46
 	android:value
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:132:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:129:4-43
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:131:14-68
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:128:14-68
 provider#org.grameen.fdp.utility.GenericFileProvider
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:136:3-144:14
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:133:3-141:14
 	android:grantUriPermissions
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:140:4-38
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:137:4-38
 	android:authorities
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:138:4-67
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:135:4-67
 	android:exported
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:139:4-28
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:136:4-28
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:137:4-47
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:134:4-47
 manifest
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
 MERGED from [com.android.support:multidex:1.0.2] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/4c71b9df6028bc26f42c2eb0388ca607/AndroidManifest.xml:17:1-22:12
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-16:12
 MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-20:12
@@ -104,20 +104,20 @@ MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.4.1] /Users/aangjnr/
 MERGED from [com.crashlytics.sdk.android:answers:1.4.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/answers-1.4.1.aar/a892083458fa8d6fd94a5ab0594d6848/AndroidManifest.xml:2:1-13:12
 MERGED from [io.fabric.sdk.android:fabric:1.4.1] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/fabric-1.4.1.aar/f99c0793058eb6b0495f1b14a30b1c0e/AndroidManifest.xml:22:1-33:12
 MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/android-database-sqlcipher-3.5.7.aar/6fd5fc95fac3604d2ef9df3a3f520c07/AndroidManifest.xml:2:1-4:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
-INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
+INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
 	package
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:3:2-27
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:11-69
@@ -226,7 +226,7 @@ MERGED from [com.google.android.gms:play-services-maps:16.0.0] /Users/aangjnr/.g
 	android:required
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:26:3-26
 application
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:31:2-150:19
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:31:2-147:19
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:14:5-20
 MERGED from [:libs:SmartSync] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartSync/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:14:5-20
 MERGED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:14:5-18:19
@@ -423,108 +423,100 @@ ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:80:7-44
 	android:name
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:79:19-71
-activity#org.grameen.fdp.activity.FamilyMembersActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:9-83:49
-	android:screenOrientation
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:4-41
-	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:83:4-47
-	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:19-65
 activity#org.grameen.fdp.activity.MonitoringYearSelectionActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:84:3-72
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:3-72
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:84:13-69
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:81:13-69
 activity#org.grameen.fdp.activity.PlotMonitoringActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:85:3-87:49
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:3-84:49
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:86:4-41
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:83:4-41
 	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:4-47
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:84:4-47
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:85:13-60
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:82:13-60
 activity#org.grameen.fdp.activity.AddNewPlotMonitoringActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:9-75
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:85:9-75
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:19-72
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:85:19-72
 activity#org.grameen.fdp.activity.FarmAssessmentActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:89:9-69
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:86:9-69
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:89:19-66
-activity#org.grameen.fdp.activity.FamilyMembersActivity_v2
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:90:9-94:6
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:86:19-66
+activity#org.grameen.fdp.activity.FamilyMembersActivity
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:9-91:6
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:91:4-41
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:88:4-41
 	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:92:13-56
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:89:13-56
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:90:19-68
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:87:19-65
 activity#org.grameen.fdp.activity.FDPStatusActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:95:9-64
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:92:9-64
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:95:19-61
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:92:19-61
 activity#org.grameen.fdp.activity.ImageViewActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:96:9-99:46
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:93:9-96:46
 	android:excludeFromRecents
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:97:4-37
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:94:4-37
 	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:4-47
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:95:4-47
 	android:theme
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:99:4-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:96:4-44
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:96:19-61
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:93:19-61
 activity#org.grameen.fdp.activity.PlotsReviewActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:100:3-102:50
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:97:3-99:50
 	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:102:4-47
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:99:4-47
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:101:4-48
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:98:4-48
 activity#org.grameen.fdp.activity.SyncUpActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:103:3-105:47
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:100:3-102:47
 	android:theme
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:105:4-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:102:4-44
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:104:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:101:4-43
 activity#org.grameen.fdp.activity.SyncDownActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:108:3-110:47
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:105:3-107:47
 	android:theme
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:110:4-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:107:4-44
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:109:4-45
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:106:4-45
 activity#org.grameen.fdp.activity.CrashTestingActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:111:9-67
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:108:9-67
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:111:19-64
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:108:19-64
 activity#org.grameen.fdp.activity.HistoricalDataActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:112:9-115:59
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:109:9-112:59
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:114:13-50
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:111:13-50
 	android:windowSoftInputMode
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:115:13-56
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:112:13-56
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:113:13-60
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:110:13-60
 activity#org.grameen.fdp.activity.AddEditHistoricalData
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:116:9-68
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:113:9-68
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:116:19-65
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:113:19-65
 activity#org.grameen.fdp.activity.PrintingActivity
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:117:9-119:53
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:114:9-116:53
 	android:screenOrientation
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:119:13-50
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:116:13-50
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:118:13-54
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:115:13-54
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:125:3-127:45
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:122:3-124:45
 	android:value
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:127:4-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:124:4-43
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:126:4-49
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:123:4-49
 meta-data#io.fabric.ApiKey
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:147:9-149:72
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:144:9-146:72
 	android:value
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:149:13-69
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:146:13-69
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:148:13-44
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:145:13-44
 uses-sdk
 INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
@@ -704,11 +696,11 @@ INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.x
 		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 		INJECTED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:141:4-143:46
+ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:138:4-140:46
 	android:resource
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:143:5-43
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:140:5-43
 	android:name
-		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:142:5-55
+		ADDED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:139:5-55
 activity#com.salesforce.androidsdk.smartstore.ui.SmartStoreInspectorActivity
 ADDED from [:libs:SmartStore] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SmartStore/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:17:9-104
 	android:name
@@ -878,9 +870,9 @@ ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mo
 	android:name
 		ADDED from [:libs:SalesforceSDK] /Users/aangjnr/Documents/AppsDev/grameen/FDP/mobile_sdk/SalesforceMobileSDK-Android/libs/SalesforceSDK/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:112:13-89
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12 reason: com.salesforce.androidsdk has a targetSdkVersion < 4
+IMPLIED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12 reason: com.salesforce.androidsdk has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-160:12 reason: com.salesforce.androidsdk requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/aangjnr/Documents/AppsDev/grameen/FDP/app/AndroidManifest.xml:2:1-157:12 reason: com.salesforce.androidsdk requested WRITE_EXTERNAL_STORAGE
 provider#com.balsikandar.crashreporter.CrashReporterInitProvider
 ADDED from [com.balsikandar.android:crashreporter:1.0.9] /Users/aangjnr/.gradle/caches/transforms-1/files-1.1/crashreporter-1.0.9.aar/08a23bacb436a7b63e29414117ab6f87/AndroidManifest.xml:14:9-18:40
 	android:enabled

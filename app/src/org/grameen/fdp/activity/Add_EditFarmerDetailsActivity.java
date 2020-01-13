@@ -1,7 +1,6 @@
 package org.grameen.fdp.activity;
 
 import android.Manifest;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -10,7 +9,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,7 +27,6 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.jaredrummler.materialspinner.MaterialSpinner;
-import com.squareup.picasso.Picasso;
 
 import org.grameen.fdp.R;
 import org.grameen.fdp.fragment.MyFormFragment;
@@ -1057,7 +1054,7 @@ public class Add_EditFarmerDetailsActivity extends BaseActivity{
 
                     } else {
 
-                        Intent intent = new Intent(this, FamilyMembersActivity_v2.class);
+                        Intent intent = new Intent(this, FamilyMembersActivity.class);
                         intent.putExtra("farmer", new Gson().toJson(farmer));
                         intent.putExtra("familyMembers", familyMembers);
                         startActivity(intent);

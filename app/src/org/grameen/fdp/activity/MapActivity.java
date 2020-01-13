@@ -45,11 +45,10 @@ import java.util.Objects;
 /**
  * Created by aangjnr on 09/11/2017.
  */
-
 public class MapActivity extends BaseActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
     ProgressDialog progressDialog;
     String TAG = getClass().getSimpleName();
-    Button addPoint;
+    Button addPointButton;
     Button calculateArea;
     List<LatLng> latLngs = new ArrayList<>();
     RealPlot plot;
@@ -163,12 +162,11 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
             }
         });
 
-        addPoint = findViewById(R.id.addPoint);
-        addPoint.setOnClickListener(new View.OnClickListener() {
+        addPointButton = findViewById(R.id.addAPoint);
+        addPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 progressDialog.show();
-                addPoint.setEnabled(false);
                 getLocationUpdates();
             }
         });
@@ -192,7 +190,6 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
                     dialog.dismiss();
                     LatLng newLL = new LatLng(location.getLatitude(), location.getLongitude());
                     mAdapter.addPoint(newLL);
-                    addPoint.setEnabled(true);
                     progressDialog.dismiss();
                     hasCalculated = false;
 
