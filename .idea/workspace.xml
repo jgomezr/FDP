@@ -36,23 +36,14 @@
   <component name="ChangeListManager">
     <list default="true" id="83ffcf1e-b9c7-473c-91cf-1661c73aea8f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/res/layout/activity_map.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/Add_EditFarmerDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/Add_EditFarmerDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity_v2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmerDetailsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivitybak.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/FamilyMembersTableViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/FamilyMembersTableViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CellViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CellViewHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CheckBoxViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/CheckBoxViewHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/SpinnerViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/SpinnerViewHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/TextViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/viewholder/TextViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/MyTableViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/MyTableViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/CustomToast.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/CustomToast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build.gradle" afterDir="false" />
@@ -86,33 +77,21 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+            <state relative-caret-position="398">
+              <caret line="1069" column="68" lean-forward="true" selection-start-line="1069" selection-start-column="68" selection-end-line="1069" selection-end-column="99" />
               <folding>
-                <element signature="e#2951#3352#1" />
-                <element signature="method#computeAreaInSquareMeters#0;class#MapActivity#0" />
-                <element signature="method#getLocationUpdates#0;class#MapActivity#0" />
-                <element signature="method#startLocationListener#0;class#MapActivity#0" />
-                <element signature="method#checkPlayServices#0;class#MapActivity#0" />
-                <element signature="method#onStop#0;class#MapActivity#0" />
-                <element signature="method#onBackPressed#0;class#MapActivity#0" />
+                <element signature="e#4955#5510#1" />
+                <element signature="e#13970#14102#0" expanded="true" />
+                <element signature="e#14101#14102#0" expanded="true" />
+                <element signature="e#33835#35960#0" />
+                <element signature="e#35966#51185#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/res/layout/activity_map.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -137,10 +116,8 @@
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/EditTextController.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/DynamicFormFragment.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/fragment/MyFormFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/DetailedYearTableViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/DetailedYearMonthlyActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PlotsReviewActivity.java" />
         <option value="$PROJECT_DIR$/app/res/layout/custom_toolbar.xml" />
         <option value="$PROJECT_DIR$/app/res/layout/activity_monitoring_year_selection.xml" />
@@ -156,7 +133,6 @@
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/object/PlotAssessment.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmAssessmentActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Constants.java" />
-        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/SyncUpActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
@@ -164,15 +140,21 @@
         <option value="$PROJECT_DIR$/app/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java" />
         <option value="$PROJECT_DIR$/app/res/layout/activity_map.xml" />
+        <option value="$PROJECT_DIR$/app/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/CustomToast.java" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/MyTableViewAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
-    <option name="y" value="26" />
-    <option name="width" value="1839" />
-    <option name="height" value="1168" />
+    <option name="x" value="2" />
+    <option name="y" value="24" />
+    <option name="width" value="1663" />
+    <option name="height" value="1013" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -191,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -429,21 +411,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="26" width="1839" height="1168" extended-state="0" />
-    <editor active="true" />
+    <frame x="2" y="24" width="1663" height="1013" extended-state="0" />
     <layout>
       <window_info id="Build Variants" order="0" sideWeight="0.500473" side_tool="true" weight="0.20454545" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49952698" visible="true" weight="0.21035059" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49952698" visible="true" weight="0.2350401" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Android Profiler" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50361717" side_tool="true" weight="0.33773586" />
-      <window_info anchor="bottom" id="Build" order="2" sideWeight="0.49638286" weight="0.33867925" />
+      <window_info anchor="bottom" id="Build" order="2" sideWeight="0.49638286" weight="0.35469612" />
       <window_info anchor="bottom" id="Flutter Performance" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32735848" />
@@ -454,7 +435,7 @@
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" auto_hide="true" x="27" y="88" width="1836" height="885" id="Logcat" order="13" type="FLOATING" weight="0.6110444" />
+      <window_info anchor="bottom" auto_hide="true" x="3618" y="35" width="1485" height="804" id="Logcat" order="13" type="FLOATING" weight="0.6110444" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -506,44 +487,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/DetailedYearMonthlyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3675">
-          <caret line="279" column="55" selection-start-line="279" selection-start-column="55" selection-end-line="279" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="676" column="76" selection-start-line="676" selection-start-column="76" selection-end-line="676" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="1269" column="52" selection-start-line="1269" selection-start-column="52" selection-end-line="1269" selection-end-column="52" />
-          <folding>
-            <element signature="e#29476#31712#0" />
-            <element signature="e#31719#32611#0" />
-            <element signature="e#32617#33106#0" />
-            <element signature="e#33112#33510#0" />
-            <element signature="e#33516#34202#0" />
-            <element signature="e#34208#36333#0" />
-            <element signature="e#67286#70253#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/res/layout/activity_review_page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="40" lean-forward="true" selection-end-line="293" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/object/PlotMonitoringTableData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -566,14 +509,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/layout/app_bar_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
@@ -582,26 +526,25 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/layout/custom_toolbar.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
           <caret line="106" column="51" lean-forward="true" selection-start-line="100" selection-start-column="11" selection-end-line="106" selection-end-column="51" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/drawable/non_selected_item.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/layout/activity_monitoring_year_selection.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/utility/Callbacks.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -611,12 +554,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/res/layout/monitoring_form_section.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2328">
           <caret line="97" column="43" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="43" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/Add_EditFarmerDetailsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -774,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FarmAssessmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-430">
@@ -799,24 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="551" lean-forward="true" selection-start-line="551" selection-end-line="551" />
-          <folding>
-            <element signature="e#25473#29470#0" />
-            <element signature="e#29477#31236#0" />
-            <element signature="e#40265#42917#0" />
-            <element signature="e#42924#45375#0" />
-            <element signature="e#45382#46739#0" />
-            <element signature="e#46746#48173#0" />
-            <element signature="e#49435#50336#0" />
-            <element signature="e#50342#51109#0" />
-            <element signature="e#51115#52037#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,30 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="e#3781#4133#0" expanded="true" />
-            <element signature="e#4132#4133#0" expanded="true" />
-            <element signature="method#loadData#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getCellList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getRowHeaderList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getColumnHeaderList#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#initData#0;class#FamilyMembersActivity_v2#0" />
-            <element signature="method#getValue#0;class#FamilyMembersActivity_v2#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/FamilyMembersActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6768">
@@ -934,26 +828,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/res/layout/activity_map.xml">
+    <entry file="file://$PROJECT_DIR$/app/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
+        <state relative-caret-position="1842">
+          <caret line="451" column="57" selection-start-line="451" selection-start-column="57" selection-end-line="451" selection-end-column="57" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/res/layout/activity_map.xml">
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1435">
+          <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+          <folding>
+            <element signature="e#2560#2583#0" expanded="true" />
+            <element signature="e#2613#2627#0" expanded="true" />
+            <element signature="e#2891#2914#0" expanded="true" />
+            <element signature="e#2989#3012#0" expanded="true" />
+            <element signature="e#3042#3065#0" expanded="true" />
+            <element signature="e#3288#3311#0" expanded="true" />
+            <element signature="e#3386#3409#0" expanded="true" />
+            <element signature="e#3439#3463#0" expanded="true" />
+            <element signature="e#3682#3705#0" expanded="true" />
+            <element signature="e#3780#3803#0" expanded="true" />
+            <element signature="e#3833#3847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/utility/CustomToast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        <state relative-caret-position="24">
+          <caret line="205" column="135" selection-start-line="205" selection-start-column="111" selection-end-line="205" selection-end-column="135" />
           <folding>
-            <element signature="e#2951#3352#1" />
-            <element signature="method#computeAreaInSquareMeters#0;class#MapActivity#0" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8529#8530#0" expanded="true" />
+            <element signature="e#8586#8587#0" expanded="true" />
+            <element signature="e#8639#8640#0" expanded="true" />
             <element signature="method#getLocationUpdates#0;class#MapActivity#0" />
             <element signature="method#startLocationListener#0;class#MapActivity#0" />
             <element signature="method#checkPlayServices#0;class#MapActivity#0" />
-            <element signature="method#onStop#0;class#MapActivity#0" />
-            <element signature="method#onBackPressed#0;class#MapActivity#0" />
+            <element signature="method#onStart#0;class#MapActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/utility/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="2207" column="13" selection-start-line="2207" selection-start-column="13" selection-end-line="2207" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/object/RealPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/adapter/MyTableViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/AddNewPlotActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="602" column="58" selection-start-line="602" selection-start-column="58" selection-end-line="602" selection-end-column="58" />
+          <folding>
+            <element signature="e#7961#8832#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/org/grameen/fdp/activity/PandLActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="1069" column="68" lean-forward="true" selection-start-line="1069" selection-start-column="68" selection-end-line="1069" selection-end-column="99" />
+          <folding>
+            <element signature="e#4955#5510#1" />
+            <element signature="e#13970#14102#0" expanded="true" />
+            <element signature="e#14101#14102#0" expanded="true" />
+            <element signature="e#33835#35960#0" />
+            <element signature="e#35966#51185#0" />
           </folding>
         </state>
       </provider>

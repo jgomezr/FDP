@@ -50,6 +50,7 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
     String TAG = getClass().getSimpleName();
     Button addPointButton;
     Button calculateArea;
+    int MIN_NO_OF_POINTS = 6;
     List<LatLng> latLngs = new ArrayList<>();
     RealPlot plot;
     RecyclerView recyclerView;
@@ -60,6 +61,9 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private static final long UPDATE_INTERVAL = 5000, FASTEST_INTERVAL = 5000; // = 5 seconds
     private GoogleApiClient googleApiClient;
+    boolean hasGpsDataBeenSaved = true;
+    String action = "";
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,10 +79,11 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
         setToolbar((plot != null) ? plot.getName() +" " + getResources(R.string.title_area_calc) : "Plot GPS Area Calculation");
 
         if (plot.getGpsPoints() != null && !plot.getGpsPoints().equalsIgnoreCase("")) {
+            Log.e(TAG, plot.getGpsPoints());
             try {
-                String llgs[] = plot.getGpsPoints().split("_");
+                String[] llgs = plot.getGpsPoints().split("_");
                 for (String llg : llgs) {
-                    String values[] = llg.split(",");
+                    String[] values = llg.split(",");
                     latLngs.add(new LatLng(Double.parseDouble(values[0]), Double.parseDouble(values[1])));
                 }
             } catch (Exception e) {
@@ -98,11 +103,6 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
             @Override
             public void onItemClick(View view, int position) {
                 mAdapter.removePoint(position);
-                //latLngs.remove(position);
-                if(latLngs.size() > 2)
-                    calculateArea.setEnabled(true);
-                    else
-                        calculateArea.setEnabled(false);
                 if(latLngs.size() > 0) {
                     if(findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
                         findViewById(R.id.placeHolder).setVisibility(View.GONE);
@@ -110,64 +110,35 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
                     if(findViewById(R.id.placeHolder).getVisibility() == View.GONE)
                         findViewById(R.id.placeHolder).setVisibility(View.VISIBLE);
                 }
+                hasGpsDataBeenSaved = false;
             }
         });
 
         calculateArea = findViewById(R.id.calculate);
-        calculateArea.setEnabled(false);
         calculateArea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (latLngs != null && latLngs.size() > 2) {
-                if (!hasCalculated)
+                action = "calculate area of ";
+                if(checkNoGPSPointsAdded())
                     computeAreaInSquareMeters();
-                else{
-                    if (progressDialog.isShowing())
-                        progressDialog.dismiss();
-
-                    Double inHectares = convertToHectares(AREA_OF_PLOT);
-                    Double inAcres = convertToAcres(AREA_OF_PLOT);
-
-                    String message = "Area in Hectares is " + new DecimalFormat("0.00").format(inHectares) +
-                            "\nArea in Acres is " + new DecimalFormat("0.00").format(inAcres) +
-                            "\nArea in Square Meters is " + new DecimalFormat("0.00").format(AREA_OF_PLOT);
-                    showAlertDialog(false, "Area of plot " + plot.getName(), message, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.dismiss();
-                            }
-                    }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            StringBuilder builder = new StringBuilder();
-                            //Todo save latLngs
-                            for (LatLng latLng : latLngs) {
-                                if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
-                                    builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
-                                else
-                                    builder.append(latLng.latitude).append(",").append(latLng.longitude);
-                            }
-                            dialog.dismiss();
-
-                            if (databaseHelper.editPlotGPS(plot.getId(), builder.toString()))
-                                CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
-                            else
-                                CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
-                        }
-                    }, getResources(R.string.save), 0);
-                        hasCalculated = true;
-                }
-                } else
-                    CustomToast.makeToast(MapActivity.this, "Please add 3 or more points to calculate the area of " + plot.getName(), Toast.LENGTH_LONG).show();
             }
         });
 
-        addPointButton = findViewById(R.id.addAPoint);
+        addPointButton = findViewById(R.id.addPoint);
         addPointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressDialog.show();
                 getLocationUpdates();
+            }
+        });
+
+        findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                action = "save data of ";
+
+                if(checkNoGPSPointsAdded())
+                saveGpsPointsData(false);
             }
         });
 
@@ -177,14 +148,15 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
     LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(final Location location) {
-            String msg = "Updated Location " + "\n" +
+            String msg = "Do you want to add this point?" + "\n\n" +
                     "Latitude : " +  location.getLatitude() + "\n" +
                     "Longitude : " + location.getLongitude() + "\n" +
                     "Accuracy : " + location.getAccuracy() + " meters ";
+
             if (progressDialog.isShowing())
                 progressDialog.dismiss();
 
-            showAlertDialog(true, "Are you sure?", msg, new DialogInterface.OnClickListener() {
+            showAlertDialog(true, "Location update!", msg, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
@@ -197,21 +169,14 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
                         if (findViewById(R.id.placeHolder).getVisibility() == View.VISIBLE)
                             findViewById(R.id.placeHolder).setVisibility(View.GONE);
                     }
-
-                    if (latLngs.size() > 2) {
-                        calculateArea.setEnabled(true);
-
-                    } else {
-                        calculateArea.setEnabled(false);
-                    }
+                    hasGpsDataBeenSaved = false;
                 }
-            }, "YES, CONTINUE", new DialogInterface.OnClickListener() {
+            }, "ADD POINT", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
                 }
-            }, "NO, CANCEL", 0);
-
+            }, "CANCEL", 0);
             removeLocationListener();
         }
     };
@@ -232,24 +197,17 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
                 }
-        }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                StringBuilder builder = new StringBuilder();
-                for (LatLng latLng : latLngs) {
-                    if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
-                        builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
-                    else
-                        builder.append(latLng.latitude).append(",").append(latLng.longitude);
-                }
-                dialog.dismiss();
-                if (databaseHelper.editPlotGPS(plot.getId(), builder.toString()))
-                    CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
-                    else
-                    CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
-            }
-        }, getResources(R.string.save), 0);
+        }, getResources(R.string.ok), null, "", 0);
             hasCalculated = true;
+    }
+
+    boolean checkNoGPSPointsAdded(){
+        if(latLngs.size() < MIN_NO_OF_POINTS) {
+            CustomToast.makeToast(MapActivity.this, "Please add " + MIN_NO_OF_POINTS + " or more points to " + action  + plot.getName(),
+                    Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
     double convertToHectares(Double valueInSquareMetres) {
@@ -261,6 +219,8 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
     }
 
     private void getLocationUpdates() {
+        progressDialog.show();
+
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         GpsStatus = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 
@@ -339,6 +299,36 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
         googleApiClient.connect();
     }
 
+    void saveGpsPointsData(boolean shouldExit){
+        int count = 0;
+        StringBuilder builder = new StringBuilder();
+        for (LatLng latLng : latLngs) {
+            builder.append(latLng.latitude).append(",").append(latLng.longitude);
+
+            if (count != latLngs.size() - 1)
+                builder.append("_");
+            count += 1;
+        }
+        plot.setGpsPoints(builder.toString());
+
+        if (databaseHelper.editPlotGPS(plot.getId(), builder.toString())) {
+            hasGpsDataBeenSaved = true;
+            CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
+            if(shouldExit)
+                moveToPlotDetailsActivity();
+        }
+        else
+            CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
+
+    }
+
+    void moveToPlotDetailsActivity(){
+        Intent intent = new Intent(this, PlotDetailsActivity.class);
+        intent.putExtra("plot", new Gson().toJson(plot));
+        startActivity(intent);
+        supportFinishAfterTransition();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -346,11 +336,11 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
             showAlertDialog(false, "Missing Google Play Services", "You need to install Google Play Services to use the App properly", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.google.android.gms")));
-                        } catch (ActivityNotFoundException e) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gms")));
-                        }
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.google.android.gms")));
+                    } catch (ActivityNotFoundException e) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.gms")));
+                    }
                 }
             }, "INSTALL", new DialogInterface.OnClickListener() {
                 @Override
@@ -362,21 +352,14 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
     }
 
     @Override
-    protected void onStop() {
-        StringBuilder builder = new StringBuilder();
-        //Todo save latLngs
-        for (LatLng latLng : latLngs) {
-            if (!Objects.equals(latLng, latLngs.get(latLngs.size() - 1)))
-                builder.append(latLng.latitude).append(",").append(latLng.longitude).append("_");
-            else
-                builder.append(latLng.latitude).append(",").append(latLng.longitude);
-        }
-        if (databaseHelper.editPlotGPS(plot.getId(), builder.toString()))
-            CustomToast.makeToast(MapActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_LONG).show();
-        else
-            CustomToast.makeToast(MapActivity.this, getResources(R.string.data_not_saved), Toast.LENGTH_LONG).show();
-        plot.setGpsPoints(builder.toString());
+    protected void onPause() {
+        if(!hasGpsDataBeenSaved)
+        saveGpsPointsData(false);
+        super.onPause();
+    }
 
+    @Override
+    protected void onStop() {
         if (googleApiClient != null  &&  googleApiClient.isConnected()) {
             googleApiClient.disconnect();
         }
@@ -385,10 +368,22 @@ public class MapActivity extends BaseActivity implements GoogleApiClient.Connect
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, PlotDetailsActivity.class);
-        intent.putExtra("plot", new Gson().toJson(plot));
-        startActivity(intent);
-        supportFinishAfterTransition();
+        if(!hasGpsDataBeenSaved)
+            showAlertDialog(false, "Save GPS data", "Do you want to save the GPS points?", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    if(checkNoGPSPointsAdded())
+                        saveGpsPointsData(true);
+                    dialogInterface.dismiss();
+                }
+            }, getResources(R.string.ok), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    moveToPlotDetailsActivity();
+                }
+            }, "NO", 0);
+        else
+            moveToPlotDetailsActivity();
     }
 
 }

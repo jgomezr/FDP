@@ -2206,13 +2206,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public boolean editPlotGPS(String plotId, String newValue) {
         try {
-
             ContentValues contentValues = new ContentValues();
             contentValues.put(PLOT_GPS_POINTS, newValue);
-
             db.update(PLOTS_TABLE, contentValues, ID + "= ?", new String[]{plotId});
             Log.i(TAG, "PLOT GPS POINTS! " + "NEW VALUE IS " + newValue);
-
         } catch (Exception e) {
             e.printStackTrace();
             return false;
