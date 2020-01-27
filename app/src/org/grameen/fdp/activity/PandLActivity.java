@@ -1049,12 +1049,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                     GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
 
                     break;
-                case 7:
-                    Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
-                    plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
-                    GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
-                    break;
-                    default:
+                default:
                         Log.i(TAG, "\nYEAR 7 " + PLOT_RECOMMENDATION.getIncome7());
                         plotIncomes.add(applyCalculation(parseEquation(PLOT_RECOMMENDATION.getIncome7(), PLOT_RECOMMENDATION.getQuestionsInvolved())));
                         GROSS_COCOA_STRING_BUILDERS.get(i).append(plotIncomes.get(i)).append("+");
