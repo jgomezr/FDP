@@ -187,8 +187,6 @@ public class AddNewPlotActivity extends BaseActivity {
             plotAOFragment = MyFormFragment.newInstance(Constants.ADOPTION_OBSERVATIONS, true, plot.getFarmerCode() + "_" + plot.getId(), false);
 
             loadDynamicView(plotAOFragment, R.id.aosLayout);
-
-
         } else {
 
             setToolbar(getResources(R.string.add_new_plot));
@@ -207,8 +205,6 @@ public class AddNewPlotActivity extends BaseActivity {
                 ALL_FARMER_ANSWERS_JSON = new JSONObject(farmingEconomicProfileJson);
                 plotSizeUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Area units")).toString());
                 estimatedProductionUnit.setText(ALL_FARMER_ANSWERS_JSON.get(databaseHelper.getQuestionIdByTranslationName("Weight units")).toString());
-
-
                 plotSizeEdittext.setText(plotSizeQue.getDefault_value__c());
                 estimatedProductionEdittext.setText(estProdQue.getDefault_value__c());
                 phEdittext.setText(soilPhQue.getDefault_value__c());
@@ -219,25 +215,16 @@ public class AddNewPlotActivity extends BaseActivity {
 
                 plotSizeUnit.setText("--");
                 estimatedProductionUnit.setText("--");
-
             }
-
             else{
                 plotSizeUnit.setText("--");
                 estimatedProductionUnit.setText("--");
             }
-
-
-
             int noOfPlots = databaseHelper.getAllFarmerPlots(farmerCode).size() + 1;
             String value = "Plot " + noOfPlots;
             plotName.setText(value);
-
             plotAOFragment = MyFormFragment.newInstance(Constants.ADOPTION_OBSERVATIONS, false, null, false);
-
             loadDynamicView(plotAOFragment, R.id.aosLayout);
-
-
         }
 
 
@@ -413,14 +400,11 @@ public class AddNewPlotActivity extends BaseActivity {
 
                     CustomToast.makeToast(AddNewPlotActivity.this, getResources(R.string.new_plot_added), Toast.LENGTH_SHORT).show();
 
-
                     if (shouldMoveToNextActivity) {
-
                         Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
                         intent.putExtra("plot", new Gson().toJson(realPlot));
                         intent.putExtra("farmerCode", farmerCode);
                         prefs.edit().putString("currentPlotId", plot.getId()).apply();
-
                         startActivity(intent);
                         finish();
                     }
@@ -441,8 +425,6 @@ public class AddNewPlotActivity extends BaseActivity {
                 if (databaseHelper.editFarmerPlotAnswers(plot)) {
                     newDataSaved = true;
                     databaseHelper.setFarmerAsUnSynced(plot.getFarmerCode());
-
-
                     checkIfPlotWasRenovatedRecently(plot);
                     CustomToast.makeToast(AddNewPlotActivity.this, getResources(R.string.new_data_updated), Toast.LENGTH_SHORT).show();
 
@@ -456,29 +438,21 @@ public class AddNewPlotActivity extends BaseActivity {
                         prefs.edit().putString("currentPlotId", plot.getId()).apply();
                         startActivity(intent);
                         finish();
-
                     }
-
                 } else
                     CustomToast.makeToast(AddNewPlotActivity.this, getResources(R.string.could_not_add_plot), Toast.LENGTH_SHORT).show();
             }
-
             save.setEnabled(true);
 
 
         } else {
-
             prefs.edit().putBoolean("shouldReapplyRecommendation", false).apply();
-
-
             Intent intent = new Intent(AddNewPlotActivity.this, PlotDetailsActivity.class);
             prefs.edit().putString("currentPlotId", plot.getId()).apply();
             intent.putExtra("plot", new Gson().toJson(plot));
 
             startActivity(intent);
             finish();
-
-
         }
     }
 
@@ -495,14 +469,8 @@ public class AddNewPlotActivity extends BaseActivity {
                 List<Logic> logics = databaseHelper.doesQuestionHaveLogics(question.getId());
 
                 if (logics.size() > 0) {
-
-                    Log.i(TAG, "HAS LOGIC with size  " + logics.size() + "\n");
-
-                    Log.i(TAG, "\n");
-
                     for (Logic logic : logics) {
                         Log.i(TAG, "Logic Name : " + logic.getName());
-
 
                         resultQuestionId = logic.getResultQuestions();
                         logicId = logic.getId();
@@ -548,40 +516,28 @@ public class AddNewPlotActivity extends BaseActivity {
 
     @Override
     protected void onPause() {
-
-
         Log.i(TAG, "ON PAUSE");
 /*
-
-
         if (!newDataSaved && save.isEnabled())
             saveOrUpdateData(true);
-
 */
-
         super.onPause();
-
-
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
         if (plot != null)
             try {
                 plot = databaseHelper.getFarmerPlot(plot.getId(), plot.getFarmerCode());
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
     }
 
     void checkIfPlotWasRenovatedRecently(RealPlot plot) {
         try {
             Question plotRenovatedCorrectlyQuestion = databaseHelper.getQuestionByTranslation("Plot Renovated Correctly?");
-
             if (plotRenovatedCorrectlyQuestion != null) {
                 Recommendation GAPS_RECOMENDATION_FOR_START_YEAR;
                 if (ALL_DATA_JSON.get(plotRenovatedCorrectlyQuestion.getId()).toString().equalsIgnoreCase("yes")) {

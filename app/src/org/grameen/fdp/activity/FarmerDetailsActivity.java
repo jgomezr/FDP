@@ -98,8 +98,8 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_farmer_details);
-        Toolbar toolbar = setToolbar(getResources(R.string.farmer_details));
 
+        setToolbar(getResources(R.string.farmer_details));
 
         name =  findViewById(R.id.name);
         code =  findViewById(R.id.code);
@@ -110,7 +110,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
         lastVisitDate =  findViewById(R.id.lastVisitDate);
         syncIndicator = findViewById(R.id.syncIndicator);
         //boolean monitoringMode = false;
-        ImageView editFarmerDetails = findViewById(R.id.edit);
+
         plotsRecyclerView = findViewById(R.id.plotsRecyclerView);
         addPlot = findViewById(R.id.addPlot);
         noOfPlots = findViewById(R.id.noOfPlots);
@@ -236,7 +236,7 @@ public class FarmerDetailsActivity extends BaseActivity implements Callbacks.Net
             String farmAcre = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalLandSize", ""));
             String totalUnit = ALL_FARMER_ANSWERS_JSON.getString(prefs.getString("totalAreaUnit", ""));
 
-            landArea.setText(farmAcre + " " + totalUnit);
+            landArea.setText(String.format("%s %s", farmAcre, totalUnit));
 
         } catch (Exception ignored) {
             landArea.setVisibility(View.GONE);

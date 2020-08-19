@@ -39,7 +39,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.script.ScriptEngineManager;
@@ -483,8 +482,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                             if (databaseHelper.editPlotStartYear(String.valueOf(view.getTag().toString().split("_")[0]), position + 1)) {
                                 progressDialog.setMessage(getResources(R.string.updating_table_data));
                                 progressDialog.show();
-                               /* if(tableView != null)
-                                    tableView.removeAllViewsInLayout();*/
+
                                 Thread thread = new Thread(new Runnable() {
                                     @Override
                                     public void run() {
@@ -499,7 +497,6 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                     myTableViewAdapter.setClickistener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-
                             Recommendation PLOT_REC;
                             Recommendation GAPS_RECOMMENDATION_FOR_START_YEAR;
 
@@ -583,19 +580,14 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
         String defVal = "0.0";
         try {
             defVal = VALUES_JSON_OBJECT.get(s).toString();
-            System.out.println("******* FIRST TRY ALL FARMER VALUES *******   " + s + " : " + defVal);
-        } catch (JSONException e) {
+         } catch (JSONException e) {
             e.printStackTrace();
-            System.out.println("\n******* EXCEPTION *******   MESSAGE : " + e.getMessage() + "\n\n");
-            try {
+             try {
                 defVal = PLOT_ANSWERS_JSON_OBJECT.get(s).toString();
-                System.out.println("******* SECOND TRY ******* PLOT'S AO VALUES  " + s + " : " + defVal);
-            } catch (JSONException f) {
-                System.out.println("\n******* EXCEPTION *******   MESSAGE : " + f.getMessage() + "\n\n");
-            }
+             } catch (JSONException f) {
+             }
         }
-        System.out.println("\n******* VALUE IS *******   : " + defVal + "\n\n");
-        return defVal;
+         return defVal;
     }
 
     String replaceStringWithValues(String name, String stringToReplace) {
@@ -906,7 +898,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
                         SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(q.getId());
 
-                        if( skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
+                        if( skipLogic != null && setupSkipLogicsAndHideViews(skipLogic))
                             TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), skipLogic.getAnswerValue()));
                     } catch (NullPointerException e) {
                         e.printStackTrace();
@@ -969,22 +961,8 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                     else if (prefs.getString(PLOT.getId(), "").equalsIgnoreCase("Grafting + Extra Soil"))
 
                         TABLE_DATA_LIST.add(new Data(PLOT.getId() + "_Grafting + Extra Soil", null, BUTTON_VIEW));
-                } //else
-                   /* runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            //CustomToast.makeToast(PandLActivity.this, "Missing answer to question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
-                        }
-                    });*/
-        } /*else
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                   // CustomToast.makeToast(PandLActivity.this, "Missing question \"Was this plot renovated correctly?\"", Toast.LENGTH_LONG).show();
                 }
-            });
-*/
+        }
         TABLE_DATA_LIST.add(new Data("", null, TAG_OTHER_TEXT_VIEW));
     }
 
@@ -1102,7 +1080,6 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
         TEMP = 0;
 
-
         System.out.println();
         System.out.println("**********************************************");
         System.out.println("MAINTENANCE COST AND LABOUR COST CALCULATIONS");
@@ -1202,7 +1179,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                 if (q.getType__c().equalsIgnoreCase(TYPE_TEXT)) {
                     try {
                         SkipLogic skipLogic = databaseHelper.doesQuestionHaveSkipLogic(q.getId());
-                        if (skipLogic != null && !setupSkipLogicsAndHideViews(skipLogic))
+                        if (skipLogic != null && setupSkipLogicsAndHideViews(skipLogic))
                             TABLE_DATA_LIST.add(new Data((prefs.getBoolean("toggleTranslation", false)) ? q.getTranslation__c() : q.getCaption__c(), skipLogic.getAnswerValue()));
                     } catch (NullPointerException e) {
                         e.printStackTrace();
@@ -1266,7 +1243,7 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
     }
 
 
-    boolean setupSkipLogicsAndHideViews(SkipLogic sl) {
+   private  boolean setupSkipLogicsAndHideViews(SkipLogic sl) {
         Boolean value = null;
                     try {
                         if (compareValues(sl, getAnswerValue(sl.getQuestionId()))) {
@@ -1282,22 +1259,16 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
 
 
     String applyComplexCalculation(ComplexCalculation complexCalculation) {
-
         String evaluatedValue = "0.0";
-
-
         System.out.println("####### COMPLEX CALCULATION ------ ");
-
-
         String formula = complexCalculation.getCondition();
-
 
         try {
 
-            String questionName = "";
-            String valueToCompare = "";
-            String trueValueName = "";
-            String falseValueEquation = "";
+            String questionName;
+            String valueToCompare;
+            String trueValueName;
+            String falseValueEquation;
             String section = formula;
 
 
@@ -1306,24 +1277,14 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
             section = section.replace(")", "");
             section = section.replace(" ", "");
 
-            //Log.i(TAG, "AFTER CLEANSING " + sections[i]);
-
             String[] discard = section.split("==");
 
             questionName = discard[0];
-            //Log.i(TAG, "QUESTION NAME " + discard[0]);
-
-
             String[] values = discard[1].split(",");
-
             valueToCompare = values[0];
-            //Log.i(TAG, "VALUE TO COMPARE " + values[0]);
-
             trueValueName = values[1];
-            //Log.i(TAG, "TRUE VALUE " + values[1]);
 
             falseValueEquation = values[2];
-            // Log.i(TAG, "FALSE VALUE " + values[2]);
             String value = getAnswerValue(databaseHelper.getQuestionByName(questionName).getId());
 
             System.out.println("####### COMPLEX CALCULATION ------ VALUE = " + value);
@@ -1348,16 +1309,13 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
                     String constant = vals[1];
 
                     String falseValueId = databaseHelper.getQuestionByName(falseName).getId();
-                    evaluatedValue =  String.valueOf((Double) engine.eval(getAnswerValue(falseValueId) + operator + constant));
+                    evaluatedValue =  String.valueOf( engine.eval(getAnswerValue(falseValueId) + operator + constant));
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();
-
         }
         System.out.println("####### COMPLEX CALCULATION ------ EVALUATED VALUE = " + evaluatedValue);
-
         return  evaluatedValue;
     }
 
@@ -1367,12 +1325,9 @@ public class PandLActivity extends BaseActivity implements Callbacks.NetworkActi
         Log.i("SYNC TASK COMPLETE", "STATUS = " + response);
         try {
             SyncUpActivity.removeOnNetworkActivityComplete();
-
-
-        } catch (NullPointerException e) {
+} catch (NullPointerException e) {
             e.printStackTrace();
         }
-
         if (response == Constants.SYNC_STATUS_COMPLETE) {
             farmer.setLastVisitDate(DateUtil.getFormattedDateMMDDYYYYhhmmaa());
             farmer.setHasSubmitted(Constants.YES);

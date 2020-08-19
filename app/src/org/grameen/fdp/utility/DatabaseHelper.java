@@ -1996,41 +1996,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<String> getAllVillageNames() {
-
         List<String> villages;
         Cursor cursor = null;
-
         try {
-
             villages = new ArrayList<>();
-
             String selectQuery = "SELECT  * FROM " + VILLAGES_TABLE;
             Log.i("QUERY", selectQuery);
-
             cursor = db.rawQuery(selectQuery, null);
-
             if (cursor != null && cursor.getCount() > 0) {
-
                 if (cursor.moveToFirst())
-
                     do {
-
-
                         villages.add(cursor.getString(cursor.getColumnIndex(VILLAGE_NAME)));
-
-
                     } while (cursor.moveToNext());
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
-
         } finally {
-
             if (cursor != null)
                 cursor.close();
         }
-
 
         return sortVillagesByNameInAscendingOrder(villages);
 
